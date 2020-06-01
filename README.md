@@ -12,7 +12,9 @@ This module is a collection of custom trappings for Warhammer Fantasy Role-Play 
 
 ## Contents
 
-* Gambesons as an alternative to Leather armour
+Module contains single Compendium pack containing at the moment 24 items.
+
+* Added Gambesons as an alternative to Leather armour
 * Rebalanced Leather armour (is more expensive than Gambesons, but Durable)
 * Added boiled Leather Bracers
 * Added Cuirass (basically Plate Breastplate)
