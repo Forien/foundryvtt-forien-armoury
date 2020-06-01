@@ -1,0 +1,25 @@
+{
+	"name": "forien-armoury",
+	"title": "WFRP4 Forien's Armoury",
+	"description": "",
+	"authors": [
+		{
+			"name": "Forien",
+			"url": ""
+		}
+	],
+	"version": "0.1.0",
+	"minimumCoreVersion": "0.6.0",
+	"packs": [
+		{
+			"name": "forien-armoury",
+			"label": "Forien's Armoury",
+			"system": "wfrp4e",
+			"path": "./packs/armoury.db",
+			"entity": "Item"
+		}
+	],
+	"url": "",
+	"manifest": "",
+	"download": ""	
+}
