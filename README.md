@@ -6,22 +6,22 @@ This module is a collection of custom trappings for Warhammer Fantasy Role-Play 
 
 ## Installation
 
-1. Install WFRP4e game system.
+1. Install [WFRP4e Game System](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT).
 2. Install Forien's Armoury using manifest URL: https://gitlab.com/riccisi/foundryvtt-babele/raw/master/module/module.json
 3. While in World using WFRP4e game system, enable Forien's Armoury module.
 
 
 ## Compatibility
 
-Foundry : 0.6.*
-Warhammer v4 : v1.5.*
+FoundryVTT: 0.6.*
+WFRP4e: v1.5.*
 
 *Module might be compatible below these versions, but I do not guarantee it.*
 
 ## Acknowledgments
 
 * Thanks to Atropos for his relentless work on developing and improving the Foundry VTT
-* Thanks to Moo Man for his great work developing the WFRP4e game system
+* Thanks to Moo Man for his great work developing the [WFRP4e game system](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT)
 
 
 ## License
