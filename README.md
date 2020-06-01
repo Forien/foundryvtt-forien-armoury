@@ -14,11 +14,11 @@ This module is a collection of custom trappings for Warhammer Fantasy Role-Play 
 
 * Gambesons as an alternative to Leather armour
 * Rebalanced Leather armour (is more expensive than Gambesons, but Durable)
-* Added boiled leather Bracers
+* Added boiled Leather Bracers
 * Added Cuirass (basically Plate Breastplate)
 * Added Breastplate (covers front only)
-* Added various Arrow types: Bodkin, Hunting, Leaf, Military, Shoddy — where Military is standard Arrow
-* Added various Bolt types: Bodkin, Broad, Hunting, Needle, Standard — where Standard is standard Bolt
+* Added various Arrow types: Bodkin, Hunting, Leaf, Military, Shoddy â€” where Military replaces vanilla Arrow
+* Added various Bolt types: Bodkin, Broad, Hunting, Needle, Standard â€” where Standard replaces vanilla Bolt
 * Added Cracker Bullet for Sling (Blast 2 ammo)
 
 
