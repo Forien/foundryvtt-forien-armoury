@@ -5,7 +5,7 @@
 	"authors": [
 		{
 			"name": "Forien",
-			"url": ""
+			"url": "https://github.com/Forien/foundryvtt-forien-armoury"
 		}
 	],
 	"version": "0.1.0",
@@ -19,7 +19,7 @@
 			"entity": "Item"
 		}
 	],
-	"url": "",
-	"manifest": "",
-	"download": ""	
+	"url": "https://github.com/Forien/foundryvtt-forien-armoury",
+	"manifest": "https://github.com/Forien/foundryvtt-forien-armoury/blob/master/module.json",
+	"download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.1.0.zip"	
 }
