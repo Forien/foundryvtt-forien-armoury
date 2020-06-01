@@ -16,7 +16,7 @@ This module is a collection of custom trappings for Warhammer Fantasy Role-Play 
 Foundry : 0.6.*
 Warhammer v4 : v1.5.*
 
-** Module might be compatible below these versions, but I do not guarantee it. **
+*Module might be compatible below these versions, but I do not guarantee it.*
 
 ## Acknowledgments
 
