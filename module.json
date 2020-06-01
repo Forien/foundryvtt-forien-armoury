@@ -8,7 +8,7 @@
 			"url": "https://github.com/Forien/foundryvtt-forien-armoury"
 		}
 	],
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"minimumCoreVersion": "0.6.0",
 	"packs": [
 		{
@@ -20,6 +20,6 @@
 		}
 	],
 	"url": "https://github.com/Forien/foundryvtt-forien-armoury",
-	"manifest": "https://github.com/Forien/foundryvtt-forien-armoury/blob/master/module.json",
-	"download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.1.0.zip"	
+	"manifest": "https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json",
+	"download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.1.1.zip"	
 }
