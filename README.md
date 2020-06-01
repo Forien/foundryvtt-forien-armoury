@@ -3,12 +3,37 @@
 This module is a collection of custom trappings for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
 
 
-
 ## Installation
 
 1. Install [WFRP4e Game System](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT).
 2. Install Forien's Armoury using manifest URL: https://gitlab.com/riccisi/foundryvtt-babele/raw/master/module/module.json
 3. While in World using WFRP4e game system, enable Forien's Armoury module.
+
+
+## Contents
+
+* Gambesons as an alternative to Leather armour
+* Rebalanced Leather armour (is more expensive than Gambesons, but Durable)
+* Added boiled leather Bracers
+* Added Cuirass (basically Plate Breastplate)
+* Added Breastplate (covers front only)
+* Added various Arrow types: Bodkin, Hunting, Leaf, Military, Shoddy — where Military is standard Arrow
+* Added various Bolt types: Bodkin, Broad, Hunting, Needle, Standard — where Standard is standard Bolt
+* Added Cracker Bullet for Sling (Blast 2 ammo)
+
+
+## Future plans
+
+* More weapons, including exotic
+* Translation to Polish using Babele
+* Maybe some non-combat trappings as well
+
+*If you have **any** suggestion or idea on new contents, hit me up on Discord!*
+
+
+## Contact
+
+If you wish to contact me for any reason, reach me out on Discord using my tag: `Forien#2130`
 
 
 ## Compatibility
