@@ -6,7 +6,7 @@ This module is a collection of custom trappings for Warhammer Fantasy Role-Play 
 ## Installation
 
 1. Install [WFRP4e Game System](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT).
-2. Install Forien's Armoury using manifest URL: https://github.com/Forien/foundryvtt-forien-armoury/blob/master/module.json
+2. Install Forien's Armoury using manifest URL: https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json
 3. While in World using WFRP4e game system, enable Forien's Armoury module.
 
 
