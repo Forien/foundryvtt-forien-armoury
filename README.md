@@ -12,7 +12,7 @@ This module is a collection of custom trappings for Warhammer Fantasy Role-Play 
 
 ## Contents
 
-Module contains single Compendium pack containing at the moment 24 items.
+Module contains single Compendium pack containing at the moment 34 items.
 
 * Added Gambesons as an alternative to Leather armour
 * Rebalanced Leather armour (is more expensive than Gambesons, but Durable)
@@ -22,6 +22,7 @@ Module contains single Compendium pack containing at the moment 24 items.
 * Added various Arrow types: Bodkin, Hunting, Leaf, Military, Shoddy — where Military replaces vanilla Arrow
 * Added various Bolt types: Bodkin, Broad, Hunting, Needle, Standard — where Standard replaces vanilla Bolt
 * Added Cracker Bullet for Sling (Blast 2 ammo)
+* Added generic Ingredient item entities, one for each tradition.
 
 
 ## Future plans
@@ -29,6 +30,7 @@ Module contains single Compendium pack containing at the moment 24 items.
 * More weapons, including exotic
 * Translation to Polish using Babele
 * Maybe some non-combat trappings as well
+* Create specific ingredients instead of generic ones
 
 *If you have **any** suggestion or idea on new contents, hit me up on Discord!*
 
