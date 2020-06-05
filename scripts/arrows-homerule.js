@@ -59,7 +59,8 @@ Hooks.on("preDeleteCombat", function() {
 	ForienArmoury.processEndOfCombat();
 })
 
-Hooks.on("wfrp4e:rollWeaponTest", function(roll, actorId) {
+Hooks.on("wfrp4e:rollWeaponTest", function(roll, cardOptions) {
+	let actorId = cardOptions.speaker.actor
 	let weapon = roll.weapon;
 	let ammoId = weapon.data.currentAmmo.value;
 	let type = null;
