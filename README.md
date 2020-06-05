@@ -51,8 +51,8 @@ If you wish to contact me for any reason, reach me out on Discord using my tag: 
 
 ## Compatibility
 
-* FoundryVTT: 0.6.*  
-* WFRP4e: v1.5.*
+* FoundryVTT: 0.6.0+ 
+* WFRP4e: v1.5.5+
 
 *Module might be compatible below these versions, but I do not guarantee it.*
 
