@@ -60,7 +60,7 @@ Hooks.on("preDeleteCombat", function() {
 })
 
 Hooks.on("wfrp4e:rollWeaponTest", function(roll, cardOptions) {
-	let actorId = cardOptions.speaker.actor
+	let actorId = cardOptions.speaker.actor;
 	let weapon = roll.weapon;
 	let ammoId = weapon.data.currentAmmo.value;
 	let type = null;
