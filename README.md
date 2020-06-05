@@ -2,7 +2,6 @@
 
 This module is a collection of custom trappings for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
 
-
 ## Installation
 
 1. Install [WFRP4e Game System](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT).
@@ -11,7 +10,13 @@ This module is a collection of custom trappings for Warhammer Fantasy Role-Play 
 
 
 ## Contents
+### Features
+This module allows GMs to enable an "arrow reclamation feature", which allows for some portion of ammunition (arrows and bolts) to be returned to players after an encounter. Defaults to even rolls. Must be enabled. 
 
+*There is currently bug with returning arrows outside of "encounter", so I disabled that.  
+**Currently only works with encounter**. Remember to delete encounter to return arrows.*
+
+### Compendiums
 Module contains single Compendium pack containing at the moment 34 items.
 
 * Added Gambesons as an alternative to Leather armour
@@ -24,9 +29,13 @@ Module contains single Compendium pack containing at the moment 34 items.
 * Added Cracker Bullet for Sling (Blast 2 ammo)
 * Added generic Ingredient item entities, one for each tradition.
 
-
 ## Future plans
 
+### Features
+* fix out-of-encounter bug with arrow reclamation
+* add private chat messages for arrow owners (and GMs) after encounter - for clarity
+
+### Content
 * More weapons, including exotic
 * Translation to Polish using Babele
 * Maybe some non-combat trappings as well
@@ -50,7 +59,8 @@ If you wish to contact me for any reason, reach me out on Discord using my tag: 
 ## Acknowledgments
 
 * Thanks to Atropos for his relentless work on developing and improving the Foundry VTT
-* Thanks to Moo Man for his great work developing the [WFRP4e game system](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT)
+* Thanks to Moo Man for his great work developing the [WFRP4e game system](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT) as well as for his invaluable help with understanding how to mod Foundry using JS
+* Thanks to Thoradin for an idea for arrow reclamation feature :)
 
 
 ## License

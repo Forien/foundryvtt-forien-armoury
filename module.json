@@ -12,12 +12,20 @@
 	"systems": [
 		"wfrp4e"
 	],
+<<<<<<< HEAD
 	"version": "0.1.4",
+=======
+	"version": "0.1.5",
+>>>>>>> cbe585d9b9ae1454557d93a60031bd3e35f8c8a3
 	"minimumCoreVersion": "0.6.0",
 	"compatibleCoreVersion": "0.6.0",
 	"url": "https://github.com/Forien/foundryvtt-forien-armoury",
 	"manifest": "https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json",
+<<<<<<< HEAD
 	"download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.1.4.zip",
+=======
+	"download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.1.5.zip",
+>>>>>>> cbe585d9b9ae1454557d93a60031bd3e35f8c8a3
 	"packs": [
 		{
 			"name": "forien-armoury",
@@ -37,4 +45,8 @@
 	"scripts": [
 		"./scripts/arrows-homerule.js"
 	]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cbe585d9b9ae1454557d93a60031bd3e35f8c8a3
