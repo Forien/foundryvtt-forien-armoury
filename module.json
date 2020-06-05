@@ -9,9 +9,15 @@
 			"url": "https://github.com/Forien/foundryvtt-forien-armoury"
 		}
 	],
+	"systems": [
+		"wfrp4e"
+	],
 	"version": "0.1.4",
 	"minimumCoreVersion": "0.6.0",
 	"compatibleCoreVersion": "0.6.0",
+	"url": "https://github.com/Forien/foundryvtt-forien-armoury",
+	"manifest": "https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json",
+	"download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.1.4.zip",
 	"packs": [
 		{
 			"name": "forien-armoury",
@@ -20,8 +26,15 @@
 			"path": "./packs/armoury.db",
 			"entity": "Item"
 		}
+	],	
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		}
 	],
-	"url": "https://github.com/Forien/foundryvtt-forien-armoury",
-	"manifest": "https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json",
-	"download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.1.4.zip"	
+	"scripts": [
+		"./scripts/arrows-homerule.js"
+	]
 }
