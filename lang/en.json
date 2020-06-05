@@ -1,0 +1,10 @@
+{
+	"SETTINGS.arrowReclamationEnable": "Enable arrow reclamation",
+	"SETTINGS.arrowReclamationEnableHint": "Enable arrow reclamation upon range weapon test roll. When used during an encounter some arrows will be returned after encounter ends.",
+	"SETTINGS.arrowReclamationRule": "Arrow reclamation rule",
+	"SETTINGS.arrowReclamationRuleHint": "Select rules by which decide if arrow can be reused. Word `critical` means both criticals and fumbles.",
+	"SETTINGS.arrowReclamationDefault": "Ranged Attack rolled even",
+	"SETTINGS.arrowReclamationSuccess": "Ranged Attack rolled even and was successful",
+	"SETTINGS.arrowReclamationNoCrit": "Ranged Attack rolled even, but not critical",
+	"SETTINGS.arrowReclamationSuccessNoCrit": "Ranged Attack rolled even, was successful, but not critical"
+}
