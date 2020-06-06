@@ -1,7 +1,7 @@
 {
 	"name": "forien-armoury",
 	"title": "WFRP4 Forien's Armoury",
-	"description": "",
+	"description": "Contains Compendium with new items like Gambesons and various Arrow/Bolt types. Also allows for reclamation of some fired ammunition.",
 	"author": "Forien — Forien#2130",
 	"authors": [
 		{
@@ -36,5 +36,6 @@
 	],
 	"scripts": [
 		"./scripts/arrows-homerule.js"
-	]
+	],
+	"socket": true
 }
