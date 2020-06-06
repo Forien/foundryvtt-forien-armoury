@@ -1,4 +1,4 @@
-# FoundryVTT - Forien's Armoury
+# FoundryVTT - WFRP4 Forien's Armoury
 
 This module is a collection of custom trappings for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
 
