@@ -12,12 +12,12 @@
 	"systems": [
 		"wfrp4e"
 	],
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"minimumCoreVersion": "0.6.0",
 	"compatibleCoreVersion": "0.6.0",
 	"url": "https://github.com/Forien/foundryvtt-forien-armoury",
 	"manifest": "https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json",
-	"download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.1.5.zip",
+	"download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.1.6.zip",
 	"packs": [
 		{
 			"name": "forien-armoury",
