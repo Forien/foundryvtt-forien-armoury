@@ -1,7 +1,7 @@
 {
 	"name": "forien-armoury",
 	"title": "WFRP4 Forien's Armoury",
-	"description": "",
+	"description": "Contains Compendium with new items like Gambesons and various Arrow/Bolt types. Also allows for reclamation of some fired ammunition.",
 	"author": "Forien — Forien#2130",
 	"authors": [
 		{
@@ -12,12 +12,12 @@
 	"systems": [
 		"wfrp4e"
 	],
-	"version": "0.1.6",
+	"version": "0.1.7",
 	"minimumCoreVersion": "0.6.0",
 	"compatibleCoreVersion": "0.6.0",
 	"url": "https://github.com/Forien/foundryvtt-forien-armoury",
 	"manifest": "https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json",
-	"download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.1.6.zip",
+	"download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.1.7.zip",
 	"packs": [
 		{
 			"name": "forien-armoury",
@@ -36,5 +36,6 @@
 	],
 	"scripts": [
 		"./scripts/arrows-homerule.js"
-	]
+	],
+	"socket": true
 }

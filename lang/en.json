@@ -6,5 +6,10 @@
 	"SETTINGS.arrowReclamationDefault": "Ranged Attack rolled even",
 	"SETTINGS.arrowReclamationSuccess": "Ranged Attack rolled even and was successful",
 	"SETTINGS.arrowReclamationNoCrit": "Ranged Attack rolled even, but not critical",
-	"SETTINGS.arrowReclamationSuccessNoCrit": "Ranged Attack rolled even, was successful, but not critical"
+	"SETTINGS.arrowReclamationSuccessNoCrit": "Ranged Attack rolled even, was successful, but not critical",
+	"FArmoury.recovered": "recovered",
+	"FArmoury.recoveredFuture": "will be recovered after combat",
+	"FArmoury.Arrow": "Arrow",
+	"FArmoury.Bolt": "Bolt",
+	"FArmoury.Bullet": "Bullet"
 }
