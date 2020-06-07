@@ -3,6 +3,9 @@
 ## v0.X.X
 ### v0.2.X
 
+#### v0.2.1
+* fixed links to changelog and readme in module.json
+
 #### v0.2.0
 * Extended Arrow Recovery system with more rules
 * Added new qualities and flaws to use with projectiles:
