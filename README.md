@@ -53,6 +53,7 @@ Module contains single Compendium pack containing at the moment 34 items.
 ### Features
 * fix out-of-encounter bug with arrow reclamation
 * add private chat messages for arrow owners (and GMs) after encounter - for clarity
+* add checkboxes in weapon test dialog that would allow to override arrow recovery system
 
 ### Content
 * More weapons, including exotic
