@@ -99,7 +99,6 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
       recovered = true;
     } else {
       recovered = this.isProjectileSaved(roll, percentageTarget, ammo);
-      console.log({'recovered': recovered});
     }
 
     // if recovered and hard to find, try again with -10
@@ -141,7 +140,6 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
    * @returns string|null
    */
   static getAmmoType(weapon, ammo) {
-    console.log(ammo);
     let allowArrows = game.settings.get("forien-armoury", "arrowReclamation.EnableArrows");
     let allowBolts = game.settings.get("forien-armoury", "arrowReclamation.EnableBolts");
     let allowBullets = game.settings.get("forien-armoury", "arrowReclamation.EnableBullets");
@@ -149,8 +147,6 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
     let unrecoverable = ammo.data.flaws.value.includes(game.i18n.localize("FArmoury.Properties.Unrecoverable"));
     let allowed = null;
     let type = null;
-    // console.log({'recoverable': recoverable});
-    // console.log({'unrecoverable': unrecoverable});
 
     if (unrecoverable)
       return null;
@@ -194,15 +190,9 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
     } else if (frail) {
       formula = "2d100kh";
     }
-    console.log(game.settings.get("forien-armoury", "arrowReclamation.Rule"));
-    console.log({'sturdy': sturdy});
-    console.log({'frail': frail});
-    console.log({'formula': formula});
 
     let percentage = (new Roll(formula).roll().total <= percentageTarget);
     let sturdyRoll = (new Roll("1d100").roll().total <= percentageTarget);
-    console.log({'percentage': percentage});
-    console.log({'sturdyRoll': sturdyRoll});
 
     switch (game.settings.get("forien-armoury", "arrowReclamation.Rule")) {
       case 'success':
