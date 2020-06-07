@@ -1,15 +1,39 @@
 {
-	"SETTINGS.arrowReclamationEnable": "Enable arrow reclamation",
-	"SETTINGS.arrowReclamationEnableHint": "Enable arrow reclamation upon range weapon test roll. When used during an encounter some arrows will be returned after encounter ends.",
-	"SETTINGS.arrowReclamationRule": "Arrow reclamation rule",
-	"SETTINGS.arrowReclamationRuleHint": "Select rules by which decide if arrow can be reused. Word `critical` means both criticals and fumbles.",
-	"SETTINGS.arrowReclamationDefault": "Ranged Attack rolled even",
-	"SETTINGS.arrowReclamationSuccess": "Ranged Attack rolled even and was successful",
-	"SETTINGS.arrowReclamationNoCrit": "Ranged Attack rolled even, but not critical",
-	"SETTINGS.arrowReclamationSuccessNoCrit": "Ranged Attack rolled even, was successful, but not critical",
+	"FArmoury.arrowReclamation.Enable": "Enable ammo reclamation",
+	"FArmoury.arrowReclamation.EnableHint": "Enable ammo reclamation upon range weapon test roll. When used during an encounter some projectiles will be returned after encounter ends.",
+
+	"FArmoury.arrowReclamation.EnableArrows": "Allow to recover Arrows",
+	"FArmoury.arrowReclamation.EnableArrowsHint": "Check to recover Bow ammunition",
+	"FArmoury.arrowReclamation.EnableBoltsRule": "Allow to recover Bolts",
+	"FArmoury.arrowReclamation.EnableBoltsHintRule": "Check to recover Crossbow ammunition",
+	"FArmoury.arrowReclamation.EnableBulletsRule": "Allow to recover Bullets",
+	"FArmoury.arrowReclamation.EnableBulletsHintRule": "Check to recover Sling ammunition",
+
+	"FArmoury.arrowReclamation.Rule": "Arrow reclamation rule",
+	"FArmoury.arrowReclamation.RuleHint": "Select rules by which decide if arrow can be reused. Word `critical` means both criticals and fumbles on the <b>main</b> Ranged Test roll.",
+
+	"FArmoury.arrowReclamation.DefaultRule": "Ranged Attack rolled even",
+	"FArmoury.arrowReclamation.SuccessRule": "Ranged Attack rolled even and was successful",
+	"FArmoury.arrowReclamation.NoCritRule": "Ranged Attack rolled even, but not critical",
+	"FArmoury.arrowReclamation.SuccessNoCritRule": "Ranged Attack rolled even, was successful, but not critical",
+	"FArmoury.arrowReclamation.FailureRule": "Ranged Attack rolled even and failed",
+	"FArmoury.arrowReclamation.FailureNoCritRule": "Ranged Attack rolled even, has failed, but not critical",
+	"FArmoury.arrowReclamation.PercentageRule": "Separate roll using Percentage",
+	"FArmoury.arrowReclamation.PercentageNoCritRule": "Separate roll using Percentage, without criticals",
+
+	"FArmoury.arrowReclamation.Percentage": "Target percentage",
+	"FArmoury.arrowReclamation.PercentageHint": "Set target percentage for rolling with certain Rules. Roll will succeed if d100 rolls less or equal to Target",
+
+
 	"FArmoury.recovered": "recovered",
 	"FArmoury.recoveredFuture": "will be recovered after combat",
 	"FArmoury.Arrow": "Arrow",
 	"FArmoury.Bolt": "Bolt",
-	"FArmoury.Bullet": "Bullet"
+	"FArmoury.Bullet": "Bullet",
+
+	"PROPERTY.Recoverable": "Recoverable",
+	"PROPERTY.Unrecoverable": "Unrecoverable",
+	"PROPERTY.Sturdy": "Sturdy",
+	"PROPERTY.Frail": "Frail",
+	"PROPERTY.HardToFind": "Hard To Find"
 }
