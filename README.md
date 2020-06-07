@@ -1,6 +1,22 @@
 # FoundryVTT - Forien's Armoury
+**[Current version]**: v0.2.0  
+**[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.5.5+
 
-This module is a collection of custom trappings for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
+This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
+
+#### Changes in v0.2.0
+* Extended Arrow Recovery system with more rules
+* Added new qualities and flaws to use with projectiles:
+  * Unbreakable (used extisting quality) – projectiles is always recovered, bypassing rules, as long as it is recoverable (settings/quailities)
+  * Recoverable – projectile can be recovered, even if settings won't allow it
+  * Unrecoverable – projectile always perishes, will never be recovered
+  * Sturdy – projectile is sturdy and easier to recover
+  * Frail – projectile breaks easily and is harder to recover
+  * Hard To Find – projectile is hard to find, if it would be recovered, roll again with -10 modifier
+* Added new qualities and flaws to some items in compendium
+* Added variants for lead and stone bullets that use projectile qualities and flaws
+* Created changelog
+
 
 ## Installation
 
@@ -11,7 +27,9 @@ This module is a collection of custom trappings for Warhammer Fantasy Role-Play 
 
 ## Contents
 ### Features
-This module allows GMs to enable an "arrow reclamation feature", which allows for some portion of ammunition (arrows and bolts) to be returned to players after an encounter. Defaults to even rolls. Must be enabled. 
+This module allows GMs to enable an "arrow reclamation feature", which allows for some portion of ammunition (arrows, bolts and sling bullets) to be returned to players after an encounter. Defaults to even rolls. Must be enabled.
+
+* 2 projectile Qualities and 3 projectile Flaws are also added to work with the feature
 
 *There is currently bug with returning arrows outside of "encounter", so I disabled that.  
 **Currently only works with encounter**. Remember to delete encounter to return arrows.*
@@ -28,6 +46,7 @@ Module contains single Compendium pack containing at the moment 34 items.
 * Added various Bolt types: Bodkin, Broad, Hunting, Needle, Standard — where Standard replaces vanilla Bolt
 * Added Cracker Bullet for Sling (Blast 2 ammo)
 * Added generic Ingredient item entities, one for each tradition.
+
 
 ## Future plans
 
@@ -48,13 +67,6 @@ Module contains single Compendium pack containing at the moment 34 items.
 
 If you wish to contact me for any reason, reach me out on Discord using my tag: `Forien#2130`
 
-
-## Compatibility
-
-* FoundryVTT: 0.6.0+ 
-* WFRP4e: v1.5.5+
-
-*Module might be compatible below these versions, but I do not guarantee it.*
 
 ## Acknowledgments
 
