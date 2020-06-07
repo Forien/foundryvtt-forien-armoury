@@ -8,7 +8,9 @@ Hooks.on("init", function () {
         ForienArmoury.ArrowReclamation.addAmmoToReplenish(data.payload.actorId, data.payload.ammoId);
       }
     }
-  })
+  });
+
+  ForienArmoury.ArrowReclamation.registerQualitiesAndFlaws();
 });
 
 Hooks.on("deleteCombat", function (combat) {

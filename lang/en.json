@@ -4,10 +4,10 @@
 
 	"FArmoury.arrowReclamation.EnableArrows": "Allow to recover Arrows",
 	"FArmoury.arrowReclamation.EnableArrowsHint": "Check to recover Bow ammunition",
-	"FArmoury.arrowReclamation.EnableBoltsRule": "Allow to recover Bolts",
-	"FArmoury.arrowReclamation.EnableBoltsHintRule": "Check to recover Crossbow ammunition",
-	"FArmoury.arrowReclamation.EnableBulletsRule": "Allow to recover Bullets",
-	"FArmoury.arrowReclamation.EnableBulletsHintRule": "Check to recover Sling ammunition",
+	"FArmoury.arrowReclamation.EnableBolts": "Allow to recover Bolts",
+	"FArmoury.arrowReclamation.EnableBoltsHint": "Check to recover Crossbow ammunition",
+	"FArmoury.arrowReclamation.EnableBullets": "Allow to recover Bullets",
+	"FArmoury.arrowReclamation.EnableBulletsHint": "Check to recover Sling ammunition",
 
 	"FArmoury.arrowReclamation.Rule": "Arrow reclamation rule",
 	"FArmoury.arrowReclamation.RuleHint": "Select rules by which decide if arrow can be reused. Word `critical` means both criticals and fumbles on the <b>main</b> Ranged Test roll.",
@@ -31,9 +31,15 @@
 	"FArmoury.Bolt": "Bolt",
 	"FArmoury.Bullet": "Bullet",
 
-	"PROPERTY.Recoverable": "Recoverable",
-	"PROPERTY.Unrecoverable": "Unrecoverable",
-	"PROPERTY.Sturdy": "Sturdy",
-	"PROPERTY.Frail": "Frail",
-	"PROPERTY.HardToFind": "Hard To Find"
+	"FArmoury.Properties.Recoverable.Label": "Recoverable",
+	"FArmoury.Properties.Unrecoverable.Label": "Unrecoverable",
+	"FArmoury.Properties.Sturdy.Label": "Sturdy",
+	"FArmoury.Properties.Frail.Label": "Frail",
+	"FArmoury.Properties.HardToFind.Label": "Hard To Find",
+
+	"FArmoury.Properties.Recoverable.Description": "Projectile can be recovered even if it's ammunition group normally cannot. <br/><em>(requires feature enabled in settings)</em>",
+	"FArmoury.Properties.Unrecoverable.Description": "Projectile always perishes and can never be recovered.",
+	"FArmoury.Properties.Sturdy.Description": "Projectile is sturdy and easier to recover.<br/><b>Percentage rules</b>: rolls double, picks lower<br/><b>Success/Fail rules</b>: negates success/failure condition<br/><b>Other rules:</b> if not recovered, roll for Percentage.<br/><em>(requires feature enabled in settings)</em>",
+	"FArmoury.Properties.Frail.Description": "Projectile is very frail and easily breaks making it harder to recover.<br/><b>Percentage rules</b>: rolls double, picks higher<br/><b>Other rules:</b> if not recovered, roll for Percentage<br/><em>(requires feature enabled in settings)</em>",
+	"FArmoury.Properties.HardToFind.Description": "Projectile is very hard to find even in favorable conditions. If it was to be recovered, roll again for Percentage with –10 modifier."
 }
