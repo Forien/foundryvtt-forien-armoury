@@ -1,5 +1,5 @@
 # FoundryVTT - Forien's Armoury
-**[Current version]**: v0.2.3
+**[Current version]**: v0.2.3  
 **[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.5.5+
 
 This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
