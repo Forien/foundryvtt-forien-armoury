@@ -1,7 +1,7 @@
 {
   "name": "forien-armoury",
   "title": "WFRP4 Forien's Armoury",
-  "description": "Contains Compendium with new items like Gambesons and various Arrow/Bolt types. Also allows for reclamation of some fired ammunition.",
+  "description": "Contains Compendium with new items like Gambesons, various new ammunition types for ranged weapons, and 41 weapons from DasSauerkraut's \"Gerwin Waffenhalter’s Magnificent Weapons Gallery\". Module also allows for reclamation of some fired projectiles depending on various configurable rules (disabled by default).",
   "author": "Forien — Forien#2130",
   "authors": [
     {
@@ -10,14 +10,14 @@
     }
   ],
   "system": "wfrp4e",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "minimumCoreVersion": "0.6.0",
   "compatibleCoreVersion": "0.6.2",
   "url": "https://github.com/Forien/foundryvtt-forien-armoury",
   "manifest": "https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json",
-  "download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.2.1.zip",
-  "readme": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.1/README.md",
-  "changelog": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.1/changelog.md",
+  "download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.2.2.zip",
+  "readme": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.2/README.md",
+  "changelog": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.2/changelog.md",
   "bugs": "https://github.com/Forien/foundryvtt-forien-armoury/issues",
   "packs": [
     {
@@ -33,6 +33,11 @@
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
+    },
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "lang/pl.json"
     }
   ],
   "scripts": [

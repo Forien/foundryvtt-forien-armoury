@@ -1,10 +1,16 @@
 # FoundryVTT - Forien's Armoury
-**[Current version]**: v0.2.0  
+**[Current version]**: v0.2.2  
 **[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.5.5+
 
 This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
 
-#### Changes in v0.2.0
+##### Changes in v0.2.2
+* under DasSauerkraut's permission, integrated Gerwin Waffenhalter’s Magnificent Weapons Gallery weapons and slashing quality 
+* prepared module for translation to Polish
+* translated basic strings for now, Compendium still English only
+* added check for ammunition to avoid errors on tests not using ammunition
+* removed unnecessary logging
+##### Changes in v0.2.0
 * Extended Arrow Recovery system with more rules
 * Added new qualities and flaws to use with projectiles:
   * Unbreakable (used extisting quality) – projectiles is always recovered, bypassing rules, as long as it is recoverable (settings/quailities)
@@ -56,8 +62,7 @@ Module contains single Compendium pack containing at the moment 34 items.
 * add checkboxes in weapon test dialog that would allow to override arrow recovery system
 
 ### Content
-* More weapons, including exotic
-* Translation to Polish using Babele
+* Translating Compendium to Polish using Babele
 * Maybe some non-combat trappings as well
 * Create specific ingredients instead of generic ones
 
@@ -74,6 +79,7 @@ If you wish to contact me for any reason, reach me out on Discord using my tag: 
 * Thanks to Atropos for his relentless work on developing and improving the Foundry VTT
 * Thanks to Moo Man for his great work developing the [WFRP4e game system](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT) as well as for his invaluable help with understanding how to mod Foundry using JS
 * Thanks to Thoradin for an idea for arrow reclamation feature :)
+* Thanks to [DasSauerkraut](https://github.com/DasSauerkraut) for allowing me to integrate compendium from his [Gerwin Waffenhalter’s Magnificent Weapons Gallery](https://github.com/DasSauerkraut/wfrp-gwmwg) into my module 
 
 
 ## License

@@ -30,7 +30,7 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
   }
 
   /**
-   * Finds ammo in possesion of an Actor and replenishes given amount
+   * Finds ammo in possession of an Actor and replenishes given amount
    *
    * @param actorId
    * @param ammoId
@@ -52,7 +52,7 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
   static processEndOfCombat(combat) {
     let ammoReplenish = combat.getFlag('forien-armoury', 'ammoReplenish');
 
-    for (var actorId in ammoReplenish) {
+    for (let actorId in ammoReplenish) {
       if (Array.isArray(ammoReplenish[actorId])) {
         ammoReplenish[actorId].forEach(function (ammo) {
           ForienArmoury.ArrowReclamation.replenishAmmo(actorId, ammo._id, ammo.quantity);
@@ -68,19 +68,21 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
    */
   static checkRollWeaponTest(roll, cardOptions) {
     // if feature not enabled, do nothing
-    if (!game.settings.get("forien-armoury", "arrowReclamation.Enable")) {
+    if (!game.settings.get("forien-armoury", "arrowReclamation.Enable"))
       return;
-    }
 
-    let actorId = cardOptions.speaker.actor;
+    // if there is no ammo, do nothing
     let weapon = roll.weapon;
+    if (weapon.data.currentAmmo === undefined)
+      return;
+
     let ammoId = weapon.data.currentAmmo.value;
+    let actorId = cardOptions.speaker.actor;
     let recovered = false;
     let message = "";
     let percentageTarget = game.settings.get("forien-armoury", "arrowReclamation.Percentage");
     let ammo = weapon.ammo.find(a => a._id === ammoId);
     let ammoQualities = ammo.data.qualities;
-    let ammoFlaws = ammo.data.flaws;
 
     let type = this.getAmmoType(weapon, ammo);
 
@@ -90,8 +92,9 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
     }
 
     // define chat messages
-    // let messageNow = `${game.i18n.localize("FArmoury." + type)} ${game.i18n.localize("FArmoury.recovered")}.`;
-    let messageFuture = `${game.i18n.localize("FArmoury." + type)} ${game.i18n.localize("FArmoury.recoveredFuture")}.`;
+    type = game.i18n.localize("FArmoury." + type);
+    // let messageNow = game.i18n.format("FArmoury.recovered", {type});
+    let messageFuture = game.i18n.format("FArmoury.recoveredFuture", {type});
 
 
     // if unbreakable, recover, if not, apply rules
@@ -137,6 +140,7 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
    *
    * @param weapon
    * @param ammo
+   *
    * @returns string|null
    */
   static getAmmoType(weapon, ammo) {
@@ -174,13 +178,14 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
    * @param roll
    * @param percentageTarget
    * @param ammo
-   * @returns {boolean}
+   *
+   * @returns boolean
    */
   static isProjectileSaved(roll, percentageTarget, ammo) {
     let crit = (roll.extra.critical !== undefined || roll.extra.fumble !== undefined);
     let even = roll.roll % 2 === 0;
     let success = roll.roll <= roll.target;
-    let recovered = false;
+    let recovered;
     let sturdy = ammo.data.qualities.value.includes(game.i18n.localize("FArmoury.Properties.Sturdy"));
     let frail = ammo.data.flaws.value.includes(game.i18n.localize("FArmoury.Properties.Frail"));
     let formula = "1d100";
@@ -256,10 +261,14 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
    * Registers new qualities and flaws and their descriptions
    */
   static registerQualitiesAndFlaws() {
+    WFRP4E.weaponQualities["slashing"] = "FArmoury.Properties.Slashing.Label";
+    WFRP4E.qualityDescriptions["slashing"] = "FArmoury.Properties.Slashing.Description";
+
     WFRP4E.itemQualities["sturdy"] = "FArmoury.Properties.Sturdy.Label";
     WFRP4E.qualityDescriptions["sturdy"] = "FArmoury.Properties.Sturdy.Description";
     WFRP4E.itemQualities["recoverable"] = "FArmoury.Properties.Recoverable.Label";
     WFRP4E.qualityDescriptions["recoverable"] = "FArmoury.Properties.Recoverable.Description";
+
     WFRP4E.itemFlaws["frail"] = "FArmoury.Properties.Frail.Label";
     WFRP4E.flawDescriptions["frail"] = "FArmoury.Properties.Frail.Description";
     WFRP4E.itemFlaws["unrecoverable"] = "FArmoury.Properties.Unrecoverable.Label";
