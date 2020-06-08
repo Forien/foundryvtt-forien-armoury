@@ -3,6 +3,11 @@
 ## v0.X.X
 ### v0.2.X
 
+#### v0.2.2
+* under DasSauerkraut's permission, integrated Gerwin Waffenhalter’s Magnificent Weapons Gallery weapons and slashing quality 
+* prepared module for translation to Polish
+* translated basic strings for now, Compendium still English only
+
 #### v0.2.1
 * fixed links to changelog and readme in module.json
 
