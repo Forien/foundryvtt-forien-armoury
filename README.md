@@ -1,16 +1,10 @@
 # FoundryVTT - Forien's Armoury
-**[Current version]**: v0.2.2  
+**[Current version]**: v0.2.3
 **[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.5.5+
 
 This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
 
-##### Changes in v0.2.2
-* under DasSauerkraut's permission, integrated Gerwin Waffenhalter’s Magnificent Weapons Gallery weapons and slashing quality 
-* prepared module for translation to Polish
-* translated basic strings for now, Compendium still English only
-* added check for ammunition to avoid errors on tests not using ammunition
-* removed unnecessary logging
-##### Changes in v0.2.0
+#### Notable changes in v0.2.*
 * Extended Arrow Recovery system with more rules
 * Added new qualities and flaws to use with projectiles:
   * Unbreakable (used extisting quality) – projectiles is always recovered, bypassing rules, as long as it is recoverable (settings/quailities)
@@ -21,7 +15,11 @@ This module is a collection of custom trappings and features for Warhammer Fanta
   * Hard To Find – projectile is hard to find, if it would be recovered, roll again with -10 modifier
 * Added new qualities and flaws to some items in compendium
 * Added variants for lead and stone bullets that use projectile qualities and flaws
-* Created changelog
+* Under DasSauerkraut's permission, integrated Gerwin Waffenhalter’s Magnificent Weapons Gallery weapons and slashing quality 
+* Added automation for applying Bleed Conditions upon hit with Slashing weapon
+* Prepared groundwork for translation using Babele to any language
+* Started translating Forien's Armoury compendium to Polish (all names and most descriptions done)
+
 
 
 ## Installation

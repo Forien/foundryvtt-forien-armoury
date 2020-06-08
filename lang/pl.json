@@ -24,6 +24,8 @@
   "FArmoury.arrowReclamation.Percentage": "Docelowa Szansa",
   "FArmoury.arrowReclamation.PercentageHint": "Ustaw \"Szansę\" procentową dla rzutu wymaganego przez niektóre Zasady. Rzut się powiedzie, jeśli na k100 wypadnie mniej lub tyle samo, ile wynosi Docelowa Szansa",
 
+  "FArmoury.SlashingApplied": "Na lokacji {hitLocation} znajduje się nie więcej jak 1 PZ, nałożono Krwawienie. <br>{bleedAmtOld} -> {bleedAmt}",
+
 
   "FArmoury.recovered": "Odzyskano {type}",
   "FArmoury.recoveredFuture": "Odzyskasz {type} po zakończeniu Starcia",

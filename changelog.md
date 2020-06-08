@@ -3,6 +3,11 @@
 ## v0.X.X
 ### v0.2.X
 
+#### v0.2.3
+* prepared groundwork for translation using Babele to any language
+* added automation for applying Bleed Conditions upon hit with Slashing weapon
+* started translating Forien's Armoury compendium to Polish (all names and most descriptions done)
+
 #### v0.2.2
 * under DasSauerkraut's permission, integrated Gerwin Waffenhalter’s Magnificent Weapons Gallery weapons and slashing quality 
 * prepared module for translation to Polish

@@ -73,7 +73,7 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
 
     // if there is no ammo, do nothing
     let weapon = roll.weapon;
-    if (weapon.data.currentAmmo === undefined)
+    if (weapon === undefined || weapon.ammo === undefined || weapon.data.currentAmmo === undefined)
       return;
 
     let ammoId = weapon.data.currentAmmo.value;
@@ -255,6 +255,72 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
     }
 
     return recovered;
+  }
+
+  /**
+   * Automatically applies Bleeding Condition, when struck with Slashing weapon on body part
+   * that is not protected by more than 1 AP.
+   * Modified by Forien — refactoring mostly.
+   *
+   * @author DasSauerkraut
+   * @param result
+   */
+  static applyBleedingOnSlashing(result) {
+    let data = result;
+    if (data.winner === "defender")
+      return;
+
+    console.log(data);
+    let target = canvas.tokens.get(data.speakerDefend.token);
+    let armor = target.actor.prepareItems().AP;
+    let hitLocation = data.hitloc.value;
+
+    if (armor[hitLocation].value <= 1) {
+      let bleedAmtOld = 0;
+      let effects = target.data.effects;
+      let newEffects = [];
+
+      target.data.effects.forEach(effect => {
+        if (typeof (effect) == 'string' && effect.includes('bleeding')) {
+          let str = effect.slice(32);
+          bleedAmtOld += parseInt(str.replace(/^\D+/g, ''));
+        } else {
+          newEffects.push(effect);
+        }
+      });
+
+      let bleedAmt = bleedAmtOld + 1;
+
+      if (bleedAmt < 5) {
+        newEffects.push(`systems/wfrp4e/icons/conditions/bleeding${bleedAmt}.png`)
+      } else {
+        let availableStatuses = [4, 3, 2, 1];
+        let bleedLeft = bleedAmt;
+        while (availableStatuses.length > 0) {
+          if (bleedLeft <= availableStatuses[0]) {
+            break;
+          }
+          bleedLeft -= availableStatuses[0];
+          newEffects.push(`systems/wfrp4e/icons/conditions/bleeding${availableStatuses[0]}.png`);
+          availableStatuses.shift()
+        }
+        newEffects.push(`systems/wfrp4e/icons/conditions/bleeding${bleedLeft}.png`);
+      }
+
+      hitLocation = WFRP4E.locations[hitLocation];
+      let message = game.i18n.format('FArmoury.SlashingApplied', {hitLocation, bleedAmt, bleedAmtOld});
+
+      let chatData = {
+        user: game.user._id,
+        speaker: ChatMessage.getSpeaker(),
+        content: `<p>${message}</p>`
+      };
+
+      ChatMessage.create(chatData, {});
+      target.update({
+        effects: newEffects
+      });
+    }
   }
 
   /**
