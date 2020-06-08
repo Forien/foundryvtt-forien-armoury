@@ -90,8 +90,9 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
     }
 
     // define chat messages
-    // let messageNow = `${game.i18n.localize("FArmoury." + type)} ${game.i18n.localize("FArmoury.recovered")}.`;
-    let messageFuture = `${game.i18n.localize("FArmoury." + type)} ${game.i18n.localize("FArmoury.recoveredFuture")}.`;
+    type = game.i18n.localize("FArmoury." + type)
+    // let messageNow = game.i18n.format("FArmoury.recovered", {type});
+    let messageFuture = game.i18n.format("FArmoury.recoveredFuture", {type});
 
 
     // if unbreakable, recover, if not, apply rules
@@ -256,10 +257,14 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
    * Registers new qualities and flaws and their descriptions
    */
   static registerQualitiesAndFlaws() {
+    WFRP4E.weaponQualities["slashing"] = "FArmoury.Properties.Slashing.Label";
+    WFRP4E.qualityDescriptions["slashing"] = "FArmoury.Properties.Slashing.Description";
+
     WFRP4E.itemQualities["sturdy"] = "FArmoury.Properties.Sturdy.Label";
     WFRP4E.qualityDescriptions["sturdy"] = "FArmoury.Properties.Sturdy.Description";
     WFRP4E.itemQualities["recoverable"] = "FArmoury.Properties.Recoverable.Label";
     WFRP4E.qualityDescriptions["recoverable"] = "FArmoury.Properties.Recoverable.Description";
+
     WFRP4E.itemFlaws["frail"] = "FArmoury.Properties.Frail.Label";
     WFRP4E.flawDescriptions["frail"] = "FArmoury.Properties.Frail.Description";
     WFRP4E.itemFlaws["unrecoverable"] = "FArmoury.Properties.Unrecoverable.Label";

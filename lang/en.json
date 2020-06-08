@@ -25,18 +25,20 @@
 	"FArmoury.arrowReclamation.PercentageHint": "Set target percentage for rolling with certain Rules. Roll will succeed if d100 rolls less or equal to Target",
 
 
-	"FArmoury.recovered": "recovered",
-	"FArmoury.recoveredFuture": "will be recovered after combat",
+	"FArmoury.recovered": "{type} recovered",
+	"FArmoury.recoveredFuture": "{type} will be recovered after combat",
 	"FArmoury.Arrow": "Arrow",
 	"FArmoury.Bolt": "Bolt",
 	"FArmoury.Bullet": "Bullet",
 
+	"FArmoury.Properties.Slashing.Label": "Slashing",
 	"FArmoury.Properties.Recoverable.Label": "Recoverable",
 	"FArmoury.Properties.Unrecoverable.Label": "Unrecoverable",
 	"FArmoury.Properties.Sturdy.Label": "Sturdy",
 	"FArmoury.Properties.Frail.Label": "Frail",
 	"FArmoury.Properties.HardToFind.Label": "Hard To Find",
 
+	"FArmoury.Properties.Slashing.Description": "A  Slashing  weapon  inflicts  one  Bleeding  Condition  on successful hits on locations protected by no more than 1 Armour Point.",
 	"FArmoury.Properties.Recoverable.Description": "Projectile can be recovered even if it's ammunition group normally cannot. <br/><em>(requires feature enabled in settings)</em>",
 	"FArmoury.Properties.Unrecoverable.Description": "Projectile always perishes and can never be recovered.",
 	"FArmoury.Properties.Sturdy.Description": "Projectile is sturdy and easier to recover.<br/><b>Percentage rules</b>: rolls double, picks lower<br/><b>Success/Fail rules</b>: negates success/failure condition<br/><b>Other rules:</b> if not recovered, roll for Percentage.<br/><em>(requires feature enabled in settings)</em>",

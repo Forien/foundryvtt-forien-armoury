@@ -1,0 +1,47 @@
+{
+  "FArmoury.arrowReclamation.Enable": "Włącz odzyskiwanie amunicji",
+  "FArmoury.arrowReclamation.EnableHint": "Włącz odzyskiwanie amunicji podczas testu na atak zasięgowy. Amunicja wystrzelona podczas Starcia zostanie przywrócona po jego zakończeniu.",
+
+  "FArmoury.arrowReclamation.EnableArrows": "Pozwól odzyskiwać Strzały",
+  "FArmoury.arrowReclamation.EnableArrowsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Łuku",
+  "FArmoury.arrowReclamation.EnableBolts": "Pozwól odzyskiwać Bełty",
+  "FArmoury.arrowReclamation.EnableBoltsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Kuszy",
+  "FArmoury.arrowReclamation.EnableBullets": "Pozwól odzyskiwać Pociski",
+  "FArmoury.arrowReclamation.EnableBulletsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Procy",
+
+  "FArmoury.arrowReclamation.Rule": "Zasady odzyskiwania amunicji",
+  "FArmoury.arrowReclamation.RuleHint": "Wybierz zasady, według których amunicja zostanie odzyskana. Słowo `Krytyk` oznacza zarówno Fuks jak i Pech",
+
+  "FArmoury.arrowReclamation.DefaultRule": "Rzut był parzysty",
+  "FArmoury.arrowReclamation.SuccessRule": "Rzut był parzysty i udany",
+  "FArmoury.arrowReclamation.NoCritRule": "Rzut był parzysty, ale bez Krytyka",
+  "FArmoury.arrowReclamation.SuccessNoCritRule": "Rzut był parzysty, udany, ale bez Krytyka",
+  "FArmoury.arrowReclamation.FailureRule": "Rzut był parzysty i nieudany",
+  "FArmoury.arrowReclamation.FailureNoCritRule": "Rzut był parzysty, nieudany, ale bez Krytyka",
+  "FArmoury.arrowReclamation.PercentageRule": "Zdaj rzut na Szansę",
+  "FArmoury.arrowReclamation.PercentageNoCritRule": "Zdaj rzut na Szansę, ale bez Krytyka",
+
+  "FArmoury.arrowReclamation.Percentage": "Docelowa Szansa",
+  "FArmoury.arrowReclamation.PercentageHint": "Ustaw \"Szansę\" procentową dla rzutu wymaganego przez niektóre Zasady. Rzut się powiedzie, jeśli na k100 wypadnie mniej lub tyle samo, ile wynosi Docelowa Szansa",
+
+
+  "FArmoury.recovered": "Odzyskano {type}",
+  "FArmoury.recoveredFuture": "Odzyskasz {type} po zakończeniu Starcia",
+  "FArmoury.Arrow": "Strzałę",
+  "FArmoury.Bolt": "Bełt",
+  "FArmoury.Bullet": "Pocisk",
+
+  "FArmoury.Properties.Slashing.Label": "Slashing",
+  "FArmoury.Properties.Recoverable.Label": "Recoverable",
+  "FArmoury.Properties.Unrecoverable.Label": "Unrecoverable",
+  "FArmoury.Properties.Sturdy.Label": "Sturdy",
+  "FArmoury.Properties.Frail.Label": "Frail",
+  "FArmoury.Properties.HardToFind.Label": "Hard To Find",
+
+  "FArmoury.Properties.Slashing.Description": "Sieczna broń nakłada Stan Krwawienie, jeśli trafi w miejsce chronione przez nie więcej, niż 1 Punkt Pancerza.",
+  "FArmoury.Properties.Recoverable.Description": "Amunicja może być odzyskana nawet wtedy, jeśli normalnie zasady nie pozwalają na odzyskiwanie tego typu amunicji. <br/><em>(wymaga włączenia funkcji w ustawieniach)</em>",
+  "FArmoury.Properties.Unrecoverable.Description": "Amunicja zawsze się niszczy po wystrzeleniu i nie może być nigdy odzyskana.",
+  "FArmoury.Properties.Sturdy.Description": "Pocisk jest wytrzymały, więc łatwiej go odzyskać.<br/><b>Szansa</b>: rzuć dwa razy, wybierz niższy<br/><b>Zasady Sukcesu/Porażni</b>: neguje warunki Sukcesu/Porażki<br/><b>Inne zasady:</b> jeśli nie odzyskano, rzuć na Szansę.<br/><em>(wymaga włączenia funkcji w ustawieniach)</em>",
+  "FArmoury.Properties.Frail.Description": "Pocisk jest słaby i łatwo się psuje, przez co trudniej go odzyskać.<br/><b>Szansa</b>: rzuć dwa razy, wybierz wyższy<br/><b>Inne zasady:</b> jeśli odzyskano, rzuć na Szansę<br/><em>(wymaga włączenia funkcji w ustawieniach)</em>",
+  "FArmoury.Properties.HardToFind.Description": "Pocisk jest bardzo ciężki do znalezienia nawet w sprzyjających warunkach. Jeśli miałby normalnie być odzyskany, rzuć ponownie na Szansę z modyfikatorem –10."
+}
