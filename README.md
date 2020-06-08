@@ -8,6 +8,8 @@ This module is a collection of custom trappings and features for Warhammer Fanta
 * under DasSauerkraut's permission, integrated Gerwin Waffenhalter’s Magnificent Weapons Gallery weapons and slashing quality 
 * prepared module for translation to Polish
 * translated basic strings for now, Compendium still English only
+* added check for ammunition to avoid errors on tests not using ammunition
+* removed unnecessary logging
 ##### Changes in v0.2.0
 * Extended Arrow Recovery system with more rules
 * Added new qualities and flaws to use with projectiles:
