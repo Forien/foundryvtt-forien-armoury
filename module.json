@@ -10,14 +10,14 @@
     }
   ],
   "system": "wfrp4e",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "minimumCoreVersion": "0.6.0",
   "compatibleCoreVersion": "0.6.2",
   "url": "https://github.com/Forien/foundryvtt-forien-armoury",
-  "manifest": "https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json",
-  "download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.2.2.zip",
-  "readme": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.2/README.md",
-  "changelog": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.2/changelog.md",
+  "manifest": "https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/v0.2.3/module.json",
+  "download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.2.3.zip",
+  "readme": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.3/README.md",
+  "changelog": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.3/changelog.md",
   "bugs": "https://github.com/Forien/foundryvtt-forien-armoury/issues",
   "packs": [
     {
@@ -43,7 +43,8 @@
   "scripts": [
     "./scripts/init.js",
     "./scripts/add-config.js",
-    "./scripts/arrows-reclamation.js"
+    "./scripts/arrows-reclamation.js",
+    "./scripts/localization.js"
   ],
   "socket": true
 }

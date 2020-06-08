@@ -11,6 +11,10 @@ Hooks.on("init", function () {
   });
 
   ForienArmoury.ArrowReclamation.registerQualitiesAndFlaws();
+
+  // if Babele module is installed and enabled, register translations
+  if (game.modules.get("babele") !== undefined && game.modules.get("babele").active)
+    ForienArmoury.Localization.registerBabele();
 });
 
 Hooks.on("deleteCombat", function (combat) {
@@ -21,4 +25,8 @@ Hooks.on("deleteCombat", function (combat) {
 
 Hooks.on("wfrp4e:rollWeaponTest", function (roll, cardOptions) {
   ForienArmoury.ArrowReclamation.checkRollWeaponTest(roll, cardOptions);
+});
+
+Hooks.on("wfrp4e:opposedTestResult", function (result) {
+  ForienArmoury.ArrowReclamation.applyBleedingOnSlashing(result);
 });
