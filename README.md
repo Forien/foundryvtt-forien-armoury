@@ -1,6 +1,7 @@
 # FoundryVTT - Forien's Armoury
-**[Current version]**: v0.2.3  
-**[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.5.5+
+**[Current version]**: v0.2.4  
+**[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.5.5+   
+**[Optional modules]**: *Babele* 1.19+ (required for translations)
 
 This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
 
@@ -19,7 +20,7 @@ This module is a collection of custom trappings and features for Warhammer Fanta
 * Added automation for applying Bleed Conditions upon hit with Slashing weapon
 * Prepared groundwork for translation using Babele to any language
 * Started translating Forien's Armoury compendium to Polish (all names and most descriptions done)
-
+* Added notification when combat ends about all recovered ammunition. Only owner and GM see it. 
 
 
 ## Installation

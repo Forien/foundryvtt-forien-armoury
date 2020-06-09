@@ -5,8 +5,9 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
    *
    * @param actorId
    * @param ammoId
+   * @param userId
    */
-  static addAmmoToReplenish(actorId, ammoId) {
+  static addAmmoToReplenish(actorId, ammoId, userId) {
     // retrieve existing data or initialize it
     let ammoReplenish = game.combat.getFlag('forien-armoury', 'ammoReplenish') || {};
     let actorData = ammoReplenish[actorId] || [];
@@ -16,6 +17,7 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
     if (ammoData === undefined) {
       ammoData = {
         "_id": ammoId,
+        "user": userId,
         "quantity": 0
       };
       actorData.push(ammoData);
@@ -35,13 +37,18 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
    * @param actorId
    * @param ammoId
    * @param quantity
+   * @param userId
+   * @param bulk
    */
-  static replenishAmmo(actorId, ammoId, quantity) {
+  static replenishAmmo(actorId, ammoId, quantity, userId, bulk = false) {
     let actor = game.actors.find(a => a._id === actorId);
     let ammoEntity = duplicate(actor.getEmbeddedEntity("OwnedItem", ammoId));
 
     ammoEntity.data.quantity.value += quantity;
     actor.updateEmbeddedEntity("OwnedItem", {_id: ammoId, "data.quantity.value": ammoEntity.data.quantity.value});
+
+    if (bulk)
+      this.notifyAmmoReturned(actor, ammoEntity, userId, quantity);
   }
 
   /**
@@ -55,10 +62,40 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
     for (let actorId in ammoReplenish) {
       if (Array.isArray(ammoReplenish[actorId])) {
         ammoReplenish[actorId].forEach(function (ammo) {
-          ForienArmoury.ArrowReclamation.replenishAmmo(actorId, ammo._id, ammo.quantity);
+          ForienArmoury.ArrowReclamation.replenishAmmo(actorId, ammo._id, ammo.quantity, ammo.user, true);
         });
       }
     }
+  }
+
+  /**
+   *
+   * @param actor
+   * @param ammo
+   * @param user
+   * @param quantity
+   */
+  static async notifyAmmoReturned(actor, ammo, user, quantity) {
+    let templateData = duplicate(actor.data);
+    templateData.ammo = ammo;
+
+    // Don't post any image for the item (which would leave a large gap) if the default image is used
+    if (templateData.img.includes("/unknown.png"))
+      templateData.img = null;
+    if (templateData.ammo.img.includes("/blank.png"))
+      templateData.ammo.img = null;
+
+    templateData.quantity = quantity;
+
+    renderTemplate('modules/forien-armoury/templates/ammo-recovery.html', templateData).then(html => {
+      let chatData = {
+        user: user,
+        speaker: {alias: actor.name, actor: actor._id},
+        whisper: game.users.entities.filter((u) => u.isGM).map((u) => u._id),
+        content: html
+      };
+      ChatMessage.create(chatData);
+    });
   }
 
   /**
@@ -98,7 +135,7 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
 
 
     // if unbreakable, recover, if not, apply rules
-    if (ammoQualities.value.includes(game.i18n.localize("FArmoury.Properties.Unbreakable"))) {
+    if (ammoQualities.value.includes(game.i18n.localize("PROPERTY.Unbreakable"))) {
       recovered = true;
     } else {
       recovered = this.isProjectileSaved(roll, percentageTarget, ammo);
@@ -121,7 +158,7 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
         } else {
           game.socket.emit("module.forien-armoury", {
             type: "arrowToReclaim",
-            payload: {actorId: actorId, ammoId: ammoId}
+            payload: {actorId: actorId, ammoId: ammoId, userId: game.user._id}
           })
         }
       }

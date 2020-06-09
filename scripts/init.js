@@ -5,12 +5,14 @@ Hooks.on("init", function () {
   game.socket.on("module.forien-armoury", data => {
     if (game.user.isGM) {
       if (data.type === "arrowToReclaim") {
-        ForienArmoury.ArrowReclamation.addAmmoToReplenish(data.payload.actorId, data.payload.ammoId);
+        ForienArmoury.ArrowReclamation.addAmmoToReplenish(data.payload.actorId, data.payload.ammoId, data.payload.userId);
       }
     }
   });
 
   ForienArmoury.ArrowReclamation.registerQualitiesAndFlaws();
+
+  ForienArmoury.Utils.registerHandlebarsHelpers();
 
   // if Babele module is installed and enabled, register translations
   if (game.modules.get("babele") !== undefined && game.modules.get("babele").active)
