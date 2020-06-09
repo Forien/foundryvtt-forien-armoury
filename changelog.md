@@ -3,6 +3,11 @@
 ## v0.X.X
 ### v0.2.X
 
+#### v0.2.4
+* Added notification when combat ends about all recovered ammunition. Only owner and GM see it. 
+* fixed Unbreakable
+* added `i18nformat` helper for Handlebars that can either accept multiple arguments, or object of substitutes
+
 #### v0.2.3
 * prepared groundwork for translation using Babele to any language
 * added automation for applying Bleed Conditions upon hit with Slashing weapon

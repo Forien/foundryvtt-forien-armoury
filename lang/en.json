@@ -25,6 +25,7 @@
 	"FArmoury.arrowReclamation.PercentageHint": "Set target percentage for rolling with certain Rules. Roll will succeed if d100 rolls less or equal to Target",
 
 	"FArmoury.SlashingApplied": "{hitLocation} Hit Location is protected by no more than 1 AP, applying Bleed condition. <br>{bleedAmtOld} -&gt; {bleedAmt}",
+	"FArmoury.Chat.ArrowsRecovered": "{0} found and recovered <strong>{2}</strong> {1}s that can be reused.",
 
 
 	"FArmoury.recovered": "{type} recovered",
