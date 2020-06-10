@@ -7,7 +7,6 @@ ForienArmoury.Utils = class {
       else
         objData = {...arrData};
 
-      console.log(arrData, objData);
       return game.i18n.format(stringId, objData);
     });
   }
