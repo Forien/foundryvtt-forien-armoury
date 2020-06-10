@@ -429,7 +429,7 @@
 			"id": "Morgenstern",
 			"name": "Morgensztern",
 			"description": "<p>Knightly Weapon</p>",
-			"qualities": "Pierce,Pummel",
+			"qualities": "Penetrating, Pummel",
 			"flaws": "",
 			"special": ""
 		},

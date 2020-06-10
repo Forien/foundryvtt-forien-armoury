@@ -3,6 +3,11 @@
 ## v0.X.X
 ### v0.2.X
 
+#### v0.2.5
+* Fixed some GWMWG weapons according to Rat Catchers Guild update, thanks to hamofficer
+* Added support for retrieving arrows out of combat
+* removed unnecessary logging
+
 #### v0.2.4
 * Added notification when combat ends about all recovered ammunition. Only owner and GM see it. 
 * fixed Unbreakable

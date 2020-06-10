@@ -28,7 +28,9 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
     ammoReplenish[actorId] = actorData;
 
     // set (overwrite) flag with updated data
-    game.combat.setFlag('forien-armoury', 'ammoReplenish', ammoReplenish);
+    game.combat.unsetFlag('forien-armoury', 'ammoReplenish').then(() => {
+      game.combat.setFlag('forien-armoury', 'ammoReplenish', ammoReplenish);
+    });
   }
 
   /**
@@ -40,15 +42,18 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
    * @param userId
    * @param bulk
    */
-  static replenishAmmo(actorId, ammoId, quantity, userId, bulk = false) {
-    let actor = game.actors.find(a => a._id === actorId);
-    let ammoEntity = duplicate(actor.getEmbeddedEntity("OwnedItem", ammoId));
+  static replenishAmmo(actorId, ammoId, quantity, userId, bulk = false, ) {
+    let timeout = bulk ? 0 : 300;
+    setTimeout(() => {
+      let actor = game.actors.find(a => a._id === actorId);
+      let ammoEntity = duplicate(actor.getEmbeddedEntity("OwnedItem", ammoId));
 
-    ammoEntity.data.quantity.value += quantity;
-    actor.updateEmbeddedEntity("OwnedItem", {_id: ammoId, "data.quantity.value": ammoEntity.data.quantity.value});
+      ammoEntity.data.quantity.value += quantity;
+      actor.updateEmbeddedEntity("OwnedItem", {_id: ammoId, "data.quantity.value": ammoEntity.data.quantity.value});
 
-    if (bulk)
-      this.notifyAmmoReturned(actor, ammoEntity, userId, quantity);
+      if (bulk)
+        this.notifyAmmoReturned(actor, ammoEntity, userId, quantity);
+    }, timeout);
   }
 
   /**
@@ -130,7 +135,7 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
 
     // define chat messages
     type = game.i18n.localize("FArmoury." + type);
-    // let messageNow = game.i18n.format("FArmoury.recovered", {type});
+    let messageNow = game.i18n.format("FArmoury.recovered", {type});
     let messageFuture = game.i18n.format("FArmoury.recoveredFuture", {type});
 
 
@@ -148,9 +153,9 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
 
     if (recovered === true) {
       if (game.combat == null) {
-        return; // broken at the moment
-        // message = messageNow;
-        // ForienArmoury.ArrowReclamation.replenishAmmo(actorId, ammoId, 1);
+        // return; // broken at the moment
+        message = messageNow;
+        ForienArmoury.ArrowReclamation.replenishAmmo(actorId, ammoId, 1);
       } else {
         message = messageFuture;
         if (game.user.isGM) {
@@ -307,7 +312,6 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
     if (data.winner === "defender")
       return;
 
-    console.log(data);
     let target = canvas.tokens.get(data.speakerDefend.token);
     let armor = target.actor.prepareItems().AP;
     let hitLocation = data.hitloc.value;

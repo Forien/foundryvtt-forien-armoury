@@ -1,5 +1,5 @@
 # FoundryVTT - Forien's Armoury
-**[Current version]**: v0.2.4  
+**[Current version]**: v0.2.5  
 **[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.5.5+   
 **[Optional modules]**: *Babele* 1.19+ (required for translations)
 
@@ -21,6 +21,7 @@ This module is a collection of custom trappings and features for Warhammer Fanta
 * Prepared groundwork for translation using Babele to any language
 * Started translating Forien's Armoury compendium to Polish (all names and most descriptions done)
 * Added notification when combat ends about all recovered ammunition. Only owner and GM see it. 
+* Restored support for retrieving ammunition out of combat 
 
 
 ## Installation
@@ -56,7 +57,6 @@ Module contains single Compendium pack containing at the moment 34 items.
 ## Future plans
 
 ### Features
-* fix out-of-encounter bug with arrow reclamation
 * add checkboxes in weapon test dialog that would allow to override arrow recovery system
 
 ### Content
