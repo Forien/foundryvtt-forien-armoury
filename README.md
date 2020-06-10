@@ -37,8 +37,6 @@ This module allows GMs to enable an "arrow reclamation feature", which allows fo
 
 * 2 projectile Qualities and 3 projectile Flaws are also added to work with the feature
 
-*There is currently bug with returning arrows outside of "encounter", so I disabled that.  
-**Currently only works with encounter**. Remember to delete encounter to return arrows.*
 
 ### Compendiums
 Module contains single Compendium pack containing at the moment 34 items.
