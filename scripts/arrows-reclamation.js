@@ -42,7 +42,7 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
    * @param userId
    * @param bulk
    */
-  static replenishAmmo(actorId, ammoId, quantity, userId, bulk = false, ) {
+  static replenishAmmo(actorId, ammoId, quantity, userId, bulk = false,) {
     let timeout = bulk ? 0 : 300;
     setTimeout(() => {
       let actor = game.actors.find(a => a._id === actorId);
@@ -308,7 +308,26 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
    * @param result
    */
   static applyBleedingOnSlashing(result) {
+    // if disabled, return
+    if (!game.settings.get("forien-armoury", "applySlashing.Enable"))
+      return;
+
     let data = result;
+    //check weapon for Slashing
+    let weapon = data.attackerTestResult.weapon;
+    let slashing = weapon.properties.qualities.includes(game.i18n.localize('FArmoury.Properties.Slashing.Label'));
+
+    // check ammo for slashing
+    if (slashing === false) {
+      let ammoId = weapon.data.currentAmmo.value;
+      let ammo = weapon.ammo.find(a => a._id === ammoId);
+      slashing = ammo.data.qualities.value.includes(game.i18n.localize('FArmoury.Properties.Slashing.Label'));
+    }
+
+    // if no slashing, go away
+    if (slashing === false)
+      return;
+
     if (data.winner === "defender")
       return;
 

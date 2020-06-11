@@ -3,6 +3,10 @@
 ## v0.X.X
 ### v0.2.X
 
+#### v0.2.6
+* fixed bug, where Bleeding was being applied even without Slashing
+* added module setting that allows to disable Slashing rules 
+
 #### v0.2.5
 * Fixed some GWMWG weapons according to Rat Catchers Guild update, thanks to hamofficer
 * Added support for retrieving arrows out of combat

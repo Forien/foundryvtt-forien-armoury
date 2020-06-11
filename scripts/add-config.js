@@ -1,4 +1,14 @@
 Hooks.on("init", function () {
+  // Add enable/disable setting for Slashing
+  game.settings.register("forien-armoury", "applySlashing.Enable", {
+    name: "FArmoury.applySlashing.Enable",
+    hint: "FArmoury.applySlashing.EnableHint",
+    scope: "world",
+    config: true,
+    default: true,
+    type: Boolean
+  });
+
   // Add enable/disable setting for arrow reclamation feature
   game.settings.register("forien-armoury", "arrowReclamation.Enable", {
     name: "FArmoury.arrowReclamation.Enable",
