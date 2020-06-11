@@ -1,5 +1,5 @@
 # FoundryVTT - Forien's Armoury
-**[Current version]**: v0.2.5  
+**[Current version]**: v0.2.6  
 **[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.5.5+   
 **[Optional modules]**: *Babele* 1.19+ (required for translations)
 

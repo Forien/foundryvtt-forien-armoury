@@ -1,4 +1,7 @@
 {
+	"FArmoury.applySlashing.Enable": "Enable rules for Slashing Quality",
+	"FArmoury.applySlashing.EnableHint": "If enabled, successful hits with Slashing weapon on part protected by no more than 1 AP will automatically add Bleeding Condition",
+
 	"FArmoury.arrowReclamation.Enable": "Enable ammo reclamation",
 	"FArmoury.arrowReclamation.EnableHint": "Enable ammo reclamation upon range weapon test roll. When used during an encounter some projectiles will be returned after encounter ends.",
 
