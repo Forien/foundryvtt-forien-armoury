@@ -69,6 +69,10 @@ Module contains single Compendium pack containing at the moment 34 items.
 
 If you wish to contact me for any reason, reach me out on Discord using my tag: `Forien#2130`
 
+## Support
+
+If you wish to support me, please check out my [Patreon page](https://www.patreon.com/forien). Thanks!
+
 
 ## Acknowledgments
 
