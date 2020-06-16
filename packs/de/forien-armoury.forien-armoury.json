@@ -1,0 +1,596 @@
+{
+	"label": "Forien's Rüstkammer",
+	"mapping": {
+		"qualities": "data.qualities.value",
+		"flaws": "data.flaws.value",
+		"special": "data.special.value"
+	},
+	"entries": [
+		{
+			"id": "Aqshy Ingredient",
+			"name": "Aqshy Ingredient",
+			"description": "<p>Generic ingredient used in channeling Aqshy. Commonly used ingredients are flammable materials like coal, oils, fats, and ruddy woods. Trappings immune to fire are also common, such as iron keys, carved sections of fire-grate, and small oven stones.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+		},
+		{
+			"id": "Arming Sword",
+			"name": "Arming Sword",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Azyr Ingredient",
+			"name": "Azyr Ingredient",
+			"description": "<p>Generic ingredient used in channeling Azyr. Commonly used ingredients are astronomical instruments, charts, lenses, and symbols as are ingredients associated with augury, such as animal innards, mirrors, glass balls, and bird tongues. Some wind-based spells use wings and feathers, where those involving electricity prefer slivers of carved metal.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+		},
+		{
+			"id": "Backsword",
+			"name": "Backsword",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Slashing",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Bardiche",
+			"name": "Bardiche",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Hack",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Basket-hilt Sword",
+			"name": "Basket-hilt Sword",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Battleaxe",
+			"name": "Battleaxe",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Hack",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Bear Spear",
+			"name": "Bear Spear",
+			"description": "<p>Tool Grade Weapon</p>",
+			"qualities": "Impale",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Bec de Corbin",
+			"name": "Bec de Corbin",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Damaging,Defensive,Impale,Pummel",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Bodkin Arrow",
+			"name": "Bodkin Arrow",
+			"description": "<p>Armour piercing arrow used by military in battles, designed to counter some armour worn by enemy combatants.</p>",
+			"qualities": "Penetrating",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Bodkin Bolt",
+			"name": "Bodkin Bolt",
+			"description": "<p>Armour piercing bolt used by military in battles, designed to counter some armour worn by enemy combatants.</p>",
+			"qualities": "Impale, Penetrating, Recoverable",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Breastplate",
+			"name": "Breastplate",
+			"description": "<p>Breastplate is a type of plate armour that covers only front portion of torso.</p>",
+			"qualities": "Impenetrable",
+			"flaws": "Partial",
+			"special": ""
+		},
+		{
+			"id": "Broad Bolt",
+			"name": "Broad Bolt",
+			"description": "<p>Bolt with heavy, broad head that can cause heavy blunt trauma to the target.</p>",
+			"qualities": "Pummel, Sturdy",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Chamon Ingredient",
+			"name": "Chamon Ingredient",
+			"description": "<p>Generic ingredient used in channeling Chamon. Commonly used ingredients are heavy metals of all types, esoterically inlaid or carved, though many spells also use trappings associated with a forge, including sections of a bellows marked with mathematical formula, inscribed chunks of an anvil, or fragments of a furnace.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+		},
+		{
+			"id": "Club",
+			"name": "Club",
+			"description": "<p>Back-Alley Weapon</p>",
+			"qualities": "Pummel",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Cracker Bullet",
+			"name": "Cracker Bullet",
+			"description": "<p>Bullet for use with sling, that upon impact cracks with tiny explosion sending fragments in every direction.&nbsp;</p>",
+			"qualities": "Blast 2, Damaging",
+			"flaws": "Dangerous, Imprecise, Unrecoverable",
+			"special": ""
+		},
+		{
+			"id": "Crowbar",
+			"name": "Crowbar",
+			"description": "<p>Back-Alley Weapon</p>",
+			"qualities": "Pummel,Slow",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Cuirass",
+			"name": "Cuirass",
+			"description": "<p>Cuirass covers both front and back of torso and thus provides a better protection.</p>",
+			"qualities": "Impenetrable",
+			"flaws": "Weakpoints",
+			"special": ""
+		},
+		{
+			"id": "Cutlass",
+			"name": "Cutlass",
+			"description": "<p>Commoner's Weapon</p>",
+			"qualities": "Slashing",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Dirk",
+			"name": "Dirk",
+			"description": "<p>Commoner's Weapon</p>",
+			"qualities": "",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Estoc",
+			"name": "Estoc",
+			"description": "",
+			"qualities": "Damaging, Impale",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Falchion",
+			"name": "Falchion",
+			"description": "<p>Commoner's Weapon</p>",
+			"qualities": "Slashing",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Gambeson",
+			"name": "Gambeson",
+			"description": "<p>A gambeson is a padded defensive jacket, worn as armor separately, or combined with mail or plate armor. Gambesons are produced with a sewing technique called quilting. They are usually constructed of linen or wool; the stuffing varied, and could be for example scrap cloth or horse hair.</p>",
+			"qualities": "",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Gambeson Coat",
+			"name": "Gambeson Coat",
+			"description": "<p>A gambeson is a padded defensive jacket, worn as armor separately, or combined with mail or plate armor. Gambesons are produced with a sewing technique called quilting. They are usually constructed of linen or wool; the stuffing varied, and could be for example scrap cloth or horse hair.</p>",
+			"qualities": "",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Gambeson Coif",
+			"name": "Gambeson Coif",
+			"description": "",
+			"qualities": "",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Gambeson Shirt",
+			"name": "Gambeson Shirt",
+			"description": "<p>A gambeson is a padded defensive jacket, worn as armor separately, or combined with mail or plate armor. Gambesons are produced with a sewing technique called quilting. They are usually constructed of linen or wool; the stuffing varied, and could be for example scrap cloth or horse hair.</p>",
+			"qualities": "",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Ghur Ingredient",
+			"name": "Ghur Ingredient",
+			"description": "<p>Generic ingredient used in channeling Ghur. Commonly used ingredients are animal fur, skin, bone, and pelt, wrapped in sinews and daubed with blood runes. Often claws are scrimshawed, organs dried, and feathers dipped in rare humours, and it’s not uncommon to find excrement, urine, and other excretions also used.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+		},
+		{
+			"id": "Ghyran Ingredient",
+			"name": "Ghyran Ingredient",
+			"description": "<p>Generic ingredient used in channeling Ghyran. Commonly used ingredients are rare seeds and nuts, humours gathered from sentient creatures in the flush of life, uncommon tree saps, fertile loam, spring waters, and a variety of living ingredients, including plants and smaller animals.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+		},
+		{
+			"id": "Hatchet",
+			"name": "Hatchet",
+			"description": "<p>Tool Grade Weapon</p>",
+			"qualities": "Undamaging",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Heater Shield",
+			"name": "Heater Shield",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Shield 2,Defensive",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Heavy Lance",
+			"name": "Heavy Lance",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Impact,Impale",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Hedgecraft Ingredient",
+			"name": "Hedgecraft Ingredient",
+			"description": "<p>Hedgefolk use easily sourced local materials prepared to exacting standards using special tools. So, ingredients may include things such as the wings of a dragonfly killed with a silver pin, rods of poplar polished with beeswax on Sonnstill, or bones buried beneath a hedgerow for a winter’s month.</p>\n<p><em>Hedgecraft ingredients can be foraged using Lore (Herbalism). Upon successful foraging roll, you receive 1 + SL ingredients.</em></p>\n<p><strong><em>You cannot cast any Hedgecraft spell without an ingredient.</em></strong></p>"
+		},
+		{
+			"id": "Horseman's Pick",
+			"name": "Horseman's Pick",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Slashing",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Hunting Arrow",
+			"name": "Hunting Arrow",
+			"description": "<p>Specially designed arrows for hunting game and other big prey. It's wide and heavy arrowhead cuts deep into the flesh and can be very lethal, but range is heavily reduced.&nbsp;</p>",
+			"qualities": "Impale, Sturdy",
+			"flaws": "Unreliable",
+			"special": ""
+		},
+		{
+			"id": "Hunting Bolt",
+			"name": "Hunting Bolt",
+			"description": "<p>Specially designed bolts for hunting game and other big prey. It's wide and heavy arrowhead cuts deep into the flesh and can be very lethal, but range is heavily reduced.&nbsp;</p>",
+			"qualities": "Impale, Sturdy",
+			"flaws": "Unreliable",
+			"special": ""
+		},
+		{
+			"id": "Hysh Ingredient",
+			"name": "Hysh Ingredient",
+			"description": "<p>Generic ingredient used in channeling Hysh. Commonly used ingredients are artefacts associated with holiness and holy places, supplemented by crystals, glass, pyramidions, and small statues, all carved with sacred symbols, twisting snakes, and moral tales. White candles, silver carvings, and bleached paper are also common.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+		},
+		{
+			"id": "Katzbalger",
+			"name": "Katzbalger",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Lead Bullet",
+			"name": "Lead Bullet",
+			"description": "",
+			"qualities": "Pummel, Unbreakable",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Leaf Arrow",
+			"name": "Leaf Arrow",
+			"description": "<p>Standard arrow of decent quality. Doesn't have the armour piercing capabilities of military variant, but is very close to it.&nbsp;</p>",
+			"qualities": "",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Leather Bracers",
+			"name": "Leather Bracers",
+			"description": "<p>Bracers of boiled and hardened leather</p>",
+			"qualities": "",
+			"flaws": "Weakpoints",
+			"special": ""
+		},
+		{
+			"id": "Leather Jack",
+			"name": "Leather Jack",
+			"description": "",
+			"qualities": "Durable",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Leather Jerkin",
+			"name": "Leather Jerkin",
+			"description": "",
+			"qualities": "Durable",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Leather Leggings",
+			"name": "Leather Leggings",
+			"description": "",
+			"qualities": "Durable",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Leather Skullcap",
+			"name": "Leather Skullcap",
+			"description": "",
+			"qualities": "Durable",
+			"flaws": "Ugly",
+			"special": ""
+		},
+		{
+			"id": "Light Lance",
+			"name": "Light Lance",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Impact,Impale",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Long Gambeson",
+			"name": "Long Gambeson",
+			"description": "<p>A gambeson is a padded defensive jacket, worn as armor separately, or combined with mail or plate armor. Gambesons are produced with a sewing technique called quilting. They are usually constructed of linen or wool; the stuffing varied, and could be for example scrap cloth or horse hair.</p>",
+			"qualities": "",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Longsword",
+			"name": "Longsword",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Damaging,Defensive",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Lucerne",
+			"name": "Lucerne",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Damaging,Defensive,Impale,Pummel",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Mace",
+			"name": "Mace",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Pummel",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Mail Longcoat",
+			"name": "Mail Longcoat",
+			"description": "",
+			"qualities": "Flexible",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Mallet",
+			"name": "Mallet",
+			"description": "<p>Tool Grade Weapon</p>",
+			"qualities": "Pummel,Undamaging",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Marienburg Hammer",
+			"name": "Marienburg Hammer",
+			"description": "",
+			"qualities": "Pummel, Impale",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Maul",
+			"name": "Maul",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Impact,Slow",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Military Arrow",
+			"name": "Military Arrow",
+			"description": "<p>Standard arrow used by military in battles, designed to deeply pierce skin.</p>",
+			"qualities": "Impale",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Misericorde",
+			"name": "Misericorde",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Penetrating",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Morgenstern",
+			"name": "Morgenstern",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Penetrating, Pummel",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Needle Bolt",
+			"name": "Needle Bolt",
+			"description": "<p>Wooden bolt, designed to deeply pierce skin and preferably break upon impact.</p>",
+			"qualities": "Impale, Slashing",
+			"flaws": "Frail",
+			"special": ""
+		},
+		{
+			"id": "Pickaxe",
+			"name": "Pickaxe",
+			"description": "<p>Tool Grade Weapon</p>",
+			"qualities": "Impale, Slow",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Pitch Fork",
+			"name": "Pitch Fork",
+			"description": "<p>Tool Grade Weapon</p>",
+			"qualities": "Impale, Undamaging",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Pollaxe",
+			"name": "Pollaxe",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Defensive,Hack,Impale",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Rondel Dagger",
+			"name": "Rondel Dagger",
+			"description": "<p>Commoner's Weapon</p>",
+			"qualities": "Undamaging",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Sabre",
+			"name": "Sabre",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Slashing",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Scythe",
+			"name": "Scythe",
+			"description": "<p>Tool Grade Weapon</p>",
+			"qualities": "Damaging,Imprecise",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Shield (Kite)",
+			"name": "Shield (Kite)",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Shield 3,Defensive,Undamaging",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Shield (Round)",
+			"name": "Shield (Round)",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Shield 2,Defensive,Undamaging",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Shoddy Arrow",
+			"name": "Shoddy Arrow",
+			"description": "<p>Arrow of bad quality, often crafted without proper equipment. Usually used by the poor, brigands and rustlers.</p>",
+			"qualities": "",
+			"flaws": "Frail",
+			"special": ""
+		},
+		{
+			"id": "Shyish Ingredient",
+			"name": "Shyish Ingredient",
+			"description": "<p>Generic ingredient used in channeling Shyish. Commonly used ingredients are bones of sentient creatures, trappings of death, including wood or nails from coffins, embalming fluids, hourglasses, silver coins, and grave dirt, all carefully presented or engraved. Purple gemstones, materials, and flowers (particularly roses) are also common.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+		},
+		{
+			"id": "Side-Sword",
+			"name": "Side-Sword",
+			"description": "<p>Commoner's Weapon</p>",
+			"qualities": "Fast,Precise",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Standard Bolt",
+			"name": "Standard Bolt",
+			"description": "<p>Most commonly used bolt without metal head or with head of softer iron.</p>",
+			"qualities": "",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Stiletto",
+			"name": "Stiletto",
+			"description": "<p>Nobleman's Weapon</p>",
+			"qualities": "Impale",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Stone Bullet",
+			"name": "Stone Bullet",
+			"description": "",
+			"qualities": "Pummel, Sturdy, Recoverable",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Trident Dagger",
+			"name": "Trident Dagger",
+			"description": "<p>Nobleman's Weapon</p>",
+			"qualities": "Defensive, Trap Blade",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Ulgu Ingredient",
+			"name": "Ulgu Ingredient",
+			"description": "<p>Generic ingredient used in channeling Ulgu. Commonly used ingredients include cosmetics, scents, scarfs, spectacles, mirrors, and wigs. Items drawn from professions steeped in intrigue and wisdom are also common, with diplomatic artefacts, symbols of rank, and the ultimate expression of power — a blade — prevalent..</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+		},
+		{
+			"id": "Voulge",
+			"name": "Voulge",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Hack,Impale",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "War Scythe",
+			"name": "War Scythe",
+			"description": "<p>Knightly Weapon</p>",
+			"qualities": "Hack",
+			"flaws": "",
+			"special": ""
+		},
+		{
+			"id": "Witchcraft Ingredient",
+			"name": "Witchcraft Ingredient",
+			"description": "<p>Witches use a horrific mixture of animal body parts, often harvested when a creature is still alive. It is not uncommon to find them clutching lizard eyes, dog toes, donkey gizzard, or much, much worse in their bloody hands as they cast their foul magics.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X bp, where X is equal to spell's CN. </em></p>\n<p><em>Alternatively, successful foraging roll using Outdoor Survival grants you 1 + SL ingredients.</em></p>\n<p><strong>Channelling </strong><strong>or casting spells from this Lore automatically require a roll on </strong><strong>the Minor Miscast table unless cast with an ingredient , where </strong><strong>the ingredient provides no further protection should you roll a </strong><strong>Miscast.</strong></p>"
+		},
+		{
+			"id": "Woodcutter's Axe",
+			"name": "Woodcutter's Axe",
+			"description": "<p>Tool Grade Weapon</p>",
+			"qualities": "Hack, Slow",
+			"flaws": "",
+			"special": ""
+		}
+	]
+}

@@ -1,5 +1,5 @@
 ForienArmoury.Localization = class Localization {
-  static locales = ['pl'];
+  static locales = ['pl', 'de'];
 
   static registerBabele() {
     this.locales.forEach(l => {
