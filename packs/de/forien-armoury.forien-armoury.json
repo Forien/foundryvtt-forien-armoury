@@ -8,8 +8,8 @@
 	"entries": [
 		{
 			"id": "Aqshy Ingredient",
-			"name": "Aqshy Ingredient",
-			"description": "<p>Generic ingredient used in channeling Aqshy. Commonly used ingredients are flammable materials like coal, oils, fats, and ruddy woods. Trappings immune to fire are also common, such as iron keys, carved sections of fire-grate, and small oven stones.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+			"name": "Aqshy Ingredienz",
+			"description": "<p>Herkömmliche Ingredienz zum Kanalisieren von Aqshy. Häufig verwendete Ingredienzien sind brennbare Materialien wie Kohle, Öle, Fette und rote Hölzer. Nichtbrennbare Gegenstände, wie eiserne Schlüssel, abgetrennte Teile eines Feuerrostes oder kleine Ofensteine werden auch häufig verwendet.</p>\n<p><em>Der Preis der Ingredienz hängt vom Zauberspruch ab, für den sie gedacht ist. Er beträgt X Silber, wobei X dem ZW des Spruches entspricht.</em></p>"
 		},
 		{
 			"id": "Arming Sword",
