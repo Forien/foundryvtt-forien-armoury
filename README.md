@@ -1,5 +1,5 @@
 # FoundryVTT - Forien's Armoury
-**[Current version]**: v0.2.6  
+**[Current version]**: v0.2.7  
 **[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.5.5+   
 **[Optional modules]**: *Babele* 1.19+ (required for translations)
 
@@ -71,7 +71,7 @@ If you wish to contact me for any reason, reach me out on Discord using my tag: 
 
 ## Support
 
-If you wish to support me, please check out my [Patreon page](https://www.patreon.com/forien). Thanks!
+If you wish to support me, please consider [becoming my Patreon](https://www.patreon.com/forien) or donating [through Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6P2RRX7HVEMV2&source=url). Thanks!
 
 
 ## Acknowledgments

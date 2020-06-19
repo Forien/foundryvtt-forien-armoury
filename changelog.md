@@ -3,6 +3,10 @@
 ## v0.X.X
 ### v0.2.X
 
+#### v0.2.7
+* fixed icons for WFRP 1.6.1
+* upped compatibleCoreVersion to 0.6.3
+
 #### v0.2.6
 * fixed bug, where Bleeding was being applied even without Slashing
 * added module setting that allows to disable Slashing rules 
