@@ -1,9 +1,20 @@
+[![](https://img.shields.io/badge/FoundryGet-compatible-success)](https://github.com/cswendrowski/foundryget)
+
 # FoundryVTT - Forien's Armoury
 **[Current version]**: v0.2.7  
 **[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.5.5+   
 **[Optional modules]**: *Babele* 1.19+ (required for translations)
 
 This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
+
+## Recommended: Install via [FoundryGet](https://github.com/cswendrowski/foundryget)
+
+FoundryGet will automatically install downstream dependencies such as Babele and manage version conflicts.
+
+```
+foundryget install https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json
+```
+
 
 #### Notable changes in v0.2.*
 * Extended Arrow Recovery system with more rules
