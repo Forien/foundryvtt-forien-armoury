@@ -7,15 +7,6 @@
 
 This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
 
-## Recommended: Install via [FoundryGet](https://github.com/cswendrowski/foundryget)
-
-FoundryGet will automatically install downstream dependencies such as Babele and manage version conflicts.
-
-```
-foundryget install https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json
-```
-
-
 #### Notable changes in v0.2.*
 * Extended Arrow Recovery system with more rules
 * Added new qualities and flaws to use with projectiles:
@@ -37,9 +28,21 @@ foundryget install https://raw.githubusercontent.com/Forien/foundryvtt-forien-ar
 
 ## Installation
 
+### Recommended: Install via [FoundryGet](https://github.com/cswendrowski/foundryget)
+
+FoundryGet will automatically install downstream dependencies such as Babele and manage version conflicts.
+
+```
+foundryget install https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json
+```
+
+Once installed, while in World using WFRP4e game system, enable Forien's Armoury module
+
+### Manual
+
 1. Install [WFRP4e Game System](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT).
 2. Install Forien's Armoury using manifest URL: https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json
-3. While in World using WFRP4e game system, enable Forien's Armoury module.
+3. While in World using WFRP4e game system, enable Forien's Armoury module
 
 
 ## Contents
