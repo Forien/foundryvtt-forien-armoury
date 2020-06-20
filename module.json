@@ -13,6 +13,18 @@
       "url": "https://github.com/DasSauerkraut"
     }
   ],
+  "dependencies": [
+    {
+        "name": "wfrp4e",
+        "manifest": "https://raw.githubusercontent.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT/stable/system.json",
+        "version": "1.5.5"
+    },
+    {
+        "name": "babele",
+        "manifest": "https://gitlab.com/riccisi/foundryvtt-babele/raw/master/module/module.json",
+        "version": "1.19.0"
+    }
+  ],
   "system": "wfrp4e",
   "version": "0.2.7",
   "minimumCoreVersion": "0.6.0",
