@@ -15,6 +15,11 @@
   ],
   "dependencies": [
     {
+        "name": "wfrp4e",
+        "manifest": "https://raw.githubusercontent.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT/stable/system.json",
+        "version": "1.5.5"
+    },
+    {
         "name": "babele",
         "manifest": "https://gitlab.com/riccisi/foundryvtt-babele/raw/master/module/module.json",
         "version": "1.19.0"
