@@ -17,7 +17,7 @@
     {
         "name": "wfrp4e",
         "manifest": "https://raw.githubusercontent.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT/stable/system.json",
-        "version": "1.5.5"
+        "version": "1.6.0"
     },
     {
         "name": "babele",
