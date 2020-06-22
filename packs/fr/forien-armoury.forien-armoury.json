@@ -1,401 +1,390 @@
 {
-	"label": "L'Armurerie de Forien",
-	"mapping": {
-    "special":  "data.special.value",
-    "qualities": {
-      "path": "data.qualities.value",
-      "converter": "trapping_qualities_flaws"
+  "label": "L'Armurerie de Forien",
+  "entries": [
+    {
+      "id": "Aqshy Ingredient",
+      "name": "Ingredient d'Aqshy ",
+      "description": "<p>Ingrédient générique utilisé pour focaliser Aqshy. Les ingrédients communs sont des matériaux inflammables comme le charbon, les huiles, les graisses et le bois secs. Les équipements résistant au feu sont aussi communs, comme les clés en fer, les pièces sculptés de matériel de cheminée et les petits fours en pierre.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort.</em></p>"
     },
-    "flaws": {
-      "path": "data.flaws.value",
-      "converter": "trapping_qualities_flaws"
+    {
+      "id": "Arming Sword",
+      "name": "Epée d'armes",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Azyr Ingredient",
+      "name": "Ingrédient d'Azyr",
+      "description": "<p>Ingrédient générique utilisé pour focaliser Azyr. Les ingrédients communs sont des instruments astronomiques, diagramme, lentilles et symboles, ainsi que les ingrédients associés à l'augure, tels que les entrailles d'animaux, les miroirs, les boules de verre, et les langues d'oiseaux. Certains sorts basés sur le vent utilisent des ailes et des plumes, tandis que ceux qui font appel à l'électricité préfèrent des éclats de métal sculpté.</p>\n<p><em> Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort.&nbsp;</em></p>"
+    },
+    {
+      "id": "Backsword",
+      "name": "Backsword",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Bardiche",
+      "name": "Bardiche",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Basket-hilt Sword",
+      "name": "Sabre à Poignées",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Battleaxe",
+      "name": "Hache de guerre",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Bear Spear",
+      "name": "Lance",
+      "description": "<p>Outil servant d'arme</p>"
+    },
+    {
+      "id": "Bec de Corbin",
+      "name": "Bec de Corbin",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Bodkin Arrow",
+      "name": "Flèche Bodkin",
+      "description": "<p>Flèche perforante utilisée par les militaires dans les batailles, conçue pour contrer certaines armures portées par les combattants ennemis.</p>"
+    },
+    {
+      "id": "Bodkin Bolt",
+      "name": "Carreau Bodkin",
+      "description": "<p>Carreau perforant utilisée par les militaires dans les batailles, conçue pour contrer certaines armures portées par les combattants ennemis.</p>"
+    },
+    {
+      "id": "Breastplate",
+      "name": "Plastron",
+      "description": "<p>Le plastron est un type d'armure de plaque qui ne couvre que la partie avant du torse.</p>"
+    },
+    {
+      "id": "Broad Bolt",
+      "name": "Carreau large",
+      "description": "<p>Carreau à tête lourde et large qui peut causer un traumatisme contondant important à la cible.</p>"
+    },
+    {
+      "id": "Chamon Ingredient",
+      "name": "Ingrédient de Chamon",
+      "description": "<p>Ingrédient générique utilisé dans la focalisation de Chamon. Les ingrédients couramment utilisés sont des métaux lourds de tous types, incrustés ou sculptés ésotériquement, bien que de nombreux sorts utilisent également des objets associés à une forge, notamment des sections de soufflet marquées d'une formule mathématique, des morceaux d'enclume inscrits ou des fragments de fourneau.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort.&nbsp;</em></p>"
+    },
+    {
+      "id": "Club",
+      "name": "Matraque",
+      "description": "<p>Arme de rue</p>"
+    },
+    {
+      "id": "Cracker Bullet",
+      "name": "Billes à fragmentation",
+      "description": "<p>Billes à utiliser avec une fronde, qui lors de l'impact se fendent en une minuscule explosion, envoyant des fragments dans toutes les directions.&nbsp;</p>"
+    },
+    {
+      "id": "Crowbar",
+      "name": "Pied-de-biche",
+      "description": "<p>Arme de rue</p>"
+    },
+    {
+      "id": "Cuirass",
+      "name": "Cuirasse",
+      "description": "<p>La cuirasse couvre à la fois l'avant et l'arrière du torse et offre ainsi une meilleure protection.</p>"
+    },
+    {
+      "id": "Cutlass",
+      "name": "Coutelas",
+      "description": "<p>Arme de roturier</p>"
+    },
+    {
+      "id": "Dirk",
+      "name": "Poignard",
+      "description": "<p>Arme de roturier</p>"
+    },
+    {
+      "id": "Estoc",
+      "name": "Estoc",
+      "description": ""
+    },
+    {
+      "id": "Falchion",
+      "name": "Fauchon",
+      "description": "<p>Arme de roturier</p>"
+    },
+    {
+      "id": "Gambeson",
+      "name": "Gambison",
+      "description": "<p>Un gambison est une veste défensive rembourrée, portée séparément comme armure, ou combinée avec une armure de poste ou de plaque. Les gambesons sont produits à l'aide d'une technique de couture appelée matelassage. Ils sont généralement fabriqués en lin ou en laine ; le rembourrage est varié et peut être par exemple constitué de chutes de tissu ou de crins de cheval.</p>"
+    },
+    {
+      "id": "Gambeson Coat",
+      "name": "Manteau gambison",
+      "description": "<p>Un gambison est une veste défensive rembourrée, portée séparément comme armure, ou combinée avec une armure de poste ou de plaque. Les gambesons sont produits à l'aide d'une technique de couture appelée matelassage. Ils sont généralement fabriqués en lin ou en laine ; le rembourrage est varié et peut être par exemple constitué de chutes de tissu ou de crins de cheval.</p>"
+    },
+    {
+      "id": "Gambeson Coif",
+      "name": "Coiffe gambison",
+      "description": ""
+    },
+    {
+      "id": "Gambeson Shirt",
+      "name": "Chemise gambison",
+      "description": "<p>Un gambison est une veste défensive rembourrée, portée séparément comme armure, ou combinée avec une armure de poste ou de plaque. Les gambesons sont produits à l'aide d'une technique de couture appelée matelassage. Ils sont généralement fabriqués en lin ou en laine ; le rembourrage est varié et peut être par exemple constitué de chutes de tissu ou de crins de cheval.</p>"
+    },
+    {
+      "id": "Ghur Ingredient",
+      "name": "Ingrédient de Ghur",
+      "description": "<p>Ingrédient générique utilisé dans la focalisation du Ghur. Les ingrédients couramment utilisés sont la fourrure, la peau, les os et le pelage des animaux, enveloppés dans des tendons et barbouillés de runes de sang. Souvent, les serres sont griffées, les organes séchés et les plumes trempées dans des humeurs rares, et il n'est pas rare de trouver des excréments, de l'urine et d'autres sécrétions également utilisées.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X ss, où X est égal à NI.&nbsp;</em></p>"
+    },
+    {
+      "id": "Ghyran Ingredient",
+      "name": "Ingrédient de Ghyran",
+      "description": "<p>Ingrédient générique utilisé dans la focalisation du Ghyran. Les ingrédients couramment utilisés sont des graines et des noix rares, des humeurs recueillies auprès de créatures sensibles dans les bouffées de vie, des sèves d'arbres peu communes, du limon fertile, des eaux de source, et une variété d'ingrédients vivants, y compris des plantes et des animaux plus petits.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X ss, où X est égal à CN.&nbsp;</em></p>"
+    },
+    {
+      "id": "Hatchet",
+      "name": "Hachette",
+      "description": "<p>Outil servant d'arme</p>"
+    },
+    {
+      "id": "Heater Protectrice",
+      "name": "Ecu",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Heavy Lance",
+      "name": "Lance lourde",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Hedgecraft Ingredient",
+      "name": "Ingrédient de Magie Sauvage",
+      "description": "<p>Les sorciers de village utilisent des ingrédients préparés avec des matériaux locaux en suivant des standards exigeants et des outils bien spécifiques. Ainsi, les ingrédients peuvent inclure des choses aussi précises que les ailes d'une libellule tuée avec une pointe en argent, des baguettes de bouleaux polies avec du miel d'abeille lors du Sonnstill, ou des os enterrés sous une haie pendant un mois d'hiver complet.</p>\n<p><em>Les ingrédients de Magie Sauvage peuvent être cultivés en utilisant Savoir (Herboristerie). En cas de succès de la récolte, vous recevez +1 DR ingrédients.</em></p>\n<p><strong><em>Vous ne pouvez pas lancer un sort de Magie Sauvage sans ingrédients</em></strong></p>"
+    },
+    {
+      "id": "Horseman's Pick",
+      "name": "Pioche de Cavalier",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Hunting Arrow",
+      "name": "Flèche de chasse",
+      "description": "<p>Flèche spécialement conçue pour la chasse au gibier et autres grandes proies. La pointe de flèche est large et lourde, elle coupe profondément dans la chair et peut être très mortelle, mais sa portée est fortement réduite.&nbsp;</p>"
+    },
+    {
+      "id": "Hunting Bolt",
+      "name": "Carreau de chasse",
+      "description": "<p>Carreau spécialement conçu pour la chasse au gibier et autres grandes proies. La pointe du carreau est large et lourde, elle coupe profondément dans la chair et peut être très mortelle, mais sa portée est fortement réduite.&nbsp;</p>"
+    },
+    {
+      "id": "Hysh Ingredient",
+      "name": "Ingrédient de Hysh ",
+      "description": "<p>Ingrédient générique utilisé dans la focalisation du Hysh. Les ingrédients couramment utilisés sont des artefacts associés à la sainteté et aux lieux sacrés, complétés par des cristaux, du verre, des pyramidions et de petites statues, tous sculptés de symboles sacrés, de serpents se contorsionnant et de contes moraux. Les bougies blanches, l'argent ouvragé et le papier blanchi sont également courants. Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort.&nbsp;</em><</p>"
+    },
+    {
+      "id": "Katzbalger",
+      "name": "Katzbalger",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Lead Bullet",
+      "name": "Bille de plomb",
+      "description": ""
+    },
+    {
+      "id": "Leaf Arrow",
+      "name": "Leaf Arrow",
+      "description": "<p>Flèche standard de bonne qualité. N'a pas les capacités de perçage de l'armure de la variante militaire, mais en est très proche.&nbsp;</p>"
+    },
+    {
+      "id": "Leather Bracers",
+      "name": "Brassards en cuir",
+      "description": "<p>Brassards en cuir bouilli et durci</p>"
+    },
+    {
+      "id": "Leather Jack",
+      "name": "Veste de cuir",
+      "description": ""
+    },
+    {
+      "id": "Leather Jerkin",
+      "name": "Justaucorps de cuir",
+      "description": ""
+    },
+    {
+      "id": "Leather Leggings",
+      "name": "Jambières de cuir",
+      "description": ""
+    },
+    {
+      "id": "Leather Skullcap",
+      "name": "Calotte de cuir",
+      "description": ""
+    },
+    {
+      "id": "Light Lance",
+      "name": "Lance légère",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Long Gambeson",
+      "name": "Gambison Long",
+      "description": "<p>Un gambeson est une veste défensive rembourrée, portée séparément comme armure, ou combinée avec une armure de poste ou de plaque. Les gambesons sont produits à l'aide d'une technique de couture appelée matelassage. Ils sont généralement fabriqués en lin ou en laine ; le rembourrage est varié et peut être par exemple constitué de chutes de tissu ou de crins de cheval.</p>"
+    },
+    {
+      "id": "Longsword",
+      "name": "Epée longue",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Lucerne",
+      "name": "Lucerne",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Mace",
+      "name": "Masse d'armes",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Mail Longcoat",
+      "name": "Manteau long de mailles",
+      "description": ""
+    },
+    {
+      "id": "Mallet",
+      "name": "Maillet",
+      "description": "<p>Outil servant d'arme</p>"
+    },
+    {
+      "id": "Marienburg Hammer",
+      "name": "Marteau de Marienburg",
+      "description": ""
+    },
+    {
+      "id": "Maul",
+      "name": "Marteau d'armes",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Military Arrow",
+      "name": "Flèche militaire",
+      "description": "<p>Flèche standard utilisée par les militaires dans les batailles, conçue pour percer la peau en profondeur.</p>"
+    },
+    {
+      "id": "Misericorde",
+      "name": "Miséricorde",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Morgenstern",
+      "name": "Morgenstern",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Needle Bolt",
+      "name": "Carreau à aiguille",
+      "description": "<p>Carreau en bois, conçu pour percer la peau en profondeur et se briser de préférence au moment de l'impact.</p>"
+    },
+    {
+      "id": "Pickaxe",
+      "name": "Pioche",
+      "description": "<p>Outil servant d'arme</p>"
+    },
+    {
+      "id": "Pitch Fork",
+      "name": "Fourche",
+      "description": "<p>Outil servant d'arme</p>"
+    },
+    {
+      "id": "Pollaxe",
+      "name": "Hache d'armes",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Rondel Dagger",
+      "name": "Dague à rouelles",
+      "description": "<p>Arme de roturier</p>"
+    },
+    {
+      "id": "Sabre",
+      "name": "Sabre",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Scythe",
+      "name": "Faux",
+      "description": "<p>Outil servant d'arme</p>"
+    },
+    {
+      "id": "Shield (Kite)",
+      "name": "Bouclier (Ecu allongé)",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Shield (Round)",
+      "name": "Bouclier (Rond)",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Shoddy Arrow",
+      "name": "Flèche médiocre",
+      "description": "<p>Flèche de mauvaise qualité, souvent fabriquée sans équipement adéquat. Habituellement utilisée par les pauvres, les brigands et les voleurs.</p>"
+    },
+    {
+      "id": "Shyish Ingredient",
+      "name": "Ingrédient de Shyish",
+      "description": "<p>Ingrédient générique utilisé dans la canalisation de Shyish. Les ingrédients couramment utilisés sont les os de créatures conscientes, les symboles de mort, y compris le bois ou les clous provenant de cercueils, les fluides d'embaumement, les sabliers, les pièces d'argent et la poussière de cimetière, tous soigneusement présentés ou gravés. Les pierres précieuses, les matériaux et les fleurs de couleur violette (en particulier les roses) sont également fréquents.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort.&nbsp;</em></p>"
+    },
+    {
+      "id": "Side-Sword",
+      "name": "Rapière",
+      "description": "<p>Arme de roturier</p>"
+    },
+    {
+      "id": "Standard Bolt",
+      "name": "Carreau standard",
+      "description": "<p>Carreau le plus couramment utilisé sans tête métallique ou avec tête en fer doux.</p>"
+    },
+    {
+      "id": "Stiletto",
+      "name": "Stylet",
+      "description": "<p>Arme de noble</p>"
+    },
+    {
+      "id": "Stone Bullet",
+      "name": "Bille de pierre",
+      "description": ""
+    },
+    {
+      "id": "Trident Dagger",
+      "name": "Main-gauche trident",
+      "description": "<p>Arme de noble</p>"
+    },
+    {
+      "id": "Ulgu Ingredient",
+      "name": "Ingrédient d'Ulgu",
+      "description": "<p>Ingrédient générique utilisé dans la canalisation de l'Ulgu. Les ingrédients couramment utilisés sont le maquillage, les parfums, les foulards, les lunettes, les miroirs et les perruques. Les objets utilisés par des professions versées dans les intrigues, comme les artefacts diplomatiques, les symboles de rang, et l'expression ultime du pouvoir - l'épée - sont utilisés très fréquemment.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort.&nbsp;</em></p>"
+    },
+    {
+      "id": "Voulge",
+      "name": "Vouge",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "War Scythe",
+      "name": "Faux de guerre",
+      "description": "<p>Arme de chevalier</p>"
+    },
+    {
+      "id": "Witchcraft Ingredient",
+      "name": "Ingrédient de Sorcellerie",
+      "description": "<p>Les Sorcières utilisent un horrible mélange de morceaux, qu'elles récupèrent le plus souvent alors que l'animal est encore vivant. Iln 'est pas rare de les apercevoir en train d'écraser des yeux de lézards, ou des pattes de chien, des estomacs de baudet, ou bien pire encore, pendant qu'elles marmonnent leur horribles Sorts.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort. </em></p>\n<p><em>Sinon, un test de récolte réussi en utilisant la Compétence Survie Extérieur permet de recevoir +1 DR ingrédient.</em></p>\n<p><strong>Focaliser </strong><strong>ou lancer des sorts de ce domaine nécessite systématiquement un lancer sur le </strong><strong>Tableau des Incantations Imparfaites Mineures à moins d'être lancé avec un ingrédient, où </strong><strong> bien cet ingrédient ne servira à rien si un jet sur le </strong><strong>Tableau des Incantation Imparfaites Mineures doit être effectué.</strong></p>"
+    },
+    {
+      "id": "Woodcutter's Axe",
+      "name": "Hache de bûcheron",
+      "description": "<p>Arme servant d'outil</p>"
     }
-	},	
-	"entries": [
-		{
-			"id": "Aqshy Ingredient",
-			"name": "Ingredient d'Aqshy ",
-			"description": "<p>Ingrédient générique utilisé pour focaliser Aqshy. Les ingrédients communs sont des matériaux inflammables comme le charbon, les huiles, les graisses et le bois secs. Les équipements résistant au feu sont aussi communs, comme les clés en fer, les pièces sculptés de matériel de cheminée et les petits fours en pierre.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort.</em></p>"
-		},
-		{
-			"id": "Arming Sword",
-			"name": "Epée d'armes",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Azyr Ingredient",
-			"name": "Ingrédient d'Azyr",
-			"description": "<p>Ingrédient générique utilisé pour focaliser Azyr. Les ingrédients communs sont des instruments astronomiques, diagramme, lentilles et symboles, ainsi que les ingrédients associés à l'augure, tels que les entrailles d'animaux, les miroirs, les boules de verre, et les langues d'oiseaux. Certains sorts basés sur le vent utilisent des ailes et des plumes, tandis que ceux qui font appel à l'électricité préfèrent des éclats de métal sculpté.</p>\n<p><em> Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort.&nbsp;</em></p>"
-		},
-		{
-			"id": "Backsword",
-			"name": "Backsword",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Bardiche",
-			"name": "Bardiche",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Basket-hilt Sword",
-			"name": "Sabre à Poignées",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Battleaxe",
-			"name": "Hache de guerre",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Bear Spear",
-			"name": "Lance",
-			"description": "<p>Outil servant d'arme</p>"
-		},
-		{
-			"id": "Bec de Corbin",
-			"name": "Bec de Corbin",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Bodkin Arrow",
-			"name": "Flèche Bodkin",
-			"description": "<p>Flèche perforante utilisée par les militaires dans les batailles, conçue pour contrer certaines armures portées par les combattants ennemis.</p>"
-		},
-		{
-			"id": "Bodkin Bolt",
-			"name": "Carreau Bodkin",
-			"description": "<p>Carreau perforant utilisée par les militaires dans les batailles, conçue pour contrer certaines armures portées par les combattants ennemis.</p>"
-		},
-		{
-			"id": "Breastplate",
-			"name": "Plastron",
-			"description": "<p>Le plastron est un type d'armure de plaque qui ne couvre que la partie avant du torse.</p>"
-		},
-		{
-			"id": "Broad Bolt",
-			"name": "Carreau large",
-			"description": "<p>Carreau à tête lourde et large qui peut causer un traumatisme contondant important à la cible.</p>"
-		},
-		{
-			"id": "Chamon Ingredient",
-			"name": "Ingrédient de Chamon",
-			"description": "<p>Ingrédient générique utilisé dans la focalisation de Chamon. Les ingrédients couramment utilisés sont des métaux lourds de tous types, incrustés ou sculptés ésotériquement, bien que de nombreux sorts utilisent également des objets associés à une forge, notamment des sections de soufflet marquées d'une formule mathématique, des morceaux d'enclume inscrits ou des fragments de fourneau.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort.&nbsp;</em></p>"
-		},
-		{
-			"id": "Club",
-			"name": "Matraque",
-			"description": "<p>Arme de rue</p>"
-		},
-		{
-			"id": "Cracker Bullet",
-			"name": "Billes à fragmentation",
-			"description": "<p>Billes à utiliser avec une fronde, qui lors de l'impact se fendent en une minuscule explosion, envoyant des fragments dans toutes les directions.&nbsp;</p>"
-		},
-		{
-			"id": "Crowbar",
-			"name": "Pied-de-biche",
-			"description": "<p>Arme de rue</p>"
-		},
-		{
-			"id": "Cuirass",
-			"name": "Cuirasse",
-			"description": "<p>La cuirasse couvre à la fois l'avant et l'arrière du torse et offre ainsi une meilleure protection.</p>"
-		},
-		{
-			"id": "Cutlass",
-			"name": "Coutelas",
-			"description": "<p>Arme de roturier</p>"
-		},
-		{
-			"id": "Dirk",
-			"name": "Poignard",
-			"description": "<p>Arme de roturier</p>"
-		},
-		{
-			"id": "Estoc",
-			"name": "Estoc",
-			"description": ""
-		},
-		{
-			"id": "Falchion",
-			"name": "Fauchon",
-			"description": "<p>Arme de roturier</p>"
-		},
-		{
-			"id": "Gambeson",
-			"name": "Gambison",
-			"description": "<p>Un gambison est une veste défensive rembourrée, portée séparément comme armure, ou combinée avec une armure de poste ou de plaque. Les gambesons sont produits à l'aide d'une technique de couture appelée matelassage. Ils sont généralement fabriqués en lin ou en laine ; le rembourrage est varié et peut être par exemple constitué de chutes de tissu ou de crins de cheval.</p>"
-		},
-		{
-			"id": "Gambeson Coat",
-			"name": "Manteau gambison",
-			"description": "<p>Un gambison est une veste défensive rembourrée, portée séparément comme armure, ou combinée avec une armure de poste ou de plaque. Les gambesons sont produits à l'aide d'une technique de couture appelée matelassage. Ils sont généralement fabriqués en lin ou en laine ; le rembourrage est varié et peut être par exemple constitué de chutes de tissu ou de crins de cheval.</p>"
-		},
-		{
-			"id": "Gambeson Coif",
-			"name": "Coiffe gambison",
-			"description": ""
-		},
-		{
-			"id": "Gambeson Shirt",
-			"name": "Chemise gambison",
-			"description": "<p>Un gambison est une veste défensive rembourrée, portée séparément comme armure, ou combinée avec une armure de poste ou de plaque. Les gambesons sont produits à l'aide d'une technique de couture appelée matelassage. Ils sont généralement fabriqués en lin ou en laine ; le rembourrage est varié et peut être par exemple constitué de chutes de tissu ou de crins de cheval.</p>"
-		},
-		{
-			"id": "Ghur Ingredient",
-			"name": "Ingrédient de Ghur",
-			"description": "<p>Ingrédient générique utilisé dans la focalisation du Ghur. Les ingrédients couramment utilisés sont la fourrure, la peau, les os et le pelage des animaux, enveloppés dans des tendons et barbouillés de runes de sang. Souvent, les serres sont griffées, les organes séchés et les plumes trempées dans des humeurs rares, et il n'est pas rare de trouver des excréments, de l'urine et d'autres sécrétions également utilisées.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X ss, où X est égal à NI.&nbsp;</em></p>"
-		},
-		{
-			"id": "Ghyran Ingredient",
-			"name": "Ingrédient de Ghyran",
-			"description": "<p>Ingrédient générique utilisé dans la focalisation du Ghyran. Les ingrédients couramment utilisés sont des graines et des noix rares, des humeurs recueillies auprès de créatures sensibles dans les bouffées de vie, des sèves d'arbres peu communes, du limon fertile, des eaux de source, et une variété d'ingrédients vivants, y compris des plantes et des animaux plus petits.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X ss, où X est égal à CN.&nbsp;</em></p>"
-		},
-		{
-			"id": "Hatchet",
-			"name": "Hachette",
-			"description": "<p>Outil servant d'arme</p>"
-		},
-		{
-			"id": "Heater Protectrice",
-			"name": "Ecu",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Heavy Lance",
-			"name": "Lance lourde",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Hedgecraft Ingredient",
-			"name": "Ingrédient de Magie Sauvage",
-			"description": "<p>Les sorciers de village utilisent des ingrédients préparés avec des matériaux locaux en suivant des standards exigeants et des outils bien spécifiques. Ainsi, les ingrédients peuvent inclure des choses aussi précises que les ailes d'une libellule tuée avec une pointe en argent, des baguettes de bouleaux polies avec du miel d'abeille lors du Sonnstill, ou des os enterrés sous une haie pendant un mois d'hiver complet.</p>\n<p><em>Les ingrédients de Magie Sauvage peuvent être cultivés en utilisant Savoir (Herboristerie). En cas de succès de la récolte, vous recevez +1 DR ingrédients.</em></p>\n<p><strong><em>Vous ne pouvez pas lancer un sort de Magie Sauvage sans ingrédients</em></strong></p>"
-		},
-		{
-			"id": "Horseman's Pick",
-			"name": "Pioche de Cavalier",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Hunting Arrow",
-			"name": "Flèche de chasse",
-			"description": "<p>Flèche spécialement conçue pour la chasse au gibier et autres grandes proies. La pointe de flèche est large et lourde, elle coupe profondément dans la chair et peut être très mortelle, mais sa portée est fortement réduite.&nbsp;</p>"
-		},
-		{
-			"id": "Hunting Bolt",
-			"name": "Carreau de chasse",
-			"description": "<p>Carreau spécialement conçu pour la chasse au gibier et autres grandes proies. La pointe du carreau est large et lourde, elle coupe profondément dans la chair et peut être très mortelle, mais sa portée est fortement réduite.&nbsp;</p>"
-		},
-		{
-			"id": "Hysh Ingredient",
-			"name": "Ingrédient de Hysh ",
-			"description": "<p>Ingrédient générique utilisé dans la focalisation du Hysh. Les ingrédients couramment utilisés sont des artefacts associés à la sainteté et aux lieux sacrés, complétés par des cristaux, du verre, des pyramidions et de petites statues, tous sculptés de symboles sacrés, de serpents se contorsionnant et de contes moraux. Les bougies blanches, l'argent ouvragé et le papier blanchi sont également courants. Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort.&nbsp;</em><</p>"
-		},
-		{
-			"id": "Katzbalger",
-			"name": "Katzbalger",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Lead Bullet",
-			"name": "Bille de plomb",
-			"description": ""
-		},
-		{
-			"id": "Leaf Arrow",
-			"name": "Leaf Arrow",
-			"description": "<p>Flèche standard de bonne qualité. N'a pas les capacités de perçage de l'armure de la variante militaire, mais en est très proche.&nbsp;</p>"
-		},
-		{
-			"id": "Leather Bracers",
-			"name": "Brassards en cuir",
-			"description": "<p>Brassards en cuir bouilli et durci</p>"
-		},
-		{
-			"id": "Leather Jack",
-			"name": "Veste de cuir",
-			"description": ""
-		},
-		{
-			"id": "Leather Jerkin",
-			"name": "Justaucorps de cuir",
-			"description": ""
-		},
-		{
-			"id": "Leather Leggings",
-			"name": "Jambières de cuir",
-			"description": ""
-		},
-		{
-			"id": "Leather Skullcap",
-			"name": "Calotte de cuir",
-			"description": ""
-		},
-		{
-			"id": "Light Lance",
-			"name": "Lance légère",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Long Gambeson",
-			"name": "Gambison Long",
-			"description": "<p>Un gambeson est une veste défensive rembourrée, portée séparément comme armure, ou combinée avec une armure de poste ou de plaque. Les gambesons sont produits à l'aide d'une technique de couture appelée matelassage. Ils sont généralement fabriqués en lin ou en laine ; le rembourrage est varié et peut être par exemple constitué de chutes de tissu ou de crins de cheval.</p>"
-		},
-		{
-			"id": "Longsword",
-			"name": "Epée longue",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Lucerne",
-			"name": "Lucerne",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Mace",
-			"name": "Masse d'armes",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Mail Longcoat",
-			"name": "Manteau long de mailles",
-			"description": ""
-		},
-		{
-			"id": "Mallet",
-			"name": "Maillet",
-			"description": "<p>Outil servant d'arme</p>"
-		},
-		{
-			"id": "Marienburg Hammer",
-			"name": "Marteau de Marienburg",
-			"description": ""
-		},
-		{
-			"id": "Maul",
-			"name": "Marteau d'armes",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Military Arrow",
-			"name": "Flèche militaire",
-			"description": "<p>Flèche standard utilisée par les militaires dans les batailles, conçue pour percer la peau en profondeur.</p>"
-		},
-		{
-			"id": "Misericorde",
-			"name": "Miséricorde",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Morgenstern",
-			"name": "Morgenstern",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Needle Bolt",
-			"name": "Carreau à aiguille",
-			"description": "<p>Carreau en bois, conçu pour percer la peau en profondeur et se briser de préférence au moment de l'impact.</p>"
-		},
-		{
-			"id": "Pickaxe",
-			"name": "Pioche",
-			"description": "<p>Outil servant d'arme</p>"
-		},
-		{
-			"id": "Pitch Fork",
-			"name": "Fourche",
-			"description": "<p>Outil servant d'arme</p>"
-		},
-		{
-			"id": "Pollaxe",
-			"name": "Hache d'armes",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Rondel Dagger",
-			"name": "Dague à rouelles",
-			"description": "<p>Arme de roturier</p>"
-		},
-		{
-			"id": "Sabre",
-			"name": "Sabre",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Scythe",
-			"name": "Faux",
-			"description": "<p>Outil servant d'arme</p>"
-		},
-		{
-			"id": "Shield (Kite)",
-			"name": "Bouclier (Ecu allongé)",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Shield (Round)",
-			"name": "Bouclier (Rond)",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Shoddy Arrow",
-			"name": "Flèche médiocre",
-			"description": "<p>Flèche de mauvaise qualité, souvent fabriquée sans équipement adéquat. Habituellement utilisée par les pauvres, les brigands et les voleurs.</p>"
-		},
-		{
-			"id": "Shyish Ingredient",
-			"name": "Ingrédient de Shyish",
-			"description": "<p>Ingrédient générique utilisé dans la canalisation de Shyish. Les ingrédients couramment utilisés sont les os de créatures conscientes, les symboles de mort, y compris le bois ou les clous provenant de cercueils, les fluides d'embaumement, les sabliers, les pièces d'argent et la poussière de cimetière, tous soigneusement présentés ou gravés. Les pierres précieuses, les matériaux et les fleurs de couleur violette (en particulier les roses) sont également fréquents.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort.&nbsp;</em></p>"
-		},
-		{
-			"id": "Side-Sword",
-			"name": "Rapière",
-			"description": "<p>Arme de roturier</p>"
-		},
-		{
-			"id": "Standard Bolt",
-			"name": "Carreau standard",
-			"description": "<p>Carreau le plus couramment utilisé sans tête métallique ou avec tête en fer doux.</p>"
-		},
-		{
-			"id": "Stiletto",
-			"name": "Stylet",
-			"description": "<p>Arme de noble</p>"
-		},
-		{
-			"id": "Stone Bullet",
-			"name": "Bille de pierre",
-			"description": ""
-		},
-		{
-			"id": "Trident Dagger",
-			"name": "Main-gauche trident",
-			"description": "<p>Arme de noble</p>"
-		},
-		{
-			"id": "Ulgu Ingredient",
-			"name": "Ingrédient d'Ulgu",
-			"description": "<p>Ingrédient générique utilisé dans la canalisation de l'Ulgu. Les ingrédients couramment utilisés sont le maquillage, les parfums, les foulards, les lunettes, les miroirs et les perruques. Les objets utilisés par des professions versées dans les intrigues, comme les artefacts diplomatiques, les symboles de rang, et l'expression ultime du pouvoir - l'épée - sont utilisés très fréquemment.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort.&nbsp;</em></p>"
-		},
-		{
-			"id": "Voulge",
-			"name": "Vouge",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "War Scythe",
-			"name": "Faux de guerre",
-			"description": "<p>Arme de chevalier</p>"
-		},
-		{
-			"id": "Witchcraft Ingredient",
-			"name": "Ingrédient de Sorcellerie",
-			"description": "<p>Les Sorcières utilisent un horrible mélange de morceaux, qu'elles récupèrent le plus souvent alors que l'animal est encore vivant. Iln 'est pas rare de les apercevoir en train d'écraser des yeux de lézards, ou des pattes de chien, des estomacs de baudet, ou bien pire encore, pendant qu'elles marmonnent leur horribles Sorts.</p>\n<p><em>Le prix de l'ingrédient dépend du sort auquel il est destiné. Fixez le prix à X PA, où X est égal au NI du Sort. </em></p>\n<p><em>Sinon, un test de récolte réussi en utilisant la Compétence Survie Extérieur permet de recevoir +1 DR ingrédient.</em></p>\n<p><strong>Focaliser </strong><strong>ou lancer des sorts de ce domaine nécessite systématiquement un lancer sur le </strong><strong>Tableau des Incantations Imparfaites Mineures à moins d'être lancé avec un ingrédient, où </strong><strong> bien cet ingrédient ne servira à rien si un jet sur le </strong><strong>Tableau des Incantation Imparfaites Mineures doit être effectué.</strong></p>"
-		},
-		{
-			"id": "Woodcutter's Axe",
-			"name": "Hache de bûcheron",
-			"description": "<p>Arme servant d'outil</p>"
-		}
-	]
+  ]
 }

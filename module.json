@@ -51,14 +51,14 @@
       "path": "lang/en.json"
     },
     {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    },
+    {
       "lang": "pl",
       "name": "Polski",
       "path": "lang/pl.json"
-    },
-    {
-      "lang": "fr",
-      "name": "Polski",
-      "path": "lang/fr.json"
     }
   ],
   "scripts": [
