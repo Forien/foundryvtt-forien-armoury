@@ -3,8 +3,11 @@
 ## v0.X.X
 ### v0.2.X
 
-#### v0.2.8
+#### v0.2.9
 * added French translation thanks to LeRatierBretonnien and Gharazel
+
+#### v0.2.8
+* added FoundryGet integration
 
 #### v0.2.7
 * fixed icons for WFRP 1.6.1
