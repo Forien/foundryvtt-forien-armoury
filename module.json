@@ -6,22 +6,34 @@
   "authors": [
     {
       "name": "Forien",
-      "url": "https://github.com/Forien/foundryvtt-forien-armoury"
+      "url": "https://www.patreon.com/forien"
     },
     {
       "name": "Michael Sebelski [DasSauerkraut#3215]",
       "url": "https://github.com/DasSauerkraut"
     }
   ],
+  "dependencies": [
+    {
+      "name": "wfrp4e",
+      "manifest": "https://raw.githubusercontent.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT/stable/system.json",
+      "version": "1.6.0"
+    },
+    {
+      "name": "babele",
+      "manifest": "https://gitlab.com/riccisi/foundryvtt-babele/raw/master/module/module.json",
+      "version": "1.19.0"
+    }
+  ],
   "system": "wfrp4e",
-  "version": "0.2.6",
+  "version": "0.2.9",
   "minimumCoreVersion": "0.6.0",
-  "compatibleCoreVersion": "0.6.2",
+  "compatibleCoreVersion": "0.6.3",
   "url": "https://github.com/Forien/foundryvtt-forien-armoury",
   "manifest": "https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json",
-  "download": "https://github.com/Forien/foundryvtt-forien-armoury/archive/v0.2.6.zip",
-  "readme": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.6/README.md",
-  "changelog": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.6/changelog.md",
+  "download": "https://github.com/Forien/foundryvtt-forien-armoury/releases/download/v0.2.9/v0.2.9.zip",
+  "readme": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.9/README.md",
+  "changelog": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.9/changelog.md",
   "bugs": "https://github.com/Forien/foundryvtt-forien-armoury/issues",
   "packs": [
     {
@@ -37,6 +49,11 @@
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
     },
     {
       "lang": "pl",

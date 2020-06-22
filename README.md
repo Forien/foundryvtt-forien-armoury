@@ -1,7 +1,8 @@
 # FoundryVTT - Forien's Armoury
-**[Current version]**: v0.2.6  
-**[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.5.5+   
-**[Optional modules]**: *Babele* 1.19+ (required for translations)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/forien/foundryvtt-forien-armoury?style=for-the-badge)  ![GitHub Releases](https://img.shields.io/github/downloads/Forien/foundryvtt-forien-armoury/latest/total?style=for-the-badge)    
+**[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.6.0+   
+**[Optional modules]**: *Babele* 1.19+ (required for translations)  
+[![](https://img.shields.io/badge/FoundryGet-compatible-success)](https://github.com/cswendrowski/foundryget)
 
 This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
 
@@ -26,9 +27,21 @@ This module is a collection of custom trappings and features for Warhammer Fanta
 
 ## Installation
 
+### Recommended: Install via [FoundryGet](https://github.com/cswendrowski/foundryget)
+
+FoundryGet will automatically install downstream dependencies such as Babele and manage version conflicts.
+
+```
+foundryget install https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json
+```
+
+Once installed, while in World using WFRP4e game system, enable Forien's Armoury module
+
+### Manual
+
 1. Install [WFRP4e Game System](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT).
 2. Install Forien's Armoury using manifest URL: https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json
-3. While in World using WFRP4e game system, enable Forien's Armoury module.
+3. While in World using WFRP4e game system, enable Forien's Armoury module
 
 
 ## Contents
@@ -71,7 +84,7 @@ If you wish to contact me for any reason, reach me out on Discord using my tag: 
 
 ## Support
 
-If you wish to support me, please check out my [Patreon page](https://www.patreon.com/forien). Thanks!
+If you wish to support me, please consider [becoming my Patreon](https://www.patreon.com/forien) or donating [through Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6P2RRX7HVEMV2&source=url). Thanks!
 
 
 ## Acknowledgments
@@ -79,7 +92,8 @@ If you wish to support me, please check out my [Patreon page](https://www.patreo
 * Thanks to Atropos for his relentless work on developing and improving the Foundry VTT
 * Thanks to Moo Man for his great work developing the [WFRP4e game system](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT) as well as for his invaluable help with understanding how to mod Foundry using JS
 * Thanks to Thoradin for an idea for arrow reclamation feature :)
-* Thanks to [DasSauerkraut](https://github.com/DasSauerkraut) for allowing me to integrate compendium from his [Gerwin Waffenhalter’s Magnificent Weapons Gallery](https://github.com/DasSauerkraut/wfrp-gwmwg) into my module 
+* Thanks to [DasSauerkraut](https://github.com/DasSauerkraut) for allowing me to integrate compendium from his [Gerwin Waffenhalter’s Magnificent Weapons Gallery](https://github.com/DasSauerkraut/wfrp-gwmwg) into my module
+* Thanks to LeRatierBretonnien and Gharazel for providing French translation! 
 
 
 ## License
