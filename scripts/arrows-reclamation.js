@@ -147,7 +147,7 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
     }
 
     // if recovered and hard to find, try again with -10
-    if (recovered && ammoQualities.value.includes(game.i18n.localize("FArmoury.Properties.HardToFind"))) {
+    if (recovered && ammoQualities.value.includes(game.i18n.localize("FArmoury.Properties.HardToFind.Label"))) {
       recovered = (new Roll("1d100").roll().total <= (percentageTarget - 10));
     }
 
@@ -189,8 +189,8 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
     let allowArrows = game.settings.get("forien-armoury", "arrowReclamation.EnableArrows");
     let allowBolts = game.settings.get("forien-armoury", "arrowReclamation.EnableBolts");
     let allowBullets = game.settings.get("forien-armoury", "arrowReclamation.EnableBullets");
-    let recoverable = ammo.data.qualities.value.includes(game.i18n.localize("FArmoury.Properties.Recoverable"));
-    let unrecoverable = ammo.data.flaws.value.includes(game.i18n.localize("FArmoury.Properties.Unrecoverable"));
+    let recoverable = ammo.data.qualities.value.includes(game.i18n.localize("FArmoury.Properties.Recoverable.Label"));
+    let unrecoverable = ammo.data.flaws.value.includes(game.i18n.localize("FArmoury.Properties.Unrecoverable.Label"));
     let allowed = null;
     let type = null;
 
@@ -228,8 +228,8 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
     let even = roll.roll % 2 === 0;
     let success = roll.roll <= roll.target;
     let recovered;
-    let sturdy = ammo.data.qualities.value.includes(game.i18n.localize("FArmoury.Properties.Sturdy"));
-    let frail = ammo.data.flaws.value.includes(game.i18n.localize("FArmoury.Properties.Frail"));
+    let sturdy = ammo.data.qualities.value.includes(game.i18n.localize("FArmoury.Properties.Sturdy.Label"));
+    let frail = ammo.data.flaws.value.includes(game.i18n.localize("FArmoury.Properties.Frail.Label"));
     let formula = "1d100";
 
     if (sturdy) {

@@ -1,9 +1,8 @@
-[![](https://img.shields.io/badge/FoundryGet-compatible-success)](https://github.com/cswendrowski/foundryget)
-
 # FoundryVTT - Forien's Armoury
-**[Current version]**: v0.2.8  
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/forien/foundryvtt-forien-armoury?style=for-the-badge)  ![GitHub Releases](https://img.shields.io/github/downloads/Forien/foundryvtt-forien-armoury/latest/total?style=for-the-badge)    
 **[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.6.0+   
-**[Optional modules]**: *Babele* 1.19+ (required for translations)
+**[Optional modules]**: *Babele* 1.19+ (required for translations)  
+[![](https://img.shields.io/badge/FoundryGet-compatible-success)](https://github.com/cswendrowski/foundryget)
 
 This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
 
@@ -93,7 +92,8 @@ If you wish to support me, please consider [becoming my Patreon](https://www.pat
 * Thanks to Atropos for his relentless work on developing and improving the Foundry VTT
 * Thanks to Moo Man for his great work developing the [WFRP4e game system](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT) as well as for his invaluable help with understanding how to mod Foundry using JS
 * Thanks to Thoradin for an idea for arrow reclamation feature :)
-* Thanks to [DasSauerkraut](https://github.com/DasSauerkraut) for allowing me to integrate compendium from his [Gerwin Waffenhalter’s Magnificent Weapons Gallery](https://github.com/DasSauerkraut/wfrp-gwmwg) into my module 
+* Thanks to [DasSauerkraut](https://github.com/DasSauerkraut) for allowing me to integrate compendium from his [Gerwin Waffenhalter’s Magnificent Weapons Gallery](https://github.com/DasSauerkraut/wfrp-gwmwg) into my module
+* Thanks to LeRatierBretonnien and Gharazel for providing French translation! 
 
 
 ## License
