@@ -1,0 +1,52 @@
+{
+	"FArmoury.applySlashing.Enable": "Activer la qualité Tailladante",
+	"FArmoury.applySlashing.EnableHint": "Si activé, les touches réussies avec une arme Tailladante sur des parties du corps protégées par 1 PA ou moins reçoivent automatiquement un état Hémorragique.",
+
+	"FArmoury.arrowReclamation.Enable": "Activer la récupération des munitions",
+	"FArmoury.arrowReclamation.EnableHint": "Activer la récupération des munitions sur la base des tests de Projectiles. Si utilisé, une partie des munitions sera récupérée à la fin des combats.",
+
+	"FArmoury.arrowReclamation.EnableArrows": "Autoriser la récupération des flèches",
+	"FArmoury.arrowReclamation.EnableArrowsHint": "Cocher pour activer la récupération des Flèches d'Arc",
+	"FArmoury.arrowReclamation.EnableBolts": "Autoriser la récupération des Carreaux",
+	"FArmoury.arrowReclamation.EnableBoltsHint": "Cocher pour récupérer des carreaux d'Arbalètes",
+	"FArmoury.arrowReclamation.EnableBullets": "Autoriser la récupération des Pierres",
+	"FArmoury.arrowReclamation.EnableBulletsHint": "Cocher pour récupérer les munitions des Frondes",
+
+	"FArmoury.arrowReclamation.Rule": "Règle de récupération des Flèches",
+	"FArmoury.arrowReclamation.RuleHint": "Sélectionner la règle qui permet de récupérer les flèches. Le termme `critique` signifie à la fois les réussites et échecs critiques sur le test de Projectile principal.",
+
+	"FArmoury.arrowReclamation.DefaultRule": "Résultat de Projectiles pair",
+	"FArmoury.arrowReclamation.SuccessRule": "Résultat de Projectiles pair et réussi",
+	"FArmoury.arrowReclamation.NoCritRule": "Résultat de Projectiles pair, mais hors critique",
+	"FArmoury.arrowReclamation.SuccessNoCritRule": "Résultat de Projectiles pair, réussi, mais hors critique",
+	"FArmoury.arrowReclamation.FailureRule": "Résultat de Projectiles pair et raté",
+	"FArmoury.arrowReclamation.FailureNoCritRule": "Résultat de Projectiles pair, raté, mais hors critique",
+	"FArmoury.arrowReclamation.PercentageRule": "Jet séparé utilisant le Pourcentage ci-dessous",
+	"FArmoury.arrowReclamation.PercentageNoCritRule": "Jet séparé utilisant le Pourcentage ci-dessous, sans les critiques",
+
+	"FArmoury.arrowReclamation.Percentage": "Pourcentage cible",
+	"FArmoury.arrowReclamation.PercentageHint": "Fixe le pourcentage de chance pour certaines règles de récupération. Succès si le jet au d100 est inférieur ou égal à ce pourcentage",
+
+	"FArmoury.SlashingApplied": "{hitLocation} est protégé par 1 PA ou moins, l'état Hémorragique est appliqué. <br>{bleedAmtOld} -&gt; {bleedAmt}",
+
+
+	"FArmoury.recovered": "{type} récupéré",
+	"FArmoury.recoveredFuture": "{type} sera récupéré à la fin du combat",
+	"FArmoury.Arrow": "Flèche",
+	"FArmoury.Bolt": "Carreau",
+	"FArmoury.Bullet": "Pierre",
+
+	"FArmoury.Properties.Slashing.Label": "Tailladante",
+	"FArmoury.Properties.Recoverable.Label": "Récupérable",
+	"FArmoury.Properties.Unrecoverable.Label": "Irrécupérable",
+	"FArmoury.Properties.Sturdy.Label": "Inusable",
+	"FArmoury.Properties.Frail.Label": "Fragile",
+	"FArmoury.Properties.HardToFind.Label": "Difficile à trouver",
+
+	"FArmoury.Properties.Slashing.Description": "Une arme Tailladante inflige 1 état Hémorragique sur les parties du corps protégées par 1 PA ou moins.",
+	"FArmoury.Properties.Recoverable.Description": "Les projectiles peuvent être récupérés, même si le groupe de munition ne le permet pas habituellement. <br/><em>(nécessite que la fonction soit activée dans les réglages)</em>",
+	"FArmoury.Properties.Unrecoverable.Description": "Le projectile ne peut jamais être retrouvé.",
+	"FArmoury.Properties.Sturdy.Description": "Le projectil est solide et peut facilement être récupéré.<br/><b>Règles de Pourcentage</b>: lancez les dés deux fois, prenez le résultat le plus bas<br/><b>Règles de succès/echec</b>: inverser les succès/echecs<br/><b>Autres règles:</b> Si pas retrouvén faites un jet sous le Pourcentage.<br/><em>(nécessite que la fonction soit activée dans les réglages)</em>",
+	"FArmoury.Properties.Frail.Description": "Le projectile est très fragile et se casse facilement, devenant plus difficile à récupérer.<br/><b>Règles de Pourcentage</b>: lancez les dés deux fois, prenez le résultat le plus haut<br/><b>Autres règles:</b> Si pas retrouvé, lancez sous le Pourcentage<br/><em>(nécessite que la fonction soit activée dans les réglages)</em>",
+	"FArmoury.Properties.HardToFind.Description": "Le projectile est très difficile à retrouver, même dans des conditions favorables. Lorsqu'il doit être récupéré, le jet est refait avec un malus de -10."
+}
