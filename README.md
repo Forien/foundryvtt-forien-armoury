@@ -94,6 +94,7 @@ If you wish to support me, please consider [becoming my Patreon](https://www.pat
 * Thanks to Thoradin for an idea for arrow reclamation feature :)
 * Thanks to [DasSauerkraut](https://github.com/DasSauerkraut) for allowing me to integrate compendium from his [Gerwin Waffenhalter’s Magnificent Weapons Gallery](https://github.com/DasSauerkraut/wfrp-gwmwg) into my module
 * Thanks to LeRatierBretonnien and Gharazel for providing French translation! 
+* Thanks to ElCamino for providing German translation!
 
 
 ## License

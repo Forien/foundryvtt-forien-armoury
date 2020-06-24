@@ -26,14 +26,14 @@
     }
   ],
   "system": "wfrp4e",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "minimumCoreVersion": "0.6.0",
   "compatibleCoreVersion": "0.6.3",
   "url": "https://github.com/Forien/foundryvtt-forien-armoury",
   "manifest": "https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json",
-  "download": "https://github.com/Forien/foundryvtt-forien-armoury/releases/download/v0.2.9/v0.2.9.zip",
-  "readme": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.9/README.md",
-  "changelog": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.9/changelog.md",
+  "download": "https://github.com/Forien/foundryvtt-forien-armoury/releases/download/v0.2.10/v0.2.10.zip",
+  "readme": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.10/README.md",
+  "changelog": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.10/changelog.md",
   "bugs": "https://github.com/Forien/foundryvtt-forien-armoury/issues",
   "packs": [
     {
@@ -45,6 +45,11 @@
     }
   ],
   "languages": [
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    },
     {
       "lang": "en",
       "name": "English",
@@ -59,11 +64,6 @@
       "lang": "pl",
       "name": "Polski",
       "path": "lang/pl.json"
-    },
-    {
-      "lang": "de",
-      "name": "Deutsch",
-      "path": "lang/de.json"
     }
   ],
   "scripts": [
