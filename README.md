@@ -4,6 +4,7 @@
 ![GitHub All Releases](https://img.shields.io/github/downloads/Forien/foundryvtt-forien-armoury/total?style=for-the-badge&label=Downloads+total)  
 **[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.6.0+   
 **[Optional modules]**: *Babele* 1.19+ (required for translations)  
+**[Languages]**: *English, French, German, Polish*  
 [![](https://img.shields.io/badge/FoundryGet-compatible-success)](https://github.com/cswendrowski/foundryget)
 
 This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
