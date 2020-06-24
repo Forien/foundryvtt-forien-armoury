@@ -59,6 +59,11 @@
       "lang": "pl",
       "name": "Polski",
       "path": "lang/pl.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
     }
   ],
   "scripts": [
