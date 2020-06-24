@@ -1,0 +1,53 @@
+{
+	"FArmoury.applySlashing.Enable": "Regeln für 'Schlitzend'-Qualität aktivieren",
+	"FArmoury.applySlashing.EnableHint": "Wenn aktiviert, wird bei erfolgreichen Treffern mit einer Hiebwaffe auf einen Körperteil, der durch nicht mehr als 1 AP geschützt ist, automatisch der Blutungszustand hinzugefügt.",
+
+	"FArmoury.arrowReclamation.Enable": "Munitionswiederherstellung aktivieren",
+	"FArmoury.arrowReclamation.EnableHint": "Aktiviere Munitionswiederherstellung beim Wurf auf Fernkampfwaffen. Wenn während eines Kampfes aktiv, werden einige der Projektile nach Ende des Kampfes wieder hergestellt.",
+
+	"FArmoury.arrowReclamation.EnableArrows": "Es erlauben Pfeile wiederzuverwenden",
+	"FArmoury.arrowReclamation.EnableArrowsHint": "Test zum Wiederverwenden von Bogenmunition",
+	"FArmoury.arrowReclamation.EnableBolts": "Es erlauben Bolzen wiederzuverwenden",
+	"FArmoury.arrowReclamation.EnableBoltsHint": "Test zum Wiederverwenden von Armbrustmunition",
+	"FArmoury.arrowReclamation.EnableBullets": "Es erlauben Kugeln wiederzuverwenden",
+	"FArmoury.arrowReclamation.EnableBulletsHint": "Test zum Wiederverwenden von Schleudermunition",
+
+	"FArmoury.arrowReclamation.Rule": "Pfeil-Wiederverwendungs-Regel",
+	"FArmoury.arrowReclamation.RuleHint": "Wählen Sie Regeln aus, nach denen entschieden wird, ob der Pfeil wiederverwendet werden kann. Das Wort kritisch meint sowohl kritische Treffer als auch kritische Fehlschläge beim Fernkampfangriffs Wurf.",
+
+	"FArmoury.arrowReclamation.DefaultRule": "Der Fernkampfangriff wurde mit einer geraden Zahl gewürfelt",
+	"FArmoury.arrowReclamation.SuccessRule": "Der Fernkampfangriff wurde mit einer geraden Zahl gewürfelt und war erfolgreich",
+	"FArmoury.arrowReclamation.NoCritRule": "Der Fernkampfangriff wurde mit einer geraden Zahl gewürfelt, war aber nicht kritisch",
+	"FArmoury.arrowReclamation.SuccessNoCritRule": "Der Fernkampfangriff wurde mit einer geraden Zahl gewürfelt und war erfolgreich, aber nicht kritisch",
+	"FArmoury.arrowReclamation.FailureRule": "Der Fernkampfangriff wurde mit einer geraden Zahl gewürfelt und schlug fehl",
+	"FArmoury.arrowReclamation.FailureNoCritRule": "Der Fernkampfangriff wurde mit einer geraden Zahl gewürfelt, schlug fehl, aber nicht kritisch",
+	"FArmoury.arrowReclamation.PercentageRule": "Separater Wurf mit D100",
+	"FArmoury.arrowReclamation.PercentageNoCritRule": "Separater Wurf mit D100, ohne Kritisch",
+
+	"FArmoury.arrowReclamation.Percentage": "Ziel Prozentsatz",
+	"FArmoury.arrowReclamation.PercentageHint": "Einen Zielprozentsatz für das Würfeln festlegen. Der Wurf ist erfolgreich, wenn der d100 weniger oder gleich dem Ziel beträgt",
+
+	"FArmoury.SlashingApplied": "{hitLocation} Wenn der Körperteil durch nicht mehr als 1 AP geschützt ist wird der Zustand 'Blutend' angewandt <br>{bleedAmtOld} -&gt; {bleedAmt}",
+	"FArmoury.Chat.ArrowsRecovered": "{0} gefunden und geborgen <strong>{2}</strong> {1}die wiederverwendet werden können.",
+
+
+	"FArmoury.recovered": "{type} wiederverwendet",
+	"FArmoury.recoveredFuture": "{type} können nach dem Kampf wiederverwendet werden",
+	"FArmoury.Arrow": "Pfeil",
+	"FArmoury.Bolt": "Bolzen",
+	"FArmoury.Bullet": "Kugel",
+
+	"FArmoury.Properties.Slashing.Label": "Schlitzend",
+	"FArmoury.Properties.Recoverable.Label": "Wiederverwendbar",
+	"FArmoury.Properties.Unrecoverable.Label": "Nicht wiederverwendbar",
+	"FArmoury.Properties.Sturdy.Label": "Robust",
+	"FArmoury.Properties.Frail.Label": "Fragil",
+	"FArmoury.Properties.HardToFind.Label": "Schwer zu finden",
+
+	"FArmoury.Properties.Slashing.Description": "Eine Hiebwaffe fügt bei erfolgreichen Treffern an Körperteilen, die durch nicht mehr als 1 AP geschützt sind, einen Blutungszustand zu.",
+	"FArmoury.Properties.Recoverable.Description": "Das Geschoss kann wiederverwendet werden, auch wenn seine Munitionsgruppe dies normalerweise nicht erlaubt. <br/><em>(Das Feature muss in den Einstellungen aktiviert werden)</em>",
+	"FArmoury.Properties.Unrecoverable.Description": "Das Projektil wird immer zerstört und kann niemals wiederverwendet werden.",
+	"FArmoury.Properties.Sturdy.Description": "Das Geschoss ist robust und leichter wiederzuverwenden.<br/><b>Prozent Regeln</b>: Zweimal würfeln und den Niedrigeren nehmen<br/><b>Erfolgs-/Misserfolgsregeln</b>: negiert die Erfolgs-/Misserfolgsbedingung<br/><b>Andere Regeln:</b> Wenn nicht wiederverwendbar, mit D100 würfeln.<br/><em>(requires feature enabled in settings)</em>",
+	"FArmoury.Properties.Frail.Description": "Das Geschoss ist sehr zerbrechlich und bricht leicht, was seine Wiederverwendung erschwert.<br/><b>Prozentregeln</b>: Zweimal würfeln und den Höheren nehmen<br/><b>Andere Regeln:</b> Wenn nicht geborgen mit D100 würfeln<br/><em>(Das Feature muss in den Einstellungen aktiviert werden)</em>",
+	"FArmoury.Properties.HardToFind.Description": "Das Projektil ist selbst unter günstigen Bedingungen sehr schwer zu finden. Wenn es wiederverwendet werden sollte, würfle erneut mit D100 mit einem Modifikator von -10."
+}
