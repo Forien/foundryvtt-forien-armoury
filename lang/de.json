@@ -27,15 +27,15 @@
 	"FArmoury.arrowReclamation.Percentage": "Ziel Prozentsatz",
 	"FArmoury.arrowReclamation.PercentageHint": "Einen Zielprozentsatz für das Würfeln festlegen. Der Wurf ist erfolgreich, wenn der d100 weniger oder gleich dem Ziel beträgt",
 
-	"FArmoury.SlashingApplied": "{hitLocation} Wenn der Körperteil durch nicht mehr als 1 AP geschützt ist wird der Zustand 'Blutend' angewandt <br>{bleedAmtOld} -&gt; {bleedAmt}",
-	"FArmoury.Chat.ArrowsRecovered": "{0} gefunden und geborgen <strong>{2}</strong> {1}die wiederverwendet werden können.",
+	"FArmoury.SlashingApplied": "{hitLocation} Wenn die Trefferzone durch nicht mehr als 1 AP geschützt ist wird der Zustand 'Blutend' angewandt <br>{bleedAmtOld} -&gt; {bleedAmt}",
+	"FArmoury.Chat.ArrowsRecovered": "{0} hat <strong>{2}</strong> {1} gefunden und geborgen die wiederverwendet werden können.",
 
 
 	"FArmoury.recovered": "{type} wiederverwendet",
 	"FArmoury.recoveredFuture": "{type} können nach dem Kampf wiederverwendet werden",
-	"FArmoury.Arrow": "Pfeil",
+	"FArmoury.Arrow": "Pfeile",
 	"FArmoury.Bolt": "Bolzen",
-	"FArmoury.Bullet": "Kugel",
+	"FArmoury.Bullet": "Kugeln",
 
 	"FArmoury.Properties.Slashing.Label": "Schlitzend",
 	"FArmoury.Properties.Recoverable.Label": "Wiederverwendbar",
@@ -44,10 +44,10 @@
 	"FArmoury.Properties.Frail.Label": "Fragil",
 	"FArmoury.Properties.HardToFind.Label": "Schwer zu finden",
 
-	"FArmoury.Properties.Slashing.Description": "Eine Hiebwaffe fügt bei erfolgreichen Treffern an Körperteilen, die durch nicht mehr als 1 AP geschützt sind, einen Blutungszustand zu.",
+	"FArmoury.Properties.Slashing.Description": "Eine Hiebwaffe fügt bei erfolgreichen Treffern an Teilen des Körpers, die durch nicht mehr als 1 AP geschützt sind, einen Blutungszustand zu.",
 	"FArmoury.Properties.Recoverable.Description": "Das Geschoss kann wiederverwendet werden, auch wenn seine Munitionsgruppe dies normalerweise nicht erlaubt. <br/><em>(Das Feature muss in den Einstellungen aktiviert werden)</em>",
 	"FArmoury.Properties.Unrecoverable.Description": "Das Projektil wird immer zerstört und kann niemals wiederverwendet werden.",
-	"FArmoury.Properties.Sturdy.Description": "Das Geschoss ist robust und leichter wiederzuverwenden.<br/><b>Prozent Regeln</b>: Zweimal würfeln und den Niedrigeren nehmen<br/><b>Erfolgs-/Misserfolgsregeln</b>: negiert die Erfolgs-/Misserfolgsbedingung<br/><b>Andere Regeln:</b> Wenn nicht wiederverwendbar, mit D100 würfeln.<br/><em>(requires feature enabled in settings)</em>",
-	"FArmoury.Properties.Frail.Description": "Das Geschoss ist sehr zerbrechlich und bricht leicht, was seine Wiederverwendung erschwert.<br/><b>Prozentregeln</b>: Zweimal würfeln und den Höheren nehmen<br/><b>Andere Regeln:</b> Wenn nicht geborgen mit D100 würfeln<br/><em>(Das Feature muss in den Einstellungen aktiviert werden)</em>",
-	"FArmoury.Properties.HardToFind.Description": "Das Projektil ist selbst unter günstigen Bedingungen sehr schwer zu finden. Wenn es wiederverwendet werden sollte, würfle erneut mit D100 mit einem Modifikator von -10."
+	"FArmoury.Properties.Sturdy.Description": "Das Geschoss ist robust und leichter wiederzuverwenden.<br/><b>Prozent Regeln</b>: Zweimal würfeln und den Niedrigeren nehmen<br/><b>Erfolgs-/Misserfolgsregeln</b>: negiert die Erfolgs-/Misserfolgsbedingung<br/><b>Andere Regeln:</b> Wenn nicht wiederverwendbar, mit D100 würfeln.<br/><em>(Das Feature muss in den Einstellungen aktiviert werden)</em>",
+	"FArmoury.Properties.Frail.Description": "Das Geschoss ist sehr zerbrechlich und bricht leicht, was seine Wiederverwendung erschwert.<br/><b>Prozentregeln</b>: Zweimal würfeln und den Höheren nehmen<br/><b>Andere Regeln:</b> Wenn nicht gefunden, wirf D100<br/><em>(Das Feature muss in den Einstellungen aktiviert werden)</em>",
+	"FArmoury.Properties.HardToFind.Description": "Das Projektil ist selbst unter günstigen Bedingungen sehr schwer zu finden. Wenn es wiederverwendet werden soll, würfle erneut mit D100 mit einem Modifikator von -10."
 }
