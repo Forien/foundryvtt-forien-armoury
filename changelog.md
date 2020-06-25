@@ -3,8 +3,11 @@
 ## v0.X.X
 ### v0.2.X
 
+#### v0.2.11
+* fixes to German translation by ElCamino
+
 #### v0.2.10
-* added French translation thanks to ElCamino
+* added German translation thanks to ElCamino
 
 #### v0.2.9
 * added French translation thanks to LeRatierBretonnien and Gharazel
