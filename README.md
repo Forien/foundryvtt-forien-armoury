@@ -2,7 +2,7 @@
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/forien/foundryvtt-forien-armoury?style=for-the-badge) 
 ![GitHub Releases](https://img.shields.io/github/downloads/Forien/foundryvtt-forien-armoury/latest/total?style=for-the-badge)
 ![GitHub All Releases](https://img.shields.io/github/downloads/Forien/foundryvtt-forien-armoury/total?style=for-the-badge&label=Downloads+total)  
-**[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.6.0+   
+**[Compatibility]**: *FoundryVTT* 0.6.0+, *WFRP4e* 1.6.2   
 **[Optional modules]**: *Babele* 1.19+ (required for translations)  
 **[Languages]**: *English, French, German, Polish*  
 [![](https://img.shields.io/badge/FoundryGet-compatible-success)](https://github.com/cswendrowski/foundryget)
@@ -60,7 +60,7 @@ Module contains single Compendium pack containing at the moment 34 items.
 * Added Gambesons as an alternative to Leather armour
 * Rebalanced Leather armour (is more expensive than Gambesons, but Durable)
 * Added boiled Leather Bracers
-* Added Cuirass (basically Plate Breastplate)
+* Added Cuirass (plate torso armour)
 * Added Breastplate (covers front only)
 * Added various Arrow types: Bodkin, Hunting, Leaf, Military, Shoddy — where Military replaces vanilla Arrow
 * Added various Bolt types: Bodkin, Broad, Hunting, Needle, Standard — where Standard replaces vanilla Bolt
@@ -93,7 +93,7 @@ If you wish to support me, please consider [becoming my Patreon](https://www.pat
 ## Acknowledgments
 
 * Thanks to Atropos for his relentless work on developing and improving the Foundry VTT
-* Thanks to Moo Man for his great work developing the [WFRP4e game system](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT) as well as for his invaluable help with understanding how to mod Foundry using JS
+* Thanks to Moo Man for his great work developing the [WFRP4e game system](https://github.com/moo-man/WFRP4e-FoundryVTT) as well as for his invaluable help with understanding how to mod Foundry using JS
 * Thanks to Thoradin for an idea for arrow reclamation feature :)
 * Thanks to [DasSauerkraut](https://github.com/DasSauerkraut) for allowing me to integrate compendium from his [Gerwin Waffenhalter’s Magnificent Weapons Gallery](https://github.com/DasSauerkraut/wfrp-gwmwg) into my module
 * Thanks to LeRatierBretonnien and Gharazel for providing French translation! 
@@ -105,3 +105,5 @@ If you wish to support me, please consider [becoming my Patreon](https://www.pat
 Forien's Armoury is a module for Foundry VTT by Forien and is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
 This work is licensed under Foundry Virtual Tabletop [EULA - Limited License Agreement for module development from May 29, 2020](https://foundryvtt.com/article/license/).
+
+_To the best of my knowledge, all content in this module is either made by me, publicly available under permissive license or falls under Fair Use. Please bring infractions or concerns related to my module to my attention by contacting me via email presented on my GitHub profile._ 

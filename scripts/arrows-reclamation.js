@@ -387,6 +387,21 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
    * Registers new qualities and flaws and their descriptions
    */
   static registerQualitiesAndFlaws() {
+    if (WFRP4E.weaponQualities === undefined)
+      window.WFRP4E.weaponQualities = {};
+
+    if (WFRP4E.qualityDescriptions === undefined)
+      window.WFRP4E.qualityDescriptions = {};
+
+    if (WFRP4E.itemQualities === undefined)
+      window.WFRP4E.itemQualities = {};
+
+    if (WFRP4E.itemFlaws === undefined)
+      window.WFRP4E.itemFlaws = {};
+
+    if (WFRP4E.flawDescriptions === undefined)
+      window.WFRP4E.flawDescriptions = {};
+
     WFRP4E.weaponQualities["slashing"] = "FArmoury.Properties.Slashing.Label";
     WFRP4E.qualityDescriptions["slashing"] = "FArmoury.Properties.Slashing.Description";
 

@@ -3,6 +3,10 @@
 ## v0.X.X
 ### v0.2.X
 
+#### v0.2.12
+* Possibly fixed bug with WFRP4e 2.0.0
+* Adjustments to ingredients' descriptions in compendium
+
 #### v0.2.11
 * fixes to German translation by ElCamino
 

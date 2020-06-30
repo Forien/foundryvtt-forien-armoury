@@ -9,7 +9,7 @@
 		{
 			"id": "Aqshy Ingredient",
 			"name": "Składnik Aqshy",
-			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Aqshy. Często używane składniki to palne materiały takie jak węgiel, oleje, tłuszcze czy suche drewno. Przedmioty odporne na ogień również są dość częste, jak np. żelazne klucze, rzeźbione fragmenty rusztów lub małe kamienie z palenisk.</p>\n<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
+			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Aqshy.</p>\n<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
 		},
 		{
 			"id": "Arming Sword",
@@ -22,7 +22,7 @@
 		{
 			"id": "Azyr Ingredient",
 			"name": "Składnik Azyr",
-			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Azyr. Często używane składniki to astronomiczne instrumenty, wykresy, soczewki i symbole tak samo jak składniki związane z wróżbami, zwierzęce wnętrzności, lustra, szklane kule i ptasie języczki. Niektóre zaklęcia związane z wiatrem korzystają z piór i skrzydeł, a do tych, które wywołują elektryczność, najczęściej używa się okrawków rzeźbionego metalu.</p>\n<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
+			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Azyr.</p>\n<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
 		},
 		{
 			"id": "Backsword",
@@ -107,7 +107,7 @@
 		{
 			"id": "Chamon Ingredient",
 			"name": "Składnik Chamon",
-			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Chamon. Często używane składniki to ciężkie metale wszelkich rodzajów, inkrustowane lub rzeźbione w ezoteryczne wzory,przedmioty związane z kuźnią, w tym części miechów oznaczonych matematycznymi formułami, grawerowane kawałki kowadeł i fragmenty pieców</p>\n<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
+			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Chamon.</p>\n<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
 		},
 		{
 			"id": "Club",
@@ -213,7 +213,7 @@
 		{
 			"id": "Ghyran Ingredient",
 			"name": "Składnik Ghyran",
-			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Ghyran. Druidzi używają różnorodnych, naturalnie występujących składników, od ziaren, orzechów i wydzielin zbieranych od stworzeń w pełni życia, przez rzadkie soki drzew, żyzną glebę, źródlaną wodę, aż po różne żywe składniki, jak rośliny, a nawet mniejsze zwierzęta.</p>\n<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
+			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Ghyran.</p>\n<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
 		},
 		{
 			"id": "Hatchet",
@@ -242,7 +242,7 @@
 		{
 			"id": "Hedgecraft Ingredient",
 			"name": "Składnik Guślarstwa",
-			"description": "<p>Guślarze korzystają z łatwych do zdobycia i przygotowania materiałów, choć potrzebne są zazwyczaj specjalistyczne narzędzia. Przykładowo do składników należą skrzydła ważki zabitej srebrną szpilą, kije z topoli wypolerowane woskiem podczas Sonnstill lub kości zakopane pod żywopłotem na jeden miesiąc w zimie.</p>\n<p><em>Składnik Guślarstwa można pozyskać zgodnie z zasadami Zbierania Pożywienia i Ziół. Udany Test\nWiedzy (Zielarstwa) skutkuje pozyskaniem 1 + PS składników.</em></p>\n<p><strong><em>Nie możesz rzucić żadnego zaklęcia Guślarstwa bez posiadania odpowiedniego składnika.</em></strong></p>"
+			"description": "<p><em>Składnik Guślarstwa można pozyskać zgodnie z zasadami Zbierania Pożywienia i Ziół. Udany Test\nWiedzy (Zielarstwa) skutkuje pozyskaniem 1 + PS składników.</em></p>\n<p><strong><em>Nie możesz rzucić żadnego zaklęcia Guślarstwa bez posiadania odpowiedniego składnika.</em></strong></p>"
 		},
 		{
 			"id": "Horseman's Pick",
@@ -271,7 +271,7 @@
 		{
 			"id": "Hysh Ingredient",
 			"name": "Składnik Hysh",
-			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Hysh. Często używane składniki to artefakty związane ze świętością i świętymi miejscami, wykorzystywane też są kryształy, szkło, piramidiony i małe posążki, a wszystko rzeźbione jest w święte symbole, zwijające się węże i etyczne przypowieści. Białe świece, srebrne ryty i bielony papier również są bardzo powszechne.</p>\n<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
+			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Hysh.</p>\n<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
 		},
 		{
 			"id": "Katzbalger",
@@ -516,7 +516,7 @@
 		{
 			"id": "Shyish Ingredient",
 			"name": "Składnik Shyish",
-			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Shyish. Często używane składniki to kości myślących stworzeń, przedmioty związane ze śmiercią, np. drewno czy gwoździe z trumien, płyny balsamujące, klepsydry, srebrne monety, ziemia z grobów. Fioletowe kamienie szlachetne, materiały i kwiaty (zwłaszcza róże) są używane równie często.</p>\n<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
+			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Shyish.</p>\n<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
 		},
 		{
 			"id": "Side-Sword",
@@ -561,7 +561,7 @@
 		{
 			"id": "Ulgu Ingredient",
 			"name": "Składnik Ulgu",
-			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Ulgu. Często używane składniki to kosmetyki, perfumy, szale, okulary, lustra czy peruki. Przedmioty, które należą do profesji związanych z intrygami i mądrością, są równie powszechne, dlatego artefakty dyplomatyczne, symbole hierarchii czy ostateczny przejaw potęgi – ostrze – są używane najczęściej.</p><p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
+			"description": "<p>Typowy składnik powszechnie wykorzystywany w splataniu Ulgu.</p><p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X s, gdzie X jest równe PZ.&nbsp;</em></p>"
 		},
 		{
 			"id": "Voulge",
@@ -582,7 +582,7 @@
 		{
 			"id": "Witchcraft Ingredient",
 			"name": "Składnik Czarownictwa",
-			"description": "<p>Czarownice używają przerażających połączeń części ciał zwierząt, często pozyskiwanych, gdy stworzenie ciągle żyje. Gdy rzucają zaklęcia, nierzadkim widokiem są gadzie oczy, psie palce, żołądki osłów czy inne znacznie, znacznie gorsze fragmenty zaciśnięte w ich zakrwawionych dłoniach.</p>\n<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X p, gdzie X jest równe PZ. </em></p>\n<p><em>Ewentualnie czarownica może poszukać składników na własną rękę, używając Umiejętności Sztuka Przetrwania. Udany Test skutkuje pozyskaniem 1 + PS składników.</em></p>\n<p><strong>Testy Rzucania zaklęć i Splatania Magii z tej Tradycji skutkują automatyczną Manifestacją, chyba że do rzucenia zaklęcia używane są składniki. Za to składnik nie chroni przed późniejszymi Manifestacjami, jeśli takie się pojawią..</strong></p>"
+			"description": "<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X p, gdzie X jest równe PZ. </em></p>\n<p><em>Ewentualnie czarownica może poszukać składników na własną rękę, używając Umiejętności Sztuka Przetrwania. Udany Test skutkuje pozyskaniem 1 + PS składników.</em></p>\n<p><strong>Testy Rzucania zaklęć i Splatania Magii z tej Tradycji skutkują automatyczną Manifestacją, chyba że do rzucenia zaklęcia używane są składniki. Za to składnik nie chroni przed późniejszymi Manifestacjami, jeśli takie się pojawią..</strong></p>"
 		},
 		{
 			"id": "Woodcutter's Axe",

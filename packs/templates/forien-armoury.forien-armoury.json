@@ -9,7 +9,7 @@
 		{
 			"id": "Aqshy Ingredient",
 			"name": "Aqshy Ingredient",
-			"description": "<p>Generic ingredient used in channeling Aqshy. Commonly used ingredients are flammable materials like coal, oils, fats, and ruddy woods. Trappings immune to fire are also common, such as iron keys, carved sections of fire-grate, and small oven stones.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+			"description": "<p>Generic ingredient used in channeling Aqshy.</p><p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
 		},
 		{
 			"id": "Arming Sword",
@@ -22,7 +22,7 @@
 		{
 			"id": "Azyr Ingredient",
 			"name": "Azyr Ingredient",
-			"description": "<p>Generic ingredient used in channeling Azyr. Commonly used ingredients are astronomical instruments, charts, lenses, and symbols as are ingredients associated with augury, such as animal innards, mirrors, glass balls, and bird tongues. Some wind-based spells use wings and feathers, where those involving electricity prefer slivers of carved metal.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+			"description": "<p>Generic ingredient used in channeling Azyr.</p><p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
 		},
 		{
 			"id": "Backsword",
@@ -107,7 +107,7 @@
 		{
 			"id": "Chamon Ingredient",
 			"name": "Chamon Ingredient",
-			"description": "<p>Generic ingredient used in channeling Chamon. Commonly used ingredients are heavy metals of all types, esoterically inlaid or carved, though many spells also use trappings associated with a forge, including sections of a bellows marked with mathematical formula, inscribed chunks of an anvil, or fragments of a furnace.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+			"description": "<p>Generic ingredient used in channeling Chamon.</p><p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
 		},
 		{
 			"id": "Club",
@@ -208,12 +208,12 @@
 		{
 			"id": "Ghur Ingredient",
 			"name": "Ghur Ingredient",
-			"description": "<p>Generic ingredient used in channeling Ghur. Commonly used ingredients are animal fur, skin, bone, and pelt, wrapped in sinews and daubed with blood runes. Often claws are scrimshawed, organs dried, and feathers dipped in rare humours, and it’s not uncommon to find excrement, urine, and other excretions also used.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+			"description": "<p>Generic ingredient used in channeling Ghur.</p><p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
 		},
 		{
 			"id": "Ghyran Ingredient",
 			"name": "Ghyran Ingredient",
-			"description": "<p>Generic ingredient used in channeling Ghyran. Commonly used ingredients are rare seeds and nuts, humours gathered from sentient creatures in the flush of life, uncommon tree saps, fertile loam, spring waters, and a variety of living ingredients, including plants and smaller animals.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+			"description": "<p>Generic ingredient used in channeling Ghyran.</p><p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
 		},
 		{
 			"id": "Hatchet",
@@ -242,7 +242,7 @@
 		{
 			"id": "Hedgecraft Ingredient",
 			"name": "Hedgecraft Ingredient",
-			"description": "<p>Hedgefolk use easily sourced local materials prepared to exacting standards using special tools. So, ingredients may include things such as the wings of a dragonfly killed with a silver pin, rods of poplar polished with beeswax on Sonnstill, or bones buried beneath a hedgerow for a winter’s month.</p>\n<p><em>Hedgecraft ingredients can be foraged using Lore (Herbalism). Upon successful foraging roll, you receive 1 + SL ingredients.</em></p>\n<p><strong><em>You cannot cast any Hedgecraft spell without an ingredient.</em></strong></p>"
+			"description": "<p><em>Hedgecraft ingredients can be foraged (Rulebook, page 127) using Lore (Herbalism). Upon successful foraging roll, you receive 1 + SL ingredients.</em></p>\n<p><strong><em>You cannot cast any Hedgecraft spell without an ingredient.</em></strong></p>"
 		},
 		{
 			"id": "Horseman's Pick",
@@ -271,7 +271,7 @@
 		{
 			"id": "Hysh Ingredient",
 			"name": "Hysh Ingredient",
-			"description": "<p>Generic ingredient used in channeling Hysh. Commonly used ingredients are artefacts associated with holiness and holy places, supplemented by crystals, glass, pyramidions, and small statues, all carved with sacred symbols, twisting snakes, and moral tales. White candles, silver carvings, and bleached paper are also common.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+			"description": "<p>Generic ingredient used in channeling Hysh.</p><p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
 		},
 		{
 			"id": "Katzbalger",
@@ -516,7 +516,7 @@
 		{
 			"id": "Shyish Ingredient",
 			"name": "Shyish Ingredient",
-			"description": "<p>Generic ingredient used in channeling Shyish. Commonly used ingredients are bones of sentient creatures, trappings of death, including wood or nails from coffins, embalming fluids, hourglasses, silver coins, and grave dirt, all carefully presented or engraved. Purple gemstones, materials, and flowers (particularly roses) are also common.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+			"description": "<p>Generic ingredient used in channeling Shyish.</p><p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
 		},
 		{
 			"id": "Side-Sword",
@@ -561,7 +561,7 @@
 		{
 			"id": "Ulgu Ingredient",
 			"name": "Ulgu Ingredient",
-			"description": "<p>Generic ingredient used in channeling Ulgu. Commonly used ingredients include cosmetics, scents, scarfs, spectacles, mirrors, and wigs. Items drawn from professions steeped in intrigue and wisdom are also common, with diplomatic artefacts, symbols of rank, and the ultimate expression of power — a blade — prevalent..</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
+			"description": "<p>Generic ingredient used in channeling Ulgu.</p><p><em>Ingredient's price depends on spell for which it is destined. Set price to X ss, where X is equal to spell's CN.&nbsp;</em></p>"
 		},
 		{
 			"id": "Voulge",
@@ -582,7 +582,7 @@
 		{
 			"id": "Witchcraft Ingredient",
 			"name": "Witchcraft Ingredient",
-			"description": "<p>Witches use a horrific mixture of animal body parts, often harvested when a creature is still alive. It is not uncommon to find them clutching lizard eyes, dog toes, donkey gizzard, or much, much worse in their bloody hands as they cast their foul magics.</p>\n<p><em>Ingredient's price depends on spell for which it is destined. Set price to X bp, where X is equal to spell's CN. </em></p>\n<p><em>Alternatively, successful foraging roll using Outdoor Survival grants you 1 + SL ingredients.</em></p>\n<p><strong>Channelling </strong><strong>or casting spells from this Lore automatically require a roll on </strong><strong>the Minor Miscast table unless cast with an ingredient , where </strong><strong>the ingredient provides no further protection should you roll a </strong><strong>Miscast.</strong></p>"
+			"description": "<p><em>Ingredient's price depends on spell for which it is destined. Set price to X bp, where X is equal to spell's CN. </em></p>\n<p><em>Alternatively, successful foraging (Rulebook, page 127) roll using Outdoor Survival grants you 1 + SL ingredients.</em></p>\n<p><strong>Channelling or casting spells from this Lore automatically results in the Minor Miscast, unless cast with an ingredient. On top of that, Ingredient provides no protection if you roll a Miscast.</strong></p>"
 		},
 		{
 			"id": "Woodcutter's Axe",
