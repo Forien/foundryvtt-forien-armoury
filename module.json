@@ -16,24 +16,19 @@
   "dependencies": [
     {
       "name": "wfrp4e",
-      "manifest": "https://raw.githubusercontent.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT/stable/system.json",
-      "version": "1.6.0"
-    },
-    {
-      "name": "babele",
-      "manifest": "https://gitlab.com/riccisi/foundryvtt-babele/raw/master/module/module.json",
-      "version": "1.19.0"
+      "manifest": "https://raw.githubusercontent.com/moo-man/WFRP4e-FoundryVTT/master/system.json",
+      "type": "system"
     }
   ],
   "system": "wfrp4e",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "minimumCoreVersion": "0.6.0",
-  "compatibleCoreVersion": "0.6.3",
+  "compatibleCoreVersion": "0.6.6",
   "url": "https://github.com/Forien/foundryvtt-forien-armoury",
   "manifest": "https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json",
-  "download": "https://github.com/Forien/foundryvtt-forien-armoury/releases/download/v0.2.12/v0.2.12.zip",
-  "readme": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.12/README.md",
-  "changelog": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.12/changelog.md",
+  "download": "https://github.com/Forien/foundryvtt-forien-armoury/releases/download/v0.2.13/v0.2.13.zip",
+  "readme": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.13/README.md",
+  "changelog": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v0.2.13/changelog.md",
   "bugs": "https://github.com/Forien/foundryvtt-forien-armoury/issues",
   "packs": [
     {
@@ -71,7 +66,8 @@
     "./scripts/add-config.js",
     "./scripts/arrows-reclamation.js",
     "./scripts/localization.js",
-    "./scripts/utils.js"
+    "./scripts/utils.js",
+    "./scripts/prompt.js"
   ],
   "socket": true
 }

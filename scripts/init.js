@@ -1,5 +1,14 @@
 let ForienArmoury = {};
 
+Hooks.on("ready", function () {
+  setTimeout( registerStuff, 2000);
+});
+
+registerStuff = () => {
+  console.log("Registering Armoury.");
+  ForienArmoury.ArrowReclamation.registerQualitiesAndFlaws();
+};
+
 Hooks.on("init", function () {
   // Allow and process incoming socket data
   game.socket.on("module.forien-armoury", data => {
@@ -9,8 +18,6 @@ Hooks.on("init", function () {
       }
     }
   });
-
-  ForienArmoury.ArrowReclamation.registerQualitiesAndFlaws();
 
   ForienArmoury.Utils.registerHandlebarsHelpers();
 

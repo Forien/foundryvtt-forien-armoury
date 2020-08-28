@@ -387,6 +387,9 @@ ForienArmoury.ArrowReclamation = class ArrowReclamation {
    * Registers new qualities and flaws and their descriptions
    */
   static registerQualitiesAndFlaws() {
+    if (WFRP4E === undefined)
+      window.WFRP4E = {};
+
     if (WFRP4E.weaponQualities === undefined)
       window.WFRP4E.weaponQualities = {};
 

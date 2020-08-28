@@ -3,6 +3,10 @@
 ## v0.X.X
 ### v0.2.X
 
+#### v0.2.13
+* Updated to work with WFRP 2.0.0 and higher
+* Fixed dependency bug with FVTT 0.6.6
+
 #### v0.2.12
 * Possibly fixed bug with WFRP4e 2.0.0
 * Adjustments to ingredients' descriptions in compendium
