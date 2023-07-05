@@ -66,9 +66,9 @@
     }
   ],
   "esmodules": [
-    "forien-armoury.mjs"
+    "modules/forien-armoury.mjs"
   ],
   "css": [
-    "forien-armoury.css"
+    "styles/forien-armoury.css"
   ]
 }
