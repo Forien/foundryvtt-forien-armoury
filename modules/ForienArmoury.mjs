@@ -6,15 +6,13 @@ export default class ForienArmoury {
   /**
    * @type TemporaryRunes
    */
-  runes;
+  runes = TemporaryRunes;
   /**
    * @type ItemRepair
    */
-  itemRepair;
+  itemRepair= ItemRepair;
 
   constructor() {
-    this.runes = TemporaryRunes;
-    this.itemRepair = ItemRepair;
     Utility.init("Forien's Armoury");
 
     this._bindHooks();

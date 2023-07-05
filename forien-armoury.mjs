@@ -1,6 +1,5 @@
 import ForienArmoury from "./modules/ForienArmoury.mjs";
 
-Hooks.once("ready", () => {
-  console.log("Forien Ready");
+Hooks.once("init", () => {
   game.modules.get("forien-armoury").api = new ForienArmoury();
 })

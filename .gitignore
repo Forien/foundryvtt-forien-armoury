@@ -5,6 +5,7 @@ lang/untranslated.json
 node_modules/
 foundry.js
 package.json
+package-lock.json
 /changelog.html
 _oldStuff
 packs/*/_source

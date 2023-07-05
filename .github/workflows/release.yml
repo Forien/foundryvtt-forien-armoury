@@ -10,32 +10,43 @@ jobs:
   build:
     name: Upload Release Asset
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Get version
+        uses: actions/checkout@v3
+
+      - name: Extract Version From Tag
         id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/*/}
+        uses: battila7/get-version-action@v2
+
+      - name: Modify Module Manifest With Release-Specific Values
+        id: sub_manifest_link_version
+        uses: microsoft/variable-substitution@v1
+        with:
+          files: 'module.json'
+        env:
+          version: ${{steps.get_version.outputs.version-without-v}}
+          url: https://github.com/${{github.repository}}
+          manifest: https://github.com/${{github.repository}}/releases/latest/download/module.json
+          download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.zip
+          readme: https://github.com/Forien/foundryvtt-forien-armoury/blob/${{github.event.release.tag_name}}/README.md
+          changelog: https://github.com/Forien/foundryvtt-forien-armoury/blob/${{github.event.release.tag_name}}/CHANGELOG.md
+          bugs: https://github.com/${{github.repository}}/issues
+
       - name: Zip files
         run: |
-          zip -r ${{ steps.get_version.outputs.VERSION }}.zip *
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          zip -r module.zip module.json CHANGELOG.md README.md LICENSE icons/ languages/ modules/ packs/ scripts/ styles/ templates/ 
+
+      - name: Update Release with Files
+        id: create_version_release
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-      - name: Upload Release Asset
-        id: upload-release-asset
-        uses: actions/upload-release-asset@v1.0.2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./${{ steps.get_version.outputs.VERSION }}.zip
-          asset_name: ${{ steps.get_version.outputs.VERSION }}.zip
-          asset_content_type: application/zip
+          allowUpdates: true
+          name: ${{ github.event.release.name }}
+          draft: ${{ github.event.release.unpublished }}
+          prerelease: ${{ github.event.release.prerelease }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: './module.json, ./module.zip'
+          tag: ${{ github.event.release.tag_name }}
+          body: ${{ github.event.release.body }}

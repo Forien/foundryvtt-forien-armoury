@@ -1,5 +1,8 @@
+import Utility from "./Utility.mjs";
+
 export default class ItemRepair {
   static bindHooks() {
+    console.log("Forien ItemRepair.bindHooks()");
     Hooks.on('renderChatLog', this._setChatListeners.bind(this));
   }
 
@@ -9,6 +12,7 @@ export default class ItemRepair {
    * @private
    */
   static _setChatListeners(log, html) {
+    console.log("Forien ItemRepair._setChatListeners()");
     html.on("click", ".forien-repair-item", this._onRepairItem.bind(this));
   }
 
@@ -17,8 +21,14 @@ export default class ItemRepair {
    * @private
    */
   static _onRepairItem(event) {
+    console.log("Forien ItemRepair._onRepairItem()");
     console.log(event.currentTarget.dataset.item);
     console.log(event.currentTarget.dataset.location);
+    let actor = game.user.character;
+
+    if (actor === null)
+      return Utility.notify(`Must have a character assigned to Pay & Repair your Items`, {type: "error"})
+
     let money = MarketWfrp4e.payCommand(event.currentTarget.dataset.cost, actor);
     if (money) {
       WFRP_Audio.PlayContextAudio({item: {"type": "money"}, action: "lose"});
@@ -63,36 +73,28 @@ export default class ItemRepair {
     return string;
   }
 
-  /**
-   * @param {ItemWfrp4e} item
-   */
-  static checkWeaponDamage(item) {
+  static _getMaxDamage(item) {
     let regex = /\d{1,3}/gm;
-    let maxDamage = Number(regex.exec(item.damage.value)[0] || 0) + Number(item.properties.qualities.durable?.value || 0);
-    let damage = Number(item.damageToItem?.value || 0)
-    let price = this._getPriceInD(item);
 
-    return {
-      uuid: item.uuid,
-      name: item.name,
-      damaged: damage > 0,
-      damage: damage,
-      maxDamage: maxDamage,
-      price: price
-    };
+    if (item.type === 'weapon')
+      return Number(regex.exec(item.damage.value)[0] || 0) + Number(item.properties.qualities.durable?.value || 0);
+
+    return Number(item.properties.qualities.durable?.value || 0);
   }
 
   /**
    * @param {ItemWfrp4e} item
    */
   static checkTrappingDamage(item) {
-    let damage = Number(item.damageToItem?.value || 0);
-    let maxDamage = Number(item.properties.qualities.durable?.value || 0);
+    let maxDamage = this._getMaxDamage(item)
+    let damage = Number(item.damageToItem?.value || 0)
     let price = this._getPriceInD(item);
 
     return {
       uuid: item.uuid,
       name: item.name,
+      img: item.img,
+      type: item.type,
       damaged: damage > 0,
       damage: damage,
       maxDamage: maxDamage,
@@ -123,6 +125,8 @@ export default class ItemRepair {
     return {
       uuid: item.uuid,
       name: item.name,
+      img: item.img,
+      type: item.type,
       damaged: locations.length > 0,
       locations: locations,
       price: price
@@ -135,21 +139,28 @@ export default class ItemRepair {
    */
   static processWeapons(items = []) {
     let html = ``;
-    let data = items.map(this.checkWeaponDamage.bind(this));
+    let data = items.map(this.checkTrappingDamage.bind(this));
 
     for (let i in data) {
-      let datum = data[i];
-      html += `<h3>${datum.name}</h3>`
+      let item = data[i];
+      html += `<div style="">`
 
-      if (!datum.damaged) continue;
+      if (item.img)
+        html += `<img src="${item.img}" style="height: 48px; width: 48px;" alt="${item.name}" />`;
 
-      if (datum.damage === datum.maxDamage) {
-        html += `<p>Weapon is mangled beyond recognition. It's treated now as an Improvised Weapon and can't normally be repaired.</p>`;
+      html += `<h3>${item.name}</h3>`;
+      html += `</div>`;
+
+      if (!item.damaged) continue;
+
+      if (item.damage === item.maxDamage) {
+        html += `<p>Weapon is mangled beyond recognition. It's treated now as an <em>Improvised Weapon</em> and can't normally be repaired.</p>`;
       } else {
-        let singleRepairCost = this._getMoneyStringFromD(datum.price * 0.1);
-        let repairCost = this._getMoneyStringFromD(datum.price * 0.1 * datum.damage);
-        html += `<p>Weapon has received <strong>${datum.damage} points of damage</strong> out of maximum <strong>${datum.maxDamage}</strong> it can sustain.</p>`;
+        let singleRepairCost = this._getMoneyStringFromD(item.price * 0.1);
+        let repairCost = this._getMoneyStringFromD(item.price * 0.1 * item.damage);
+        html += `<p>Weapon has received <strong>${item.damage} points of damage</strong> out of maximum <strong>${item.maxDamage}</strong> it can sustain.</p>`;
         html += `<p>Repairing this weapon will cost ${singleRepairCost} per damage for a total of <strong>${repairCost}</strong>.</p>`;
+        html += `<p><a class="chat-button forien-repair-item" data-item="${item.uuid}">Pay & Repair</a></p>`;
       }
     }
 
@@ -180,7 +191,7 @@ export default class ItemRepair {
 
     ChatMessage.create({
       user: game.user._id,
-      content: weaponResult
+      content: `<div class="forien-armoury">${weaponResult}</div>`
     });
   }
 }

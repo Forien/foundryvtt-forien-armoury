@@ -1,0 +1,26 @@
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+.forien-armoury {
+  .item-repair-header {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    img {
+      @include square(36px)
+    }
+
+    h3 {
+      flex: 1;
+    }
+  }
+
+  .forien-repait-item {
+
+
+  }
+}
