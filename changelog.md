@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.X.X
+### v1.0.X
+#### v1.0.0
+* **Completely rewrote the Module** for Foundry 11 and WFRP4e 6. 
+  * Old version was made for Foundry 0.6 and WFRP4e 1.6
+  * Leaving the old changelog as is, even though many things have been removed
+* Changed License to MIT
+
 ## v0.X.X
 ### v0.2.X
 

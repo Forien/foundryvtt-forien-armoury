@@ -7,43 +7,46 @@
 **[Languages]**: *English, French, German, Polish*  
 [![](https://img.shields.io/badge/FoundryGet-compatible-success)](https://github.com/cswendrowski/foundryget)
 
-This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top
+This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top  
 
-#### Notable changes in v0.2.*
-* Extended Arrow Recovery system with more rules
-* Added new qualities and flaws to use with projectiles:
-  * Unbreakable (used extisting quality) – projectiles is always recovered, bypassing rules, as long as it is recoverable (settings/quailities)
-  * Recoverable – projectile can be recovered, even if settings won't allow it
-  * Unrecoverable – projectile always perishes, will never be recovered
-  * Sturdy – projectile is sturdy and easier to recover
-  * Frail – projectile breaks easily and is harder to recover
-  * Hard To Find – projectile is hard to find, if it would be recovered, roll again with -10 modifier
-* Added new qualities and flaws to some items in compendium
-* Added variants for lead and stone bullets that use projectile qualities and flaws
-* Under DasSauerkraut's permission, integrated Gerwin Waffenhalter’s Magnificent Weapons Gallery weapons and slashing quality 
-* Added automation for applying Bleed Conditions upon hit with Slashing weapon
-* Prepared groundwork for translation using Babele to any language
-* Started translating Forien's Armoury compendium to Polish (all names and most descriptions done)
-* Added notification when combat ends about all recovered ammunition. Only owner and GM see it. 
-* Restored support for retrieving ammunition out of combat 
+Forien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded
+
+#### Notable changes in v1.0.0
+* Module was remade from the ground up, not updated
+  * It was easier this way, since Migrating from Foundry 0.6 to Foundry 11 would most likely break stuff
+* Added bunch of my own Houserules in a Journal
+* Added new careers:
+  * Dwarven Runesmiths
+  * Runebound Rangers
+* Added bunch of new items, weapons, trappings
+  * Generic Ingredients for each Tradition
+  * Gambeson type Armour
+  * Rebalanced Soft Leather Armour
+  * Changed Breastplate (only covers front)
+  * Added Cuirass (more like vanilla Breastplate)
+  * Powder Kegs
+  * Quivers and Powder Horns
+  * and more 
+* Added fully automated Rune support for Runesmith
+  * Runes are effects on Items
+  * Temporary Runes when disabled will delete themselves from Actor and Item
+  * Optionally, Item will be damaged when Temporary Rune is removed from it
+  * For best effects, I suggest using [Times Up](https://foundryvtt.com/packages/times-up) by Tim Posney
+* Added new type of Magic for Runebound Rangers
 
 
 ## Installation
 
-### Recommended: Install via [FoundryGet](https://github.com/cswendrowski/foundryget)
+### Recommended: Install via FoundryVTT
 
-FoundryGet will automatically install downstream dependencies such as Babele and manage version conflicts.
-
-```
-foundryget install https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json
-```
+FoundryVTT will automatically install the Module and will prompt you to download recommended Modules as well.
 
 Once installed, while in World using WFRP4e game system, enable Forien's Armoury module
 
 ### Manual
 
-1. Install [WFRP4e Game System](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT).
-2. Install Forien's Armoury using manifest URL: https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/master/module.json
+1. Install [WFRP4e Game System](https://github.com/moo-man/WFRP4e-FoundryVTT) and other dependencies.
+2. Install Forien's Armoury by extracting ZIP in your `FoundryData/Data/modules` directory
 3. While in World using WFRP4e game system, enable Forien's Armoury module
 
 
@@ -62,6 +65,8 @@ Module contains single Compendium pack containing at the moment 34 items.
 * Added boiled Leather Bracers
 * Added Cuirass (plate torso armour)
 * Added Breastplate (covers front only)
+
+
 * Added various Arrow types: Bodkin, Hunting, Leaf, Military, Shoddy — where Military replaces vanilla Arrow
 * Added various Bolt types: Bodkin, Broad, Hunting, Needle, Standard — where Standard replaces vanilla Bolt
 * Added Cracker Bullet for Sling (Blast 2 ammo)
@@ -71,19 +76,17 @@ Module contains single Compendium pack containing at the moment 34 items.
 ## Future plans
 
 ### Features
-* add checkboxes in weapon test dialog that would allow to override arrow recovery system
+* 
 
 ### Content
-* Translating Compendium to Polish using Babele
-* Maybe some non-combat trappings as well
-* Create specific ingredients instead of generic ones
+* 
 
 *If you have **any** suggestion or idea on new contents, hit me up on Discord!*
 
 
 ## Contact
 
-If you wish to contact me for any reason, reach me out on Discord using my tag: `Forien#2130`
+If you wish to contact me for any reason, reach me out on Discord using my tag: `forien`
 
 ## Support
 
@@ -91,6 +94,7 @@ If you wish to support me, please consider [becoming my Patreon](https://www.pat
 
 
 ## Acknowledgments
+_Disclaimer: I kept all acknowledgments, even if their respective work was lost during the Module's remake. Sorry for that._
 
 * Thanks to Atropos for his relentless work on developing and improving the Foundry VTT
 * Thanks to Moo Man for his great work developing the [WFRP4e game system](https://github.com/moo-man/WFRP4e-FoundryVTT) as well as for his invaluable help with understanding how to mod Foundry using JS
@@ -102,8 +106,8 @@ If you wish to support me, please consider [becoming my Patreon](https://www.pat
 
 ## License
 
-Forien's Armoury is a module for Foundry VTT by Forien and is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+Forien's Armoury is a module for Foundry VTT by Forien and is licensed under a MIT License.
 
-This work is licensed under Foundry Virtual Tabletop [EULA - Limited License Agreement for module development from May 29, 2020](https://foundryvtt.com/article/license/).
+This work is licensed under Foundry Virtual Tabletop [EULA - Limited License for Package Development from March 2, 2023](https://foundryvtt.com/article/license/).
 
 _To the best of my knowledge, all content in this module is either made by me, publicly available under permissive license or falls under Fair Use. Please bring infractions or concerns related to my module to my attention by contacting me via email presented on my GitHub profile._ 
