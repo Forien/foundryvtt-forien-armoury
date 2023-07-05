@@ -7,3 +7,4 @@ foundry.js
 package.json
 /changelog.html
 _oldStuff
+packs/*/_source
