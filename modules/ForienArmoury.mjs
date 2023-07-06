@@ -41,7 +41,7 @@ export default class ForienArmoury {
 
       templates = templates.map(Utility.getTemplate);
 
-      loadTemplates(templates).then(templates => {
+      loadTemplates(templates).then(() => {
         Utility.notify("Templates preloaded.")
       });
   }
