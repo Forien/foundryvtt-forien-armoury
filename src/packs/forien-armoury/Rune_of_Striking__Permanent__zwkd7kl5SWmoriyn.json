@@ -1,0 +1,44 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune.webp",
+  "transfer": true,
+  "name": "Rune of Striking (Permanent)",
+  "_id": "zwkd7kl5SWmoriyn",
+  "changes": [
+    {
+      "key": "system.characteristics.ws.modifier",
+      "mode": 2,
+      "value": "10",
+      "priority": null
+    }
+  ],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": ""
+    },
+    "core": {
+      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.2vfrPrMJrLFnVH5o"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": "#ff0000",
+  "_key": "!items.effects!a0HD1sx7SS4ZCw5A.zwkd7kl5SWmoriyn"
+}

@@ -1,0 +1,89 @@
+{
+  "name": "Candle",
+  "type": "trapping",
+  "img": "icons/sundries/lights/candle-unlit-grey.webp",
+  "effects": [
+    "zUn7o4oGRBwnlmoX"
+  ],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Provides illumination for 10 yards when lit.</p><p>Lasts 2 hours.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 12
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0.15
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "1",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "misc"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1663627495285,
+    "modifiedTime": 1688399043098,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "folder": "ALm6rINfMUWhLplE",
+  "_id": "TW3etL7RIU2EWTXp",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!TW3etL7RIU2EWTXp"
+}

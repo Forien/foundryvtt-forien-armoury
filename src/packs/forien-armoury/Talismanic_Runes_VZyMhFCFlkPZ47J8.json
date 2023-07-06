@@ -1,0 +1,82 @@
+{
+  "name": "Talismanic Runes",
+  "type": "trapping",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "folder": "3OEI9PiGaa4rGQHy",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688413119645,
+    "modifiedTime": 1688413161118,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_id": "VZyMhFCFlkPZ47J8",
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!VZyMhFCFlkPZ47J8"
+}

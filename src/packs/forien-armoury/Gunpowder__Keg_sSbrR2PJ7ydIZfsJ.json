@@ -1,0 +1,87 @@
+{
+  "name": "Gunpowder, Keg",
+  "type": "trapping",
+  "img": "icons/containers/barrels/barrel-apple-steel-orange.webp",
+  "effects": [],
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><em>Current capacity: 144 / 144</em></p><p>Holds enough gunpowder for 144 shots (12 standard horns).</p><p><em>Includes price of a 1/6 for a keg.</em></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 5
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "8",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "misc"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.302",
+    "createdTime": 1663627495296,
+    "modifiedTime": 1687909025431,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "folder": "EMM7NeZE1NBThlpp",
+  "_id": "sSbrR2PJ7ydIZfsJ",
+  "sort": 250000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!sSbrR2PJ7ydIZfsJ"
+}

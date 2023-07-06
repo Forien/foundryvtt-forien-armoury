@@ -1,0 +1,32 @@
+{
+  "icon": "icons/weapons/ammunition/shot-round-lead.webp",
+  "transfer": true,
+  "name": "Improved Bullet and Powder (reload)",
+  "_id": "aVqsNFyVjiYt4nnC",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "prepareItem",
+      "effectApplication": "actor",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.item.type == \"weapon\") {\n    let thisAmmo = args.item.ammo?.id === this.item.id;\n\n    if (thisAmmo) {\n        args.item.system.flaws.value.forEach(flaw => {if (flaw.name == \"reload\" && flaw.value > 1) flaw.value -= 1});\n    }\n}",
+      "promptItem": false
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!RN5mc97zk1Bd7jRx.aVqsNFyVjiYt4nnC"
+}

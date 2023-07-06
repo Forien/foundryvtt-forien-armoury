@@ -1,0 +1,159 @@
+{
+  "name": "Spear (2h)",
+  "type": "weapon",
+  "img": "icons/weapons/polearms/spear-flared-blue.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Besides the club, the spear is probably the most ubiquitous weapon in the Old World. Almost all species and nations employ troops armed with spears, aside from the Dwarfs who tend to eschew polearms in general.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 2
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "15",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "+SB+4"
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": "vLong"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": true
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": ""
+    },
+    "currentAmmo": {
+      "type": "Number",
+      "value": 0
+    },
+    "consumesAmmo": {
+      "value": true
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "polearm"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "defensive",
+          "value": null
+        },
+        {
+          "name": "impale",
+          "value": null,
+          "group": 1,
+          "active": true
+        },
+        {
+          "name": "pummel",
+          "value": null,
+          "group": 1
+        }
+      ]
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "equipped": false,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "wfrp4e-up-in-arms": {
+      "initialization-folder": "Weapons",
+      "sort": 1500000
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1670305103470,
+    "modifiedTime": 1688214528624,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "folder": "UrA89QPP0urkYvZk",
+  "_id": "FR6vIPKu7cQ4Mkr8",
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!FR6vIPKu7cQ4Mkr8"
+}

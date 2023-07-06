@@ -1,0 +1,44 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune.webp",
+  "transfer": true,
+  "name": "Rune of Fire (Permanent)",
+  "_id": "Sn4zGIuhCWKFEazu",
+  "changes": [
+    {
+      "key": "ATL.preset",
+      "mode": 2,
+      "value": "torch",
+      "priority": null
+    }
+  ],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "applyDamage",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.attackerTest.result.critical) {\n    args.actor.addCondition(\"ablaze\");\n    args.extraMessages.push(`<strong>Rune of Fire:</strong> +1 @Condition[Ablaze] Condition.`);\n  }\n}"
+    },
+    "core": {
+      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.1tCbBaasMIuBNQ8i"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!a0HD1sx7SS4ZCw5A.Sn4zGIuhCWKFEazu"
+}

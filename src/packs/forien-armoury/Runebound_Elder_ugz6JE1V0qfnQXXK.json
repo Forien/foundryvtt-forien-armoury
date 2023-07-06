@@ -1,0 +1,109 @@
+{
+  "folder": "ACZwDoSnT2eWvGBp",
+  "name": "Runebound Elder",
+  "type": "career",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Runebound Ranger"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Monster Hunters"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "4"
+    },
+    "status": {
+      "tier": "g",
+      "standing": 1
+    },
+    "characteristics": [
+      "t",
+      "ws",
+      "ag",
+      "wp",
+      "i",
+      "int"
+    ],
+    "skills": [
+      "Animal Care",
+      "Athletics",
+      "Channelling",
+      "Dodge",
+      "Endurance",
+      "Lore (Beasts)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception",
+      "Set Trap",
+      "Cool",
+      "Heal",
+      "Intuition",
+      "Melee (Two-Handed)",
+      "Outdoor Survival",
+      "Trade (Apothecary)",
+      "Intimidate",
+      "Melee (any)",
+      "Ranged (any)",
+      "Track",
+      "Charm Animal",
+      "Ranged (any)"
+    ],
+    "talents": [
+      "Beat Blade or Feint",
+      "Furious Assault",
+      "Reaction Strike",
+      "Reversal"
+    ],
+    "trappings": [
+      "True-Silvered Sword",
+      "Runebound Elder Uniform and Insignia"
+    ],
+    "incomeSkill": [
+      6
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688251075008,
+    "modifiedTime": 1688388982192,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_id": "ugz6JE1V0qfnQXXK",
+  "sort": 500000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!ugz6JE1V0qfnQXXK"
+}

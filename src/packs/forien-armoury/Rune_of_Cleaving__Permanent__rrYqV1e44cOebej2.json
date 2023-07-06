@@ -1,0 +1,34 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune.webp",
+  "transfer": true,
+  "name": "Rune of Cleaving (Permanent)",
+  "_id": "rrYqV1e44cOebej2",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "calculateOpposedDamage",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n    args.damage += 1;\n    args.opposedTest.result.other.push(`<strong>Rune of Cleaving:</strong> +1 Damage.`);\n}"
+    },
+    "core": {
+      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.2vfrPrMJrLFnVH5o"
+    }
+  },
+  "tint": "#ff0000",
+  "_key": "!items.effects!a0HD1sx7SS4ZCw5A.rrYqV1e44cOebej2"
+}

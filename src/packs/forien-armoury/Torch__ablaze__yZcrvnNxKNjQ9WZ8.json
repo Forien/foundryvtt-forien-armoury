@@ -1,0 +1,31 @@
+{
+  "icon": "icons/sundries/lights/torch-brown-lit.webp",
+  "transfer": true,
+  "name": "Torch (ablaze)",
+  "_id": "yZcrvnNxKNjQ9WZ8",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "rollWeaponTest",
+      "effectApplication": "damage",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.opposedTest.attackerTest.result.critical)\n   args.actor.addCondition(\"ablaze\")"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!84hccJzDfkfw3trc.yZcrvnNxKNjQ9WZ8"
+}

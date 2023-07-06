@@ -1,0 +1,111 @@
+{
+  "name": "Improved Bullet and Powder",
+  "type": "ammunition",
+  "img": "icons/weapons/ammunition/shot-round-lead.webp",
+  "effects": [
+    "aVqsNFyVjiYt4nnC",
+    "vb5OW5hKoVzbuFpT"
+  ],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<ul><li><p><strong>Reload Time:</strong> Reduce reload time by 1 to a minimum of 1.</p></li><li><p><strong>Misfires:</strong> Should the weapon misfire, the user can make a <strong>Challenging (+0) Ranged (Blackpowder or Engineering) Test</strong> to ignore the effects of misfire.</p></li></ul>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 12
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0.12
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "6",
+      "bp": "6",
+      "value": ""
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": "GiM4Fg2Q8YQ7I0nP"
+    },
+    "ammunitionType": {
+      "type": "String",
+      "label": "Ammunition Type",
+      "value": "BPandEng"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "As weapon"
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "+1"
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "impale"
+        },
+        {
+          "name": "penetrating"
+        }
+      ]
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1663627495392,
+    "modifiedTime": 1688082787338,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "folder": "kTv9pr3I1AeRI4uH",
+  "_id": "RN5mc97zk1Bd7jRx",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!RN5mc97zk1Bd7jRx"
+}

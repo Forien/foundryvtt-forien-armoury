@@ -1,0 +1,66 @@
+{
+  "folder": "D77LgljrWDJtICCj",
+  "name": "Runecraft",
+  "type": "skill",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "advanced": {
+      "value": "adv",
+      "type": "String"
+    },
+    "grouped": {
+      "value": "noSpec",
+      "type": "String"
+    },
+    "characteristic": {
+      "type": "String",
+      "label": "Characteristic",
+      "value": "wp"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 0,
+      "costModifier": 0,
+      "force": false
+    },
+    "modifier": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 0
+    },
+    "total": {
+      "type": "Number",
+      "label": "Total"
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688388408866,
+    "modifiedTime": 1688388448782,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_id": "6YlpuNF1A89hA6Pp",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!6YlpuNF1A89hA6Pp"
+}

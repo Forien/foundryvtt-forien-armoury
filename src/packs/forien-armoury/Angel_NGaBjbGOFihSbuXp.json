@@ -1,0 +1,62 @@
+{
+  "folder": "1DPQSHNhtS8vuqCw",
+  "name": "Angel",
+  "type": "money",
+  "img": "icons/commodities/currency/coin-embossed-crown-gold.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "test1"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "test2"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0.005
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "coinValue": {
+      "label": "Value (in d)",
+      "type": "Number",
+      "value": 480
+    },
+    "price": {
+      "gc": "",
+      "ss": "",
+      "bp": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688480096053,
+    "modifiedTime": 1688480501787,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "NGaBjbGOFihSbuXp",
+  "sort": 600000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!items!NGaBjbGOFihSbuXp"
+}

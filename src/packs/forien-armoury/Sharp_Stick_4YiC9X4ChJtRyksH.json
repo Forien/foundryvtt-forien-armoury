@@ -1,0 +1,106 @@
+{
+  "folder": "kTv9pr3I1AeRI4uH",
+  "name": "Sharp Stick",
+  "type": "ammunition",
+  "_id": "4YiC9X4ChJtRyksH",
+  "img": "icons/commodities/wood/fence-post-tan.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0.05
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "ammunitionType": {
+      "type": "String",
+      "label": "Ammunition Type",
+      "value": "crossbow"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Half weapon"
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "-2"
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": [
+        {
+          "name": "dangerous",
+          "value": null
+        },
+        {
+          "name": "imprecise",
+          "value": null
+        },
+        {
+          "name": "undamaging",
+          "value": null
+        }
+      ]
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.302",
+    "createdTime": 1687446113156,
+    "modifiedTime": 1687446343130,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_key": "!items!4YiC9X4ChJtRyksH"
+}

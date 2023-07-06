@@ -1,0 +1,86 @@
+{
+  "name": "Fast Powder Horn",
+  "type": "container",
+  "img": "icons/containers/ammunition/powder-horn-simple.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Can hold enough gunpowder to fire 12 shots (0.12 enc each), but speeds up reloading by reducing Reload flaw by 1 (to minimum of 1).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "1",
+      "ss": "2",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": false
+    },
+    "wearable": {
+      "type": "Boolean",
+      "label": "Wearable",
+      "value": true
+    },
+    "carries": {
+      "type": "Number",
+      "label": "Carries",
+      "value": 1.44
+    },
+    "countEnc": {
+      "type": "Boolean",
+      "label": "Count Enc",
+      "value": true
+    }
+  },
+  "effects": [
+    "i0hmJna55MvtPd9j"
+  ],
+  "folder": "bCYA5k9kT55E8eEO",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1687475455907,
+    "modifiedTime": 1688082637899,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_id": "ZP2D38WdvD5iVd0F",
+  "sort": 700000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!ZP2D38WdvD5iVd0F"
+}

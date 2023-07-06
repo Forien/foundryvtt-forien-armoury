@@ -1,0 +1,84 @@
+{
+  "name": "Shot Pouch",
+  "type": "container",
+  "img": "icons/containers/bags/pouch-leather-simple-tan.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Can hold 12 typical sling shots (0.08 enc each).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "8",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": false
+    },
+    "wearable": {
+      "type": "Boolean",
+      "label": "Wearable",
+      "value": true
+    },
+    "carries": {
+      "type": "Number",
+      "label": "Carries",
+      "value": 0.96
+    },
+    "countEnc": {
+      "type": "Boolean",
+      "label": "Count Enc",
+      "value": true
+    }
+  },
+  "effects": [],
+  "folder": "bCYA5k9kT55E8eEO",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.302",
+    "createdTime": 1687475455907,
+    "modifiedTime": 1687538062464,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_id": "izBtNy0denmW9BpV",
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!izBtNy0denmW9BpV"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Item Browser",
+  "type": "script",
+  "scope": "global",
+  "_id": "1WqROT91wAnInAph",
+  "author": "aDepqlKkeOa13DWo",
+  "img": "icons/containers/boxes/crates-wooden-stacked.webp",
+  "command": "new BrowserWfrp4e().render(true);",
+  "folder": "K7bIr7HUorfHR7Xh",
+  "sort": 200000,
+  "ownership": {
+    "default": 2,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.302",
+    "createdTime": 1687439884759,
+    "modifiedTime": 1687709722185,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_key": "!macros!1WqROT91wAnInAph"
+}

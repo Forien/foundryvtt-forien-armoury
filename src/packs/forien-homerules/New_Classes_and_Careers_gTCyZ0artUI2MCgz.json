@@ -1,0 +1,35 @@
+{
+  "sort": 800000,
+  "name": "New Classes and Careers",
+  "type": "text",
+  "_id": "gTCyZ0artUI2MCgz",
+  "title": {
+    "show": true,
+    "level": 1
+  },
+  "image": {},
+  "text": {
+    "format": 1,
+    "content": "<h1>New Classes</h1><h2>Monster Hunters</h2><p><strong>Class Trappings:</strong> Cloak, Clothing, Hand Weapon, Pouch, Backpack containing Book (Beasts and Monsters)</p><h3>Class Careers</h3><ul><li><p>Runebound Ranger</p></li></ul><p></p><h1>New Careers</h1><h3>Runebound Ranger</h3><h3>Runesmith</h3><p></p><p></p>"
+  },
+  "video": {
+    "controls": true,
+    "volume": 0.5
+  },
+  "src": null,
+  "system": {},
+  "ownership": {
+    "default": -1,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688398041909,
+    "modifiedTime": 1688398192412,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_key": "!journal.pages!u2f4n9KXYBmBvZw3.gTCyZ0artUI2MCgz"
+}

@@ -1,0 +1,102 @@
+{
+  "folder": "kTv9pr3I1AeRI4uH",
+  "name": "Barbed Bolt",
+  "type": "ammunition",
+  "_id": "U9l2QD8tOLvPTf9B",
+  "img": "icons/weapons/ammunition/arrow-broadhead.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 12
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0.05
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "8",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "ammunitionType": {
+      "type": "String",
+      "label": "Ammunition Type",
+      "value": "crossbow"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "As weapon"
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "impale",
+          "value": null
+        },
+        {
+          "name": "slash",
+          "value": "1A"
+        }
+      ]
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.302",
+    "createdTime": 1687445963744,
+    "modifiedTime": 1687446325420,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_key": "!items!U9l2QD8tOLvPTf9B"
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "JGCSlLxbbXCPlkIY",
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "oneTime",
+      "effectApplication": "apply",
+      "script": "let stunned= this.actor.hasCondition(\"stunned\")\nif (stunned)\n{\n   ui.notifications.notify(`Cleared 1 Stunned Condition`)\n   this.actor.removeCondition(\"stunned\", 1)\n}",
+      "preventDuplicateEffects": false,
+      "reduceQuantity": true,
+      "hide": false
+    }
+  },
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/salwort.png",
+  "tint": null,
+  "transfer": true,
+  "origin": null,
+  "name": "Salwort",
+  "description": "",
+  "statuses": [],
+  "_key": "!items.effects!mUTrC5DA6bF8DDWz.JGCSlLxbbXCPlkIY"
+}

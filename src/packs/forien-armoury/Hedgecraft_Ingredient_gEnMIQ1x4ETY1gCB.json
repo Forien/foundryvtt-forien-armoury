@@ -1,0 +1,82 @@
+{
+  "name": "Hedgecraft Ingredient",
+  "type": "trapping",
+  "img": "modules/forien-armoury/icons/ingredients/hedgecraft.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[JournalEntry.YBVrpUHEjohB1H4f.JournalEntryPage.BU7yhLmMdEyvbfkR#ingredients]{Ingredients}</p><p><span style=\"font-family: var( --actor-input-font-family)\"><em>Hedgecraft ingredients can be foraged using @UUID[JournalEntry.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Lore} (Herbalism). Upon successful foraging roll, you receive 1 + SL ingredients.</em></span></p><p><span style=\"font-family: var( --actor-input-font-family)\"><strong>You cannot cast any @UUID[Compendium.wfrp4e-core.journal-entries.JournalEntry.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#the-lore-of-hedgecraft]{The Lore of Hedgecraft} spell without an ingredient.</strong></span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0.2
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "ingredient"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1687442881075,
+    "modifiedTime": 1688398958360,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "folder": "QsYznVMhRsZzLHm2",
+  "_id": "gEnMIQ1x4ETY1gCB",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!gEnMIQ1x4ETY1gCB"
+}

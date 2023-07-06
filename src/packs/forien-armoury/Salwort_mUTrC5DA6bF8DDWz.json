@@ -1,0 +1,89 @@
+{
+  "name": "Salwort",
+  "type": "trapping",
+  "img": "icons/commodities/materials/bowl-powder-gold.webp",
+  "effects": [
+    "JGCSlLxbbXCPlkIY"
+  ],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>When held under someone’s nose, the aroma from a crushed sprig of this herb removes 1 Stunned Condition. <strong>Dose</strong>: 1 per encounter.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0.15
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "12",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.302",
+    "createdTime": 1663627495386,
+    "modifiedTime": 1687714395573,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "folder": "CzfFi86V96bGQ2ni",
+  "_id": "mUTrC5DA6bF8DDWz",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!mUTrC5DA6bF8DDWz"
+}

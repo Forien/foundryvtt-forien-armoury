@@ -1,0 +1,37 @@
+{
+  "icon": "icons/sundries/lights/torch-brown-lit.webp",
+  "transfer": true,
+  "name": "Torch",
+  "_id": "zUn7o4oGRBwnlmoX",
+  "changes": [
+    {
+      "key": "ATL.preset",
+      "mode": 2,
+      "value": "torch",
+      "priority": null
+    }
+  ],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "",
+      "effectApplication": "actor",
+      "hide": false,
+      "preventDuplicateEffects": false
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!l7KTze1BpfCsW5qn.zUn7o4oGRBwnlmoX"
+}

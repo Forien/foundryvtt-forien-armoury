@@ -1,0 +1,19 @@
+{
+  "name": "Ammunition",
+  "sorting": "a",
+  "folder": "YORP103HITjrXJC1",
+  "type": "Item",
+  "_id": "kTv9pr3I1AeRI4uH",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": null,
+    "modifiedTime": 1688254315359,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_key": "!folders!kTv9pr3I1AeRI4uH"
+}

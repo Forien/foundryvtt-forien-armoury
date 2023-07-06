@@ -1,0 +1,25 @@
+{
+  "name": "Generate Ingredient for Spell",
+  "type": "script",
+  "scope": "global",
+  "_id": "9W3cMh8pHiAdLl0y",
+  "author": "aDepqlKkeOa13DWo",
+  "img": "icons/consumables/grains/sack-rice-open-brown.webp",
+  "command": "const allowedLores = [\n\t'fire',\n\t'heavens',\n\t'metal',\n\t'beasts',\n\t'life',\n\t'light',\n\t'death',\n\t'shadow',\n\t'hedgecraft',\n\t'witchcraft'\n];\nconst compendium = \"Compendium.forien-armoury.forien-armoury.Item.\"\nconst loreIngredients = {\n\tfire: \"Fyaz0um5STWsmcL7\",\n\theavens: \"rX639Tm9dTFGgdEs\",\n\tmetal: \"0Xe2tUDjV3jR2o17\",\n\tbeasts: \"0IzPuMHA4a4P0PYB\",\n\tlife: \"G4EdPUHqekDS6kj8\",\n\tlight: \"uCGbBeMU5TUZPoba\",\n\tdeath: \"VuO1EDySwVbmtdcH\",\n\tshadow: \"rsQryOWSCufQnNAC\",\n\thedgecraft: \"gEnMIQ1x4ETY1gCB\",\n\twitchcraft: \"relq8BaanmuOaPEP\"\n}\n\nconst spells = actor.itemCategories.spell;\nlet options = \"\";\n\nspells.forEach(spell => {\n\tif (allowedLores.includes(spell.lore.value)) {\n\t\toptions += `<option value=\"${spell.uuid}\">${spell.name} (CN: ${spell.cn.value})</option>`;\n\t}\n})\n\nconst dialog = new Dialog({\n      title: game.i18n.localize(\"Select spell to create ingredient\"),\n      content: `<form>\n              <div class=\"form-group\">\n                <label>Available spells</label> \n\t\t\t\t<select name=\"spell-id\" id=\"spell-id\">\n\t\t\t\t   ${options}\n\t\t\t\t</select>\n              </div>\n          </form>`,\n      buttons: {\n        yes: {\n          icon: \"<i class='fas fa-check'></i>\",\n          label: \"Generate\",\n          callback: html => {\n\t\t\tlet spellUuid = html.find(\"#spell-id\").val()\n\t\t\tlet spell = fromUuidSync(spellUuid);\n\t\t\tconsole.log(spell);\n\t\t\tlet lore = spell.lore.value;\n\t\t\tconsole.log(lore);\n\t\t\tlet uuid = compendium + loreIngredients[lore];\n\t\t\tconsole.log(uuid);\n\t\t\tlet baseIngredientPromise = fromUuid(uuid)\n\t\t\t\n\t\t\tbaseIngredientPromise.then(baseIngredient => {\t\n\t\t\t\t\n\t\t\t\tconst origData = duplicate(baseIngredient);\n\t\t\t\tlet ingredient;\n\t\t\t\tlet template = {data: game.system.model.Item[baseIngredient.type]};\n\t\t\t\tlet ingredienData = mergeObject(template, origData);\n\t\t\t\tconsole.log(ingredienData);\t\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\tingredienData.name = `Ingredient for ${spell.name}`;\n\t\t\t\tingredienData.system.price.ss = spell.cn.value;\n\t\t\t\tingredienData.system.spellIngredient.value = spell._id;\n\t\t\t\t\n\t\t\t\tconsole.log(ingredienData);\n\t\t\t\t\n\t\t\t\tItem.implementation.create(ingredienData, {renderSheet : true});\n\t\t\t})\n          }\n        },\n        no: {\n          icon: \"<i class='fas fa-times'></i>\",\n          label: \"Cancel\"\n        }\n      },\n      default: \"yes\"\n    }).render(true)",
+  "folder": "K7bIr7HUorfHR7Xh",
+  "sort": 100000,
+  "ownership": {
+    "default": 2,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.302",
+    "createdTime": 1687447122457,
+    "modifiedTime": 1687709722185,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_key": "!macros!9W3cMh8pHiAdLl0y"
+}

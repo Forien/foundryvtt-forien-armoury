@@ -1,0 +1,88 @@
+{
+  "id": "forien-armoury",
+  "title": "Forien's Armoury [WFRP4]",
+  "version": "1.0.0",
+  "url": "https://github.com/Forien/foundryvtt-forien-armoury",
+  "manifest": "https://raw.githubusercontent.com/Forien/foundryvtt-forien-armoury/releases/latest/download/module.json",
+  "download": "https://github.com/Forien/foundryvtt-forien-armoury/releases/download/v1.0.0/module.zip",
+  "readme": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v1.0.0/README.md",
+  "changelog": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v1.0.0/CHANGELOG.md",
+  "bugs": "https://github.com/Forien/foundryvtt-forien-armoury/issues",
+  "description": "A collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top\n\nForien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded.",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "relationships": {
+    "recommends": [
+      {
+        "id": "ATL",
+        "type": "module"
+      },
+      {
+        "id": "times-up",
+        "type": "module"
+      }
+    ],
+    "systems": [
+      {
+        "id": "wfrp4e",
+        "type": "system"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Forien",
+      "discord": "forien",
+      "email": "mr.forien@gmail.com",
+      "url": "https://www.patreon.com/forien"
+    }
+  ],
+  "packs": [
+    {
+      "label": "Forien's Armoury",
+      "name": "forien-armoury",
+      "type": "Item",
+      "system": "wfrp4e",
+      "path": "packs/forien-armoury"
+    },
+    {
+      "label": "Forien's Homerules",
+      "name": "forien-homerules",
+      "type": "JournalEntry",
+      "system": "wfrp4e",
+      "path": "packs/forien-homerules"
+    },
+    {
+      "label": "Macros (Forien's Armoury)",
+      "name": "macros",
+      "type": "Macro",
+      "system": "wfrp4e",
+      "path": "packs/macros"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Forien's Armoury",
+      "sorting": "a",
+      "packs": [
+        "forien-armoury",
+        "macros",
+        "forien-homerules"
+      ]
+    }
+  ],
+  "esmodules": [
+    "modules/forien-armoury.mjs"
+  ],
+  "styles": [
+    "styles/forien-armoury.css"
+  ],
+  "flags": {
+    "hotReload": {
+      "extensions": ["css", "html", "hbs", "json"],
+      "paths": ["templates/", "styles/", "lang/"]
+    }
+  }
+}

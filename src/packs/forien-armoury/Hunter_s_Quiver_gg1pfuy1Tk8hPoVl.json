@@ -1,0 +1,84 @@
+{
+  "name": "Hunter's Quiver",
+  "type": "container",
+  "img": "icons/containers/ammunition/arrows-quiver-brown-grey.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Small practical quiver that can hold up to 12 typical arrows or bolts (0.05 enc each)</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "6",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": false
+    },
+    "wearable": {
+      "type": "Boolean",
+      "label": "Wearable",
+      "value": true
+    },
+    "carries": {
+      "type": "Number",
+      "label": "Carries",
+      "value": 0.6
+    },
+    "countEnc": {
+      "type": "Boolean",
+      "label": "Count Enc",
+      "value": true
+    }
+  },
+  "effects": [],
+  "folder": "bCYA5k9kT55E8eEO",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.302",
+    "createdTime": 1687475455907,
+    "modifiedTime": 1687896778474,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_id": "gg1pfuy1Tk8hPoVl",
+  "sort": 800000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!gg1pfuy1Tk8hPoVl"
+}

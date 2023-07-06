@@ -1,5 +1,5 @@
 .idea/
-styles/.sass-cache/
+src/styles/.sass-cache/
 devtool/
 lang/untranslated.json
 node_modules/
@@ -8,4 +8,4 @@ package.json
 package-lock.json
 /changelog.html
 _oldStuff
-packs/*/_source
+

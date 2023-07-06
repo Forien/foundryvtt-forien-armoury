@@ -1,0 +1,36 @@
+{
+  "icon": "icons/skills/ranged/target-bullseye-arrow-blue.webp",
+  "transfer": true,
+  "name": "Point Blank Rule",
+  "_id": "ZlHnZCI0AmLI2TKF",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "prepareItem",
+      "effectApplication": "actor",
+      "hide": true,
+      "preventDuplicateEffects": true,
+      "script": "if (args.item.range && args.item.range.bands && args.item.range.bands[\"Point Blank\"].range[1] > 4) {\n    args.item.range.bands[\"Point Blank\"].range[0] = 0;\n    args.item.range.bands[\"Point Blank\"].range[1] = 4;\n    args.item.range.bands[\"Short Range\"].range[0] = 5;\n}",
+      "promptItem": false,
+      "extra": ""
+    },
+    "core": {
+      "sourceId": "Item.ZshuHu0ioO2AFySF.ActiveEffect.tHeYwr4I92TA9Lxj"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!95teaIzjZcIDHTFn.ZlHnZCI0AmLI2TKF"
+}

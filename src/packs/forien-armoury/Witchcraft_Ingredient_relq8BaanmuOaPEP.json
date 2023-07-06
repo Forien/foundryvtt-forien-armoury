@@ -1,0 +1,82 @@
+{
+  "name": "Witchcraft Ingredient",
+  "type": "trapping",
+  "img": "modules/forien-armoury/icons/ingredients/witchcraft.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[JournalEntry.YBVrpUHEjohB1H4f.JournalEntryPage.BU7yhLmMdEyvbfkR#ingredients]{Ingredients}</p><p style=\"box-sizing: border-box; user-select: text; margin: 0.5em 0px; font-family: var( --actor-input-font-family); font-size: 14px; font-weight: var(--actor-input-font-weight); padding: 0px; color: var(--actor-input-color); background: none; border: none; width: 388px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"><span style=\"font-family: var( --actor-input-font-family)\"><em style=\"box-sizing: border-box; user-select: text;\">Ingredient's price depends on spell for which it is destined. Set price to X bp, where X is equal to spell's CN.</em></span></p><p><span style=\"font-family: var( --actor-input-font-family)\"><em style=\"box-sizing: border-box; user-select: text;\">Alternatively, successful foraging roll using @UUID[Compendium.wfrp4e-core.skills.Item.os4NKy5Oy6sRt1eh]{Outdoor Survival} grants you 1 + SL ingredients.</em></span></p><p><span style=\"font-family: var( --actor-input-font-family)\"><strong>Channelling or casting spells from this Lore automatically results in the Minor Miscast, unless cast with an ingredient. On top of that, Ingredient provides no protection if you roll a Miscast.</strong></span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0.2
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "ingredient"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1687442881075,
+    "modifiedTime": 1688398969306,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "folder": "QsYznVMhRsZzLHm2",
+  "_id": "relq8BaanmuOaPEP",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!relq8BaanmuOaPEP"
+}

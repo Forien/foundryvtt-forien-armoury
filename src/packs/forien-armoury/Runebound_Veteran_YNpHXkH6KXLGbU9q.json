@@ -1,0 +1,107 @@
+{
+  "folder": "ACZwDoSnT2eWvGBp",
+  "name": "Runebound Veteran",
+  "type": "career",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Runebound Ranger"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Monster Hunters"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "3"
+    },
+    "status": {
+      "tier": "s",
+      "standing": 3
+    },
+    "characteristics": [
+      "t",
+      "ws",
+      "ag",
+      "wp",
+      "i"
+    ],
+    "skills": [
+      "Animal Care",
+      "Athletics",
+      "Channelling",
+      "Dodge",
+      "Endurance",
+      "Lore (Beasts)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception",
+      "Set Trap",
+      "Cool",
+      "Heal",
+      "Intuition",
+      "Melee (Two-Handed)",
+      "Outdoor Survival",
+      "Trade (Apothecary)",
+      "Intimidate",
+      "Melee (any)",
+      "Ranged (any)",
+      "Track"
+    ],
+    "talents": [
+      "Careful Strike",
+      "Combat Reflexes",
+      "Concoct or Craftsman (Apothecary)",
+      "Strike Mighty Blow"
+    ],
+    "trappings": [
+      "Scar",
+      "Silvered Sword",
+      "Runebound Insignia"
+    ],
+    "incomeSkill": [
+      6
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688251075008,
+    "modifiedTime": 1688388984293,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_id": "YNpHXkH6KXLGbU9q",
+  "sort": 450000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!YNpHXkH6KXLGbU9q"
+}

@@ -1,0 +1,109 @@
+{
+  "folder": "aGq6qQUjoQUkTz0N",
+  "name": "Master Runesmith",
+  "type": "career",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Runesmith"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Academics"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "4"
+    },
+    "status": {
+      "tier": "g",
+      "standing": 8
+    },
+    "characteristics": [
+      "dex",
+      "int",
+      "wp",
+      "s",
+      "ws",
+      "t"
+    ],
+    "skills": [
+      "Art (Engraving)",
+      "Cool",
+      "Endurance",
+      "Evaluate",
+      "Language (Magick)",
+      "Lore (Runes)",
+      "Melee (Basic)",
+      "Perception",
+      "Runecraft",
+      "Trade (Smith)",
+      "Dodge",
+      "Gossip",
+      "Haggle",
+      "Lore (History)",
+      "Melee (any)",
+      "Trade (any)",
+      "Intimidate",
+      "Leadership",
+      "Ranged (any)",
+      "Research",
+      "Bribery",
+      "Charm"
+    ],
+    "talents": [
+      "Commanding Presence",
+      "Master Tradesman (Smith)",
+      "Robust",
+      "Savant (Runes)"
+    ],
+    "trappings": [
+      "Guild License",
+      "1 Masterwork Runic Item"
+    ],
+    "incomeSkill": [
+      8
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688388710193,
+    "modifiedTime": 1688389173080,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_id": "wnUaZ4trv82UWJc2",
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!wnUaZ4trv82UWJc2"
+}

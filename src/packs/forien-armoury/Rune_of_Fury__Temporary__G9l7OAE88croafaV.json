@@ -1,0 +1,37 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune.webp",
+  "transfer": true,
+  "name": "Rune of Fury (Temporary)",
+  "_id": "G9l7OAE88croafaV",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "calculateOpposedDamage",
+      "effectApplication": "actor",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n    let text = `<strong>Rune of Fury:</strong> Once per Round, if you hit an opponent in close combat, you may immediately spend an Advantage or your Move to make an extra attack (assuming you have your Move remaining).`;\n    if (args.opposedTest.result.winner === \"attacker\") {\n        args.opposedTest.result.other.push(text);\n    }\n}\n"
+    },
+    "core": {
+      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.Wz2fqtmfUqA8jmhB"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!a0HD1sx7SS4ZCw5A.G9l7OAE88croafaV"
+}

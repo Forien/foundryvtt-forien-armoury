@@ -1,0 +1,101 @@
+{
+  "folder": "ACZwDoSnT2eWvGBp",
+  "name": "Runebound Ranger",
+  "type": "career",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Runebound Ranger"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Monster Hunters"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "2"
+    },
+    "status": {
+      "tier": "s",
+      "standing": 1
+    },
+    "characteristics": [
+      "t",
+      "ws",
+      "ag",
+      "wp"
+    ],
+    "skills": [
+      "Animal Care",
+      "Athletics",
+      "Channelling",
+      "Dodge",
+      "Endurance",
+      "Lore (Beasts)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception",
+      "Set Trap",
+      "Cool",
+      "Heal",
+      "Intuition",
+      "Melee (Two-Handed)",
+      "Outdoor Survival",
+      "Trade (Apothecary)"
+    ],
+    "talents": [
+      "Acute Sense (any)",
+      "Ambidextrous",
+      "Combat Aware",
+      "Runebound Magic"
+    ],
+    "trappings": [
+      "Silvered Sword",
+      "Runebound Insignia"
+    ],
+    "incomeSkill": [
+      6
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688251075008,
+    "modifiedTime": 1688254279358,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_id": "21HzH7b9KhYTbodZ",
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!21HzH7b9KhYTbodZ"
+}

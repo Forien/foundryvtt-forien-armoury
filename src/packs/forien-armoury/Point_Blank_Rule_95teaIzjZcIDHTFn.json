@@ -1,0 +1,65 @@
+{
+  "name": "Point Blank Rule",
+  "type": "trait",
+  "img": "icons/skills/ranged/target-bullseye-arrow-blue.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Add this trait to a creature, npc or a player character.</p><p>New Point Blank Range will automatically be changed to 4 units, instead of 10%</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    "ZlHnZCI0AmLI2TKF"
+  ],
+  "folder": "PQAanEQoiIOxQp1r",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688313896332,
+    "modifiedTime": 1688314262317,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_id": "95teaIzjZcIDHTFn",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!95teaIzjZcIDHTFn"
+}

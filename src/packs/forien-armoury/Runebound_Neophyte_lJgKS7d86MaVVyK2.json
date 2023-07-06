@@ -1,0 +1,95 @@
+{
+  "folder": "ACZwDoSnT2eWvGBp",
+  "name": "Runebound Neophyte",
+  "type": "career",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Runebound Ranger"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Monster Hunters"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "1"
+    },
+    "status": {
+      "tier": "b",
+      "standing": 3
+    },
+    "characteristics": [
+      "t",
+      "ws",
+      "ag"
+    ],
+    "skills": [
+      "Animal Care",
+      "Athletics",
+      "Channelling",
+      "Dodge",
+      "Endurance",
+      "Lore (Beasts)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception",
+      "Set Trap"
+    ],
+    "talents": [
+      "Read/Write",
+      "Coolheaded",
+      "Catfall",
+      "Iron Will"
+    ],
+    "trappings": [
+      "Dagger",
+      "Flask of Argent Oil",
+      "Leather Jack"
+    ],
+    "incomeSkill": [
+      6
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688251075008,
+    "modifiedTime": 1688388983131,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_id": "lJgKS7d86MaVVyK2",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!lJgKS7d86MaVVyK2"
+}

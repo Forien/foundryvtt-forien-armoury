@@ -1,0 +1,89 @@
+{
+  "name": "Empty Vial",
+  "type": "container",
+  "img": "icons/consumables/potions/vial-cork-empty.webp",
+  "effects": [],
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Small glass vial, typically used for storing small amounts of liquids such as strong alcohol, acids, potions et cetera, but could also be used to store small amounts of powder substances, grinded materials or other compact biological matter.</p><p><em>Capacity: 2 fluid ounces / 5 cl of liquid.</em></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0.05
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "1",
+      "bp": ""
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": false
+    },
+    "wearable": {
+      "type": "Boolean",
+      "label": "Wearable",
+      "value": false
+    },
+    "carries": {
+      "type": "Number",
+      "label": "Carries",
+      "value": 0
+    },
+    "countEnc": {
+      "type": "Boolean",
+      "label": "Count Enc",
+      "value": true
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.302",
+    "createdTime": 1663627495182,
+    "modifiedTime": 1687714396505,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "folder": "CzfFi86V96bGQ2ni",
+  "_id": "Hrs3p9z8NqyYEtRz",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!Hrs3p9z8NqyYEtRz"
+}

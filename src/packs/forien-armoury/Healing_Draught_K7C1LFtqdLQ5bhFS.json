@@ -1,0 +1,32 @@
+{
+  "_id": "K7C1LFtqdLQ5bhFS",
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "invoke",
+      "effectApplication": "actor",
+      "script": "let wounds = this.actor.status.wounds\nif (wounds.value == 0)\n  return ui.notifications.error(\"No effect at 0 Wounds\")\n\nui.notifications.notify(`Healed ${this.actor.characteristics.t.bonus} Wounds`)\nthis.actor.modifyWounds(this.actor.characteristics.t.bonus)",
+      "preventDuplicateEffects": false,
+      "reduceQuantity": true,
+      "hide": false
+    }
+  },
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-draught.png",
+  "tint": null,
+  "transfer": true,
+  "origin": null,
+  "name": "Healing Draught",
+  "description": "",
+  "statuses": [],
+  "_key": "!items.effects!gxdjLQoQUTYgD6fm.K7C1LFtqdLQ5bhFS"
+}

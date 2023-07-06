@@ -1,0 +1,37 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune.webp",
+  "transfer": true,
+  "name": "Rune of Speed (Permanent)",
+  "_id": "9cYvjllfcFyaAfLJ",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "getInitiativeFormula",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "args.initiative += ` + 1d10`;\n\nChatMessage.create({\n\tuser: game.user._id,\n\tspeaker: ChatMessage.getSpeaker({token: actor}),\n\tcontent: `\n\t\t<h3>Rune of Speed</h3>\n\t\t<p>Character wielding weapon Engraved with this Rune adds a +1d10 to their Initiative Score during the Combat.</p>\n\t`\n});"
+    },
+    "core": {
+      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.2vfrPrMJrLFnVH5o"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": "#ff0000",
+  "_key": "!items.effects!a0HD1sx7SS4ZCw5A.9cYvjllfcFyaAfLJ"
+}

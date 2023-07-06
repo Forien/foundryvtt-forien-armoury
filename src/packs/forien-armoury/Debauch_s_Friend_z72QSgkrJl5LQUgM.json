@@ -1,0 +1,31 @@
+{
+  "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+  "transfer": true,
+  "_id": "z72QSgkrJl5LQUgM",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "origin": null,
+  "tint": null,
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "rollTest",
+      "effectApplication": "apply",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.test.item?.type == \"skill\" && args.test.item.name == \"Consume Alcohol\")\n    args.test.other.push(`<strong>${this.effect.label}</strong>: Automatically passes Consume Alcohol Tests`)"
+    }
+  },
+  "name": "Debauch's Friend",
+  "description": "",
+  "statuses": [],
+  "_key": "!items.effects!KmtGTeRmjGWFXv12.z72QSgkrJl5LQUgM"
+}
