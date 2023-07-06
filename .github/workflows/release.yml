@@ -47,5 +47,5 @@ jobs:
           allowUpdates: true
           name: Release ${{steps.get_version.outputs.version}}
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './module.json, ./module.zip'
+          artifacts: './dist/module.json, ./dist/module.zip'
           tag: ${{ github.ref }}
