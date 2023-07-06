@@ -8,38 +8,35 @@
   "readme": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v1.0.0/README.md",
   "changelog": "https://github.com/Forien/foundryvtt-forien-armoury/blob/v1.0.0/CHANGELOG.md",
   "bugs": "https://github.com/Forien/foundryvtt-forien-armoury/issues",
+  "description": "A collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top\n\nForien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded.",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
   },
   "relationships": {
-    "requires": [
-      {
-        "id": "wfrp4e-core",
-        "type": "module"
-      },
-      {
-        "id": "wfrp4e-up-in-arms",
-        "type": "module"
-      },
-      {
-        "id": "wfrp4e-wom",
-        "type": "module"
-      }
-    ],
     "recommends": [
       {
         "id": "ATL",
         "type": "module"
+      },
+      {
+        "id": "times-up",
+        "type": "module"
+      }
+    ],
+    "systems": [
+      {
+        "id": "wfrp4e",
+        "type": "system"
       }
     ]
   },
   "authors": [
     {
       "name": "Forien",
-      "discord": "Forien",
-      "url": "https://www.patreon.com/forien",
-      "email": "mr.forien@gmail.com"
+      "discord": "forien",
+      "email": "mr.forien@gmail.com",
+      "url": "https://www.patreon.com/forien"
     }
   ],
   "packs": [
@@ -58,17 +55,34 @@
       "path": "packs/forien-homerules"
     },
     {
-      "label": "Macros",
+      "label": "Macros (Forien's Armoury)",
       "name": "macros",
       "type": "Macro",
       "system": "wfrp4e",
       "path": "packs/macros"
     }
   ],
+  "packFolders": [
+    {
+      "name": "Forien's Armoury",
+      "sorting": "a",
+      "packs": [
+        "forien-armoury",
+        "macros",
+        "forien-homerules"
+      ]
+    }
+  ],
   "esmodules": [
     "modules/forien-armoury.mjs"
   ],
-  "css": [
+  "styles": [
     "styles/forien-armoury.css"
-  ]
+  ],
+  "flags": {
+    "hotReload": {
+      "extensions": ["css", "html", "hbs", "json"],
+      "paths": ["templates/", "styles/", "lang/"]
+    }
+  }
 }

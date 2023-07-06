@@ -1,9 +1,20 @@
 import Utility from "./Utility.mjs";
 
 export default class ItemRepair {
+
+  static templates = {
+    chatMessage: "repair-chat-message.hbs",
+    repairItemEntry: "partials/repair-item-entry.hbs",
+    repairItemEntryWeapon: "partials/repair-item-weapon.hbs",
+    repairItemEntryArmour: "partials/repair-item-armour.hbs"
+  }
+
   static bindHooks() {
-    console.log("Forien ItemRepair.bindHooks()");
     Hooks.on('renderChatLog', this._setChatListeners.bind(this));
+  }
+
+  static getTemplates() {
+    return Object.values(this.templates);
   }
 
   /**
@@ -12,30 +23,81 @@ export default class ItemRepair {
    * @private
    */
   static _setChatListeners(log, html) {
-    console.log("Forien ItemRepair._setChatListeners()");
-    html.on("click", ".forien-repair-item", this._onRepairItem.bind(this));
+    html.on("click", ".chat-button.forien-repair-item", this._onRepairItem.bind(this));
+  }
+
+
+  /**
+   * @param {ItemWfrp4e} item
+   * @param {{armour: String, item: String, location: String, price: String, repair: Number}} data
+   * @private
+   */
+  static async _repairArmourItem(item, data) {
+    let itemData = item.toObject();
+
+    if (data.location === 'all') {
+      for (let loc in itemData.system.APdamage) {
+        itemData.system.APdamage[loc] = 0;
+      }
+    } else {
+      itemData.system.APdamage[data.location] -= data.repair;
+    }
+
+    await item.actor.updateEmbeddedDocuments("Item", [itemData]);
+
+    return true;
+  }
+
+  /**
+   * @param {ItemWfrp4e} item
+   * @param {{item: String, price: String, repair: Number}} data
+   * @private
+   */
+  static async _repairWeaponItem(item, data) {
+    let itemData = item.toObject();
+    itemData.system.damageToItem.value -= data.repair;
+
+    await item.actor.updateEmbeddedDocuments("Item", [itemData]);
+
+    return true;
   }
 
   /**
    * @param event
    * @private
    */
-  static _onRepairItem(event) {
-    console.log("Forien ItemRepair._onRepairItem()");
-    console.log(event.currentTarget.dataset.item);
-    console.log(event.currentTarget.dataset.location);
-    let actor = game.user.character;
+  static async _onRepairItem(event) {
+    /**
+     * @type {{armour: String, item: String, location: String, price: String, repair: Number, msg: String}}
+     */
+    let data = event.currentTarget.dataset;
+    /**
+     * @type {ItemWfrp4e|null}
+     */
+    let item = await fromUuid(data.item);
 
-    if (actor === null)
-      return Utility.notify(`Must have a character assigned to Pay & Repair your Items`, {type: "error"})
+    if (!item?.actor?.isOwner)
+      return Utility.notify(`Must control the character you want to repair items for.`, {type: "error"})
 
-    let money = MarketWfrp4e.payCommand(event.currentTarget.dataset.cost, actor);
-    if (money) {
+    let repaired;
+
+    if (data.armour && data.armour === 'true')
+      repaired = await this._repairArmourItem(item, data);
+    else
+      repaired = await this._repairWeaponItem(item, data);
+
+    if (repaired) {
+      let money = MarketWfrp4e.payCommand(data.price, item.actor, {suppressMessage: true});
+      if (!money)
+        return;
+
       WFRP_Audio.PlayContextAudio({item: {"type": "money"}, action: "lose"});
-      //actor.updateEmbeddedDocuments("Item", money);
-      console.log('money');
-      console.log(money);
+      await item.actor.updateEmbeddedDocuments("Item", money);
+      Utility.notify(`${item.name} has been repaired. Removed ${data.repair} damage from the item.`);
     }
+
+    if (data.msg)
+      return this.checkInventoryForDamage(item.actor, data.msg);
   }
 
   /**
@@ -47,6 +109,11 @@ export default class ItemRepair {
     return Number(item.price.gc || 0) * 240 + Number(item.price.ss || 0) * 12 + Number(item.price.bp || 0);
   }
 
+  /**
+   * @param {Number} amount
+   * @return {string}
+   * @private
+   */
   static _getMoneyStringFromD(amount) {
     let string = ``;
     let money = {
@@ -73,6 +140,11 @@ export default class ItemRepair {
     return string;
   }
 
+  /**
+   * @param {ItemWfrp4e} item
+   * @return {number}
+   * @private
+   */
   static _getMaxDamage(item) {
     let regex = /\d{1,3}/gm;
 
@@ -85,10 +157,22 @@ export default class ItemRepair {
   /**
    * @param {ItemWfrp4e} item
    */
+  static checkWeaponDamage(item) {
+    return this.checkTrappingDamage(item);
+  }
+
+  /**
+   * @param {ItemWfrp4e} item
+   */
   static checkTrappingDamage(item) {
     let maxDamage = this._getMaxDamage(item)
     let damage = Number(item.damageToItem?.value || 0)
     let price = this._getPriceInD(item);
+    let singleRepairCost = this._getMoneyStringFromD(price * 0.1);
+    let repairCost = this._getMoneyStringFromD(price * 0.1 * damage);
+
+    if (damage === 0)
+      return null;
 
     return {
       uuid: item.uuid,
@@ -98,7 +182,8 @@ export default class ItemRepair {
       damaged: damage > 0,
       damage: damage,
       maxDamage: maxDamage,
-      price: price
+      repairCost: repairCost,
+      singleRepairCost: singleRepairCost
     };
   }
 
@@ -106,21 +191,43 @@ export default class ItemRepair {
    * @param {ItemWfrp4e} item
    */
   static checkArmourDamage(item) {
-    let durable = item.properties.qualities.durable;
-
+    let durable = this._getMaxDamage(item);
     let locationKeys = Object.keys(item.AP);
     let locations = [];
+    let totalDamage = 0;
+    let totalMaxDamage = 0;
+    let price = this._getPriceInD(item) * 0.1;
 
     for (let i in locationKeys) {
       let location = locationKeys[i];
       let AP = item.AP[location];
       let damage = item.APdamage[location];
+      let maxDamage = AP + durable;
+      totalDamage += damage;
+      totalMaxDamage += maxDamage;
 
       if (AP > 0 && damage > 0) {
-        locations.push({name: location, ap: AP, damage: damage});
+        let damageToPayFor = damage;
+        if (damage >= AP + durable)
+          damageToPayFor += 1;
+
+        let locationLabel = game.i18n.localize(`WFRP4E.Locations.${location}`);
+        let localRepairCost = this._getMoneyStringFromD(price * damageToPayFor);
+        locations.push({
+          name: location,
+          label: locationLabel,
+          ap: AP,
+          damage: damage,
+          maxDamage: maxDamage,
+          repairCost: localRepairCost
+        });
       }
     }
-    let price = this._getPriceInD(item);
+    let singleRepairCost = this._getMoneyStringFromD(price);
+    let repairCost = this._getMoneyStringFromD(price * totalDamage);
+
+    if (totalDamage === 0)
+      return null;
 
     return {
       uuid: item.uuid,
@@ -129,7 +236,10 @@ export default class ItemRepair {
       type: item.type,
       damaged: locations.length > 0,
       locations: locations,
-      price: price
+      damage: totalDamage,
+      maxDamage: totalMaxDamage,
+      repairCost: repairCost,
+      singleRepairCost: singleRepairCost
     };
   }
 
@@ -138,60 +248,52 @@ export default class ItemRepair {
    * @param {ItemWfrp4e[]} items
    */
   static processWeapons(items = []) {
-    let html = ``;
-    let data = items.map(this.checkTrappingDamage.bind(this));
-
-    for (let i in data) {
-      let item = data[i];
-      html += `<div style="">`
-
-      if (item.img)
-        html += `<img src="${item.img}" style="height: 48px; width: 48px;" alt="${item.name}" />`;
-
-      html += `<h3>${item.name}</h3>`;
-      html += `</div>`;
-
-      if (!item.damaged) continue;
-
-      if (item.damage === item.maxDamage) {
-        html += `<p>Weapon is mangled beyond recognition. It's treated now as an <em>Improvised Weapon</em> and can't normally be repaired.</p>`;
-      } else {
-        let singleRepairCost = this._getMoneyStringFromD(item.price * 0.1);
-        let repairCost = this._getMoneyStringFromD(item.price * 0.1 * item.damage);
-        html += `<p>Weapon has received <strong>${item.damage} points of damage</strong> out of maximum <strong>${item.maxDamage}</strong> it can sustain.</p>`;
-        html += `<p>Repairing this weapon will cost ${singleRepairCost} per damage for a total of <strong>${repairCost}</strong>.</p>`;
-        html += `<p><a class="chat-button forien-repair-item" data-item="${item.uuid}">Pay & Repair</a></p>`;
-      }
-    }
-
-    return html;
+    return this.processTrappings(items);
   }
 
   /**
    * @param {ItemWfrp4e[]} items
    */
   static processTrappings(items = []) {
-    return ``;
+    return items.map(this.checkTrappingDamage.bind(this)).filter(i => i !== null);
   }
 
   /**
    * @param {ItemWfrp4e[]} items
    */
   static processArmour(items = []) {
-    return ``;
+    return items.map(this.checkArmourDamage.bind(this)).filter(i => i !== null);
   }
 
   /**
    * @param {ActorWfrp4e} actor
+   * @param {String} chatMessageId
    */
-  static checkInventoryForDamage(actor) {
-    let armourResult = this.processArmour(actor.itemCategories.armour);
-    let weaponResult = this.processWeapons(actor.itemCategories.weapon);
-    let trappingResult = this.processTrappings(actor.itemCategories.trapping);
+  static async checkInventoryForDamage(actor, chatMessageId = null) {
+    let templateData = {};
+    templateData.armour = this.processArmour(actor.itemCategories.armour);
+    templateData.weapons = this.processWeapons(actor.itemCategories.weapon);
+    templateData.trappings = this.processTrappings(actor.itemCategories.trapping);
 
-    ChatMessage.create({
-      user: game.user._id,
-      content: `<div class="forien-armoury">${weaponResult}</div>`
-    });
+    let html = await renderTemplate(Utility.getTemplate(this.templates.chatMessage), templateData);
+    let chatMessage;
+    let content;
+
+    if (!chatMessageId) {
+      let chatData = {
+        user: game.user,
+        speaker: {alias: actor.name, actor: actor._id},
+        whisper: game.users.filter((u) => u.isGM).map((u) => u._id),
+        content: html
+      };
+      chatMessage = await ChatMessage.create(chatData)
+      content = chatMessage.content;
+    } else {
+      chatMessage = await fromUuid(chatMessageId);
+      content = html;
+    }
+
+    content = content.replaceAll('ChatMessageId', chatMessage._id);
+    await chatMessage.update({content: content});
   }
 }

@@ -4,7 +4,11 @@
 }
 
 .forien-armoury {
-  .item-repair-header {
+  .forien-armoury-hr {
+    border-bottom: 1px solid var(--color-border-light-highlight);
+  }
+
+  .forien-image-name-header {
     display: flex;
     align-items: flex-end;
     flex-direction: row;
@@ -14,13 +18,103 @@
       @include square(36px)
     }
 
-    h3 {
+    h2, h3 {
       flex: 1;
+      margin: 0 0 0 6px;
     }
   }
 
-  .forien-repait-item {
+  .repair-group {
+    margin-top: 16px;
 
+    &:first-child {
+      margin-top: 2px;
+    }
+  }
+
+
+  .item-repair-entry {
+
+    .item-repair-body {
+      padding-left: 6px;
+    }
+
+    .repair-item-location {
+      //border: #5c5cff solid 1px;
+      margin: 8px 0;
+
+      .repair-item-location-header {
+        //font-family: CaslonPro, serif;
+        font-family: CaslonAntique, serif;
+
+        .label{
+          font-weight: 600;
+          font-size: var(--font-size-18);
+        }
+
+        .damage {
+          float: right;
+          //font-size: 0.9em;
+          //font-family: CaslonPro, serif;
+          font-family: CaslonAntique, serif;
+        }
+      }
+
+      .repair-item-location-body {
+        padding-left: 6px;
+
+        p {
+          margin: 2px 0;
+        }
+      }
+
+      .repair-buttons {
+        grid-template-columns: 1fr max-content;
+
+        label {
+          font-size: 1.1em;
+        }
+      }
+    }
+
+    .repair-buttons {
+      display: grid;
+      grid-template-columns: 1fr max-content max-content;
+      grid-template-rows: auto;
+      grid-column-gap: 5px;
+      grid-row-gap: 5px;
+      align-items: center;
+
+      .forien-repair-item {
+        flex: 1 1;
+      }
+
+      label {
+        flex: 1 5;
+        font-weight: 600;
+        font-family: CaslonAntique, serif;
+        font-size: 1.2em;
+      }
+
+      .chat-button {
+        border-width: 1px;
+        font-size: var(--font-size-13);
+        font-family: CaslonAntique, serif;
+        padding-bottom: 1px;
+      }
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      margin: 6px 0 10px;
+      border-bottom: 1px solid var(--color-underline-header);
+    }
+
+    &:last-of-type::after {
+      display: none;
+    }
 
   }
 }
+

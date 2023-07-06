@@ -1,0 +1,9 @@
+<p>{{item.name}} has received <strong>{{item.damage}} points of damage</strong> out of maximum <strong>{{item.maxDamage}}</strong> it can sustain.</p>
+<p>Repairing this item will cost {{item.singleRepairCost}} per damage for a total of <strong>{{item.repairCost}}</strong>.</p>
+<div class="repair-buttons">
+    <label>Pay & Repair:</label>
+    <a class="chat-button forien-repair-item" data-repair="1" data-price="{{item.singleRepairCost}}" data-item="{{item.uuid}}" data-msg="ChatMessage.ChatMessageId">1 Damage</a>
+    {{#if (gt item.damage 1)}}
+        <a class="chat-button forien-repair-item" data-repair="{{item.damage}}" data-price="{{item.repairCost}}" data-item="{{item.uuid}}" data-msg="ChatMessage.ChatMessageId">All Damage</a>
+    {{/if}}
+</div>

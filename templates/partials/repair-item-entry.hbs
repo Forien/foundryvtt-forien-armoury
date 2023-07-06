@@ -1,0 +1,28 @@
+{{#if item.damaged}}
+    <div class="item-repair-entry">
+        <div class="item-repair-header forien-image-name-header">
+            <img src="{{item.img}}" alt="{{item.name}}" />
+            <h3>{{item.name}}</h3>
+        </div>
+        <div class="item-repair-body">
+            {{#if (eq item.damage item.maxDamage)}}
+                {{#if (eq type 'weapon')}}
+                    <p>Weapon is mangled beyond recognition. It's treated now as an <em>Improvised Weapon</em> and can't normally be repaired.</p>
+                {{/if}}
+                {{#if (eq type 'trapping')}}
+                    <p>This item is mangled beyond recognition and can't normally be repaired.</p>
+                {{/if}}
+            {{else}}
+                {{#if (eq type 'armour')}}
+                    {{> modules/forien-armoury/templates/partials/repair-item-armour.hbs item=item }}
+                {{/if}}
+                {{#if (eq type 'weapon')}}
+                    {{> modules/forien-armoury/templates/partials/repair-item-weapon.hbs item=item }}
+                {{/if}}
+                {{#if (eq type 'trapping')}}
+                    {{> modules/forien-armoury/templates/partials/repair-item-weapon.hbs item=item }}
+                {{/if}}
+            {{/if}}
+        </div>
+    </div>
+{{/if}}
