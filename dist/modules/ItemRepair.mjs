@@ -75,6 +75,7 @@ export default class ItemRepair {
      * @type {ItemWfrp4e|null}
      */
     let item = await fromUuid(data.item);
+    let paid = data.price !== "Free";
 
     if (!item?.actor?.isOwner)
       return Utility.notify(`Must control the character you want to repair items for.`, {type: "error"})
@@ -87,17 +88,19 @@ export default class ItemRepair {
       repaired = await this._repairWeaponItem(item, data);
 
     if (repaired) {
-      let money = MarketWfrp4e.payCommand(data.price, item.actor, {suppressMessage: true});
-      if (!money)
-        return;
+      if (paid) {
+        let money = MarketWfrp4e.payCommand(data.price, item.actor, {suppressMessage: true});
+        if (!money)
+          return;
 
-      WFRP_Audio.PlayContextAudio({item: {"type": "money"}, action: "lose"});
-      await item.actor.updateEmbeddedDocuments("Item", money);
+        WFRP_Audio.PlayContextAudio({item: {"type": "money"}, action: "lose"});
+        await item.actor.updateEmbeddedDocuments("Item", money);
+      }
       Utility.notify(`${item.name} has been repaired. Removed ${data.repair} damage from the item.`);
     }
 
     if (data.msg)
-      return this.checkInventoryForDamage(item.actor, data.msg);
+      return this.checkInventoryForDamage(item.actor, {paid: paid, chatMessageId: data.msg});
   }
 
   /**
@@ -157,22 +160,20 @@ export default class ItemRepair {
   /**
    * @param {ItemWfrp4e} item
    */
-  static checkWeaponDamage(item) {
-    return this.checkTrappingDamage(item);
+  static checkWeaponDamage(item, paid) {
+    return this.checkTrappingDamage(item, paid);
   }
 
   /**
    * @param {ItemWfrp4e} item
+   * @param {boolean} paid
    */
-  static checkTrappingDamage(item) {
+  static checkTrappingDamage(item, paid) {
     let maxDamage = this._getMaxDamage(item)
     let damage = Number(item.damageToItem?.value || 0)
     let price = this._getPriceInD(item);
-    let singleRepairCost = this._getMoneyStringFromD(price * 0.1);
-    let repairCost = this._getMoneyStringFromD(price * 0.1 * damage);
-
-    if (damage === 0)
-      return null;
+    let singleRepairCost = paid ? this._getMoneyStringFromD(price * 0.1) : "Free";
+    let repairCost = paid ? this._getMoneyStringFromD(price * 0.1 * damage) : "Free";
 
     return {
       uuid: item.uuid,
@@ -189,8 +190,9 @@ export default class ItemRepair {
 
   /**
    * @param {ItemWfrp4e} item
+   * @param {boolean} paid
    */
-  static checkArmourDamage(item) {
+  static checkArmourDamage(item, paid) {
     let durable = this._getMaxDamage(item);
     let locationKeys = Object.keys(item.AP);
     let locations = [];
@@ -212,7 +214,7 @@ export default class ItemRepair {
           damageToPayFor += 1;
 
         let locationLabel = game.i18n.localize(`WFRP4E.Locations.${location}`);
-        let localRepairCost = this._getMoneyStringFromD(price * damageToPayFor);
+        let localRepairCost = paid ? this._getMoneyStringFromD(price * damageToPayFor) : "Free";
         locations.push({
           name: location,
           label: locationLabel,
@@ -223,11 +225,8 @@ export default class ItemRepair {
         });
       }
     }
-    let singleRepairCost = this._getMoneyStringFromD(price);
-    let repairCost = this._getMoneyStringFromD(price * totalDamage);
-
-    if (totalDamage === 0)
-      return null;
+    let singleRepairCost = paid ? this._getMoneyStringFromD(price) : "Free";
+    let repairCost = paid ? this._getMoneyStringFromD(price * totalDamage) : "Free";
 
     return {
       uuid: item.uuid,
@@ -246,34 +245,53 @@ export default class ItemRepair {
 
   /**
    * @param {ItemWfrp4e[]} items
+   * @param {boolean} paid
    */
-  static processWeapons(items = []) {
-    return this.processTrappings(items);
+  static processWeapons(items = [], paid) {
+    return this.processTrappings(items, paid);
   }
 
   /**
    * @param {ItemWfrp4e[]} items
+   * @param {boolean} paid
    */
-  static processTrappings(items = []) {
-    return items.map(this.checkTrappingDamage.bind(this)).filter(i => i !== null);
+  static processTrappings(items = [], paid) {
+    let damagedItems = [];
+    items.forEach(item => {
+      let damagedItem = this.checkTrappingDamage(item, paid);
+      if (damagedItem?.damaged)
+        damagedItems.push(damagedItem);
+    });
+
+    return damagedItems;
   }
 
   /**
    * @param {ItemWfrp4e[]} items
+   * @param {boolean} paid
    */
-  static processArmour(items = []) {
-    return items.map(this.checkArmourDamage.bind(this)).filter(i => i !== null);
+  static processArmour(items = [], paid) {
+    let damagedItems = [];
+    items.forEach(item => {
+      let damagedItem = this.checkArmourDamage(item, paid);
+      if (damagedItem?.damaged)
+        damagedItems.push(damagedItem);
+    });
+
+    return damagedItems;
   }
 
   /**
    * @param {ActorWfrp4e} actor
+   * @param {boolean} paid
    * @param {String} chatMessageId
    */
-  static async checkInventoryForDamage(actor, chatMessageId = null) {
+  static async checkInventoryForDamage(actor, {paid = true, chatMessageId = null} = {}) {
     let templateData = {};
-    templateData.armour = this.processArmour(actor.itemCategories.armour);
-    templateData.weapons = this.processWeapons(actor.itemCategories.weapon);
-    templateData.trappings = this.processTrappings(actor.itemCategories.trapping);
+    templateData.armour = this.processArmour(actor.itemCategories.armour, paid);
+    templateData.weapons = this.processWeapons(actor.itemCategories.weapon, paid);
+    templateData.trappings = this.processTrappings(actor.itemCategories.trapping, paid);
+    templateData.paid = paid;
 
     let html = await renderTemplate(Utility.getTemplate(this.templates.chatMessage), templateData);
     let chatMessage;

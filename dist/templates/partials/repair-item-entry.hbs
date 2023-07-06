@@ -14,13 +14,13 @@
                 {{/if}}
             {{else}}
                 {{#if (eq type 'armour')}}
-                    {{> modules/forien-armoury/templates/partials/repair-item-armour.hbs item=item }}
+                    {{> modules/forien-armoury/templates/partials/repair-item-armour.hbs item=item paid=paid }}
                 {{/if}}
                 {{#if (eq type 'weapon')}}
-                    {{> modules/forien-armoury/templates/partials/repair-item-weapon.hbs item=item }}
+                    {{> modules/forien-armoury/templates/partials/repair-item-weapon.hbs item=item paid=paid }}
                 {{/if}}
                 {{#if (eq type 'trapping')}}
-                    {{> modules/forien-armoury/templates/partials/repair-item-weapon.hbs item=item }}
+                    {{> modules/forien-armoury/templates/partials/repair-item-weapon.hbs item=item paid=paid }}
                 {{/if}}
             {{/if}}
         </div>

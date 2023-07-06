@@ -5,7 +5,7 @@
        data-price="{{item.repairCost}}" data-item="{{item.uuid}}" data-msg="ChatMessage.ChatMessageId">{{item.repairCost}}</a>
 </div>
 <hr class="forien-armoury-hr" />
-<!--<p>Repairing this item will cost {{item.singleRepairCost}} per damage for a total of <strong>{{item.repairCost}}</strong>.</p>-->
+
 {{#each item.locations as |location l|}}
     <div class="repair-item-location">
         <div class="repair-item-location-header">
@@ -13,7 +13,6 @@
             <span class="damage">Damage received: {{location.damage}}/{{location.maxDamage}}</span>
         </div>
         <div class="repair-item-location-body">
-<!--            <p>Damage received: {{location.damage}}/{{location.maxDamage}}</p>-->
             <div class="repair-buttons">
                 {{#unless (eq location.damage location.maxDamage)}}
                     <label>Repair 1 damage</label>
@@ -29,6 +28,5 @@
                 {{/if}}
             </div>
         </div>
-        <!--        <p>Repairing this location will cost {{location.repairCost}}.</p>-->
     </div>
 {{/each}}
