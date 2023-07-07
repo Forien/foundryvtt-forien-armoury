@@ -1,7 +1,7 @@
 <div class="forien-armoury item-repair">
     {{#if armour}}
         <div class="repair-group">
-            <h2>Armour</h2>
+            <h2>{{localize 'Forien.Armoury.ItemRepair.ArmourPlural'}}</h2>
             {{#each armour as |armor a|}}
                 {{> modules/forien-armoury/templates/partials/repair-item-entry.hbs type='armour' item=armor paid=../paid }}
             {{/each}}
@@ -9,7 +9,7 @@
     {{/if}}
     {{#if weapons}}
         <div class="repair-group">
-            <h2>Weapons</h2>
+            <h2>{{localize 'Forien.Armoury.ItemRepair.Weapons'}}</h2>
             {{#each weapons as |weapon w|}}
                 {{> modules/forien-armoury/templates/partials/repair-item-entry.hbs type='weapon' item=weapon paid=../paid }}
             {{/each}}
@@ -17,7 +17,7 @@
     {{/if}}
     {{#if trappings}}
         <div class="repair-group">
-            <h2>Trappings</h2>
+            <h2>{{localize 'Forien.Armoury.ItemRepair.Trappings'}}</h2>
             {{#each trappings as |trapping t|}}
                 {{> modules/forien-armoury/templates/partials/repair-item-entry.hbs type='trapping' item=trapping paid=../paid }}
             {{/each}}

@@ -7,10 +7,10 @@
         <div class="item-repair-body">
             {{#if (eq item.damage item.maxDamage)}}
                 {{#if (eq type 'weapon')}}
-                    <p>Weapon is mangled beyond recognition. It's treated now as an <em>Improvised Weapon</em> and can't normally be repaired.</p>
+                    <p>{{{localize 'Forien.Armoury.ItemRepair.WeaponIsMangled'}}}</p>
                 {{/if}}
                 {{#if (eq type 'trapping')}}
-                    <p>This item is mangled beyond recognition and can't normally be repaired.</p>
+                    <p>{{{localize 'Forien.Armoury.ItemRepair.ItemIsMangled'}}}</p>
                 {{/if}}
             {{else}}
                 {{#if (eq type 'armour')}}

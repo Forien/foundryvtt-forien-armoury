@@ -1,19 +1,17 @@
-<p>{{item.name}} has received <strong>{{item.damage}} points of damage</strong> out of maximum
-    <strong>{{item.maxDamage}}</strong> it can sustain.</p>
+<p>{{{localize 'Forien.Armoury.ItemRepair.ItemReceivedDamageOutOfMax' name=item.name damage=item.damage maxDamage=item.maxDamage}}}</p>
 {{#if paid}}
-    <p>Repairing this item will cost {{item.singleRepairCost}} per damage for a total of
-        <strong>{{item.repairCost}}</strong>.</p>
+    <p>{{{localize 'Forien.Armoury.ItemRepair.RepairingWillCostPerDamageAndTotal' perDamage=item.singleRepairCost total=item.repairCost}}}</p>
 {{/if}}
 <div class="repair-buttons">
     {{#if paid}}
-        <label>Pay & Repair:</label>
+        <label>{{localize 'Forien.Armoury.ItemRepair.Button.PayAndRepair'}}:</label>
     {{else}}
-        <label>Repair:</label>
+        <label>{{localize 'Forien.Armoury.ItemRepair.Button.Repair'}}:</label>
     {{/if}}
     <a class="chat-button forien-repair-item" data-repair="1" data-price="{{item.singleRepairCost}}"
-       data-item="{{item.uuid}}" data-msg="ChatMessage.ChatMessageId">1 Damage</a>
+       data-item="{{item.uuid}}" data-msg="ChatMessage.ChatMessageId">1 {{localize 'Forien.Armoury.ItemRepair.Button.DamageSingular'}}</a>
     {{#if (gt item.damage 1)}}
         <a class="chat-button forien-repair-item" data-repair="{{item.damage}}" data-price="{{item.repairCost}}"
-           data-item="{{item.uuid}}" data-msg="ChatMessage.ChatMessageId">All Damage</a>
+           data-item="{{item.uuid}}" data-msg="ChatMessage.ChatMessageId">{{localize 'Forien.Armoury.ItemRepair.Button.AllDamage'}}</a>
     {{/if}}
 </div>

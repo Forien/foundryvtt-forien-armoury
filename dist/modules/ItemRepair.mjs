@@ -75,10 +75,10 @@ export default class ItemRepair {
      * @type {ItemWfrp4e|null}
      */
     let item = await fromUuid(data.item);
-    let paid = data.price !== "Free";
+    let paid = data.price !== game.i18n.localize('Forien.Armoury.ItemRepair.Free');
 
     if (!item?.actor?.isOwner)
-      return Utility.notify(`Must control the character you want to repair items for.`, {type: "error"})
+      return Utility.notify(game.i18n.localize('Forien.Armoury.ItemRepair.MustControlActor'), {type: "error"})
 
     let repaired;
 
@@ -96,7 +96,7 @@ export default class ItemRepair {
         WFRP_Audio.PlayContextAudio({item: {"type": "money"}, action: "lose"});
         await item.actor.updateEmbeddedDocuments("Item", money);
       }
-      Utility.notify(`${item.name} has been repaired. Removed ${data.repair} damage from the item.`);
+      Utility.notify(game.i18n.format('Forien.Armoury.ItemRepair.Repaired', {name: item.name, repaired: data.repair}));
     }
 
     if (data.msg)
@@ -114,10 +114,14 @@ export default class ItemRepair {
 
   /**
    * @param {Number} amount
+   * @param {boolean} paid
    * @return {string}
    * @private
    */
-  static _getMoneyStringFromD(amount) {
+  static _getMoneyStringFromD(amount, paid) {
+    if (!paid)
+      return game.i18n.localize('Forien.Armoury.ItemRepair.Free');
+
     let string = ``;
     let money = {
       gc: 0,
@@ -159,6 +163,7 @@ export default class ItemRepair {
 
   /**
    * @param {ItemWfrp4e} item
+   * @param {boolean} paid
    */
   static checkWeaponDamage(item, paid) {
     return this.checkTrappingDamage(item, paid);
@@ -172,8 +177,8 @@ export default class ItemRepair {
     let maxDamage = this._getMaxDamage(item)
     let damage = Number(item.damageToItem?.value || 0)
     let price = this._getPriceInD(item);
-    let singleRepairCost = paid ? this._getMoneyStringFromD(price * 0.1) : "Free";
-    let repairCost = paid ? this._getMoneyStringFromD(price * 0.1 * damage) : "Free";
+    let singleRepairCost = this._getMoneyStringFromD(price * 0.1, paid);
+    let repairCost = this._getMoneyStringFromD(price * 0.1 * damage, paid);
 
     return {
       uuid: item.uuid,
@@ -214,7 +219,7 @@ export default class ItemRepair {
           damageToPayFor += 1;
 
         let locationLabel = game.i18n.localize(`WFRP4E.Locations.${location}`);
-        let localRepairCost = paid ? this._getMoneyStringFromD(price * damageToPayFor) : "Free";
+        let localRepairCost = this._getMoneyStringFromD(price * damageToPayFor, paid);
         locations.push({
           name: location,
           label: locationLabel,
@@ -225,8 +230,8 @@ export default class ItemRepair {
         });
       }
     }
-    let singleRepairCost = paid ? this._getMoneyStringFromD(price) : "Free";
-    let repairCost = paid ? this._getMoneyStringFromD(price * totalDamage) : "Free";
+    let singleRepairCost = this._getMoneyStringFromD(price, paid)
+    let repairCost = this._getMoneyStringFromD(price * totalDamage, paid)
 
     return {
       uuid: item.uuid,
