@@ -97,7 +97,7 @@
       "paths": [
         "templates/",
         "styles/",
-        "lang/"
+        "languages/"
       ]
     }
   }

@@ -3,7 +3,7 @@
     "Armoury": {
       "ItemRepair": {
         "MustControlActor": "Must control the character you want to repair items for.",
-        "Repaired": "{name} has been repaired. Removed ${repaired} damage from the item.",
+        "Repaired": "{name} has been repaired. Removed {repaired} damage from the item.",
         "Free": "Free",
 
         "ArmourPlural": "Armour",
