@@ -71,11 +71,11 @@ Module contains single Compendium pack containing at the moment 34 items.
 * Added generic Ingredient item entities, one for each tradition.
 
 ## Recommended 3rd Party Modules
-* [Times Up](https://foundryvtt.com/packages/times-up)
-* [Active Token Effects](https://foundryvtt.com/packages/ATL)
+* [Times Up](https://foundryvtt.com/packages/times-up) — Allows for automatic disabling of effects, especially useful for Temporary Runes introduced in Forien's Armoury
+* [Active Token Effects](https://foundryvtt.com/packages/ATL) — Allows to use presets such as "torch" etc. for Lighting items 
 
 ### Other suggested modules
-* [DFreds](https://foundryvtt.com/packages/dfreds-effects-panel)
+* [DFreds Effects Panel](https://foundryvtt.com/packages/dfreds-effects-panel) — Isn't specifically linked to Forien's Armoury in any way, but provides nice and clean effects display with ability to toggle them, so I recommend trying it 
 
 
 ## Future plans
