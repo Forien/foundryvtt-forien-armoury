@@ -36,7 +36,7 @@
           "Temporary": "temporary"
         },
 
-        "RemovedEffectTemporaryRuneDisabled": "Removed \"{effectName}\" effect from Actor \"{actorName}\" and Item \"${itemName}\". It was Temporary Rune that got disabled. {itemDamaged}",
+        "RemovedEffectTemporaryRuneDisabled": "Removed \"{effectName}\" effect from Actor \"{actorName}\" and Item \"{itemName}\". It was Temporary Rune that got disabled. {itemDamaged}",
         "Weapon": "Weapon",
         "Item": "Item",
         "Received1Damage": "received 1 Damage",
@@ -47,7 +47,13 @@
         "ArmourCouldNotBeDamagedMore": "Armour couldn't be damaged more",
         "ArmourReceived1DamageOnLocation": "Armour received 1 Damage on {locationName}",
 
-        "ItemDamagedInName": "damaged"
+        "ItemDamagedInName": "damaged",
+
+
+        "MasterRuneOfBreaking": {
+          "name": "Master Rune of Breaking",
+          "effect": "you may perform an Opposed Strength Test against your opponent. If you win, your opponent’s weapon breaks."
+        }
       }
     }
   }

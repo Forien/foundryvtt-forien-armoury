@@ -1,0 +1,37 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+  "transfer": true,
+  "name": "Master Rune of Breaking (Permanent)",
+  "_id": "4tJdRSQGa8WTbn6Z",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "opposedDefender",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.opposedTest.defenderTest.weapon?._id === this.item.id) {\n  if (args.opposedTest.result.winner === \"defender\") {\n    let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.effect');\n    let rune = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.name');\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n  }\n}"
+    },
+    "core": {
+      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.PE6EPbkyk3UirW9z.ActiveEffect.ZM1KHe4lw53HRkjS"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!PE6EPbkyk3UirW9z.4tJdRSQGa8WTbn6Z"
+}

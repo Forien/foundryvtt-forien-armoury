@@ -1,7 +1,7 @@
 {
   "name": "Armour Runes",
   "type": "ammunition",
-  "img": "systems/wfrp4e/icons/blank.png",
+  "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
   "system": {
     "description": {
       "type": "String",
@@ -82,11 +82,11 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688413094944,
-    "modifiedTime": 1688413161118,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1688748002654,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "D53tsJf5rsxxII3X",
-  "sort": 200000,
+  "sort": -100000,
   "ownership": {
     "default": 0,
     "aDepqlKkeOa13DWo": 3

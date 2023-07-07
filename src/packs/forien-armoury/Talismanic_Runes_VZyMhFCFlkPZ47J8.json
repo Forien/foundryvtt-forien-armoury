@@ -1,7 +1,7 @@
 {
   "name": "Talismanic Runes",
   "type": "trapping",
-  "img": "systems/wfrp4e/icons/blank.png",
+  "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
   "system": {
     "description": {
       "type": "String",
@@ -69,11 +69,11 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688413119645,
-    "modifiedTime": 1688413161118,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1688748004471,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "VZyMhFCFlkPZ47J8",
-  "sort": 300000,
+  "sort": 50000,
   "ownership": {
     "default": 0,
     "aDepqlKkeOa13DWo": 3
