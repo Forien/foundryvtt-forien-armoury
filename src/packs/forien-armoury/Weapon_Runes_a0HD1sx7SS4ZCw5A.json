@@ -1,7 +1,7 @@
 {
   "name": "Weapon Runes",
   "type": "weapon",
-  "img": "modules/forien-armoury/icons/runes/weapon-rune.webp",
+  "img": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
   "system": {
     "description": {
       "type": "String",

@@ -53,10 +53,11 @@
         }
 
         .damage {
-          float: right;
+          //float: right;
           //font-size: 0.9em;
           //font-family: CaslonPro, serif;
           font-family: CaslonAntique, serif;
+          color: var(--color-border-highlight);
         }
       }
 
