@@ -8,7 +8,10 @@ export default class TemporaryRunes {
   static _onEffectUpdate(effect, update, _data) {
     let effectName = effect.name.toLowerCase();
 
-    if (effectName.includes(`rune of`) && effectName.includes(`temporary`) && effect.parent instanceof Actor) {
+    const runeOf = game.i18n.localize('Forien.Armoury.Runes.effectNameIncludes.RuneOf');
+    const temporary = game.i18n.localize('Forien.Armoury.Runes.effectNameIncludes.Temporary');
+
+    if (effectName.includes(runeOf) && effectName.includes(temporary) && effect.parent instanceof Actor) {
 
       if (update.disabled === true) {
         this.processRemovingRune(effect).then(msg => {
@@ -34,8 +37,9 @@ export default class TemporaryRunes {
     await item.deleteEmbeddedDocuments("ActiveEffect", [itemEffect._id]);
 
     let itemDamaged = await this.damageFromRune(item, actor);
+    let msg = game.i18n.format('Forien.Armoury.Runes.RemovedEffectTemporaryRuneDisabled', {effectName: effect.name, actorName:actor.name, itemName: item.name});
 
-    return `Removed "${effect.name}" effect from Actor "${actor.name}" and Item "${item.name}". It was Temporary Rune that got disabled. ${itemDamaged}`;
+    return `${msg} ${itemDamaged}`;
   }
 
   /**
@@ -67,12 +71,14 @@ export default class TemporaryRunes {
     let maxDamage = Number(regex.exec(item.damage.value)[0] || 0) + Number(item.properties.qualities.durable?.value || 0) || 999;
     itemData.system.damageToItem.value = Math.min(maxDamage, itemData.system.damageToItem.value + 1);
 
-    itemDamaged += `Weapon received 1 Damage`;
+    itemDamaged += game.i18n.localize('Forien.Armoury.Runes.Weapon');
+    itemDamaged += ` ${game.i18n.localize('Forien.Armoury.Runes.Received1Damage')}`;
 
     if (maxDamage === itemData.system.damageToItem.value) {
       itemData.system.equipped = false;
-      itemData.name += " (damaged)";
-      itemDamaged += ` and got unequipped because of it (it's now considered an Improvised Weapon)`
+      itemData.name += ` (${game.i18n.localize('Forien.Armoury.Runes.ItemDamagedInName')})`;
+      itemDamaged += ` ${game.i18n.localize('Forien.Armoury.Runes.AndGotUnequipped')}`
+      itemDamaged += ` (${game.i18n.localize('Forien.Armoury.Runes.ItsNowImprovisedWeapon')})`
     }
 
     itemDamaged += `.`;
@@ -106,14 +112,14 @@ export default class TemporaryRunes {
     }
 
     if (locations.length === 0) {
-      return `Armour couldn't be damaged more.`;
+      return `${game.i18n.localize('Forien.Armoury.Runes.ArmourCouldNotBeDamagedMore')}.`;
     }
 
     let location = locations[Math.floor((Math.random() * locations.length))];
     armourToDamage.system.APdamage[location] = Math.min(armourToDamage.system.AP[location] + (Number(durable?.value) || 0), armourToDamage.system.APdamage[location] + 1);
 
     let locationName = game.i18n.localize(`WFRP4E.Locations.${location}`);
-    itemDamaged = `Armour received 1 Damage on ${locationName}.`;
+    itemDamaged = `${game.i18n.format('Forien.Armoury.Runes.ArmourReceived1DamageOnLocation', {locationName: locationName})}.`;
 
     await actor.updateEmbeddedDocuments("Item", [armourToDamage]);
 
@@ -140,17 +146,18 @@ export default class TemporaryRunes {
     if (maxDamage > 0 && maxDamage > itemData.system.damageToItem.value) {
       itemData.system.damageToItem.value = Math.min(maxDamage, itemData.system.damageToItem.value + 1);
 
-      itemDamaged += `Item received 1 Damage`;
+      itemDamaged += game.i18n.localize('Forien.Armoury.Runes.Item');
+      itemDamaged += ` ${game.i18n.localize('Forien.Armoury.Runes.Received1Damage')}`;
     } else {
-      itemDamaged += `Item got Damaged`;
+      itemDamaged += game.i18n.localize('Forien.Armoury.Runes.ItemGotDamaged');
     }
 
     if (itemData.system.damageToItem.value >= maxDamage) {
-      itemData.name += " (damaged)";
+      itemData.name += ` (${game.i18n.localize('Forien.Armoury.Runes.ItemDamagedInName')})`;
 
       if (itemData.system.worn) {
         itemData.system.worn = false;
-        itemDamaged += ` and got unequipped because of it`;
+        itemDamaged += ` ${game.i18n.localize('Forien.Armoury.Runes.AndGotUnequipped')}`;
       }
     }
 

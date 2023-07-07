@@ -7,10 +7,11 @@ export default class Utility {
     Utility.moduleName = moduleName;
   }
 
-  static notify(notification, {type = "info", permanent = false} = {}) {
+  static notify(notification, {type = "info", permanent = false, consoleOnly = false} = {}) {
     console.log(`🦊 %c${this.moduleName}: %c${notification}`, 'color: purple', 'color: #22aa22');
 
-    ui?.notifications?.notify(notification, type, {permanent: permanent, console: false});
+    if (!consoleOnly)
+      ui?.notifications?.notify(notification, type, {permanent: permanent, console: false});
   }
 
   static getTemplate(template) {

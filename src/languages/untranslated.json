@@ -1,0 +1,17 @@
+{
+    "C:\\Projects\\FoundryVTT\\foundryvtt-forien-armoury\\dist\\templates\\partials\\repair-item-armour.hbs": {
+        "texts": [
+            ":",
+            ": /"
+        ],
+        "titles": []
+    },
+    "C:\\Projects\\FoundryVTT\\foundryvtt-forien-armoury\\dist\\templates\\partials\\repair-item-weapon.hbs": {
+        "texts": [
+            ":",
+            ":",
+            "1"
+        ],
+        "titles": []
+    }
+}

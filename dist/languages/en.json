@@ -1,0 +1,54 @@
+{
+  "Forien": {
+    "Armoury": {
+      "ItemRepair": {
+        "MustControlActor": "Must control the character you want to repair items for.",
+        "Repaired": "{name} has been repaired. Removed ${repaired} damage from the item.",
+        "Free": "Free",
+
+        "ArmourPlural": "Armour",
+        "Weapons": "Weapons",
+        "Trappings": "Trappings",
+
+        "WeaponIsMangled": "Weapon is mangled beyond recognition. It's treated now as an <em>Improvised Weapon</em> and can't normally be repaired.",
+        "ItemIsMangled": "This item is mangled beyond recognition and can't normally be repaired.",
+
+        "ArmourReceivedDamageTotal": "{name} has received <strong>{damage} points of damage</strong> across all of its locations.",
+        "ItemReceivedDamageOutOfMax": "{name} has received <strong>{damage} points of damage</strong> out of maximum <strong>{maxDamage}</strong> it can sustain.",
+        "RepairingWillCostPerDamageAndTotal": "Repairing this item will cost {perDamage} per damage for a total of <strong>{total}</strong>.",
+        "DamageReceived": "Damage received",
+
+        "Repair1Damage": "Repair 1 damage",
+        "RepairAllDamage": "Repair all damage",
+
+        "Button": {
+          "PayAndRepair": "Pay & Repair",
+          "Repair": "Repair",
+          "RepairAll": "Repair All",
+          "DamageSingular": "Damage",
+          "AllDamage": "All Damage"
+        }
+      },
+
+      "Runes": {
+        "effectNameIncludes": {
+          "RuneOf": "rune of",
+          "Temporary": "temporary"
+        },
+
+        "RemovedEffectTemporaryRuneDisabled": "Removed \"{effectName}\" effect from Actor \"{actorName}\" and Item \"${itemName}\". It was Temporary Rune that got disabled. {itemDamaged}",
+        "Weapon": "Weapon",
+        "Item": "Item",
+        "Received1Damage": "received 1 Damage",
+        "AndGotUnequipped": "and got unequipped because of it",
+        "ItsNowImprovisedWeapon": "it's now considered an Improvised Weapon",
+        "ItemGotDamaged": "Item got Damaged",
+
+        "ArmourCouldNotBeDamagedMore": "Armour couldn't be damaged more",
+        "ArmourReceived1DamageOnLocation": "Armour received 1 Damage on {locationName}",
+
+        "ItemDamagedInName": "damaged"
+      }
+    }
+  }
+}

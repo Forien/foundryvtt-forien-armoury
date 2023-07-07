@@ -18,7 +18,7 @@ export default class ForienArmoury {
     this._bindHooks();
     this._preloadTemplates();
 
-    Utility.notify("Module initialized!");
+    Utility.notify("Module initialized!", {consoleOnly: true});
   }
 
   /**
@@ -28,21 +28,21 @@ export default class ForienArmoury {
     this.runes.bindHooks();
     this.itemRepair.bindHooks();
 
-    Utility.notify("Hooks registered.");
+    Utility.notify("Hooks registered.", {consoleOnly: true});
   }
 
   /**
    * @private
    */
   async _preloadTemplates() {
-      Utility.notify("Preloading Templates.")
+      Utility.notify("Preloading Templates.", {consoleOnly: true})
       let itemRepairTemplates = this.itemRepair.getTemplates();
       let templates = [...itemRepairTemplates];
 
       templates = templates.map(Utility.getTemplate);
 
       loadTemplates(templates).then(() => {
-        Utility.notify("Templates preloaded.")
+        Utility.notify("Templates preloaded.", {consoleOnly: true})
       });
   }
 }
