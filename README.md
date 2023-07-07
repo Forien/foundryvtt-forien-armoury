@@ -2,7 +2,7 @@
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/forien/foundryvtt-forien-armoury?style=for-the-badge) 
 ![GitHub Releases](https://img.shields.io/github/downloads/Forien/foundryvtt-forien-armoury/latest/total?style=for-the-badge)
 ![GitHub All Releases](https://img.shields.io/github/downloads/Forien/foundryvtt-forien-armoury/total?style=for-the-badge&label=Downloads+total)  
-**[Compatibility]**: *FoundryVTT* 11, *WFRP4e* 6.5.9    
+**[Compatibility]**: *Foundry VTT* **Version 11**, *WFRP4e* **v6.5.9**    
 **[Languages]**: *English*
 
 This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top  
@@ -50,25 +50,66 @@ Once installed, while in World using WFRP4e game system, enable Forien's Armoury
 
 ## Contents
 ### Features
-This module allows GMs to enable an "arrow reclamation feature", which allows for some portion of ammunition (arrows, bolts and sling bullets) to be returned to players after an encounter. Defaults to even rolls. Must be enabled.
+This Module adds some QoL and automation features, including mechanics that:
+* Allow for automatic removal of Temporary Runes when they get disabled (prefferably by `Times Up` Module). 
+  * Optionally allows for damaging an Item when Rune is removed (disabled by default).
+* Allow players to easily repair their equipment for free or for price, using Macro and clean, readable auto-updating Chat Card
+* Allow players to quickly check their progress through current Career and how far are they from completing it.
+* Allow players to reclaim portion of ammunition (arrows, bolts or sling bullets) after an encounter. Defaults to even rolls. Disabled by default.
 
-* 2 projectile Qualities and 3 projectile Flaws are also added to work with the feature
-
-
-### Compendiums
-Module contains single Compendium pack containing at the moment 34 items.
-
-* Added Gambesons as an alternative to Leather armour
-* Rebalanced Leather armour (is more expensive than Gambesons, but Durable)
-* Added boiled Leather Bracers
-* Added Cuirass (plate torso armour)
-* Added Breastplate (covers front only)
+/*** * 2 projectile Qualities and 3 projectile Flaws are also added to work with the feature  ***/
 
 
-* Added various Arrow types: Bodkin, Hunting, Leaf, Military, Shoddy — where Military replaces vanilla Arrow
-* Added various Bolt types: Bodkin, Broad, Hunting, Needle, Standard — where Standard replaces vanilla Bolt
-* Added Cracker Bullet for Sling (Blast 2 ammo)
-* Added generic Ingredient item entities, one for each tradition.
+### Items
+Module contains single Compendium pack containing over 80 entries (items and effects).
+
+* Added 8 new **Careers** across 2 new Career Paths
+  * Runesmith
+  * Runebound Ranger
+* Added 35 Runes implemented as working Active Effects
+* Added 1 new **Skill** (Runecraft)
+* Added 2 new **Talents** (Dawi Runes, Runebound Magic)
+* Added 1 new **Trait** (Point Blank Rule)
+* Added 11 new and rebalanced **Armour** items:
+  * Added Gambesons as an alternative to Leather armour
+  * Rebalanced Leather armour (is more expensive than Gambesons, but Durable)
+  * Added Cuirass (plate torso armour)
+  * Added Breastplate (covers front only)
+* Added 4 new **Ammunition** types:
+  * Barbed Bolt
+  * Bodkin Bolt
+  * Sharp Stick (Bolt)
+  * Improved Bullet and Powder
+* Added 5 new **Weapons**:
+  * Pickaxe
+  * Short Spear
+  * Spear
+  * Spear (2h)
+  * Torch
+* Added 2 new **Accessories**:
+  * Ring of See Invisibility
+  * Ring of Smell
+* Added 8 new **Containers**
+  * 3 Quivers, 3 Powder Horns, 2 Bags
+* Added 10 new generic **Ingredients** for each Arcane Lore
+* Added some miscellaneous **Trappings**
+
+### Journals
+Module contains single Compendium Pack containing two Journals:
+
+* Forien's Homerules — this Journal contains my own Homerules, as well as rules for some of the Items included in this Module.
+* Forien's Careers — this Journal only contains detailed descriptions for Careers included with this Module.  
+
+### Macros
+Module contains a single Compendium Pack containing 9 Macros:
+
+* GM Macro to quickly set Infighting on target Tokens
+* GM Macros to quickly set selected tokens' dispositions
+* Player Macro to check their Career progression
+* Player Macros to check for their Damaged Equipment
+* Player Macro to generate specific Ingredient for, and based on a specific Spell
+* Player Macro to quickly open a WFRP4e Item Browser
+
 
 ## Recommended 3rd Party Modules
 * [Times Up](https://foundryvtt.com/packages/times-up) — Allows for automatic disabling of effects, especially useful for Temporary Runes introduced in Forien's Armoury
