@@ -70,6 +70,13 @@ Module contains single Compendium pack containing at the moment 34 items.
 * Added Cracker Bullet for Sling (Blast 2 ammo)
 * Added generic Ingredient item entities, one for each tradition.
 
+## Recommended 3rd Party Modules
+* [Times Up](https://foundryvtt.com/packages/times-up)
+* [Active Token Effects](https://foundryvtt.com/packages/ATL)
+
+### Other suggested modules
+* [DFreds](https://foundryvtt.com/packages/dfreds-effects-panel)
+
 
 ## Future plans
 
