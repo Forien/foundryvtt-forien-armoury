@@ -1,0 +1,34 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of the Furnace (Permanent)",
+  "_id": "ABXyOPDXVrfGVDv1",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "update",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "let ablaze = this.actor.hasCondition(\"ablaze\");\n\nif (ablaze) {\n  let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.effect');\n\n  ablaze.delete();\n  ui.notifications?.notify(`<strong>${name}</strong>  ${effect}`);\n}"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!VZyMhFCFlkPZ47J8.ABXyOPDXVrfGVDv1"
+}

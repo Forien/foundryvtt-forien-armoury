@@ -1,0 +1,38 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+  "transfer": true,
+  "name": "Master Rune of Swiftness (Temporary)",
+  "_id": "p3qLFQxL85HhqeC8",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "prepareItem",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.item?._id === this.item?.id) {\n  args.item.system.qualities.value.push({name: \"fast\"});\n}",
+      "promptItem": false
+    },
+    "core": {
+      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.PE6EPbkyk3UirW9z.ActiveEffect.GIzBYIlrTnG7nBa0"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!PE6EPbkyk3UirW9z.p3qLFQxL85HhqeC8"
+}

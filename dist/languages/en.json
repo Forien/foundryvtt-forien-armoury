@@ -53,6 +53,18 @@
         "MasterRuneOfBreaking": {
           "name": "Master Rune of Breaking",
           "effect": "you may perform an Opposed Strength Test against your opponent. If you win, your opponent’s weapon breaks."
+        },
+        "RuneOfFate": {
+          "name": "Rune of Fate",
+          "effect": "negated all incoming Damage, because you would drop down to 0 Wounds."
+        },
+        "RuneOfTheFurnace": {
+          "name": "Rune of the Furnace",
+          "effect": "negated Ablaze Condition."
+        },
+        "RuneOfLuck": {
+          "name": "Rune of Luck",
+          "effect": "While this Item is equipped, gain 1 level of {luck} Talent."
         }
       }
     }

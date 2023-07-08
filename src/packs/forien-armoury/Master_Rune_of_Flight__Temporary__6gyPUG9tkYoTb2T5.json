@@ -1,0 +1,44 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+  "transfer": true,
+  "name": "Master Rune of Flight (Temporary)",
+  "_id": "6gyPUG9tkYoTb2T5",
+  "changes": [
+    {
+      "key": "system.characteristics.bs.modifier",
+      "mode": 2,
+      "value": "30"
+    }
+  ],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 6,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "prepareItem",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.item?._id === this.item?.id) {\n    args.item.system.range.value = \"24\";\n    args.item.system.modeOverride.value = \"ranged\";\n    args.item.system.skill.value = \"Ranged (Throwing)\";\n    args.item.system.consumesAmmo.value = false;\n}",
+      "promptItem": false
+    },
+    "core": {
+      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.PE6EPbkyk3UirW9z.ActiveEffect.GIzBYIlrTnG7nBa0"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!PE6EPbkyk3UirW9z.6gyPUG9tkYoTb2T5"
+}

@@ -1,0 +1,45 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+  "transfer": true,
+  "name": "Master Rune of Snorri Spangelhelm (Permanent)",
+  "_id": "CnyQtehyIA6J9l02",
+  "changes": [
+    {
+      "key": "system.characteristics.ws.modifier",
+      "mode": 2,
+      "value": "30",
+      "priority": null
+    }
+  ],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "",
+      "promptItem": false
+    },
+    "core": {
+      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.PE6EPbkyk3UirW9z.ActiveEffect.GIzBYIlrTnG7nBa0"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!PE6EPbkyk3UirW9z.CnyQtehyIA6J9l02"
+}
