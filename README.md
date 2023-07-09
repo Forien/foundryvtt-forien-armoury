@@ -33,6 +33,8 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
 * Added new type of Magic for Runebound Rangers
 
 
+
+
 ## Installation
 
 ### Recommended: Install via FoundryVTT
@@ -48,6 +50,8 @@ Once installed, while in World using WFRP4e game system, enable Forien's Armoury
 3. While in World using WFRP4e game system, enable Forien's Armoury module
 
 
+
+
 ## Contents
 ### Features
 This Module adds some QoL and automation features, including mechanics that:
@@ -56,8 +60,6 @@ This Module adds some QoL and automation features, including mechanics that:
 * Allow players to easily repair their equipment for free or for price, using Macro and clean, readable auto-updating Chat Card
 * Allow players to quickly check their progress through current Career and how far are they from completing it.
 * Allow players to reclaim portion of ammunition (arrows, bolts or sling bullets) after an encounter. Defaults to even rolls. Disabled by default.
-
-/*** * 2 projectile Qualities and 3 projectile Flaws are also added to work with the feature  ***/
 
 
 ### Items
@@ -94,11 +96,13 @@ Module contains single Compendium pack containing over 80 entries (items and eff
 * Added 10 new generic **Ingredients** for each Arcane Lore
 * Added some miscellaneous **Trappings**
 
+
 ### Journals
 Module contains single Compendium Pack containing two Journals:
 
 * Forien's Homerules — this Journal contains my own Homerules, as well as rules for some of the Items included in this Module.
 * Forien's Careers — this Journal only contains detailed descriptions for Careers included with this Module.  
+
 
 ### Macros
 Module contains a single Compendium Pack containing 9 Macros:
@@ -111,6 +115,8 @@ Module contains a single Compendium Pack containing 9 Macros:
 * Player Macro to quickly open a WFRP4e Item Browser
 
 
+
+
 ## Recommended 3rd Party Modules
 * [Times Up](https://foundryvtt.com/packages/times-up) — Allows for automatic disabling of effects, especially useful for Temporary Runes introduced in Forien's Armoury
 * [Active Token Effects](https://foundryvtt.com/packages/ATL) — Allows to use presets such as "torch" etc. for Lighting items 
@@ -119,10 +125,12 @@ Module contains a single Compendium Pack containing 9 Macros:
 * [DFreds Effects Panel](https://foundryvtt.com/packages/dfreds-effects-panel) — Isn't specifically linked to Forien's Armoury in any way, but provides nice and clean effects display with ability to toggle them, so I recommend trying it 
 
 
+
+
 ## Future plans
 
 ### Features
-* 
+* Easy to use UI for creating runic items
 
 ### Content
 * 
@@ -130,13 +138,20 @@ Module contains a single Compendium Pack containing 9 Macros:
 *If you have **any** suggestion or idea on new contents, hit me up on Discord!*
 
 
+
+
 ## Contact
 
 If you wish to contact me for any reason, reach me out on Discord using my tag: `forien`
 
+
+
+
 ## Support
 
 If you wish to support me, please consider [becoming my Patreon](https://www.patreon.com/forien) or donating [through Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6P2RRX7HVEMV2&source=url). Thanks!
+
+
 
 
 ## Acknowledgments
@@ -148,6 +163,8 @@ _Disclaimer: I kept all acknowledgments, even if their respective work was lost 
 * Thanks to [DasSauerkraut](https://github.com/DasSauerkraut) for allowing me to integrate compendium from his [Gerwin Waffenhalter’s Magnificent Weapons Gallery](https://github.com/DasSauerkraut/wfrp-gwmwg) into my module
 * Thanks to LeRatierBretonnien and Gharazel for providing French translation! 
 * Thanks to ElCamino for providing German translation!
+
+
 
 
 ## License

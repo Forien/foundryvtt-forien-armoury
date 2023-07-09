@@ -7,8 +7,7 @@
     {
       "key": "ATL.preset",
       "mode": 2,
-      "value": "torch",
-      "priority": null
+      "value": "torch"
     }
   ],
   "disabled": false,
@@ -27,7 +26,7 @@
   "flags": {
     "wfrp4e": {
       "effectTrigger": "",
-      "effectApplication": "actor",
+      "effectApplication": "equipped",
       "hide": false,
       "preventDuplicateEffects": false
     },

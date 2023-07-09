@@ -37,6 +37,7 @@ export default class TemporaryRunes {
     await item.deleteEmbeddedDocuments("ActiveEffect", [itemEffect._id]);
 
     let itemDamaged = await this.damageFromRune(item, actor);
+    console.log(itemDamaged);
     let msg = game.i18n.format('Forien.Armoury.Runes.RemovedEffectTemporaryRuneDisabled', {effectName: effect.name, actorName:actor.name, itemName: item.name});
 
     return `${msg} ${itemDamaged}`;

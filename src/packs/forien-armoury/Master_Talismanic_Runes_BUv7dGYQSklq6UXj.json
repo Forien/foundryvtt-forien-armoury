@@ -1,5 +1,5 @@
 {
-  "name": "Talismanic Runes",
+  "name": "Master Talismanic Runes",
   "type": "trapping",
   "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
   "system": {
@@ -60,19 +60,9 @@
     }
   },
   "effects": [
-    "vdHxUWCzrQwwkl5F",
-    "ABXyOPDXVrfGVDv1",
-    "z14tQJTUvGkWLp9C",
-    "4FNqO1L1hfgnhisU",
-    "7zY7AKHRLaTAGyNE",
-    "XgocVKbsL3tTQp97",
-    "vyrlzGAdppxyjydw",
-    "5pzeDFMgBWK5FMbs",
-    "M5BSkkepbE4SCrzk",
-    "i0GTHQefhwTQ2LEL",
-    "jwtzbHAmtHpQJ6fL"
+    "2yJmMuInI1M4GLAu",
+    "oVov3CH6XUrXpjtS"
   ],
-  "folder": "3OEI9PiGaa4rGQHy",
   "flags": {
     "core": {}
   },
@@ -81,14 +71,15 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688413119645,
-    "modifiedTime": 1688912361304,
+    "modifiedTime": 1688915404784,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
-  "_id": "VZyMhFCFlkPZ47J8",
-  "sort": 50000,
+  "folder": "3OEI9PiGaa4rGQHy",
+  "_id": "BUv7dGYQSklq6UXj",
+  "sort": 75000,
   "ownership": {
     "default": 0,
-    "aDepqlKkeOa13DWo": 3
+    "ZJyAmf2sKocHG1ud": 3
   },
-  "_key": "!items!VZyMhFCFlkPZ47J8"
+  "_key": "!items!BUv7dGYQSklq6UXj"
 }

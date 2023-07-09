@@ -36,7 +36,7 @@
           "Temporary": "temporary"
         },
 
-        "RemovedEffectTemporaryRuneDisabled": "Removed \"{effectName}\" effect from Actor \"{actorName}\" and Item \"{itemName}\". It was Temporary Rune that got disabled. {itemDamaged}",
+        "RemovedEffectTemporaryRuneDisabled": "Removed \"{effectName}\" effect from Actor \"{actorName}\" and Item \"{itemName}\". It was Temporary Rune that got disabled.",
         "Weapon": "Weapon",
         "Item": "Item",
         "Received1Damage": "received 1 Damage",
@@ -48,6 +48,11 @@
         "ArmourReceived1DamageOnLocation": "Armour received 1 Damage on {locationName}",
 
         "ItemDamagedInName": "damaged",
+
+        "EffectOf": "Effect of",
+
+        "MustSelectATarget": "You must select a target for {rune}.",
+        "TargetNotInRange": "Selected target is not in range for {rune}. Must be within {range} yards.",
 
 
         "MasterRuneOfBreaking": {
@@ -65,6 +70,20 @@
         "RuneOfLuck": {
           "name": "Rune of Luck",
           "effect": "While this Item is equipped, gain 1 level of {luck} Talent."
+        },
+        "RuneOfLuckTemporary": {
+          "name": "Rune of Luck (Temporary)",
+          "effect": "You can activate this Rune as an alternative or equivalent to using a Fortune point.",
+          "effectActivated": "Rune has been activated, you gain one of the effects of a Fortune point.",
+          "checkPrompt": "Check {journal} for details."
+        },
+        "RuneOfSpellbreaking": {
+          "name": "Rune of Spellbreaking",
+          "effect": "Use to immediately end any persistent spell within 12 yards. Additionally, if you are a Runesmith, you can instead attempt to Dispel any incoming spell and gain +20 modifier to that attempt. Activating this rune takes an Action."
+        },
+        "RuneOfSpelleating": {
+          "name": "Rune of Spelleating",
+          "effect": "Use to immediately end any persistent spell within 12 yards. Additionally, if you are a Runesmith, you can instead attempt to Dispel any incoming spell and gain +20 modifier to that attempt. If you succeed, the opposing caster can’t use that spell again within the next 24 hours. Activating this rune takes an Action."
         }
       }
     }

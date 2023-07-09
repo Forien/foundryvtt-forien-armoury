@@ -1,0 +1,38 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+  "transfer": true,
+  "name": "Master Rune of Balance (Permanent)",
+  "_id": "2yJmMuInI1M4GLAu",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "invoke",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "let target = Array.from(game.user.targets)[0]?.document;\nlet targetActor = target?.actor;\nlet token;\n\nif (this.actor.isToken) token = this.actor.token\nelse token = this.actor.getActiveTokens()[0]?.document\n\nif (!targetActor)\n  return ui.notifications.notify(game.i18n.format('Forien.Armoury.Runes.MustSelectATarget', {rune: this.effect.name}), 'warning')\n\nlet distance = canvas.grid.measureDistances([{\n  ray: new Ray({x: token.x, y: token.y}, {\n    x: target.x,\n    y: target.y\n  })\n}], {gridSpaces: true})[0]\n\nif (distance > 48)\n  return ui.notifications.notify(game.i18n.format('Forien.Armoury.Runes.TargetNotInRange', {\n    rune: this.effect.name,\n    range: 48\n  }), 'warning')\n\nlet effectOf = game.i18n.localize('Forien.Armoury.Runes.EffectOf');\nlet effectDuration = Number(this.actor.system.characteristics.wp.bonus) * 6;\n\nlet effectCopy = this.effect.toObject();\neffectCopy._id = undefined;\neffectCopy.origin = this.actor.uuid;\neffectCopy.name = `${effectOf} ${effectCopy.name}`\neffectCopy.flags.wfrp4e.effectTrigger = `prefillDialog`;\neffectCopy.flags.wfrp4e.script = `\nif (args.type == \"cast\" || args.type == \"channelling\")\n  args.prefillModifiers.modifier -= 20\n`\neffectCopy.duration.seconds = effectDuration;\n\ntargetActor.createEmbeddedDocuments(\"ActiveEffect\", [effectCopy])\ngame.user.updateTokenTargets([]);",
+      "reduceQuantity": false
+    },
+    "core": {
+      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.VZyMhFCFlkPZ47J8.ActiveEffect.ABXyOPDXVrfGVDv1"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!BUv7dGYQSklq6UXj.2yJmMuInI1M4GLAu"
+}
