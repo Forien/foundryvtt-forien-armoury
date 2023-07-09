@@ -84,6 +84,14 @@
         "RuneOfSpelleating": {
           "name": "Rune of Spelleating",
           "effect": "Use to immediately end any persistent spell within 12 yards. Additionally, if you are a Runesmith, you can instead attempt to Dispel any incoming spell and gain +20 modifier to that attempt. If you succeed, the opposing caster can’t use that spell again within the next 24 hours. Activating this rune takes an Action."
+        },
+        "MasterRuneOfDismay": {
+          "name": "Master Rune of Dismay",
+          "effect": "All enemies within 48 yards of the user must make a Willpower Test or suffer a @Condition[Stunned]{Stunned} Condition. Activation takes an Action, can only be used once per Encounter."
+        },
+        "MasterRuneOfSpite": {
+          "name": "Master Rune of Spite",
+          "effect": "Reduces all incoming Damage by 2, even if it ignores AP."
         }
       }
     }
