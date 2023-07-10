@@ -1,6 +1,15 @@
 {
   "Forien": {
     "Armoury": {
+      "Macros": {
+        "MustControlActor": "Must control the character you want to generate ingredients for.",
+        "SelectSpell": "Select spell to create ingredient",
+        "Generate": "Generate",
+        "Cancel": "Cancel",
+        "IngredientFor": "Ingredient for",
+        "AvailableSpells": "Available spells"
+      },
+
       "ItemRepair": {
         "MustControlActor": "Must control the character you want to repair items for.",
         "Repaired": "{name} has been repaired. Removed {repaired} damage from the item.",
@@ -109,6 +118,8 @@
       },
 
       "Runebound": {
+        "LoreName": "Runebound",
+
         "Tutor": {
           "Name": "Tutor",
           "Effect": "increased AP when struck by a bigger enemy by the amount proportional to difference in size ({num})."

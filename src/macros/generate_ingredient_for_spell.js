@@ -26,6 +26,9 @@ const loreIngredients = {
   witchcraft: "relq8BaanmuOaPEP"
 }
 
+if (!actor)
+  return ui.notifications.notify(game.i18n.localize('Forien.Armoury.Macros.MustControlActor'), 'warning')
+
 const spells = actor.itemCategories.spell;
 let options = "";
 
@@ -36,10 +39,10 @@ spells.forEach(spell => {
 })
 
 const dialog = new Dialog({
-  title: game.i18n.localize("Select spell to create ingredient"),
+  title: game.i18n.localize('Forien.Armoury.Macros.SelectSpell'),
   content: `<form>
               <div class="form-group">
-                <label>Available spells</label> 
+                <label>${game.i18n.localize('Forien.Armoury.Macros.AvailableSpells')}</label> 
 				<select name="spell-id" id="spell-id">
 				   ${options}
 				</select>
@@ -48,39 +51,42 @@ const dialog = new Dialog({
   buttons: {
     yes: {
       icon: "<i class='fas fa-check'></i>",
-      label: "Generate",
+      label: game.i18n.localize('Forien.Armoury.Macros.Generate'),
       callback: html => {
         let spellUuid = html.find("#spell-id").val()
         let spell = fromUuidSync(spellUuid);
-        console.log(spell);
         let lore = spell.lore.value;
-        console.log(lore);
         let uuid = compendium + loreIngredients[lore];
-        console.log(uuid);
         let baseIngredientPromise = fromUuid(uuid)
 
         baseIngredientPromise.then(baseIngredient => {
 
-          const origData = duplicate(baseIngredient);
+          const origData = baseIngredient.toObject();
           let ingredient;
           let template = {data: game.system.model.Item[baseIngredient.type]};
-          let ingredienData = mergeObject(template, origData);
-          console.log(ingredienData);
+          let ingredientData = mergeObject(template, origData);
 
+          let ingredientFor = game.i18n.localize('Forien.Armoury.Macros.IngredientFor');
+          ingredientData.name = `${ingredientFor} ${spell.name}`;
+          switch (lore.toLowerCase()) {
+            case 'hedgecraft':
+              ingredientData.system.price.bp = 5;
+              break;
+            case 'witchcraft':
+              ingredientData.system.price.bp = spell.cn.value;
+              break;
+            default:
+              ingredientData.system.price.ss = spell.cn.value;
+          }
+          ingredientData.system.spellIngredient.value = spell._id;
 
-          ingredienData.name = `Ingredient for ${spell.name}`;
-          ingredienData.system.price.ss = spell.cn.value;
-          ingredienData.system.spellIngredient.value = spell._id;
-
-          console.log(ingredienData);
-
-          Item.implementation.create(ingredienData, {renderSheet : true});
+          Item.implementation.create(ingredientData, {renderSheet : true});
         })
       }
     },
     no: {
       icon: "<i class='fas fa-times'></i>",
-      label: "Cancel"
+      label: game.i18n.localize('Forien.Armoury.Macros.Cancel')
     }
   },
   default: "yes"

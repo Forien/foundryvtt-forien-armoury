@@ -131,6 +131,7 @@ Module contains a single Compendium Pack containing 9 Macros:
 
 ### Features
 * Easy to use UI for creating runic items
+* Activatable Torches, that automatically turn into equippable weapon version of a torch
 
 ### Content
 * New Career Paths

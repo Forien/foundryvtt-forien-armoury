@@ -6,7 +6,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>Besides the club, the spear is probably the most ubiquitous weapon in the Old World. Almost all species and nations employ troops armed with spears, aside from the Dwarfs who tend to eschew polearms in general.</p>"
+      "value": "<p>Longer version of @UUID[Compendium.wfrp4e-up-in-arms.items.Item.HxOhYpAxqdcyoSje]{Spear} that requires both hands, but can be also used as a @UUID[Compendium.wfrp4e-up-in-arms.items.Item.Dk3jOsooVXua0GSi]{Quarterstaff}</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -145,8 +145,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1670305103470,
-    "modifiedTime": 1688214528624,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689007767600,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "UrA89QPP0urkYvZk",
   "_id": "FR6vIPKu7cQ4Mkr8",

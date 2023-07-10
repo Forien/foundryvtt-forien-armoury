@@ -15,16 +15,17 @@ export default class ForienArmoury {
   constructor() {
     Utility.init('forien-armoury',"Forien's Armoury");
 
-    this._bindHooks();
-    this._preloadTemplates();
+    this.#bindHooks();
+    this.#preloadTemplates();
+    this.#hackWFRP4e();
 
     Utility.notify("Module initialized!", {consoleOnly: true});
   }
 
   /**
-   * @private
+   * Binds hooks
    */
-  _bindHooks() {
+  #bindHooks() {
     this.runes.bindHooks();
     this.itemRepair.bindHooks();
 
@@ -32,9 +33,9 @@ export default class ForienArmoury {
   }
 
   /**
-   * @private
+   * Preloads templates used by the modules.
    */
-  async _preloadTemplates() {
+  async #preloadTemplates() {
       Utility.notify("Preloading Templates.", {consoleOnly: true})
       let itemRepairTemplates = this.itemRepair.getTemplates();
       let templates = [...itemRepairTemplates];
@@ -44,5 +45,16 @@ export default class ForienArmoury {
       loadTemplates(templates).then(() => {
         Utility.notify("Templates preloaded.", {consoleOnly: true})
       });
+  }
+
+  /**
+   * Not really hacking anything, just adding entries to system config for increased compatibility.
+   *
+   * For example, adding a Runebound lore so Runebound Spells can be searched via Item Browser
+   */
+  #hackWFRP4e() {
+    game.wfrp4e.config.magicLores.runebound = 'Forien.Armoury.Runebound.LoreName'
+
+    Utility.notify("WFRP4e patched.", {consoleOnly: true});
   }
 }

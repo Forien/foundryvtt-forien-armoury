@@ -1,12 +1,12 @@
 {
   "name": "Fax",
   "type": "spell",
-  "img": "systems/wfrp4e/icons/blank.png",
+  "img": "modules/forien-armoury/icons/spells/runebound-fax.webp",
   "system": {
     "description": {
       "type": "String",
       "label": "Description",
-      "value": ""
+      "value": "<p>You generate flames from your hand of varying intensity. If you want it can be as light as a candle, but you can also furl the flames at your enemies.</p><p>When used as an attack, this Spell is considered a Magic Missile of damage <strong>0 + 1d4</strong>, range of <strong>Willpower Bonus yards</strong> and hits all targets within the <strong>Willpower Bonus yards</strong> zone.</p><p>Critical hits with this spell generate an @Condition[Ablaze]{Ablaze} Condition on the Target.</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -16,7 +16,7 @@
     "lore": {
       "type": "String",
       "label": "Lore",
-      "value": "Runebound",
+      "value": "runebound",
       "effectString": ""
     },
     "range": {
@@ -96,8 +96,10 @@
       }
     }
   },
-  "effects": [],
-  "folder": "zCOg7ekSKXZDjrvJ",
+  "effects": [
+    "3OwDI0feSMOUM1gl"
+  ],
+  "folder": "7apgHuyWjP5G3i5r",
   "flags": {
     "core": {}
   },
@@ -106,11 +108,11 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688999622218,
-    "modifiedTime": 1689004511056,
+    "modifiedTime": 1689019272039,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "cCJMjFE3vIDZ71xo",
-  "sort": 100000,
+  "sort": 200000,
   "ownership": {
     "default": 0,
     "ZJyAmf2sKocHG1ud": 3

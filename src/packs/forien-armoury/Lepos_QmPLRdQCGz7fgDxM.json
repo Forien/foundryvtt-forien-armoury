@@ -1,12 +1,12 @@
 {
   "name": "Lepos",
   "type": "spell",
-  "img": "systems/wfrp4e/icons/blank.png",
+  "img": "modules/forien-armoury/icons/spells/runebound-lepos.webp",
   "system": {
     "description": {
       "type": "String",
       "label": "Description",
-      "value": ""
+      "value": "<p>You immediately charm an animal, making it friendly to you, or at the very least not hostile for a duration of this Spell.</p><p>Against creatures with an intelligence (for example goblins, humans etc.), the Target must Pass an <strong>Average (+20) Cool Test</strong>, or they will cease to be hostile against you or, if they were neutral, will slightly like you for a duration of the Spell. Cannot be used more than once per day on the same Target.</p><p>When used in Combat, failed <strong>Challenging (+0) Cool Test</strong> leads to Target getting a @Condition[Stunned]{Stunned} Condition. Cannot be used twice on the same Target in the same Encounter.</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -16,7 +16,7 @@
     "lore": {
       "type": "String",
       "label": "Lore",
-      "value": "Runebound",
+      "value": "runebound",
       "effectString": ""
     },
     "range": {
@@ -97,7 +97,7 @@
     }
   },
   "effects": [],
-  "folder": "zCOg7ekSKXZDjrvJ",
+  "folder": "7apgHuyWjP5G3i5r",
   "flags": {
     "core": {}
   },
@@ -106,11 +106,11 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688999622218,
-    "modifiedTime": 1689004511056,
+    "modifiedTime": 1689019272823,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "QmPLRdQCGz7fgDxM",
-  "sort": 400000,
+  "sort": 300000,
   "ownership": {
     "default": 0,
     "ZJyAmf2sKocHG1ud": 3

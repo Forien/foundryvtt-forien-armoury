@@ -2,12 +2,12 @@
   "folder": "aGq6qQUjoQUkTz0N",
   "name": "Runesmith Journeyman",
   "type": "career",
-  "img": "systems/wfrp4e/icons/blank.png",
+  "img": "modules/forien-armoury/icons/careers/runesmith-2.webp",
   "system": {
     "description": {
       "type": "String",
       "label": "Description",
-      "value": ""
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.e0UGR1lJQjdA68Er]{Runesmith}</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -89,8 +89,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688388710193,
-    "modifiedTime": 1688389141947,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689017861262,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "RjMBxGvdLgjq7c84",
   "sort": 100000,

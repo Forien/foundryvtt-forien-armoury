@@ -2,12 +2,12 @@
   "folder": "ACZwDoSnT2eWvGBp",
   "name": "Runebound Elder",
   "type": "career",
-  "img": "systems/wfrp4e/icons/blank.png",
+  "img": "modules/forien-armoury/icons/careers/runebound-ranger-4.webp",
   "system": {
     "description": {
       "type": "String",
       "label": "Description",
-      "value": ""
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.lV438LtXZvxHkmmK]{Runebound Ranger}</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -96,8 +96,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688251075008,
-    "modifiedTime": 1688388982192,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689017819864,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "ugz6JE1V0qfnQXXK",
   "sort": 500000,

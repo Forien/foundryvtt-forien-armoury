@@ -13,7 +13,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>Provides illumination for 10 yards when lit.</p><p>Requires Oil.</p>"
+      "value": "<p>Provides illumination for 10 yards when lit.</p><p>Requires @UUID[Compendium.wfrp4e-core.trappings.Item.Bal23aLiOmnht42h]{Oil}.</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -75,8 +75,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1663627495178,
-    "modifiedTime": 1688399013539,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689005426569,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "ALm6rINfMUWhLplE",
   "_id": "zNSQ7yMsqkz9JGbk",

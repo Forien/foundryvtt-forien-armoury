@@ -1,9 +1,7 @@
-async function setToken(disp)
+async function setToken(token, disp)
 {
-  await token.document.update({disposition: disp})
-  token.refresh(true)
+  await token.document.update({disposition: disp});
+  token.refresh(true);
 }
 
-if (!token) return;
-
-setToken(0);
+canvas.tokens.controlled.forEach(tkn => setToken(tkn, 0));

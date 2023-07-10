@@ -11,7 +11,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>Capacity 3 gallons.</p>"
+      "value": ""
     },
     "gmdescription": {
       "type": "String",
@@ -71,10 +71,10 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.5.9",
-    "coreVersion": "11.302",
+    "coreVersion": "11.304",
     "createdTime": 1663627495296,
-    "modifiedTime": 1687904725484,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689005585891,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "EMM7NeZE1NBThlpp",
   "_id": "jyphOMwPqNU9KgmS",

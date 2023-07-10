@@ -1,12 +1,12 @@
 {
   "name": "Tutor",
   "type": "spell",
-  "img": "systems/wfrp4e/icons/blank.png",
+  "img": "modules/forien-armoury/icons/spells/runebound-tutor.webp",
   "system": {
     "description": {
       "type": "String",
       "label": "Description",
-      "value": ""
+      "value": "<p>This Spell shrouds the Target in a protective barrier that helps to negate the size differences.</p><p>Whenever a Target of this Spell gets attacked by a bigger enemy, the Target <strong>gains 2 AP for every step of size difference</strong> between them and the Attacker.</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -16,7 +16,7 @@
     "lore": {
       "type": "String",
       "label": "Lore",
-      "value": "Runebound",
+      "value": "runebound",
       "effectString": ""
     },
     "range": {
@@ -99,7 +99,7 @@
   "effects": [
     "C4aFnulJN1sYHfi3"
   ],
-  "folder": "zCOg7ekSKXZDjrvJ",
+  "folder": "7apgHuyWjP5G3i5r",
   "flags": {
     "core": {}
   },
@@ -108,11 +108,11 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688999622218,
-    "modifiedTime": 1689004511056,
+    "modifiedTime": 1689019275517,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "tMwYo0P0xyR6rB7c",
-  "sort": 300000,
+  "sort": 700000,
   "ownership": {
     "default": 0,
     "ZJyAmf2sKocHG1ud": 3

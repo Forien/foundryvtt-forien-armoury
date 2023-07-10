@@ -13,7 +13,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>Provides illumination for 10 yards when lit.</p><p>Lasts 2 hours.</p>"
+      "value": "<p>A @UUID[Compendium.wfrp4e-core.trappings.Item.TW3etL7RIU2EWTXp]{Candle} prepared with ATL compatible Effects</p><p>Lasts 2 hours.</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -75,8 +75,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1663627495285,
-    "modifiedTime": 1688399043098,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689005446230,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "ALm6rINfMUWhLplE",
   "_id": "TW3etL7RIU2EWTXp",

@@ -1,12 +1,12 @@
 {
   "name": "Pulso",
   "type": "spell",
-  "img": "systems/wfrp4e/icons/blank.png",
+  "img": "modules/forien-armoury/icons/spells/runebound-pulso.webp",
   "system": {
     "description": {
       "type": "String",
       "label": "Description",
-      "value": ""
+      "value": "<p>When used against any kind of a creature, the target must oppose this Spell with a <strong>Strength Test</strong>, or be pushed away by the twice final SL yards.</p><p>If Spell crits, Target additionally gains a @Condition[Prone]{Prone} Condition.</p><p>This Spell <strong>deals no damage </strong>against living beings.</p><hr><p>When used against inanimate objects, it pushes them away (distance to be determined by GM based on size and mass of the object).</p><p>Can be also used against doors and walls. In this case, it's treated as <strong>Magic Missile with a +1d10 damage.</strong></p>"
     },
     "gmdescription": {
       "type": "String",
@@ -16,7 +16,7 @@
     "lore": {
       "type": "String",
       "label": "Lore",
-      "value": "Runebound",
+      "value": "runebound",
       "effectString": ""
     },
     "range": {
@@ -97,7 +97,7 @@
     }
   },
   "effects": [],
-  "folder": "zCOg7ekSKXZDjrvJ",
+  "folder": "7apgHuyWjP5G3i5r",
   "flags": {
     "core": {}
   },
@@ -106,11 +106,11 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688999622218,
-    "modifiedTime": 1689004511056,
+    "modifiedTime": 1689019273550,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "alIHMBXC7Ow21m51",
-  "sort": 500000,
+  "sort": 400000,
   "ownership": {
     "default": 0,
     "ZJyAmf2sKocHG1ud": 3

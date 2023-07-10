@@ -1,5 +1,5 @@
 {
-  "sort": 400000,
+  "sort": 850000,
   "name": "Combat Rules",
   "type": "text",
   "_id": "FgCTvVEEBZYysGn1",
@@ -29,8 +29,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688210301641,
-    "modifiedTime": 1688398486096,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689007624899,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_key": "!journal.pages!u2f4n9KXYBmBvZw3.FgCTvVEEBZYysGn1"
 }

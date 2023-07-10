@@ -14,7 +14,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<ul><li><p><strong>Reload Time:</strong> Reduce reload time by 1 to a minimum of 1.</p></li><li><p><strong>Misfires:</strong> Should the weapon misfire, the user can make a <strong>Challenging (+0) Ranged (Blackpowder or Engineering) Test</strong> to ignore the effects of misfire.</p></li></ul>"
+      "value": "<p>Standard Bullet with Improved Blackpowder.</p><p>Improved Blackpowder provides various benefits. @UUID[JournalEntry.4spGTAnh7qc2JDqY.JournalEntryPage.TwuMMg4t9QPf89rT#alchemical-products]{Read more}.</p><ul><li><p>Reduces reload time.</p></li><li><p>Makes it possible to ignore effects of a Misfire.</p></li></ul>"
     },
     "gmdescription": {
       "type": "String",
@@ -97,8 +97,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1663627495392,
-    "modifiedTime": 1688082787338,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689005817929,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "kTv9pr3I1AeRI4uH",
   "_id": "RN5mc97zk1Bd7jRx",
