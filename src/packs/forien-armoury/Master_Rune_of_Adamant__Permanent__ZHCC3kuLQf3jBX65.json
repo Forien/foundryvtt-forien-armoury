@@ -1,0 +1,45 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
+  "transfer": true,
+  "name": "Master Rune of Adamant (Permanent)",
+  "_id": "ZHCC3kuLQf3jBX65",
+  "changes": [
+    {
+      "key": "system.characteristics.t.modifier",
+      "mode": 2,
+      "value": "10",
+      "priority": null
+    }
+  ],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "",
+      "promptItem": false
+    },
+    "core": {
+      "sourceId": "Item.JV4MzBoyCXZBeKx5.ActiveEffect.jOxrcp7Jz2Uflabs"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!C0uWiIL7yEzK98IY.ZHCC3kuLQf3jBX65"
+}

@@ -68,7 +68,7 @@ Module contains single Compendium pack containing over 80 entries (items and eff
 * Added 8 new **Careers** across 2 new Career Paths
   * Runesmith
   * Runebound Ranger
-* Added 35 Runes implemented as working Active Effects
+* Added 32 Runes implemented as working Active Effects
 * Added 1 new **Skill** (Runecraft)
 * Added 2 new **Talents** (Dawi Runes, Runebound Magic)
 * Added 1 new **Trait** (Point Blank Rule)
@@ -133,9 +133,12 @@ Module contains a single Compendium Pack containing 9 Macros:
 * Easy to use UI for creating runic items
 
 ### Content
-* 
+* New Career Paths
+  * Monster Hunter – mundane alternative to the Runebound Ranger, trained to specialize in one of several fighting style
+  * Hunter Engineer – an Engineer that specializes in weapons, traps and gadgets designed to be effective against monsters
+* More dwarven Runes
 
-*If you have **any** suggestion or idea on new contents, hit me up on Discord!*
+*If you have **any** suggestion or idea on new contents, open an [Issue](https://github.com/Forien/foundryvtt-forien-armoury/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=) or hit me up on Discord!*
 
 
 

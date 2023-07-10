@@ -1,0 +1,38 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
+  "transfer": true,
+  "name": "Master Rune of Gromril (Temporary)",
+  "_id": "5QERb91AHPrchAHJ",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "prepareItem",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.item?._id === this.item?.id) {\n  let ap = args.item.system.AP;\n\n  for (let loc in ap) {\n    let location = args.item.system.AP[loc];\n    if (location > 0)\n      args.item.system.AP[loc] += 2;\n  };\n}",
+      "promptItem": false
+    },
+    "core": {
+      "sourceId": "Item.JV4MzBoyCXZBeKx5.ActiveEffect.jOxrcp7Jz2Uflabs"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!C0uWiIL7yEzK98IY.5QERb91AHPrchAHJ"
+}

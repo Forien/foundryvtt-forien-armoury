@@ -1,7 +1,7 @@
 {
-  "name": "Armour Runes",
-  "type": "ammunition",
-  "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+  "name": "Master Armour Runes",
+  "type": "armour",
+  "img": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
   "system": {
     "description": {
       "type": "String",
@@ -40,20 +40,24 @@
       "label": "Location",
       "value": 0
     },
-    "ammunitionType": {
-      "type": "String",
-      "label": "Ammunition Type",
-      "value": ""
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
     },
-    "range": {
-      "type": "String",
-      "label": "Range",
-      "value": ""
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": false
     },
-    "damage": {
+    "armorType": {
       "type": "String",
-      "label": "Damage",
-      "dice": "",
+      "label": "Armour Type",
+      "value": "softLeather"
+    },
+    "penalty": {
+      "type": "String",
+      "label": "Penalty",
       "value": ""
     },
     "qualities": {
@@ -70,10 +74,32 @@
       "type": "String",
       "label": "Special",
       "value": ""
+    },
+    "AP": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "APdamage": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
     }
   },
-  "effects": [],
-  "folder": "3OEI9PiGaa4rGQHy",
+  "effects": [
+    "odRqyNLmZgTXlX4K",
+    "5QERb91AHPrchAHJ",
+    "ZHCC3kuLQf3jBX65",
+    "iZ1DZl3WvphhhNaD",
+    "PNq1jKa4JqJrEw7M",
+    "ljYFR196YeYV4x7n"
+  ],
   "flags": {
     "core": {}
   },
@@ -81,15 +107,16 @@
     "systemId": "wfrp4e",
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
-    "createdTime": 1688413094944,
-    "modifiedTime": 1688748002654,
+    "createdTime": 1688943320462,
+    "modifiedTime": 1688948483137,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
-  "_id": "D53tsJf5rsxxII3X",
-  "sort": -100000,
+  "folder": "3OEI9PiGaa4rGQHy",
+  "_id": "C0uWiIL7yEzK98IY",
+  "sort": 25000,
   "ownership": {
     "default": 0,
-    "aDepqlKkeOa13DWo": 3
+    "ZJyAmf2sKocHG1ud": 3
   },
-  "_key": "!items!D53tsJf5rsxxII3X"
+  "_key": "!items!C0uWiIL7yEzK98IY"
 }

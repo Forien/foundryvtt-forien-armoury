@@ -55,10 +55,6 @@
         "TargetNotInRange": "Selected target is not in range for {rune}. Must be within {range} yards.",
 
 
-        "MasterRuneOfBreaking": {
-          "name": "Master Rune of Breaking",
-          "effect": "you may perform an Opposed Strength Test against your opponent. If you win, your opponent’s weapon breaks."
-        },
         "RuneOfFate": {
           "name": "Rune of Fate",
           "effect": "negated all incoming Damage, because you would drop down to 0 Wounds."
@@ -77,6 +73,14 @@
           "effectActivated": "Rune has been activated, you gain one of the effects of a Fortune point.",
           "checkPrompt": "Check {journal} for details."
         },
+        "RuneOfIron": {
+          "name": "Rune of Iron",
+          "effect": "Reduces all incoming Damage by 1, even if it ignores AP."
+        },
+        "RuneOfResistance": {
+          "name": "Rune of Resistance",
+          "effect": "Should you receive damage from an attack or effect that ignores AP and TB, you can perform a Toughness Test with -5 modifier for each Wound you are about to suffer. If you succeed, you suffer no Wounds."
+        },
         "RuneOfSpellbreaking": {
           "name": "Rune of Spellbreaking",
           "effect": "Use to immediately end any persistent spell within 12 yards. Additionally, if you are a Runesmith, you can instead attempt to Dispel any incoming spell and gain +20 modifier to that attempt. Activating this rune takes an Action."
@@ -85,6 +89,11 @@
           "name": "Rune of Spelleating",
           "effect": "Use to immediately end any persistent spell within 12 yards. Additionally, if you are a Runesmith, you can instead attempt to Dispel any incoming spell and gain +20 modifier to that attempt. If you succeed, the opposing caster can’t use that spell again within the next 24 hours. Activating this rune takes an Action."
         },
+
+        "MasterRuneOfBreaking": {
+          "name": "Master Rune of Breaking",
+          "effect": "you may perform an Opposed Strength Test against your opponent. If you win, your opponent’s weapon breaks."
+        },
         "MasterRuneOfDismay": {
           "name": "Master Rune of Dismay",
           "effect": "All enemies within 48 yards of the user must make a Willpower Test or suffer a @Condition[Stunned]{Stunned} Condition. Activation takes an Action, can only be used once per Encounter."
@@ -92,6 +101,10 @@
         "MasterRuneOfSpite": {
           "name": "Master Rune of Spite",
           "effect": "Reduces all incoming Damage by 2, even if it ignores AP."
+        },
+        "MasterRuneOfSteel": {
+          "name": "Master Rune of Steel",
+          "effect": "Non-magical weapons gain Undamaging flaw when striking wearer of this Armour."
         }
       }
     }

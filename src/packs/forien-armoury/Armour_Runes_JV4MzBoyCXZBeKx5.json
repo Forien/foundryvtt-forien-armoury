@@ -1,0 +1,126 @@
+{
+  "name": "Armour Runes",
+  "type": "armour",
+  "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": false
+    },
+    "armorType": {
+      "type": "String",
+      "label": "Armour Type",
+      "value": "softLeather"
+    },
+    "penalty": {
+      "type": "String",
+      "label": "Penalty",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "AP": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "APdamage": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    }
+  },
+  "effects": [
+    "ReMhmarovfkuJRSY",
+    "C25fFcCoWt7QygAk",
+    "5pobiT1OYmTsOt0x",
+    "5NtPlakn0hIeVnXM",
+    "a5X5l9cK1ixX7T0x",
+    "JhgWaE6GNfr7MFtc",
+    "XI5OwnmOJXBofQoL",
+    "BPBGiKpyfWwuP6EN",
+    "5ueEI9o6cfglxK15",
+    "rmY3T5ItD4NrVjMr"
+  ],
+  "folder": "3OEI9PiGaa4rGQHy",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688943320462,
+    "modifiedTime": 1688947491562,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "JV4MzBoyCXZBeKx5",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!items!JV4MzBoyCXZBeKx5"
+}
