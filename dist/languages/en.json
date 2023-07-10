@@ -106,6 +106,13 @@
           "name": "Master Rune of Steel",
           "effect": "Non-magical weapons gain Undamaging flaw when striking wearer of this Armour."
         }
+      },
+
+      "Runebound": {
+        "Tutor": {
+          "Name": "Tutor",
+          "Effect": "increased AP when struck by a bigger enemy by the amount proportional to difference in size ({num})."
+        }
       }
     }
   }
