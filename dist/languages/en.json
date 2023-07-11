@@ -124,6 +124,65 @@
           "Name": "Tutor",
           "Effect": "increased AP when struck by a bigger enemy by the amount proportional to difference in size ({num})."
         }
+      },
+
+      "Arrows": {
+        "applySlashing.Enable": "Enable rules for Slashing Quality",
+        "applySlashing.EnableHint": "If enabled, successful hits with Slashing weapon on part protected by no more than 1 AP will automatically add Bleeding Condition",
+
+        "SlashingApplied": "{hitLocation} Hit Location is protected by no more than 1 AP, applying Bleed condition. <br>{bleedAmtOld} -&gt; {bleedAmt}",
+        "Chat.ArrowsRecovered": "{0} found and recovered <strong>{2}</strong> {1}s that can be reused.",
+
+
+        "recovered": "{type} recovered",
+        "recoveredFuture": "{type} will be recovered after combat",
+        "Arrow": "Arrow",
+        "Bolt": "Bolt",
+        "Bullet": "Bullet",
+
+        "Properties.Slashing.Label": "Slashing",
+        "Properties.Recoverable.Label": "Recoverable",
+        "Properties.Unrecoverable.Label": "Unrecoverable",
+        "Properties.Sturdy.Label": "Sturdy",
+        "Properties.Frail.Label": "Frail",
+        "Properties.HardToFind.Label": "Hard To Find",
+
+        "Properties.Slashing.Description": "A  Slashing  weapon  inflicts  one  Bleeding  Condition  on successful hits on locations protected by no more than 1 Armour Point.",
+        "Properties.Recoverable.Description": "Projectile can be recovered even if it's ammunition group normally cannot. <br/><em>(requires feature enabled in settings)</em>",
+        "Properties.Unrecoverable.Description": "Projectile always perishes and can never be recovered.",
+        "Properties.Sturdy.Description": "Projectile is sturdy and easier to recover.<br/><b>Percentage rules</b>: rolls double, picks lower<br/><b>Success/Fail rules</b>: negates success/failure condition<br/><b>Other rules:</b> if not recovered, roll for Percentage.<br/><em>(requires feature enabled in settings)</em>",
+        "Properties.Frail.Description": "Projectile is very frail and easily breaks making it harder to recover.<br/><b>Percentage rules</b>: rolls double, picks higher<br/><b>Other rules:</b> if not recovered, roll for Percentage<br/><em>(requires feature enabled in settings)</em>",
+        "Properties.HardToFind.Description": "Projectile is very hard to find even in favorable conditions. If it was to be recovered, roll again for Percentage with –10 modifier."
+      },
+
+      "Settings": {
+        "Runes.Enable": "Item damage from Runes",
+        "Runes.EnableHint": "If enabled, Items will get damaged when a Temporary Rune engraved on them is disabled/used.",
+
+        "ArrowReclamation.Enable": "Enable ammo reclamation",
+        "ArrowReclamation.EnableHint": "Enable ammo reclamation upon range weapon test roll. When used during an encounter some projectiles will be returned after encounter ends.",
+
+        "ArrowReclamation.EnableArrows": "Allow to recover Arrows",
+        "ArrowReclamation.EnableArrowsHint": "Check to recover Bow ammunition",
+        "ArrowReclamation.EnableBolts": "Allow to recover Bolts",
+        "ArrowReclamation.EnableBoltsHint": "Check to recover Crossbow ammunition",
+        "ArrowReclamation.EnableBullets": "Allow to recover Bullets",
+        "ArrowReclamation.EnableBulletsHint": "Check to recover Sling ammunition",
+
+        "ArrowReclamation.Rule": "Arrow reclamation rule",
+        "ArrowReclamation.RuleHint": "Select rules by which decide if arrow can be reused. Word `critical` means both criticals and fumbles on the <b>main</b> Ranged Test roll.",
+
+        "ArrowReclamation.DefaultRule": "Ranged Attack rolled even",
+        "ArrowReclamation.SuccessRule": "Ranged Attack rolled even and was successful",
+        "ArrowReclamation.NoCritRule": "Ranged Attack rolled even, but not critical",
+        "ArrowReclamation.SuccessNoCritRule": "Ranged Attack rolled even, was successful, but not critical",
+        "ArrowReclamation.FailureRule": "Ranged Attack rolled even and failed",
+        "ArrowReclamation.FailureNoCritRule": "Ranged Attack rolled even, has failed, but not critical",
+        "ArrowReclamation.PercentageRule": "Separate roll using Percentage",
+        "ArrowReclamation.PercentageNoCritRule": "Separate roll using Percentage, without criticals",
+
+        "ArrowReclamation.Percentage": "Target percentage",
+        "ArrowReclamation.PercentageHint": "Set target percentage for rolling with certain Rules. Roll will succeed if d100 rolls less or equal to Target"
       }
     }
   }

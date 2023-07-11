@@ -2,37 +2,35 @@ import Utility from "./Utility.mjs";
 
 export default class ItemRepair {
 
-  static templates = {
-    chatMessage: "repair-chat-message.hbs",
-    repairItemEntry: "partials/repair-item-entry.hbs",
-    repairItemEntryWeapon: "partials/repair-item-weapon.hbs",
-    repairItemEntryArmour: "partials/repair-item-armour.hbs"
+  templates = {
+    chatMessage: 'repair-chat-message.hbs',
+    repairItemEntry: 'partials/repair-item-entry.hbs',
+    repairItemEntryWeapon: 'partials/repair-item-weapon.hbs',
+    repairItemEntryArmour: 'partials/repair-item-armour.hbs'
   }
 
-  static bindHooks() {
-    Hooks.on('renderChatLog', this._setChatListeners.bind(this));
+  bindHooks() {
+    Hooks.on('renderChatLog', this.#setChatListeners.bind(this));
   }
 
-  static getTemplates() {
+  getTemplates() {
     return Object.values(this.templates);
   }
 
   /**
    * @param log
    * @param html
-   * @private
    */
-  static _setChatListeners(log, html) {
-    html.on("click", ".chat-button.forien-repair-item", this._onRepairItem.bind(this));
+  #setChatListeners(log, html) {
+    html.on("click", ".chat-button.forien-repair-item", this.#onRepairItem.bind(this));
   }
 
 
   /**
    * @param {ItemWfrp4e} item
    * @param {{armour: String, item: String, location: String, price: String, repair: Number}} data
-   * @private
    */
-  static async _repairArmourItem(item, data) {
+  async #repairArmourItem(item, data) {
     let itemData = item.toObject();
 
     if (data.location === 'all') {
@@ -51,9 +49,8 @@ export default class ItemRepair {
   /**
    * @param {ItemWfrp4e} item
    * @param {{item: String, price: String, repair: Number}} data
-   * @private
    */
-  static async _repairWeaponItem(item, data) {
+  async #repairWeaponItem(item, data) {
     let itemData = item.toObject();
     itemData.system.damageToItem.value -= data.repair;
 
@@ -64,9 +61,8 @@ export default class ItemRepair {
 
   /**
    * @param event
-   * @private
    */
-  static async _onRepairItem(event) {
+  async #onRepairItem(event) {
     /**
      * @type {{armour: String, item: String, location: String, price: String, repair: Number, msg: String}}
      */
@@ -83,9 +79,9 @@ export default class ItemRepair {
     let repaired;
 
     if (data.armour && data.armour === 'true')
-      repaired = await this._repairArmourItem(item, data);
+      repaired = await this.#repairArmourItem(item, data);
     else
-      repaired = await this._repairWeaponItem(item, data);
+      repaired = await this.#repairWeaponItem(item, data);
 
     if (repaired) {
       if (paid) {
@@ -105,10 +101,9 @@ export default class ItemRepair {
 
   /**
    * @param {ItemWfrp4e} item
-   * @private
    * @return {Number}
    */
-  static _getPriceInD(item) {
+  #getPriceInD(item) {
     return Number(item.price.gc || 0) * 240 + Number(item.price.ss || 0) * 12 + Number(item.price.bp || 0);
   }
 
@@ -116,9 +111,8 @@ export default class ItemRepair {
    * @param {Number} amount
    * @param {boolean} paid
    * @return {string}
-   * @private
    */
-  static _getMoneyStringFromD(amount, paid) {
+  #getMoneyStringFromD(amount, paid) {
     if (!paid)
       return game.i18n.localize('Forien.Armoury.ItemRepair.Free');
 
@@ -152,7 +146,7 @@ export default class ItemRepair {
    * @return {number}
    * @private
    */
-  static _getMaxDamage(item) {
+  #getMaxDamage(item) {
     let regex = /\d{1,3}/gm;
 
     if (item.type === 'weapon')
@@ -165,7 +159,7 @@ export default class ItemRepair {
    * @param {ItemWfrp4e} item
    * @param {boolean} paid
    */
-  static checkWeaponDamage(item, paid) {
+  checkWeaponDamage(item, paid) {
     return this.checkTrappingDamage(item, paid);
   }
 
@@ -173,12 +167,12 @@ export default class ItemRepair {
    * @param {ItemWfrp4e} item
    * @param {boolean} paid
    */
-  static checkTrappingDamage(item, paid) {
-    let maxDamage = this._getMaxDamage(item)
+  checkTrappingDamage(item, paid) {
+    let maxDamage = this.#getMaxDamage(item)
     let damage = Number(item.damageToItem?.value || 0)
-    let price = this._getPriceInD(item);
-    let singleRepairCost = this._getMoneyStringFromD(price * 0.1, paid);
-    let repairCost = this._getMoneyStringFromD(price * 0.1 * damage, paid);
+    let price = this.#getPriceInD(item);
+    let singleRepairCost = this.#getMoneyStringFromD(price * 0.1, paid);
+    let repairCost = this.#getMoneyStringFromD(price * 0.1 * damage, paid);
 
     return {
       uuid: item.uuid,
@@ -197,13 +191,13 @@ export default class ItemRepair {
    * @param {ItemWfrp4e} item
    * @param {boolean} paid
    */
-  static checkArmourDamage(item, paid) {
-    let durable = this._getMaxDamage(item);
+  checkArmourDamage(item, paid) {
+    let durable = this.#getMaxDamage(item);
     let locationKeys = Object.keys(item.AP);
     let locations = [];
     let totalDamage = 0;
     let totalMaxDamage = 0;
-    let price = this._getPriceInD(item) * 0.1;
+    let price = this.#getPriceInD(item) * 0.1;
 
     for (let i in locationKeys) {
       let location = locationKeys[i];
@@ -219,7 +213,7 @@ export default class ItemRepair {
           damageToPayFor += 1;
 
         let locationLabel = game.i18n.localize(`WFRP4E.Locations.${location}`);
-        let localRepairCost = this._getMoneyStringFromD(price * damageToPayFor, paid);
+        let localRepairCost = this.#getMoneyStringFromD(price * damageToPayFor, paid);
         locations.push({
           name: location,
           label: locationLabel,
@@ -230,8 +224,8 @@ export default class ItemRepair {
         });
       }
     }
-    let singleRepairCost = this._getMoneyStringFromD(price, paid)
-    let repairCost = this._getMoneyStringFromD(price * totalDamage, paid)
+    let singleRepairCost = this.#getMoneyStringFromD(price, paid)
+    let repairCost = this.#getMoneyStringFromD(price * totalDamage, paid)
 
     return {
       uuid: item.uuid,
@@ -252,7 +246,7 @@ export default class ItemRepair {
    * @param {ItemWfrp4e[]} items
    * @param {boolean} paid
    */
-  static processWeapons(items = [], paid) {
+  processWeapons(items = [], paid) {
     return this.processTrappings(items, paid);
   }
 
@@ -260,7 +254,7 @@ export default class ItemRepair {
    * @param {ItemWfrp4e[]} items
    * @param {boolean} paid
    */
-  static processTrappings(items = [], paid) {
+  processTrappings(items = [], paid) {
     let damagedItems = [];
     items.forEach(item => {
       let damagedItem = this.checkTrappingDamage(item, paid);
@@ -275,7 +269,7 @@ export default class ItemRepair {
    * @param {ItemWfrp4e[]} items
    * @param {boolean} paid
    */
-  static processArmour(items = [], paid) {
+  processArmour(items = [], paid) {
     let damagedItems = [];
     items.forEach(item => {
       let damagedItem = this.checkArmourDamage(item, paid);
@@ -291,7 +285,7 @@ export default class ItemRepair {
    * @param {boolean} paid
    * @param {String} chatMessageId
    */
-  static async checkInventoryForDamage(actor, {paid = true, chatMessageId = null} = {}) {
+  async checkInventoryForDamage(actor, {paid = true, chatMessageId = null} = {}) {
     let templateData = {};
     templateData.armour = this.processArmour(actor.itemCategories.armour, paid);
     templateData.weapons = this.processWeapons(actor.itemCategories.weapon, paid);

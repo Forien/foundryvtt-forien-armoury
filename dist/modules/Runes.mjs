@@ -1,11 +1,11 @@
 import Utility from "./Utility.mjs";
 
 export default class TemporaryRunes {
-  static bindHooks() {
-    Hooks.on("updateActiveEffect", this._onEffectUpdate.bind(this));
+  bindHooks() {
+    Hooks.on("updateActiveEffect", this.#onEffectUpdate.bind(this));
   }
 
-  static _onEffectUpdate(effect, update, _data) {
+  #onEffectUpdate(effect, update, _data) {
     let effectName = effect.name.toLowerCase();
 
     const runeOf = game.i18n.localize('Forien.Armoury.Runes.effectNameIncludes.RuneOf');
@@ -21,7 +21,7 @@ export default class TemporaryRunes {
     }
   }
 
-  static async processRemovingRune(effect) {
+  async processRemovingRune(effect) {
     let actor = effect.parent;
     let itemUuid = effect.origin;
     /**
@@ -36,8 +36,11 @@ export default class TemporaryRunes {
 
     await item.deleteEmbeddedDocuments("ActiveEffect", [itemEffect._id]);
 
-    let itemDamaged = await this.damageFromRune(item, actor);
-    console.log(itemDamaged);
+    let itemDamaged = ``;
+    if (game.settings.get('forien-armoury', 'runes.damageEnable')) {
+      itemDamaged = await this.damageFromRune(item, actor);
+    }
+
     let msg = game.i18n.format('Forien.Armoury.Runes.RemovedEffectTemporaryRuneDisabled', {effectName: effect.name, actorName:actor.name, itemName: item.name});
 
     return `${msg} ${itemDamaged}`;
@@ -48,7 +51,7 @@ export default class TemporaryRunes {
    * @param {ActorWfrp4e} actor
    * @returns {Promise<string|`Armour received 1 Damage on ${string}.`|string>}
    */
-  static async damageFromRune(item, actor) {
+  async damageFromRune(item, actor) {
     switch (item.type) {
       case 'weapon':
         return await this.damageWeapon(item, actor);
@@ -64,7 +67,7 @@ export default class TemporaryRunes {
    * @param {ActorWfrp4e} actor
    * @returns {Promise<string>}
    */
-  static async damageWeapon(item, actor) {
+  async damageWeapon(item, actor) {
     let itemDamaged = ``;
 
     let itemData = item.toObject();
@@ -93,7 +96,7 @@ export default class TemporaryRunes {
    * @param {ActorWfrp4e} actor
    * @returns {Promise<`Armour received 1 Damage on ${string}.`|string>}
    */
-  static async damageArmour(item, actor) {
+  async damageArmour(item, actor) {
     let itemDamaged = ``;
 
     let durable = item.properties.qualities.durable;
@@ -134,7 +137,7 @@ export default class TemporaryRunes {
    * @param {ActorWfrp4e} actor
    * @returns {Promise<string>}
    */
-  static async damageTrapping(item, actor) {
+  async damageTrapping(item, actor) {
     let itemDamaged = ``;
 
     let itemData = item.toObject();

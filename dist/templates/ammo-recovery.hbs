@@ -1,0 +1,10 @@
+<div class="forien-armoury ammo-recovery">
+    {{#if img}}
+    <img src="{{img}}" title="{{name}}" alt="{{name}}" style="float: left; width: 55px; height: 55px; margin: 0 10px 10px 0; border: none" />
+    {{/if}}
+    {{#if ammo.img}}
+    <img src="{{ammo.img}}" title="{{ammo.name}}" alt="{{ammo.name}}" style="float: left; width: 55px; height: 55px; margin: 0 10px 10px 0"  />
+    {{/if}}
+
+    <div class="card-content">{{{localize 'FArmoury.Chat.ArrowsRecovered' name ammo.name quantity}}}</div>
+</div>
