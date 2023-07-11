@@ -7,6 +7,25 @@
   * Old version was made for Foundry 0.6 and WFRP4e 1.6
   * Leaving the old changelog as is, even though many things have been removed
 * Changed License to MIT
+* Added bunch of my own Houserules in a Journal
+* Added new careers:
+  * Dwarven Runesmiths
+  * Runebound Rangers
+* Added bunch of new items, weapons, trappings
+  * Generic Ingredients for each Tradition
+  * Gambeson type Armour
+  * Rebalanced Soft Leather Armour
+  * Changed Breastplate (only covers front)
+  * Added Cuirass (more like vanilla Breastplate)
+  * Powder Kegs
+  * Quivers and Powder Horns
+  * and more
+* Added fully automated Rune support for Runesmith
+  * Runes are effects on Items
+  * Temporary Runes when disabled will delete themselves from Actor and Item
+  * Optionally, Item will be damaged when Temporary Rune is removed from it
+  * For best effects, I suggest using [Times Up](https://foundryvtt.com/packages/times-up) by Tim Posney
+* Added new type of Magic for Runebound Rangers
 
 ## v0.X.X
 ### v0.2.X
