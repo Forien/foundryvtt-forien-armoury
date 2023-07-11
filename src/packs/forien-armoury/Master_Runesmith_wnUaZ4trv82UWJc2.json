@@ -2,12 +2,12 @@
   "folder": "aGq6qQUjoQUkTz0N",
   "name": "Master Runesmith",
   "type": "career",
-  "img": "systems/wfrp4e/icons/blank.png",
+  "img": "modules/forien-armoury/icons/careers/runesmith-4.webp",
   "system": {
     "description": {
       "type": "String",
       "label": "Description",
-      "value": ""
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.e0UGR1lJQjdA68Er]{Runesmith}</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -96,8 +96,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688388710193,
-    "modifiedTime": 1688389173080,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689017854087,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "wnUaZ4trv82UWJc2",
   "sort": 400000,

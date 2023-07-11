@@ -1,0 +1,34 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of Fortitude (Temporary)",
+  "_id": "C25fFcCoWt7QygAk",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Wearer of an Armour Engraved with this Rune gains +4 Wounds.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "woundCalc",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "args.wounds += 4"
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!JV4MzBoyCXZBeKx5.C25fFcCoWt7QygAk"
+}

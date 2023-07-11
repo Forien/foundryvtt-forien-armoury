@@ -1,0 +1,35 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of Spellbreaking (Temporary)",
+  "_id": "XgocVKbsL3tTQp97",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Activate this Rune to immediately end any persistent spell within 12 yards. Additionally, if Runesmith is holding this item, he can instead attempt to Dispel any incoming spell and gains +20 modifier to that attempt. Activating this rune takes an Action.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "invoke",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});",
+      "reduceQuantity": false
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!VZyMhFCFlkPZ47J8.XgocVKbsL3tTQp97"
+}

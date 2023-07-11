@@ -1,0 +1,41 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+  "transfer": true,
+  "name": "Master Rune of Flight (Permanent)",
+  "_id": "GIzBYIlrTnG7nBa0",
+  "changes": [
+    {
+      "key": "system.characteristics.bs.modifier",
+      "mode": 2,
+      "value": "30"
+    }
+  ],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 6,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Can only be inscribed on a hammer. Allows the hammer to be thrown and the wielder is treated as having Ranged (Throwing) skill. Hammer has a range of 24 yards and the thrower gains a +30 Ballistic Skill. Hammer returns to the thrower’s hand at the end of his round.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "prepareItem",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.item?._id === this.item?.id) {\n    args.item.system.range.value = \"24\";\n    args.item.system.modeOverride.value = \"ranged\";\n    args.item.system.skill.value = \"Ranged (Throwing)\";\n    args.item.system.consumesAmmo.value = false;\n}",
+      "promptItem": false
+    },
+    "forien-armoury": {
+      "isTemporary": false
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!PE6EPbkyk3UirW9z.GIzBYIlrTnG7nBa0"
+}

@@ -1,6 +1,15 @@
 {
   "Forien": {
     "Armoury": {
+      "Macros": {
+        "MustControlActor": "Must control the character you want to generate ingredients for.",
+        "SelectSpell": "Select spell to create ingredient",
+        "Generate": "Generate",
+        "Cancel": "Cancel",
+        "IngredientFor": "Ingredient for",
+        "AvailableSpells": "Available spells"
+      },
+
       "ItemRepair": {
         "MustControlActor": "Must control the character you want to repair items for.",
         "Repaired": "{name} has been repaired. Removed {repaired} damage from the item.",
@@ -36,7 +45,7 @@
           "Temporary": "temporary"
         },
 
-        "RemovedEffectTemporaryRuneDisabled": "Removed \"{effectName}\" effect from Actor \"{actorName}\" and Item \"${itemName}\". It was Temporary Rune that got disabled. {itemDamaged}",
+        "RemovedEffectTemporaryRuneDisabled": "Removed \"{effectName}\" effect from Actor \"{actorName}\" and Item \"{itemName}\". It was Temporary Rune that got disabled.",
         "Weapon": "Weapon",
         "Item": "Item",
         "Received1Damage": "received 1 Damage",
@@ -47,7 +56,158 @@
         "ArmourCouldNotBeDamagedMore": "Armour couldn't be damaged more",
         "ArmourReceived1DamageOnLocation": "Armour received 1 Damage on {locationName}",
 
-        "ItemDamagedInName": "damaged"
+        "ItemDamagedInName": "damaged",
+
+        "EffectOf": "Effect of",
+
+        "MustSelectATarget": "You must select a target for {rune}.",
+        "TargetNotInRange": "Selected target is not in range for {rune}. Must be within {range} yards.",
+
+
+        "RuneOfCleaving": {
+          "name": "Rune of Cleaving",
+          "effect": "+1 Damage"
+        },
+        "RuneOfFate": {
+          "name": "Rune of Fate",
+          "effect": "negated all incoming Damage, because you would drop down to 0 Wounds."
+        },
+        "RuneOfFire": {
+          "name": "Rune of Fire",
+          "effect": "+1 @Condition[Ablaze]{Ablaze} Condition."
+        },
+        "RuneOfFury": {
+          "name": "Rune of Fury",
+          "effect": "you may spend an Advantage or your remaining Move to make an extra attack."
+        },
+        "RuneOfGrudges": {
+          "name": "Rune of Grudges",
+          "effect": "On the <em>first Round of Combat</em>, nominate an enemy as the Target of this Rune. For the remainder of the Combat, <strong>you can reroll all failed attacks against the Target</strong>.",
+          "description": "Character wielding weapon Engraved with this Rune can, on the <em>first Round of Combat</em>, nominate an enemy as the Target of this Rune. For the remainder of the Combat, <strong>you can reroll all failed attacks against the Target</strong>."
+        },
+        "RuneOfTheFurnace": {
+          "name": "Rune of the Furnace",
+          "effect": "negated Ablaze Condition."
+        },
+        "RuneOfLuck": {
+          "name": "Rune of Luck",
+          "effect": "While this Item is equipped, gain 1 level of {luck} Talent."
+        },
+        "RuneOfLuckTemporary": {
+          "name": "Rune of Luck (Temporary)",
+          "effect": "You can activate this Rune as an alternative or equivalent to using a Fortune point.",
+          "effectActivated": "Rune has been activated, you gain one of the effects of a Fortune point.",
+          "checkPrompt": "Check {journal} for details."
+        },
+        "RuneOfIron": {
+          "name": "Rune of Iron",
+          "effect": "Reduces all incoming Damage by 1, even if it ignores AP."
+        },
+        "RuneOfMight": {
+          "name": "Rune of Might",
+          "effect": "SB doubled against enemies with TB equal to or higher than 5."
+        },
+        "RuneOfResistance": {
+          "name": "Rune of Resistance",
+          "effect": "Should you receive damage from an attack or effect that ignores AP and TB, you can perform a Toughness Test with -5 modifier for each Wound you are about to suffer. If you succeed, you suffer no Wounds."
+        },
+        "RuneOfSpeed": {
+          "name": "Rune of Speed",
+          "effect": "Character wielding weapon Engraved with this Rune adds a +1d10 to their Initiative Score during the Combat."
+        },
+        "RuneOfSpellbreaking": {
+          "name": "Rune of Spellbreaking",
+          "effect": "Use to immediately end any persistent spell within 12 yards. Additionally, if you are a Runesmith, you can instead attempt to Dispel any incoming spell and gain +20 modifier to that attempt. Activating this rune takes an Action."
+        },
+        "RuneOfSpelleating": {
+          "name": "Rune of Spelleating",
+          "effect": "Use to immediately end any persistent spell within 12 yards. Additionally, if you are a Runesmith, you can instead attempt to Dispel any incoming spell and gain +20 modifier to that attempt. If you succeed, the opposing caster can’t use that spell again within the next 24 hours. Activating this rune takes an Action."
+        },
+
+        "MasterRuneOfBreaking": {
+          "name": "Master Rune of Breaking",
+          "effect": "you may perform an Opposed Strength Test against your opponent. If you win, your opponent’s weapon breaks."
+        },
+        "MasterRuneOfDismay": {
+          "name": "Master Rune of Dismay",
+          "effect": "All enemies within 48 yards of the user must make a Willpower Test or suffer a @Condition[Stunned]{Stunned} Condition. Activation takes an Action, can only be used once per Encounter."
+        },
+        "MasterRuneOfSpite": {
+          "name": "Master Rune of Spite",
+          "effect": "Reduces all incoming Damage by 2, even if it ignores AP."
+        },
+        "MasterRuneOfSteel": {
+          "name": "Master Rune of Steel",
+          "effect": "Non-magical weapons gain Undamaging flaw when striking wearer of this Armour."
+        }
+      },
+
+      "Runebound": {
+        "LoreName": "Runebound",
+
+        "Tutor": {
+          "Name": "Tutor",
+          "Effect": "increased AP when struck by a bigger enemy by the amount proportional to difference in size ({num})."
+        }
+      },
+
+      "Arrows": {
+        "applySlashing.Enable": "Enable rules for Slashing Quality",
+        "applySlashing.EnableHint": "If enabled, successful hits with Slashing weapon on part protected by no more than 1 AP will automatically add Bleeding Condition",
+
+        "SlashingApplied": "{hitLocation} Hit Location is protected by no more than 1 AP, applying Bleed condition. <br>{bleedAmtOld} -&gt; {bleedAmt}",
+        "ChatArrowsRecovered": "{name} found and recovered <strong>{qty}</strong> {ammoName}s that can be reused.",
+
+
+        "recovered": "{type} recovered",
+        "recoveredFuture": "{type} will be recovered after combat",
+        "Arrow": "Arrow",
+        "Bolt": "Bolt",
+        "Bullet": "Bullet",
+
+        "Properties.Slashing.Label": "Slashing",
+        "Properties.Recoverable.Label": "Recoverable",
+        "Properties.Unrecoverable.Label": "Unrecoverable",
+        "Properties.Sturdy.Label": "Sturdy",
+        "Properties.Frail.Label": "Frail",
+        "Properties.HardToFind.Label": "Hard To Find",
+
+        "Properties.Slashing.Description": "A  Slashing  weapon  inflicts  one  Bleeding  Condition  on successful hits on locations protected by no more than 1 Armour Point.",
+        "Properties.Recoverable.Description": "Projectile can be recovered even if it's ammunition group normally cannot. <br/><em>(requires feature enabled in settings)</em>",
+        "Properties.Unrecoverable.Description": "Projectile always perishes and can never be recovered.",
+        "Properties.Sturdy.Description": "Projectile is sturdy and easier to recover.<br/><b>Percentage rules</b>: rolls double, picks lower<br/><b>Success/Fail rules</b>: negates success/failure condition<br/><b>Other rules:</b> if not recovered, roll for Percentage.<br/><em>(requires feature enabled in settings)</em>",
+        "Properties.Frail.Description": "Projectile is very frail and easily breaks making it harder to recover.<br/><b>Percentage rules</b>: rolls double, picks higher<br/><b>Other rules:</b> if not recovered, roll for Percentage<br/><em>(requires feature enabled in settings)</em>",
+        "Properties.HardToFind.Description": "Projectile is very hard to find even in favorable conditions. If it was to be recovered, roll again for Percentage with –10 modifier."
+      },
+
+      "Settings": {
+        "Runes.Enable": "Item damage from Runes",
+        "Runes.EnableHint": "If enabled, Items will get damaged when a Temporary Rune engraved on them is disabled/used.",
+
+        "ArrowReclamation.Enable": "Enable ammo reclamation",
+        "ArrowReclamation.EnableHint": "Enable ammo reclamation upon range weapon test roll. When used during an encounter some projectiles will be returned after encounter ends.",
+
+        "ArrowReclamation.EnableArrows": "Allow to recover Arrows",
+        "ArrowReclamation.EnableArrowsHint": "Check to recover Bow ammunition",
+        "ArrowReclamation.EnableBolts": "Allow to recover Bolts",
+        "ArrowReclamation.EnableBoltsHint": "Check to recover Crossbow ammunition",
+        "ArrowReclamation.EnableBullets": "Allow to recover Bullets",
+        "ArrowReclamation.EnableBulletsHint": "Check to recover Sling ammunition",
+
+        "ArrowReclamation.Rule": "Arrow reclamation rule",
+        "ArrowReclamation.RuleHint": "Select rules by which decide if arrow can be reused. Word `critical` means both criticals and fumbles on the <b>main</b> Ranged Test roll.",
+
+        "ArrowReclamation.DefaultRule": "Ranged Attack rolled even",
+        "ArrowReclamation.SuccessRule": "Ranged Attack rolled even and was successful",
+        "ArrowReclamation.NoCritRule": "Ranged Attack rolled even, but not critical",
+        "ArrowReclamation.SuccessNoCritRule": "Ranged Attack rolled even, was successful, but not critical",
+        "ArrowReclamation.FailureRule": "Ranged Attack rolled even and failed",
+        "ArrowReclamation.FailureNoCritRule": "Ranged Attack rolled even, has failed, but not critical",
+        "ArrowReclamation.PercentageRule": "Separate roll using Percentage",
+        "ArrowReclamation.PercentageNoCritRule": "Separate roll using Percentage, without criticals",
+
+        "ArrowReclamation.Percentage": "Target percentage",
+        "ArrowReclamation.PercentageHint": "Set target percentage for rolling with certain Rules. Roll will succeed if d100 rolls less or equal to Target"
       }
     }
   }

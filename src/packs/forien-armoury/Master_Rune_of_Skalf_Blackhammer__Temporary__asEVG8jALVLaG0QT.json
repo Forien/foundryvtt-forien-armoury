@@ -1,0 +1,35 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+  "transfer": true,
+  "name": "Master Rune of Skalf Blackhammer (Temporary)",
+  "_id": "asEVG8jALVLaG0QT",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Weapon Engraved with this Rune gains Impact Quality and +3 Damage. Lasts 1 minute",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "prepareItem",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.item?._id === this.item?.id) {\n    let regex = /\\d{1,3}/gm;\n    let damage = Number(regex.exec(args.item.system.damage.value)[0] || 0);\nconsole.log(args);\n    args.item.system.qualities.value.push({name: \"impact\"});\n    args.item.system.damage.value = args.item.system.damage.value.replace(damage, damage + 3);\n}",
+      "promptItem": false
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!PE6EPbkyk3UirW9z.asEVG8jALVLaG0QT"
+}

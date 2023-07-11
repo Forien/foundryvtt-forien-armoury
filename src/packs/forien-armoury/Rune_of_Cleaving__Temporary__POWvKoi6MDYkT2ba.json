@@ -1,5 +1,5 @@
 {
-  "icon": "modules/forien-armoury/icons/runes/weapon-rune.webp",
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
   "transfer": true,
   "name": "Rune of Cleaving (Temporary)",
   "_id": "POWvKoi6MDYkT2ba",
@@ -14,7 +14,7 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Attacks made with a weapon engraved with this Rune deal +1 Damage. Lasts 1 minute.",
   "origin": null,
   "statuses": [],
   "flags": {
@@ -23,13 +23,10 @@
       "effectApplication": "equipped",
       "hide": false,
       "preventDuplicateEffects": false,
-      "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n    args.damage += 1;\n    args.opposedTest.result.other.push(`<strong>Rune of Cleaving:</strong> +1 Damage.`);\n}"
+      "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);\n}"
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.2vfrPrMJrLFnVH5o"
-    },
-    "times-up": {
-      "isPassive": true
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": "#e25532",

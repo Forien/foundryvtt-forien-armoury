@@ -1,0 +1,34 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of Shielding (Temporary)",
+  "_id": "BPBGiKpyfWwuP6EN",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Non-magical ranged weapons used to attack a character wearing an Armour Engraved with this Rune suffer a -20 modifier on Hit Tests. Lasts 1 minute.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "targetPrefillDialog",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.item?.isRanged) {\n  args.prefillModifiers.modifier -= 20;\n}"
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!JV4MzBoyCXZBeKx5.BPBGiKpyfWwuP6EN"
+}

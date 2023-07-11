@@ -1,5 +1,5 @@
 {
-  "icon": "modules/forien-armoury/icons/runes/weapon-rune.webp",
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
   "transfer": true,
   "name": "Rune of Striking (Temporary)",
   "_id": "pc9iH0FaxbVLKPV4",
@@ -21,7 +21,7 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Weapon Engraved with this Rune grants whoever wields it additional +10 Weapon Skill. Lasts 1 minute.",
   "origin": null,
   "statuses": [],
   "flags": {
@@ -32,11 +32,8 @@
       "preventDuplicateEffects": false,
       "script": ""
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.2vfrPrMJrLFnVH5o"
-    },
-    "times-up": {
-      "isPassive": true
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": "#ff0000",

@@ -7,12 +7,12 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "test1"
+      "value": ""
     },
     "gmdescription": {
       "type": "String",
       "label": "Description",
-      "value": "test2"
+      "value": ""
     },
     "quantity": {
       "type": "Number",
@@ -49,7 +49,7 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688480096053,
-    "modifiedTime": 1688480501787,
+    "modifiedTime": 1688683532320,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "NGaBjbGOFihSbuXp",

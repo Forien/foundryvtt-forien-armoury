@@ -1,0 +1,35 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+  "transfer": true,
+  "name": "Master Rune of Swiftness (Temporary)",
+  "_id": "p3qLFQxL85HhqeC8",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Weapon Engraved with this Rune gains Fast Quality. Lasts 1 minute.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "prepareItem",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.item?._id === this.item?.id) {\n  args.item.system.qualities.value.push({name: \"fast\"});\n}",
+      "promptItem": false
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!PE6EPbkyk3UirW9z.p3qLFQxL85HhqeC8"
+}

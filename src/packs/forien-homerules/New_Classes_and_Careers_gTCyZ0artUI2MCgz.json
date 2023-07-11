@@ -10,7 +10,8 @@
   "image": {},
   "text": {
     "format": 1,
-    "content": "<h1>New Classes</h1><h2>Monster Hunters</h2><p><strong>Class Trappings:</strong> Cloak, Clothing, Hand Weapon, Pouch, Backpack containing Book (Beasts and Monsters)</p><h3>Class Careers</h3><ul><li><p>Runebound Ranger</p></li></ul><p></p><h1>New Careers</h1><h3>Runebound Ranger</h3><h3>Runesmith</h3><p></p><p></p>"
+    "content": "<h1>New Classes</h1><h2>Monster Hunters</h2><p>This class encompasses multiple Career Paths <em>(work-in-progress)</em> that work together under a \"Monster Hunter Guild\" which specializes in taking jobs related to hunting down various Monstrosities, both small like Goblins and huge like Basilisks.</p><p>Some jobs are taken from Alchemists needing special ingredients, other times it's a Monster that threatens a peaceful countryside village.</p><p><strong>Class Trappings:</strong> Cloak, Clothing, Hand Weapon, Pouch, Backpack containing Book (Beasts and Monsters)</p><h3>Class Careers</h3><ul><li><p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.lV438LtXZvxHkmmK]{Runebound Ranger}</p></li></ul><p></p><h1>New Careers</h1><h2>Academics</h2><h3>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.e0UGR1lJQjdA68Er]{Runesmith}</h3><h2>Monster Hunters</h2><h3>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.lV438LtXZvxHkmmK]{Runebound Ranger}</h3><p></p><p></p>",
+    "markdown": ""
   },
   "video": {
     "controls": true,
@@ -28,8 +29,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688398041909,
-    "modifiedTime": 1688398192412,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689018015387,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_key": "!journal.pages!u2f4n9KXYBmBvZw3.gTCyZ0artUI2MCgz"
 }

@@ -1,7 +1,7 @@
 {
   "name": "Talismanic Runes",
   "type": "trapping",
-  "img": "systems/wfrp4e/icons/blank.png",
+  "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
   "system": {
     "description": {
       "type": "String",
@@ -59,7 +59,19 @@
       "value": []
     }
   },
-  "effects": [],
+  "effects": [
+    "vdHxUWCzrQwwkl5F",
+    "ABXyOPDXVrfGVDv1",
+    "z14tQJTUvGkWLp9C",
+    "4FNqO1L1hfgnhisU",
+    "7zY7AKHRLaTAGyNE",
+    "XgocVKbsL3tTQp97",
+    "vyrlzGAdppxyjydw",
+    "5pzeDFMgBWK5FMbs",
+    "M5BSkkepbE4SCrzk",
+    "i0GTHQefhwTQ2LEL",
+    "jwtzbHAmtHpQJ6fL"
+  ],
   "folder": "3OEI9PiGaa4rGQHy",
   "flags": {
     "core": {}
@@ -69,11 +81,11 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688413119645,
-    "modifiedTime": 1688413161118,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689088509242,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "VZyMhFCFlkPZ47J8",
-  "sort": 300000,
+  "sort": 50000,
   "ownership": {
     "default": 0,
     "aDepqlKkeOa13DWo": 3

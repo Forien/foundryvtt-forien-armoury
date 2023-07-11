@@ -2,7 +2,7 @@
   "folder": "c6bIK3vGnIqNXscz",
   "name": "Runebound Magic",
   "type": "talent",
-  "img": "systems/wfrp4e/icons/blank.png",
+  "img": "modules/forien-armoury/icons/runebound-magic.webp",
   "system": {
     "description": {
       "type": "String",
@@ -45,8 +45,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688252626857,
-    "modifiedTime": 1688255330780,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689005200521,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "XK4JNjFfh6xqui0k",
   "sort": 0,

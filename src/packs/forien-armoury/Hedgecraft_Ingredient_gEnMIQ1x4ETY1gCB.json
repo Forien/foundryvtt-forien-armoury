@@ -28,7 +28,7 @@
       "label": "Price",
       "gc": "0",
       "ss": "0",
-      "bp": "0"
+      "bp": "5"
     },
     "availability": {
       "type": "String",
@@ -68,8 +68,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1687442881075,
-    "modifiedTime": 1688398958360,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689019359337,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "QsYznVMhRsZzLHm2",
   "_id": "gEnMIQ1x4ETY1gCB",

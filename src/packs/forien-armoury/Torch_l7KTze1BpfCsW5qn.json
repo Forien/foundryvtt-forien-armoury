@@ -13,7 +13,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>Provides illumination for 20 yards when lit.</p><p>Lasts 1 hour.</p>"
+      "value": "<p>Provides illumination for 20 yards when lit.</p><p>Lasts 1 hour.</p><p>For equippable, weapon version, check @UUID[Compendium.forien-armoury.forien-armoury.Item.84hccJzDfkfw3trc]{Torch (weapon)}.</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -75,8 +75,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1663627495285,
-    "modifiedTime": 1688399032740,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689007901339,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "ALm6rINfMUWhLplE",
   "_id": "l7KTze1BpfCsW5qn",

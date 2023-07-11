@@ -35,8 +35,8 @@
   font-size: var(--font-size-18);
 }
 .forien-armoury .item-repair-entry .repair-item-location .repair-item-location-header .damage {
-  float: right;
   font-family: CaslonAntique, serif;
+  color: var(--color-border-highlight);
 }
 .forien-armoury .item-repair-entry .repair-item-location .repair-item-location-body {
   padding-left: 6px;

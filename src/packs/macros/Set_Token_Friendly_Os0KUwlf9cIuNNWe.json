@@ -4,7 +4,7 @@
   "scope": "global",
   "author": "aDepqlKkeOa13DWo",
   "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
-  "command": "async function setToken(disp)\n{\n\tawait token.document.update({disposition: disp})\n\ttoken.refresh(true)\n}\n\nif (!token) return;\n\nsetToken(1);",
+  "command": "async function setToken(token, disp)\n{\n\tawait token.document.update({disposition: disp});\n\ttoken.refresh(true);\n}\n\ncanvas.tokens.controlled.forEach(tkn => setToken(tkn, 1));",
   "folder": "rJKAafA2UXxZbP3p",
   "sort": 300000,
   "ownership": {
@@ -21,8 +21,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1687706457494,
-    "modifiedTime": 1688152743036,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689019628612,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "Os0KUwlf9cIuNNWe",
   "_key": "!macros!Os0KUwlf9cIuNNWe"

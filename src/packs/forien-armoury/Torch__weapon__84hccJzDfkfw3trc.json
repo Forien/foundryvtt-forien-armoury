@@ -6,7 +6,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": ""
+      "value": "<p>Weapon version of @UUID[Compendium.forien-armoury.forien-armoury.Item.l7KTze1BpfCsW5qn]{Torch}.</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -134,8 +134,8 @@
     "systemVersion": "6.5.9",
     "coreVersion": "11.304",
     "createdTime": 1688215098490,
-    "modifiedTime": 1688215811694,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689007879736,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "84hccJzDfkfw3trc",
   "sort": 0,

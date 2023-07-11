@@ -1,0 +1,35 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+  "transfer": true,
+  "name": "Master Rune of Spite (Permanent)",
+  "_id": "46bUOQI2kouAYPOq",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Talisman Engraved with this Rune reduced damage from incoming attacks by 2. Works even against attacks that normally ignore Armour.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "preTakeDamage",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "let name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSpite.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSpite.effect');\n\nargs.totalWoundLoss-= 2;\nargs.extraMessages.push(`<strong>${name}:</strong> ${effect}.`);",
+      "reduceQuantity": false
+    },
+    "forien-armoury": {
+      "isTemporary": false
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!BUv7dGYQSklq6UXj.46bUOQI2kouAYPOq"
+}

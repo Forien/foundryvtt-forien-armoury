@@ -1,5 +1,5 @@
 {
-  "icon": "modules/forien-armoury/icons/runes/weapon-rune.webp",
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
   "transfer": true,
   "name": "Rune of Fury (Temporary)",
   "_id": "G9l7OAE88croafaV",
@@ -14,22 +14,19 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Wielder of a weapon engraved with this Rune gains a Furious Assault talent. Lasts 1 minute.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "calculateOpposedDamage",
       "effectApplication": "actor",
       "hide": false,
       "preventDuplicateEffects": false,
-      "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n    let text = `<strong>Rune of Fury:</strong> Once per Round, if you hit an opponent in close combat, you may immediately spend an Advantage or your Move to make an extra attack (assuming you have your Move remaining).`;\n    if (args.opposedTest.result.winner === \"attacker\") {\n        args.opposedTest.result.other.push(text);\n    }\n}\n"
+      "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.result.winner === \"attacker\") {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.effect');\n    let text = `<strong>${rune}:</strong> ${effect}`;\n    args.opposedTest.result.other.push(text);\n  }\n}\n"
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.Wz2fqtmfUqA8jmhB"
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": null,
