@@ -167,7 +167,7 @@ export default class ArrowReclamation {
     if (type === null) return;
 
     // define chat messages
-    type = game.i18n.localize('Forien.Armoury.' + type);
+    type = game.i18n.localize('Forien.Armoury.Arrows.' + type);
     let messageNow = game.i18n.format('Forien.Armoury.Arrows.recovered', {type});
     let messageFuture = game.i18n.format('Forien.Armoury.Arrows.recoveredFuture', {type});
 

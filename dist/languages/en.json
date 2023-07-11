@@ -131,7 +131,7 @@
         "applySlashing.EnableHint": "If enabled, successful hits with Slashing weapon on part protected by no more than 1 AP will automatically add Bleeding Condition",
 
         "SlashingApplied": "{hitLocation} Hit Location is protected by no more than 1 AP, applying Bleed condition. <br>{bleedAmtOld} -&gt; {bleedAmt}",
-        "Chat.ArrowsRecovered": "{0} found and recovered <strong>{2}</strong> {1}s that can be reused.",
+        "ChatArrowsRecovered": "{name} found and recovered <strong>{qty}</strong> {ammoName}s that can be reused.",
 
 
         "recovered": "{type} recovered",
