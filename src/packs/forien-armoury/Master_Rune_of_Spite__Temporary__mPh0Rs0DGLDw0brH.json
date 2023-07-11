@@ -14,13 +14,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Talisman Engraved with this Rune reduced damage from incoming attacks by 2. Works even against attacks that normally ignore Armour. Lasts 1 minute.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "preTakeDamage",
       "effectApplication": "equipped",
@@ -29,8 +26,8 @@
       "script": "let name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSpite.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSpite.effect');\n\nargs.totalWoundLoss-= 2;\nargs.extraMessages.push(`<strong>${name}:</strong> ${effect}.`);",
       "reduceQuantity": false
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.VZyMhFCFlkPZ47J8.ActiveEffect.ABXyOPDXVrfGVDv1"
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": null,

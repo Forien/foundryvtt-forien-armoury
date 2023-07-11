@@ -1,5 +1,5 @@
-2023/07/07-20:07:38.104 6cb4 Recovering log #3
-2023/07/07-20:07:38.104 6cb4 Level-0 table #5: started
-2023/07/07-20:07:38.117 6cb4 Level-0 table #5: 73798 bytes OK
-2023/07/07-20:07:38.125 6cb4 Delete type=0 #3
-2023/07/07-20:07:38.125 6cb4 Delete type=3 #2
+2023/07/11-17:17:03.442 9338 Recovering log #3
+2023/07/11-17:17:03.442 9338 Level-0 table #5: started
+2023/07/11-17:17:03.456 9338 Level-0 table #5: 96865 bytes OK
+2023/07/11-17:17:03.464 9338 Delete type=0 #3
+2023/07/11-17:17:03.464 9338 Delete type=3 #2

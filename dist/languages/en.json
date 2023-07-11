@@ -64,9 +64,26 @@
         "TargetNotInRange": "Selected target is not in range for {rune}. Must be within {range} yards.",
 
 
+        "RuneOfCleaving": {
+          "name": "Rune of Cleaving",
+          "effect": "+1 Damage"
+        },
         "RuneOfFate": {
           "name": "Rune of Fate",
           "effect": "negated all incoming Damage, because you would drop down to 0 Wounds."
+        },
+        "RuneOfFire": {
+          "name": "Rune of Fire",
+          "effect": "+1 @Condition[Ablaze]{Ablaze} Condition."
+        },
+        "RuneOfFury": {
+          "name": "Rune of Fury",
+          "effect": "you may spend an Advantage or your remaining Move to make an extra attack."
+        },
+        "RuneOfGrudges": {
+          "name": "Rune of Grudges",
+          "effect": "On the <em>first Round of Combat</em>, nominate an enemy as the Target of this Rune. For the remainder of the Combat, <strong>you can reroll all failed attacks against the Target</strong>.",
+          "description": "Character wielding weapon Engraved with this Rune can, on the <em>first Round of Combat</em>, nominate an enemy as the Target of this Rune. For the remainder of the Combat, <strong>you can reroll all failed attacks against the Target</strong>."
         },
         "RuneOfTheFurnace": {
           "name": "Rune of the Furnace",
@@ -86,9 +103,17 @@
           "name": "Rune of Iron",
           "effect": "Reduces all incoming Damage by 1, even if it ignores AP."
         },
+        "RuneOfMight": {
+          "name": "Rune of Might",
+          "effect": "SB doubled against enemies with TB equal to or higher than 5."
+        },
         "RuneOfResistance": {
           "name": "Rune of Resistance",
           "effect": "Should you receive damage from an attack or effect that ignores AP and TB, you can perform a Toughness Test with -5 modifier for each Wound you are about to suffer. If you succeed, you suffer no Wounds."
+        },
+        "RuneOfSpeed": {
+          "name": "Rune of Speed",
+          "effect": "Character wielding weapon Engraved with this Rune adds a +1d10 to their Initiative Score during the Combat."
         },
         "RuneOfSpellbreaking": {
           "name": "Rune of Spellbreaking",

@@ -1,5 +1,5 @@
 {
-  "icon": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+  "icon": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
   "transfer": true,
   "name": "Rune of Shielding (Permanent)",
   "_id": "XI5OwnmOJXBofQoL",
@@ -14,13 +14,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Non-magical ranged weapons used to attack a character wearing an Armour Engraved with this Rune suffer a -20 modifier on Hit Tests.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "targetPrefillDialog",
       "effectApplication": "equipped",
@@ -28,8 +25,8 @@
       "preventDuplicateEffects": false,
       "script": "if (args.item?.isRanged) {\n  args.prefillModifiers.modifier -= 20;\n}"
     },
-    "core": {
-      "sourceId": "Item.JV4MzBoyCXZBeKx5.ActiveEffect.jOxrcp7Jz2Uflabs"
+    "forien-armoury": {
+      "isTemporary": false
     }
   },
   "tint": null,

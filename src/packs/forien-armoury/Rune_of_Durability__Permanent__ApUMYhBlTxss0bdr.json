@@ -14,7 +14,7 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Weapon Engraved with this Rune gains Unbreakable Quality.",
   "origin": null,
   "statuses": [],
   "flags": {
@@ -26,11 +26,8 @@
       "script": "if (args.item?._id === this.item?.id) {\n  args.item.qualities.value.push({name: \"unbreakable\", value: null});\n}",
       "promptItem": false
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.2vfrPrMJrLFnVH5o"
-    },
-    "times-up": {
-      "isPassive": true
+    "forien-armoury": {
+      "isTemporary": false
     }
   },
   "tint": "#ff0000",

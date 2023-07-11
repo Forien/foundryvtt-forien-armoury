@@ -14,13 +14,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Can be activated only once. When activated, counts as if the owner used a Fortune Point.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "invoke",
       "effectApplication": "equipped",
@@ -29,8 +26,8 @@
       "script": "let fortuneJournal = `@UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.pa22HaRw1OBBQaDg#spending-fortune]{Spending Fortune}`;\nlet name = game.i18n.localize('Forien.Armoury.Runes.RuneOfLuckTemporary.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfLuckTemporary.effectActivated');\nlet checkPrompt = game.i18n.format('Forien.Armoury.Runes.RuneOfLuckTemporary.checkPrompt', {journal: fortuneJournal});\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n    <p>${checkPrompt}</p>\n`\n})\n\nthis.effect.update({disabled: true});",
       "reduceQuantity": false
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.VZyMhFCFlkPZ47J8.ActiveEffect.ABXyOPDXVrfGVDv1"
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": null,

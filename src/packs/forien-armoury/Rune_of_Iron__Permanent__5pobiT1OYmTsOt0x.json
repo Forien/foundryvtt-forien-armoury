@@ -1,5 +1,5 @@
 {
-  "icon": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+  "icon": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
   "transfer": true,
   "name": "Rune of Iron (Permanent)",
   "_id": "5pobiT1OYmTsOt0x",
@@ -14,13 +14,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "This Rune reduces damage from incoming attacks by 1. Works even against attacks that normally ignore Armour.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "preTakeDamage",
       "effectApplication": "equipped",
@@ -28,8 +25,8 @@
       "preventDuplicateEffects": false,
       "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.effect');\n\nargs.totalWoundLoss-= 1;\nargs.opposedTest.result.other.push(`<strong>${name}:</strong> ${effect}`);"
     },
-    "core": {
-      "sourceId": "Item.JV4MzBoyCXZBeKx5.ActiveEffect.jOxrcp7Jz2Uflabs"
+    "forien-armoury": {
+      "isTemporary": false
     }
   },
   "tint": null,

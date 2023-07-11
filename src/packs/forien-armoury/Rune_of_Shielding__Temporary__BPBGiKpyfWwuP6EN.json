@@ -14,13 +14,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Non-magical ranged weapons used to attack a character wearing an Armour Engraved with this Rune suffer a -20 modifier on Hit Tests. Lasts 1 minute.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "targetPrefillDialog",
       "effectApplication": "equipped",
@@ -28,8 +25,8 @@
       "preventDuplicateEffects": false,
       "script": "if (args.item?.isRanged) {\n  args.prefillModifiers.modifier -= 20;\n}"
     },
-    "core": {
-      "sourceId": "Item.JV4MzBoyCXZBeKx5.ActiveEffect.jOxrcp7Jz2Uflabs"
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": null,

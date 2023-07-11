@@ -14,13 +14,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Attacks made with a Weapon Engraved with this Rune ignore all Armour Points. Lasts 1 minute",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "preApplyDamage",
       "effectApplication": "equipped",
@@ -28,8 +25,8 @@
       "preventDuplicateEffects": false,
       "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n    args.applyAP = false;\n}"
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.PE6EPbkyk3UirW9z.ActiveEffect.ZM1KHe4lw53HRkjS"
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": null,

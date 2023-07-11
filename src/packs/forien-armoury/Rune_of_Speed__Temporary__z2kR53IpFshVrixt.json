@@ -14,7 +14,7 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "If the wielder is not Surprised and has this weapon in hands at the start of the Combat, he gains +1d10 bonus to his combat initiative score. Can only be activated once.",
   "origin": null,
   "statuses": [],
   "flags": {
@@ -23,13 +23,10 @@
       "effectApplication": "equipped",
       "hide": false,
       "preventDuplicateEffects": false,
-      "script": "this.effect.update({\n  flags: {\n    wfrp4e: {\n      effectTrigger: \"getInitiativeFormula\",\n      script: `\nargs.initiative += ' + 1d10'; \nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: \\`\n    <h3>Rune of Speed</h3>\n    <p>Character wielding weapon Engraved with this Rune adds a +1d10 to their Initiative Score during the Combat.</p>\n  \\`\n});\nthis.effect.update({disabled: true});`\n    }\n  }\n});"
+      "script": "this.effect.update({\n  flags: {\n    wfrp4e: {\n      effectTrigger: \"getInitiativeFormula\",\n      script: `\nargs.initiative += ' + 1d10';\nlet rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: \\`\n    <h3>${rune}</h3>\n    <p>${effect}</p>\n  \\`\n});\nthis.effect.update({disabled: true});`\n    }\n  }\n});"
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.2vfrPrMJrLFnVH5o"
-    },
-    "times-up": {
-      "isPassive": true
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": "#ff0000",

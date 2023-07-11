@@ -21,13 +21,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Wielder of a Weapon Engraved with this Rune gains +30 Weapon Skill.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "",
       "effectApplication": "equipped",
@@ -36,8 +33,8 @@
       "script": "",
       "promptItem": false
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.PE6EPbkyk3UirW9z.ActiveEffect.GIzBYIlrTnG7nBa0"
+    "forien-armoury": {
+      "isTemporary": false
     }
   },
   "tint": null,

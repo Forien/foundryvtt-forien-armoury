@@ -14,13 +14,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "After a successfull parry (won Opposed Melee Test), the wielder of a Wepon Engraved with this Rune may perform an Opposed Strength Test against the opponent. If wielder wins, the opponent's weapon breaks (unless it has an Unbreakable Quality). Can only be activated once.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "invoke",
       "effectApplication": "equipped",
@@ -28,8 +25,8 @@
       "preventDuplicateEffects": false,
       "script": "this.effect.update({\n  flags: {\n    wfrp4e: {\n      effectTrigger: \"opposedDefender\",\n      script: `\n\nif (args.opposedTest.defenderTest.weapon?._id === this.item.id) {\n  if (args.opposedTest.result.winner === \"defender\") {\n    let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.effect');\n    let rune = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.name');\n    args.opposedTest.result.other.push(\\`<strong>${rune}:</strong> ${effect}\\`);\n    this.effect.update({disabled: true});\n  }\n}\n\n`\n    }\n  }\n});"
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.PE6EPbkyk3UirW9z.ActiveEffect.ZM1KHe4lw53HRkjS"
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": null,

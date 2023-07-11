@@ -14,19 +14,19 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Negates the first attack that would reduce Wounds to 0.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "preTakeDamage",
       "effectApplication": "equipped",
       "hide": false,
       "preventDuplicateEffects": false,
       "script": "let wounds = args.actor.status.wounds.value;\nlet woundLoss = args.totalWoundLoss;\nlet woundsAfter= wounds - woundLoss;\n\nif (woundsAfter < 0) {\n  args.totalWoundLoss = 0;\n  let msg = `<strong>${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.name')}:</strong> ${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.effect')}`\n  args.extraMessages.push(msg);\n\n  this.effect.update({disabled: true});\n}"
+    },
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": null,

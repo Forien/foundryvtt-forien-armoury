@@ -14,13 +14,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Can only be inscribed on a war horn. When horn Engraved with this Rune is sounded, all enemies within 48 yards of the user must pass a Challenging (+0) Willpower Test or suffer a Stunned Condition. Activation takes an Action and can only be used once per Encounter. Can only be activated once.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "invoke",
       "effectApplication": "equipped",
@@ -29,8 +26,8 @@
       "script": "let template = {\n  \"t\": \"circle\",\n  \"distance\": 48,\n  \"direction\": 0,\n  \"angle\": 0,\n  \"width\": null,\n  \"borderColor\": \"#000000\",\n  \"fillColor\": \"#aa3333\",\n  \"hidden\": false,\n  \"flags\": {}\n};\n\nlet token;\nif (this.actor.isToken) token = this.actor.token\nelse token = this.actor.getActiveTokens()[0]?.document\n\nlet offset = game.scenes.active.grid.size / 2;\n\nlet position = {\n  x: token.x + offset,\n  y: token.y + offset\n}\n\ngame.scenes.viewed.createEmbeddedDocuments('MeasuredTemplate', [{...template, ...position}]);\nlet name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfDismay.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfDismay.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});",
       "reduceQuantity": false
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.VZyMhFCFlkPZ47J8.ActiveEffect.ABXyOPDXVrfGVDv1"
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": null,

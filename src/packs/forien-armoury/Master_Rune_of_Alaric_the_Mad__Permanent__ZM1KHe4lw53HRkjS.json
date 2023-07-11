@@ -14,19 +14,19 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "Attacks made with this weapon ignore all Armour Points",
+  "description": "Attacks made with a Weapon Engraved with this Rune ignore all Armour Points.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "preApplyDamage",
       "effectApplication": "equipped",
       "hide": false,
       "preventDuplicateEffects": false,
       "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n    args.applyAP = false;\n}"
+    },
+    "forien-armoury": {
+      "isTemporary": false
     }
   },
   "tint": null,

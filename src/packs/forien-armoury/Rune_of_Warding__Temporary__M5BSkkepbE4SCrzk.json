@@ -14,13 +14,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Wielder of an accessory Engraved with this Rune gains a Magic Resistance Talent. Lasts 1 minute.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "invoke",
       "effectApplication": "equipped",
@@ -29,8 +26,8 @@
       "script": "fromUuid(\"Compendium.wfrp4e-core.talents.Item.eowbsW6oHGSNJmxV\").then(item => Item.create(item.toObject(), {\n  fromEffect: this.effect.id,\n  parent: this.actor\n}))\n\nthis.effect.update({\n  disabled: false,\n  duration: {\n    seconds: 60,\n    duration: 60,\n    type: 'seconds'\n  },\n  flags: {\n    wfrp4e: {\n      effectTrigger: '',\n      script: ''\n    }\n  }\n});",
       "reduceQuantity": false
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.VZyMhFCFlkPZ47J8.ActiveEffect.ABXyOPDXVrfGVDv1"
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": null,

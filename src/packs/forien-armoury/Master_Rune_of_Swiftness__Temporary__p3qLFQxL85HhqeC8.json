@@ -14,13 +14,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Weapon Engraved with this Rune gains Fast Quality. Lasts 1 minute.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "prepareItem",
       "effectApplication": "equipped",
@@ -29,8 +26,8 @@
       "script": "if (args.item?._id === this.item?.id) {\n  args.item.system.qualities.value.push({name: \"fast\"});\n}",
       "promptItem": false
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.PE6EPbkyk3UirW9z.ActiveEffect.GIzBYIlrTnG7nBa0"
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": null,

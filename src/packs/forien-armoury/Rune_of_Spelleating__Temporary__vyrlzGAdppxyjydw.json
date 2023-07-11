@@ -14,13 +14,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Activate this Rune to immediately end any persistent spell within 12 yards. Additionally, if Runesmith is holding this item, he can instead attempt to Dispel any incoming spell and gains +20 modifier to that attempt. If you succeed, the opposing caster can’t use that spell again within the next 24 hours. Activating this rune takes an Action.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "invoke",
       "effectApplication": "equipped",
@@ -29,8 +26,8 @@
       "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpelleating.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpelleating.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});",
       "reduceQuantity": false
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.VZyMhFCFlkPZ47J8.ActiveEffect.ABXyOPDXVrfGVDv1"
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": null,

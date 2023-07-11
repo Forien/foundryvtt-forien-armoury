@@ -14,13 +14,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Weapon Engraved with this Rune gains Impact Quality and +3 Damage. Lasts 1 minute",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "prepareItem",
       "effectApplication": "equipped",
@@ -29,8 +26,8 @@
       "script": "if (args.item?._id === this.item?.id) {\n    let regex = /\\d{1,3}/gm;\n    let damage = Number(regex.exec(args.item.system.damage.value)[0] || 0);\nconsole.log(args);\n    args.item.system.qualities.value.push({name: \"impact\"});\n    args.item.system.damage.value = args.item.system.damage.value.replace(damage, damage + 3);\n}",
       "promptItem": false
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.PE6EPbkyk3UirW9z.ActiveEffect.GIzBYIlrTnG7nBa0"
+    "forien-armoury": {
+      "isTemporary": true
     }
   },
   "tint": null,

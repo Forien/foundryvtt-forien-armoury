@@ -14,7 +14,7 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Attacks made with a weapon engraved with this Rune against a target with Toughness Bonus 5 or more are treated as if the attacker had double Strength Bonus.",
   "origin": null,
   "statuses": [],
   "flags": {
@@ -23,13 +23,10 @@
       "effectApplication": "equipped",
       "hide": false,
       "preventDuplicateEffects": false,
-      "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n    if (args.opposedTest.defenderTest.actor.characteristics.t.bonus >= 5) {\n        args.damage += args.opposedTest.attackerTest.actor.characteristics.s.bonus;\n        args.opposedTest.result.other.push(`<strong>Rune of Might:</strong> SB doubled against enemies with TB equal to or higher than 5.`);\n    }\n}"
+      "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.defenderTest.actor.characteristics.t.bonus >= 5) {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.effect');\n    args.damage += args.opposedTest.attackerTest.actor.characteristics.s.bonus;\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n  }\n}"
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.2vfrPrMJrLFnVH5o"
-    },
-    "times-up": {
-      "isPassive": true
+    "forien-armoury": {
+      "isTemporary": false
     }
   },
   "tint": "#ff0000",

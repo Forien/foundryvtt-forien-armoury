@@ -1,5 +1,5 @@
 {
-  "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+  "icon": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
   "transfer": true,
   "name": "Rune of Page (Permanent)",
   "_id": "i0GTHQefhwTQ2LEL",
@@ -7,8 +7,7 @@
     {
       "key": "system.details.move.value",
       "mode": 2,
-      "value": "1",
-      "priority": null
+      "value": "1"
     }
   ],
   "disabled": false,
@@ -21,13 +20,10 @@
     "startRound": null,
     "startTurn": null
   },
-  "description": "",
+  "description": "Wielder of an accessory Engraved with this Rune gains +1 Movement.",
   "origin": null,
   "statuses": [],
   "flags": {
-    "times-up": {
-      "isPassive": true
-    },
     "wfrp4e": {
       "effectTrigger": "",
       "effectApplication": "equipped",
@@ -36,8 +32,8 @@
       "script": "",
       "reduceQuantity": false
     },
-    "core": {
-      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.VZyMhFCFlkPZ47J8.ActiveEffect.ABXyOPDXVrfGVDv1"
+    "forien-armoury": {
+      "isTemporary": false
     }
   },
   "tint": null,
