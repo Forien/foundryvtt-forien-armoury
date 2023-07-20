@@ -1,0 +1,214 @@
+{
+  "Forien": {
+    "Armoury": {
+      "Macros": {
+        "MustControlActor": "Musisz być właścicieleme Aktora, dla którego tworzysz składniki magiczne.",
+        "SelectSpell": "Wybierz zaklęcie, dla którego stworzyć składniki",
+        "Generate": "Stwórz",
+        "Cancel": "Przerwij",
+        "IngredientFor": "Magiczny składnik dla ",
+        "AvailableSpells": "Dostępne zaklęcia"
+      },
+      
+      "ItemRepair": {
+        "MustControlActor": "Musisz być właścicieleme Aktora, którego przedmioty naprawiasz.",
+        "Repaired": "Naprawiono przedmiot: {name}. Usunięte punkty uszkodzeń: {repaired}.",
+        "Free": "Darmowa",
+
+        "ArmourPlural": "Pancerze",
+        "Weapons": "Bronie",
+        "Trappings": "Ekwipunek",
+
+        "WeaponIsMangled": "Broń jest niesamowicie zniszczona i nie nadaje się do naprawy. Od tej chwili jest traktowana jako <em>Broń Improwizowana</em>",
+        "ItemIsMangled": "Przedmiot jest niesamowicie zniszczony i nie nadaje się do naprawy.",
+
+        "ArmourReceivedDamageTotal": "Przedmiot: {name} otrzymał punkty uszkodzeń w liczbie: <strong>{damage}</strong> na wszystkich swoich lokacjach.",
+        "ItemReceivedDamageOutOfMax": "Przedmiot: {name} otrzymał punkty uszkodzeń w liczbie: <strong>{damage}</strong> z maksymalnej wytrzymałości w liczbie: <strong>{maxDamage}</strong>.",
+        "RepairingWillCostPerDamageAndTotal": "Naprawa przedmiotu będzie kosztować {perDamage} za punkt uszkodzeń, łącznie: <strong>{total}</strong>.",
+        "DamageReceived": "Punkty Uszkodzeń",
+
+        "Repair1Damage": "Napraw 1 Punkt Uszkodzeń",
+        "RepairAllDamage": "Napraw Wszystkie Punkty Uszkodzeń",
+
+        "Button": {
+          "PayAndRepair": "Zapłać i Napraw",
+          "Repair": "Napraw",
+          "RepairAll": "Napraw Całość",
+          "DamageSingular": "Punkt Uszkodzeń",
+          "AllDamage": "Wszystkie Punkty Uszkodzeń"
+        }
+      },
+
+      "Runes": {
+        "effectNameIncludes": {
+          "RuneOf": "runa",
+          "Temporary": "tymczasowa"
+        },
+
+        "RemovedEffectTemporaryRuneDisabled": "Usunięto efekt \"{effectName}\" z Aktora \"{actorName}\" oraz Przedmiotu \"${itemName}\". To była tymczasowa Runa, która wygasła. {itemDamaged}",
+        "Weapon": "Broń",
+        "Item": "Przedmiot",
+        "Received1Damage": "Otrzymano 1 Punkt Uszkodzeń",
+        "AndGotUnequipped": "oraz konieczne było jego schowanie do ekwipunku.",
+        "ItsNowImprovisedWeapon": "Od teraz traktowane jest jako Broń Improwizowana",
+        "ItemGotDamaged": "Przedmiot otrzymał Punkt Uszkodzeń",
+
+        "ArmourCouldNotBeDamagedMore": "Pancerz nie może przyjąć więcej Punktów Uszkodzeń.",
+        "ArmourReceived1DamageOnLocation": "Pancerz otrzymał 1 Punkt Uszkodzeń na lokacji: {locationName}",
+
+        "ItemDamagedInName": "uszkodzony",
+
+        "EffectOf": "Efekt",
+
+        "MustSelectATarget": "Musisz wybrać cel dla: {rune}.",
+        "TargetNotInRange": "Wybrany cel nie jest w zasięgu: {rune}. cel musi być w odległości {range} metrów",
+
+
+        "RuneOfCleaving": {
+          "name": "Runa Rozłupania",
+          "effect": "+1 Obrażeń"
+        },
+        "RuneOfFate": {
+          "name": "Runa Przeznaczenia",
+          "effect": "zignorowano wszystkie nadchodzące obrażenia, bo żywotność spadłaby do 0."
+        },
+        "RuneOfFire": {
+          "name": "Runa Ognia",
+          "effect": "+1 Stan @Condition[Podpalenie]{Podpalenia}."
+        },
+        "RuneOfFury": {
+          "name": "Runa Furii",
+          "effect": "Możesz wydać Przewagę lub niewykorzystany Ruch do wykonania dodatkowego Ataku."
+        },
+        "RuneOfGrudges": {
+          "name": "Runa Uraz",
+          "effect": "Podczas <em>pierwszej Rundy Starcia</em>, wybierz jednego przeciwnika jako Cel tej Runy. Do końca Starcia <strong>możesz jednorazowo przerzucać wszystkie testy wymierzone w ten Cel</strong>.",
+          "description": "Postać dzierżąca broń z wygrawerowaną Runą Uraz może podczas <em>pierwszej Rundy Starcia</em> wybrać jednego przeciwnika jako Cel tej Runy. Do końca Starcia <strong>możesz jednorazowo przerzucać wszystkie testy ataku zainicjowane tą bronią i wymierzone w wybrany Cel</strong>."
+        },
+        "RuneOfTheFurnace": {
+          "name": "Runa Paleniska",
+          "effect": "Igonrujesz Stany @Condition[Podpalenie]{Podpalenia}."
+        },
+        "RuneOfLuck": {
+          "name": "Runa Szczęścia",
+          "effect": "Kiedy przedmiot jest w użyciu, otrzymujesz 1 poziom Talentu Szczęście."
+        },
+        "RuneOfLuckTemporary": {
+          "name": "Runa Szczęścia (Tymczasowa)",
+          "effect": "Możesz aktywować tę Runę jako alternatywę dla wydania Punktu Szczęścia.",
+          "effectActivated": "Runa została aktywowana i możesz ją wykorzystać tak jakbyś używał Punktu Szczęścia.",
+          "checkPrompt": "Szczegóły znajdziesz tu: {journal} ."
+        },
+        "RuneOfIron": {
+          "name": "Runa Żelaza",
+          "effect": "Zmniejsza wszystkie otrzymane obrażenia o 1, nawet te, które ignorują pancerz."
+        },
+        "RuneOfMight": {
+          "name": "Runa Potęgi",
+          "effect": "Bonus Siły ulega podwojeniu podczas testów przeciwko wrogom o Bonusie Wytrzymałości 5 lub więcej."
+        },
+        "RuneOfResistance": {
+          "name": "Runa Odporności",
+          "effect": "Za każdym razem, gdy masz otrzymać obrażenia ingorujące Pancerz i Wytrzymałość, możesz wykonać Test Wytrzymałości z modyfikatorem -5 za każdy punkt obrażeń. W przypadku udanego testu, nie otrzymujesz żadnych obrażeń."
+        },
+        "RuneOfSpeed": {
+          "name": "Runa Szybkości",
+          "effect": "Postać dzierżąca broń z wygrawerowaną Runą Szybkości dodaje +1d10 do swojej inicjatywy podczas Starcia."
+        },
+        "RuneOfSpellbreaking": {
+          "name": "Runa Rozproszenia",
+          "effect": "Użyj w celu natychmiastowego zakończenia aktywnego zaklęcia w zasięgu 12 metrów. Dodatkowo, jeśli jesteś Kowalem Run, możesz zamiast tego użyć Runy aby rozproszyć dowolne rzucane właśnie zaklęcie z modyfikatorem +20. Użycie tej Runy wymaga Akcji."
+        },
+        "RuneOfSpelleating": {
+          "name": "Runa Pochłaniania Magii",
+          "effect": "Użyj w celu natychmiastowego zakończenia aktywnego zaklęcia w zasięgu 12 metrów. Dodatkowo, jeśli jesteś Kowalem Run, możesz zamiast tego użyć Runy aby rozproszyć dowolne rzucane właśnie zaklęcie z modyfikatorem +20. Jeśli ci się powiedzie, mag, który rzucił zaklęcie nie może go użyć przez następne 24 godziny. Użycie tej Runy wymaga Akcji."
+        },
+
+        "MasterRuneOfBreaking": {
+          "name": "Mistrzowska Runa Zniszczenia",
+          "effect": "Możesz wykonać Przeciwstawny Test Siły. Jeśli wygrasz, broń twojego przeciwnika ulega zniszczeniu."
+        },
+        "MasterRuneOfDismay": {
+          "name": "Mistrzowska Runa Przerażenia",
+          "effect": "Wszyscy przeciwnicy w zasięgu 48 metrów muszą wykonać Test Siły Woli albo otrzymują stan @Condition[Oszołomienie]. Użycie tej Runy wymaga Akcji i może być użyta tylko raz podczas Starciar."
+        },
+        "MasterRuneOfSpite": {
+          "name": "Mistrzowska Runa Zjadliwości",
+          "effect": "Zmniejsza wszystkie otrzymane obrażenia o 2, nawet te, które ignorują pancerz."
+        },
+        "MasterRuneOfSteel": {
+          "name": "Mistrzowska Runa Stali",
+          "effect": "Niemagiczne bronie otrzymują cechę Tępa podczas ataku wymierzonego w noszącego ten Pancerz."
+        }
+      },
+
+      "Runebound": {
+        "LoreName": "Runiczna",
+
+        "Tutor": {
+          "Name": "Opiekun",
+          "Effect": "podniesiono PP o różnicę rozmiarów podczas ataku przez większego przeciwnika ({num})."
+        }
+      },
+
+      "Arrows": {
+        "applySlashing.Enable": "Włącz cechę Tnący",
+        "applySlashing.EnableHint": "Włącz cechę Tnący, która będzie zadawać 1 Stan Krwawienia, w przypadku gdy broń trafia w miejsce niechronione przez conajmniej 2 PP",
+
+        "SlashingApplied": "Lokacja {hitLocation} nie jest chroniona conajmniej 2 PP. Nałożono Stan Krwawienie. <br>{bleedAmtOld} -&gt; {bleedAmt}",
+        "ChatArrowsRecovered": "{name} odnalazł(a) <strong>{qty}</strong> sztuk „{ammoName}” zdatnych do ponownego wykorzystania.",
+
+
+        "recovered": "Odzyskano {type}",
+        "recoveredFuture": "Odzyskasz {type} po zakończeniu Starcia",
+        "Arrow": "Strzałę",
+        "Bolt": "Bełt",
+        "Bullet": "Pocisk",
+
+        "Properties.Slashing.Label": "Tnący",
+        "Properties.Recoverable.Label": "Odzyskiwalny",
+        "Properties.Unrecoverable.Label": "Nieodzyskiwalny",
+        "Properties.Sturdy.Label": "Solidny",
+        "Properties.Frail.Label": "Kruchy",
+        "Properties.HardToFind.Label": "Trudny do odnalezienia",
+
+        "Properties.Slashing.Description": "Broń z cechą Tnący będzie zadawać 1 Stan Krwawienia, w przypadku gdy trafia w miejsce niechronione przez conajmniej 2 PP.",
+        "Properties.Recoverable.Description": "Amunicja może być odzyskana nawet wtedy, jeśli normalnie zasady nie pozwalają na odzyskiwanie tego typu amunicji. <br/><em>(wymaga włączenia funkcji w ustawieniach)</em>",
+        "Properties.Unrecoverable.Description": "Amunicja zawsze się niszczy po wystrzeleniu i nie może być nigdy odzyskana.",
+        "Properties.Sturdy.Description": "Pocisk jest wytrzymały, więc łatwiej go odzyskać.<br/><b>Szansa</b>: rzuć dwa razy, wybierz niższy<br/><b>Zasady Sukcesu/Porażni</b>: neguje warunki Sukcesu/Porażki<br/><b>Inne zasady:</b> jeśli nie odzyskano, rzuć na Szansę.<br/><em>(wymaga włączenia funkcji w ustawieniach)</em>",
+        "Properties.Frail.Description": "Pocisk jest słaby i łatwo się psuje, przez co trudniej go odzyskać.<br/><b>Szansa</b>: rzuć dwa razy, wybierz wyższy<br/><b>Inne zasady:</b> jeśli odzyskano, rzuć na Szansę<br/><em>(wymaga włączenia funkcji w ustawieniach)</em>",
+        "Properties.HardToFind.Description": "Pocisk jest bardzo trudny do znalezienia nawet w sprzyjających warunkach. Jeśli miał zostać odzyskany, rzuć ponownie na jego odzyskanie zmodyfikatorem –10."
+      },
+
+      "Settings": {
+        "Runes.Enable": "Uszkodzenia Przedmiotów od Run",
+        "Runes.EnableHint": "Zaznacz, aby Przedmiot otrzymywał Punkt Uszkodzeń gdy Tymczasowa Runa zostaje zużyta.",
+
+        "ArrowReclamation.Enable": "Włącz odzyskiwanie amunicji",
+        "ArrowReclamation.EnableHint": "Włącz odzyskiwanie amunicji podczas testu na atak zasięgowy podczas walki (nie działa bez aktywanego Starcia). Amunicja wystrzelona podczas Starcia zostanie przywrócona po jego zakończeniu.",
+
+        "ArrowReclamation.EnableArrows": "Pozwól odzyskiwać Strzały",
+        "ArrowReclamation.EnableArrowsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Łuku",
+        "ArrowReclamation.EnableBolts": "Pozwól odzyskiwać Bełty",
+        "ArrowReclamation.EnableBoltsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Kuszy",
+        "ArrowReclamation.EnableBullets": "Pozwól odzyskiwać Pociski",
+        "ArrowReclamation.EnableBulletsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Procy",
+
+        "ArrowReclamation.Rule": "Zasady odzyskiwania amunicji",
+        "ArrowReclamation.RuleHint": "Wybierz zasady, według których amunicja zostanie odzyskana. Słowo `Krytyk` oznacza zarówno Fuks jak i Pech podczas Testów Broni Zasięgowej.",
+
+        "ArrowReclamation.DefaultRule": "Rzut był parzysty",
+        "ArrowReclamation.SuccessRule": "Rzut był parzysty i udany",
+        "ArrowReclamation.NoCritRule": "Rzut był parzysty, ale bez Krytyka",
+        "ArrowReclamation.SuccessNoCritRule": "Rzut był parzysty, udany, ale bez Krytyka",
+        "ArrowReclamation.FailureRule": "Rzut był parzysty i nieudany",
+        "ArrowReclamation.FailureNoCritRule": "Rzut był parzysty, nieudany, ale bez Krytyka",
+        "ArrowReclamation.PercentageRule": "Osobny rzut na szansę odzyskania",
+        "ArrowReclamation.PercentageNoCritRule": "Osobny rzut na szansę odzyskania z pominięciem Krytyków",
+
+        "ArrowReclamation.Percentage": "Docelowa Szansa",
+        "ArrowReclamation.PercentageHint": "Ustaw \"Szansę\" procentową dla rzutu wymaganego przez niektóre Zasady. Rzut się powiedzie, jeśli na k100 wypadnie mniej lub tyle samo, ile wynosi Docelowa Szansa"
+      }
+    }
+  }
+}
