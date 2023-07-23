@@ -34,6 +34,10 @@
         "type": "module"
       },
       {
+        "id": "item-piles",
+        "type": "module"
+      },
+      {
         "id": "times-up",
         "type": "module"
       }

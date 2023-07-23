@@ -12,8 +12,11 @@ export default class Integrations {
   ATL;
 
   constructor() {
-    this.itemPiles = new ItemPiles();
-    this.ATL = new ATL();
+    if (game.modules.get("item-piles")?.active)
+      this.itemPiles = new ItemPiles();
+
+    if (game.modules.get("ATL")?.active)
+      this.ATL = new ATL();
   }
 
 
@@ -28,8 +31,8 @@ export default class Integrations {
    * Register Settings for module integration
    */
   registerSettings() {
-    this.ATL.registerSettings();
-    this.itemPiles.registerSettings();
+    this.ATL?.registerSettings();
+    this.itemPiles?.registerSettings();
   }
 
   /**
