@@ -207,7 +207,11 @@
         "ArrowReclamation.PercentageNoCritRule": "Separate roll using Percentage, without criticals",
 
         "ArrowReclamation.Percentage": "Target percentage",
-        "ArrowReclamation.PercentageHint": "Set target percentage for rolling with certain Rules. Roll will succeed if d100 rolls less or equal to Target"
+        "ArrowReclamation.PercentageHint": "Set target percentage for rolling with certain Rules. Roll will succeed if d100 rolls less or equal to Target",
+
+
+        "ATL.ResetPresets": "Reset ATL Presets",
+        "ATL.ResetPresetsHint": "When checked, this module will set ATL presets to be more in line with WFRP rules and to work with Light items from Forien's Armoury Compendium"
       }
     }
   }

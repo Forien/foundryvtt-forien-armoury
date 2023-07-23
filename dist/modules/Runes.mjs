@@ -6,9 +6,7 @@ export default class TemporaryRunes {
   }
 
   #onEffectUpdate(effect, update, _data) {
-    console.log("checking if effect is temporary rune");
     if (this.#isRuneTemporary(effect) && effect.parent instanceof Actor) {
-      console.log("rune is temporary, removing");
 
       if (update.disabled === true) {
         this.processRemovingRune(effect).then(msg => {
@@ -19,11 +17,9 @@ export default class TemporaryRunes {
   }
 
   #isRuneTemporary(effect) {
-    console.log("checking flag");
     if (effect.flags['forien-armoury']?.isTemporary === true)
       return true;
 
-    console.log("didnt find flag");
     // fallback to checking name
     let effectName = effect.name.toLowerCase();
     let runeOf = game.i18n.localize('Forien.Armoury.Runes.effectNameIncludes.RuneOf');

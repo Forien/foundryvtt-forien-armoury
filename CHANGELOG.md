@@ -2,6 +2,14 @@
 
 ## v1.X.X
 ### v1.0.X
+#### v1.0.1
+* Fixed some duplicated IDs from WFRP4e Core module (for example Potion Bag was overriding Sling Bag)
+* Allowed "trapping" Torch to be lit up
+  * This converts the Torch into an equippable "weapon"
+* Effects on ATL Light items now have time limit set up for Time's Up
+* Added an OPT-IN setting that will configure ATL presets to work well with Light items from Compendium
+* Done some groundwork to better support module integrations in the future.
+
 #### v1.0.0
 * **Completely rewrote the Module** for Foundry 11 and WFRP4e 6. 
   * Old version was made for Foundry 0.6 and WFRP4e 1.6
