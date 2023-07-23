@@ -211,7 +211,10 @@
 
 
         "ATL.ResetPresets": "Reset ATL Presets",
-        "ATL.ResetPresetsHint": "When checked, this module will set ATL presets to be more in line with WFRP rules and to work with Light items from Forien's Armoury Compendium"
+        "ATL.ResetPresetsHint": "When checked, this module will set ATL presets to be more in line with WFRP rules and to work with Light items from Forien's Armoury Compendium",
+
+        "ItemPiles.SetCurrencies": "Set Item Pile Currencies",
+        "ItemPiles.SetCurrenciesHint": "When checked, this module will set Item Pile's currencies to use all of custom coins provided with Forien's Armoury. However, it is not suggested to use all 10 coins together as default."
       }
     }
   }
