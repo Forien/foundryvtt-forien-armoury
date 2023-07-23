@@ -2,7 +2,7 @@
   "folder": "1DPQSHNhtS8vuqCw",
   "name": "Tuppence",
   "type": "money",
-  "img": "icons/commodities/currency/coin-embossed-sword-copper.webp",
+  "img": "icons/commodities/currency/coin-inset-copper-axe.webp",
   "system": {
     "description": {
       "type": "String",
@@ -46,10 +46,10 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
     "createdTime": 1688480096053,
-    "modifiedTime": 1688480672426,
+    "modifiedTime": 1690141954713,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "WAHHcw6Awp9o1kwd",

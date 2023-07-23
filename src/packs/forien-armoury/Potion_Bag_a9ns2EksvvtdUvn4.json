@@ -1,7 +1,7 @@
 {
-  "name": "Empty Vial",
+  "name": "Potion Bag",
   "type": "container",
-  "img": "icons/consumables/potions/vial-cork-empty.webp",
+  "img": "icons/containers/bags/case-embossed-leather-tan.webp",
   "effects": [],
   "flags": {
     "_sheetTab": "details",
@@ -11,7 +11,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>Small glass vial, typically used for storing small amounts of liquids such as strong alcohol, acids, potions et cetera, but could also be used to store small amounts of powder substances, grinded materials or other compact biological matter.</p><p><em>Capacity: 2 fluid ounces / 5 cl of liquid.</em></p>"
+      "value": "<p>Specially crafted sling bag made from mixture of boiled and soft leather.</p><p>It contains multiple small compartments, each big enough to hold a single flask. Allows for easier and organized storage of potions, ingredients and other medical articles.</p><h5>Special Rules</h5><ul><li><p><em>Counts as ‘worn’ when slung over your shoulder.</em></p></li><li><p>Can only hold <em>drugs, potions, poultices, poisons, flasks, ingredients and bandages</em>.</p></li><li><p>When worn, any item inside can be <em>accessed with a @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#free-actions]{Free Action}</em>.</p></li></ul><p></p>"
     },
     "gmdescription": {
       "type": "String",
@@ -26,19 +26,19 @@
     "encumbrance": {
       "type": "Number",
       "label": "Encumbrance",
-      "value": 0.05
+      "value": 2
     },
     "price": {
       "type": "String",
       "label": "Price",
-      "gc": "0",
-      "ss": "1",
-      "bp": ""
+      "gc": "1",
+      "ss": "4",
+      "bp": "0"
     },
     "availability": {
       "type": "String",
       "label": "Availability",
-      "value": "common"
+      "value": "rare"
     },
     "location": {
       "type": "Number",
@@ -53,12 +53,12 @@
     "wearable": {
       "type": "Boolean",
       "label": "Wearable",
-      "value": false
+      "value": true
     },
     "carries": {
       "type": "Number",
       "label": "Carries",
-      "value": 0
+      "value": 2
     },
     "countEnc": {
       "type": "Boolean",
@@ -73,17 +73,17 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.5.9",
-    "coreVersion": "11.302",
-    "createdTime": 1663627495182,
-    "modifiedTime": 1687714396505,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "coreVersion": "11.305",
+    "createdTime": 1663627495291,
+    "modifiedTime": 1689341793166,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
-  "folder": "CzfFi86V96bGQ2ni",
-  "_id": "Hrs3p9z8NqyYEtRz",
-  "sort": 0,
+  "folder": "bCYA5k9kT55E8eEO",
+  "_id": "a9ns2EksvvtdUvn4",
+  "sort": 300000,
   "ownership": {
     "default": 0,
-    "aDepqlKkeOa13DWo": 3
+    "ZJyAmf2sKocHG1ud": 3
   },
-  "_key": "!items!Hrs3p9z8NqyYEtRz"
+  "_key": "!items!a9ns2EksvvtdUvn4"
 }

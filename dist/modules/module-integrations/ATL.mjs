@@ -1,4 +1,7 @@
 export default class ATL {
+  /**
+   * Register Settings for ATL integration with WFRP4e/Forien's Armoury
+   */
   registerSettings() {
     let self = this;
 

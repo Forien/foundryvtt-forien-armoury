@@ -1,16 +1,9 @@
 {
   "icon": "icons/sundries/lights/torch-brown-lit.webp",
-  "transfer": true,
-  "name": "Torch",
+  "transfer": false,
+  "name": "Light up Torch",
   "_id": "zUn7o4oGRBwnlmoX",
-  "changes": [
-    {
-      "key": "ATL.preset",
-      "mode": 2,
-      "value": "torch",
-      "priority": null
-    }
-  ],
+  "changes": [],
   "disabled": false,
   "duration": {
     "startTime": null,
@@ -26,12 +19,14 @@
   "statuses": [],
   "flags": {
     "wfrp4e": {
-      "effectTrigger": "",
+      "effectTrigger": "invoke",
       "effectApplication": "actor",
       "hide": false,
-      "preventDuplicateEffects": false
+      "preventDuplicateEffects": false,
+      "script": "fromUuid(\"Compendium.forien-armoury.forien-armoury.Item.84hccJzDfkfw3trc\").then(item => Item.create(item.toObject(), {parent : this.actor}))",
+      "reduceQuantity": true
     }
   },
   "tint": null,
-  "_key": "!items.effects!l7KTze1BpfCsW5qn.zUn7o4oGRBwnlmoX"
+  "_key": "!items.effects!HO61HXSO0PYVs4kK.zUn7o4oGRBwnlmoX"
 }

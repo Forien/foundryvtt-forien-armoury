@@ -1,4 +1,4 @@
-// import ItemPiles from "./module-integrations/ItemPiles.mjs";
+import ItemPiles from "./module-integrations/ItemPiles.mjs";
 import ATL from "./module-integrations/ATL.mjs";
 
 export default class Integrations {
@@ -12,24 +12,30 @@ export default class Integrations {
   ATL;
 
   constructor() {
-    // this.itemPiles = new ItemPiles();
+    this.itemPiles = new ItemPiles();
     this.ATL = new ATL();
   }
 
 
   /**
-   * Binds hooks
+   * Bind hooks for each module integration
    */
   bindHooks() {
-    // this.itemPiles.bindHooks();
+    //
   }
 
+  /**
+   * Register Settings for module integration
+   */
   registerSettings() {
     this.ATL.registerSettings();
+    this.itemPiles.registerSettings();
   }
 
+  /**
+   * Methods that will run automatically once when module is first installed.
+   */
   initialConfig() {
-    // probably shouldn't be forced on players...
-    //this.ATL.setPresets();
+    //
   }
 }

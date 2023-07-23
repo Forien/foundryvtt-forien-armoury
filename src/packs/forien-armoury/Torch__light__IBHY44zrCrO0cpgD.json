@@ -13,7 +13,7 @@
   "disabled": false,
   "duration": {
     "startTime": null,
-    "seconds": null,
+    "seconds": 1200,
     "combat": null,
     "rounds": null,
     "turns": null,

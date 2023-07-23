@@ -2,7 +2,7 @@
   "folder": "1DPQSHNhtS8vuqCw",
   "name": "Angel",
   "type": "money",
-  "img": "icons/commodities/currency/coin-embossed-crown-gold.webp",
+  "img": "icons/commodities/currency/coin-embossed-star-gold.webp",
   "system": {
     "description": {
       "type": "String",
@@ -46,10 +46,10 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
     "createdTime": 1688480096053,
-    "modifiedTime": 1688683532320,
+    "modifiedTime": 1690141855113,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "NGaBjbGOFihSbuXp",

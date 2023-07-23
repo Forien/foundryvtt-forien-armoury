@@ -1,19 +1,12 @@
 {
-  "name": "Candle",
+  "name": "Empty Vial",
   "type": "trapping",
-  "img": "icons/sundries/lights/candle-unlit-grey.webp",
-  "effects": [
-    "zUn7o4oGRBwnlmoX"
-  ],
-  "flags": {
-    "_sheetTab": "description",
-    "core": {}
-  },
+  "img": "icons/consumables/potions/vial-cork-empty.webp",
   "system": {
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>A @UUID[Compendium.wfrp4e-core.trappings.Item.TW3etL7RIU2EWTXp]{Candle} prepared with ATL compatible Effects</p><p>Lasts 2 hours.</p>"
+      "value": "<p>Small glass vial, typically used for storing small amounts of liquids such as strong alcohol, acids, potions et cetera, but could also be used to store small amounts of powder substances, grinded materials or other compact biological matter.</p><p><em>Capacity: 2 fluid ounces / 5 cl of liquid.</em></p>"
     },
     "gmdescription": {
       "type": "String",
@@ -23,7 +16,7 @@
     "quantity": {
       "type": "Number",
       "label": "Quantity",
-      "value": 12
+      "value": 1
     },
     "encumbrance": {
       "type": "Number",
@@ -64,26 +57,26 @@
     "flaws": {
       "label": "Flaws",
       "value": []
-    },
-    "source": {
-      "type": "String",
-      "label": "Source"
     }
+  },
+  "effects": [],
+  "folder": "CzfFi86V96bGQ2ni",
+  "flags": {
+    "core": {}
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
-    "createdTime": 1663627495285,
-    "modifiedTime": 1689005446230,
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1689341760122,
+    "modifiedTime": 1690142046593,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
-  "folder": "ALm6rINfMUWhLplE",
-  "_id": "TW3etL7RIU2EWTXp",
+  "_id": "VX5v3rgKUIyhE5CD",
   "sort": 100000,
   "ownership": {
     "default": 0,
-    "aDepqlKkeOa13DWo": 3
+    "ZJyAmf2sKocHG1ud": 3
   },
-  "_key": "!items!TW3etL7RIU2EWTXp"
+  "_key": "!items!VX5v3rgKUIyhE5CD"
 }

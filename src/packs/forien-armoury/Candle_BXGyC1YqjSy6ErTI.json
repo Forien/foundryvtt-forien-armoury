@@ -1,10 +1,9 @@
 {
-  "name": "Storm Lantern",
+  "name": "Candle",
   "type": "trapping",
-  "img": "icons/sundries/lights/lantern-iron-yellow.webp",
+  "img": "icons/sundries/lights/candle-unlit-grey.webp",
   "effects": [
-    "e6sHmAsXMVEY2bfb",
-    "Bocay7NF6UUCshrJ"
+    "zUn7o4oGRBwnlmoX"
   ],
   "flags": {
     "_sheetTab": "description",
@@ -14,7 +13,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>A @UUID[Compendium.wfrp4e-core.trappings.Item.9pJenZDZD2lV75vq]{Storm Lantern} prepared with ATL compatible Effects</p><p>Requires @UUID[Compendium.wfrp4e-core.trappings.Item.Bal23aLiOmnht42h]{Lamp Oil}.</p>"
+      "value": "<p>A @UUID[Compendium.wfrp4e-core.trappings.Item.TW3etL7RIU2EWTXp]{Candle} prepared with ATL compatible Effects</p><p>Lasts 2 hours.</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -24,24 +23,24 @@
     "quantity": {
       "type": "Number",
       "label": "Quantity",
-      "value": 1
+      "value": 12
     },
     "encumbrance": {
       "type": "Number",
       "label": "Encumbrance",
-      "value": 1
+      "value": 0.15
     },
     "price": {
       "type": "String",
       "label": "Price",
-      "gc": "1",
-      "ss": "0",
+      "gc": "0",
+      "ss": "1",
       "bp": "0"
     },
     "availability": {
       "type": "String",
       "label": "Availability",
-      "value": "scarce"
+      "value": "common"
     },
     "location": {
       "type": "Number",
@@ -73,18 +72,18 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
-    "createdTime": 1663627495177,
-    "modifiedTime": 1689005410404,
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.305",
+    "createdTime": 1663627495285,
+    "modifiedTime": 1690135287194,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "ALm6rINfMUWhLplE",
-  "_id": "9pJenZDZD2lV75vq",
-  "sort": 300000,
+  "_id": "BXGyC1YqjSy6ErTI",
+  "sort": 0,
   "ownership": {
     "default": 0,
-    "aDepqlKkeOa13DWo": 3
+    "ZJyAmf2sKocHG1ud": 3
   },
-  "_key": "!items!9pJenZDZD2lV75vq"
+  "_key": "!items!BXGyC1YqjSy6ErTI"
 }

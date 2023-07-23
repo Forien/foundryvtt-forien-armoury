@@ -1,9 +1,9 @@
 {
-  "name": "Oil Lamp",
+  "name": "Lantern",
   "type": "trapping",
-  "img": "icons/sundries/lights/candle-unlit-yellow.webp",
+  "img": "icons/sundries/lights/lantern-iron-lit-yellow.webp",
   "effects": [
-    "KqxCaHoHDsajIYAC"
+    "za7XlKi8UGGfjuDs"
   ],
   "flags": {
     "_sheetTab": "description",
@@ -13,7 +13,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>Provides illumination for 10 yards when lit.</p><p>Requires @UUID[Compendium.wfrp4e-core.trappings.Item.Bal23aLiOmnht42h]{Oil}.</p>"
+      "value": "<p>A @UUID[Compendium.wfrp4e-core.trappings.Item.mcJi9yqMFRJRkhJs]{Lantern} prepared with ATL compatible Effects</p><p>Requires @UUID[Compendium.wfrp4e-core.trappings.Item.Bal23aLiOmnht42h]{Lamp Oil}.</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -28,13 +28,13 @@
     "encumbrance": {
       "type": "Number",
       "label": "Encumbrance",
-      "value": 0.25
+      "value": 1
     },
     "price": {
       "type": "String",
       "label": "Price",
       "gc": "0",
-      "ss": "2",
+      "ss": "12",
       "bp": "0"
     },
     "availability": {
@@ -72,18 +72,18 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
-    "createdTime": 1663627495178,
-    "modifiedTime": 1689005426569,
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.305",
+    "createdTime": 1663627495386,
+    "modifiedTime": 1690135315229,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "ALm6rINfMUWhLplE",
-  "_id": "zNSQ7yMsqkz9JGbk",
-  "sort": 600000,
+  "_id": "wTi7GD0yyAFZdfkc",
+  "sort": 0,
   "ownership": {
     "default": 0,
-    "aDepqlKkeOa13DWo": 3
+    "ZJyAmf2sKocHG1ud": 3
   },
-  "_key": "!items!zNSQ7yMsqkz9JGbk"
+  "_key": "!items!wTi7GD0yyAFZdfkc"
 }

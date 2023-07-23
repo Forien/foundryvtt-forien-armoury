@@ -1,9 +1,10 @@
 {
-  "name": "Lantern",
+  "name": "Storm Lantern",
   "type": "trapping",
-  "img": "icons/sundries/lights/lantern-iron-lit-yellow.webp",
+  "img": "icons/sundries/lights/lantern-iron-yellow.webp",
   "effects": [
-    "za7XlKi8UGGfjuDs"
+    "e6sHmAsXMVEY2bfb",
+    "Bocay7NF6UUCshrJ"
   ],
   "flags": {
     "_sheetTab": "description",
@@ -13,7 +14,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>A @UUID[Compendium.wfrp4e-core.trappings.Item.mcJi9yqMFRJRkhJs]{Lantern} prepared with ATL compatible Effects</p><p>Requires @UUID[Compendium.wfrp4e-core.trappings.Item.Bal23aLiOmnht42h]{Lamp Oil}.</p>"
+      "value": "<p>A @UUID[Compendium.wfrp4e-core.trappings.Item.9pJenZDZD2lV75vq]{Storm Lantern} prepared with ATL compatible Effects</p><p>Requires @UUID[Compendium.wfrp4e-core.trappings.Item.Bal23aLiOmnht42h]{Lamp Oil}.</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -33,14 +34,14 @@
     "price": {
       "type": "String",
       "label": "Price",
-      "gc": "0",
-      "ss": "12",
+      "gc": "1",
+      "ss": "0",
       "bp": "0"
     },
     "availability": {
       "type": "String",
       "label": "Availability",
-      "value": "common"
+      "value": "scarce"
     },
     "location": {
       "type": "Number",
@@ -72,18 +73,18 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
-    "createdTime": 1663627495386,
-    "modifiedTime": 1689005401602,
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.305",
+    "createdTime": 1663627495177,
+    "modifiedTime": 1690135335327,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "ALm6rINfMUWhLplE",
-  "_id": "mcJi9yqMFRJRkhJs",
-  "sort": 500000,
+  "_id": "WTDH1NSk1ufd5vx9",
+  "sort": 0,
   "ownership": {
     "default": 0,
-    "aDepqlKkeOa13DWo": 3
+    "ZJyAmf2sKocHG1ud": 3
   },
-  "_key": "!items!mcJi9yqMFRJRkhJs"
+  "_key": "!items!WTDH1NSk1ufd5vx9"
 }

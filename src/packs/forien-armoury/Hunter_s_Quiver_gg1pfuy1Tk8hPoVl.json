@@ -69,13 +69,13 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.5.9",
-    "coreVersion": "11.302",
+    "coreVersion": "11.305",
     "createdTime": 1687475455907,
-    "modifiedTime": 1687896778474,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1689341793166,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "gg1pfuy1Tk8hPoVl",
-  "sort": 800000,
+  "sort": 900000,
   "ownership": {
     "default": 0,
     "aDepqlKkeOa13DWo": 3

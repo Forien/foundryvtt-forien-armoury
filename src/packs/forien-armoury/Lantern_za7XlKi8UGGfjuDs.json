@@ -7,14 +7,13 @@
     {
       "key": "ATL.preset",
       "mode": 2,
-      "value": "lantern",
-      "priority": null
+      "value": "lantern"
     }
   ],
   "disabled": false,
   "duration": {
     "startTime": null,
-    "seconds": null,
+    "seconds": 14400,
     "combat": null,
     "rounds": null,
     "turns": null,
@@ -33,5 +32,5 @@
     }
   },
   "tint": null,
-  "_key": "!items.effects!mcJi9yqMFRJRkhJs.za7XlKi8UGGfjuDs"
+  "_key": "!items.effects!wTi7GD0yyAFZdfkc.za7XlKi8UGGfjuDs"
 }
