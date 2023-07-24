@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Waterskin",
+  "documentId": "hG90GkelSekqH7i8",
+  "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/waterskin.png",
+  "_id": "BopKUZXi9FX4qQiw",
+  "flags": {},
+  "_key": "!tables.results!ffYe4byROeFcNsvl.BopKUZXi9FX4qQiw"
+}

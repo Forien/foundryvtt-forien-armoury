@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 6,
+  "range": [
+    9,
+    14
+  ],
+  "drawn": false,
+  "text": "Cuirass",
+  "documentId": "VW2Sk5JPUrz7SLPH",
+  "img": "icons/equipment/chest/breastplate-collared-steel-grey.webp",
+  "_id": "QerIHrgedUKyMvKK",
+  "flags": {},
+  "_key": "!tables.results!bcfWOzoAXLS0r4OE.QerIHrgedUKyMvKK"
+}

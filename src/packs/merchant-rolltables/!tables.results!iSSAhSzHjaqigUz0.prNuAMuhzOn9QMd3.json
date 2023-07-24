@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-zoo.items",
+  "weight": 1,
+  "range": [
+    14,
+    14
+  ],
+  "drawn": false,
+  "text": "Spite",
+  "documentId": "ImIQCHVblxjytbEC",
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-draught.png",
+  "_id": "prNuAMuhzOn9QMd3",
+  "flags": {},
+  "_key": "!tables.results!iSSAhSzHjaqigUz0.prNuAMuhzOn9QMd3"
+}

@@ -1,0 +1,40 @@
+{
+  "folder": "PrOJN66daLYe6ZJc",
+  "name": "Weapons Melee All (type)",
+  "_id": "hvqbuVn1qgidw5Nh",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "2wO8MFvpa8Zm7nls",
+    "xwSUcj98mIjfIdVm",
+    "IpZV0QjBH3FRqVqh",
+    "WshxAnNualKJoAgf",
+    "oIEQo1yDTaHCPOQo",
+    "igPWuSgpbN4yBnRJ",
+    "X1uGyCOdYZ1BTTbJ",
+    "kVLdxIGvxeBRRNqN"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690162552033,
+    "modifiedTime": 1690162596554,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d27",
+  "_key": "!tables!hvqbuVn1qgidw5Nh"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 5,
+  "range": [
+    91,
+    95
+  ],
+  "drawn": false,
+  "text": "Mancatcher",
+  "documentId": "VDXhEK2KWgCGt2SV",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/mancatcher.png",
+  "_id": "ovBsu9CWd638W7nb",
+  "flags": {},
+  "_key": "!tables.results!b2Gc1oLA2NSrhR20.ovBsu9CWd638W7nb"
+}

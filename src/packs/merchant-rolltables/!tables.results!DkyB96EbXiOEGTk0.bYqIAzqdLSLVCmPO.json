@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    9,
+    9
+  ],
+  "drawn": false,
+  "text": "Hat",
+  "documentId": "LrYz9nSsmH4H3He4",
+  "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/hat.png",
+  "_id": "bYqIAzqdLSLVCmPO",
+  "flags": {},
+  "_key": "!tables.results!DkyB96EbXiOEGTk0.bYqIAzqdLSLVCmPO"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 8,
+  "range": [
+    22,
+    29
+  ],
+  "drawn": false,
+  "text": "Plate Helm",
+  "documentId": "e9WmLbD7AuXSeWp0",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/plate-helm.png",
+  "_id": "Tnpq4GC3RRyslcSF",
+  "flags": {},
+  "_key": "!tables.results!bcfWOzoAXLS0r4OE.Tnpq4GC3RRyslcSF"
+}

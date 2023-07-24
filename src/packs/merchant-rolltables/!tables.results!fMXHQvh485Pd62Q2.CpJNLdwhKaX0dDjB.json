@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 8,
+  "range": [
+    110,
+    117
+  ],
+  "drawn": false,
+  "text": "Candle",
+  "documentId": "BXGyC1YqjSy6ErTI",
+  "img": "icons/sundries/lights/candle-unlit-grey.webp",
+  "_id": "CpJNLdwhKaX0dDjB",
+  "flags": {},
+  "_key": "!tables.results!fMXHQvh485Pd62Q2.CpJNLdwhKaX0dDjB"
+}

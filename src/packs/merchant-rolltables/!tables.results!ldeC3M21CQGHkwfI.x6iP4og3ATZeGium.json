@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    10,
+    10
+  ],
+  "drawn": false,
+  "text": "Whip",
+  "documentId": "xiOYNJcfqPselfwT",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/whip.png",
+  "_id": "x6iP4og3ATZeGium",
+  "flags": {},
+  "_key": "!tables.results!ldeC3M21CQGHkwfI.x6iP4og3ATZeGium"
+}

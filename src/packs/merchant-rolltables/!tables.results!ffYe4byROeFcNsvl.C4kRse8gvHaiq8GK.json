@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    5,
+    5
+  ],
+  "drawn": false,
+  "text": "Jug",
+  "documentId": "vbNHaU50jr9T2dCQ",
+  "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/jug.png",
+  "_id": "C4kRse8gvHaiq8GK",
+  "flags": {},
+  "_key": "!tables.results!ffYe4byROeFcNsvl.C4kRse8gvHaiq8GK"
+}

@@ -1,0 +1,53 @@
+{
+  "folder": "F25hUarBIYKworSm",
+  "name": "Draughts Rare",
+  "_id": "iSSAhSzHjaqigUz0",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "kLrjY5V6yhq9oHDA",
+    "j68i6MmEJiqW3DA6",
+    "63rFZbItbNtzVhEK",
+    "xFaViV0h7XmbRZDx",
+    "1sncaqrLlw67gvtr",
+    "DIRDmnKxKdomYMzK",
+    "znOoHhOsT9PouAYD",
+    "8SuVOcyJCt2I9RG4",
+    "JrbTrNge7GYh69XU",
+    "naX9JvlQak0O2ZpC",
+    "e7QxdSC6Ik4fRyeN",
+    "9BfaR4SyNwaFf1Pp",
+    "eILoYVmVLWvi7xE2",
+    "prNuAMuhzOn9QMd3",
+    "11vdRGYz2TFBfaQi",
+    "R7UBjpWIXhECb82B",
+    "MvZw3lvc2qFwzhCD",
+    "Vt3D0Rs7XSJeKy99",
+    "n0gp1muv7HsMCHMe",
+    "46T237R7EbMeP5Tb",
+    "demLkdEVXIJsuoyN"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690165728997,
+    "modifiedTime": 1690165781960,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d21",
+  "_key": "!tables!iSSAhSzHjaqigUz0"
+}

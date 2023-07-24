@@ -1,0 +1,38 @@
+{
+  "folder": "OIXKjAS72VZJ0m0z",
+  "name": "Weapons Ranged Throwing",
+  "_id": "6doUzn9m0jBvUuA3",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "Pow12c55F3lhtuKN",
+    "s761RkUvPAVepHFN",
+    "oDX8C9JWKbpX0bj7",
+    "nIVEXJRS7DOeQkZB",
+    "aZweMnmYDGPX93S5",
+    "qldDLDPovZ8N4KOH"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690163621846,
+    "modifiedTime": 1690163678021,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d96",
+  "_key": "!tables!6doUzn9m0jBvUuA3"
+}

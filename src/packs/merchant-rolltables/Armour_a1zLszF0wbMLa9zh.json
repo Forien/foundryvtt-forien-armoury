@@ -1,0 +1,19 @@
+{
+  "name": "Armour",
+  "sorting": "a",
+  "folder": null,
+  "type": "RollTable",
+  "_id": "a1zLszF0wbMLa9zh",
+  "sort": 0,
+  "color": "#526dbc",
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690161181451,
+    "modifiedTime": 1690161181451,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!folders!a1zLszF0wbMLa9zh"
+}

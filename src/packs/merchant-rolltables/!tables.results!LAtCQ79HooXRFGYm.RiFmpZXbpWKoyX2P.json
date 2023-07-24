@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 15,
+  "range": [
+    152,
+    166
+  ],
+  "drawn": false,
+  "text": "Vitality Draught",
+  "documentId": "ZBBi7LpWvNgQgRcw",
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+  "_id": "RiFmpZXbpWKoyX2P",
+  "flags": {},
+  "_key": "!tables.results!LAtCQ79HooXRFGYm.RiFmpZXbpWKoyX2P"
+}

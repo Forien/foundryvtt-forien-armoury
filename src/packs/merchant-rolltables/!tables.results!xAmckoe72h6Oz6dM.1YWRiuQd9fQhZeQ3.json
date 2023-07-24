@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    2,
+    2
+  ],
+  "drawn": false,
+  "text": "Healing Poultice",
+  "documentId": "s2lBWQFQt6M5Pngb",
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-poultice.png",
+  "_id": "1YWRiuQd9fQhZeQ3",
+  "flags": {},
+  "_key": "!tables.results!xAmckoe72h6Oz6dM.1YWRiuQd9fQhZeQ3"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    5,
+    5
+  ],
+  "drawn": false,
+  "text": "Incendiary",
+  "documentId": "vI0oorwbZdlszudf",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/incendiary.png",
+  "_id": "d9r5QeGYTfaVVHWC",
+  "flags": {},
+  "_key": "!tables.results!yP8BfDbhsxYobb9t.d9r5QeGYTfaVVHWC"
+}

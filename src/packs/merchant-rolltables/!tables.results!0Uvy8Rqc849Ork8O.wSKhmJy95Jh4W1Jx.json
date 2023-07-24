@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    30,
+    30
+  ],
+  "drawn": false,
+  "text": "Slow Match",
+  "documentId": "YlF95ajdNcoPH0EB",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "_id": "wSKhmJy95Jh4W1Jx",
+  "flags": {},
+  "_key": "!tables.results!0Uvy8Rqc849Ork8O.wSKhmJy95Jh4W1Jx"
+}

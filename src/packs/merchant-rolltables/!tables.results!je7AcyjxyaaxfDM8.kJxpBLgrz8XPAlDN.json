@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    26,
+    26
+  ],
+  "drawn": false,
+  "text": "Whetstone",
+  "documentId": "fSGA02E0zcCfA6C7",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "_id": "kJxpBLgrz8XPAlDN",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.kJxpBLgrz8XPAlDN"
+}

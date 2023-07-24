@@ -1,0 +1,89 @@
+{
+  "name": "Ring of Smell",
+  "type": "trapping",
+  "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+  "effects": [
+    "OatfSvcfIfB17oRt"
+  ],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> Silver ring with engravings.</p><p>Imbued with @UUID[Compendium.wfrp4e-wom.journals.JournalEntry.DND7iNuVrCXgTXki]{Ghur}, enhances the wearer's smell, allowing them to sense all nearby entities.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "5",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1663627495178,
+    "modifiedTime": 1690164867080,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "folder": "4yqmjrkdpjUayWXP",
+  "_id": "o9ZQVkJgmfYrm8Lw",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!items!o9ZQVkJgmfYrm8Lw"
+}

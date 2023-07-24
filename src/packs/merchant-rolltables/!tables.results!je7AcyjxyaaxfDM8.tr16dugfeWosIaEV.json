@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    5,
+    5
+  ],
+  "drawn": false,
+  "text": "Comb",
+  "documentId": "wrFLHWygOlwFG2q3",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/comb.png",
+  "_id": "tr16dugfeWosIaEV",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.tr16dugfeWosIaEV"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 10,
+  "range": [
+    27,
+    36
+  ],
+  "drawn": false,
+  "text": "Powder Horn",
+  "documentId": "749BhVdd0kr83pf6",
+  "img": "icons/containers/ammunition/powder-horn-leather.webp",
+  "_id": "fmYqoEyA9qK76S4x",
+  "flags": {},
+  "_key": "!tables.results!6DjW807HxV07VbOH.fmYqoEyA9qK76S4x"
+}

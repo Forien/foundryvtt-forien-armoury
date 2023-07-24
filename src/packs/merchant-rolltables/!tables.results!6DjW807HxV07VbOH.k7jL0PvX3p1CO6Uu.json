@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 10,
+  "range": [
+    52,
+    61
+  ],
+  "drawn": false,
+  "text": "Standard Quiver",
+  "documentId": "3HO7sk5rX9jQ6vYl",
+  "img": "icons/containers/ammunition/arrows-quiver-simple-brown.webp",
+  "_id": "k7jL0PvX3p1CO6Uu",
+  "flags": {},
+  "_key": "!tables.results!6DjW807HxV07VbOH.k7jL0PvX3p1CO6Uu"
+}

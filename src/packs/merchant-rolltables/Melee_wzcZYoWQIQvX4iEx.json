@@ -1,0 +1,19 @@
+{
+  "name": "Melee",
+  "sorting": "a",
+  "folder": "aeY8I5276DJRAinY",
+  "type": "RollTable",
+  "_id": "wzcZYoWQIQvX4iEx",
+  "sort": 0,
+  "color": "#444384",
+  "flags": {},
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!wzcZYoWQIQvX4iEx"
+}

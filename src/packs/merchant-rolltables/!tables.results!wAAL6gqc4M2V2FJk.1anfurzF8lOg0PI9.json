@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    10,
+    10
+  ],
+  "drawn": false,
+  "text": "Stamp, engraved",
+  "documentId": "QCgsQbeEvV4dPB2D",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/stamp-engraved.png",
+  "_id": "1anfurzF8lOg0PI9",
+  "flags": {},
+  "_key": "!tables.results!wAAL6gqc4M2V2FJk.1anfurzF8lOg0PI9"
+}

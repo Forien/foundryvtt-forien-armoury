@@ -1,0 +1,36 @@
+{
+  "folder": "TLJDDCjqzOJlUlJ1",
+  "name": "Tools and Kits All",
+  "_id": "9k3gd2aEG4TnqnYl",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "VJ7VKesxyyAYVpHM",
+    "S0IQuP5qDKAHg4uR",
+    "8RuYQzBIUg5X8R9u",
+    "oEqnRkzhURQPNNcS"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690165246765,
+    "modifiedTime": 1690165265291,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d51",
+  "_key": "!tables!9k3gd2aEG4TnqnYl"
+}

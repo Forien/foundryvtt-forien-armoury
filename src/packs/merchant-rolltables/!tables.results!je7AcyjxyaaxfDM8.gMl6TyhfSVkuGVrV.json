@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Animal Trap",
+  "documentId": "k0KeWhPgFGUcOgs0",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/animal-trap.png",
+  "_id": "gMl6TyhfSVkuGVrV",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.gMl6TyhfSVkuGVrV"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 5,
+  "range": [
+    46,
+    50
+  ],
+  "drawn": false,
+  "text": "Weapons Ranged Rare",
+  "documentId": "g9nAK5VCHXFCHhzT",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "fCbTWNQWXGVBh84w",
+  "flags": {},
+  "_key": "!tables.results!y5SW5JyTnLMGZ493.fCbTWNQWXGVBh84w"
+}

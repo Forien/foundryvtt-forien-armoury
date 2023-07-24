@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    25,
+    25
+  ],
+  "drawn": false,
+  "text": "Tongs, steel",
+  "documentId": "RN1IeSarIRaqyT95",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/tongs-steel.png",
+  "_id": "ij2WustGwpuut8nw",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.ij2WustGwpuut8nw"
+}

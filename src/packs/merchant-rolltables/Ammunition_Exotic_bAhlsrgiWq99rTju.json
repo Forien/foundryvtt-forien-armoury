@@ -1,0 +1,36 @@
+{
+  "folder": "KMmVMr0I2vRhAP6i",
+  "name": "Ammunition Exotic",
+  "_id": "bAhlsrgiWq99rTju",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "O3G7NEvSDCwbCb1K",
+    "UIub2URoOVhRQmcJ",
+    "gCFCstoXvclN6FuD",
+    "7M05NbDr0Q1aNDlb"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690164086608,
+    "modifiedTime": 1690164123747,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d4",
+  "_key": "!tables!bAhlsrgiWq99rTju"
+}

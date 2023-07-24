@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    4,
+    4
+  ],
+  "drawn": false,
+  "text": "Room, private/night",
+  "documentId": "0TGOFL99jG1RJ4ft",
+  "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/room-common-night.png",
+  "_id": "m1TvKVanFT1xJCfj",
+  "flags": {},
+  "_key": "!tables.results!nCH0abB7hFoSzoY1.m1TvKVanFT1xJCfj"
+}

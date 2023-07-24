@@ -1,0 +1,33 @@
+{
+  "folder": "d63kxDM97w0JVZSM",
+  "name": "Trappings Exotic",
+  "_id": "RAtQKHJuwzetzLES",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "RsorGnM4ji2r9WGW"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690166115500,
+    "modifiedTime": 1690166145967,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d1",
+  "_key": "!tables!RAtQKHJuwzetzLES"
+}

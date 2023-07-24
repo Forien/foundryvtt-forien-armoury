@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 1,
+  "range": [
+    51,
+    51
+  ],
+  "drawn": false,
+  "text": "Trappings Exotic",
+  "documentId": "RAtQKHJuwzetzLES",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "pWwwvkNiimrsAWUh",
+  "flags": {},
+  "_key": "!tables.results!t5phe0DiZ2eCUrdj.pWwwvkNiimrsAWUh"
+}

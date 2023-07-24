@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    3,
+    3
+  ],
+  "drawn": false,
+  "text": "Compass",
+  "documentId": "yqQHzGAY57NjGDTd",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "_id": "G6mvLKUrJyeUorDN",
+  "flags": {},
+  "_key": "!tables.results!wAAL6gqc4M2V2FJk.G6mvLKUrJyeUorDN"
+}

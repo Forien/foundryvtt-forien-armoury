@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-archives2.items",
+  "weight": 2,
+  "range": [
+    27,
+    28
+  ],
+  "drawn": false,
+  "text": "Quietened Mail Coif",
+  "documentId": "3dQNE54s7ojwwqWG",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/mail-coif.png",
+  "_id": "pdSRMRYPqgvYFsLQ",
+  "flags": {},
+  "_key": "!tables.results!LFnB1p0YSclCwpf4.pdSRMRYPqgvYFsLQ"
+}

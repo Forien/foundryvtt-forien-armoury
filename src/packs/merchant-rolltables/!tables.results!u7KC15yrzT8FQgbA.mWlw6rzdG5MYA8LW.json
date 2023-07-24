@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 30,
+  "range": [
+    32,
+    61
+  ],
+  "drawn": false,
+  "text": "Old Bow",
+  "documentId": "s3AUYnM2Vl6Y656l",
+  "img": "icons/weapons/bows/shortbow-white.webp",
+  "_id": "mWlw6rzdG5MYA8LW",
+  "flags": {},
+  "_key": "!tables.results!u7KC15yrzT8FQgbA.mWlw6rzdG5MYA8LW"
+}

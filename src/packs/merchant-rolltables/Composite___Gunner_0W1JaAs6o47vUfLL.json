@@ -1,0 +1,35 @@
+{
+  "folder": "VHKLqMoEnxqUOJc0",
+  "name": "Composite – Gunner",
+  "_id": "0W1JaAs6o47vUfLL",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "PzFFa1m5wf5xw7Nt",
+    "1TWXEuS8D24sn53t",
+    "jBRuYThHUrFKbCZD"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690167175681,
+    "modifiedTime": 1690167441832,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d12",
+  "_key": "!tables!0W1JaAs6o47vUfLL"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 15,
+  "range": [
+    39,
+    53
+  ],
+  "drawn": false,
+  "text": "Cup",
+  "documentId": "VIq5ronFVkpzF8Vb",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/cup.png",
+  "_id": "XU1QB65TQAMdVieD",
+  "flags": {},
+  "_key": "!tables.results!Y9Fm1hIUmfYRlQiW.XU1QB65TQAMdVieD"
+}

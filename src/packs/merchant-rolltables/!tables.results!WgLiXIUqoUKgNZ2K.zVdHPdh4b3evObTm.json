@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 5,
+  "range": [
+    6,
+    10
+  ],
+  "drawn": false,
+  "text": "Gambeson Coat",
+  "documentId": "BPcUiIKFMXSobKqC",
+  "img": "modules/forien-armoury/icons/long-gambeson.png",
+  "_id": "zVdHPdh4b3evObTm",
+  "flags": {},
+  "_key": "!tables.results!WgLiXIUqoUKgNZ2K.zVdHPdh4b3evObTm"
+}

@@ -1,0 +1,36 @@
+{
+  "folder": "pKEh2I51xgzWgJK5",
+  "name": "Weapon Ranged all (rarity)",
+  "_id": "y5SW5JyTnLMGZ493",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "8fekTzoksSxiLa9N",
+    "TBaBwvYkP0HOxuR5",
+    "fCbTWNQWXGVBh84w",
+    "zQiQeTw9No3PFw5F"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690163268593,
+    "modifiedTime": 1690163281377,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d51",
+  "_key": "!tables!y5SW5JyTnLMGZ493"
+}

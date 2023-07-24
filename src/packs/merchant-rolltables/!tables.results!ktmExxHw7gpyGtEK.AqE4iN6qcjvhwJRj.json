@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 5,
+  "range": [
+    47,
+    51
+  ],
+  "drawn": false,
+  "text": "Matchlock Blunderbuss",
+  "documentId": "3pnK66EDBJXs5hai",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/blunderbuss.png",
+  "_id": "AqE4iN6qcjvhwJRj",
+  "flags": {},
+  "_key": "!tables.results!ktmExxHw7gpyGtEK.AqE4iN6qcjvhwJRj"
+}

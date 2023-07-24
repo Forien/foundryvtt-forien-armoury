@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 30,
+  "range": [
+    47,
+    76
+  ],
+  "drawn": false,
+  "text": "Pick",
+  "documentId": "EDYwxeZKY90zq2Nx",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/pick.png",
+  "_id": "rvO0lbWzvGl0qQw2",
+  "flags": {},
+  "_key": "!tables.results!x9yE8Z7dhxO16OR9.rvO0lbWzvGl0qQw2"
+}

@@ -1,0 +1,36 @@
+{
+  "folder": "PrOJN66daLYe6ZJc",
+  "name": "Weapons Melee Parry",
+  "_id": "8HxsHxZgPSeKvt6o",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "Q0Cc8QOT7rtdbGqV",
+    "zdKqc6V9l2hL1wl7",
+    "Wl3ffMYkmgdOW77A",
+    "XXOYiGTGddzMe4pw"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690162294610,
+    "modifiedTime": 1690162322187,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d55",
+  "_key": "!tables!8HxsHxZgPSeKvt6o"
+}

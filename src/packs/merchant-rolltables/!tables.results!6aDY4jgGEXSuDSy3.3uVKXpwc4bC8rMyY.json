@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    5,
+    5
+  ],
+  "drawn": false,
+  "text": "Dagger",
+  "documentId": "UlL4mHSgBW3nYh2a",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/dagger.png",
+  "_id": "3uVKXpwc4bC8rMyY",
+  "flags": {},
+  "_key": "!tables.results!6aDY4jgGEXSuDSy3.3uVKXpwc4bC8rMyY"
+}

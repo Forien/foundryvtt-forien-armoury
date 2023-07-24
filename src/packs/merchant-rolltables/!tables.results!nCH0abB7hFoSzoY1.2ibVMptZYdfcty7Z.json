@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    2,
+    2
+  ],
+  "drawn": false,
+  "text": "Meal, inn",
+  "documentId": "USL6G7P9pbdWHodY",
+  "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/meal-inn.png",
+  "_id": "2ibVMptZYdfcty7Z",
+  "flags": {},
+  "_key": "!tables.results!nCH0abB7hFoSzoY1.2ibVMptZYdfcty7Z"
+}

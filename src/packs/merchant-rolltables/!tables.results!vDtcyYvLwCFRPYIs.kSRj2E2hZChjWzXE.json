@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 1,
+  "range": [
+    51,
+    51
+  ],
+  "drawn": false,
+  "text": "Draughts Exotic",
+  "documentId": "7fJhVT1tBT3c0Gdj",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "kSRj2E2hZChjWzXE",
+  "flags": {},
+  "_key": "!tables.results!vDtcyYvLwCFRPYIs.kSRj2E2hZChjWzXE"
+}

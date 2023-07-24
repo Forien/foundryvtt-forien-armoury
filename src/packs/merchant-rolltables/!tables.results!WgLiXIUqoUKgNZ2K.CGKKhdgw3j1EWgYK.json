@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 4,
+  "range": [
+    20,
+    23
+  ],
+  "drawn": false,
+  "text": "Leather Jack",
+  "documentId": "OjcHE0VOGr1aRdy9",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/leather-jack.png",
+  "_id": "CGKKhdgw3j1EWgYK",
+  "flags": {},
+  "_key": "!tables.results!WgLiXIUqoUKgNZ2K.CGKKhdgw3j1EWgYK"
+}

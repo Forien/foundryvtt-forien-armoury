@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 2,
+  "range": [
+    14,
+    15
+  ],
+  "drawn": false,
+  "text": "Containers Arrows and Bolts",
+  "documentId": "xH15xfRhQlyZRXjY",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "Iyphd1eLmcHMjqyN",
+  "flags": {},
+  "_key": "!tables.results!NEhQRPzIINx5KXut.Iyphd1eLmcHMjqyN"
+}

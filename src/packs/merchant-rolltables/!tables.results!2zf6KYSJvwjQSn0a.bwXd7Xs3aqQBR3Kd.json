@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    16,
+    16
+  ],
+  "drawn": false,
+  "text": "Dog collar and lead",
+  "documentId": "gzriPtNbRFltaAsh",
+  "img": "modules/wfrp4e-core/icons/equipment/animals_and_vehicles/dog-collar-and-lead.png",
+  "_id": "bwXd7Xs3aqQBR3Kd",
+  "flags": {},
+  "_key": "!tables.results!2zf6KYSJvwjQSn0a.bwXd7Xs3aqQBR3Kd"
+}

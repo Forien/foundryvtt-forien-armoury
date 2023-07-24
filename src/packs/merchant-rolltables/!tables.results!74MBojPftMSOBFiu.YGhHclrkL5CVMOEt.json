@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Book, Cryptography",
+  "documentId": "z8X2CMJdAZKoE3lk",
+  "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-cryptography.png",
+  "_id": "YGhHclrkL5CVMOEt",
+  "flags": {},
+  "_key": "!tables.results!74MBojPftMSOBFiu.YGhHclrkL5CVMOEt"
+}

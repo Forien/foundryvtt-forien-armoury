@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 5,
+  "range": [
+    17,
+    21
+  ],
+  "drawn": false,
+  "text": "Bomb",
+  "documentId": "A9QGISjhQq3w9uhK",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/bomb.png",
+  "_id": "IHhf6EozyUg2WRfO",
+  "flags": {},
+  "_key": "!tables.results!YUwVdxuWAWiLp0CZ.IHhf6EozyUg2WRfO"
+}

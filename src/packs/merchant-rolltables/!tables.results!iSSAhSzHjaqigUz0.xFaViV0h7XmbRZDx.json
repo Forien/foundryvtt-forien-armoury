@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-zoo.items",
+  "weight": 1,
+  "range": [
+    4,
+    4
+  ],
+  "drawn": false,
+  "text": "Flesh Blister",
+  "documentId": "OrrCyNiJV8hGIvcu",
+  "img": "modules/wfrp4e-core/icons/equipment/drugs_and_poisons/spit.png",
+  "_id": "xFaViV0h7XmbRZDx",
+  "flags": {},
+  "_key": "!tables.results!iSSAhSzHjaqigUz0.xFaViV0h7XmbRZDx"
+}

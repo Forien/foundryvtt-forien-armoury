@@ -1,0 +1,35 @@
+{
+  "folder": "F25hUarBIYKworSm",
+  "name": "Draughts Common",
+  "_id": "xAmckoe72h6Oz6dM",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "lRBSTUmfa0maLFFG",
+    "1YWRiuQd9fQhZeQ3",
+    "w9Z44jBGlXTXObro"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690165691695,
+    "modifiedTime": 1690165699151,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d3",
+  "_key": "!tables!xAmckoe72h6Oz6dM"
+}

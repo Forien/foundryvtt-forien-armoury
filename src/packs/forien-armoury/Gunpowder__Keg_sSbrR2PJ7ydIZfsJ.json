@@ -38,7 +38,7 @@
     "availability": {
       "type": "String",
       "label": "Availability",
-      "value": "common"
+      "value": "scarce"
     },
     "location": {
       "type": "Number",
@@ -70,11 +70,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.302",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
     "createdTime": 1663627495296,
-    "modifiedTime": 1687909025431,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1690167484130,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "EMM7NeZE1NBThlpp",
   "_id": "sSbrR2PJ7ydIZfsJ",

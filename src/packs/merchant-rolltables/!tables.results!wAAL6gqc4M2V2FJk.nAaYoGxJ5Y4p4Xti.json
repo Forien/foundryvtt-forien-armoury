@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    4,
+    4
+  ],
+  "drawn": false,
+  "text": "Disguise Kit",
+  "documentId": "gx451Vn2Ru3eKLIg",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/disguise-kit.png",
+  "_id": "nAaYoGxJ5Y4p4Xti",
+  "flags": {},
+  "_key": "!tables.results!wAAL6gqc4M2V2FJk.nAaYoGxJ5Y4p4Xti"
+}

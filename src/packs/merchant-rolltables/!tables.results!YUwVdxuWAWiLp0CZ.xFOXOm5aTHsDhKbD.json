@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    57,
+    57
+  ],
+  "drawn": false,
+  "text": "Grapeshot and Powder",
+  "documentId": "PinFSQuQvxqaobSf",
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png",
+  "_id": "xFOXOm5aTHsDhKbD",
+  "flags": {},
+  "_key": "!tables.results!YUwVdxuWAWiLp0CZ.xFOXOm5aTHsDhKbD"
+}

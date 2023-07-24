@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Bugman’s XXXXXX Ale, pint",
+  "documentId": "KzJkoB12jpidtngo",
+  "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/bugmans-xxxxxx-ale-pint.png",
+  "_id": "ui3zRgTStgyBVkuW",
+  "flags": {},
+  "_key": "!tables.results!u4wfmPOh5HeiB3H2.ui3zRgTStgyBVkuW"
+}

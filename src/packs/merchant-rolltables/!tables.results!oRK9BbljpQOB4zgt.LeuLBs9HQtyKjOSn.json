@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-archives2.items",
+  "weight": 5,
+  "range": [
+    16,
+    20
+  ],
+  "drawn": false,
+  "text": "Quietened Mail Chausses",
+  "documentId": "Cya63L5XXQQgphhR",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/mail-chausses.png",
+  "_id": "LeuLBs9HQtyKjOSn",
+  "flags": {},
+  "_key": "!tables.results!oRK9BbljpQOB4zgt.LeuLBs9HQtyKjOSn"
+}

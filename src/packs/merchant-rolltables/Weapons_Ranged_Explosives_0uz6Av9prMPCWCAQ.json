@@ -1,0 +1,35 @@
+{
+  "folder": "OIXKjAS72VZJ0m0z",
+  "name": "Weapons Ranged Explosives",
+  "_id": "0uz6Av9prMPCWCAQ",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "9C28sJgg4dnp3AAp",
+    "ZdheHaj7deTIU8m2",
+    "4F6JIAM38s6Ljbja"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690163568540,
+    "modifiedTime": 1690163590295,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d21",
+  "_key": "!tables!0uz6Av9prMPCWCAQ"
+}

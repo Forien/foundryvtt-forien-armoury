@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    6,
+    6
+  ],
+  "drawn": false,
+  "text": "Pike",
+  "documentId": "5vIukO3mtUXaLy7G",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/pike.png",
+  "_id": "X1KBZh3CLN24tnyH",
+  "flags": {},
+  "_key": "!tables.results!Qrn0SkDfC4s8EHhu.X1KBZh3CLN24tnyH"
+}

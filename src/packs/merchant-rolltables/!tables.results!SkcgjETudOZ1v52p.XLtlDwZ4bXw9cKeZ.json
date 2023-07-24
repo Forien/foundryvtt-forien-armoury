@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Captain Braun's Insta-Boiler",
+  "documentId": "6QqNTTDzdkqYRttW",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "_id": "XLtlDwZ4bXw9cKeZ",
+  "flags": {},
+  "_key": "!tables.results!SkcgjETudOZ1v52p.XLtlDwZ4bXw9cKeZ"
+}

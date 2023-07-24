@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 30,
+  "range": [
+    92,
+    121
+  ],
+  "drawn": false,
+  "text": "Salwort",
+  "documentId": "mUTrC5DA6bF8DDWz",
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/salwort.png",
+  "_id": "KtYCCMFkRjbQnjpA",
+  "flags": {},
+  "_key": "!tables.results!LAtCQ79HooXRFGYm.KtYCCMFkRjbQnjpA"
+}

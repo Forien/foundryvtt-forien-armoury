@@ -1,0 +1,39 @@
+{
+  "folder": "VHKLqMoEnxqUOJc0",
+  "name": "Composite – Food and Drink (Inn)",
+  "_id": "nCH0abB7hFoSzoY1",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "3wUqwdwDzBW1rsWF",
+    "2ibVMptZYdfcty7Z",
+    "03H48gcrVvWEDkQd",
+    "m1TvKVanFT1xJCfj",
+    "PSU2zWsHV2SOcDYE",
+    "RpBvZKQtlHodCpFB",
+    "BQQO5cvkfQo6XCi8"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690165000906,
+    "modifiedTime": 1690167243874,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d7",
+  "_key": "!tables!nCH0abB7hFoSzoY1"
+}

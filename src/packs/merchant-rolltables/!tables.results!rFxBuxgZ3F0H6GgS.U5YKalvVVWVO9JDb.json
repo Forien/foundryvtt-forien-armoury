@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    17,
+    17
+  ],
+  "drawn": false,
+  "text": "Pollaxe",
+  "documentId": "7N3TrPYcO9cNNgsd",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/pollaxe.png",
+  "_id": "U5YKalvVVWVO9JDb",
+  "flags": {},
+  "_key": "!tables.results!rFxBuxgZ3F0H6GgS.U5YKalvVVWVO9JDb"
+}

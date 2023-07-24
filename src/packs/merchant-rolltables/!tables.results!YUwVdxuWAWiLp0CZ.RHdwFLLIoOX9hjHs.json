@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-archives1.items",
+  "weight": 5,
+  "range": [
+    52,
+    56
+  ],
+  "drawn": false,
+  "text": "Drakefire Shot",
+  "documentId": "gxiMS94QBeyURKfJ",
+  "img": "modules/wfrp4e-archives1/assets/icons/drakefire-shot.png",
+  "_id": "RHdwFLLIoOX9hjHs",
+  "flags": {},
+  "_key": "!tables.results!YUwVdxuWAWiLp0CZ.RHdwFLLIoOX9hjHs"
+}

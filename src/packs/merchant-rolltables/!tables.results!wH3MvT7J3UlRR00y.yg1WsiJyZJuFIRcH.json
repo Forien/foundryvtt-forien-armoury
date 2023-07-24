@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    2,
+    2
+  ],
+  "drawn": false,
+  "text": "Book, Art",
+  "documentId": "H5CqkYPVVUslaORH",
+  "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-art.png",
+  "_id": "yg1WsiJyZJuFIRcH",
+  "flags": {},
+  "_key": "!tables.results!wH3MvT7J3UlRR00y.yg1WsiJyZJuFIRcH"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    8,
+    8
+  ],
+  "drawn": false,
+  "text": "Sharp Stick",
+  "documentId": "H4cGoQW1d6dvWrB6",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/spike.png",
+  "_id": "eBRT4pWbqcFHr4gt",
+  "flags": {},
+  "_key": "!tables.results!j2rN0bLGn7OJ2YKN.eBRT4pWbqcFHr4gt"
+}

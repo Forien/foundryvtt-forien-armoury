@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 7,
+  "range": [
+    5,
+    11
+  ],
+  "drawn": false,
+  "text": "Ammunition Bow",
+  "documentId": "SPHK7kTHbQfB0AOE",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "4aqIKjNkQnWTg3oo",
+  "flags": {},
+  "_key": "!tables.results!kNmv6o73tMmYzer2.4aqIKjNkQnWTg3oo"
+}

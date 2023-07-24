@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-archives1.items",
+  "weight": 30,
+  "range": [
+    93,
+    122
+  ],
+  "drawn": false,
+  "text": "Slayer's Axe",
+  "documentId": "7cVsB1Ss3cXMySl5",
+  "img": "modules/wfrp4e-archives1/assets/icons/slayers-axe.png",
+  "_id": "OgcBWTvgSlwy6IxB",
+  "flags": {},
+  "_key": "!tables.results!x9yE8Z7dhxO16OR9.OgcBWTvgSlwy6IxB"
+}

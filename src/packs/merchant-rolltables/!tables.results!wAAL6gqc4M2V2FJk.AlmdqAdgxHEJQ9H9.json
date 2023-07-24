@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    5,
+    5
+  ],
+  "drawn": false,
+  "text": "Ear Pick",
+  "documentId": "8bxAt6ru3cCyGr6N",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/ear-pick.png",
+  "_id": "AlmdqAdgxHEJQ9H9",
+  "flags": {},
+  "_key": "!tables.results!wAAL6gqc4M2V2FJk.AlmdqAdgxHEJQ9H9"
+}

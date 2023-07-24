@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 5,
+  "range": [
+    1,
+    5
+  ],
+  "drawn": false,
+  "text": "Weapons Melee Basic",
+  "documentId": "NbQj13peakFFZ7y7",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "2wO8MFvpa8Zm7nls",
+  "flags": {},
+  "_key": "!tables.results!hvqbuVn1qgidw5Nh.2wO8MFvpa8Zm7nls"
+}

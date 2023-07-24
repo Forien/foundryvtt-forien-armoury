@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 10,
+  "range": [
+    73,
+    82
+  ],
+  "drawn": false,
+  "text": "Empty Vial",
+  "documentId": "VX5v3rgKUIyhE5CD",
+  "img": "icons/consumables/potions/vial-cork-empty.webp",
+  "_id": "RVxgyJrc4YaTsjmL",
+  "flags": {},
+  "_key": "!tables.results!2zf6KYSJvwjQSn0a.RVxgyJrc4YaTsjmL"
+}

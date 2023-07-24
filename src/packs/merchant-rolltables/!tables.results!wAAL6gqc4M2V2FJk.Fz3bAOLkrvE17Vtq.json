@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    12,
+    12
+  ],
+  "drawn": false,
+  "text": "Writing Kit",
+  "documentId": "6OmsMPtz0NzCwvzL",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/writing-kit.png",
+  "_id": "Fz3bAOLkrvE17Vtq",
+  "flags": {},
+  "_key": "!tables.results!wAAL6gqc4M2V2FJk.Fz3bAOLkrvE17Vtq"
+}

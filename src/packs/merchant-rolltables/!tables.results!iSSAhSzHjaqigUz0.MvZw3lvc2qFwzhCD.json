@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-zoo.items",
+  "weight": 1,
+  "range": [
+    17,
+    17
+  ],
+  "drawn": false,
+  "text": "Troll Acid",
+  "documentId": "F6GWmqRwZ5MrIhvE",
+  "img": "modules/wfrp4e-core/icons/equipment/drugs_and_poisons/heartkill.png",
+  "_id": "MvZw3lvc2qFwzhCD",
+  "flags": {},
+  "_key": "!tables.results!iSSAhSzHjaqigUz0.MvZw3lvc2qFwzhCD"
+}

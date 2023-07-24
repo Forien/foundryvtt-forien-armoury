@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    7,
+    7
+  ],
+  "drawn": false,
+  "text": "Staff Sling",
+  "documentId": "KSwMbO8dqISoGuIo",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/staff-sling.png",
+  "_id": "ZhFUnzotN0hBB9xk",
+  "flags": {},
+  "_key": "!tables.results!ldeC3M21CQGHkwfI.ZhFUnzotN0hBB9xk"
+}

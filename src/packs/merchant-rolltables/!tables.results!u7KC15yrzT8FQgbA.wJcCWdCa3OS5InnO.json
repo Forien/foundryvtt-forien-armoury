@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    31,
+    31
+  ],
+  "drawn": false,
+  "text": "Elf Bow",
+  "documentId": "2mE771fGEEB38OqG",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/elf-bow.png",
+  "_id": "wJcCWdCa3OS5InnO",
+  "flags": {},
+  "_key": "!tables.results!u7KC15yrzT8FQgbA.wJcCWdCa3OS5InnO"
+}

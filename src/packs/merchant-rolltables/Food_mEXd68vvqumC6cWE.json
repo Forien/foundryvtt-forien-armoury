@@ -1,0 +1,38 @@
+{
+  "folder": "yOsuU5LCBM5bt9yt",
+  "name": "Food",
+  "_id": "mEXd68vvqumC6cWE",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "Bek7borGbfuuLaTt",
+    "hIZTSIb4Dj9thGqQ",
+    "x2dTK70RNQ4L0rFk",
+    "kicFWvSRSxSIvlFF",
+    "0tJCfPQYIspdECkp",
+    "cYZBUDq9Du0yswIY"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690166279690,
+    "modifiedTime": 1690166326333,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d116",
+  "_key": "!tables!mEXd68vvqumC6cWE"
+}

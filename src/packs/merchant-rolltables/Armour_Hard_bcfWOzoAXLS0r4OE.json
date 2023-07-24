@@ -1,0 +1,39 @@
+{
+  "folder": "auoZIFXuUhCbaVFh",
+  "name": "Armour Hard",
+  "_id": "bcfWOzoAXLS0r4OE",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "tAWjJqaFWmfXViwB",
+    "QerIHrgedUKyMvKK",
+    "qgv1lF3grmniJ5os",
+    "Tnpq4GC3RRyslcSF",
+    "2fDPp1CBCxG9jgrO",
+    "u1AOHpYiTF8kdiM6",
+    "8HBx9CYrbGZpeIqo"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690161353488,
+    "modifiedTime": 1690161816773,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d56",
+  "_key": "!tables!bcfWOzoAXLS0r4OE"
+}

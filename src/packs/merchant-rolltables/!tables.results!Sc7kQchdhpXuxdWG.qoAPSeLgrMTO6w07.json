@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Ale, Keg",
+  "documentId": "jyphOMwPqNU9KgmS",
+  "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/ale-keg.png",
+  "_id": "qoAPSeLgrMTO6w07",
+  "flags": {},
+  "_key": "!tables.results!Sc7kQchdhpXuxdWG.qoAPSeLgrMTO6w07"
+}

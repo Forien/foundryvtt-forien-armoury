@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 30,
+  "range": [
+    426,
+    455
+  ],
+  "drawn": false,
+  "text": "Shield (Large)",
+  "documentId": "CYkA9Ax6BN7eiTvf",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/shield-large.png",
+  "_id": "98VwnPPboS6afERa",
+  "flags": {},
+  "_key": "!tables.results!NbQj13peakFFZ7y7.98VwnPPboS6afERa"
+}

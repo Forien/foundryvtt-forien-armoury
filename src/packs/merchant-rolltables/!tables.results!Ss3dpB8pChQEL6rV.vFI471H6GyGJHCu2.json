@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 10,
+  "range": [
+    11,
+    20
+  ],
+  "drawn": false,
+  "text": "Breastplate",
+  "documentId": "hWZ6H1jZ9jmte6yE",
+  "img": "icons/equipment/chest/breastplate-gorget-steel.webp",
+  "_id": "vFI471H6GyGJHCu2",
+  "flags": {},
+  "_key": "!tables.results!Ss3dpB8pChQEL6rV.vFI471H6GyGJHCu2"
+}

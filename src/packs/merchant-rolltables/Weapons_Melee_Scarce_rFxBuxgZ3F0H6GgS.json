@@ -1,0 +1,50 @@
+{
+  "folder": "qadSv8WiQda0kwDd",
+  "name": "Weapons Melee Scarce",
+  "_id": "rFxBuxgZ3F0H6GgS",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "DCbjZfFCbKTOjYkz",
+    "1VtmEWdCMuJSX9xR",
+    "yVZq5s5zfO0u12Mb",
+    "mbAg37iVy3daEjkh",
+    "xd0RiarTUk7TqkVI",
+    "3zk6yGcCARRlhyBu",
+    "NOIvCO5ntTNLizrc",
+    "W0Pc0Wr5f7chAlJ8",
+    "WQxxND5YzLUrxs7A",
+    "one0zUGIplHbKA66",
+    "EOzcGUirftwFw6sR",
+    "59ly3fELq7gEKMEy",
+    "2oBH1TBCT84qiQZR",
+    "3uoc4DwY4wwnDL1c",
+    "QymRSZ3tJ42EIAqo",
+    "b6P4WzBrTcEcESJQ",
+    "U5YKalvVVWVO9JDb",
+    "b0vTFPCFGSs5AJWa"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690161578458,
+    "modifiedTime": 1690161632198,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d18",
+  "_key": "!tables!rFxBuxgZ3F0H6GgS"
+}

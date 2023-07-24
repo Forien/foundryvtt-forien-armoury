@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    2,
+    2
+  ],
+  "drawn": false,
+  "text": "Bandoleer",
+  "documentId": "eDTA7JOUB5XTiRbI",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "_id": "i4e0jM7s8rya8uet",
+  "flags": {},
+  "_key": "!tables.results!DkyB96EbXiOEGTk0.i4e0jM7s8rya8uet"
+}

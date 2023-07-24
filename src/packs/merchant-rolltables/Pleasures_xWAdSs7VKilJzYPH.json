@@ -1,0 +1,36 @@
+{
+  "folder": "yOsuU5LCBM5bt9yt",
+  "name": "Pleasures",
+  "_id": "xWAdSs7VKilJzYPH",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "28gxCVG9avaXv077",
+    "cuLxys2iOctWJe1V",
+    "MB3ZzFRikOaaYOyO",
+    "tykMZdOMurKlD6t1"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690166724569,
+    "modifiedTime": 1690166766285,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d19",
+  "_key": "!tables!xWAdSs7VKilJzYPH"
+}

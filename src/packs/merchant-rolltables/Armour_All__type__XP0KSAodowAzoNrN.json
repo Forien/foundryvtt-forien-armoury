@@ -1,0 +1,35 @@
+{
+  "folder": "auoZIFXuUhCbaVFh",
+  "name": "Armour All (type)",
+  "_id": "XP0KSAodowAzoNrN",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "wuXKpwkFfLbUhf1K",
+    "z3MYbi0u9Hb6HqS1",
+    "L0NyAWIiqWxgG0i2"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690161855290,
+    "modifiedTime": 1690162614099,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d12",
+  "_key": "!tables!XP0KSAodowAzoNrN"
+}

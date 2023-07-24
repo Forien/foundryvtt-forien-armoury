@@ -1,0 +1,57 @@
+{
+  "folder": "qadSv8WiQda0kwDd",
+  "name": "Weapons Melee Common",
+  "_id": "6aDY4jgGEXSuDSy3",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "f9gUpWQvXmiPUJR7",
+    "tmzPnNlu3eSbstrf",
+    "RlVGvxa2cKNqReq2",
+    "P3HwqKxfmlbYNR5Z",
+    "3uVKXpwc4bC8rMyY",
+    "2hcpWEvwW1Ch6lUw",
+    "Q8Bu5HQ1GAruKaSu",
+    "w6cyN3m1HVBBjjdO",
+    "1ZuEsUcp34ZXED5O",
+    "fXNp0bZNwSgIoEti",
+    "lwaJP0Fh62hIcy0A",
+    "GP2MJWECm9zJUUDo",
+    "9tdjbWjx1E75Ngvj",
+    "elGeNopxPqONid8b",
+    "EYWuxqmx7CJh2NR0",
+    "LqSfqr1RWABPlz3g",
+    "Tns2vevxq2MDg9qp",
+    "lhhshqYAFWVLINu7",
+    "iCoE957lANxaUeaB",
+    "TxmHv20xIx3pBR4v",
+    "6twmlaSCsnBYQtjr",
+    "qa8RiBZqEW8dwk04",
+    "lR2y7VyhPMqkyTCN",
+    "zvB637PMTE20x3bY",
+    "mn30qigU7MUxinqJ"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690161497072,
+    "modifiedTime": 1690161569233,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d25",
+  "_key": "!tables!6aDY4jgGEXSuDSy3"
+}

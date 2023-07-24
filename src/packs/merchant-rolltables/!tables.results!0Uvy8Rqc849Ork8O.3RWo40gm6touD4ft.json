@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    10,
+    10
+  ],
+  "drawn": false,
+  "text": "Chalk",
+  "documentId": "elraWaIlaaHeKwKl",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/chalk.png",
+  "_id": "3RWo40gm6touD4ft",
+  "flags": {},
+  "_key": "!tables.results!0Uvy8Rqc849Ork8O.3RWo40gm6touD4ft"
+}

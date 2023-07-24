@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 15,
+  "range": [
+    486,
+    500
+  ],
+  "drawn": false,
+  "text": "Warhammer",
+  "documentId": "4K8ai0xrndckUr0e",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/warhammer-basic.png",
+  "_id": "LL1Rf5lnJwvUAjUj",
+  "flags": {},
+  "_key": "!tables.results!NbQj13peakFFZ7y7.LL1Rf5lnJwvUAjUj"
+}

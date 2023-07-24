@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 30,
+  "range": [
+    6,
+    35
+  ],
+  "drawn": false,
+  "text": "Lasso",
+  "documentId": "k0JKY8ck2QUx5mKS",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/lasso.png",
+  "_id": "hOItLSpcEWAETtuA",
+  "flags": {},
+  "_key": "!tables.results!d6aAZua7r7FBa2WW.hOItLSpcEWAETtuA"
+}

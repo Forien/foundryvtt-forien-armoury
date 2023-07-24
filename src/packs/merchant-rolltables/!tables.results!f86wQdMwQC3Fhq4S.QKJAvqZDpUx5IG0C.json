@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    4,
+    4
+  ],
+  "drawn": false,
+  "text": "Bodkin Arrow",
+  "documentId": "T2V8bJAbtwYlvOPT",
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/arrow.png",
+  "_id": "QKJAvqZDpUx5IG0C",
+  "flags": {},
+  "_key": "!tables.results!f86wQdMwQC3Fhq4S.QKJAvqZDpUx5IG0C"
+}

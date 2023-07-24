@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 20,
+  "range": [
+    97,
+    116
+  ],
+  "drawn": false,
+  "text": "Flask of Spirits",
+  "documentId": "f6cvUapo8tQHp2OL",
+  "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/spirits-pint.png",
+  "_id": "cYZBUDq9Du0yswIY",
+  "flags": {},
+  "_key": "!tables.results!mEXd68vvqumC6cWE.cYZBUDq9Du0yswIY"
+}

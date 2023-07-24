@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 30,
+  "range": [
+    456,
+    485
+  ],
+  "drawn": false,
+  "text": "Sword",
+  "documentId": "erX8o1o0IcXHTX2r",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/sword1.png",
+  "_id": "421pUokY4LKnh3CN",
+  "flags": {},
+  "_key": "!tables.results!NbQj13peakFFZ7y7.421pUokY4LKnh3CN"
+}

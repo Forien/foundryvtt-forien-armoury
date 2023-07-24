@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    62,
+    62
+  ],
+  "drawn": false,
+  "text": "Mortar",
+  "documentId": "d2LzU8hNCH97njsK",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "_id": "0SbK2UQFYzEQgJsA",
+  "flags": {},
+  "_key": "!tables.results!ktmExxHw7gpyGtEK.0SbK2UQFYzEQgJsA"
+}

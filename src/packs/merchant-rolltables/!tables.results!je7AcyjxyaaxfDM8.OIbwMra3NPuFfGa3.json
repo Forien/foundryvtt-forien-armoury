@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    4,
+    4
+  ],
+  "drawn": false,
+  "text": "Bucket",
+  "documentId": "lq7bDxEeIIVSmLOg",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/bucket.png",
+  "_id": "OIbwMra3NPuFfGa3",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.OIbwMra3NPuFfGa3"
+}

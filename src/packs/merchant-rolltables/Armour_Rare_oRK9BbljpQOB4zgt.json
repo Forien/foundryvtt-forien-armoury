@@ -1,0 +1,38 @@
+{
+  "folder": "1s3VG4H3m9vYvDhz",
+  "name": "Armour Rare",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "rysEVeroj8LBscS2",
+    "16J7ZuzogJWI65OR",
+    "5D1jigyAwO31hKVu",
+    "LeuLBs9HQtyKjOSn",
+    "SmZWDAjDvZq0vWRY",
+    "9bXFScYMZW1oIes1"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690160446787,
+    "modifiedTime": 1690161833768,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d30",
+  "_id": "oRK9BbljpQOB4zgt",
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!tables!oRK9BbljpQOB4zgt"
+}

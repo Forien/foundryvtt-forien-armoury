@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    22,
+    22
+  ],
+  "drawn": false,
+  "text": "Sickle",
+  "documentId": "hnuZUd35SCjKkJc2",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/sickle.png",
+  "_id": "f6BsZN0vpVZoAOrC",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.f6BsZN0vpVZoAOrC"
+}

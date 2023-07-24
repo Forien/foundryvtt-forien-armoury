@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-zoo.items",
+  "weight": 1,
+  "range": [
+    10,
+    10
+  ],
+  "drawn": false,
+  "text": "Preyton's Fury",
+  "documentId": "at7nVMlU6Aq805XF",
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-draught.png",
+  "_id": "naX9JvlQak0O2ZpC",
+  "flags": {},
+  "_key": "!tables.results!iSSAhSzHjaqigUz0.naX9JvlQak0O2ZpC"
+}

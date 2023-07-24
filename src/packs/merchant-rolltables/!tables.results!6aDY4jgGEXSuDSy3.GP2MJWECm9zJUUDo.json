@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    12,
+    12
+  ],
+  "drawn": false,
+  "text": "Knife",
+  "documentId": "orISaVdapDMJsCJI",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/knife.png",
+  "_id": "GP2MJWECm9zJUUDo",
+  "flags": {},
+  "_key": "!tables.results!6aDY4jgGEXSuDSy3.GP2MJWECm9zJUUDo"
+}

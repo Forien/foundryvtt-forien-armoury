@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    10,
+    10
+  ],
+  "drawn": false,
+  "text": "Hand Weapon",
+  "documentId": "1zaqojk0Oq1m8vYv",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/hand-weapon.png",
+  "_id": "fXNp0bZNwSgIoEti",
+  "flags": {},
+  "_key": "!tables.results!6aDY4jgGEXSuDSy3.fXNp0bZNwSgIoEti"
+}

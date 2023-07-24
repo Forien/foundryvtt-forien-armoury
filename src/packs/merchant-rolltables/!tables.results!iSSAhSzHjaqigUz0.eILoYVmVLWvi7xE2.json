@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    13,
+    13
+  ],
+  "drawn": false,
+  "text": "Spit",
+  "documentId": "W4X1Jx8AN84yRPDx",
+  "img": "modules/wfrp4e-core/icons/equipment/drugs_and_poisons/spit.png",
+  "_id": "eILoYVmVLWvi7xE2",
+  "flags": {},
+  "_key": "!tables.results!iSSAhSzHjaqigUz0.eILoYVmVLWvi7xE2"
+}

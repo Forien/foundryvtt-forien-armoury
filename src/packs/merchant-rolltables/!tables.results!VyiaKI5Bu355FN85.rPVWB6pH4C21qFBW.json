@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 15,
+  "range": [
+    31,
+    45
+  ],
+  "drawn": false,
+  "text": "Crossbow Pistol",
+  "documentId": "M71CyisSXU0I7V1S",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/crossbow-pistol.png",
+  "_id": "rPVWB6pH4C21qFBW",
+  "flags": {},
+  "_key": "!tables.results!VyiaKI5Bu355FN85.rPVWB6pH4C21qFBW"
+}

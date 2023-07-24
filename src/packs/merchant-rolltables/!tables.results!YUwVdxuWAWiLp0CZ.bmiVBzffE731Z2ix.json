@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 15,
+  "range": [
+    118,
+    132
+  ],
+  "drawn": false,
+  "text": "Incendiary",
+  "documentId": "gCRiirLG9h9yxKzp",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/incendiary.png",
+  "_id": "bmiVBzffE731Z2ix",
+  "flags": {},
+  "_key": "!tables.results!YUwVdxuWAWiLp0CZ.bmiVBzffE731Z2ix"
+}

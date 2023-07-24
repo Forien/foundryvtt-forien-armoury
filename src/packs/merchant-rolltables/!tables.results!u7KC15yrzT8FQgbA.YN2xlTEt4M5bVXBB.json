@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 15,
+  "range": [
+    92,
+    106
+  ],
+  "drawn": false,
+  "text": "Longbow",
+  "documentId": "RHkj94yUJp620xr1",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/longbow.png",
+  "_id": "YN2xlTEt4M5bVXBB",
+  "flags": {},
+  "_key": "!tables.results!u7KC15yrzT8FQgbA.YN2xlTEt4M5bVXBB"
+}

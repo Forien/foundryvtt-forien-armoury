@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 1,
+  "range": [
+    23,
+    23
+  ],
+  "drawn": false,
+  "text": "Spear (2h)",
+  "documentId": "FR6vIPKu7cQ4Mkr8",
+  "img": "icons/weapons/polearms/spear-flared-blue.webp",
+  "_id": "lR2y7VyhPMqkyTCN",
+  "flags": {},
+  "_key": "!tables.results!6aDY4jgGEXSuDSy3.lR2y7VyhPMqkyTCN"
+}

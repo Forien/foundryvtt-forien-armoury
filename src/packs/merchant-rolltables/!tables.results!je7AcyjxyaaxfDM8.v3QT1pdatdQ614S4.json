@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    7,
+    7
+  ],
+  "drawn": false,
+  "text": "Crowbar",
+  "documentId": "WDawuBcvsglWEVMg",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/crowbar.png",
+  "_id": "v3QT1pdatdQ614S4",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.v3QT1pdatdQ614S4"
+}

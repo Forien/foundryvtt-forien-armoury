@@ -1,0 +1,35 @@
+{
+  "folder": "1Dr5AYNUnFcc22OL",
+  "name": "Containers Arrows and Bolts",
+  "_id": "xH15xfRhQlyZRXjY",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "FkAAM5t3GShH2IRB",
+    "WlcwEsBhVzqKFoZd",
+    "BGEIvp9EmlhGgTfQ"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690167339632,
+    "modifiedTime": 1690167366555,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d40",
+  "_key": "!tables!xH15xfRhQlyZRXjY"
+}

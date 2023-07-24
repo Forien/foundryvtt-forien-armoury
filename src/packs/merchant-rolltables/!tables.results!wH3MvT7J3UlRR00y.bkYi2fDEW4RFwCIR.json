@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    3,
+    3
+  ],
+  "drawn": false,
+  "text": "Book, Engineer",
+  "documentId": "25Ek5A1EmQqzOcSK",
+  "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-engineer.png",
+  "_id": "bkYi2fDEW4RFwCIR",
+  "flags": {},
+  "_key": "!tables.results!wH3MvT7J3UlRR00y.bkYi2fDEW4RFwCIR"
+}

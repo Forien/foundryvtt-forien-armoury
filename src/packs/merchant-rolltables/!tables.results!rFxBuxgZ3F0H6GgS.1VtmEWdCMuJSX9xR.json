@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    2,
+    2
+  ],
+  "drawn": false,
+  "text": "Ballock Knife",
+  "documentId": "AyhuzfJxwZGIKhsI",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/main-gauche.png",
+  "_id": "1VtmEWdCMuJSX9xR",
+  "flags": {},
+  "_key": "!tables.results!rFxBuxgZ3F0H6GgS.1VtmEWdCMuJSX9xR"
+}

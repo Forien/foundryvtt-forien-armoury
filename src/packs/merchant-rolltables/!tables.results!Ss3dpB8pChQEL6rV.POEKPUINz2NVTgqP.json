@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 10,
+  "range": [
+    31,
+    40
+  ],
+  "drawn": false,
+  "text": "Long Gambeson",
+  "documentId": "X1OPgLRUhnJhjufW",
+  "img": "modules/forien-armoury/icons/long-gambeson.png",
+  "_id": "POEKPUINz2NVTgqP",
+  "flags": {},
+  "_key": "!tables.results!Ss3dpB8pChQEL6rV.POEKPUINz2NVTgqP"
+}

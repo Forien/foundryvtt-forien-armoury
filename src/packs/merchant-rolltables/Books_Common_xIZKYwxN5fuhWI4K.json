@@ -1,0 +1,34 @@
+{
+  "folder": "x9ue032E7NiyZLa6",
+  "name": "Books Common",
+  "_id": "xIZKYwxN5fuhWI4K",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "cLhnJ9hhClLKvla2",
+    "X8nRwAg4hZRY1WI8"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690165552874,
+    "modifiedTime": 1690165570138,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d2",
+  "_key": "!tables!xIZKYwxN5fuhWI4K"
+}

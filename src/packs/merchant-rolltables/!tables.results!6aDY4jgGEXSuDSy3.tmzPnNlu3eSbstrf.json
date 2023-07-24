@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-archives1.items",
+  "weight": 1,
+  "range": [
+    2,
+    2
+  ],
+  "drawn": false,
+  "text": "Bearded Axe",
+  "documentId": "kPmmaj7qzM3O6pY8",
+  "img": "modules/wfrp4e-archives1/assets/icons/bearded-axe.png",
+  "_id": "tmzPnNlu3eSbstrf",
+  "flags": {},
+  "_key": "!tables.results!6aDY4jgGEXSuDSy3.tmzPnNlu3eSbstrf"
+}

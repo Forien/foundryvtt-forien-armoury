@@ -1,0 +1,46 @@
+{
+  "folder": "OIXKjAS72VZJ0m0z",
+  "name": "Weapons Ranged Blackpowder",
+  "_id": "ktmExxHw7gpyGtEK",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "FkKAms5I8bbDW5zu",
+    "1DPfcEGtX1B0yqAq",
+    "7CqX7dtQMrsmcSG0",
+    "fC1i5q39wwgxAWcr",
+    "z1IW4A735s3uv0Xn",
+    "FgUO4ROW6eQYW6ct",
+    "nXsYV89KNuTVAVJZ",
+    "VoC4bXBo83dQAj5b",
+    "oFOuPHyQOkcTNVnd",
+    "fgstMpl1wZhPSmj9",
+    "AqE4iN6qcjvhwJRj",
+    "hMEjbQWaf5GmTCb2",
+    "fXCFbqc50yMGpH7g",
+    "0SbK2UQFYzEQgJsA"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690163735778,
+    "modifiedTime": 1690164159354,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d62",
+  "_key": "!tables!ktmExxHw7gpyGtEK"
+}

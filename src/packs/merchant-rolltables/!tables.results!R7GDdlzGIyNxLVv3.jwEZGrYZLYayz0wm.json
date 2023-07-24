@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 20,
+  "range": [
+    141,
+    160
+  ],
+  "drawn": false,
+  "text": "Leather Skullcap",
+  "documentId": "0W0kEpa2kNEcRGK0",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/leather-skullcap.png",
+  "_id": "jwEZGrYZLYayz0wm",
+  "flags": {},
+  "_key": "!tables.results!R7GDdlzGIyNxLVv3.jwEZGrYZLYayz0wm"
+}

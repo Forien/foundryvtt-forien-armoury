@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 4,
+  "range": [
+    24,
+    27
+  ],
+  "drawn": false,
+  "text": "Leather Jerkin",
+  "documentId": "ipaDvYY3qS66o593",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/leather-jerkin.png",
+  "_id": "1U5du57p5bzk5xTG",
+  "flags": {},
+  "_key": "!tables.results!WgLiXIUqoUKgNZ2K.1U5du57p5bzk5xTG"
+}

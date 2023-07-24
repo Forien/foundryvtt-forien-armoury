@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    5,
+    5
+  ],
+  "drawn": false,
+  "text": "Double-barrelled Handgun",
+  "documentId": "Ysoz4nQcEe9Vckv6",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/handgun.png",
+  "_id": "YdN6KQ4i1pUVytvB",
+  "flags": {},
+  "_key": "!tables.results!Pdyhzp5OM17XSMoK.YdN6KQ4i1pUVytvB"
+}

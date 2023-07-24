@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    18,
+    18
+  ],
+  "drawn": false,
+  "text": "Shield",
+  "documentId": "8nJ9R8tbhW42VGhr",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/shield.png",
+  "_id": "lhhshqYAFWVLINu7",
+  "flags": {},
+  "_key": "!tables.results!6aDY4jgGEXSuDSy3.lhhshqYAFWVLINu7"
+}

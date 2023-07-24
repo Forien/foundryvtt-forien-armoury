@@ -1,0 +1,33 @@
+{
+  "folder": "vUXBvutCfP5bBtmP",
+  "name": "Food and Drink Exotic",
+  "_id": "u4wfmPOh5HeiB3H2",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "ui3zRgTStgyBVkuW"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690165065633,
+    "modifiedTime": 1690165071413,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "",
+  "_key": "!tables!u4wfmPOh5HeiB3H2"
+}

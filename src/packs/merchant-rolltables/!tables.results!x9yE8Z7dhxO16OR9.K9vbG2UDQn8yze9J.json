@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    16,
+    16
+  ],
+  "drawn": false,
+  "text": "Flamberge Zweihander",
+  "documentId": "mTCkJbatTseLJ0QL",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/zweihander1.png",
+  "_id": "K9vbG2UDQn8yze9J",
+  "flags": {},
+  "_key": "!tables.results!x9yE8Z7dhxO16OR9.K9vbG2UDQn8yze9J"
+}

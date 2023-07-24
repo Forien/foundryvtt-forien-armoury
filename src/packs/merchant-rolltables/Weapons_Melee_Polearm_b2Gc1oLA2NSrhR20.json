@@ -1,0 +1,44 @@
+{
+  "folder": "PrOJN66daLYe6ZJc",
+  "name": "Weapons Melee Polearm",
+  "_id": "b2Gc1oLA2NSrhR20",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "cHWItANYlUWuPnO3",
+    "g6W2jNYi5MjqMPa9",
+    "gPkF4OEBcKd0Mr1z",
+    "tce6vpN0QV7FXzIO",
+    "ovBsu9CWd638W7nb",
+    "GUQheLvpkLNtFvY5",
+    "3cI58yNacp3yvSh8",
+    "CHv5dydE9UWtgi14",
+    "HxCbbrd8G3y4RHtl",
+    "k6pofFxp2aVbqBJ1",
+    "EyQaaqjlkwNnQWBY",
+    "KOj09zbyg1RGGjUk"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690162345566,
+    "modifiedTime": 1690162451681,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d250",
+  "_key": "!tables!b2Gc1oLA2NSrhR20"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 3,
+  "range": [
+    11,
+    13
+  ],
+  "drawn": false,
+  "text": "Containers Bags",
+  "documentId": "9akb7ZJ2HPYaNzuU",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "539R9A7fp2lht2HF",
+  "flags": {},
+  "_key": "!tables.results!I3TRBS3X7yjSRD45.539R9A7fp2lht2HF"
+}

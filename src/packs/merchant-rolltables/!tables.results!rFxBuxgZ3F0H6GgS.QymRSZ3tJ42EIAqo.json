@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    15,
+    15
+  ],
+  "drawn": false,
+  "text": "Military Pick",
+  "documentId": "9AzTzNF9yVMsGcpC",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/war-pick.png",
+  "_id": "QymRSZ3tJ42EIAqo",
+  "flags": {},
+  "_key": "!tables.results!rFxBuxgZ3F0H6GgS.QymRSZ3tJ42EIAqo"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    23,
+    23
+  ],
+  "drawn": false,
+  "text": "Spike",
+  "documentId": "482LVHdTtG0WPzis",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/spike.png",
+  "_id": "7TdVxXvku8IYrwiF",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.7TdVxXvku8IYrwiF"
+}

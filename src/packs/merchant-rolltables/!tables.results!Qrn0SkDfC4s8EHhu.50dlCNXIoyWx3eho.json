@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    4,
+    4
+  ],
+  "drawn": false,
+  "text": "Military Flail",
+  "documentId": "sVIALrzjX22wUef9",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/military-flail.png",
+  "_id": "50dlCNXIoyWx3eho",
+  "flags": {},
+  "_key": "!tables.results!Qrn0SkDfC4s8EHhu.50dlCNXIoyWx3eho"
+}

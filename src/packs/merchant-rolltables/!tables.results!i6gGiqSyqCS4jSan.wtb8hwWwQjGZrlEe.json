@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 30,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Books Common",
+  "documentId": "xIZKYwxN5fuhWI4K",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "wtb8hwWwQjGZrlEe",
+  "flags": {},
+  "_key": "!tables.results!i6gGiqSyqCS4jSan.wtb8hwWwQjGZrlEe"
+}

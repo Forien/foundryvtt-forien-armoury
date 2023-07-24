@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 10,
+  "range": [
+    74,
+    83
+  ],
+  "drawn": false,
+  "text": "Match",
+  "documentId": "AOLsFkqblrcCLv23",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/match.png",
+  "_id": "0ppg1mkWEhvJRLOg",
+  "flags": {},
+  "_key": "!tables.results!fMXHQvh485Pd62Q2.0ppg1mkWEhvJRLOg"
+}

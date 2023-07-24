@@ -41,7 +41,7 @@
     "availability": {
       "type": "String",
       "label": "Availability",
-      "value": "common"
+      "value": "rare"
     },
     "location": {
       "type": "Number",
@@ -73,10 +73,10 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
     "createdTime": 1663627495296,
-    "modifiedTime": 1689005767520,
+    "modifiedTime": 1690167488088,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "EMM7NeZE1NBThlpp",

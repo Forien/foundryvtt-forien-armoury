@@ -1,0 +1,40 @@
+{
+  "folder": "yOsuU5LCBM5bt9yt",
+  "name": "Cooking",
+  "_id": "Y9Fm1hIUmfYRlQiW",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "hsweZ2WcktnDkcw8",
+    "n2dRFeQ17mEraa01",
+    "8IJXirGkbqK8dNDA",
+    "TnvmYh0pPfdgZz3M",
+    "XU1QB65TQAMdVieD",
+    "bWs8qPqC2b4WIYH4",
+    "yoo3D1iyqie8PZ1O",
+    "IGTa2V2Vy02MINbY"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690166610975,
+    "modifiedTime": 1690166685949,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d88",
+  "_key": "!tables!Y9Fm1hIUmfYRlQiW"
+}

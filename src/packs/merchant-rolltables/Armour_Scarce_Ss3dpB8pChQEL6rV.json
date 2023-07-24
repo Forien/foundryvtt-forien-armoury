@@ -1,0 +1,39 @@
+{
+  "folder": "1s3VG4H3m9vYvDhz",
+  "name": "Armour Scarce",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "yXpYZayx2B7u3Imh",
+    "vFI471H6GyGJHCu2",
+    "hYlX28JBpI1dd6tU",
+    "POEKPUINz2NVTgqP",
+    "YYVbCu1V1pLZC5sz",
+    "EICTlVxk2DVw39j2",
+    "8AIHN62RCEu1Fc19"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690160211586,
+    "modifiedTime": 1690161842440,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d90",
+  "_id": "Ss3dpB8pChQEL6rV",
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!tables!Ss3dpB8pChQEL6rV"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    5,
+    5
+  ],
+  "drawn": false,
+  "text": "Mad Cap Mushrooms",
+  "documentId": "CihEl1pzvTiMQswA",
+  "img": "modules/wfrp4e-core/icons/equipment/drugs_and_poisons/mad-cap-mushrooms.png",
+  "_id": "C10nhP3UMqi9iTFS",
+  "flags": {},
+  "_key": "!tables.results!7fJhVT1tBT3c0Gdj.C10nhP3UMqi9iTFS"
+}

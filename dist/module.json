@@ -64,6 +64,17 @@
       "type": "Macro",
       "system": "wfrp4e",
       "path": "packs/macros"
+    },
+    {
+      "name": "merchant-rolltables",
+      "label": "Merchant Rolltables (Forien's Armoury)",
+      "path": "packs/merchant-rolltables",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
     }
   ],
   "packFolders": [
@@ -74,6 +85,15 @@
         "forien-armoury",
         "macros",
         "forien-homerules"
+      ],
+      "folders": [
+        {
+          "name": "Integrations",
+          "sorting": "a",
+          "packs": [
+            "merchant-rolltables"
+          ]
+        }
       ]
     }
   ],

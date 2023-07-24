@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-zoo.items",
+  "weight": 1,
+  "range": [
+    16,
+    16
+  ],
+  "drawn": false,
+  "text": "Treemeld",
+  "documentId": "hEqjJzTDHx61ecuJ",
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/faxtoryll.png",
+  "_id": "R7UBjpWIXhECb82B",
+  "flags": {},
+  "_key": "!tables.results!iSSAhSzHjaqigUz0.R7UBjpWIXhECb82B"
+}

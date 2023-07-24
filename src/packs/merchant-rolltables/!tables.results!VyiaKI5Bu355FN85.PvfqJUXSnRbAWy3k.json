@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 30,
+  "range": [
+    1,
+    30
+  ],
+  "drawn": false,
+  "text": "Crossbow",
+  "documentId": "ksRqHiMVpIL07Ij1",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/crossbow.png",
+  "_id": "PvfqJUXSnRbAWy3k",
+  "flags": {},
+  "_key": "!tables.results!VyiaKI5Bu355FN85.PvfqJUXSnRbAWy3k"
+}

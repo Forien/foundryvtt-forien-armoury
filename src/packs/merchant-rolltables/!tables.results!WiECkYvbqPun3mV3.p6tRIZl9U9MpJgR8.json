@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 30,
+  "range": [
+    1,
+    30
+  ],
+  "drawn": false,
+  "text": "Lead Bullet",
+  "documentId": "4hV1PpYm9Q2pyUNf",
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/lead-bullet.png",
+  "_id": "p6tRIZl9U9MpJgR8",
+  "flags": {},
+  "_key": "!tables.results!WiECkYvbqPun3mV3.p6tRIZl9U9MpJgR8"
+}

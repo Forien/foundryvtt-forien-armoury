@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    6,
+    6
+  ],
+  "drawn": false,
+  "text": "Heavy Crossbow",
+  "documentId": "K34pxV6XsxhoZRiQ",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/heavy-crossbow.png",
+  "_id": "LPORdnBRBhM9nWMG",
+  "flags": {},
+  "_key": "!tables.results!g9nAK5VCHXFCHhzT.LPORdnBRBhM9nWMG"
+}

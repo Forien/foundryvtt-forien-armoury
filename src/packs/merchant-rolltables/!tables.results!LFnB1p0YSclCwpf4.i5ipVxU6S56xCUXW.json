@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-archives2.items",
+  "weight": 3,
+  "range": [
+    24,
+    26
+  ],
+  "drawn": false,
+  "text": "Quietened Mail Coat",
+  "documentId": "BDbQ70J9MM8mdxxo",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/mail-coat.png",
+  "_id": "i5ipVxU6S56xCUXW",
+  "flags": {},
+  "_key": "!tables.results!LFnB1p0YSclCwpf4.i5ipVxU6S56xCUXW"
+}

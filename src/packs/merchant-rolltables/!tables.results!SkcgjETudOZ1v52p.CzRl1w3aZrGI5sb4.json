@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    8,
+    8
+  ],
+  "drawn": false,
+  "text": "Homing Pigeon",
+  "documentId": "AA7nhcqscDj1zoU9",
+  "img": "modules/wfrp4e-core/icons/equipment/animals_and_vehicles/homing-pigeons.png",
+  "_id": "CzRl1w3aZrGI5sb4",
+  "flags": {},
+  "_key": "!tables.results!SkcgjETudOZ1v52p.CzRl1w3aZrGI5sb4"
+}

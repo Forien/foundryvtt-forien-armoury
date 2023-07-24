@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    2,
+    2
+  ],
+  "drawn": false,
+  "text": "Scroll Case",
+  "documentId": "sgJL9NtVEZZvgkys",
+  "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/scroll-case.png",
+  "_id": "kCeL9Yr9iTQLTVa4",
+  "flags": {},
+  "_key": "!tables.results!ffYe4byROeFcNsvl.kCeL9Yr9iTQLTVa4"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-zoo.items",
+  "weight": 1,
+  "range": [
+    18,
+    18
+  ],
+  "drawn": false,
+  "text": "Veinpowder",
+  "documentId": "awrDCYtLEexWfKJQ",
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/faxtoryll.png",
+  "_id": "Vt3D0Rs7XSJeKy99",
+  "flags": {},
+  "_key": "!tables.results!iSSAhSzHjaqigUz0.Vt3D0Rs7XSJeKy99"
+}

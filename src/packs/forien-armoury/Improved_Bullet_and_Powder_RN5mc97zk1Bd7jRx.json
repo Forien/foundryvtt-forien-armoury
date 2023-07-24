@@ -42,7 +42,7 @@
     "availability": {
       "type": "String",
       "label": "Availability",
-      "value": "common"
+      "value": "scarce"
     },
     "location": {
       "type": "Number",
@@ -94,10 +94,10 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
     "createdTime": 1663627495392,
-    "modifiedTime": 1689005817929,
+    "modifiedTime": 1690164312453,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "kTv9pr3I1AeRI4uH",

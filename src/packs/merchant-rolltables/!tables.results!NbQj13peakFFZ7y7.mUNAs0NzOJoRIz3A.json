@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-archives1.items",
+  "weight": 30,
+  "range": [
+    316,
+    345
+  ],
+  "drawn": false,
+  "text": "Nan's Cleaver",
+  "documentId": "UOVmOd9TgMvquysD",
+  "img": "modules/wfrp4e-archives1/assets/icons/nans-cleaver.png",
+  "_id": "mUNAs0NzOJoRIz3A",
+  "flags": {},
+  "_key": "!tables.results!NbQj13peakFFZ7y7.mUNAs0NzOJoRIz3A"
+}

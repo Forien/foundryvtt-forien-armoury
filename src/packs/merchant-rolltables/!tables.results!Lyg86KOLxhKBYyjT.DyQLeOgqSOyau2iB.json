@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 30,
+  "range": [
+    1,
+    30
+  ],
+  "drawn": false,
+  "text": "Food and Drink Common",
+  "documentId": "Sc7kQchdhpXuxdWG",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "DyQLeOgqSOyau2iB",
+  "flags": {},
+  "_key": "!tables.results!Lyg86KOLxhKBYyjT.DyQLeOgqSOyau2iB"
+}

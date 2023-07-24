@@ -1,0 +1,36 @@
+{
+  "folder": "PrOJN66daLYe6ZJc",
+  "name": "Weapons Melee Cavalry",
+  "_id": "yIcvwk4epdz6Rmg1",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "IQ9pO8f2xMzt6Lri",
+    "HjpD6W818pvI9nEs",
+    "mtSpG7voZPt2UpdU",
+    "XufGXrZvioEV4EV0"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690162110486,
+    "modifiedTime": 1690162165263,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d60",
+  "_key": "!tables!yIcvwk4epdz6Rmg1"
+}

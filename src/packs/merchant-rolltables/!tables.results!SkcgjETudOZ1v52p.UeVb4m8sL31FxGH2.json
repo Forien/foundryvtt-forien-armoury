@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    3,
+    3
+  ],
+  "drawn": false,
+  "text": "False Leg",
+  "documentId": "lJ6Av6wQfORR4mnu",
+  "img": "modules/wfrp4e-core/icons/equipment/prosthetics/false-leg.png",
+  "_id": "UeVb4m8sL31FxGH2",
+  "flags": {},
+  "_key": "!tables.results!SkcgjETudOZ1v52p.UeVb4m8sL31FxGH2"
+}

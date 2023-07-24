@@ -1,0 +1,44 @@
+{
+  "folder": "pKEh2I51xgzWgJK5",
+  "name": "Weapons Ranged Rare",
+  "_id": "g9nAK5VCHXFCHhzT",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "Tn623G1NYXd11SqR",
+    "3jBnQX4MylRLzZdh",
+    "FDytfb50B2I9i165",
+    "kC9waDBxoLh0HIkZ",
+    "WFgimo6rEKRZnivj",
+    "LPORdnBRBhM9nWMG",
+    "lvZs3I7BzSW8LaWy",
+    "RlH90Ya79B1dSiX4",
+    "pzG23pa6QECIGymD",
+    "g1iaavbefRkaq1vC",
+    "xITtQ0fPRGnpdqpk",
+    "GqPv3wHgiodEhqwT"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690163059427,
+    "modifiedTime": 1690163142706,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d12",
+  "_key": "!tables!g9nAK5VCHXFCHhzT"
+}

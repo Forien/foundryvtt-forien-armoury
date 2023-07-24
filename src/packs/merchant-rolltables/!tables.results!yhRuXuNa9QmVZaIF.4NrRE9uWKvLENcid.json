@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 30,
+  "range": [
+    61,
+    90
+  ],
+  "drawn": false,
+  "text": "Sharp Stick",
+  "documentId": "4YiC9X4ChJtRyksH",
+  "img": "icons/commodities/wood/fence-post-tan.webp",
+  "_id": "4NrRE9uWKvLENcid",
+  "flags": {},
+  "_key": "!tables.results!yhRuXuNa9QmVZaIF.4NrRE9uWKvLENcid"
+}

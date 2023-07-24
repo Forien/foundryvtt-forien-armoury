@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 30,
+  "range": [
+    31,
+    60
+  ],
+  "drawn": false,
+  "text": "Sling",
+  "documentId": "7Bpc5I8Arucy3w4q",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/sling.png",
+  "_id": "LESSJRovABk4PT6B",
+  "flags": {},
+  "_key": "!tables.results!sVeSgf9FFQlvkf86.LESSJRovABk4PT6B"
+}

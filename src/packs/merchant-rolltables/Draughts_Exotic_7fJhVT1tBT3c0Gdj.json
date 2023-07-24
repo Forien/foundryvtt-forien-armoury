@@ -1,0 +1,39 @@
+{
+  "folder": "F25hUarBIYKworSm",
+  "name": "Draughts Exotic",
+  "_id": "7fJhVT1tBT3c0Gdj",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "91fJ3sYVhxg9A0bb",
+    "vM9qLylE6qEl4EDS",
+    "zJbsvfqIom6v0c10",
+    "tXN5EgoTqhKB9pnj",
+    "C10nhP3UMqi9iTFS",
+    "6DmnaWSRtxjam6fd",
+    "yHSoNIDefgpGylnY"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690165790932,
+    "modifiedTime": 1690165829173,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d7",
+  "_key": "!tables!7fJhVT1tBT3c0Gdj"
+}

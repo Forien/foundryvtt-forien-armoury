@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Book, Law",
+  "documentId": "o4FSm7YgmfNV4Qgq",
+  "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-law.png",
+  "_id": "hXBkugLbHyuv64PV",
+  "flags": {},
+  "_key": "!tables.results!6K91R8eci6zxdHAQ.hXBkugLbHyuv64PV"
+}

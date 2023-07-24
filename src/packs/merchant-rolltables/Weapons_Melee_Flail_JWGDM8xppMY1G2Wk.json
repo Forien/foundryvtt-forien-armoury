@@ -1,0 +1,35 @@
+{
+  "folder": "PrOJN66daLYe6ZJc",
+  "name": "Weapons Melee Flail",
+  "_id": "JWGDM8xppMY1G2Wk",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "G0z0HFJbZZBTHKBU",
+    "eXkE8xr4FLe9oD7B",
+    "ydxBqIuuB2NcPXAg"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690162262839,
+    "modifiedTime": 1690162282180,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d50",
+  "_key": "!tables!JWGDM8xppMY1G2Wk"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Ale, pint",
+  "documentId": "N8HJlumE3hOgpPC2",
+  "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/ale-pint.png",
+  "_id": "3wUqwdwDzBW1rsWF",
+  "flags": {},
+  "_key": "!tables.results!nCH0abB7hFoSzoY1.3wUqwdwDzBW1rsWF"
+}

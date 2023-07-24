@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Blunderbuss",
+  "documentId": "DQtxITVRh2pd8hxp",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/blunderbuss.png",
+  "_id": "46O2gWoeoCzluSbp",
+  "flags": {},
+  "_key": "!tables.results!yP8BfDbhsxYobb9t.46O2gWoeoCzluSbp"
+}

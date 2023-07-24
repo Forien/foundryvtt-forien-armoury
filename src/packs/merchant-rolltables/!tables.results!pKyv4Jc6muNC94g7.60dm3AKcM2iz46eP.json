@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 1,
+  "range": [
+    51,
+    51
+  ],
+  "drawn": false,
+  "text": "Weapons Melee Exotic",
+  "documentId": "dAQfHHfjqHyXPADK",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "60dm3AKcM2iz46eP",
+  "flags": {},
+  "_key": "!tables.results!pKyv4Jc6muNC94g7.60dm3AKcM2iz46eP"
+}

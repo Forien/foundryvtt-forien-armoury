@@ -1,0 +1,35 @@
+{
+  "folder": "1s3VG4H3m9vYvDhz",
+  "name": "Armour All (rarity)",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "z1uVg382BJAvi0YT",
+    "qO0zetPXiH8aVvRm",
+    "at75fV24v5lNLgMQ"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690160468379,
+    "modifiedTime": 1690161848177,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d50",
+  "_id": "sjC8xI4TBt5XRlPi",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!tables!sjC8xI4TBt5XRlPi"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 15,
+  "range": [
+    351,
+    365
+  ],
+  "drawn": false,
+  "text": "Scimitar",
+  "documentId": "zaHNTPP1nVT8EEYL",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/scimitar.png",
+  "_id": "l76Sabu8G0sA8x5M",
+  "flags": {},
+  "_key": "!tables.results!NbQj13peakFFZ7y7.l76Sabu8G0sA8x5M"
+}

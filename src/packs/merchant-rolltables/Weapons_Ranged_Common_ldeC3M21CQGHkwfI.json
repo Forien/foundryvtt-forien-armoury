@@ -1,0 +1,42 @@
+{
+  "folder": "pKEh2I51xgzWgJK5",
+  "name": "Weapons Ranged Common",
+  "_id": "ldeC3M21CQGHkwfI",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "n8IGKk8JWIzJUP8i",
+    "X0ESwYGeEB8rxxXk",
+    "0ZdOEkLaPRidFUgV",
+    "YktPwq6aWkCj1KFy",
+    "H2rT5ocqhPbRprZG",
+    "pECufu5Gjaev0MAg",
+    "ZhFUnzotN0hBB9xk",
+    "43s14See8Qthxavd",
+    "EJae5AyaWaKZXg8s",
+    "x6iP4og3ATZeGium"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690162908051,
+    "modifiedTime": 1690163001371,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d10",
+  "_key": "!tables!ldeC3M21CQGHkwfI"
+}

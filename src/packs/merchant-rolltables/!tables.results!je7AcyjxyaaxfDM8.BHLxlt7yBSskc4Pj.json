@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    11,
+    11
+  ],
+  "drawn": false,
+  "text": "Hammer",
+  "documentId": "HyfQNt0QGGa0EltW",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/hammer.png",
+  "_id": "BHLxlt7yBSskc4Pj",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.BHLxlt7yBSskc4Pj"
+}

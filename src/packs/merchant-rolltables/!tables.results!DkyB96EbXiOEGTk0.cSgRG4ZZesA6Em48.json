@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    12,
+    12
+  ],
+  "drawn": false,
+  "text": "Mask",
+  "documentId": "ZLIG9CAgCgIa38hU",
+  "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/mask.png",
+  "_id": "cSgRG4ZZesA6Em48",
+  "flags": {},
+  "_key": "!tables.results!DkyB96EbXiOEGTk0.cSgRG4ZZesA6Em48"
+}

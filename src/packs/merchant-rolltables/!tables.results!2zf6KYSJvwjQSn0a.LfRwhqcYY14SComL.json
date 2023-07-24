@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 8,
+  "range": [
+    129,
+    136
+  ],
+  "drawn": false,
+  "text": "Face Powder",
+  "documentId": "WECvYThPGMkyagcw",
+  "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/face-powder.png",
+  "_id": "LfRwhqcYY14SComL",
+  "flags": {},
+  "_key": "!tables.results!2zf6KYSJvwjQSn0a.LfRwhqcYY14SComL"
+}

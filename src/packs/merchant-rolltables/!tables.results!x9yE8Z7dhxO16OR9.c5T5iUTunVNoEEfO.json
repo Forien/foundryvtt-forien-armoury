@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 15,
+  "range": [
+    1,
+    15
+  ],
+  "drawn": false,
+  "text": "Bastard Sword",
+  "documentId": "mqw3beNHRdw7qih5",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/bastard-sword.png",
+  "_id": "c5T5iUTunVNoEEfO",
+  "flags": {},
+  "_key": "!tables.results!x9yE8Z7dhxO16OR9.c5T5iUTunVNoEEfO"
+}

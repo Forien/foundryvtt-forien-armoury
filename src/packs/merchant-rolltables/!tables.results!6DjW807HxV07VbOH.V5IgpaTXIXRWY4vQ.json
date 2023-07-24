@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 15,
+  "range": [
+    37,
+    51
+  ],
+  "drawn": false,
+  "text": "Shot Pouch",
+  "documentId": "izBtNy0denmW9BpV",
+  "img": "icons/containers/bags/pouch-leather-simple-tan.webp",
+  "_id": "V5IgpaTXIXRWY4vQ",
+  "flags": {},
+  "_key": "!tables.results!6DjW807HxV07VbOH.V5IgpaTXIXRWY4vQ"
+}
