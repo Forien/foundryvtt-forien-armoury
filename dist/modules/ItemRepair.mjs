@@ -197,6 +197,7 @@ export default class ItemRepair {
     let locations = [];
     let totalDamage = 0;
     let totalMaxDamage = 0;
+    let repairCostInD = 0;
     let price = this.#getPriceInD(item) * 0.1;
 
     for (let i in locationKeys) {
@@ -209,9 +210,10 @@ export default class ItemRepair {
 
       if (AP > 0 && damage > 0) {
         let damageToPayFor = damage;
-        if (damage >= AP + durable)
+        if (damage >= maxDamage)
           damageToPayFor += 1;
 
+        repairCostInD += price * damageToPayFor;
         let locationLabel = game.i18n.localize(`WFRP4E.Locations.${location}`);
         let localRepairCost = this.#getMoneyStringFromD(price * damageToPayFor, paid);
         locations.push({
@@ -225,7 +227,7 @@ export default class ItemRepair {
       }
     }
     let singleRepairCost = this.#getMoneyStringFromD(price, paid)
-    let repairCost = this.#getMoneyStringFromD(price * totalDamage, paid)
+    let repairCost = this.#getMoneyStringFromD(repairCostInD, paid)
 
     return {
       uuid: item.uuid,

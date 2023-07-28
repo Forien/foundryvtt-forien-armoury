@@ -5,6 +5,9 @@
             <h3>{{item.name}}</h3>
         </div>
         <div class="item-repair-body">
+            {{#if (eq type 'armour')}}
+                {{> modules/forien-armoury/templates/partials/repair-item-armour.hbs item=item paid=paid }}
+            {{/if}}
             {{#if (eq item.damage item.maxDamage)}}
                 {{#if (eq type 'weapon')}}
                     <p>{{{localize 'Forien.Armoury.ItemRepair.WeaponIsMangled'}}}</p>
@@ -13,9 +16,6 @@
                     <p>{{{localize 'Forien.Armoury.ItemRepair.ItemIsMangled'}}}</p>
                 {{/if}}
             {{else}}
-                {{#if (eq type 'armour')}}
-                    {{> modules/forien-armoury/templates/partials/repair-item-armour.hbs item=item paid=paid }}
-                {{/if}}
                 {{#if (eq type 'weapon')}}
                     {{> modules/forien-armoury/templates/partials/repair-item-weapon.hbs item=item paid=paid }}
                 {{/if}}

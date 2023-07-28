@@ -20,7 +20,7 @@
                        data-repair="1" data-price="{{../item.singleRepairCost}}" data-item="{{../item.uuid}}"
                        data-msg="ChatMessage.ChatMessageId">{{../item.singleRepairCost}}</a>
                 {{/unless}}
-                {{#if (gt location.damage 1)}}
+                {{#if (or (gt location.damage 1) (eq location.damage location.maxDamage))}}
                     <label>{{localize 'Forien.Armoury.ItemRepair.RepairAllDamage'}}</label>
                     <a class="chat-button forien-repair-item" data-armour="true" data-location="{{location.name}}"
                        data-repair="{{location.damage}}" data-price="{{location.repairCost}}" data-item="{{../item.uuid}}"
