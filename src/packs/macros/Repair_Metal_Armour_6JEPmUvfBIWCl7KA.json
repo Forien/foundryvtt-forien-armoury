@@ -1,0 +1,27 @@
+{
+  "name": "Repair Metal Armour",
+  "type": "script",
+  "scope": "global",
+  "author": "ZJyAmf2sKocHG1ud",
+  "img": "icons/skills/trades/smithing-anvil-brown.webp",
+  "command": "const api = game.modules.get(\"forien-armoury\").api;\n\napi.itemRepair.checkInventoryForDamage(actor, {paid: true, type:\"armour\", subtype:\"mail,plate\"});",
+  "folder": "PrF8OmDhD6LXHdz1",
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
+    "createdTime": 1690506986386,
+    "modifiedTime": 1690507407457,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "6JEPmUvfBIWCl7KA",
+  "sort": 200000,
+  "_key": "!macros!6JEPmUvfBIWCl7KA"
+}

@@ -247,18 +247,22 @@ export default class ItemRepair {
   /**
    * @param {ItemWfrp4e[]} items
    * @param {boolean} paid
+   * @param {String} subtype
    */
-  processWeapons(items = [], paid) {
-    return this.processTrappings(items, paid);
+  processWeapons(items = [], {paid = true, subtype = null} = {}) {
+    return this.processTrappings(items, {paid, subtype});
   }
 
   /**
    * @param {ItemWfrp4e[]} items
    * @param {boolean} paid
+   * @param {String} subtype
    */
-  processTrappings(items = [], paid) {
+  processTrappings(items = [], {paid = true, subtype = null} = {}) {
     let damagedItems = [];
     items.forEach(item => {
+      if (subtype && (!subtype.includes(item.system.weaponGroup?.value) || subtype.includes(item.system.trappingType?.value)))
+        return;
       let damagedItem = this.checkTrappingDamage(item, paid);
       if (damagedItem?.damaged)
         damagedItems.push(damagedItem);
@@ -270,10 +274,13 @@ export default class ItemRepair {
   /**
    * @param {ItemWfrp4e[]} items
    * @param {boolean} paid
+   * @param {String} subtype
    */
-  processArmour(items = [], paid) {
+  processArmour(items = [], {paid = true, subtype = null} = {}) {
     let damagedItems = [];
     items.forEach(item => {
+      if (subtype && !subtype.includes(item.system.armorType.value))
+        return;
       let damagedItem = this.checkArmourDamage(item, paid);
       if (damagedItem?.damaged)
         damagedItems.push(damagedItem);
@@ -286,13 +293,23 @@ export default class ItemRepair {
    * @param {ActorWfrp4e} actor
    * @param {boolean} paid
    * @param {String} chatMessageId
+   * @param {String} type
+   * @param {String} subtype
    */
-  async checkInventoryForDamage(actor, {paid = true, chatMessageId = null} = {}) {
-    let templateData = {};
-    templateData.armour = this.processArmour(actor.itemCategories.armour, paid);
-    templateData.weapons = this.processWeapons(actor.itemCategories.weapon, paid);
-    templateData.trappings = this.processTrappings(actor.itemCategories.trapping, paid);
-    templateData.paid = paid;
+  async checkInventoryForDamage(actor, {paid = true, chatMessageId = null, type = null, subtype = null} = {}) {
+    let templateData = {
+      armour: [],
+      weapons: [],
+      trappings: [],
+      paid: paid
+    };
+
+    if (type.includes('armour'))
+      templateData.armour = this.processArmour(actor.itemCategories.armour, {paid, subtype});
+    if (type.includes('weapons'))
+      templateData.weapons = this.processWeapons(actor.itemCategories.weapon, {paid, subtype});
+    if (type.includes('trappings'))
+      templateData.trappings = this.processTrappings(actor.itemCategories.trapping, {paid, subtype});
 
     let html = await renderTemplate(Utility.getTemplate(this.templates.chatMessage), templateData);
     let chatMessage;

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.trappings",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Gold Crown",
+  "documentId": "Ggx0bRaCuq8MbF0g",
+  "img": "modules/wfrp4e-core/icons/currency/goldcrown.png",
+  "_id": "Oev4XRact8jzssyM",
+  "flags": {},
+  "_key": "!tables.results!ZAIWwl9tQDUh6V2n.Oev4XRact8jzssyM"
+}

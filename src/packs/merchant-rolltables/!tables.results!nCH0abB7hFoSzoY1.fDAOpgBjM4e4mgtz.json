@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 1,
+  "range": [
+    8,
+    8
+  ],
+  "drawn": false,
+  "text": "Warm Bath",
+  "documentId": "R0u96ITp9oIllh2D",
+  "img": "icons/environment/settlement/ldoge.webp",
+  "_id": "fDAOpgBjM4e4mgtz",
+  "flags": {},
+  "_key": "!tables.results!nCH0abB7hFoSzoY1.fDAOpgBjM4e4mgtz"
+}

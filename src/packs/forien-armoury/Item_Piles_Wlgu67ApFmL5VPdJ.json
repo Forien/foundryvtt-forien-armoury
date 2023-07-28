@@ -1,0 +1,19 @@
+{
+  "name": "Item Piles",
+  "sorting": "a",
+  "folder": "vZiAZ3ak6m3On6lX",
+  "type": "Item",
+  "_id": "Wlgu67ApFmL5VPdJ",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
+    "createdTime": 1690204128350,
+    "modifiedTime": 1690204147149,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!folders!Wlgu67ApFmL5VPdJ"
+}

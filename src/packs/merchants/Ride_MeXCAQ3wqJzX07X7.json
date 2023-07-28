@@ -1,0 +1,69 @@
+{
+  "_id": "MeXCAQ3wqJzX07X7",
+  "name": "Ride",
+  "type": "skill",
+  "img": "modules/wfrp4e-core/icons/skills/basic-skill-ag.png",
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {
+    "_sheetTab": "description"
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Ride}"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "advanced": {
+      "value": "bsc",
+      "type": "String"
+    },
+    "grouped": {
+      "value": "isSpec",
+      "type": "String"
+    },
+    "characteristic": {
+      "type": "String",
+      "label": "Characteristic",
+      "value": "ag"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 0,
+      "costModifier": 0,
+      "force": false
+    },
+    "modifier": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 0
+    },
+    "total": {
+      "type": "Number",
+      "label": "Total"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.1.2",
+    "coreVersion": "10.285",
+    "createdTime": null,
+    "modifiedTime": 1663569418185,
+    "lastModifiedBy": "FIIsUxJ6xGvEDRPV"
+  },
+  "_key": "!actors.items!vE7hkKLeNjh6AOXJ.MeXCAQ3wqJzX07X7"
+}

@@ -1,17 +1,13 @@
 {
-  "folder": "1Dr5AYNUnFcc22OL",
-  "name": "Containers Ammo",
-  "_id": "6DjW807HxV07VbOH",
+  "folder": "RjPxRnikvGBBin3h",
+  "name": "Currency",
+  "_id": "ZAIWwl9tQDUh6V2n",
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "3QFHhC2ztglDga3S",
-    "KSB53LmmFZIHYfYz",
-    "xzbzz6IPfMLJTBpt",
-    "iLlRRJsSmMkgyB4U",
-    "fmYqoEyA9qK76S4x",
-    "V5IgpaTXIXRWY4vQ",
-    "k7jL0PvX3p1CO6Uu"
+    "Oev4XRact8jzssyM",
+    "ufhkyfR78jhlxuyD",
+    "0u30BKAWnne9q4Pv"
   ],
   "replacement": true,
   "displayRoll": true,
@@ -30,10 +26,10 @@
     "systemId": "wfrp4e",
     "systemVersion": "6.6.0",
     "coreVersion": "11.306",
-    "createdTime": 1690164609746,
-    "modifiedTime": 1690201616445,
+    "createdTime": 1690202486521,
+    "modifiedTime": 1690202525161,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
-  "formula": "1d61",
-  "_key": "!tables!6DjW807HxV07VbOH"
+  "formula": "1d3",
+  "_key": "!tables!ZAIWwl9tQDUh6V2n"
 }

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-archives1.items",
+  "weight": 30,
+  "range": [
+    56,
+    60
+  ],
+  "drawn": false,
+  "text": "Iron Skillet",
+  "documentId": "aJpSeHl6kNp1DD1y",
+  "img": "modules/wfrp4e-archives1/assets/icons/iron-skillet.png",
+  "_id": "cZ4oq7BWi2uFBNFc",
+  "flags": {},
+  "_key": "!tables.results!8HxsHxZgPSeKvt6o.cZ4oq7BWi2uFBNFc"
+}
