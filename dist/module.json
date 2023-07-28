@@ -47,23 +47,35 @@
     {
       "label": "Forien's Armoury",
       "name": "forien-armoury",
+      "path": "packs/forien-armoury",
       "type": "Item",
-      "system": "wfrp4e",
-      "path": "packs/forien-armoury"
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
     },
     {
       "label": "Forien's Homerules",
       "name": "forien-homerules",
       "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "system": "wfrp4e",
       "path": "packs/forien-homerules"
     },
     {
       "label": "Macros (Forien's Armoury)",
       "name": "macros",
+      "path": "packs/macros",
       "type": "Macro",
-      "system": "wfrp4e",
-      "path": "packs/macros"
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
     },
     {
       "name": "merchant-rolltables",
@@ -71,7 +83,18 @@
       "path": "packs/merchant-rolltables",
       "type": "RollTable",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
+    },
+    {
+      "name": "merchants",
+      "label": "Merchants (Forien's Armoury)",
+      "path": "packs/merchants",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "NONE",
         "ASSISTANT": "OWNER"
       },
       "system": "wfrp4e"
@@ -91,7 +114,8 @@
           "name": "Integrations",
           "sorting": "a",
           "packs": [
-            "merchant-rolltables"
+            "merchant-rolltables",
+            "merchants"
           ]
         }
       ]
