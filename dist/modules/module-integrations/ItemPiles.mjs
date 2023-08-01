@@ -198,48 +198,6 @@ export default class ItemPiles {
         },
         primary: true,
         exchangeRate: 1
-      },
-      {
-        type: "item",
-        name: "Ha'penny",
-        img: "icons/commodities/currency/coin-embossed-sword-copper.webp",
-        abbreviation: "{#}BP",
-        data: {
-          item: {
-            "name": "Ha'penny",
-            "type": "money",
-            "img": "icons/commodities/currency/coin-embossed-sword-copper.webp",
-            "system": {
-              "quantity": { "type": "Number", "label": "Quantity", "value": 1 },
-              "encumbrance": { "type": "Number", "label": "Encumbrance", "value": 0.01 },
-              "coinValue": { "label": "Value (in d)", "type": "Number", "value": 0.5 },
-              "source": { "type": "String", "label": "Source" }
-            }
-          }
-        },
-        primary: false,
-        exchangeRate: 0.5
-      },
-      {
-        type: "item",
-        name: "Farthing",
-        img: "icons/commodities/currency/coin-inset-one-wood.webp",
-        abbreviation: "{#}BP",
-        data: {
-          item: {
-            "name": "Farthing",
-            "type": "money",
-            "img": "icons/commodities/currency/coin-inset-one-wood.webp",
-            "system": {
-              "quantity": { "type": "Number", "label": "Quantity", "value": 1 },
-              "encumbrance": { "type": "Number", "label": "Encumbrance", "value": 0.01 },
-              "coinValue": { "label": "Value (in d)", "type": "Number", "value": 0.25 },
-              "source": { "type": "String", "label": "Source" }
-            }
-          }
-        },
-        primary: false,
-        exchangeRate: 0.25
       }
     ]
   }
