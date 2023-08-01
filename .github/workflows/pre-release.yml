@@ -2,9 +2,7 @@ on:
   push:
     # Sequence of patterns matched against refs/tags
     tags:
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
-    tags-ignore:
-      - '*-beta'
+      - 'v*-beta' # Push events to matching v*-beta, i.e. v1.0-beta, v20.15.10-beta
 
 name: Upload Release Asset
 
@@ -47,7 +45,8 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          name: Release ${{steps.get_version.outputs.version}}
+          name: Pre-Release ${{steps.get_version.outputs.version}}
+          draft: true
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: './dist/module.json, ./dist/module.zip'
           tag: ${{ github.ref }}
