@@ -296,13 +296,14 @@ export default class ItemRepair {
    * @param {String} type
    * @param {String} subtype
    */
-  async checkInventoryForDamage(actor, {paid = true, chatMessageId = null, type = null, subtype = null} = {}) {
+  async checkInventoryForDamage(actor, {paid = true, chatMessageId = null, type = null, subtype = null, user = null} = {}) {
     let templateData = {
       armour: [],
       weapons: [],
       trappings: [],
       paid: paid
     };
+    if (user && !(user instanceof User)) user = game.users.get(user);
 
     if (type.includes('armour'))
       templateData.armour = this.processArmour(actor.itemCategories.armour, {paid, subtype});
@@ -317,7 +318,7 @@ export default class ItemRepair {
 
     if (!chatMessageId) {
       let chatData = {
-        user: game.user,
+        user: user || game.user,
         speaker: {alias: actor.name, actor: actor._id},
         whisper: game.users.filter((u) => u.isGM).map((u) => u._id),
         content: html

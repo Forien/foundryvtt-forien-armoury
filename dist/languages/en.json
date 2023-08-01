@@ -180,6 +180,29 @@
         "Properties.HardToFind.Description": "Projectile is very hard to find even in favorable conditions. If it was to be recovered, roll again for Percentage with –10 modifier."
       },
 
+      "CheckCareer": {
+        "CurrentCareer": "Your current career is <strong>{currentCareer}</strong>.",
+        "CurrentCareerLevel": "It is <strong>Level {careerLevel}</strong> career, so required amount of advances is <strong>{requiredAdvances}</strong>.",
+        "CheckBelow": "Check below if you have bought enough advances to complete your career!",
+        "Characteristics": "Characteristics",
+        "YouHaveCharacteristics": "You have <strong>{done} out of {total}</strong> required characteristics.",
+        "YouHaveEnoughAdvances": "You have <em>enough</em> advances to complete your career!",
+        "Skills": "Skills",
+        "YouHaveSkills": "You have <strong>{done} out of 8</strong> required skills.",
+        "Potential": {
+          "PreLink":"You also have",
+          "InLink": "{count} other",
+          "InLinkTypeSkills": "skill(s)",
+          "InLinkTypeTalents": "talent(s)",
+          "PostLink": "that could potentially be a part of your career."
+        },
+        "Talents": "Talents",
+        "YouHaveTalents": "You have bought <strong>{done}</strong> career talents.",
+        "ConclusionCannot": "You can't complete your career yet.",
+        "ConclusionCan": "Congratulations! You can complete your current career!",
+        "ConclusionPotential": "You have „potential“ skills and/or talents, talk to your GM. They might count towards your career!"
+      },
+
       "Settings": {
         "Runes.Enable": "Item damage from Runes",
         "Runes.EnableHint": "If enabled, Items will get damaged when a Temporary Rune engraved on them is disabled/used.",

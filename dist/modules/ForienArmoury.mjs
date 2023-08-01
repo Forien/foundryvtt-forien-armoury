@@ -4,6 +4,7 @@ import TemporaryRunes from "./Runes.mjs";
 import ArrowReclamation from "./ArrowReclamation.mjs";
 import Settings from "./Settings.mjs";
 import Integrations from "./Integrations.mjs";
+import CheckCareers from "./CheckCareers.mjs";
 
 export default class ForienArmoury {
   /**
@@ -22,6 +23,10 @@ export default class ForienArmoury {
    * @type ArrowReclamation
    */
   arrowReclamation;
+  /**
+   * @type CheckCareers
+   */
+  checkCareers;
   /**
    * @type Integrations
    */
@@ -50,6 +55,7 @@ export default class ForienArmoury {
     this.runes = new TemporaryRunes();
     this.itemRepair = new ItemRepair();
     this.arrowReclamation = new ArrowReclamation();
+    this.checkCareers = CheckCareers;
     this.integrations = new Integrations();
     this.#settings = new Settings();
   }
@@ -84,7 +90,8 @@ export default class ForienArmoury {
       Utility.notify("Preloading Templates.", {consoleOnly: true})
       let itemRepairTemplates = this.itemRepair.getTemplates();
       let arrowReclamationTemplates = this.arrowReclamation.getTemplates();
-      let templates = [...itemRepairTemplates, ...arrowReclamationTemplates];
+      let checkCareersTemplates = this.checkCareers.templates;
+      let templates = [...itemRepairTemplates, ...arrowReclamationTemplates, ...checkCareersTemplates];
 
       templates = templates.map(Utility.getTemplate);
 

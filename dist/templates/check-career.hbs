@@ -1,0 +1,41 @@
+<h2>{{{character}}}</h2>
+<p>{{{localize 'Forien.Armoury.CheckCareer.CurrentCareer' currentCareer=currentCareer}}} {{{localize
+        'Forien.Armoury.CheckCareer.CurrentCareerLevel' careerLevel=careerLevel requiredAdvances=requiredAdvances}}}</p>
+<p>{{{localize 'Forien.Armoury.CheckCareer.CheckBelow'}}}</p>
+<h3>{{{localize 'Forien.Armoury.CheckCareer.Characteristics'}}}:</h3>
+<p>{{{localize 'Forien.Armoury.CheckCareer.YouHaveCharacteristics' done=characteristics.done
+               total=characteristics.total}}}</p>
+{{#if (gte characteristics.done characteristics.total)}}
+    <p>{{{localize 'Forien.Armoury.CheckCareer.YouHaveEnoughAdvances'}}}</p>
+{{/if}}
+<h3>{{{localize 'Forien.Armoury.CheckCareer.Skills'}}}:</h3>
+<p>{{{localize 'Forien.Armoury.CheckCareer.YouHaveSkills' done=skills.done}}}</p>
+{{#if (gte skills.done 8)}}
+    <p>{{{localize 'Forien.Armoury.CheckCareer.YouHaveEnoughAdvances'}}}</p>
+{{/if}}
+{{#if skills.hasPotential}}
+    <p><em>{{{localize 'Forien.Armoury.CheckCareer.Potential.PreLink'}}} <a class="content-link" data-tooltip="{{skills.potential}}">{{{localize
+            'Forien.Armoury.CheckCareer.Potential.InLink' count=skills.potentialCount}}} {{{localize
+            'Forien.Armoury.CheckCareer.Potential.InLinkTypeSkills'}}}</a> {{{localize
+            'Forien.Armoury.CheckCareer.Potential.PostLink'}}}</em></p>
+{{/if}}
+<h3>{{{localize 'Forien.Armoury.CheckCareer.Talents'}}}:</h3>
+<p>{{{localize 'Forien.Armoury.CheckCareer.YouHaveTalents' done=talents.done}}}</p>
+{{#if (gte talents.done 1)}}
+    <p>{{{localize 'Forien.Armoury.CheckCareer.YouHaveEnoughAdvances'}}}</p>
+{{/if}}
+{{#if talents.hasPotential}}
+    <p><em>{{{localize 'Forien.Armoury.CheckCareer.Potential.PreLink'}}} <a class="content-link" data-tooltip="{{talents.potential}}">{{{localize
+            'Forien.Armoury.CheckCareer.Potential.InLink' count=talents.potentialCount}}} {{{localize
+            'Forien.Armoury.CheckCareer.Potential.InLinkTypeTalents'}}}</a> {{{localize
+            'Forien.Armoury.CheckCareer.Potential.PostLink'}}}</em></p>
+{{/if}}
+<hr>
+{{#if conclusion}}
+    <strong><em>{{{localize 'Forien.Armoury.CheckCareer.ConclusionCan'}}}</em></strong>
+{{else}}
+    {{{localize 'Forien.Armoury.CheckCareer.ConclusionCannot'}}}
+    {{#if conclusionPotential}}
+        <br/><em>{{{localize 'Forien.Armoury.CheckCareer.ConclusionPotential'}}}</em>
+    {{/if}}
+{{/if}}
