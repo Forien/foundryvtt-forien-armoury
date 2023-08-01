@@ -127,6 +127,7 @@ Module contains a single Compendium Pack containing 9 Macros:
 * [Active Token Effects](https://foundryvtt.com/packages/ATL) — Allows to use presets such as "torch" etc. for Lighting items 
 
 ### Other suggested modules
+* [Item Piles](https://foundryvtt.com/packages/item-piles) — Awesome module that allows you to make tokens lootable, create treasure chests, bank vaults and - most importantly in my opinion - merchants. Forien's Armoury includes 92 Rollable Tables ready to be used to Populate Items for Merchants, as well as 6 prefab merchants!  
 * [DFreds Effects Panel](https://foundryvtt.com/packages/dfreds-effects-panel) — Isn't specifically linked to Forien's Armoury in any way, but provides nice and clean effects display with ability to toggle them, so I recommend trying it 
 
 
