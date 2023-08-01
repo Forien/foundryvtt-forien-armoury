@@ -173,6 +173,7 @@ _Disclaimer: I kept all acknowledgments, even if their respective work was lost 
 * Thanks to [DasSauerkraut](https://github.com/DasSauerkraut) for allowing me to integrate compendium from his [Gerwin Waffenhalter’s Magnificent Weapons Gallery](https://github.com/DasSauerkraut/wfrp-gwmwg) into my module
 * Thanks to LeRatierBretonnien and Gharazel for providing French translation! 
 * Thanks to ElCamino for providing German translation!
+* Thanks to [silent_mark](https://github.com/silentmark) for contributing to Polish translation!
 
 
 
