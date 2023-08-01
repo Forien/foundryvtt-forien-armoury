@@ -418,7 +418,7 @@
         "keepZeroQuantity": true,
         "tablesForPopulate": [
           {
-            "id": "ZAIWwl9tQDUh6V2n",
+            "uuid": "RollTable.ZAIWwl9tQDUh6V2n",
             "addAll": true,
             "items": {
               "Oev4XRact8jzssyM": "2d3-1",
@@ -429,7 +429,7 @@
             "customCategory": ""
           },
           {
-            "id": "WgLiXIUqoUKgNZ2K",
+            "uuid": "RollTable.WgLiXIUqoUKgNZ2K",
             "addAll": true,
             "items": {
               "wvi6Cg9MY4ajfB5Z": "1d4",
@@ -446,7 +446,7 @@
             "customCategory": "Gambesons"
           },
           {
-            "id": "KpefCK4r7TgYfO1w",
+            "uuid": "RollTable.KpefCK4r7TgYfO1w",
             "addAll": false,
             "items": {
               "o9eql90mXTDr29HH": "1d4",
@@ -458,7 +458,7 @@
           }
         ]
       },
-      "version": "2.7.6"
+      "version": "2.7.8"
     },
     "core": {}
   },
@@ -467,7 +467,7 @@
     "systemVersion": "6.6.0",
     "coreVersion": "11.306",
     "createdTime": 1690202296286,
-    "modifiedTime": 1690508818263,
+    "modifiedTime": 1690871422826,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "0LYVKMstH6YQ0cbQ",

@@ -4,7 +4,7 @@
   "scope": "global",
   "author": "ZJyAmf2sKocHG1ud",
   "img": "icons/skills/trades/smithing-anvil-brown.webp",
-  "command": "/**\n *\n *    This Macro should be used if GM allows you to repair your items for Free \n *         (for example you have relevant Trade)\n *\n **/\n\nlet api = game.modules.get(\"forien-armoury\").api;\n\napi.itemRepair.checkInventoryForDamage(actor, {paid: false});",
+  "command": "/**\n *\n *    This Macro should be used if GM allows you to repair your items for Free \n *         (for example you have relevant Trade)\n *\n **/\n\nconst api = game.modules.get(\"forien-armoury\")?.api.itemRepair;\n\nif (api)\n  api.checkInventoryForDamage(actor, {paid: false});",
   "folder": "K7bIr7HUorfHR7Xh",
   "ownership": {
     "default": 0,
@@ -15,13 +15,13 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
     "createdTime": 1688684806315,
-    "modifiedTime": 1688743172833,
+    "modifiedTime": 1690870451373,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "as22aZ3wJdi5EATf",
-  "sort": 0,
+  "sort": 300000,
   "_key": "!macros!as22aZ3wJdi5EATf"
 }

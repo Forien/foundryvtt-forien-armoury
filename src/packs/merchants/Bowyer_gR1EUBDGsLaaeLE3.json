@@ -419,7 +419,7 @@
         "merchantImage": "icons/skills/trades/fletching-bowyery-arrow-tan.webp",
         "tablesForPopulate": [
           {
-            "id": "ZAIWwl9tQDUh6V2n",
+            "uuid": "RollTable.ZAIWwl9tQDUh6V2n",
             "addAll": true,
             "items": {
               "Oev4XRact8jzssyM": "1d4-1",
@@ -430,19 +430,7 @@
             "customCategory": ""
           },
           {
-            "id": "UpPcwYRZPIoPnZiN",
-            "addAll": true,
-            "items": {
-              "q7DRYF7fHq5zPuTg": "4d6-4",
-              "yoCDIFrzFRtKTJU3": "4d2-4",
-              "mhLr3Dy18L8ypP1r": "1d4-1",
-              "BIDw2aXZdaASifTU": "2d3-2"
-            },
-            "timesToRoll": "1d4-1",
-            "customCategory": "Bows"
-          },
-          {
-            "id": "NEhQRPzIINx5KXut",
+            "uuid": "RollTable.NEhQRPzIINx5KXut",
             "addAll": true,
             "items": {
               "7csWIFj8hxLNMKQR": "4d5-4",
@@ -454,24 +442,20 @@
             "customCategory": "Crossbows"
           },
           {
-            "id": "SPHK7kTHbQfB0AOE",
+            "uuid": "RollTable.UpPcwYRZPIoPnZiN",
             "addAll": true,
             "items": {
-              "Y9omBi7uDEBWGPnk": "1d1",
-              "zlTSy8r0aRsnsrti": "0",
-              "JoMKcRzLWd0O6U1f": "0",
-              "qwpOqBPE2PPJVWX0": "0",
-              "IvCLGFs6I4Xz7xXx": "0",
-              "Dr8UJKNWuWPRg0v6": "0",
-              "mmfvve37s5O2DREX": "0",
-              "Lfp7rYxeheTW0g3f": "0"
+              "q7DRYF7fHq5zPuTg": "4d6-4",
+              "yoCDIFrzFRtKTJU3": "4d2-4",
+              "mhLr3Dy18L8ypP1r": "1d4-1",
+              "BIDw2aXZdaASifTU": "2d3-2"
             },
             "timesToRoll": "1d4-1",
             "customCategory": ""
           }
         ]
       },
-      "version": "2.7.6"
+      "version": "2.7.!9"
     },
     "core": {}
   },
@@ -480,7 +464,7 @@
     "systemVersion": "6.6.0",
     "coreVersion": "11.306",
     "createdTime": 1690202296286,
-    "modifiedTime": 1690508801385,
+    "modifiedTime": 1690837207867,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "gR1EUBDGsLaaeLE3",

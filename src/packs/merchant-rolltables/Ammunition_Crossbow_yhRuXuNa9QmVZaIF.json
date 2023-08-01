@@ -7,8 +7,7 @@
   "results": [
     "sqd5eLgw186qKaha",
     "JOhWWWkSwA97U297",
-    "CQpwl7ukohc9p8aw",
-    "4NrRE9uWKvLENcid"
+    "CQpwl7ukohc9p8aw"
   ],
   "replacement": true,
   "displayRoll": true,
@@ -25,12 +24,12 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
     "createdTime": 1690164399355,
-    "modifiedTime": 1690164438465,
+    "modifiedTime": 1690870510048,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
-  "formula": "1d90",
+  "formula": "1d60",
   "_key": "!tables!yhRuXuNa9QmVZaIF"
 }

@@ -1,0 +1,27 @@
+{
+  "name": "Check Careers!",
+  "type": "script",
+  "scope": "global",
+  "author": "ZJyAmf2sKocHG1ud",
+  "img": "icons/skills/trades/academics-merchant-scribe.webp",
+  "command": "const onlyOnline = true;\nconst api = game.modules.get(\"forien-armoury\")?.api.checkCareers;\n\nif (game.user.isGM) api.checkPlayersCareers(onlyOnline);\nelse api.checkMyCareer();",
+  "folder": "K7bIr7HUorfHR7Xh",
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
+    "createdTime": 1688083080982,
+    "modifiedTime": 1690870075829,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "X6PfKZ7ycRJhb6yX",
+  "sort": 100000,
+  "_key": "!macros!X6PfKZ7ycRJhb6yX"
+}

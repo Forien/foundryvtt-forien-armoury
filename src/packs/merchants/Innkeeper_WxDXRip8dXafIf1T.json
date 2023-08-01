@@ -307,7 +307,7 @@
     "appendNumber": false,
     "prependAdjective": false,
     "texture": {
-      "src": null,
+      "src": "icons/environment/settlement/house-city.webp",
       "scaleX": 1,
       "scaleY": 1,
       "offsetX": 0,
@@ -419,7 +419,7 @@
         "merchantImage": "icons/environment/settlement/house-city.webp",
         "tablesForPopulate": [
           {
-            "id": "ZAIWwl9tQDUh6V2n",
+            "uuid": "RollTable.ZAIWwl9tQDUh6V2n",
             "addAll": true,
             "items": {
               "Oev4XRact8jzssyM": "1d2-1",
@@ -430,7 +430,7 @@
             "customCategory": ""
           },
           {
-            "id": "nCH0abB7hFoSzoY1",
+            "uuid": "RollTable.nCH0abB7hFoSzoY1",
             "addAll": true,
             "items": {
               "3wUqwdwDzBW1rsWF": "10d4",
@@ -448,7 +448,7 @@
           }
         ]
       },
-      "version": "2.7.5"
+      "version": "2.7.8"
     },
     "core": {}
   },
@@ -457,7 +457,7 @@
     "systemVersion": "6.6.0",
     "coreVersion": "11.306",
     "createdTime": 1690202296286,
-    "modifiedTime": 1690508402322,
+    "modifiedTime": 1690870561777,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "WxDXRip8dXafIf1T",

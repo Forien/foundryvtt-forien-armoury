@@ -4,7 +4,7 @@
   "scope": "global",
   "author": "ZJyAmf2sKocHG1ud",
   "img": "icons/skills/trades/smithing-anvil-brown.webp",
-  "command": "const api = game.modules.get(\"forien-armoury\").api;\n\napi.itemRepair.checkInventoryForDamage(actor, {paid: true, type:\"armour\", subtype:\"mail,plate\"});",
+  "command": "const api = game.modules.get(\"forien-armoury\")?.api.itemRepair;\n\nif (api && scope.buyer && scope.userId) {\n  api.checkInventoryForDamage(scope.buyer, {\n    paid: true,\n    type: \"armour\",\n    subtype: \"mail,plate\",\n    user: scope.userId\n  });\n}",
   "folder": "PrF8OmDhD6LXHdz1",
   "ownership": {
     "default": 0,
@@ -18,7 +18,7 @@
     "systemVersion": "6.6.0",
     "coreVersion": "11.306",
     "createdTime": 1690506986386,
-    "modifiedTime": 1690507407457,
+    "modifiedTime": 1690870662915,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "6JEPmUvfBIWCl7KA",

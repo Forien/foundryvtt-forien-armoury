@@ -418,7 +418,7 @@
         "keepZeroQuantity": true,
         "tablesForPopulate": [
           {
-            "id": "ZAIWwl9tQDUh6V2n",
+            "uuid": "RollTable.ZAIWwl9tQDUh6V2n",
             "addAll": true,
             "items": {
               "Oev4XRact8jzssyM": "2d3-1",
@@ -429,7 +429,7 @@
             "customCategory": ""
           },
           {
-            "id": "bcfWOzoAXLS0r4OE",
+            "uuid": "RollTable.bcfWOzoAXLS0r4OE",
             "addAll": true,
             "items": {
               "tAWjJqaFWmfXViwB": "1d3",
@@ -444,7 +444,7 @@
             "customCategory": "Plate"
           },
           {
-            "id": "LFnB1p0YSclCwpf4",
+            "uuid": "RollTable.LFnB1p0YSclCwpf4",
             "addAll": true,
             "items": {
               "UBKpYUSNnEZzO4PY": "1d4-1",
@@ -460,7 +460,7 @@
           }
         ]
       },
-      "version": "2.7.6"
+      "version": "2.7.8"
     },
     "core": {}
   },
@@ -469,7 +469,7 @@
     "systemVersion": "6.6.0",
     "coreVersion": "11.306",
     "createdTime": 1690202296286,
-    "modifiedTime": 1690508781743,
+    "modifiedTime": 1690871411865,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "UkhOQcByzgsoaIKR",

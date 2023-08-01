@@ -10,7 +10,6 @@
     "JoMKcRzLWd0O6U1f",
     "qwpOqBPE2PPJVWX0",
     "IvCLGFs6I4Xz7xXx",
-    "Dr8UJKNWuWPRg0v6",
     "mmfvve37s5O2DREX",
     "Lfp7rYxeheTW0g3f"
   ],
@@ -29,12 +28,12 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
     "createdTime": 1690164328637,
-    "modifiedTime": 1690164393457,
+    "modifiedTime": 1690870502818,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
-  "formula": "1d127",
+  "formula": "1d97",
   "_key": "!tables!SPHK7kTHbQfB0AOE"
 }
