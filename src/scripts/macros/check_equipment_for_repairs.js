@@ -1,3 +1,4 @@
-let api = game.modules.get("forien-armoury").api;
+const api = game.modules.get("forien-armoury")?.api.itemRepair;
 
-api.itemRepair.checkInventoryForDamage(actor, {paid: true});
+if (api)
+  api.checkInventoryForDamage(actor, {paid: true});

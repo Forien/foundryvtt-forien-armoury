@@ -15,6 +15,8 @@
         "Repaired": "{name} has been repaired. Removed {repaired} damage from the item.",
         "Free": "Free",
 
+        "NoItemsToRepair": "You have no damaged items that you can repair.",
+
         "ArmourPlural": "Armour",
         "Weapons": "Weapons",
         "Trappings": "Trappings",

@@ -295,15 +295,29 @@ export default class ItemRepair {
    * @param {String} chatMessageId
    * @param {String} type
    * @param {String} subtype
+   * @param {String} userId
    */
-  async checkInventoryForDamage(actor, {paid = true, chatMessageId = null, type = null, subtype = null, user = null} = {}) {
+  async checkInventoryForDamage(actor, {
+    paid = true,
+    chatMessageId = null,
+    type = null,
+    subtype = null,
+    user = null
+  } = {}) {
+    let chatMessage;
+    let content;
     let templateData = {
       armour: [],
       weapons: [],
       trappings: [],
-      paid: paid
+      paid: paid,
+      empty: false
     };
-    if (user && !(user instanceof User)) user = game.users.get(user);
+    if (chatMessageId) {
+      chatMessage = await fromUuid(chatMessageId);
+      type = chatMessage.getFlag('forien-armoury', 'type');
+      subtype = chatMessage.getFlag('forien-armoury', 'subtype');
+    }
 
     if (type.includes('armour'))
       templateData.armour = this.processArmour(actor.itemCategories.armour, {paid, subtype});
@@ -312,21 +326,23 @@ export default class ItemRepair {
     if (type.includes('trappings'))
       templateData.trappings = this.processTrappings(actor.itemCategories.trapping, {paid, subtype});
 
+    if (templateData.armour.length === 0 && templateData.weapons.length === 0 && templateData.trappings.length === 0)
+      templateData.empty = true;
+
     let html = await renderTemplate(Utility.getTemplate(this.templates.chatMessage), templateData);
-    let chatMessage;
-    let content;
 
     if (!chatMessageId) {
       let chatData = {
-        user: user || game.user,
+        user: user ?? game.user,
         speaker: {alias: actor.name, actor: actor._id},
         whisper: game.users.filter((u) => u.isGM).map((u) => u._id),
         content: html
       };
       chatMessage = await ChatMessage.create(chatData)
+      await chatMessage.setFlag('forien-armoury', 'type', type);
+      await chatMessage.setFlag('forien-armoury', 'subtype', subtype);
       content = chatMessage.content;
     } else {
-      chatMessage = await fromUuid(chatMessageId);
       content = html;
     }
 
