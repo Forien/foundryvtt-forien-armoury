@@ -255,7 +255,7 @@ export default class ItemPiles {
     const coreCollection = coreModuleActive ? game.packs.get(coreCollectionName) : null;
     const folder = await this.#createFolder();
     const rolltableCompendium = await game.packs.get("forien-armoury.merchant-rolltables");
-    const rollTables = await rolltableCompendium.importAll({folderId: folder._id});
+    const rollTables = await rolltableCompendium.importAll({folderId: folder._id, keepId: true});
 
 
     for (let rollTable of rollTables) {
