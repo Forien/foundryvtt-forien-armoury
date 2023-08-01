@@ -15,6 +15,7 @@
         "Repaired": "{name} has been repaired. Removed {repaired} damage from the item.",
         "Free": "Free",
 
+        "NoActorSelected": "You must select an actor for the Item Repair feature!",
         "NoItemsToRepair": "You have no damaged items that you can repair.",
 
         "ArmourPlural": "Armour",

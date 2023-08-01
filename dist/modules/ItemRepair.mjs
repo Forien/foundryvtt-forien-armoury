@@ -304,6 +304,10 @@ export default class ItemRepair {
     subtype = null,
     user = null
   } = {}) {
+    if (!actor || !(actor instanceof ActorWfrp4e)) {
+      return Utility.notify(game.i18n.localize('Forien.Armoury.ItemRepair.NoActorSelected'), {type:'warning'});
+    }
+
     let chatMessage;
     let content;
     let templateData = {
