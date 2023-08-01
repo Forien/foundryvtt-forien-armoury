@@ -9,7 +9,15 @@ This module is a collection of custom trappings and features for Warhammer Fanta
 
 Forien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded
 
-#### Notable changes in v1.0.0
+### Notable changes in v1.1.0
+* Minor bug fixes
+* Added integration with ATL and Item Piles modules!
+  * This module now is capable of setting predefined presets in ATL
+  * Easy way of adding new currencies to Item Piles Configuration
+  * Prefab Merchants and ready-to-use Rollable Tables full of item references (require official WFRP4e modules)
+* Tweaks to some macros
+
+### Notable changes in v1.0.0
 * Module was remade from the ground up, not updated
   * It was easier this way, since Migrating from Foundry 0.6 to Foundry 11 would most likely break stuff
 * Added bunch of my own Houserules in a Journal
@@ -31,9 +39,6 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
   * Optionally, Item will be damaged when Temporary Rune is removed from it
   * For best effects, I suggest using [Times Up](https://foundryvtt.com/packages/times-up) by Tim Posney
 * Added new type of Magic for Runebound Rangers
-
-
-
 
 ## Installation
 

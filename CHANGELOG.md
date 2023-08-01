@@ -1,18 +1,22 @@
 # Changelog
 
 ## v1.X.X
-### v1.0.X
-#### v1.0.1
-* Fixed some duplicated IDs from WFRP4e Core module (for example Potion Bag was overriding Sling Bag)
-* Fixed "Check Equipment for Repairs" macro that would not allow repairing damaged Armour if Armour only had 1 AP
+### v1.1.0
+* Fixed some duplicated IDs from WFRP4e Core module (for example Potion Bag was overriding Sling Bag) (Issue #35)
+* Fixed "Check Equipment for Repairs" macro that would not allow repairing damaged Armour if Armour only had 1 AP 
 * Allowed "trapping" Torch to be lit up
   * This converts the Torch into an equippable "weapon"
-* Effects on ATL Light items now have time limit set up for Time's Up
-* Added an OPT-IN setting that will configure ATL presets to work well with Light items from Compendium
+* Effects on ATL Light items now have time limit set up for Time's Up module (Issue #34)
+* Added an OPT-IN setting that will configure ATL presets to work well with Light items from Compendium (Issue #34)
 * Done some groundwork to better support module integrations in the future.
-* Added Item Piles Integration in form of a prefab Merchants and RollTables to be used to populate those Merchants
+* Added Item Piles Integration in form of a prefab Merchants and RollTables to be used to populate those Merchants (Issues #27, #28)
+  * Added Import Rolltable feature along with Re-Import setting that will convert Rolltable entries from UiA to Core module if UiA is not installed
+  * Added Service Items that work well with prefab Merchants, including Repair services
+* Expanded Repair Item functionality to allow macro being run on GM side for the player, also to limit the types of items that can be repaired
+* Changed "Check Career!" Macro to be built-in api functionality in preparation to be used in the upcoming Token Action HUD for WFRP4e
+  * Also, that functionality now supports localization!
 
-#### v1.0.0
+### v1.0.0
 * **Completely rewrote the Module** for Foundry 11 and WFRP4e 6. 
   * Old version was made for Foundry 0.6 and WFRP4e 1.6
   * Leaving the old changelog as is, even though many things have been removed
