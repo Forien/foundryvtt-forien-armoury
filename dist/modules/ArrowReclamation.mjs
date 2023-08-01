@@ -49,12 +49,8 @@ export default class ArrowReclamation {
     let allowArrows = game.settings.get('forien-armoury', 'arrowReclamation.EnableArrows');
     let allowBolts = game.settings.get('forien-armoury', 'arrowReclamation.EnableBolts');
     let allowBullets = game.settings.get('forien-armoury', 'arrowReclamation.EnableBullets');
-    // let recoverable = ammo.system.qualities.value.includes(game.i18n.localize('FArmoury.Properties.Recoverable.Label'));
-    // let unrecoverable = ammo.system.flaws.value.includes(game.i18n.localize('FArmoury.Properties.Unrecoverable.Label'));
     let allowed = null;
     let type = null;
-
-    // if (unrecoverable) return null;
 
     if (weapon.system.ammunitionGroup.value === 'bow') {
       allowed = allowArrows;
@@ -88,8 +84,6 @@ export default class ArrowReclamation {
     let recovered;
     let sturdy;
     let frail;
-    // let sturdy = ammo.system.qualities.value.includes(game.i18n.localize("FArmoury.Properties.Sturdy.Label"));
-    // let frail = ammo.system.flaws.value.includes(game.i18n.localize("FArmoury.Properties.Frail.Label"));
     let formula = "1d100";
 
     if (sturdy) {
@@ -171,18 +165,7 @@ export default class ArrowReclamation {
     let messageNow = game.i18n.format('Forien.Armoury.Arrows.recovered', {type});
     let messageFuture = game.i18n.format('Forien.Armoury.Arrows.recoveredFuture', {type});
 
-
-    // if unbreakable, recover, if not, apply rules
-    // if (ammoQualities.value.includes(game.i18n.localize('PROPERTY.Unbreakable'))) {
-    //   recovered = true;
-    // } else {
-      recovered = this.#isProjectileSaved(roll, percentageTarget, ammo);
-    // }
-
-    // if recovered and hard to find, try again with -10
-    // if (recovered && ammoQualities.value.includes(game.i18n.localize('Forien.Armoury.Arrows.Properties.HardToFind.Label'))) {
-    //   recovered = (new Roll("1d100").roll().total <= (percentageTarget - 10));
-    // }
+    recovered = this.#isProjectileSaved(roll, percentageTarget, ammo);
 
     if (recovered === true) {
       if (game.combat == null) {

@@ -207,42 +207,49 @@
       },
 
       "Settings": {
-        "Runes.Enable": "Item damage from Runes",
-        "Runes.EnableHint": "If enabled, Items will get damaged when a Temporary Rune engraved on them is disabled/used.",
+        "Runes": {
+          "Enable": "Item damage from Runes",
+          "EnableHint": "If enabled, Items will get damaged when a Temporary Rune engraved on them is disabled/used."
+        },
 
-        "ArrowReclamation.Enable": "Enable ammo reclamation",
-        "ArrowReclamation.EnableHint": "Enable ammo reclamation upon range weapon test roll. When used during an encounter some projectiles will be returned after encounter ends.",
+        "ArrowReclamation": {
+          "Enable": "Enable ammo reclamation",
+          "EnableHint": "Enable ammo reclamation upon range weapon test roll. When used during an encounter some projectiles will be returned after encounter ends.",
 
-        "ArrowReclamation.EnableArrows": "Allow to recover Arrows",
-        "ArrowReclamation.EnableArrowsHint": "Check to recover Bow ammunition",
-        "ArrowReclamation.EnableBolts": "Allow to recover Bolts",
-        "ArrowReclamation.EnableBoltsHint": "Check to recover Crossbow ammunition",
-        "ArrowReclamation.EnableBullets": "Allow to recover Bullets",
-        "ArrowReclamation.EnableBulletsHint": "Check to recover Sling ammunition",
+          "EnableArrows": "Allow to recover Arrows",
+          "EnableArrowsHint": "Check to recover Bow ammunition",
+          "EnableBolts": "Allow to recover Bolts",
+          "EnableBoltsHint": "Check to recover Crossbow ammunition",
+          "EnableBullets": "Allow to recover Bullets",
+          "EnableBulletsHint": "Check to recover Sling ammunition",
 
-        "ArrowReclamation.Rule": "Arrow reclamation rule",
-        "ArrowReclamation.RuleHint": "Select rules by which decide if arrow can be reused. Word `critical` means both criticals and fumbles on the <b>main</b> Ranged Test roll.",
+          "Rule": "Arrow reclamation rule",
+          "RuleHint": "Select rules by which decide if arrow can be reused. Word `critical` means both criticals and fumbles on the <b>main</b> Ranged Test roll.",
 
-        "ArrowReclamation.DefaultRule": "Ranged Attack rolled even",
-        "ArrowReclamation.SuccessRule": "Ranged Attack rolled even and was successful",
-        "ArrowReclamation.NoCritRule": "Ranged Attack rolled even, but not critical",
-        "ArrowReclamation.SuccessNoCritRule": "Ranged Attack rolled even, was successful, but not critical",
-        "ArrowReclamation.FailureRule": "Ranged Attack rolled even and failed",
-        "ArrowReclamation.FailureNoCritRule": "Ranged Attack rolled even, has failed, but not critical",
-        "ArrowReclamation.PercentageRule": "Separate roll using Percentage",
-        "ArrowReclamation.PercentageNoCritRule": "Separate roll using Percentage, without criticals",
+          "DefaultRule": "Ranged Attack rolled even",
+          "SuccessRule": "Ranged Attack rolled even and was successful",
+          "NoCritRule": "Ranged Attack rolled even, but not critical",
+          "SuccessNoCritRule": "Ranged Attack rolled even, was successful, but not critical",
+          "FailureRule": "Ranged Attack rolled even and failed",
+          "FailureNoCritRule": "Ranged Attack rolled even, has failed, but not critical",
+          "PercentageRule": "Separate roll using Percentage",
+          "PercentageNoCritRule": "Separate roll using Percentage, without criticals",
 
-        "ArrowReclamation.Percentage": "Target percentage",
-        "ArrowReclamation.PercentageHint": "Set target percentage for rolling with certain Rules. Roll will succeed if d100 rolls less or equal to Target",
+          "Percentage": "Target percentage",
+          "PercentageHint": "Set target percentage for rolling with certain Rules. Roll will succeed if d100 rolls less or equal to Target"
+        },
 
+        "ATL": {
+          "ResetPresets": "Reset ATL Presets",
+          "ResetPresetsHint": "When checked, this module will set ATL presets to be more in line with WFRP rules and to work with Light items from Forien's Armoury Compendium"
+        },
 
-        "ATL.ResetPresets": "Reset ATL Presets",
-        "ATL.ResetPresetsHint": "When checked, this module will set ATL presets to be more in line with WFRP rules and to work with Light items from Forien's Armoury Compendium",
-
-        "ItemPiles.SetCurrencies": "Set Item Pile Currencies",
-        "ItemPiles.SetCurrenciesHint": "When checked, this module will set Item Pile's currencies to use all of custom coins provided with Forien's Armoury. However, it is not suggested to use all 10 coins together as default.",
-        "ItemPiles.RolltablesImport": "Re-Import RollTables",
-        "ItemPiles.RolltablesImportHint": "When checked, system will reimport all Merchant RollTables for Item Piles integration. WARNING: this will purge all contents of \"Merchant Rolltables\" folder!"
+        "ItemPiles": {
+          "SetCurrencies": "Set Item Pile Currencies",
+          "SetCurrenciesHint": "When checked, this module will set Item Pile's currencies to use all of custom coins provided with Forien's Armoury. However, it is not suggested to use all 10 coins together as default.",
+          "RolltablesImport": "Re-Import RollTables",
+          "RolltablesImportHint": "When checked, system will reimport all Merchant RollTables for Item Piles integration. WARNING: this will purge all contents of \"Merchant Rolltables\" folder!"
+        }
       }
     }
   }

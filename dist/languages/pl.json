@@ -181,33 +181,37 @@
       },
 
       "Settings": {
-        "Runes.Enable": "Uszkodzenia Przedmiotów od Run",
-        "Runes.EnableHint": "Zaznacz, aby Przedmiot otrzymywał Punkt Uszkodzeń gdy Tymczasowa Runa zostaje zużyta.",
+        "Runes": {
+          "Enable": "Uszkodzenia Przedmiotów od Run",
+          "EnableHint": "Zaznacz, aby Przedmiot otrzymywał Punkt Uszkodzeń gdy Tymczasowa Runa zostaje zużyta."
+        },
 
-        "ArrowReclamation.Enable": "Włącz odzyskiwanie amunicji",
-        "ArrowReclamation.EnableHint": "Włącz odzyskiwanie amunicji podczas testu na atak zasięgowy podczas walki (nie działa bez aktywanego Starcia). Amunicja wystrzelona podczas Starcia zostanie przywrócona po jego zakończeniu.",
+        "ArrowReclamation": {
+          "Enable": "Włącz odzyskiwanie amunicji",
+          "EnableHint": "Włącz odzyskiwanie amunicji podczas testu na atak zasięgowy podczas walki (nie działa bez aktywanego Starcia). Amunicja wystrzelona podczas Starcia zostanie przywrócona po jego zakończeniu.",
 
-        "ArrowReclamation.EnableArrows": "Pozwól odzyskiwać Strzały",
-        "ArrowReclamation.EnableArrowsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Łuku",
-        "ArrowReclamation.EnableBolts": "Pozwól odzyskiwać Bełty",
-        "ArrowReclamation.EnableBoltsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Kuszy",
-        "ArrowReclamation.EnableBullets": "Pozwól odzyskiwać Pociski",
-        "ArrowReclamation.EnableBulletsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Procy",
+          "EnableArrows": "Pozwól odzyskiwać Strzały",
+          "EnableArrowsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Łuku",
+          "EnableBolts": "Pozwól odzyskiwać Bełty",
+          "EnableBoltsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Kuszy",
+          "EnableBullets": "Pozwól odzyskiwać Pociski",
+          "EnableBulletsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Procy",
 
-        "ArrowReclamation.Rule": "Zasady odzyskiwania amunicji",
-        "ArrowReclamation.RuleHint": "Wybierz zasady, według których amunicja zostanie odzyskana. Słowo `Krytyk` oznacza zarówno Fuks jak i Pech podczas Testów Broni Zasięgowej.",
+          "Rule": "Zasady odzyskiwania amunicji",
+          "RuleHint": "Wybierz zasady, według których amunicja zostanie odzyskana. Słowo `Krytyk` oznacza zarówno Fuks jak i Pech podczas Testów Broni Zasięgowej.",
 
-        "ArrowReclamation.DefaultRule": "Rzut był parzysty",
-        "ArrowReclamation.SuccessRule": "Rzut był parzysty i udany",
-        "ArrowReclamation.NoCritRule": "Rzut był parzysty, ale bez Krytyka",
-        "ArrowReclamation.SuccessNoCritRule": "Rzut był parzysty, udany, ale bez Krytyka",
-        "ArrowReclamation.FailureRule": "Rzut był parzysty i nieudany",
-        "ArrowReclamation.FailureNoCritRule": "Rzut był parzysty, nieudany, ale bez Krytyka",
-        "ArrowReclamation.PercentageRule": "Osobny rzut na szansę odzyskania",
-        "ArrowReclamation.PercentageNoCritRule": "Osobny rzut na szansę odzyskania z pominięciem Krytyków",
+          "DefaultRule": "Rzut był parzysty",
+          "SuccessRule": "Rzut był parzysty i udany",
+          "NoCritRule": "Rzut był parzysty, ale bez Krytyka",
+          "SuccessNoCritRule": "Rzut był parzysty, udany, ale bez Krytyka",
+          "FailureRule": "Rzut był parzysty i nieudany",
+          "FailureNoCritRule": "Rzut był parzysty, nieudany, ale bez Krytyka",
+          "PercentageRule": "Osobny rzut na szansę odzyskania",
+          "PercentageNoCritRule": "Osobny rzut na szansę odzyskania z pominięciem Krytyków",
 
-        "ArrowReclamation.Percentage": "Docelowa Szansa",
-        "ArrowReclamation.PercentageHint": "Ustaw \"Szansę\" procentową dla rzutu wymaganego przez niektóre Zasady. Rzut się powiedzie, jeśli na k100 wypadnie mniej lub tyle samo, ile wynosi Docelowa Szansa"
+          "Percentage": "Docelowa Szansa",
+          "PercentageHint": "Ustaw \"Szansę\" procentową dla rzutu wymaganego przez niektóre Zasady. Rzut się powiedzie, jeśli na k100 wypadnie mniej lub tyle samo, ile wynosi Docelowa Szansa"
+        }
       }
     }
   }
