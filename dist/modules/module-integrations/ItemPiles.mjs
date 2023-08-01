@@ -1,3 +1,5 @@
+
+
 export default class ItemPiles {
   /**
    * Register Settings for Item Piles integration with WFRP4e/Forien's Armoury
@@ -20,6 +22,34 @@ export default class ItemPiles {
         }
       }
     });
+
+    game.settings.register('forien-armoury', 'itempiles.rolltablesImported', {
+      scope: 'world',
+      default: false,
+      type: Boolean
+    });
+
+    game.settings.register('forien-armoury', 'itempiles.rolltablesImport', {
+      name: 'Forien.Armoury.Settings.ItemPiles.RolltablesImport',
+      hint: 'Forien.Armoury.Settings.ItemPiles.RolltablesImportHint',
+      scope: 'world',
+      config: true,
+      default: false,
+      type: Boolean,
+      onChange: async (value) =>
+      {
+        if (value) {
+          self.#importRollTables();
+          game.settings.set('forien-armoury', 'itempiles.rolltablesImport', false);
+        }
+      }
+    });
+  }
+
+  initialize() {
+    let imported = game.settings.get('forien-armoury', 'itempiles.rolltablesImported')
+    if (imported === false)
+      this.#importRollTables();
   }
 
   /**
@@ -200,5 +230,56 @@ export default class ItemPiles {
         exchangeRate: 1
       }
     ]
+  }
+
+  async #createFolder() {
+    let folder = game.folders.find(f => f.type === "RollTable" && f.getFlag('forien-armoury', 'isImportFolder'));
+    if (folder) {
+      await RollTable.deleteDocuments(folder.documentCollection.map(d => d._id));
+
+      return folder
+    }
+
+    return Folder.create({
+      name: 'Merchant Rolltables (Forien\'s Armoury)',
+      type: 'RollTable',
+      color: "#3e1395"
+    });
+  }
+
+  async #importRollTables() {
+    const coreModuleActive = game.modules.get('wfrp4e-core')?.active || false;
+    if (!coreModuleActive) return;
+
+    const coreCollectionName = 'wfrp4e-core.trappings';
+    const coreCollection = coreModuleActive ? game.packs.get(coreCollectionName) : null;
+    const folder = await this.#createFolder();
+    const rolltableCompendium = await game.packs.get("forien-armoury.merchant-rolltables");
+    const rollTables = await rolltableCompendium.importAll({folderId: folder._id});
+
+
+    for (let rollTable of rollTables) {
+      let entriesToRemove = [];
+
+      for (let entry of rollTable.results) {
+        let entryKey = entry._id;
+        let pack = game.packs.get(entry.documentCollection);
+        if (pack) continue;
+        if (!pack && coreModuleActive) {
+          let coreItem = coreCollection.index.find(index => index.name === entry.text)
+          if (coreItem) {
+            entry.documentCollection = coreCollectionName;
+            entry.documentId = coreItem._id;
+            continue;
+          }
+        }
+
+        entriesToRemove.push(entryKey)
+      }
+      entriesToRemove.forEach(key => rollTable.results.delete(key));
+    }
+    await RollTable.updateDocuments(rollTables);
+    game.settings.set('forien-armoury', 'itempiles.rolltablesImported', true);
+    return folder.setFlag('forien-armoury', 'isImportFolder', true)
   }
 }

@@ -35,6 +35,10 @@ export default class Integrations {
     this.itemPiles?.registerSettings();
   }
 
+  ready() {
+    this.itemPiles?.initialize();
+  }
+
   /**
    * Methods that will run automatically once when module is first installed.
    */
