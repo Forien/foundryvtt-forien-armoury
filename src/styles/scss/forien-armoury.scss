@@ -47,7 +47,7 @@
         //font-family: CaslonPro, serif;
         font-family: CaslonAntique, serif;
 
-        .label{
+        .label {
           font-weight: 600;
           font-size: var(--font-size-18);
         }
@@ -119,3 +119,12 @@
   }
 }
 
+.app.window-app.sheet.wfrp4e.actor {
+  .tab.inventory.active {
+    .inventory-header.inventory-container.level-1 {
+      .column-section {
+        max-width: 120px;
+      }
+    }
+  }
+}
