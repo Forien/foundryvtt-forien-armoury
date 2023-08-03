@@ -1,8 +1,9 @@
 # Changelog
 
 ## v1.X.X
-### v1.1.2
+### v1.1.3
 * Fixed Repair Item feature not working without specified Type and Subtype
+### v1.1.2
 * Introduced various Price Tables by Nibbler
 
 ### v1.1.0
