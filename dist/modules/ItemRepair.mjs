@@ -300,8 +300,8 @@ export default class ItemRepair {
   async checkInventoryForDamage(actor, {
     paid = true,
     chatMessageId = null,
-    type = null,
-    subtype = null,
+    type = '',
+    subtype = '',
     user = null
   } = {}) {
     if (!actor || !(actor instanceof ActorWfrp4e)) {

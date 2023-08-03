@@ -174,7 +174,7 @@ _Disclaimer: I kept all acknowledgments, even if their respective work was lost 
 * Thanks to LeRatierBretonnien and Gharazel for providing French translation! 
 * Thanks to ElCamino for providing German translation!
 * Thanks to [silent_mark](https://github.com/silentmark) for contributing to Polish translation!
-
+* Thanks to Nibbler from The Rat Catchers Guild on Discord for providing his price tables 
 
 
 
