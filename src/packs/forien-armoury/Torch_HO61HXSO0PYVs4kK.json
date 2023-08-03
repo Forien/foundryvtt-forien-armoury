@@ -1,7 +1,7 @@
 {
   "name": "Torch",
   "type": "trapping",
-  "img": "icons/sundries/lights/torch-brown-lit.webp",
+  "img": "icons/sundries/lights/torch-brown.webp",
   "effects": [
     "zUn7o4oGRBwnlmoX"
   ],
@@ -72,10 +72,10 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
     "createdTime": 1663627495285,
-    "modifiedTime": 1690137426663,
+    "modifiedTime": 1691052133241,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "ALm6rINfMUWhLplE",

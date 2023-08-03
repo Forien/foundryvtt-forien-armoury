@@ -11,17 +11,18 @@
     "VWlgPsg31911DDLQ",
     "gTCyZ0artUI2MCgz",
     "9XxeTpJTh6hE9guG",
-    "1KixRsjyMULqAzSZ"
+    "1KixRsjyMULqAzSZ",
+    "aQ7pHrVuoyA5r3m6"
   ],
   "flags": {
     "core": {}
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
     "createdTime": 1687714479307,
-    "modifiedTime": 1689087796585,
+    "modifiedTime": 1691052407776,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "u2f4n9KXYBmBvZw3",

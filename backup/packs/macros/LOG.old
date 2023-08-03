@@ -1,8 +1,0 @@
-2023/07/07-00:13:30.381 8d78 Recovering log #221
-2023/07/07-00:13:30.393 8d78 Delete type=0 #221
-2023/07/07-00:13:30.393 8d78 Delete type=3 #219
-2023/07/07-00:17:13.328 9318 Level-0 table #226: started
-2023/07/07-00:17:13.328 9318 Level-0 table #226: 0 bytes OK
-2023/07/07-00:17:13.331 9318 Delete type=0 #224
-2023/07/07-00:17:13.340 9318 Manual compaction at level-0 from '!folders!K7bIr7HUorfHR7Xh' @ 72057594037927935 : 1 .. '!macros!ynLKA5lklO79GE9P' @ 0 : 0; will stop at (end)
-2023/07/07-00:17:13.344 9318 Manual compaction at level-1 from '!folders!K7bIr7HUorfHR7Xh' @ 72057594037927935 : 1 .. '!macros!ynLKA5lklO79GE9P' @ 0 : 0; will stop at (end)
