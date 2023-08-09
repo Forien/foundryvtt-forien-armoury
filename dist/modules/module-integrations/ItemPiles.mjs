@@ -235,7 +235,8 @@ export default class ItemPiles {
   async #createFolder() {
     let folder = game.folders.find(f => f.type === "RollTable" && f.getFlag('forien-armoury', 'isImportFolder'));
     if (folder) {
-      await RollTable.deleteDocuments(folder.documentCollection.map(d => d._id));
+      let rollTables = folder.contents.map(d => d._id);
+      await RollTable.deleteDocuments(rollTables);
 
       return folder
     }

@@ -1,6 +1,8 @@
 # Changelog
 
 ## v1.X.X
+### v1.1.4
+* Fixed serious bug that would delete all RollTables on Re-Importing the Item Piles Integration instead of only RollTables in one specific folder
 ### v1.1.3
 * Fixed Repair Item feature not working without specified Type and Subtype
 ### v1.1.2
