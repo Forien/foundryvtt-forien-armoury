@@ -84,6 +84,7 @@ export default class ArrowReclamation {
     let recovered;
     let sturdy;
     let frail;
+    debugger;
     let formula = "1d100";
 
     if (sturdy) {
@@ -92,8 +93,8 @@ export default class ArrowReclamation {
       formula = "2d100kh";
     }
 
-    let percentage = (new Roll(formula).roll().total <= percentageTarget);
-    let sturdyRoll = (new Roll("1d100").roll().total <= percentageTarget);
+    let percentage = (new Roll(formula).roll({async: false}).total <= percentageTarget);
+    let sturdyRoll = (new Roll("1d100").roll({async: false}).total <= percentageTarget);
 
     switch (game.settings.get("forien-armoury", "arrowReclamation.Rule")) {
       case 'success':
