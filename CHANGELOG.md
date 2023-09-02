@@ -1,6 +1,8 @@
 # Changelog
 
 ## v1.X.X
+### v1.1.6
+* Fixed the Item Piles Rolltables looped import due to a bug with non-existing compendium in WFRP4e Core 4.0.0
 ### v1.1.5
 * Fixed the "Percentage" modes for Ammo Reclamation not working properly
 ### v1.1.4

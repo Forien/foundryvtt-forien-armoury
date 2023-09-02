@@ -249,10 +249,11 @@ export default class ItemPiles {
   }
 
   async #importRollTables() {
-    const coreModuleActive = game.modules.get('wfrp4e-core')?.active || false;
+    const coreModule = game.modules.get('wfrp4e-core');
+    const coreModuleActive = coreModule?.active || false;
     if (!coreModuleActive) return;
 
-    const coreCollectionName = 'wfrp4e-core.trappings';
+    const coreCollectionName = isNewerVersion(coreModule.version, '3.999') ? 'wfrp4e-core.items' : 'wfrp4e-core.trappings';
     const coreCollection = coreModuleActive ? game.packs.get(coreCollectionName) : null;
     const folder = await this.#createFolder();
     const rolltableCompendium = await game.packs.get("forien-armoury.merchant-rolltables");
@@ -267,7 +268,7 @@ export default class ItemPiles {
         let pack = game.packs.get(entry.documentCollection);
         if (pack) continue;
         if (!pack && coreModuleActive) {
-          let coreItem = coreCollection.index.find(index => index.name === entry.text)
+          let coreItem = coreCollection?.index.find(index => index.name === entry.text)
           if (coreItem) {
             entry.documentCollection = coreCollectionName;
             entry.documentId = coreItem._id;
