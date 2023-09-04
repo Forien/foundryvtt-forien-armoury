@@ -84,7 +84,6 @@ export default class ArrowReclamation {
     let recovered;
     let sturdy;
     let frail;
-    debugger;
     let formula = "1d100";
 
     if (sturdy) {
