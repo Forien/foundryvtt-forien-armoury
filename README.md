@@ -1,13 +1,21 @@
 # FoundryVTT - Forien's Armoury
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/forien/foundryvtt-forien-armoury?style=for-the-badge) 
-![GitHub Releases](https://img.shields.io/github/downloads/Forien/foundryvtt-forien-armoury/latest/module.zip?style=for-the-badge)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Forien/foundryvtt-forien-armoury?style=for-the-badge) 
+![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2FFoundry-Workshop%2FItem-Macro%2Fmaster%2Fmodule.json&label=Foundry%20Min%20Version&query=$.compatibility.minimum&colorB=orange&style=for-the-badge) 
+![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2FFoundry-Workshop%2FItem-Macro%2Fmaster%2Fmodule.json&label=Foundry%20Verified&query=$.compatibility.verified&colorB=orange&style=for-the-badge)  
+![License](https://img.shields.io/github/license/Forien/foundryvtt-forien-armoury?style=for-the-badge) ![GitHub Releases](https://img.shields.io/github/downloads/Forien/foundryvtt-forien-armoury/latest/module.zip?style=for-the-badge) 
 ![GitHub All Releases](https://img.shields.io/github/downloads/Forien/foundryvtt-forien-armoury/module.zip?style=for-the-badge&label=Downloads+total)  
-**[Compatibility]**: *Foundry VTT* **Version 11**, *WFRP4e* **v6.6.1**    
-**[Languages]**: *English*
+[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white&link=https%3A%2F%2Fdiscord.gg%2FXkTFv8DRDc)](https://discord.gg/XkTFv8DRDc)
+[![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/foundryworkshop)
+[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/forien)
 
 This module is a collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top  
 
 Forien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded
+
+
+### Notable changes in v1.2.0
+* Updated links in Journals to fit the `WFRP4e Core 4.0.0` compendium structure
+* Several smaller fixes, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
 
 ### Notable changes in v1.1.0
 * Minor bug fixes
