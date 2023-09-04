@@ -1,6 +1,9 @@
 # Changelog
 
 ## v1.X.X
+### v1.2.0
+* Fixed invalid item links for WFRP4e Core 4.0.0
+* Removed stray debugger
 ### v1.1.6
 * Fixed the Item Piles Rolltables looped import due to a bug with non-existing compendium in WFRP4e Core 4.0.0
 ### v1.1.5
