@@ -14,7 +14,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>A @UUID[Compendium.wfrp4e-core.trappings.Item.9pJenZDZD2lV75vq]{Storm Lantern} prepared with ATL compatible Effects</p><p>Requires @UUID[Compendium.wfrp4e-core.trappings.Item.Bal23aLiOmnht42h]{Lamp Oil}.</p>"
+      "value": "<p>A @UUID[Compendium.wfrp4e-core.items.Item.9pJenZDZD2lV75vq]{Storm Lantern} prepared with ATL compatible Effects</p><p>Requires @UUID[Compendium.wfrp4e-core.items.Item.Bal23aLiOmnht42h]{Lamp Oil}.</p>"
     },
     "gmdescription": {
       "type": "String",

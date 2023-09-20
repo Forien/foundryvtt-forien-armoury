@@ -13,7 +13,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>A @UUID[Compendium.wfrp4e-core.trappings.Item.TW3etL7RIU2EWTXp]{Candle} prepared with ATL compatible Effects</p><p>Lasts 2 hours.</p>"
+      "value": "<p>A @UUID[Compendium.wfrp4e-core.items.Item.TW3etL7RIU2EWTXp]{Candle} prepared with ATL compatible Effects</p><p>Lasts 2 hours.</p>"
     },
     "gmdescription": {
       "type": "String",

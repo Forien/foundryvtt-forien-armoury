@@ -7,7 +7,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>Upon taking this talent you immediately gain access to all Runebound Runes (Spells).</p><p>Using Runes, unlike Arcane Magic, does not require ability to speak aloud incantation, instead it's sone by @UUID[Compendium.wfrp4e-core.skills.Item.V8eRx66SxB9Jha0Q]{Channelling} winds of magic through hand signs. To cast a Rune, character needs ability to use at least one hand freely.</p><p>Having @UUID[Compendium.wfrp4e-core.talents.Item.tXKX29QZBdHmyMc7]{Combat Reflexes} Talent allows using Runes when using Two-Handed weapons (of any Category).</p><p>For every level of this talent taken, except the first, you can \"Memorize\" a single Rune. You can use Memorized Runes as a Free Action</p>"
+      "value": "<p>Upon taking this talent you immediately gain access to all Runebound Runes (Spells).</p><p>Using Runes, unlike Arcane Magic, does not require ability to speak aloud incantation, instead it's sone by @UUID[Compendium.wfrp4e-core.items.Item.V8eRx66SxB9Jha0Q]{Channelling} winds of magic through hand signs. To cast a Rune, character needs ability to use at least one hand freely.</p><p>Having @UUID[Compendium.wfrp4e-core.items.Item.tXKX29QZBdHmyMc7]{Combat Reflexes} Talent allows using Runes when using Two-Handed weapons (of any Category).</p><p>For every level of this talent taken, except the first, you can \"Memorize\" a single Rune. You can use Memorized Runes as a Free Action</p>"
     },
     "gmdescription": {
       "type": "String",

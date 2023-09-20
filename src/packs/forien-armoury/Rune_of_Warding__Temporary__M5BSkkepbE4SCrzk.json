@@ -23,7 +23,7 @@
       "effectApplication": "equipped",
       "hide": false,
       "preventDuplicateEffects": false,
-      "script": "fromUuid(\"Compendium.wfrp4e-core.talents.Item.eowbsW6oHGSNJmxV\").then(item => Item.create(item.toObject(), {\n  fromEffect: this.effect.id,\n  parent: this.actor\n}))\n\nthis.effect.update({\n  disabled: false,\n  duration: {\n    seconds: 60,\n    duration: 60,\n    type: 'seconds'\n  },\n  flags: {\n    wfrp4e: {\n      effectTrigger: '',\n      script: ''\n    }\n  }\n});",
+      "script": "fromUuid(\"Compendium.wfrp4e-core.items.Item.eowbsW6oHGSNJmxV\").then(item => Item.create(item.toObject(), {\n  fromEffect: this.effect.id,\n  parent: this.actor\n}))\n\nthis.effect.update({\n  disabled: false,\n  duration: {\n    seconds: 60,\n    duration: 60,\n    type: 'seconds'\n  },\n  flags: {\n    wfrp4e: {\n      effectTrigger: '',\n      script: ''\n    }\n  }\n});",
       "reduceQuantity": false
     },
     "forien-armoury": {

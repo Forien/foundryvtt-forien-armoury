@@ -23,7 +23,7 @@
       "effectApplication": "equipped",
       "hide": false,
       "preventDuplicateEffects": false,
-      "script": "fromUuid(\"Compendium.wfrp4e-core.talents.Item.u0CFf3xwiyidD9T5\").then(item => Item.create(item.toObject(), {fromEffect : this.effect.id, parent : this.actor}))",
+      "script": "fromUuid(\"Compendium.wfrp4e-core.items.Item.u0CFf3xwiyidD9T5\").then(item => Item.create(item.toObject(), {fromEffect : this.effect.id, parent : this.actor}))",
       "reduceQuantity": false
     },
     "forien-armoury": {

@@ -1,6 +1,9 @@
 # Changelog
 
 ## v1.X.X
+### v1.2.1
+* Fixed remaining item links in compendiums
+* Fixed ReImport not deleting old stuff
 ### v1.2.0
 * Fixed invalid item links for WFRP4e Core 4.0.0
 * Removed stray debugger
