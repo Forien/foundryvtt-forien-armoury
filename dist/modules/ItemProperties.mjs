@@ -14,6 +14,7 @@ export default class ItemProperties {
 
     config.weaponQualities = {
       slashing: 'Forien.Armoury.Arrows.Properties.Slashing.Label',
+      incendiary: 'Forien.Armoury.Arrows.Properties.Incendiary.Label',
       recoverable: 'Forien.Armoury.Arrows.Properties.Recoverable.Label',
     };
 
@@ -23,12 +24,14 @@ export default class ItemProperties {
 
     config.propertyHasValue = {
       slashing: true,
+      incendiary: false,
       recoverable: false,
       unrecoverable: false,
     };
 
     config.qualityDescriptions = {
       slashing: 'Forien.Armoury.Arrows.Properties.Slashing.Description',
+      incendiary: 'Forien.Armoury.Arrows.Properties.Incendiary.Description',
       recoverable: 'Forien.Armoury.Arrows.Properties.Recoverable.Description',
     };
 
@@ -43,10 +46,29 @@ export default class ItemProperties {
     const {
       actor,
       opposedTest,
+      totalWoundLoss,
       AP,
+      damageType,
+      updateMsg,
+      messageElements,
+      attacker,
       extraMessages
     } = args;
 
+    this.#checkForSlashing(opposedTest, AP, actor, extraMessages);
+    this.#checkForIncendiary(opposedTest, actor, extraMessages);
+  }
+
+  #checkForIncendiary(opposedTest, actor, extraMessages) {
+    const incendiary = opposedTest.attackerTest.weapon?.properties.qualities.incendiary ?? null;
+    if (incendiary === null) return;
+    if (!opposedTest.attackerTest.result.critical) return;
+
+    actor.addCondition("ablaze");
+    extraMessages.push(game.i18n.localize("Forien.Armoury.Arrows.Properties.Incendiary.Message"));
+  }
+
+  #checkForSlashing(opposedTest, AP, actor, extraMessages) {
     const slashing = opposedTest.attackerTest.weapon?.properties.qualities.slashing?.value ?? null;
     if (slashing === null) return;
     if (slashing < AP.used) return;

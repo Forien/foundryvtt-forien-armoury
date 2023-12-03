@@ -176,6 +176,11 @@
         "Bullet": "Bullet",
 
         "Properties": {
+          "Incendiary": {
+            "Label": "Incendiary",
+            "Description": "An Incendiary weapon inflicts one @Condition[Ablaze] Condition on a critical hit.",
+            "Message": "Incendiary weapon was used and scored critical hit! <strong>Ablaze Condition received.</strong>"
+          },
           "Slashing": {
             "Label": "Slashing",
             "Description": "A weapon with Slashing X inflicts one @Condition[Bleeding] Condition on a successful hits on locations protected by no more than X Armour Points.",
