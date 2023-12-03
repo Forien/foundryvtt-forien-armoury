@@ -18,7 +18,7 @@ export default class Utility {
         colour = '#22aa22';
     }
 
-    console.log(`🦊 %c${constants.moduleLabel}: %c${notification}`, 'color: purple', `color: ${colour}`);
+    console.log(`🦊 %c${constants.moduleLabel}: %c${notification}`, `color: ${purple}`, `color: ${colour}`);
 
     if (!consoleOnly)
       ui?.notifications?.notify(notification, type, {permanent: permanent, console: false});

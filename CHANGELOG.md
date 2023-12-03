@@ -3,6 +3,7 @@
 ## v1.X.X
 
 ### v1.3.0
+* Reintroduced the Slashing, Recoverable and Unrecoverable properties for weapons and ammunition
 * Added Combat Fatigue feature (implementing Getting Tired from CRB p.168)
 * Added macro for testing Advanced Skills with result limits
 * Minor fixes to items (improved gunpowder, powder horns)

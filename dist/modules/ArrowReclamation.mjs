@@ -42,16 +42,21 @@ export default class ArrowReclamation {
    * if ammo is not allowed by configuration, or is not supported, returns null
    *
    * @param weapon
-   * @param _ammo
+   * @param ammo
    *
    * @returns string|null
    */
-  #getAmmoType(weapon, _ammo) {
+  #getAmmoType(weapon, ammo) {
     let allowArrows = game.settings.get(constants.moduleId, settings.arrowReclamation.enableArrows);
     let allowBolts = game.settings.get(constants.moduleId, settings.arrowReclamation.enableBolts);
     let allowBullets = game.settings.get(constants.moduleId, settings.arrowReclamation.enableBullets);
+    let recoverable = ammo.properties.qualities.recoverable || false;
+    let unrecoverable = ammo.properties.flaws.unrecoverable || false;
     let allowed = null;
     let type = null;
+
+    if (unrecoverable)
+      return null;
 
     if (weapon.system.ammunitionGroup.value === 'bow') {
       allowed = allowArrows;
@@ -64,7 +69,8 @@ export default class ArrowReclamation {
       type = 'Bullet';
     }
 
-    if (allowed) return type;
+    if (allowed || recoverable)
+      return type;
 
     return null;
   }

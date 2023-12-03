@@ -175,19 +175,33 @@
         "Bolt": "Bolt",
         "Bullet": "Bullet",
 
-        "Properties.Slashing.Label": "Slashing",
-        "Properties.Recoverable.Label": "Recoverable",
-        "Properties.Unrecoverable.Label": "Unrecoverable",
-        "Properties.Sturdy.Label": "Sturdy",
-        "Properties.Frail.Label": "Frail",
-        "Properties.HardToFind.Label": "Hard To Find",
-
-        "Properties.Slashing.Description": "A  Slashing  weapon  inflicts  one  Bleeding  Condition  on successful hits on locations protected by no more than 1 Armour Point.",
-        "Properties.Recoverable.Description": "Projectile can be recovered even if it's ammunition group normally cannot. <br/><em>(requires feature enabled in settings)</em>",
-        "Properties.Unrecoverable.Description": "Projectile always perishes and can never be recovered.",
-        "Properties.Sturdy.Description": "Projectile is sturdy and easier to recover.<br/><b>Percentage rules</b>: rolls double, picks lower<br/><b>Success/Fail rules</b>: negates success/failure condition<br/><b>Other rules:</b> if not recovered, roll for Percentage.<br/><em>(requires feature enabled in settings)</em>",
-        "Properties.Frail.Description": "Projectile is very frail and easily breaks making it harder to recover.<br/><b>Percentage rules</b>: rolls double, picks higher<br/><b>Other rules:</b> if not recovered, roll for Percentage<br/><em>(requires feature enabled in settings)</em>",
-        "Properties.HardToFind.Description": "Projectile is very hard to find even in favorable conditions. If it was to be recovered, roll again for Percentage with –10 modifier."
+        "Properties": {
+          "Slashing": {
+            "Label": "Slashing",
+            "Description": "A weapon with Slashing X inflicts one @Condition[Bleeding] Condition on a successful hits on locations protected by no more than X Armour Points.",
+            "Message": "{location} is protected by only {ap} Armour Points, not enough to protect against Slashing {rating}. <strong>Bleeding Condition received.</strong>"
+          },
+          "Recoverable": {
+            "Label": "Recoverable",
+            "Description": "Projectile can be recovered even if it's ammunition group normally cannot. <br/><em>(requires feature enabled in settings)</em>"
+          },
+          "Unrecoverable": {
+            "Label": "Unrecoverable",
+            "Description": "Projectile always perishes and can never be recovered."
+          },
+          "Sturdy": {
+            "Label": "Sturdy",
+            "Description": "Projectile is sturdy and easier to recover.<br/><b>Percentage rules</b>: rolls double, picks lower<br/><b>Success/Fail rules</b>: negates success/failure condition<br/><b>Other rules:</b> if not recovered, roll for Percentage.<br/><em>(requires feature enabled in settings)</em>"
+          },
+          "Frail": {
+            "Label": "Frail",
+            "Description": "Projectile is very frail and easily breaks making it harder to recover.<br/><b>Percentage rules</b>: rolls double, picks higher<br/><b>Other rules:</b> if not recovered, roll for Percentage<br/><em>(requires feature enabled in settings)</em>"
+          },
+          "HardToFind": {
+            "Label": "Hard To Find",
+            "Description": "Projectile is very hard to find even in favorable conditions. If it was to be recovered, roll again for Percentage with –10 modifier."
+          }
+        }
       },
 
       "CheckCareer": {
