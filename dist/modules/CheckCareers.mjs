@@ -1,4 +1,4 @@
-import Utility from "./Utility.mjs";
+import Utility from "./utility/Utility.mjs";
 
 export default class CheckCareers {
   static #templates = {

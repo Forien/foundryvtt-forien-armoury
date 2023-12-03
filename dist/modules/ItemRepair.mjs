@@ -1,4 +1,5 @@
-import Utility from "./Utility.mjs";
+import Utility from "./utility/Utility.mjs";
+import {constants, flags} from "./constants.mjs";
 
 export default class ItemRepair {
 
@@ -319,8 +320,8 @@ export default class ItemRepair {
     };
     if (chatMessageId) {
       chatMessage = await fromUuid(chatMessageId);
-      type = chatMessage.getFlag('forien-armoury', 'type');
-      subtype = chatMessage.getFlag('forien-armoury', 'subtype');
+      type = chatMessage.getFlag(constants.moduleId, flags.itemRepair.type);
+      subtype = chatMessage.getFlag(constants.moduleId, flags.itemRepair.subtype);
     }
 
     if (!type || type.includes('armour'))
@@ -343,8 +344,8 @@ export default class ItemRepair {
         content: html
       };
       chatMessage = await ChatMessage.create(chatData)
-      await chatMessage.setFlag('forien-armoury', 'type', type);
-      await chatMessage.setFlag('forien-armoury', 'subtype', subtype);
+      await chatMessage.setFlag(constants.moduleId, flags.itemRepair.type, type);
+      await chatMessage.setFlag(constants.moduleId, flags.itemRepair.subtype, subtype);
       content = chatMessage.content;
     } else {
       content = html;

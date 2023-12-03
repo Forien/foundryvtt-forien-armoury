@@ -1,3 +1,5 @@
+import {constants, settings} from "../constants.mjs";
+
 export default class ATL {
   /**
    * Register Settings for ATL integration with WFRP4e/Forien's Armoury
@@ -5,7 +7,7 @@ export default class ATL {
   registerSettings() {
     let self = this;
 
-    game.settings.register('forien-armoury', 'atl.resetPresets', {
+    game.settings.register(constants.moduleId, settings.integrations.atl.resetPresets, {
       name: 'Forien.Armoury.Settings.ATL.ResetPresets',
       hint: 'Forien.Armoury.Settings.ATL.ResetPresetsHint',
       scope: 'world',
@@ -16,7 +18,7 @@ export default class ATL {
       {
         if (value) {
           self.setPresets();
-          game.settings.set('forien-armoury', 'atl.resetPresets', false);
+          game.settings.set(constants.moduleId, settings.integrations.atl.resetPresets, false);
         }
       }
     });

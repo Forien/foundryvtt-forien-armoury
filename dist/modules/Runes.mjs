@@ -1,4 +1,5 @@
-import Utility from "./Utility.mjs";
+import Utility from "./utility/Utility.mjs";
+import {constants} from "./constants.mjs";
 
 export default class TemporaryRunes {
   bindHooks() {
@@ -17,7 +18,7 @@ export default class TemporaryRunes {
   }
 
   #isRuneTemporary(effect) {
-    if (effect.flags['forien-armoury']?.isTemporary === true)
+    if (effect.flags[constants.moduleId]?.isTemporary === true)
       return true;
 
     // fallback to checking name
@@ -44,7 +45,7 @@ export default class TemporaryRunes {
     await item.deleteEmbeddedDocuments("ActiveEffect", [itemEffect._id]);
 
     let itemDamaged = ``;
-    if (game.settings.get('forien-armoury', 'runes.damageEnable')) {
+    if (game.settings.get(constants.moduleId, settings.runes.enableDamage)) {
       itemDamaged = await this.damageFromRune(item, actor);
     }
 

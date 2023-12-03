@@ -1,3 +1,4 @@
+import {constants, flags, settings} from "../constants.mjs";
 
 
 export default class ItemPiles {
@@ -7,7 +8,7 @@ export default class ItemPiles {
   registerSettings() {
     let self = this;
 
-    game.settings.register('forien-armoury', 'itempiles.setCurrencies', {
+    game.settings.register(constants.moduleId, settings.integrations.itemPiles.setCurrencies, {
       name: 'Forien.Armoury.Settings.ItemPiles.SetCurrencies',
       hint: 'Forien.Armoury.Settings.ItemPiles.SetCurrenciesHint',
       scope: 'world',
@@ -18,18 +19,18 @@ export default class ItemPiles {
       {
         if (value) {
           self.setCurrencies();
-          game.settings.set('forien-armoury', 'itempiles.setCurrencies', false);
+          game.settings.set(constants.moduleId, settings.integrations.itemPiles.setCurrencies, false);
         }
       }
     });
 
-    game.settings.register('forien-armoury', 'itempiles.rolltablesImported', {
+    game.settings.register(constants.moduleId, settings.integrations.itemPiles.rolltablesImported, {
       scope: 'world',
       default: false,
       type: Boolean
     });
 
-    game.settings.register('forien-armoury', 'itempiles.rolltablesImport', {
+    game.settings.register(constants.moduleId, settings.integrations.itemPiles.reimportRolltables, {
       name: 'Forien.Armoury.Settings.ItemPiles.RolltablesImport',
       hint: 'Forien.Armoury.Settings.ItemPiles.RolltablesImportHint',
       scope: 'world',
@@ -39,15 +40,15 @@ export default class ItemPiles {
       onChange: async (value) =>
       {
         if (value) {
-          self.#importRollTables();
-          game.settings.set('forien-armoury', 'itempiles.rolltablesImport', false);
+          await self.#importRollTables();
+          game.settings.set(constants.moduleId, settings.integrations.itemPiles.reimportRolltables, false);
         }
       }
     });
   }
 
   initialize() {
-    let imported = game.settings.get('forien-armoury', 'itempiles.rolltablesImported')
+    let imported = game.settings.get(constants.moduleId, settings.integrations.itemPiles.rolltablesImported)
     if (imported === false)
       this.#importRollTables();
   }
@@ -234,7 +235,7 @@ export default class ItemPiles {
 
   async #createFolder() {
     debugger;
-    let folder = game.folders.find(f => f.type === "RollTable" && f.getFlag('forien-armoury', 'isImportFolder'));
+    let folder = game.folders.find(f => f.type === "RollTable" && f.getFlag(constants.moduleId, flags.integrations.itemPiles.isImportFolder));
     if (folder) {
       let rollTables = folder.contents;
       rollTables = rollTables.concat(folder.getSubfolders(true).reduce((a, f) => a.concat(f.contents), []));
@@ -284,7 +285,8 @@ export default class ItemPiles {
       entriesToRemove.forEach(key => rollTable.results.delete(key));
     }
     await RollTable.updateDocuments(rollTables);
-    game.settings.set('forien-armoury', 'itempiles.rolltablesImported', true);
-    return folder.setFlag('forien-armoury', 'isImportFolder', true)
+    game.settings.set(constants.moduleId, settings.integrations.itemPiles.rolltablesImported, true);
+
+    return folder.setFlag(constants.moduleId, flags.integrations.itemPiles.isImportFolder, true)
   }
 }

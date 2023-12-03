@@ -1,10 +1,11 @@
-import Utility from "./Utility.mjs";
+import Utility from "./utility/Utility.mjs";
 import ItemRepair from "./ItemRepair.mjs";
 import TemporaryRunes from "./Runes.mjs";
 import ArrowReclamation from "./ArrowReclamation.mjs";
 import Settings from "./Settings.mjs";
 import Integrations from "./Integrations.mjs";
 import CheckCareers from "./CheckCareers.mjs";
+import {constants, settings} from "./constants.mjs";
 
 export default class ForienArmoury {
   /**
@@ -37,8 +38,6 @@ export default class ForienArmoury {
   #settings;
 
   constructor() {
-    Utility.init('forien-armoury',"Forien's Armoury");
-
     this.#initializeModules();
     this.#bindHooks();
     this.#preloadTemplates();
@@ -66,11 +65,11 @@ export default class ForienArmoury {
   #bindHooks() {
     Hooks.once('ready', () => {
       if (game.modules.get("socketlib")?.active) {
-        this.socket = socketlib.registerModule('forien-armoury');
+        this.socket = socketlib.registerModule(constants.moduleId);
         this.arrowReclamation.registerSockets(this.socket);
       }
 
-      if (game.settings.get('forien-armoury','module.initialized') === false) {
+      if (game.settings.get(constants.moduleId, settings.initialized) === false) {
         this.#initialConfig()
       }
     });
@@ -86,18 +85,13 @@ export default class ForienArmoury {
   /**
    * Preloads templates used by the modules.
    */
-  async #preloadTemplates() {
-      Utility.notify("Preloading Templates.", {consoleOnly: true})
+  #preloadTemplates() {
       let itemRepairTemplates = this.itemRepair.getTemplates();
       let arrowReclamationTemplates = this.arrowReclamation.getTemplates();
       let checkCareersTemplates = this.checkCareers.templates;
       let templates = [...itemRepairTemplates, ...arrowReclamationTemplates, ...checkCareersTemplates];
 
-      templates = templates.map(Utility.getTemplate);
-
-      loadTemplates(templates).then(() => {
-        Utility.notify("Templates preloaded.", {consoleOnly: true})
-      });
+      Utility.preloadTemplates(templates);
   }
 
   /**

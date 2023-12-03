@@ -1,4 +1,5 @@
-import Utility from "./Utility.mjs";
+import Utility from "./utility/Utility.mjs";
+import {constants, flags, settings} from "./constants.mjs";
 
 /**
  * ArrowReclamation class is mostly repurposed code from the legacy version of Forien's Armoury module
@@ -46,9 +47,9 @@ export default class ArrowReclamation {
    * @returns string|null
    */
   #getAmmoType(weapon, _ammo) {
-    let allowArrows = game.settings.get('forien-armoury', 'arrowReclamation.EnableArrows');
-    let allowBolts = game.settings.get('forien-armoury', 'arrowReclamation.EnableBolts');
-    let allowBullets = game.settings.get('forien-armoury', 'arrowReclamation.EnableBullets');
+    let allowArrows = game.settings.get(constants.moduleId, settings.arrowReclamation.enableArrows);
+    let allowBolts = game.settings.get(constants.moduleId, settings.arrowReclamation.enableBolts);
+    let allowBullets = game.settings.get(constants.moduleId, settings.arrowReclamation.enableBullets);
     let allowed = null;
     let type = null;
 
@@ -95,7 +96,7 @@ export default class ArrowReclamation {
     let percentage = (new Roll(formula).roll({async: false}).total <= percentageTarget);
     let sturdyRoll = (new Roll("1d100").roll({async: false}).total <= percentageTarget);
 
-    switch (game.settings.get("forien-armoury", "arrowReclamation.Rule")) {
+    switch (game.settings.get(constants.moduleId, settings.arrowReclamation.rule)) {
       case 'success':
         if (sturdy) recovered = even; else recovered = even && success;
         if (frail && recovered) recovered = sturdyRoll;
@@ -140,7 +141,7 @@ export default class ArrowReclamation {
    */
   checkRollWeaponTest(roll, _cardOptions) {
     // if feature not enabled, do nothing
-    if (!game.settings.get("forien-armoury", "arrowReclamation.Enable"))
+    if (!game.settings.get(constants.moduleId, settings.arrowReclamation.enable))
       return;
 
     // if there is no ammo, do nothing
@@ -151,7 +152,7 @@ export default class ArrowReclamation {
     let actorId = roll.actor._id;
     let recovered = false;
     let message = ``;
-    let percentageTarget = game.settings.get('forien-armoury', 'arrowReclamation.Percentage');
+    let percentageTarget = game.settings.get(constants.moduleId, settings.arrowReclamation.percentage);
     let ammo = weapon.ammo;
     // let ammoQualities = ammo.system.qualities;
 
@@ -194,7 +195,7 @@ export default class ArrowReclamation {
    */
   addAmmoToReplenish(actorId, ammoId, userId) {
     // retrieve existing data or initialize it
-    let ammoReplenish = game.combat.getFlag('forien-armoury', 'ammoReplenish') || {};
+    let ammoReplenish = game.combat.getFlag(constants.moduleId, flags.ammoReplenish) || {};
     let actorData = ammoReplenish[actorId] || [];
     let ammoData = actorData.find(a => a._id === ammoId);
 
@@ -211,7 +212,7 @@ export default class ArrowReclamation {
     ammoReplenish[actorId] = actorData;
 
     // set flag with updated data
-    game.combat.setFlag('forien-armoury', 'ammoReplenish', ammoReplenish);
+    game.combat.setFlag(constants.moduleId, flags.ammoReplenish, ammoReplenish);
   }
 
   /**
@@ -244,7 +245,7 @@ export default class ArrowReclamation {
   processEndOfCombat(combat) {
     if (!game.user.isGM) return;
 
-    let ammoReplenish = combat.getFlag('forien-armoury', 'ammoReplenish');
+    let ammoReplenish = combat.getFlag(constants.moduleId, flags.ammoReplenish);
 
     for (let actorId in ammoReplenish) {
       if (Array.isArray(ammoReplenish[actorId])) {

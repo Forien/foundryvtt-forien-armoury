@@ -1,3 +1,5 @@
+import {constants, settings} from "./constants.mjs";
+
 export default class Settings {
 
   /**
@@ -5,7 +7,7 @@ export default class Settings {
    */
   registerSettings() {
     // Add enable/disable setting for temporary runes damaging items
-    game.settings.register('forien-armoury', 'runes.damageEnable', {
+    game.settings.register(constants.moduleId, settings.runes.enableDamage, {
       name: 'Forien.Armoury.Settings.Runes.Enable',
       hint: 'Forien.Armoury.Settings.Runes.EnableHint',
       scope: 'world',
@@ -15,7 +17,7 @@ export default class Settings {
     });
 
     // Add enable/disable setting for arrow reclamation feature
-    game.settings.register('forien-armoury', 'arrowReclamation.Enable', {
+    game.settings.register(constants.moduleId, settings.arrowReclamation.enable, {
       name: 'Forien.Armoury.Settings.ArrowReclamation.Enable',
       hint: 'Forien.Armoury.Settings.ArrowReclamation.EnableHint',
       scope: 'world',
@@ -25,7 +27,7 @@ export default class Settings {
     });
 
     // Add enable/disable recovery of Arrows
-    game.settings.register('forien-armoury', 'arrowReclamation.EnableArrows', {
+    game.settings.register(constants.moduleId, settings.arrowReclamation.enableArrows, {
       name: 'Forien.Armoury.Settings.ArrowReclamation.EnableArrows',
       hint: 'Forien.Armoury.Settings.ArrowReclamation.EnableArrowsHint',
       scope: 'world',
@@ -34,7 +36,7 @@ export default class Settings {
       type: Boolean
     });
     // Add enable/disable recovery of Bolts
-    game.settings.register('forien-armoury', 'arrowReclamation.EnableBolts', {
+    game.settings.register(constants.moduleId, settings.arrowReclamation.enableBolts, {
       name: 'Forien.Armoury.Settings.ArrowReclamation.EnableBolts',
       hint: 'Forien.Armoury.Settings.ArrowReclamation.EnableBoltsHint',
       scope: 'world',
@@ -43,7 +45,7 @@ export default class Settings {
       type: Boolean
     });
     // Add enable/disable recovery of Bullets
-    game.settings.register('forien-armoury', 'arrowReclamation.EnableBullets', {
+    game.settings.register(constants.moduleId, settings.arrowReclamation.enableBullets, {
       name: 'Forien.Armoury.Settings.ArrowReclamation.EnableBullets',
       hint: 'Forien.Armoury.Settings.ArrowReclamation.EnableBulletsHint',
       scope: 'world',
@@ -53,7 +55,7 @@ export default class Settings {
     });
 
     // Add setting that allows for different rules of arrow reclamation
-    game.settings.register('forien-armoury', 'arrowReclamation.Rule', {
+    game.settings.register(constants.moduleId, settings.arrowReclamation.rule, {
       name: 'Forien.Armoury.Settings.ArrowReclamation.Rule',
       hint: 'Forien.Armoury.Settings.ArrowReclamation.RuleHint',
       scope: 'world',
@@ -73,7 +75,7 @@ export default class Settings {
     });
 
     // Add Percentage setting for Percentage rules
-    game.settings.register('forien-armoury', 'arrowReclamation.Percentage', {
+    game.settings.register(constants.moduleId, settings.arrowReclamation.percentage, {
       name: 'Forien.Armoury.Settings.ArrowReclamation.Percentage',
       hint: 'Forien.Armoury.Settings.ArrowReclamation.PercentageHint',
       scope: 'world',
@@ -82,8 +84,7 @@ export default class Settings {
       type: Number
     });
 
-    // Add Percentage setting for Percentage rules
-    game.settings.register('forien-armoury', 'module.initialized', {
+    game.settings.register(constants.moduleId, settings.initialized, {
       scope: 'world',
       config: false,
       default: false,
