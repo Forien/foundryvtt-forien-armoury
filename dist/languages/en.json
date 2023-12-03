@@ -176,6 +176,11 @@
         "Bullet": "Bullet",
 
         "Properties": {
+          "Blinding": {
+            "Label": "Blinding",
+            "Description": "A Blinding X weapon inflicts X @Condition[Blinded] Conditions to enemy hit.",
+            "Message": "Blinding weapon was used! <strong>{rating} Blinded Conditions received.</strong>"
+          },
           "Incendiary": {
             "Label": "Incendiary",
             "Description": "An Incendiary weapon inflicts one @Condition[Ablaze] Condition on a critical hit.",
