@@ -15,6 +15,8 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
 
 ### Notable changes in v1.3.0
 * Reintroduced the Slashing, Recoverable and Unrecoverable properties for weapons and ammunition
+* Introduced new Incendiary and Blinding qualities
+* Unbreakable quality now ensures ammunition will be recovered
 * Added Combat Fatigue feature (implementing `Getting Tired` optional rule from CRB p.168)
 * Added macro for testing Advanced Skills with result limits
 * Minor fixes to items (improved gunpowder, powder horns)
