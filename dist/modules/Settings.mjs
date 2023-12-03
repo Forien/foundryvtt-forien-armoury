@@ -16,6 +16,26 @@ export default class Settings {
       type: Boolean
     });
 
+    // Add enable/disable setting for combat fatigue feature
+    game.settings.register(constants.moduleId, settings.combatFatigue.enable, {
+      name: 'Forien.Armoury.Settings.CombatFatigue.Enable',
+      hint: 'Forien.Armoury.Settings.CombatFatigue.EnableHint',
+      scope: 'world',
+      config: true,
+      default: false,
+      type: Boolean
+    });
+
+    // Add enable/disable setting for NPC combat fatigue
+    game.settings.register(constants.moduleId, settings.combatFatigue.enableNPC, {
+      name: 'Forien.Armoury.Settings.CombatFatigue.EnableNPC',
+      hint: 'Forien.Armoury.Settings.CombatFatigue.EnableNPCHint',
+      scope: 'world',
+      config: true,
+      default: true,
+      type: Boolean
+    });
+
     // Add enable/disable setting for arrow reclamation feature
     game.settings.register(constants.moduleId, settings.arrowReclamation.enable, {
       name: 'Forien.Armoury.Settings.ArrowReclamation.Enable',

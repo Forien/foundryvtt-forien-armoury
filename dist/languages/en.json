@@ -12,6 +12,11 @@
         "AvailableSpells": "Available spells"
       },
 
+      "CombatFatigue": {
+        "EnduranceSkillName": "Endurance",
+        "CombatFatigueTest": " — Combat Fatigue"
+      },
+
       "ItemRepair": {
         "MustControlActor": "Must control the character you want to repair items for.",
         "Repaired": "{name} has been repaired. Removed {repaired} damage from the item.",
@@ -239,6 +244,13 @@
 
           "Percentage": "Target percentage",
           "PercentageHint": "Set target percentage for rolling with certain Rules. Roll will succeed if d100 rolls less or equal to Target"
+        },
+
+        "CombatFatigue": {
+          "Enable": "Enable Combat Fatigue",
+          "EnableHint": "When enabled, combatants will have to pass Endurance Test after TB rounds, or gain Fatigue",
+          "EnableNPC": "NPC Combat Fatigue",
+          "EnableNPCHint": "Should NPCs follow the rules of Combat Fatigue (if enabled)?"
         },
 
         "ATL": {

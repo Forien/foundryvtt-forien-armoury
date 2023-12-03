@@ -8,7 +8,9 @@ const defaults = {}
 
 const flags = {
   ammoReplenish: 'ammoReplenish',
-  roundsInFight: 'roundsInFight',
+  combatFatigue: {
+    roundsBeforeTest: 'roundsBeforeTest'
+  },
   itemRepair: {
     type: 'type',
     subtype: 'subtype'
@@ -21,9 +23,6 @@ const flags = {
 }
 
 const settings = {
-  runes: {
-    enableDamage: 'runes.damageEnable'
-  },
   arrowReclamation: {
     enable: 'arrowReclamation.Enable',
     enableArrows: 'arrowReclamation.EnableArrows',
@@ -31,6 +30,10 @@ const settings = {
     enableBullets: 'arrowReclamation.EnableBullets',
     rule: 'arrowReclamation.Rule',
     percentage: 'arrowReclamation.Percentage'
+  },
+  combatFatigue: {
+    enable: 'combatFatigue.enable',
+    enableNPC: 'combatFatigue.enableNPC'
   },
   initialized: 'module.initialized',
   integrations: {
@@ -42,6 +45,9 @@ const settings = {
       rolltablesImported: 'itempiles.rolltablesImported',
       reimportRolltables: 'itempiles.rolltablesImport',
     }
+  },
+  runes: {
+    enableDamage: 'runes.damageEnable'
   }
 }
 

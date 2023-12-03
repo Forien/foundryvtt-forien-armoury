@@ -36,4 +36,8 @@ export default class Utility {
       Utility.notify("Templates preloaded.", {consoleOnly: true})
     });
   }
+
+  static getSetting(setting) {
+    return game.settings.get(constants.moduleId, setting);
+  }
 }

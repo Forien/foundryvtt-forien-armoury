@@ -6,6 +6,7 @@ import Settings from "./Settings.mjs";
 import Integrations from "./Integrations.mjs";
 import CheckCareers from "./CheckCareers.mjs";
 import {constants, settings} from "./constants.mjs";
+import CombatFatigue from "./CombatFatigue.mjs";
 
 export default class ForienArmoury {
   /**
@@ -53,6 +54,7 @@ export default class ForienArmoury {
   #initializeModules() {
     this.runes = new TemporaryRunes();
     this.itemRepair = new ItemRepair();
+    this.combatFatigue = new CombatFatigue();
     this.arrowReclamation = new ArrowReclamation();
     this.checkCareers = CheckCareers;
     this.integrations = new Integrations();
@@ -76,6 +78,7 @@ export default class ForienArmoury {
 
     this.runes.bindHooks();
     this.itemRepair.bindHooks();
+    this.combatFatigue.bindHooks();
     this.arrowReclamation.bindHooks();
     this.integrations.bindHooks();
 
