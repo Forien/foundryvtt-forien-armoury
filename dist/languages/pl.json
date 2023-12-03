@@ -2,7 +2,7 @@
   "Forien": {
     "Armoury": {
       "Macros": {
-        "MustControlActor": "Musisz być właścicieleme Aktora, dla którego tworzysz składniki magiczne.",
+        "MustControlActor": "Musisz być kontrolować Aktora, dla którego chcesz uruchomić ten skrypt.",
         "SelectSpell": "Wybierz zaklęcie, dla którego stworzyć składniki",
         "Generate": "Stwórz",
         "Cancel": "Przerwij",

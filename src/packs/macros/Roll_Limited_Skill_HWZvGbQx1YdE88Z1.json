@@ -1,0 +1,25 @@
+{
+  "name": "Roll Limited Skill",
+  "type": "script",
+  "_id": "HWZvGbQx1YdE88Z1",
+  "author": "ZJyAmf2sKocHG1ud",
+  "img": "icons/skills/trades/gaming-gambling-dice-gray.webp",
+  "scope": "global",
+  "command": "/**\n * Requested by Mrak\n * Implements the \"Options: Advances and Test Results\" table from https://lawhammer.blogspot.com/2019/12/view-to-skill.html\n */\n\nif (!actor)\n  return ui.notifications.notify(game.i18n.localize('Forien.Armoury.Macros.MustControlActor'), 'warning');\n\nconst skills = actor.items.filter(i => i.type === 'skill');\n\nlet options = \"\";\n\nfor (const skill of skills) {\n  options += `<option value=\"${skill.uuid}\">${skill.name} (${skill.advances.value})</option>`;\n}\n\nDialog.wait({\n  title: game.i18n.localize('Forien.Armoury.Macros.SelectSkill'),\n  content: `<form>\n              <div class=\"form-group\">\n                <label>${game.i18n.localize('Forien.Armoury.Macros.AvailableSkills')}</label> \n\t\t\t\t<select name=\"skill-id\" id=\"skill-id\">\n\t\t\t\t   ${options}\n\t\t\t\t</select>\n              </div>\n          </form>`,\n  buttons: {\n    no: {\n      icon: \"<i class='fas fa-times'></i>\",\n      label: game.i18n.localize('Forien.Armoury.Macros.Cancel')\n    },\n    yes: {\n      icon: \"<i class='fas fa-check'></i>\",\n      label: game.i18n.localize('Forien.Armoury.Macros.Roll'),\n      callback: async (html) => {\n        const skillUuid = html.find(\"#skill-id\").val();\n        const skill = fromUuidSync(skillUuid);\n        const advances = skill.advances.value;\n        const test = await actor.setupSkill(skill);\n        await test.roll();\n        const characteristicToUse = test.data.result.options.characteristicToUse;\n        const characteristicBonus = actor.characteristics[characteristicToUse]?.bonus;\n        const difficulty = test.data.result.testDifficulty;\n        const SL = test.data.result.SL;\n\n        if (advances < 6)\n          test.data.preData.SL = SL > 0 ? 0 : SL;\n        else if (advances < 11)\n          test.data.preData.SL = SL > characteristicBonus ? characteristicBonus : SL;\n        else if (advances < 21)\n          test.data.preData.SL = SL;\n        else if (advances < 31 && difficulty >= 20)\n          test.data.preData.SL = SL < 1 ? 1 : SL;\n        else if (difficulty >= 20)\n          test.data.preData.SL = SL < characteristicBonus ? characteristicBonus : SL;\n\n        await test.computeResult();\n        await test.renderRollCard()\n      }\n    }\n  },\n  default: \"yes\"\n})",
+  "folder": "K7bIr7HUorfHR7Xh",
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1701590985291,
+    "modifiedTime": 1701591211178,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!macros!HWZvGbQx1YdE88Z1"
+}

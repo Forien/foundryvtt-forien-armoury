@@ -63,7 +63,7 @@ export default class ArrowReclamation {
       type = 'Bullet';
     }
 
-    if (allowed || recoverable) return type;
+    if (allowed) return type;
 
     return null;
   }

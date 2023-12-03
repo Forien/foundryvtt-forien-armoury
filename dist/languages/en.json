@@ -2,10 +2,12 @@
   "Forien": {
     "Armoury": {
       "Macros": {
-        "MustControlActor": "Must control the character you want to generate ingredients for.",
+        "MustControlActor": "Must control the character you want to use this macro for.",
+        "AvailableSkills": "Select skill to roll with limited results",
         "SelectSpell": "Select spell to create ingredient",
         "Generate": "Generate",
         "Cancel": "Cancel",
+        "Roll": "Roll",
         "IngredientFor": "Ingredient for",
         "AvailableSpells": "Available spells"
       },

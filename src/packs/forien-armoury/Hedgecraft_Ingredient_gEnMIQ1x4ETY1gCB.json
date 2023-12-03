@@ -6,7 +6,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>@UUID[JournalEntry.YBVrpUHEjohB1H4f.JournalEntryPage.BU7yhLmMdEyvbfkR#ingredients]{Ingredients}</p><p><span style=\"font-family: var( --actor-input-font-family)\"><em>Hedgecraft ingredients can be foraged using @UUID[JournalEntry.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Lore} (Herbalism). Upon successful foraging roll, you receive 1 + SL ingredients.</em></span></p><p><span style=\"font-family: var( --actor-input-font-family)\"><strong>You cannot cast any @UUID[Compendium.wfrp4e-core.journal-entries.JournalEntry.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#the-lore-of-hedgecraft]{The Lore of Hedgecraft} spell without an ingredient.</strong></span></p>"
+      "value": "<p>@UUID[JournalEntry.YBVrpUHEjohB1H4f.JournalEntryPage.BU7yhLmMdEyvbfkR#ingredients]{Ingredients}</p><p><span style=\"font-family: var( --actor-input-font-family)\"><em>Hedgecraft ingredients can be foraged using @UUID[JournalEntry.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Lore} (Herbalism). Upon successful foraging roll, you receive 1 + SL ingredients.</em></span></p><p><span style=\"font-family: var( --actor-input-font-family)\"><strong>You cannot cast any @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#the-lore-of-hedgecraft]{The Lore of Hedgecraft} spell without an ingredient.</strong></span></p>"
     },
     "gmdescription": {
       "type": "String",

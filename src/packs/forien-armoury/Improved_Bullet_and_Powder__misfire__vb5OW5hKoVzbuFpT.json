@@ -23,7 +23,7 @@
       "effectApplication": "actor",
       "hide": false,
       "preventDuplicateEffects": false,
-      "script": "let isFumble = \"Fumble\" === args.test.isFumble;\nlet roll = isFumble && args.test.result.roll % 2 === 0\nlet thisAmmo = args.test.weapon.ammo.?_id === this.item.id \n\nif (isFumble && isMisfire thisAmmo) {\n  args.test.data.result.other.push(\"<p>You can make a <strong>Challenging (+0) <em>Ranged (Blackpowder or Engineering) Test</em></strong> to ignore the effects of misfire!</p>\");\n}"
+      "script": "let isFumble = \"Fumble\" === args.test.isFumble;\nlet isMisfire = isFumble && args.test.result.roll % 2 === 0\nlet thisAmmo = args.test.weapon.ammo?._id === this.item.id \n\nif (isMisfire && thisAmmo) {\n  args.test.data.result.other.push(\"<p>You can make a <strong>Challenging (+0) <em>Ranged (Blackpowder or Engineering) Test</em></strong> to ignore the effects of misfire!</p>\");\n}"
     }
   },
   "tint": null,
