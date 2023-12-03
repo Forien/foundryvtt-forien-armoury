@@ -6,7 +6,7 @@
 if (!actor)
   return ui.notifications.notify(game.i18n.localize('Forien.Armoury.Macros.MustControlActor'), 'warning');
 
-const skills = actor.items.filter(i => i.type === 'skill');
+const skills = actor.items.filter(i => i.type === 'skill' && i.system.advanced.value === 'adv');
 
 let options = "";
 
