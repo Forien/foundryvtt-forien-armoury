@@ -84,7 +84,9 @@ export default class ArrowReclamation {
    *
    * @returns boolean
    */
-  #isProjectileSaved(roll, percentageTarget, _ammo) {
+  #isProjectileSaved(roll, percentageTarget, ammo) {
+    let unbreakable = ammo.properties.qualities.unbreakable || false;
+    if (unbreakable) return true;
     let crit = (roll.isCritical !== undefined || roll.isFumble !== undefined);
     let even = roll.result.roll % 2 === 0;
     let success = roll.result.roll <= roll.result.target;
