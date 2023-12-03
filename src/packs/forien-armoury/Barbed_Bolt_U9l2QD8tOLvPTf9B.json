@@ -1,9 +1,9 @@
 {
-  "folder": "kTv9pr3I1AeRI4uH",
+  "folder": "emYQ7gLjejxCTreO",
   "name": "Barbed Bolt",
   "type": "ammunition",
   "_id": "U9l2QD8tOLvPTf9B",
-  "img": "icons/weapons/ammunition/arrow-broadhead.webp",
+  "img": "icons/weapons/ammunition/arrow-broadhead-green.webp",
   "system": {
     "description": {
       "type": "String",
@@ -84,7 +84,7 @@
     }
   },
   "effects": [],
-  "sort": 0,
+  "sort": 100000,
   "ownership": {
     "default": 0,
     "aDepqlKkeOa13DWo": 3
@@ -92,11 +92,11 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.302",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
     "createdTime": 1687445963744,
-    "modifiedTime": 1687446325420,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1701640046787,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_key": "!items!U9l2QD8tOLvPTf9B"
 }

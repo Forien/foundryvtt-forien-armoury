@@ -1,9 +1,9 @@
 {
-  "folder": "kTv9pr3I1AeRI4uH",
+  "folder": "emYQ7gLjejxCTreO",
   "name": "Bodkin Bolt",
   "type": "ammunition",
   "_id": "jCZpu8nn4FrKhMD0",
-  "img": "icons/weapons/ammunition/arrow-broadhead-green.webp",
+  "img": "icons/weapons/ammunition/arrow-broadhead-white.webp",
   "system": {
     "description": {
       "type": "String",
@@ -84,7 +84,7 @@
     }
   },
   "effects": [],
-  "sort": 0,
+  "sort": 200000,
   "ownership": {
     "default": 0,
     "aDepqlKkeOa13DWo": 3
@@ -92,11 +92,11 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.302",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
     "createdTime": 1687446071090,
-    "modifiedTime": 1687446333072,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1701640047434,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_key": "!items!jCZpu8nn4FrKhMD0"
 }

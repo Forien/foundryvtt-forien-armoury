@@ -80,7 +80,7 @@ export default class ArrowReclamation {
    *
    * @param roll
    * @param percentageTarget
-   * @param _ammo
+   * @param ammo
    *
    * @returns boolean
    */

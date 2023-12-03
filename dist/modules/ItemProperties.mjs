@@ -52,12 +52,7 @@ export default class ItemProperties {
     const {
       actor,
       opposedTest,
-      totalWoundLoss,
       AP,
-      damageType,
-      updateMsg,
-      messageElements,
-      attacker,
       extraMessages
     } = args;
 

@@ -5,7 +5,7 @@
   "_id": "37V1hXEX2RS2JJo7",
   "title": {
     "show": true,
-    "level": 1
+    "level": 2
   },
   "image": {},
   "text": {
@@ -25,10 +25,10 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
     "createdTime": 1687908544332,
-    "modifiedTime": 1689007606088,
+    "modifiedTime": 1701640992742,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_key": "!journal.pages!u2f4n9KXYBmBvZw3.37V1hXEX2RS2JJo7"

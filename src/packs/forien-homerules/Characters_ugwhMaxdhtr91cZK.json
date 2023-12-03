@@ -1,5 +1,5 @@
 {
-  "sort": 500000,
+  "sort": 125000,
   "name": "Characters",
   "type": "text",
   "_id": "ugwhMaxdhtr91cZK",
@@ -25,11 +25,11 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
     "createdTime": 1688211280961,
-    "modifiedTime": 1688213933547,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1701640960623,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_key": "!journal.pages!u2f4n9KXYBmBvZw3.ugwhMaxdhtr91cZK"
 }

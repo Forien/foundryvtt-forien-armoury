@@ -95,7 +95,12 @@
     },
     "qualities": {
       "label": "Qualities",
-      "value": []
+      "value": [
+        {
+          "name": "incendiary",
+          "value": 3
+        }
+      ]
     },
     "flaws": {
       "label": "Flaws",
@@ -122,8 +127,7 @@
     }
   },
   "effects": [
-    "IBHY44zrCrO0cpgD",
-    "yZcrvnNxKNjQ9WZ8"
+    "IBHY44zrCrO0cpgD"
   ],
   "folder": "UrA89QPP0urkYvZk",
   "flags": {
@@ -131,10 +135,10 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.6.0",
-    "coreVersion": "11.305",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
     "createdTime": 1688215098490,
-    "modifiedTime": 1690135154374,
+    "modifiedTime": 1701639691260,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "84hccJzDfkfw3trc",

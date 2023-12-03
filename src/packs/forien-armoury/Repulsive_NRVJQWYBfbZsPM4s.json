@@ -1,0 +1,63 @@
+{
+  "folder": "PQAanEQoiIOxQp1r",
+  "name": "Repulsive",
+  "type": "trait",
+  "_id": "NRVJQWYBfbZsPM4s",
+  "img": "icons/magic/unholy/strike-body-life-soul-green.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>This character is repulsive, for whatever reason. They may be drenched in sewage, not bathed in few months, or be avoided by others for literally any other reason.</p><p>Their Fellowship is halved.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    "ZW9h1JGyrnEGPzQW"
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1701640184018,
+    "modifiedTime": 1701640414739,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!items!NRVJQWYBfbZsPM4s"
+}

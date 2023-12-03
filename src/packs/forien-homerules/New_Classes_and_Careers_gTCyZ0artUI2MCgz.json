@@ -5,7 +5,7 @@
   "_id": "gTCyZ0artUI2MCgz",
   "title": {
     "show": true,
-    "level": 1
+    "level": 2
   },
   "image": {},
   "text": {
@@ -26,10 +26,10 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
     "createdTime": 1688398041909,
-    "modifiedTime": 1689018015387,
+    "modifiedTime": 1701640973788,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_key": "!journal.pages!u2f4n9KXYBmBvZw3.gTCyZ0artUI2MCgz"

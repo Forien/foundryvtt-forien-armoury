@@ -1,11 +1,11 @@
 {
-  "sort": 700000,
+  "sort": 250000,
   "name": "New Races",
   "type": "text",
   "_id": "VWlgPsg31911DDLQ",
   "title": {
     "show": true,
-    "level": 1
+    "level": 2
   },
   "image": {},
   "text": {
@@ -25,10 +25,10 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
     "createdTime": 1688291418377,
-    "modifiedTime": 1689007567751,
+    "modifiedTime": 1701640969552,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_key": "!journal.pages!u2f4n9KXYBmBvZw3.VWlgPsg31911DDLQ"

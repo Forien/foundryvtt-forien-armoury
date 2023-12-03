@@ -1,0 +1,159 @@
+{
+  "folder": "UrA89QPP0urkYvZk",
+  "name": "Light Bomb",
+  "type": "weapon",
+  "_id": "gkiR6r3tWAGQUOpf",
+  "img": "icons/weapons/thrown/dynamite-red.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Throwable contraption filled with alchemical mixture (magnesium and improved blackpowder) that on detonation produces cloud of blinding light.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "12",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "exotic"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "0"
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "SBx2"
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": "ranged"
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": false
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": "none"
+    },
+    "currentAmmo": {
+      "type": "Number",
+      "value": 0
+    },
+    "consumesAmmo": {
+      "value": true
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "throwing"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "blast",
+          "value": 2
+        },
+        {
+          "name": "blinding",
+          "value": 3
+        }
+      ]
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": [
+        {
+          "name": "dangerous",
+          "value": null
+        },
+        {
+          "name": "undamaging",
+          "value": null
+        },
+        {
+          "name": "unrecoverable",
+          "value": null
+        }
+      ]
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "equipped": false,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1701628225344,
+    "modifiedTime": 1701639952068,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!items!gkiR6r3tWAGQUOpf"
+}

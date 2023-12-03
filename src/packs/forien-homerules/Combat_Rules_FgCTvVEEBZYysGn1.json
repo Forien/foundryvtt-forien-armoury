@@ -10,7 +10,7 @@
   "image": {},
   "text": {
     "format": 1,
-    "content": "<h2>New Action: Hold</h2><p style=\"text-align:justify\">During your @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#taking-your-turn]{turn}, you may choose to hold your @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#action]{action}. If you do so, you may @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#move]{Move} as normal, but may not take an Action this Round. Instead, you may state what you intend to do when a certain condition is met. So, for example, you may state that you intend to fire your Crossbow at the first Cultist to walk into the room, use your Intimidate Skill on the next bandit to move, or that you intend to cast the Light spell as soon as the room is plunged into darkness. When using this action, you effectively interrupt your opponent's turn, and your Action is resolved before any other. If there is a conflict between several hold actions, resolve them in the usual initiative order. <strong>Due to the quick and hurried nature of your Action, any Skill Tests are made at a -10 penalty.</strong></p><p></p><h2>Point Blank Range</h2><p>Officially, a <strong>PBR (Point Blank Range)</strong> for Ranged weapons is up to <strong>10% of Weapon's listed Range</strong>. The problem arises when weapons like Longbow, Hochland Long Rifle or an Elf Bow are considered. They would have PBR up to 10 or 15 yards/meters! That's 5-7 squares! It's way too much for these weapons. </p><p><strong>Therefore, all Ranged Weapons should be considered to have PBR up to 4 yards or 10% of their range, whichever is lower.</strong> </p><p>For that, use of @UUID[Compendium.forien-armoury.forien-armoury.Item.95teaIzjZcIDHTFn]{Point Blank Rule} trait on every character and NPC is encouraged.</p>",
+    "content": "<h2>New Action: Hold</h2><p style=\"text-align:justify\">During your @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#taking-your-turn]{turn}, you may choose to hold your @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#action]{action}. If you do so, you may @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#move]{Move} as normal, but may not take an Action this Round. Instead, you may state what you intend to do when a certain condition is met. So, for example, you may state that you intend to fire your Crossbow at the first Cultist to walk into the room, use your Intimidate Skill on the next bandit to move, or that you intend to cast the Light spell as soon as the room is plunged into darkness. When using this action, you effectively interrupt your opponent's turn, and your Action is resolved before any other. If there is a conflict between several hold actions, resolve them in the usual initiative order. <strong>Due to the quick and hurried nature of your Action, any Skill Tests are made at a -10 penalty.</strong></p><p></p><h2>Point Blank Range</h2><p>Officially, a <strong>PBR (Point Blank Range)</strong> for Ranged weapons is up to <strong>10% of Weapon's listed Range</strong>. The problem arises when weapons like Longbow, Hochland Long Rifle or an Elf Bow are considered. They would have PBR up to 10 or 15 yards/meters! That's 5-7 squares! It's way too much for these weapons.</p><p><strong>Therefore, all Ranged Weapons should be considered to have PBR up to 4 yards or 10% of their range, whichever is lower.</strong></p><p>For that, use of @UUID[Compendium.forien-armoury.forien-armoury.Item.95teaIzjZcIDHTFn]{Point Blank Rule} trait on every character and NPC is encouraged.</p>",
     "markdown": ""
   },
   "video": {
@@ -26,10 +26,10 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
     "createdTime": 1688210301641,
-    "modifiedTime": 1689007624899,
+    "modifiedTime": 1701640899771,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_key": "!journal.pages!u2f4n9KXYBmBvZw3.FgCTvVEEBZYysGn1"
