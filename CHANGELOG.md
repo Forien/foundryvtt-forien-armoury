@@ -1,6 +1,13 @@
 # Changelog
 
 ## v1.X.X
+
+### v1.3.0
+* Added Combat Fatigue feature (implementing Getting Tired from CRB p.168)
+* Added macro for testing Advanced Skills with result limits
+* Minor fixes to items (improved gunpowder, powder horns)
+* Fixed error with Arrow Reclamation
+
 ### v1.2.1
 * Fixed remaining item links in compendiums
 * Fixed ReImport not deleting old stuff
