@@ -15,6 +15,7 @@ export default class ItemProperties {
     config.weaponQualities = {
       slashing: 'Forien.Armoury.Arrows.Properties.Slashing.Label',
       incendiary: 'Forien.Armoury.Arrows.Properties.Incendiary.Label',
+      poisonous: 'Forien.Armoury.Arrows.Properties.Poisonous.Label',
       blinding: 'Forien.Armoury.Arrows.Properties.Blinding.Label',
       recoverable: 'Forien.Armoury.Arrows.Properties.Recoverable.Label',
     };
@@ -26,7 +27,8 @@ export default class ItemProperties {
     config.propertyHasValue = {
       slashing: true,
       blinding: true,
-      incendiary: false,
+      poisonous: true,
+      incendiary: true,
       recoverable: false,
       unrecoverable: false,
     };
@@ -35,6 +37,7 @@ export default class ItemProperties {
       slashing: 'Forien.Armoury.Arrows.Properties.Slashing.Description',
       incendiary: 'Forien.Armoury.Arrows.Properties.Incendiary.Description',
       blinding: 'Forien.Armoury.Arrows.Properties.Blinding.Description',
+      poisonous: 'Forien.Armoury.Arrows.Properties.Poisonous.Description',
       recoverable: 'Forien.Armoury.Arrows.Properties.Recoverable.Description',
     };
 
@@ -58,9 +61,11 @@ export default class ItemProperties {
       extraMessages
     } = args;
 
+    console.log(args);
     this.#checkForSlashing(opposedTest, AP, actor, extraMessages);
     this.#checkForIncendiary(opposedTest, actor, extraMessages);
     this.#checkForBlinding(opposedTest, actor, extraMessages);
+    this.#checkForPoisonous(opposedTest, actor, extraMessages);
   }
 
   #checkForBlinding(opposedTest, actor, extraMessages) {
@@ -72,12 +77,23 @@ export default class ItemProperties {
   }
 
   #checkForIncendiary(opposedTest, actor, extraMessages) {
-    const incendiary = opposedTest.attackerTest.weapon?.properties.qualities.incendiary ?? null;
+    const incendiary = opposedTest.attackerTest.weapon?.properties.qualities.incendiary?.value ?? null;
     if (incendiary === null) return;
-    if (!opposedTest.attackerTest.result.critical) return;
+    const die = opposedTest.attackerTest.result.roll % 10;
+    if (die > incendiary) return;
 
     actor.addCondition("ablaze");
-    extraMessages.push(game.i18n.localize("Forien.Armoury.Arrows.Properties.Incendiary.Message"));
+    extraMessages.push(game.i18n.format("Forien.Armoury.Arrows.Properties.Incendiary.Message", {die, rating: incendiary}));
+  }
+
+  #checkForPoisonous(opposedTest, actor, extraMessages) {
+    const poisonous = opposedTest.attackerTest.weapon?.properties.qualities.poisonous?.value ?? null;
+    if (poisonous === null) return;
+    const sl = parseInt(opposedTest.attackerTest.result.SL);
+    if (sl > poisonous) return;
+
+    actor.addCondition("poisoned");
+    extraMessages.push(game.i18n.format("Forien.Armoury.Arrows.Properties.Poisonous.Message", {sl, rating: poisonous}));
   }
 
   #checkForSlashing(opposedTest, AP, actor, extraMessages) {

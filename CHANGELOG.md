@@ -4,10 +4,15 @@
 
 ### v1.3.0
 * Reintroduced the Slashing, Recoverable and Unrecoverable properties for weapons and ammunition
-* Introduced new Incendiary and Blinding qualities
+* Introduced new Incendiary, Poisonous and Blinding qualities
 * Unbreakable quality now ensures ammunition will be recovered
 * Added Combat Fatigue feature (implementing Getting Tired from CRB p.168)
+* Added new items
+  * Cutlass, Light Bomb, Cracker Bullet, Razor Bullet, Poisoned Arrows, Fire Arrows, Winged Arrows
+* Changed Torch (weapon) to use Incendiary quality instead of effect
+* Added Repulsive trait
 * Added macro for testing Advanced Skills with result limits
+* Updated the Journals with new information
 * Minor fixes to items (improved gunpowder, powder horns)
 * Fixed error with Arrow Reclamation
 

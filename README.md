@@ -14,13 +14,16 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
 
 
 ### Notable changes in v1.3.0
-* Reintroduced the Slashing, Recoverable and Unrecoverable properties for weapons and ammunition
-* Introduced new Incendiary and Blinding qualities
-* Unbreakable quality now ensures ammunition will be recovered
-* Added Combat Fatigue feature (implementing `Getting Tired` optional rule from CRB p.168)
-* Added macro for testing Advanced Skills with result limits
+* Reintroduced the **Slashing**, **Recoverable** and **Unrecoverable** properties for weapons and ammunition
+* Introduced new **Incendiary, Poisonous** and **Blinding** qualities
+* Added **Combat Fatigue feature** (implementing Getting Tired from CRB p.168)
+* Added **new items**
+  * Cutlass, Light Bomb, Cracker Bullet, Razor Bullet, Poisoned Arrows, Fire Arrows, Winged Arrows
+* Added Repulsive trait
+* Added new Macro for testing **Advanced Skills** with result limits
+* Updated the Journals with new information
 * Minor fixes to items (improved gunpowder, powder horns)
-* Fixed error with Arrow Reclamation
+* Several smaller changes and fixes, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
 
 ### Notable changes in v1.2.0
 * Updated links in Journals to fit the `WFRP4e Core 4.0.0` compendium structure
@@ -94,18 +97,21 @@ Module contains single Compendium pack containing over 80 entries (items and eff
 * Added 32 Runes implemented as working Active Effects
 * Added 1 new **Skill** (Runecraft)
 * Added 2 new **Talents** (Dawi Runes, Runebound Magic)
-* Added 1 new **Trait** (Point Blank Rule)
+* Added 2 new **Traits** (Point Blank Rule, Repulsive)
 * Added 11 new and rebalanced **Armour** items:
   * Added Gambesons as an alternative to Leather armour
   * Rebalanced Leather armour (is more expensive than Gambesons, but Durable)
   * Added Cuirass (plate torso armour)
   * Added Breastplate (covers front only)
-* Added 4 new **Ammunition** types:
-  * Barbed Bolt
-  * Bodkin Bolt
-  * Sharp Stick (Bolt)
+* Added 9 new **Ammunition** types:
+  * Barbed Bolt, Bodkin Bolt, Sharp Stick (Bolt)
+  * Fire Arrows, Poisoned Arrows, Winged Arrows
+  * Cracker Bullet, Razor Bullet
   * Improved Bullet and Powder
-* Added 5 new **Weapons**:
+* Added 8 new **Weapons**:
+  * Cutlass
+  * Light Bomb
+  * Old Bow
   * Pickaxe
   * Short Spear
   * Spear
