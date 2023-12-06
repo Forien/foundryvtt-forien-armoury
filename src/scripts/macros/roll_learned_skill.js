@@ -41,7 +41,7 @@ Dialog.wait({
         const characteristicToUse = test.data.result.options.characteristicToUse;
         const characteristicBonus = actor.characteristics[characteristicToUse]?.bonus;
         const difficulty = test.data.result.testDifficulty;
-        const SL = test.data.result.SL;
+        const SL = parseInt(test.data.result.SL);
 
         if (advances < 6)
           test.data.preData.SL = SL > 0 ? 0 : SL;
