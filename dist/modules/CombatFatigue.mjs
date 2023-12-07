@@ -3,25 +3,27 @@ import Utility from "./utility/Utility.mjs";
 
 export default class CombatFatigue {
   bindHooks() {
-    Hooks.on("combatRound", this.processCombatRound.bind(this));
+    Hooks.on("updateCombat", this.#processCombatTurn.bind(this));
   }
 
-  async processCombatRound(combat) {
+  async #processCombatTurn(combat, change, options, userId) {
+    if (change.turn === undefined) return;
     if (Utility.getSetting(settings.combatFatigue.enable) === false) return;
-    if (!combat.current || !combat.current.combatantId) return;
+    if (!combat.previous || !combat.previous.combatantId) return;
 
-    const currentCombatant = combat.combatants.get(combat.current.combatantId);
-    const actor = currentCombatant?.actor;
+    const previousCombatant = combat.combatants.get(combat.previous.combatantId);
+    const actor = previousCombatant?.actor;
 
     if (!actor) return;
     if (!actor.isOwner) return;
     if (game.user.isGM && !Utility.getSetting(settings.combatFatigue.enableNPC)) return;
     if (game.user.isGM && actor.hasPlayerOwner) return;
 
-    let roundsBeforeTest = this.getRoundsBeforeTest(currentCombatant, actor);
+    let roundsBeforeTest = this.#getRoundsBeforeTest(previousCombatant, actor);
+    roundsBeforeTest--;
 
     if (roundsBeforeTest <= 0) {
-      const {outcome, SL} = await this.performTest(actor);
+      const {outcome, SL} = await this.#performTest(actor);
 
       roundsBeforeTest = actor.characteristics.t.bonus;
 
@@ -30,14 +32,12 @@ export default class CombatFatigue {
       } else if (outcome === 'success') {
         roundsBeforeTest += parseInt(SL);
       }
-    } else {
-      roundsBeforeTest--;
     }
 
-    await currentCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, roundsBeforeTest)
+    await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, roundsBeforeTest)
   }
 
-  async performTest(actor) {
+  async #performTest(actor) {
     const appendTitle = game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueTest")
     const skill = actor.itemCategories.skill.find(s => s.name === game.i18n.localize("Forien.Armoury.CombatFatigue.EnduranceSkillName"));
     let test;
@@ -55,7 +55,7 @@ export default class CombatFatigue {
     return {outcome, SL};
   }
 
-  getRoundsBeforeTest(currentCombatant, actor) {
+  #getRoundsBeforeTest(currentCombatant, actor) {
     let roundsBeforeTest = currentCombatant.getFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest) ?? null;
     if (roundsBeforeTest === null)
       roundsBeforeTest = actor.characteristics.t.bonus;
