@@ -1,0 +1,40 @@
+{
+  "icon": "icons/sundries/misc/pipe-elegant.webp",
+  "transfer": true,
+  "name": "Elegant Pipe",
+  "_id": "rRcrSC2bf8XYxx2r",
+  "changes": [
+    {
+      "key": "system.characteristics.fel.modifier",
+      "mode": 2,
+      "value": "3"
+    }
+  ],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": " "
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!CwJjRVfEOipfyoEz.rRcrSC2bf8XYxx2r"
+}

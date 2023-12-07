@@ -2,6 +2,12 @@
 
 ## v1.X.X
 
+### v1.3.1
+* Added three accessories: Amulet of „Protection“, Elegant Pipe and Spectacles
+* Fixed arrow items' image paths
+* Fixed weird edge case with Roll Limited Skill macro
+* Fixed Combat Fatigue counting wrong amount of turns
+
 ### v1.3.0
 * Reintroduced the Slashing, Recoverable and Unrecoverable properties for weapons and ammunition
 * Introduced new Incendiary, Poisonous and Blinding qualities

@@ -117,9 +117,12 @@ Module contains single Compendium pack containing over 80 entries (items and eff
   * Spear
   * Spear (2h)
   * Torch
-* Added 2 new **Accessories**:
+* Added 5 new **Accessories**:
+  * Amulet of „Protection“
+  * Elegant Pipe
   * Ring of See Invisibility
   * Ring of Smell
+  * Spectacles
 * Added 8 new **Containers**
   * 3 Quivers, 3 Powder Horns, 2 Bags
 * Added 10 new generic **Ingredients** for each Arcane Lore
