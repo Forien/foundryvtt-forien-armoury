@@ -1,1 +1,2 @@
-packs/** binary
+dist/packs/** binary
+backup/** binary
