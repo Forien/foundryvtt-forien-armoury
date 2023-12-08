@@ -52,7 +52,7 @@ class Debug {
    */
   static get summarizeSettings() {
     const moduleSettings = {}
-    for (let [key, setting] of game.settings.settings.entries()) {
+    for (let [_key, setting] of game.settings.settings.entries()) {
       if (setting.namespace !== constants.moduleId) continue;
 
       const name = setting.name ? game.i18n.localize(setting.name) : setting.key;

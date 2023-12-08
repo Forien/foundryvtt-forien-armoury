@@ -11,13 +11,13 @@ export default class CombatFatigue {
    * Processes Combat's turn in order to apply Combat Fatigue rules, if enabled.
    *
    * @param {Combat} combat
-   * @param {{}}change
-   * @param {{}} options
-   * @param {string} userId
+   * @param {{}} change
+   * @param {{}} _options
+   * @param {string} _userId
    *
    * @return {Promise<void>}
    */
-  async #processCombatTurn(combat, change, options, userId) {
+  async #processCombatTurn(combat, change, _options, _userId) {
     if (change.turn === undefined) return;
     if (Utility.getSetting(settings.combatFatigue.enable) === false) return debug('Combat Fatigue is not enabled');
     if (!combat.previous || !combat.previous.combatantId) return;
