@@ -148,6 +148,15 @@ Module contains a single Compendium Pack containing 9 Macros:
 * Player Macro to roll for advanced Skill with limited SL result
 
 
+## Troubleshooting and Debug
+If you want to have deeper understanding of why module behaves the way it does, **you can enable Debug in module's setting**.
+
+This setting makes it so that module will output a ton of information into the console whenever is performs or attempts to perform an action.
+
+You can open the console by using `F12` keybind on most browsers.
+
+**Tip**: Use `Forien's Armoury` as filter in console to only see this module's messages.
+
 
 
 ## Recommended 3rd Party Modules

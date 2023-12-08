@@ -2,6 +2,10 @@
 
 ## v1.X.X
 
+### v1.3.2
+* Added full debug support. Can be enabled in settings (client side)
+  * Use `Forien's Armoury` as filter in console to only see this module's messages
+
 ### v1.3.1
 * Added three accessories: Amulet of „Protection“, Elegant Pipe and Spectacles
 * Fixed arrow items' image paths
