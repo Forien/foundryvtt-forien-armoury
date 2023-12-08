@@ -7,6 +7,16 @@ export default class CombatFatigue {
     Hooks.on("updateCombat", this.#processCombatTurn.bind(this));
   }
 
+  /**
+   * Processes Combat's turn in order to apply Combat Fatigue rules, if enabled.
+   *
+   * @param {Combat} combat
+   * @param {{}}change
+   * @param {{}} options
+   * @param {string} userId
+   *
+   * @return {Promise<void>}
+   */
   async #processCombatTurn(combat, change, options, userId) {
     if (change.turn === undefined) return;
     if (Utility.getSetting(settings.combatFatigue.enable) === false) return debug('Combat Fatigue is not enabled');
@@ -18,11 +28,26 @@ export default class CombatFatigue {
     if (!actor) return;
     if (!actor.isOwner)
       return debug('You are not an Owner of previous combatant', {previousCombatant, actor});
+
     if (game.user.isGM && !Utility.getSetting(settings.combatFatigue.enableNPC))
       return debug('You are a GM and Combat Fatigue has been disabled for NPCs');
+
     if (game.user.isGM && actor.hasPlayerOwner)
       return debug('You are a GM and previous combatant is Player Owned Actor', {previousCombatant, actor});
 
+    await this.#processCombatFatigue(previousCombatant);
+  }
+
+  /**
+   * Processes Combat Fatigue for specified Combatant
+   *
+   * @param {Combatant} previousCombatant
+   *
+   * @return {Promise<void>}
+   */
+  async #processCombatFatigue(previousCombatant) {
+    /** @type {ActorWfrp4e} */
+    const actor = previousCombatant.actor;
     let roundsBeforeTest = this.#getRoundsBeforeTest(previousCombatant, actor);
     roundsBeforeTest--;
 
@@ -45,6 +70,13 @@ export default class CombatFatigue {
     await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, roundsBeforeTest)
   }
 
+  /**
+   * Calls user to perform the Endurance/Toughness Dramatic Test in order to stave off the Fatigue
+   *
+   * @param {ActorWfrp4e} actor
+   *
+   * @return {Promise<{SL: *, outcome: *}>}
+   */
   async #performTest(actor) {
     const appendTitle = game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueTest")
     const skill = actor.itemCategories.skill.find(s => s.name === game.i18n.localize("Forien.Armoury.CombatFatigue.EnduranceSkillName"));
@@ -63,6 +95,16 @@ export default class CombatFatigue {
     return {outcome, SL};
   }
 
+  /**
+   * Returns the number of Rounds before the Actor has to attempt another Test.
+   *
+   * Number of rounds is stored in Combatant's flag, if it's not present, the Toughness Bonus is returned.
+   *
+   * @param {Combatant} currentCombatant
+   * @param {ActorWfrp4e} actor
+   *
+   * @return {number}
+   */
   #getRoundsBeforeTest(currentCombatant, actor) {
     let roundsBeforeTest = currentCombatant.getFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest) ?? null;
     if (roundsBeforeTest === null)

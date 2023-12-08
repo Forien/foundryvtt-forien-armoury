@@ -163,8 +163,8 @@ export default class ArrowReclamation {
     let type = this.#getAmmoType(weapon, ammo);
 
     // if type is not recognized or not allowed, do nothing
-    if (type === null) return debug('Ammunition cannot be recovered', {type, ammo});
-
+    if (type === null)
+      return debug('Ammunition cannot be recovered', {type, ammo});
 
     // define chat messages
     type = game.i18n.localize('Forien.Armoury.Arrows.' + type);
@@ -198,9 +198,9 @@ export default class ArrowReclamation {
    * Adds information about Ammunition entity and Actor entity to Combat Tracker
    * allows for tracking which ammo and in what quantity has to be returned
    *
-   * @param {String} actorId
-   * @param {String} ammoId
-   * @param {String} userId
+   * @param {string} actorId
+   * @param {string} ammoId
+   * @param {string} userId
    */
   addAmmoToReplenish(actorId, ammoId, userId) {
     // retrieve existing data or initialize it
@@ -227,10 +227,10 @@ export default class ArrowReclamation {
   /**
    * Finds ammo in possession of an Actor and replenishes given amount
    *
-   * @param {String} actorId
-   * @param {String} ammoId
-   * @param {String} quantity
-   * @param {String} userId
+   * @param {string} actorId
+   * @param {string} ammoId
+   * @param {string} quantity
+   * @param {string} userId
    * @param {boolean} bulk
    */
   replenishAmmo(actorId, ammoId, quantity, userId = null, bulk = false) {
@@ -271,7 +271,7 @@ export default class ArrowReclamation {
    * @param {ActorWfrp4e} actor
    * @param {ItemWfrp4e} ammo
    * @param {User} user
-   * @param {Number} quantity
+   * @param {number} quantity
    */
   async notifyAmmoReturned(actor, ammo, user, quantity) {
     let templateData = {

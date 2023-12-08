@@ -1,6 +1,16 @@
 import {constants} from '../constants.mjs';
 
 export default class Utility {
+
+  /**
+   * Provides a single point of entry to handle all Module's notifications in a consistent manner
+   *
+   * @param {string} notification                       Text of the notification
+   * @param {'error'|'warning'|'info'|'debug'} type     type of the notification
+   * @param {boolean} permanent                         should the notification stay until closed?
+   * @param {boolean} consoleOnly                       should the notification be suppressed and only shown in console?
+   * @param {*} data                                    additional data to output in the console
+   */
   static notify(notification, {type = 'info', permanent = false, consoleOnly = false, data = ''} = {}) {
     // brand colour: '#3e1395' is too dark for dark mode console;
     const purple = 'purple';
@@ -27,10 +37,22 @@ export default class Utility {
       ui?.notifications?.notify(notification, type, {permanent: permanent, console: false});
   }
 
+  /**
+   * Returns full module path for the template based on relative path/name only
+   *
+   * @param {string} template relative path / template's name
+   *
+   * @return {string}
+   */
   static getTemplate(template) {
     return `modules/${constants.moduleId}/templates/${template}`;
   }
 
+  /**
+   * Preloads provided templates
+   *
+   * @param {string[]} templates
+   */
   static preloadTemplates(templates = []) {
     Utility.notify("Preloading Templates.", {consoleOnly: true})
 
@@ -40,6 +62,13 @@ export default class Utility {
     });
   }
 
+  /**
+   * Returns Module's setting
+   *
+   * @param {string} setting name of the setting to retrieve
+   *
+   * @return {*}
+   */
   static getSetting(setting) {
     return game.settings.get(constants.moduleId, setting);
   }

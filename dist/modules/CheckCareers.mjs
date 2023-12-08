@@ -10,6 +10,11 @@ export default class CheckCareers {
     return Object.values(CheckCareers.#templates);
   }
 
+  /**
+   * Performs Career Check for player characters (if GM) or for own assigned character (if Player)
+   *
+   * @param {boolean} onlyOnline should check careers only for characters of online users?
+   */
   static checkPlayersCareers(onlyOnline = true) {
     let characters = [];
 
@@ -20,28 +25,39 @@ export default class CheckCareers {
       }
       characters = users.map(u => u.character);
       debug(`Checking player characters' careers as GM`, {onlyOnline, characters});
-    } else if (game.user.character) {
-      characters.push(game.user.character);
-      debug(`Checking my character's career`, {character: game.user.character});
+
+      CheckCareers.checkCareers(characters);
+    } else {
+      CheckCareers.checkMyCareer();
     }
-
-    CheckCareers.checkCareers(characters);
   }
 
-  static checkCareers(actors = []) {
-    actors.forEach(actor => {
-      if (actor instanceof ActorWfrp4e) {
-        CheckCareers.checkCareer(actor)
-      }
-    })
-  }
-
+  /**
+   * Permorms Career Check for assigned character only
+   */
   static checkMyCareer() {
+    debug(`Checking my character's career`, {character: game.user.character});
+
     if (game.user.character instanceof ActorWfrp4e)
       CheckCareers.checkCareer(game.user.character);
   }
 
+  /**
+   * Performs Career Check for all provided actors
+   *
+   * @param {ActorWfrp4e[]} actors Actors for whom to perform career checks
+   */
+  static checkCareers(actors = []) {
+    actors.forEach(actor => CheckCareers.checkCareer(actor))
+  }
+
+  /**
+   * Checks career completion progress for provided Character and output results to Chat
+   *
+   * @param {ActorWfrp4e} character Character to perform a Career Check for
+   */
   static checkCareer(character) {
+    if (!(actor instanceof ActorWfrp4e) || actor.type !== 'character') return;
     let currentCareer = character.currentCareer;
     let careerLevel = currentCareer.level.value;
     let requiredAdvances = careerLevel * 5;
@@ -57,7 +73,17 @@ export default class CheckCareers {
     let conclusion = (characteristics.done >= characteristics.total && skills.done >= 8 && talents.done >= 1);
     let conclusionPotential = (skills.potentialCount > 0 || talents.potentialCount > 0);
 
-    debug(`Character's Career checked`, {character, currentCareer, requiredAdvances, characteristics, talents, skills, owners, conclusion, conclusionPotential});
+    debug(`Character's Career checked`, {
+      character,
+      currentCareer,
+      requiredAdvances,
+      characteristics,
+      talents,
+      skills,
+      owners,
+      conclusion,
+      conclusionPotential
+    });
 
     const templateData = {
       character: character.name,
@@ -82,8 +108,9 @@ export default class CheckCareers {
   }
 
   /**
+   * Returns an array containing id of every owner of a character (if GM) or every GM (if Player)
    *
-   * @param character
+   * @param {ActorWfrp4e} character
    * @return {*[]}
    */
   static #getOwners(character) {
@@ -94,17 +121,18 @@ export default class CheckCareers {
           owners.push(id);
       }
     } else {
-      owners = game.users.filter(u => u.isGM === true);
+      owners = game.users.filter(u => u.isGM === true).map(u => u.id);
     }
 
     return owners;
   }
 
   /**
+   * Checks Actor for every Skill specified in the career and counts how many have required number of advances
    *
-   * @param character
-   * @param currentCareer
-   * @param requiredAdvances
+   * @param {ActorWfrp4e} character
+   * @param {ItemWfrp4e} currentCareer
+   * @param {number} requiredAdvances
    * @return {{hasPotential: boolean, potentialCount: number, done: number, potential: string}}
    */
   static #checkSkills(character, currentCareer, requiredAdvances) {
@@ -129,9 +157,10 @@ export default class CheckCareers {
   }
 
   /**
+   * Checks Actor for every Talent specified in the career and counts how many have been purchased
    *
-   * @param character
-   * @param currentCareer
+   * @param {ActorWfrp4e} character
+   * @param {ItemWfrp4e} currentCareer
    * @return {{hasPotential: boolean, potentialCount: number, done: number, potential: string}}
    */
   static #checkTalents(character, currentCareer) {
@@ -154,10 +183,11 @@ export default class CheckCareers {
   }
 
   /**
+   * Checks Actor for every Characteristic specified in the career and counts how many have required number of advances
    *
-   * @param character
-   * @param currentCareer
-   * @param requiredAdvances
+   * @param {ActorWfrp4e} character
+   * @param {ItemWfrp4e} currentCareer
+   * @param {number} requiredAdvances
    * @return {{total: number, done: number}}
    */
   static #checkCharacteristics(character, currentCareer, requiredAdvances) {

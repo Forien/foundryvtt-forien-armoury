@@ -3,20 +3,20 @@ import ATL from "./module-integrations/ATL.mjs";
 
 export default class Integrations {
   /**
-   * @type ItemPiles
+   * @type {ItemPiles}
    */
   itemPiles;
   /**
-   * @type ATL
+   * @type {ATL}
    */
-  ATL;
+  atl;
 
   constructor() {
     if (game.modules.get("item-piles")?.active)
       this.itemPiles = new ItemPiles();
 
     if (game.modules.get("ATL")?.active)
-      this.ATL = new ATL();
+      this.atl = new ATL();
   }
 
 
@@ -31,7 +31,7 @@ export default class Integrations {
    * Register Settings for module integration
    */
   registerSettings() {
-    this.ATL?.registerSettings();
+    this.atl?.registerSettings();
     this.itemPiles?.registerSettings();
   }
 

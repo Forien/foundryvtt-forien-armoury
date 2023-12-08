@@ -29,8 +29,10 @@ export default class ItemRepair {
 
 
   /**
-   * @param {ItemWfrp4e} item
-   * @param {{armour: String, item: String, location: String, price: String, repair: Number}} data
+   * Repairs Armour Item based on provided data
+   *
+   * @param {ItemWfrp4e} item Armour Item to Repair
+   * @param {{armour: string, item: string, location: string, price: string, repair: number}} data
    */
   async #repairArmourItem(item, data) {
     let itemData = item.toObject();
@@ -49,8 +51,10 @@ export default class ItemRepair {
   }
 
   /**
-   * @param {ItemWfrp4e} item
-   * @param {{item: String, price: String, repair: Number}} data
+   * Repairs Armour Item based on provided data
+   *
+   * @param {ItemWfrp4e} item Weapon Item to Repair
+   * @param {{item: string, price: string, repair: number}} data
    */
   async #repairWeaponItem(item, data) {
     let itemData = item.toObject();
@@ -62,11 +66,14 @@ export default class ItemRepair {
   }
 
   /**
-   * @param event
+   * Function that handles clicking on a repair button in the Chat Card
+   *
+   * @param {S.Event} event
+   * @return {Promise<void|undefined>}
    */
   async #onRepairItem(event) {
     /**
-     * @type {{armour: String, item: String, location: String, price: String, repair: Number, msg: String}}
+     * @type {{armour: string, item: string, location: string, price: string, repair: number, msg: string}}
      */
     let data = event.currentTarget.dataset;
     /**
@@ -102,16 +109,22 @@ export default class ItemRepair {
   }
 
   /**
+   * Return Item's price in D (absolute value, 1 D = 1 Brass Penny)
+   *
    * @param {ItemWfrp4e} item
-   * @return {Number}
+   *
+   * @return {number}
    */
   #getPriceInD(item) {
     return Number(item.price.gc || 0) * 240 + Number(item.price.ss || 0) * 12 + Number(item.price.bp || 0);
   }
 
   /**
-   * @param {Number} amount
-   * @param {boolean} paid
+   * Return's Money String (e.g. 2 GC 4 SS 1 BP) from the D value
+   *
+   * @param {number} amount An absolute value (called D) for money
+   * @param {boolean} paid Whether service is "free"
+   *
    * @return {string}
    */
   #getMoneyStringFromD(amount, paid) {
@@ -144,6 +157,8 @@ export default class ItemRepair {
   }
 
   /**
+   * Returns maximum amount of damage an Item can sustain
+   *
    * @param {ItemWfrp4e} item
    * @return {number}
    * @private
@@ -166,8 +181,12 @@ export default class ItemRepair {
   }
 
   /**
-   * @param {ItemWfrp4e} item
-   * @param {boolean} paid
+   * Checks Item for sustained damage and returns relevant data
+   *
+   * @param {ItemWfrp4e} item Item to check the damage for
+   * @param {boolean} paid Whether the service is Free
+   *
+   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, type, uuid, repairCost: string, singleRepairCost: string}}
    */
   checkTrappingDamage(item, paid) {
     let maxDamage = this.#getMaxDamage(item)
@@ -190,8 +209,13 @@ export default class ItemRepair {
   }
 
   /**
-   * @param {ItemWfrp4e} item
-   * @param {boolean} paid
+   *
+   * Checks Armour Item for sustained damage and returns relevant data
+   *
+   * @param {ItemWfrp4e} item Armour Item to check the damage for
+   * @param {boolean} paid Whether the service is Free
+   *
+   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, locations: *[], type, uuid, repairCost: string, singleRepairCost: string}}
    */
   checkArmourDamage(item, paid) {
     let durable = this.#getMaxDamage(item);
@@ -247,18 +271,26 @@ export default class ItemRepair {
 
 
   /**
+   * Processes all weapons, checking each for sustained damage
+   *
    * @param {ItemWfrp4e[]} items
    * @param {boolean} paid
-   * @param {String} subtype
+   * @param {string|null} subtype
+   *
+   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, type, uuid, repairCost: string, singleRepairCost: string}[]}
    */
   processWeapons(items = [], {paid = true, subtype = null} = {}) {
     return this.processTrappings(items, {paid, subtype});
   }
 
   /**
+   * Processes all trappings, checking each for sustained damage
+   *
    * @param {ItemWfrp4e[]} items
    * @param {boolean} paid
-   * @param {String} subtype
+   * @param {string|null} subtype
+   *
+   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, type, uuid, repairCost: string, singleRepairCost: string}[]}
    */
   processTrappings(items = [], {paid = true, subtype = null} = {}) {
     let damagedItems = [];
@@ -278,9 +310,13 @@ export default class ItemRepair {
   }
 
   /**
+   * Processes all trappings, checking each for sustained damage
+   *
    * @param {ItemWfrp4e[]} items
    * @param {boolean} paid
-   * @param {String} subtype
+   * @param {string|null} subtype
+   *
+   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, locations: *[], type, uuid, repairCost: string, singleRepairCost: string}[]}
    */
   processArmour(items = [], {paid = true, subtype = null} = {}) {
     let damagedItems = [];
@@ -300,12 +336,14 @@ export default class ItemRepair {
   }
 
   /**
-   * @param {ActorWfrp4e} actor
+   * Checks the specified Actor's inventory for damaged Items, and outputs results to Chat
+   *
+   * @param {Actor} actor
    * @param {boolean} paid
-   * @param {String} chatMessageId
-   * @param {String} type
-   * @param {String} subtype
-   * @param {String} userId
+   * @param {string|null} chatMessageId
+   * @param {string|null} type
+   * @param {string|null} subtype
+   * @param {string|null} user
    */
   async checkInventoryForDamage(actor, {
     paid = true,
@@ -315,7 +353,7 @@ export default class ItemRepair {
     user = null
   } = {}) {
     if (!actor || !(actor instanceof ActorWfrp4e)) {
-      return Utility.notify(game.i18n.localize('Forien.Armoury.ItemRepair.NoActorSelected'), {type:'warning'});
+      return Utility.notify(game.i18n.localize('Forien.Armoury.ItemRepair.NoActorSelected'), {type: 'warning'});
     }
 
     debug('Checking inventory for damaged items', {actor, paid, chatMessageId, type, subtype, user});
