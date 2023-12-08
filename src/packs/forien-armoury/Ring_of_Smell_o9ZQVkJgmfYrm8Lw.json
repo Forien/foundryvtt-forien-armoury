@@ -72,15 +72,15 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
     "createdTime": 1663627495178,
-    "modifiedTime": 1690164867080,
+    "modifiedTime": 1702041724670,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "folder": "4yqmjrkdpjUayWXP",
   "_id": "o9ZQVkJgmfYrm8Lw",
-  "sort": 0,
+  "sort": 500000,
   "ownership": {
     "default": 0,
     "ZJyAmf2sKocHG1ud": 3

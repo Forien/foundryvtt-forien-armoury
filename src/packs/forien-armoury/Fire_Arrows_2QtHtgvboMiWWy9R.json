@@ -8,7 +8,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": ""
+      "value": "<p>These arrows are made with specially prepared arrowheads, which look more like an egg-shaped cages.</p><p>Those arrowheads contain some sort of flammable material, usually oil-soaked fabric, that can be set on fire before shooting.</p><p>To effectively use these arrows, character <strong>needs to be in close proximity of an open fire source</strong>, such as a standing torch, brazier, campfire etc.</p><p>Alternatively, any character can spend an Action to light the arrow on fire using matches or similar methods.</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -100,7 +100,7 @@
     "systemVersion": "7.0.3",
     "coreVersion": "11.315",
     "createdTime": 1701629051852,
-    "modifiedTime": 1701700628189,
+    "modifiedTime": 1702051465194,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_key": "!items!2QtHtgvboMiWWy9R"

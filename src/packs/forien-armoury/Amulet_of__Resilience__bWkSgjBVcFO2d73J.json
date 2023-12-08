@@ -1,8 +1,8 @@
 {
-  "icon": "icons/tools/scribal/spectacles-glasses.webp",
+  "icon": "icons/equipment/neck/amulet-carved-stone-spiral.webp",
   "transfer": true,
-  "name": "Spectacles",
-  "_id": "FpSiaPDvgSspxHGv",
+  "name": "Amulet of „Resilience“",
+  "_id": "bWkSgjBVcFO2d73J",
   "changes": [],
   "disabled": false,
   "duration": {
@@ -26,10 +26,9 @@
       "effectApplication": "equipped",
       "hide": false,
       "preventDuplicateEffects": false,
-      "script": "if (args.actor.characteristics.i.value < 40)\n  args.actor.characteristics.i.modifier += 3; ",
-      "reduceQuantity": false
+      "script": "if (args.actor.characteristics.int.value < 40)\n  args.actor.characteristics.t.modifier += 3; "
     }
   },
   "tint": null,
-  "_key": "!items.effects!1jBWWFFhyGAN4r2R.FpSiaPDvgSspxHGv"
+  "_key": "!items.effects!SPHNnlmWTrxvNkD9.bWkSgjBVcFO2d73J"
 }

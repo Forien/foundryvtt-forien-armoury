@@ -8,7 +8,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>Through the power of placebo, increases the willpower of a wearer.</p><p>Doesn't work on intelligent people as they easily realize this is a simple piece of wood.</p>"
+      "value": "<p>Through the power of placebo, increases the Willpower of a wearer.</p><p>Doesn't work on intelligent people as they easily realize this is a simple piece of wood.</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -75,7 +75,7 @@
     "systemVersion": "7.0.3",
     "coreVersion": "11.315",
     "createdTime": 1701953582024,
-    "modifiedTime": 1701954240337,
+    "modifiedTime": 1702041778336,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_key": "!items!R0se0s6gH4XkxFNk"

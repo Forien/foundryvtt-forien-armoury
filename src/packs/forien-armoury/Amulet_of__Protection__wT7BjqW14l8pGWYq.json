@@ -22,7 +22,7 @@
       "isPassive": true
     },
     "wfrp4e": {
-      "effectTrigger": "prepareData",
+      "effectTrigger": "prePrepareData",
       "effectApplication": "equipped",
       "hide": false,
       "preventDuplicateEffects": false,
