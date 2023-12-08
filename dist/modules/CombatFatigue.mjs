@@ -1,5 +1,6 @@
 import {constants, flags, settings} from "./constants.mjs";
 import Utility from "./utility/Utility.mjs";
+import {debug} from "./utility/Debug.mjs";
 
 export default class CombatFatigue {
   bindHooks() {
@@ -8,19 +9,24 @@ export default class CombatFatigue {
 
   async #processCombatTurn(combat, change, options, userId) {
     if (change.turn === undefined) return;
-    if (Utility.getSetting(settings.combatFatigue.enable) === false) return;
+    if (Utility.getSetting(settings.combatFatigue.enable) === false) return debug('Combat Fatigue is not enabled');
     if (!combat.previous || !combat.previous.combatantId) return;
 
     const previousCombatant = combat.combatants.get(combat.previous.combatantId);
     const actor = previousCombatant?.actor;
 
     if (!actor) return;
-    if (!actor.isOwner) return;
-    if (game.user.isGM && !Utility.getSetting(settings.combatFatigue.enableNPC)) return;
-    if (game.user.isGM && actor.hasPlayerOwner) return;
+    if (!actor.isOwner)
+      return debug('You are not an Owner of previous combatant', {previousCombatant, actor});
+    if (game.user.isGM && !Utility.getSetting(settings.combatFatigue.enableNPC))
+      return debug('You are a GM and Combat Fatigue has been disabled for NPCs');
+    if (game.user.isGM && actor.hasPlayerOwner)
+      return debug('You are a GM and previous combatant is Player Owned Actor', {previousCombatant, actor});
 
     let roundsBeforeTest = this.#getRoundsBeforeTest(previousCombatant, actor);
     roundsBeforeTest--;
+
+    debug('Combat Fatigue status', {previousCombatant, actor, roundsBeforeTest});
 
     if (roundsBeforeTest <= 0) {
       const {outcome, SL} = await this.#performTest(actor);
@@ -32,6 +38,8 @@ export default class CombatFatigue {
       } else if (outcome === 'success') {
         roundsBeforeTest += parseInt(SL);
       }
+
+      debug('Combat Fatigue Test result', {outcome, SL, roundsBeforeTest});
     }
 
     await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, roundsBeforeTest)

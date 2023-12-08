@@ -1,6 +1,8 @@
+import {debug} from "./utility/Debug.mjs";
+
 export default class ItemProperties {
   constructor() {
-    this.appendProperties();
+
   }
 
   bindHooks() {
@@ -56,7 +58,7 @@ export default class ItemProperties {
       extraMessages
     } = args;
 
-    console.log(args);
+    debug('ItemProperties.onApplyDamage args:', args);
     this.#checkForSlashing(opposedTest, AP, actor, extraMessages);
     this.#checkForIncendiary(opposedTest, actor, extraMessages);
     this.#checkForBlinding(opposedTest, actor, extraMessages);
@@ -67,6 +69,7 @@ export default class ItemProperties {
     const blinding = opposedTest.attackerTest.weapon?.properties.qualities.blinding?.value ?? null;
     if (blinding === null) return;
 
+    debug('Blinding property used:', {opposedTest, actor, extraMessages, rating: blinding});
     actor.addCondition("blinded", blinding);
     extraMessages.push(game.i18n.format("Forien.Armoury.Arrows.Properties.Blinding.Message", {rating: blinding}));
   }
@@ -74,7 +77,9 @@ export default class ItemProperties {
   #checkForIncendiary(opposedTest, actor, extraMessages) {
     const incendiary = opposedTest.attackerTest.weapon?.properties.qualities.incendiary?.value ?? null;
     if (incendiary === null) return;
+
     const die = opposedTest.attackerTest.result.roll % 10;
+    debug('Incendiary property used:', {opposedTest, actor, extraMessages, die, rating: incendiary});
     if (die > incendiary) return;
 
     actor.addCondition("ablaze");
@@ -84,7 +89,9 @@ export default class ItemProperties {
   #checkForPoisonous(opposedTest, actor, extraMessages) {
     const poisonous = opposedTest.attackerTest.weapon?.properties.qualities.poisonous?.value ?? null;
     if (poisonous === null) return;
+
     const sl = parseInt(opposedTest.attackerTest.result.SL);
+    debug('Poisonous property used:', {opposedTest, actor, extraMessages, sl, rating: poisonous});
     if (sl > poisonous) return;
 
     actor.addCondition("poisoned");
@@ -94,6 +101,8 @@ export default class ItemProperties {
   #checkForSlashing(opposedTest, AP, actor, extraMessages) {
     const slashing = opposedTest.attackerTest.weapon?.properties.qualities.slashing?.value ?? null;
     if (slashing === null) return;
+
+    debug('Slashing property used:', {opposedTest, actor, extraMessages, rating: slashing, ap: AP.used});
     if (slashing < AP.used) return;
 
     actor.addCondition('bleeding');

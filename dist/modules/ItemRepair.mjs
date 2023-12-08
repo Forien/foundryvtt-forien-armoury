@@ -1,5 +1,6 @@
 import Utility from "./utility/Utility.mjs";
 import {constants, flags} from "./constants.mjs";
+import {debug} from "./utility/Debug.mjs";
 
 export default class ItemRepair {
 
@@ -264,10 +265,14 @@ export default class ItemRepair {
     items.forEach(item => {
       if (subtype && (!subtype.includes(item.system.weaponGroup?.value) || subtype.includes(item.system.trappingType?.value)))
         return;
+
       let damagedItem = this.checkTrappingDamage(item, paid);
+      debug('Checking item for damage', {item, damagedItem});
+
       if (damagedItem?.damaged)
         damagedItems.push(damagedItem);
     });
+    debug('Checked Items for damage', {damagedItems});
 
     return damagedItems;
   }
@@ -282,10 +287,14 @@ export default class ItemRepair {
     items.forEach(item => {
       if (subtype && !subtype.includes(item.system.armorType.value))
         return;
+
       let damagedItem = this.checkArmourDamage(item, paid);
+      debug('Checking Armour item for damage', {item, damagedItem});
+
       if (damagedItem?.damaged)
         damagedItems.push(damagedItem);
     });
+    debug('Checked Armour for damage', {damagedItems});
 
     return damagedItems;
   }
@@ -309,6 +318,8 @@ export default class ItemRepair {
       return Utility.notify(game.i18n.localize('Forien.Armoury.ItemRepair.NoActorSelected'), {type:'warning'});
     }
 
+    debug('Checking inventory for damaged items', {actor, paid, chatMessageId, type, subtype, user});
+
     let chatMessage;
     let content;
     let templateData = {
@@ -318,6 +329,7 @@ export default class ItemRepair {
       paid: paid,
       empty: false
     };
+
     if (chatMessageId) {
       chatMessage = await fromUuid(chatMessageId);
       type = chatMessage.getFlag(constants.moduleId, flags.itemRepair.type);
@@ -334,6 +346,7 @@ export default class ItemRepair {
     if (templateData.armour.length === 0 && templateData.weapons.length === 0 && templateData.trappings.length === 0)
       templateData.empty = true;
 
+    debug('Template Data ready', templateData);
     let html = await renderTemplate(Utility.getTemplate(this.templates.chatMessage), templateData);
 
     if (!chatMessageId) {
@@ -343,15 +356,18 @@ export default class ItemRepair {
         whisper: game.users.filter((u) => u.isGM).map((u) => u._id),
         content: html
       };
+
       chatMessage = await ChatMessage.create(chatData)
       await chatMessage.setFlag(constants.moduleId, flags.itemRepair.type, type);
       await chatMessage.setFlag(constants.moduleId, flags.itemRepair.subtype, subtype);
       content = chatMessage.content;
+      debug('Chat Message created', {chatMessage, content});
     } else {
       content = html;
     }
 
     content = content.replaceAll('ChatMessageId', chatMessage._id);
     await chatMessage.update({content: content});
+    debug('Chat Message updated', {chatMessage, content});
   }
 }

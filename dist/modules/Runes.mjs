@@ -1,5 +1,6 @@
 import Utility from "./utility/Utility.mjs";
 import {constants} from "./constants.mjs";
+import {debug} from "./utility/Debug.mjs";
 
 export default class TemporaryRunes {
   bindHooks() {
@@ -8,6 +9,7 @@ export default class TemporaryRunes {
 
   #onEffectUpdate(effect, update, _data) {
     if (this.#isRuneTemporary(effect) && effect.parent instanceof Actor) {
+      debug('Effect Updated is a rune', {effect, update, _data});
 
       if (update.disabled === true) {
         this.processRemovingRune(effect).then(msg => {
@@ -36,6 +38,8 @@ export default class TemporaryRunes {
      * @type {ActorWfrp4e|null}
      */
     await actor.deleteEmbeddedDocuments("ActiveEffect", [effect._id]);
+    debug('Deleted ActiveEffect from Actor', {actor, effect});
+
     /**
      * @type {ItemWfrp4e|null}
      */
@@ -43,10 +47,14 @@ export default class TemporaryRunes {
     let itemEffect = item.effects.find(e => e.name === effect.name);
 
     await item.deleteEmbeddedDocuments("ActiveEffect", [itemEffect._id]);
+    debug('Deleted ActiveEffect from Item', {item, itemEffect});
 
     let itemDamaged = ``;
     if (game.settings.get(constants.moduleId, settings.runes.enableDamage)) {
       itemDamaged = await this.damageFromRune(item, actor);
+      debug('Item damaged because of dissipated Rune', {actor, item, message: itemDamaged});
+    } else {
+      debug('Item Damage from dissipating Runes is disabled');
     }
 
     let msg = game.i18n.format('Forien.Armoury.Runes.RemovedEffectTemporaryRuneDisabled', {effectName: effect.name, actorName:actor.name, itemName: item.name});

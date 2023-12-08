@@ -1,4 +1,5 @@
 import Utility from "./utility/Utility.mjs";
+import {debug} from "./utility/Debug.mjs";
 
 export default class CheckCareers {
   static #templates = {
@@ -18,8 +19,10 @@ export default class CheckCareers {
         users = users.filter(u => u.active === true);
       }
       characters = users.map(u => u.character);
+      debug(`Checking player characters' careers as GM`, {onlyOnline, characters});
     } else if (game.user.character) {
       characters.push(game.user.character);
+      debug(`Checking my character's career`, {character: game.user.character});
     }
 
     CheckCareers.checkCareers(characters);
@@ -43,9 +46,8 @@ export default class CheckCareers {
     let careerLevel = currentCareer.level.value;
     let requiredAdvances = careerLevel * 5;
 
-    if (currentCareer.complete.value === true) {
-      return;
-    }
+    if (currentCareer.complete.value === true)
+      return debug('Current Career is marked as finished, skipping', {character, currentCareer});
 
     const characteristics = this.#checkCharacteristics(character, currentCareer, requiredAdvances);
     const talents = this.#checkTalents(character, currentCareer);
@@ -55,6 +57,7 @@ export default class CheckCareers {
     let conclusion = (characteristics.done >= characteristics.total && skills.done >= 8 && talents.done >= 1);
     let conclusionPotential = (skills.potentialCount > 0 || talents.potentialCount > 0);
 
+    debug(`Character's Career checked`, {character, currentCareer, requiredAdvances, characteristics, talents, skills, owners, conclusion, conclusionPotential});
 
     const templateData = {
       character: character.name,

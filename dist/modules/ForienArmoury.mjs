@@ -8,6 +8,7 @@ import CheckCareers from "./CheckCareers.mjs";
 import {constants, settings} from "./constants.mjs";
 import CombatFatigue from "./CombatFatigue.mjs";
 import ItemProperties from "./ItemProperties.mjs";
+import {Debug} from "./utility/Debug.mjs";
 
 export default class ForienArmoury {
   /**
@@ -114,7 +115,8 @@ export default class ForienArmoury {
    * For example, adding a Runebound lore so Runebound Spells can be searched via Item Browser
    */
   #hackWFRP4e() {
-    game.wfrp4e.config.magicLores.runebound = 'Forien.Armoury.Runebound.LoreName'
+    game.wfrp4e.config.magicLores.runebound = 'Forien.Armoury.Runebound.LoreName';
+    this.itemProperties.appendProperties();
 
     Utility.notify("WFRP4e patched.", {consoleOnly: true});
   }
@@ -125,6 +127,7 @@ export default class ForienArmoury {
   #registerSettings() {
     this.#settings.registerSettings();
     this.integrations.registerSettings();
+    Debug.registerSetting();
   }
 
   #initialConfig() {

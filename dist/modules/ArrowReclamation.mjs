@@ -1,5 +1,6 @@
 import Utility from "./utility/Utility.mjs";
 import {constants, flags, settings} from "./constants.mjs";
+import {debug} from "./utility/Debug.mjs";
 
 /**
  * ArrowReclamation class is mostly repurposed code from the legacy version of Forien's Armoury module
@@ -79,17 +80,17 @@ export default class ArrowReclamation {
    * Applies rules to see if projectile can be recovered
    *
    * @param roll
-   * @param percentageTarget
    * @param ammo
    *
-   * @returns boolean
+   * @returns {{recovered: boolean, percentageTarget, rule, percentageTotal: number}}
    */
-  #isProjectileSaved(roll, percentageTarget, ammo) {
-    let unbreakable = ammo.properties.qualities.unbreakable || false;
+  #isProjectileSaved(roll, ammo) {
+    const unbreakable = ammo.properties.qualities.unbreakable || false;
     if (unbreakable) return true;
-    let crit = (roll.isCritical !== undefined || roll.isFumble !== undefined);
-    let even = roll.result.roll % 2 === 0;
-    let success = roll.result.roll <= roll.result.target;
+    const percentageTarget = game.settings.get(constants.moduleId, settings.arrowReclamation.percentage);
+    const crit = (roll.isCritical !== undefined || roll.isFumble !== undefined);
+    const even = roll.result.roll % 2 === 0;
+    const success = roll.result.roll <= roll.result.target;
     let recovered;
     let sturdy;
     let frail;
@@ -101,10 +102,12 @@ export default class ArrowReclamation {
       formula = "2d100kh";
     }
 
-    let percentage = (new Roll(formula).roll({async: false}).total <= percentageTarget);
-    let sturdyRoll = (new Roll("1d100").roll({async: false}).total <= percentageTarget);
+    const percentageTotal = new Roll(formula).roll({async: false}).total;
+    const percentage = percentageTotal <= percentageTarget;
+    const sturdyRoll = (new Roll("1d100").roll({async: false}).total <= percentageTarget);
+    const rule = game.settings.get(constants.moduleId, settings.arrowReclamation.rule);
 
-    switch (game.settings.get(constants.moduleId, settings.arrowReclamation.rule)) {
+    switch (rule) {
       case 'success':
         if (sturdy) recovered = even; else recovered = even && success;
         if (frail && recovered) recovered = sturdyRoll;
@@ -139,7 +142,7 @@ export default class ArrowReclamation {
         if (frail && recovered) recovered = sturdyRoll;
     }
 
-    return recovered;
+    return {recovered, rule, percentageTotal, percentageTarget};
   }
 
   /**
@@ -150,32 +153,30 @@ export default class ArrowReclamation {
   checkRollWeaponTest(roll, _cardOptions) {
     // if feature not enabled, do nothing
     if (!game.settings.get(constants.moduleId, settings.arrowReclamation.enable))
-      return;
+      return debug('Arrow Reclamation is not enabled');
 
     // if there is no ammo, do nothing
-    let weapon = roll.weapon;
+    const weapon = roll.weapon;
     if (weapon === undefined || weapon.ammo === undefined || weapon.system.currentAmmo === undefined) return;
 
-    let ammoId = weapon.system.currentAmmo.value;
-    let actorId = roll.actor._id;
-    let recovered = false;
-    let message = ``;
-    let percentageTarget = game.settings.get(constants.moduleId, settings.arrowReclamation.percentage);
-    let ammo = weapon.ammo;
-    // let ammoQualities = ammo.system.qualities;
-
+    const ammo = weapon?.ammo;
     let type = this.#getAmmoType(weapon, ammo);
 
     // if type is not recognized or not allowed, do nothing
-    if (type === null) return;
+    if (type === null) return debug('Ammunition cannot be recovered', {type, ammo});
+
 
     // define chat messages
     type = game.i18n.localize('Forien.Armoury.Arrows.' + type);
     let messageNow = game.i18n.format('Forien.Armoury.Arrows.recovered', {type});
     let messageFuture = game.i18n.format('Forien.Armoury.Arrows.recoveredFuture', {type});
 
-    recovered = this.#isProjectileSaved(roll, percentageTarget, ammo);
+    const {recovered, rule, percentageTotal, percentageTarget} = this.#isProjectileSaved(roll, ammo);
+    debug('Ammunition recovery status:', {recovered, rule, roll, percentageTarget, percentageTotal, type, ammo});
 
+    const ammoId = weapon.system.currentAmmo.value;
+    const actorId = roll.actor._id;
+    let message = ``;
     if (recovered === true) {
       if (game.combat == null) {
         message = messageNow;
@@ -240,6 +241,7 @@ export default class ArrowReclamation {
 
       ammoEntity.system.quantity.value += quantity;
       actor.updateEmbeddedDocuments("Item", [{_id: ammoId, "system.quantity.value": ammoEntity.system.quantity.value}]);
+      debug('Ammunition recovered:', {ammoId, recoveredQuantity: quantity, newQuantity: ammoEntity.system.quantity.value});
 
       if (bulk) this.notifyAmmoReturned(actor, ammoEntity, userId, quantity);
     }, timeout);

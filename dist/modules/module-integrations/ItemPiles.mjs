@@ -1,4 +1,5 @@
 import {constants, flags, settings} from "../constants.mjs";
+import {debug} from "../utility/Debug.mjs";
 
 
 export default class ItemPiles {
@@ -49,8 +50,10 @@ export default class ItemPiles {
 
   initialize() {
     let imported = game.settings.get(constants.moduleId, settings.integrations.itemPiles.rolltablesImported)
-    if (imported === false)
+    if (imported === false) {
+      debug(`Merchant RollTables haven't been imported yet`);
       this.#importRollTables();
+    }
   }
 
   /**
@@ -282,10 +285,15 @@ export default class ItemPiles {
 
         entriesToRemove.push(entryKey)
       }
+
+      if (entriesToRemove.length === 0) continue;
+
+      debug(`Entries have been removed due to lacking official content module`, {rollTable, entriesToRemove});
       entriesToRemove.forEach(key => rollTable.results.delete(key));
     }
     await RollTable.updateDocuments(rollTables);
     game.settings.set(constants.moduleId, settings.integrations.itemPiles.rolltablesImported, true);
+    debug(`Merchant RollTables have been imported into folder`, {rollTables, folder});
 
     return folder.setFlag(constants.moduleId, flags.integrations.itemPiles.isImportFolder, true)
   }

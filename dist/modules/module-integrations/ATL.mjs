@@ -1,4 +1,5 @@
 import {constants, settings} from "../constants.mjs";
+import {debug} from "../utility/Debug.mjs";
 
 export default class ATL {
   /**
@@ -25,7 +26,9 @@ export default class ATL {
   }
 
   setPresets() {
-    game.settings.set("ATL", "presets", this.getWFRP4ePresets());
+    const presets = this.getWFRP4ePresets();
+    game.settings.set("ATL", "presets", presets);
+    debug('ATL presets have been overwritten with custom presets:', presets);
   }
 
   getWFRP4ePresets() {

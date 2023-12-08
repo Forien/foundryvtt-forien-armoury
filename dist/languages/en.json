@@ -294,6 +294,13 @@
           "RolltablesImportHint": "When checked, system will reimport all Merchant RollTables for Item Piles integration. WARNING: this will purge all contents of \"Merchant Rolltables\" folder!"
         }
       }
+    },
+
+    "Settings": {
+      "Debug": {
+        "Enable": "Debug",
+        "EnableHint": "Enable console debug outputs (client side)"
+      }
     }
   }
 }
