@@ -612,7 +612,15 @@ function luckyEvadecraft(args, self) {
     args.opposedTest.data.opposeResult.other.push(content)
   }
 
-  debug('"Lucky Evadecraft" is active during Pre-Opposed Defender.', {weapon: args.defenderTest.weapon, advances, required, isCritical, fortune: self.actor.status.fortune.value, effectArgs: args, effectThis: self});
+  debug('"Lucky Evadecraft" is active during Pre-Opposed Defender.', {
+    weapon: args.defenderTest.weapon,
+    advances,
+    required,
+    isCritical,
+    fortune: self.actor.status.fortune.value,
+    effectArgs: args,
+    effectThis: self
+  });
 }
 
 /**
@@ -697,7 +705,14 @@ function learnedMoves(args, self) {
       args.prefillModifiers.modifier += 10;
   }
 
-  debug('"Learned Moves" is active during Prefill Dialog.', {target, attacker, opponent, effectTargetId, effectArgs: args, effectThis: self});
+  debug('"Learned Moves" is active during Prefill Dialog.', {
+    target,
+    attacker,
+    opponent,
+    effectTargetId,
+    effectArgs: args,
+    effectThis: self
+  });
 }
 
 
@@ -746,18 +761,6 @@ function checkAdvances(weapon) {
 function findActorsMainWeapon(actor) {
   return actor.itemCategories.weapon.find(w => w.equipped && w.offhand.value === false) || null;
 }
-
-/**
- * Returns true if can use perk that requires provided amount of advances
- *
- * @param {ItemWfrp4e} weapon
- * @param {number} required
- * @return {boolean}
- */
-function canUsePerk(weapon, required) {
-  return checkAdvances(weapon) >= required;
-}
-
 
 /**
  * Generates warning to user about not enough advances to use the perk
