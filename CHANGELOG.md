@@ -2,6 +2,16 @@
 
 ## v1.X.X
 
+### v1.4.0
+* Added accessory: Amulet of „Resilience“
+* Added new career: Monster Hunter
+  * This career utilizes one of three unique Fighting Styles and focuses on tracking down and fighting monstrous beasts
+* Added new journal: Forien's Lore
+  * Describing Hunters' Guild and Runebounds
+* Added 8 new Talents
+  * `Fighting Style (Any)` and `Fighting Master (Style)` along with variant for every of the three styles.
+* Reworked structure of `.mjs` files in the module, since codebase grows
+
 ### v1.3.2
 * Added full debug support. Can be enabled in settings (client side)
   * Use `Forien's Armoury` as filter in console to only see this module's messages

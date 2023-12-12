@@ -19,6 +19,13 @@ const flags = {
     itemPiles: {
       isImportFolder: 'isImportFolder'
     }
+  },
+  talents: {
+    fightingStyle: 'fighting-style',
+    fightingMaster: 'fighting-master'
+  },
+  effects: {
+    target: 'target'
   }
 }
 

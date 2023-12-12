@@ -13,7 +13,6 @@
       },
 
       "CombatFatigue": {
-        "EnduranceSkillName": "Endurance",
         "CombatFatigueTest": " — Combat Fatigue"
       },
 
@@ -240,6 +239,57 @@
         "ConclusionCannot": "You can't complete your career yet.",
         "ConclusionCan": "Congratulations! You can complete your current career!",
         "ConclusionPotential": "You have „potential“ skills and/or talents, talk to your GM. They might count towards your career!"
+      },
+
+      "Effects": {
+        "SelectTalent": "Select Talent to add",
+        "AddTalent": "Add Talent",
+        "NotEnoughAdvances": "You do not have enough advances to run the \"{effect}\" effect! You have {advances}, but the effect requires {required}.",
+
+        "Steelstorm": {
+          "Assault": {
+            "Name": "Steelstorm Assault",
+            "Description": "{character} spends 2 Advantage to perform a Bonus Action with any Initiative value"
+          },
+          "AllIn": {
+            "Name": "Going All In",
+            "Description": "{character} goes <b>All In</b>, gaining +20 modifier to all attacks until the start of their next turn. However, during this time, all attackes aimed at this character will be <b>Unopposed</b>.",
+            "Mastery": "Because of Mastery, non-Damaging weapons become Damaging, while Damaging weapons become Impact instead"
+          }
+        },
+
+        "Ironshield": {
+          "Bracing": {
+            "Name": "Bracing",
+            "Description": "{character} is <b>Bracing</b> against incoming attacks, gaining +20 modifier to all defensive Weapon Tests. <br/>While Bracing, character can only move using their Walk speed and they are unable to perform any Actions (Free Actions are up to GM). <br/>Bracing ends the moment character initiates an Attack."
+          },
+          "Riposte": {
+            "Name": "Ironshield Riposte",
+            "Description": "{character} may spend 2 Advantage. If they do, they can immediately attack their attacker as a Free Action. This attack does not end Brace.",
+            "Mastery": "Additionally, thanks to Mastery, Ironshield Riposte can receive one of the following effects: Cause 1 @Condition[Bleeding], perform a \"Strike to Stun\" with your shield, or give –10 modifier to defend against the riposte."
+          }
+        },
+
+        "Evadecraft": {
+          "Disengage": {
+            "Name": "Shrewd Disengage",
+            "Description": "{character} may, once per Encounter, safely Disengage without spending Advantage."
+          },
+          "LuckyEvadecraft": {
+            "Name": "Lucky Evadecraft",
+            "Description": "Attacker scored a critical hit! {character} may spend a Fortune Point to force the Attacker to reroll their attack."
+          },
+          "ShrewdTrickery": {
+            "Name": "Shrewd Trickery",
+            "Description": "{character} can perform <b>Trick</b> ability with +10 modifier. Winning by 4 SL or more will award 2 Advantage instead of 1."
+          },
+          "Mastery": {
+            "NoTarget": "You need to target a token in order to Learn Moves!",
+            "AlreadyLearned": "You already learned moves from this opponent!",
+            "LearnedMoves": "Learned Moves",
+            "LearnedMovesDescription": "{character} spent their entire Action, studying their opponent's movement. Until the end of this Encounter, gain +10 modifier to all Weapon and Dodge Tests to attack or defend against this opponent."
+          }
+        }
       },
 
       "Settings": {

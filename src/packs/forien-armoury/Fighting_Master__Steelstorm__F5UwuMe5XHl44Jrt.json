@@ -1,0 +1,61 @@
+{
+  "name": "Fighting Master (Steelstorm)",
+  "type": "talent",
+  "img": "modules/forien-armoury/icons/talents/master_style_agressive.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Can only be learned by characters knowing @UUID[Compendium.forien-armoury.forien-armoury.Item.O987u5M0SL46gm3v]{Fighting Style (Steelstorm)}.</p><ul><li><p>When you go <strong>ALL IN</strong>, your weapon becomes Damaging. If it already was Damaging, <strong>replace</strong> Damaging with Impact.</p></li></ul>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "effects": [],
+  "folder": "c6bIK3vGnIqNXscz",
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "core": {},
+    "forien-armoury": {
+      "fighting-master": true
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1702057628149,
+    "modifiedTime": 1702395636746,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "F5UwuMe5XHl44Jrt",
+  "sort": 400000,
+  "_key": "!items!F5UwuMe5XHl44Jrt"
+}

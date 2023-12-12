@@ -1,0 +1,35 @@
+{
+  "icon": "modules/forien-armoury/icons/talents/style_defensive.webp",
+  "transfer": true,
+  "name": "Ironshield Ward",
+  "_id": "uvQPByonJ8u5osiL",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "prepareItem",
+      "effectApplication": "actor",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.ironshieldWard(args, this);",
+      "promptItem": false
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!Da4zReU57OnesKGd.uvQPByonJ8u5osiL"
+}

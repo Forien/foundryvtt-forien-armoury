@@ -1,0 +1,11 @@
+<div class="forien-armoury select-item">
+    {{#each styleTalents}}
+        <input type="radio" name="talent" id="{{this._id}}" data-id="{{this._id}}">
+        <label for="{{this._id}}">
+            <img class="image" src="{{this.img}}" alt="{{this.name}}">
+            <div class="name">
+                {{this.name}}
+            </div>
+        </label>
+    {{/each}}
+</div>

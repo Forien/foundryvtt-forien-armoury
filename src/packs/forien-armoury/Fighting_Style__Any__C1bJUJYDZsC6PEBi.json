@@ -1,0 +1,60 @@
+{
+  "name": "Fighting Style (Any)",
+  "type": "talent",
+  "img": "icons/skills/melee/strike-axe-blood-red.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You must choose one of:</p><ul><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.O987u5M0SL46gm3v]{Fighting Style (Steelstorm)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.Da4zReU57OnesKGd]{Fighting Style (Ironshield)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.CUWdlx3IhkmTPL57]{Fighting Style (Evadecraft)}</p></li></ul><p>And replace this talent with chosen one</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "effects": [
+    "4sXKiXRCpmHA8bmt"
+  ],
+  "folder": "c6bIK3vGnIqNXscz",
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1702057628149,
+    "modifiedTime": 1702229677710,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "C1bJUJYDZsC6PEBi",
+  "sort": 100000,
+  "_key": "!items!C1bJUJYDZsC6PEBi"
+}

@@ -117,6 +117,44 @@
     }
 
   }
+
+  /**
+   * Select Item Dialog
+   */
+  &.select-item {
+    input {
+      display: none;
+    }
+
+    label {
+      border: #bba022 solid 2px;
+      margin: 2px 5px;
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-template-columns: max-content 1fr;
+      grid-template-rows: 1fr;
+      gap: 0 0;
+      grid-template-areas: ". .";
+
+      .image {
+        width: 50px;
+        height: 50px;
+        display: block;
+      }
+
+      .name {
+        display: block;
+        align-self: center;
+        margin-left: 10px;
+      }
+    }
+
+    input:checked + label {
+      font-weight: bold;
+      box-shadow: 0 0 20px 0 #b79756, inset 0 0 20px 0 #b79756;
+    }
+  }
+
 }
 
 .app.window-app.sheet.wfrp4e.actor {

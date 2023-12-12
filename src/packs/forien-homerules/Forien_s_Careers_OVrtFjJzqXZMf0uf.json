@@ -3,17 +3,18 @@
   "name": "Forien's Careers",
   "pages": [
     "lV438LtXZvxHkmmK",
-    "e0UGR1lJQjdA68Er"
+    "e0UGR1lJQjdA68Er",
+    "A8Es3aCGIbGOfuUR"
   ],
   "flags": {
     "core": {}
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.305",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
     "createdTime": 1688246284014,
-    "modifiedTime": 1689341353211,
+    "modifiedTime": 1702397400967,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "OVrtFjJzqXZMf0uf",

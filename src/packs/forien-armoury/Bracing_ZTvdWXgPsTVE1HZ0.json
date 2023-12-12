@@ -1,0 +1,34 @@
+{
+  "icon": "modules/forien-armoury/icons/talents/style_defensive.webp",
+  "transfer": false,
+  "name": "Bracing",
+  "_id": "ZTvdWXgPsTVE1HZ0",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": 50,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "prefillDialog",
+      "effectApplication": "actor",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.bracing(args, this);"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!Da4zReU57OnesKGd.ZTvdWXgPsTVE1HZ0"
+}

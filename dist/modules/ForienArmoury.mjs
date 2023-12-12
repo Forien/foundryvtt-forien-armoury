@@ -1,14 +1,15 @@
 import Utility from "./utility/Utility.mjs";
-import ItemRepair from "./ItemRepair.mjs";
-import TemporaryRunes from "./Runes.mjs";
-import ArrowReclamation from "./ArrowReclamation.mjs";
+import ItemRepair from "./features/ItemRepair.mjs";
+import TemporaryRunes from "./features/Runes.mjs";
+import ArrowReclamation from "./features/ArrowReclamation.mjs";
 import Settings from "./Settings.mjs";
 import Integrations from "./Integrations.mjs";
-import CheckCareers from "./CheckCareers.mjs";
+import CheckCareers from "./features/CheckCareers.mjs";
 import {constants, settings} from "./constants.mjs";
-import CombatFatigue from "./CombatFatigue.mjs";
-import ItemProperties from "./ItemProperties.mjs";
+import CombatFatigue from "./features/CombatFatigue.mjs";
+import ItemProperties from "./features/ItemProperties.mjs";
 import {Debug} from "./utility/Debug.mjs";
+import {styleHelpers} from "./helpers/styleHelpers.js";
 
 export default class ForienArmoury {
   /**
@@ -19,6 +20,7 @@ export default class ForienArmoury {
    * @type TemporaryRunes
    */
   runes;
+  helpers;
   /**
    * @type ItemRepair
    */
@@ -70,6 +72,9 @@ export default class ForienArmoury {
     this.checkCareers = CheckCareers;
     this.integrations = new Integrations();
     this.#settings = new Settings();
+    this.helpers = {
+      styles: styleHelpers
+    };
   }
 
   /**

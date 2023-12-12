@@ -1,0 +1,111 @@
+{
+  "folder": "3hR05PJN5Gtv1I97",
+  "name": "Alpha Hunter",
+  "type": "career",
+  "img": "modules/forien-armoury/icons/careers/monster-hunter-4.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.A8Es3aCGIbGOfuUR]{Monster Hunter}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Monster Hunter"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Monster Hunters"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "4"
+    },
+    "status": {
+      "tier": "g",
+      "standing": 1
+    },
+    "characteristics": [
+      "ws",
+      "s",
+      "ag",
+      "i",
+      "t",
+      "fel"
+    ],
+    "skills": [
+      "Athletics",
+      "Dodge",
+      "Endurance",
+      "Gossip",
+      "Lore (Beasts)",
+      "Melee (Basic)",
+      "Perception",
+      "Ranged (Crossbow)",
+      "Set Trap",
+      "Track",
+      "Consume Alcohol",
+      "Cool",
+      "Language (Battle)",
+      "Melee (Two-Handed)",
+      "Outdoor Survival",
+      "Secret Signs (Scout)",
+      "Intimidate",
+      "Intuition",
+      "Melee (Any)",
+      "Navigation",
+      "Leadership",
+      "Ranged (Any)"
+    ],
+    "talents": [
+      "Commanding Presence",
+      "Inspiring",
+      "Slayer",
+      "Stout-hearted"
+    ],
+    "trappings": [
+      "Battle scars",
+      "Custom Anti-Monster Weapon",
+      "Squad of Hunters"
+    ],
+    "incomeSkill": [
+      5
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1688251075008,
+    "modifiedTime": 1702340060417,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_id": "h3mF46A5zd4vkdpI",
+  "sort": 400000,
+  "_key": "!items!h3mF46A5zd4vkdpI"
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Fighting Style (Steelstorm)",
+  "type": "talent",
+  "img": "modules/forien-armoury/icons/talents/style_agressive.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Masters of the Steelstorm Assault charge into battle with the relentless fury of a thunderstorm, striking first and striking hard, leaving opponents battered and bewildered in the wake of their initial onslaught.</p><ul><li><p>Once per Round. you may gain an additional Advantage, if you defeat an enemy before they could perform an attack that Round.</p></li></ul><p>You receive following perks, depending on Advances in Melee Skill used with currently equipped weapon:</p><ul><li><p><strong>5+</strong> – <em>Steelstorm Handling </em>— Treat every Slow melee weapon as if it weren't Slow. Treat every other one-handed melee weapon as if it were Fast</p></li><li><p><strong>10+</strong> – <em>Go All In</em> — You may, during your Turn, decide to go <strong>ALL IN</strong>, receiving a +20 modifier for your melee Weapon Test. If you do, all attacks aimed at you will be considered <strong>Unopposed</strong> until the start of your next turn.</p></li><li><p><strong>15+</strong> – <em>Steelstorm Assault</em> — Once per Encounter, you may spend 2 Advantage to perform a Bonus Action with any Initiative value</p></li></ul>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Melee when striking first in a Round"
+    }
+  },
+  "effects": [
+    "jaCdqRqMuY8i6BwM",
+    "tbjnVqFS8nuQX0sG",
+    "7Vg2r1TdLtsLuwG9",
+    "VuyggOGYWIVDjrfx",
+    "FRces1t4dMaoAyV5"
+  ],
+  "folder": "c6bIK3vGnIqNXscz",
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "core": {},
+    "forien-armoury": {
+      "fighting-style": true
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1702057628149,
+    "modifiedTime": 1702395601525,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "O987u5M0SL46gm3v",
+  "sort": 700000,
+  "_key": "!items!O987u5M0SL46gm3v"
+}
