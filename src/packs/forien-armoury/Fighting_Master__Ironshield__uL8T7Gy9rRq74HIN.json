@@ -1,7 +1,7 @@
 {
   "name": "Fighting Master (Ironshield)",
   "type": "talent",
-  "img": "modules/forien-armoury/icons/talents/master_style_defensive.webp",
+  "img": "modules/forien-armoury/icons/talents/style_defensive_master.webp",
   "system": {
     "description": {
       "type": "String",
@@ -52,7 +52,7 @@
     "systemVersion": "7.0.3",
     "coreVersion": "11.315",
     "createdTime": 1702057628149,
-    "modifiedTime": 1702389458171,
+    "modifiedTime": 1702482639285,
     "lastModifiedBy": "ZJyAmf2sKocHG1ud"
   },
   "_id": "uL8T7Gy9rRq74HIN",

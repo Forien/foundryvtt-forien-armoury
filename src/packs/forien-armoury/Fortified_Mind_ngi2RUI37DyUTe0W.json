@@ -1,0 +1,56 @@
+{
+  "folder": "c6bIK3vGnIqNXscz",
+  "name": "Fortified Mind",
+  "type": "talent",
+  "_id": "ngi2RUI37DyUTe0W",
+  "img": "modules/forien-armoury/icons/talents/fortified_mind.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You have trained your mind to be an impenetrable bulwark.</p><p>You may add your <strong>Willpower Bonus</strong> to your total <strong>Magical Endurance</strong> for each level of Fortified Mind. If your Willpower Bonus increases then the amount of Magical Endurance Fortified Mind provides also increases.</p><p>Also the amount of Magical Endurance that is recovered every hour is increased by one for everytime you've taken Fortified Mind.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "wp"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Any tests to resist mind probing and reading"
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1702479664625,
+    "modifiedTime": 1702482658965,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!items!ngi2RUI37DyUTe0W"
+}
