@@ -342,19 +342,20 @@
         },
 
         "CastingFatigue": {
+          "FortifiedMindTalent": "Fortified Mind",
           "Enable": "Enable Casting Fatigue",
-          "EnableHint": "",
-          "CostOfChanneling": "",
-          "CostOfChannelingHint": "",
-          "NegativeMEPerStep": "",
-          "NegativeMEPerStepHint": "",
-          "UseBaseCN": "",
-          "UseBaseCNHint": "",
-          "MaxME": "",
-          "MaxMEHint": "",
-          "TBtimesWPB": "",
-          "TBplusWPB": "",
-          "TBplus2WPB": ""
+          "EnableHint": "Should Casting Fatigue feature be enabled?",
+          "CostOfChanneling": "Cost of Channeling",
+          "CostOfChannelingHint": "How much ME is spent when attempting Channeling?",
+          "NegativeMEPerStep": "Difficulty Step",
+          "NegativeMEPerStepHint": "For every negative X, the difficulty of Endurance Test will increase. So a value of 5 will mean that Test becomes difficult on -5, hard on -10 etc.",
+          "UseBaseCN": "Use base CN?",
+          "UseBaseCNHint": "If checked, ME spent will be equal to spell's base CN. Otherwise, \"effective CN\" will be used (reduced by Channeling SL)",
+          "MaxME": "Maximum ME formula",
+          "MaxMEHint": "How should maximum amount of Magical Endurance be calculated for a character?",
+          "TBtimesWPB": "Toughness Bonus × Willpower Bonus",
+          "TBplusWPB": "Toughness Bonus + Willpower Bonus",
+          "TBplus2WPB": "Toughness Bonus + 2 × Willpower Bonus"
         },
 
         "ATL": {

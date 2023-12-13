@@ -55,9 +55,9 @@ export default class CastingFatigue {
    *
    * @param {ActorSheetWfrp4e} sheet
    * @param {jQuery} html
-   * @param {{}} options
+   * @param {{}} _options
    */
-  #onRenderActorSheet(sheet, html, options) {
+  #onRenderActorSheet(sheet, html, _options) {
     if (!this.magicalEnduranceEnabled) return;
 
     const tabMagic = html.find('.content .tab.magic');
@@ -234,15 +234,24 @@ export default class CastingFatigue {
    * @return {number}
    */
   getMaxMagicalEndurance(actor) {
+    let value;
+
     switch (Utility.getSetting(settings.magicalEndurance.maxME)) {
       case settings.magicalEndurance.maxME_TBplus2WPB:
-        return actor.characteristics.t.bonus + (2 * actor.characteristics.wp.bonus);
+        value = actor.characteristics.t.bonus + (2 * actor.characteristics.wp.bonus);
+        break;
       case settings.magicalEndurance.maxME_TBplusWPB:
-        return actor.characteristics.t.bonus + actor.characteristics.wp.bonus;
+        value = actor.characteristics.t.bonus + actor.characteristics.wp.bonus;
+        break;
       case settings.magicalEndurance.maxME_TBtimesWPB:
       default:
-        return actor.characteristics.t.bonus * actor.characteristics.wp.bonus
+        value = actor.characteristics.t.bonus * actor.characteristics.wp.bonus
     }
+
+    const talents = this.#countFortifiedMindTalent(actor);
+    value += talents * actor.characteristics.wp.bonus;
+
+    return value;
   }
 
   /**
@@ -252,7 +261,11 @@ export default class CastingFatigue {
    * @return {number}
    */
   getMagicalEnduranceRegeneration(actor) {
-    return actor.characteristics.wp.bonus;
+    let value = actor.characteristics.wp.bonus;
+    const talents = this.#countFortifiedMindTalent(actor);
+    value += talents;
+
+    return value;
   }
 
   /**
@@ -283,5 +296,16 @@ export default class CastingFatigue {
    */
   async saveMagicalEnduranceData(actor, data) {
     await actor.setFlag(constants.moduleId, flags.magicalEndurance.flag, data.toObject());
+  }
+
+  /**
+   * @param {ActorWfrp4e} actor
+   *
+   * @return {number}
+   */
+  #countFortifiedMindTalent(actor) {
+    const talentName = game.i18n.localize("Forien.Armoury.Settings.CastingFatigue.FortifiedMindTalent");
+
+    return actor.itemCategories.talent.filter(t => t.name === talentName).length;
   }
 }
