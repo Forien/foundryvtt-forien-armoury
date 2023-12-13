@@ -16,6 +16,61 @@ export default class Settings {
       type: Boolean
     });
 
+    // Add enable/disable setting for Casting Fatigue feature
+    game.settings.register(constants.moduleId, settings.magicalEndurance.enabled, {
+      name: 'Forien.Armoury.Settings.CastingFatigue.Enable',
+      hint: 'Forien.Armoury.Settings.CastingFatigue.EnableHint',
+      scope: 'world',
+      config: true,
+      default: false,
+      type: Boolean
+    });
+
+    // Define ME cost for channeling
+    game.settings.register(constants.moduleId, settings.magicalEndurance.costOfChanneling, {
+      name: 'Forien.Armoury.Settings.CastingFatigue.CostOfChanneling',
+      hint: 'Forien.Armoury.Settings.CastingFatigue.CostOfChannelingHint',
+      scope: 'world',
+      config: true,
+      default: 1,
+      type: Number
+    });
+
+    // Define how many negative ME increase difficulty by one step
+    game.settings.register(constants.moduleId, settings.magicalEndurance.negativeMEPerStep, {
+      name: 'Forien.Armoury.Settings.CastingFatigue.NegativeMEPerStep',
+      hint: 'Forien.Armoury.Settings.CastingFatigue.NegativeMEPerStepHint',
+      scope: 'world',
+      config: true,
+      default: 5,
+      type: Number
+    });
+
+    // Use Base CN if true, use Effective CN if false
+    game.settings.register(constants.moduleId, settings.magicalEndurance.useBaseCN, {
+      name: 'Forien.Armoury.Settings.CastingFatigue.UseBaseCN',
+      hint: 'Forien.Armoury.Settings.CastingFatigue.UseBaseCNHint',
+      scope: 'world',
+      config: true,
+      default: true,
+      type: Boolean
+    });
+
+    // Select a calculation method for maximum magical endurance
+    game.settings.register(constants.moduleId, settings.magicalEndurance.maxME, {
+      name: 'Forien.Armoury.Settings.CastingFatigue.MaxME',
+      hint: 'Forien.Armoury.Settings.CastingFatigue.MaxMEHint',
+      scope: 'world',
+      config: true,
+      default: 'TBtimesWPB',
+      type: String,
+      choices: {
+        [settings.magicalEndurance.maxME_TBtimesWPB]: 'Forien.Armoury.Settings.CastingFatigue.TBtimesWPB',
+        [settings.magicalEndurance.maxME_TBplusWPB]: 'Forien.Armoury.Settings.CastingFatigue.TBplusWPB',
+        [settings.magicalEndurance.maxME_TBplus2WPB]: 'Forien.Armoury.Settings.CastingFatigue.TBplus2WPB'
+      }
+    });
+
     // Add enable/disable setting for combat fatigue feature
     game.settings.register(constants.moduleId, settings.combatFatigue.enable, {
       name: 'Forien.Armoury.Settings.CombatFatigue.Enable',

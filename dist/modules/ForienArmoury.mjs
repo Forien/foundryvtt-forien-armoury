@@ -10,43 +10,58 @@ import CombatFatigue from "./features/CombatFatigue.mjs";
 import ItemProperties from "./features/ItemProperties.mjs";
 import {Debug} from "./utility/Debug.mjs";
 import {styleHelpers} from "./helpers/styleHelpers.js";
+import CastingFatigue from "./features/CastingFatigue.mjs";
 
 export default class ForienArmoury {
   /**
-   * @type SocketlibSocket
+   * @type {SocketlibSocket}
+   * @public
    */
   socket;
   /**
-   * @type TemporaryRunes
+   * @type {TemporaryRunes}
+   * @public
    */
   runes;
   helpers;
   /**
-   * @type ItemRepair
+   * @type {ItemRepair}
+   * @public
    */
   itemRepair;
   /**
-   * @type CombatFatigue
+   * @type {CombatFatigue}
+   * @public
    */
   combatFatigue;
   /**
-   * @type ItemProperties
+   * @type {CastingFatigue}
+   * @public
+   */
+  magicEndurance;
+  /**
+   * @type {ItemProperties}
+   * @public
    */
   itemProperties;
   /**
-   * @type ArrowReclamation
+   * @type {ArrowReclamation}
+   * @public
    */
   arrowReclamation;
   /**
-   * @type CheckCareers
+   * @type {CheckCareers}
+   * @public
    */
   checkCareers;
   /**
-   * @type Integrations
+   * @type {Integrations}
+   * @public
    */
   integrations;
   /**
-   * @type Settings
+   * @type {Settings}
+   * @public
    */
   #settings;
 
@@ -67,6 +82,7 @@ export default class ForienArmoury {
     this.runes = new TemporaryRunes();
     this.itemRepair = new ItemRepair();
     this.combatFatigue = new CombatFatigue();
+    this.magicEndurance = new CastingFatigue();
     this.itemProperties = new ItemProperties();
     this.arrowReclamation = new ArrowReclamation();
     this.checkCareers = CheckCareers;
@@ -95,6 +111,7 @@ export default class ForienArmoury {
     this.runes.bindHooks();
     this.itemRepair.bindHooks();
     this.combatFatigue.bindHooks();
+    this.magicEndurance.bindHooks();
     this.itemProperties.bindHooks();
     this.arrowReclamation.bindHooks();
     this.integrations.bindHooks();
@@ -106,12 +123,13 @@ export default class ForienArmoury {
    * Preloads templates used by the modules.
    */
   #preloadTemplates() {
-      let itemRepairTemplates = this.itemRepair.getTemplates();
-      let arrowReclamationTemplates = this.arrowReclamation.getTemplates();
-      let checkCareersTemplates = this.checkCareers.templates;
-      let templates = [...itemRepairTemplates, ...arrowReclamationTemplates, ...checkCareersTemplates];
+    let itemRepairTemplates = this.itemRepair.getTemplates();
+    let arrowReclamationTemplates = this.arrowReclamation.getTemplates();
+    let checkCareersTemplates = this.checkCareers.templates;
+    let magicalEnduranceTemplates = this.magicEndurance.templates;
+    let templates = [...itemRepairTemplates, ...arrowReclamationTemplates, ...checkCareersTemplates, ...magicalEnduranceTemplates];
 
-      Utility.preloadTemplates(templates);
+    Utility.preloadTemplates(templates);
   }
 
   /**

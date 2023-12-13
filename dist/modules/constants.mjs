@@ -26,6 +26,13 @@ const flags = {
   },
   effects: {
     target: 'target'
+  },
+  magicalEndurance: {
+    flag: 'magical-endurance',
+    value: 'value',
+    regenPerHour: 'regen',
+    lastRegen: 'lastRegen',
+    maximum: 'maximum'
   }
 }
 
@@ -55,6 +62,16 @@ const settings = {
   },
   runes: {
     enableDamage: 'runes.damageEnable'
+  },
+  magicalEndurance: {
+    enabled: 'magicalEndurance.enabled',
+    maxME: 'magicalEndurance.maxME',
+    maxME_TBtimesWPB: 'TBtimesWPB',
+    maxME_TBplusWPB: 'TBplusWPB',
+    maxME_TBplus2WPB: 'TBplus2WPB',
+    costOfChanneling: 'magicalEndurance.costOfChanneling',
+    negativeMEPerStep: 'magicalEndurance.negativeMEPerStep',
+    useBaseCN: 'magicalEndurance.useBaseCN'
   }
 }
 

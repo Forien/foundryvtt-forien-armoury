@@ -1,0 +1,287 @@
+import {debug} from "../utility/Debug.mjs";
+import {constants, flags, settings} from "../constants.mjs";
+import Utility from "../utility/Utility.mjs";
+import MagicEnduranceDataModel from "../data-models/MagicEnduranceDataModel.js";
+
+export default class CastingFatigue {
+  #templates = {
+    magicalEndurance: 'partials/actor-sheet-wfrp4e-magical-endurance.hbs',
+  }
+
+  get templates() {
+    return Object.values(this.#templates);
+  }
+
+  /**
+   * @return {number}
+   */
+  get costOfChanneling() {
+    return Utility.getSetting(settings.magicalEndurance.costOfChanneling);
+  }
+
+  /**
+   * @return {number}
+   */
+  get negativeMEPerStep() {
+    return Utility.getSetting(settings.magicalEndurance.negativeMEPerStep);
+  }
+
+  /**
+   * @return {boolean}
+   */
+  get useBaseCN() {
+    return Utility.getSetting(settings.magicalEndurance.useBaseCN)
+  }
+
+
+  /**
+   * @return {boolean}
+   */
+  get magicalEnduranceEnabled() {
+    return Utility.getSetting(settings.magicalEndurance.enabled)
+  }
+
+  /**
+   *
+   */
+  bindHooks() {
+    Hooks.on("wfrp4e:rollChannelTest", this.#processRollChannelTest.bind(this));
+    Hooks.on("wfrp4e:rollCastTest", this.#processRollCastTest.bind(this));
+    Hooks.on("renderActorSheetWfrp4eCharacter", this.#onRenderActorSheet.bind(this));
+    Hooks.on("renderActorSheetWfrp4eNPC", this.#onRenderActorSheet.bind(this));
+  }
+
+  /**
+   *
+   * @param {ActorSheetWfrp4e} sheet
+   * @param {jQuery} html
+   * @param {{}} options
+   */
+  #onRenderActorSheet(sheet, html, options) {
+    if (!this.magicalEnduranceEnabled) return;
+
+    const tabMagic = html.find('.content .tab.magic');
+    const actor = sheet.actor;
+    const magicalEndurance = this.getMagicalEnduranceData(actor);
+
+    renderTemplate(Utility.getTemplate(this.#templates.magicalEndurance), magicalEndurance).then(content => {
+      tabMagic.prepend(content);
+
+      html.find('#magical-endurance-value').change((ev) => this.#onMagicalEnduranceValueChange(ev, actor));
+    });
+  }
+
+  /**
+   * @param {Event} ev
+   * @param {ActorWfrp4e} actor
+   *
+   * @return {Promise<void>}
+   */
+  async #onMagicalEnduranceValueChange(ev, actor) {
+    const value = ev.target.value;
+    const magicalEndurance = this.getMagicalEnduranceData(actor);
+    magicalEndurance.value = value;
+    await this.saveMagicalEnduranceData(actor, magicalEndurance);
+    actor.sheet?.render();
+  }
+
+  /**
+   * @param {TestWFRP} test
+   * @param {{}} options
+   */
+  #processRollCastTest(test, options) {
+    if (!this.magicalEnduranceEnabled) return;
+
+    debug('magicalEndurance #processRollCastTest', {test, options, enabled: this.magicalEnduranceEnabled});
+
+    if (!(test.actor instanceof ActorWfrp4e && test.actor.isOwner))
+      return;
+
+    this.spendMagicalEndurance(test.actor, this.getCnToUse(test));
+  }
+
+  /**
+   * @param {TestWFRP} test
+   * @param {{}} options
+   */
+  #processRollChannelTest(test, options) {
+    if (!this.magicalEnduranceEnabled) return;
+    debug('magicalEndurance #processRollChannelTest', {test, options, enabled: this.magicalEnduranceEnabled});
+
+    if (!(test.actor instanceof ActorWfrp4e && test.actor.isOwner))
+      return;
+
+    this.spendMagicalEndurance(test.actor, this.costOfChanneling);
+  }
+
+  /**
+   * @param {TestWFRP} test
+   *
+   * @return {number}
+   */
+  getCnToUse(test) {
+    return parseInt(this.useBaseCN ? test.spell?.cn.value : (test.spell?.cn.value - test.spell?.cn.SL));
+  }
+
+  /**
+   *
+   * @param {ActorWfrp4e} actor
+   * @param {number} endurance
+   *
+   * @return {Promise<void>}
+   */
+  async spendMagicalEndurance(actor, endurance) {
+    const magicalEndurance = this.getMagicalEnduranceData(actor);
+    magicalEndurance.value -= endurance;
+
+    await this.#processMagicalFatigue(actor, magicalEndurance);
+    await this.saveMagicalEnduranceData(actor, magicalEndurance);
+  }
+
+  /**
+   *
+   * @param {MagicEnduranceDataModel} magicalEndurance
+   *
+   * @return {number|false}
+   */
+  checkMagicalEnduranceThreshold(magicalEndurance) {
+    return magicalEndurance.value < 0 ? Math.floor(magicalEndurance.value / -this.negativeMEPerStep) : false;
+  }
+
+  /**
+   *
+   * @param {ActorWfrp4e} actor
+   * @param {MagicEnduranceDataModel} magicalEndurance
+   *
+   * @return {TestWFRP|false}
+   */
+  async #processMagicalFatigue(actor, magicalEndurance) {
+    const steps = this.checkMagicalEnduranceThreshold(magicalEndurance);
+
+    if (steps === false) return false;
+
+    const difficulty = this.getDifficultyFromSteps(steps);
+    const test = await this.#performEnduranceTest(actor, difficulty);
+    const outcome = test.outcome;
+
+    if (outcome === 'failure')
+      await actor.addCondition('fatigued');
+
+    debug('magicalEndurance dropped below 0', {magicalEndurance, steps, difficulty, test, outcome});
+
+    return test;
+  }
+
+  /**
+   *
+   * @param {ActorWfrp4e} actor
+   * @param {string} difficulty
+   *
+   * @return {Promise<TestWFRP>}
+   */
+  async #performEnduranceTest(actor, difficulty) {
+    const enduranceSkill = game.i18n.localize("NAME.Endurance");
+    const failure = [game.i18n.format("Forien.Armoury.MagicalEndurance.TestFailure", {character: actor.name})];
+    const success = [game.i18n.format("Forien.Armoury.MagicalEndurance.TestSuccess", {character: actor.name})];
+    const appendTitle = game.i18n.localize("Forien.Armoury.MagicalEndurance.MagicalEnduranceTest");
+
+    const test = await actor.setupSkill(enduranceSkill, {
+      context: {failure, success},
+      absolute: {difficulty},
+      appendTitle: appendTitle
+    })
+
+    await test.roll();
+
+    return test;
+  }
+
+  /**
+   * @param {number} steps
+   * @return {string}
+   */
+  getDifficultyFromSteps(steps) {
+    const difficulties = this.#getNegativeDifficulties();
+    const maxStep = difficulties.length - 1;
+    const step = steps <= maxStep ? steps : maxStep;
+
+    return difficulties[step];
+  }
+
+  /**
+   * Returns array of difficulty KEYS, sorted from challenging (+0) to hardest (-??)
+   *
+   * @return {string[]}
+   */
+  #getNegativeDifficulties() {
+    const difficultyModifiers = game.wfrp4e.config.difficultyModifiers;
+    let difficulties = [];
+
+    for (let difficulty in difficultyModifiers) {
+      const modifier = difficultyModifiers[difficulty];
+      if (modifier > 0) continue;
+
+      difficulties.push({difficulty, modifier});
+    }
+
+    return difficulties.sort((a, b) => a.modifier < b.modifier ? 1 : -1).map(d => d.difficulty);
+  }
+
+  /**
+   *
+   * @param {ActorWfrp4e} actor
+   *
+   * @return {number}
+   */
+  getMaxMagicalEndurance(actor) {
+    switch (Utility.getSetting(settings.magicalEndurance.maxME)) {
+      case settings.magicalEndurance.maxME_TBplus2WPB:
+        return actor.characteristics.t.bonus + (2 * actor.characteristics.wp.bonus);
+      case settings.magicalEndurance.maxME_TBplusWPB:
+        return actor.characteristics.t.bonus + actor.characteristics.wp.bonus;
+      case settings.magicalEndurance.maxME_TBtimesWPB:
+      default:
+        return actor.characteristics.t.bonus * actor.characteristics.wp.bonus
+    }
+  }
+
+  /**
+   *
+   * @param {ActorWfrp4e} actor
+   *
+   * @return {number}
+   */
+  getMagicalEnduranceRegeneration(actor) {
+    return actor.characteristics.wp.bonus;
+  }
+
+  /**
+   * @param {ActorWfrp4e} actor
+   *
+   * @return {MagicEnduranceDataModel}
+   */
+  getMagicalEnduranceData(actor) {
+    const data = actor.getFlag(constants.moduleId, flags.magicalEndurance.flag);
+    const model = new MagicEnduranceDataModel(data);
+
+    // always recalculate regen and maximum
+    model.maximum = this.getMaxMagicalEndurance(actor);
+    model.regen = this.getMagicalEnduranceRegeneration(actor);
+
+    // if value was never set, set it to maximum
+    if (model.value === undefined)
+      model.value = model.maximum;
+
+    return model;
+  }
+
+  /**
+   * @param {ActorWfrp4e} actor
+   * @param {MagicEnduranceDataModel} data
+   *
+   * @return {MagicEnduranceDataModel}
+   */
+  async saveMagicalEnduranceData(actor, data) {
+    await actor.setFlag(constants.moduleId, flags.magicalEndurance.flag, data.toObject());
+  }
+}

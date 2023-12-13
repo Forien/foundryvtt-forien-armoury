@@ -51,7 +51,7 @@ export default class CombatFatigue {
     let roundsBeforeTest = this.#getRoundsBeforeTest(previousCombatant, actor);
     roundsBeforeTest--;
 
-    debug('Combat Fatigue status', {previousCombatant, actor, roundsBeforeTest});
+    debug('Combat Fatigue status', previousCombatant, actor, roundsBeforeTest);
 
     if (roundsBeforeTest <= 0) {
       const {outcome, SL} = await this.#performTest(actor);

@@ -16,6 +16,15 @@
         "CombatFatigueTest": " — Combat Fatigue"
       },
 
+      "CastingFatigue": {
+        "MagicalEnduranceTest": " — Casting Fatigue",
+        "TestFailure": "{character} received <b>1 Fatigued</b> Condition.",
+        "TestSuccess": "{character} staved off Fatigue for now…",
+        "MagicalEndurance": "Magical Endurance",
+        "Regen": "Regeneration",
+        "PerHourShort": "/ hr"
+      },
+
       "ItemRepair": {
         "MustControlActor": "Must control the character you want to repair items for.",
         "Repaired": "{name} has been repaired. Removed {repaired} damage from the item.",
@@ -330,6 +339,22 @@
           "EnableHint": "When enabled, combatants will have to pass Endurance Test after TB rounds, or gain Fatigue",
           "EnableNPC": "NPC Combat Fatigue",
           "EnableNPCHint": "Should NPCs follow the rules of Combat Fatigue (if enabled)?"
+        },
+
+        "CastingFatigue": {
+          "Enable": "Enable Casting Fatigue",
+          "EnableHint": "",
+          "CostOfChanneling": "",
+          "CostOfChannelingHint": "",
+          "NegativeMEPerStep": "",
+          "NegativeMEPerStepHint": "",
+          "UseBaseCN": "",
+          "UseBaseCNHint": "",
+          "MaxME": "",
+          "MaxMEHint": "",
+          "TBtimesWPB": "",
+          "TBplusWPB": "",
+          "TBplus2WPB": ""
         },
 
         "ATL": {
