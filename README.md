@@ -41,9 +41,9 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
 
 ### Recommended: Install via FoundryVTT
 
-FoundryVTT will automatically install the Module and will prompt you to download recommended Modules as well.
+FoundryVTT will automatically install the Module and its dependencies, while also prompting you to download optional, recommended Modules.
 
-Once installed, while in World using WFRP4e game system, enable Forien's Armoury module
+Once installed, while in World using WFRP4e game system, enable `Forien's Armoury` module.
 
 ### Manual
 
@@ -57,23 +57,25 @@ Once installed, while in World using WFRP4e game system, enable Forien's Armoury
 ## Contents
 ### Features
 This Module adds some QoL and automation features, including mechanics that:
-* Allow for automatic removal of Temporary Runes when they get disabled (prefferably by `Times Up` Module). 
+* Allow for automatic removal of Temporary Runes when they get disabled (preferably by `Times Up` Module). 
   * Optionally allows for damaging an Item when Rune is removed (disabled by default).
-* Allow players to easily repair their equipment for free or for price, using Macro and clean, readable auto-updating Chat Card
-* Allow players to quickly check their progress through current Career and how far are they from completing it.
-* Allow players to reclaim portion of ammunition (arrows, bolts or sling bullets) after an encounter. Defaults to even rolls. Disabled by default.
+* Item Repair (Macro), allow players to easily repair their equipment for free or for price, using Macro and clean, readable auto-updating Chat Card
+* Check Careers (Macro), allows players to quickly check their progress through current Career and how far are they from completing it.
+* Arrow Reclamation, allowing players to recover some of ammunition (arrows, bolts or sling bullets) after an encounter. Defaults to even rolls. Disabled by default.
 * Combat Fatigue, using optional "Getting Tired" ruleset.
+* Casting Fatigue, providing soft limit to amount of spells that can be cast in short amount of time.
 
 
 ### Items
-Module contains single Compendium pack containing over 80 entries (items and effects).
+Module contains single Compendium pack containing over 117 entries (items and effects).
 
-* Added 8 new **Careers** across 2 new Career Paths
-  * Runesmith
+* Added 12 new **Careers** across 3 new Career Paths
+  * Monster Hunter
   * Runebound Ranger
+  * Runesmith
 * Added 32 Runes implemented as working Active Effects
 * Added 1 new **Skill** (Runecraft)
-* Added 2 new **Talents** (Dawi Runes, Runebound Magic)
+* Added 11 new **Talents** (Dawi Runes, Runebound Magic, Fortifiend Mind, 3x Fighting Styles and 3x Fighting Masters)
 * Added 2 new **Traits** (Point Blank Rule, Repulsive)
 * Added 11 new and rebalanced **Armour** items:
   * Added Gambesons as an alternative to Leather armour
@@ -94,8 +96,9 @@ Module contains single Compendium pack containing over 80 entries (items and eff
   * Spear
   * Spear (2h)
   * Torch
-* Added 5 new **Accessories**:
+* Added 6 new **Accessories**:
   * Amulet of „Protection“
+  * Amulet of „Resilience“
   * Elegant Pipe
   * Ring of See Invisibility
   * Ring of Smell
@@ -110,7 +113,8 @@ Module contains single Compendium pack containing over 80 entries (items and eff
 Module contains single Compendium Pack containing two Journals:
 
 * Forien's Homerules — this Journal contains my own Homerules, as well as rules for some of the Items included in this Module.
-* Forien's Careers — this Journal only contains detailed descriptions for Careers included with this Module.  
+* Forien's Careers — this Journal only contains detailed descriptions for Careers included with this Module.
+* Forien's Lore — this Journal only contains non-mechanical descriptions of some homebrew concepts I introduced, such as `Hunters' Guild` or the `Runebound` species.
 
 
 ### Macros
@@ -137,11 +141,15 @@ You can open the console by using `F12` keybind on most browsers.
 
 
 ## Recommended 3rd Party Modules
+These modules are important for functionality of this module's **Features**. While not strictly **required**, I highly recommend using them:
 * [Times Up](https://foundryvtt.com/packages/times-up) — Allows for automatic disabling of effects, especially useful for Temporary Runes introduced in Forien's Armoury
-* [Active Token Effects](https://foundryvtt.com/packages/ATL) — Allows to use presets such as "torch" etc. for Lighting items 
 
 ### Other suggested modules
-* [Item Piles](https://foundryvtt.com/packages/item-piles) — Awesome module that allows you to make tokens lootable, create treasure chests, bank vaults and - most importantly in my opinion - merchants. Forien's Armoury includes 92 Rollable Tables ready to be used to Populate Items for Merchants, as well as 6 prefab merchants!  
+These modules work with _some Documents_ (Actors, Items etc.) I provide in the Compendiums. Those are only necessary if you plan on using those Documents.
+* [Active Token Effects](https://foundryvtt.com/packages/ATL) — Allows to use presets such as "torch" etc. for Lighting items
+* [Item Piles](https://foundryvtt.com/packages/item-piles) — Awesome module that allows you to make tokens lootable, create treasure chests, bank vaults and - most importantly in my opinion - merchants. Forien's Armoury includes 92 Rollable Tables ready to be used to Populate Items for Merchants, as well as 6 prefab merchants!
+
+### Notable mentions
 * [DFreds Effects Panel](https://foundryvtt.com/packages/dfreds-effects-panel) — Isn't specifically linked to Forien's Armoury in any way, but provides nice and clean effects display with ability to toggle them, so I recommend trying it 
 
 
@@ -151,11 +159,10 @@ You can open the console by using `F12` keybind on most browsers.
 
 ### Features
 * Easy to use UI for creating runic items
-* Activatable Torches, that automatically turn into equippable weapon version of a torch
 
 ### Content
 * New Career Paths
-  * Monster Hunter – mundane alternative to the Runebound Ranger, trained to specialize in one of several fighting style
+  * [Added in v1.4.0] ~~Monster Hunter – mundane alternative to the Runebound Ranger, trained to specialize in one of several fighting style~~
   * Hunter Engineer – an Engineer that specializes in weapons, traps and gadgets designed to be effective against monsters
 * More dwarven Runes
 
@@ -188,7 +195,8 @@ _Disclaimer: I kept all acknowledgments, even if their respective work was lost 
 * Thanks to LeRatierBretonnien and Gharazel for providing French translation! 
 * Thanks to ElCamino for providing German translation!
 * Thanks to [silent_mark](https://github.com/silentmark) for contributing to Polish translation!
-* Thanks to Nibbler from The Rat Catchers Guild on Discord for providing his price tables 
+* Thanks to Nibbler from The Rat Catchers Guild on Discord for providing his price tables
+* Thanks to VividOblivion for proposing and designing a `Casting Fatigue` rule!
 
 
 
