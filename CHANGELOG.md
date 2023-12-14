@@ -11,6 +11,8 @@
 * Added 8 new Talents
   * `Fighting Style (Any)` and `Fighting Master (Style)` along with variant for every of the three styles.
 * Reworked structure of `.mjs` files in the module, since codebase grows
+* Created Settings App, which allows to display settings in more visually appealing and intuitive way
+* Modified some icons by adding a wfrp4e-style border to them.
 
 ### v1.3.2
 * Added full debug support. Can be enabled in settings (client side)

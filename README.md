@@ -13,6 +13,17 @@ This module is a collection of custom trappings and features for Warhammer Fanta
 Forien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded
 
 
+### Notable changes in v1.4.0
+* Added accessory: `Amulet of „Resilience“`
+* Added new career: `Monster Hunter`
+  * This career utilizes one of three unique **Fighting Styles** and focuses on tracking down and fighting monstrous beasts
+* Added new journal: `Forien's Lore`
+  * Describing **Hunters' Guild** and **Runebounds**
+* Added 8 new Talents
+  * `Fighting Style (Any)` and `Fighting Master (Style)` along with variant for every of the three styles.
+* Created Settings App, which allows to display settings in more visually appealing and intuitive way
+* Several smaller changes, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
+
 ### Notable changes in v1.3.0
 * Reintroduced the **Slashing**, **Recoverable** and **Unrecoverable** properties for weapons and ammunition
 * Introduced new **Incendiary, Poisonous** and **Blinding** qualities
@@ -25,40 +36,6 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
 * Minor fixes to items (improved gunpowder, powder horns)
 * Several smaller changes and fixes, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
 
-### Notable changes in v1.2.0
-* Updated links in Journals to fit the `WFRP4e Core 4.0.0` compendium structure
-* Several smaller fixes, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
-
-### Notable changes in v1.1.0
-* Minor bug fixes
-* Added integration with ATL and Item Piles modules!
-  * This module now is capable of setting predefined presets in ATL
-  * Easy way of adding new currencies to Item Piles Configuration
-  * Prefab Merchants and ready-to-use Rollable Tables full of item references (require official WFRP4e modules)
-* Tweaks to some macros
-
-### Notable changes in v1.0.0
-* Module was remade from the ground up, not updated
-  * It was easier this way, since Migrating from Foundry 0.6 to Foundry 11 would most likely break stuff
-* Added bunch of my own Houserules in a Journal
-* Added new careers:
-  * Dwarven Runesmiths
-  * Runebound Rangers
-* Added bunch of new items, weapons, trappings
-  * Generic Ingredients for each Tradition
-  * Gambeson type Armour
-  * Rebalanced Soft Leather Armour
-  * Changed Breastplate (only covers front)
-  * Added Cuirass (more like vanilla Breastplate)
-  * Powder Kegs
-  * Quivers and Powder Horns
-  * and more 
-* Added fully automated Rune support for Runesmith
-  * Runes are effects on Items
-  * Temporary Runes when disabled will delete themselves from Actor and Item
-  * Optionally, Item will be damaged when Temporary Rune is removed from it
-  * For best effects, I suggest using [Times Up](https://foundryvtt.com/packages/times-up) by Tim Posney
-* Added new type of Magic for Runebound Rangers
 
 ## Installation
 
