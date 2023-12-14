@@ -7,7 +7,7 @@ export default class CheckCareers {
   }
 
   static get templates() {
-    return Object.values(CheckCareers.#templates);
+    return CheckCareers.#templates;
   }
 
   /**

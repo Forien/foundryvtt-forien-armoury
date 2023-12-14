@@ -9,7 +9,7 @@ export default class CastingFatigue {
   }
 
   get templates() {
-    return Object.values(this.#templates);
+    return this.#templates;
   }
 
   /**

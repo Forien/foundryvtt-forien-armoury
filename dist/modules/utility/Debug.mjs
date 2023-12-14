@@ -4,6 +4,10 @@ import Utility from "./Utility.mjs";
 class Debug {
   static #debugSetting = 'debug';
 
+  static get setting() {
+    return Debug.#debugSetting;
+  }
+
   /**
    * Prints current module's settings to console for reference
    */
@@ -26,11 +30,11 @@ class Debug {
    * Registers the setting with the Foundry to allow users to enable Debug mode
    */
   static registerSetting() {
-    game.settings.register(constants.moduleId, Debug.#debugSetting, {
+    game.settings.register(constants.moduleId, Debug.setting, {
       name: 'Forien.Settings.Debug.Enable',
       hint: 'Forien.Settings.Debug.EnableHint',
       scope: 'client',
-      config: true,
+      config: false,
       default: false,
       type: Boolean
     });

@@ -302,6 +302,18 @@
       },
 
       "Settings": {
+        "MenuName": "Access Armoury's Settings",
+        "MenuLabel": "Settings",
+        "MenuHint": "Open dedicated window which will show all settings divided in intuitive tabs",
+
+        "Tabs": {
+          "Main": "Miscellaneous",
+          "ArrowReclamation": "Arrow Reclamation",
+          "CombatFatigue": "Combat Fatigue",
+          "CastingFatigue": "Casting Fatigue",
+          "Integrations": "Integrations"
+        },
+
         "Runes": {
           "Enable": "Item damage from Runes",
           "EnableHint": "If enabled, Items will get damaged when a Temporary Rune engraved on them is disabled/used."
@@ -368,6 +380,18 @@
           "SetCurrenciesHint": "When checked, this module will set Item Pile's currencies to use all of custom coins provided with Forien's Armoury. However, it is not suggested to use all 10 coins together as default.",
           "RolltablesImport": "Re-Import RollTables",
           "RolltablesImportHint": "When checked, system will reimport all Merchant RollTables for Item Piles integration. WARNING: this will purge all contents of \"Merchant Rolltables\" folder!"
+        },
+
+        "Promo": {
+          "Promo1": "Hello! I'm Forien, an author of this module. Please accept my thanks for installing and using my Armoury, it means a lot to me. I hope you are enjoying all the features and content this module provides and that it enhances your game!",
+          "Promo2": "If you have any suggestions or request, feel free to contact me on Discord, or drop an \"Issue\" on GitHub. You can find links below.",
+          "Promo3": "If you enjoy this module and would like to support its development, please consider becoming a Patreon supporter, or tipping via Ko-Fi.",
+          "ModuleOn": "Module on",
+          "FVTTWebsite": "Foundry VTT website",
+          "ProjectOn": "Project on",
+          "Github": "GitHub",
+          "CheckOtherModules": "Check my other modules on",
+          "MyFVTTProfile": "my Foundry VTT profile"
         }
       }
     },

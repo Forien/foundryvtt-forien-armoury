@@ -37,6 +37,7 @@ const flags = {
 }
 
 const settings = {
+  app: `${constants.moduleId}-settings-app`,
   arrowReclamation: {
     enable: 'arrowReclamation.Enable',
     enableArrows: 'arrowReclamation.EnableArrows',

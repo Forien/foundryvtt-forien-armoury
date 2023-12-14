@@ -6,7 +6,7 @@
         </div>
         <div class="item-repair-body">
             {{#if (eq type 'armour')}}
-                {{> modules/forien-armoury/templates/partials/repair-item-armour.hbs item=item paid=paid }}
+                {{> forien-armoury.itemRepair.repairItemEntryArmour item=item paid=paid }}
             {{/if}}
             {{#if (eq item.damage item.maxDamage)}}
                 {{#if (eq type 'weapon')}}
@@ -17,10 +17,10 @@
                 {{/if}}
             {{else}}
                 {{#if (eq type 'weapon')}}
-                    {{> modules/forien-armoury/templates/partials/repair-item-weapon.hbs item=item paid=paid }}
+                    {{> forien-armoury.itemRepair.repairItemEntryWeapon item=item paid=paid }}
                 {{/if}}
                 {{#if (eq type 'trapping')}}
-                    {{> modules/forien-armoury/templates/partials/repair-item-weapon.hbs item=item paid=paid }}
+                    {{> forien-armoury.itemRepair.repairItemEntryWeapon item=item paid=paid }}
                 {{/if}}
             {{/if}}
         </div>

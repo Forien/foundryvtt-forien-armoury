@@ -1,4 +1,5 @@
 import {constants, settings} from "./constants.mjs";
+import SettingsApp from "./apps/SettingsApp.mjs";
 
 export default class Settings {
 
@@ -6,12 +7,21 @@ export default class Settings {
    * Registers settings with the Foundry
    */
   registerSettings() {
+    game.settings.registerMenu(constants.moduleId, settings.app, {
+      name: "Forien.Armoury.Settings.MenuName",
+      label: "Forien.Armoury.Settings.MenuLabel",
+      hint: "Forien.Armoury.Settings.MenuHint",
+      icon: "fa-solid fa-cog",
+      type: SettingsApp
+    })
+
+
     // Add enable/disable setting for temporary runes damaging items
     game.settings.register(constants.moduleId, settings.runes.enableDamage, {
       name: 'Forien.Armoury.Settings.Runes.Enable',
       hint: 'Forien.Armoury.Settings.Runes.EnableHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: false,
       type: Boolean
     });
@@ -21,7 +31,7 @@ export default class Settings {
       name: 'Forien.Armoury.Settings.CastingFatigue.Enable',
       hint: 'Forien.Armoury.Settings.CastingFatigue.EnableHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: false,
       type: Boolean
     });
@@ -31,7 +41,7 @@ export default class Settings {
       name: 'Forien.Armoury.Settings.CastingFatigue.CostOfChanneling',
       hint: 'Forien.Armoury.Settings.CastingFatigue.CostOfChannelingHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: 1,
       type: Number
     });
@@ -41,7 +51,7 @@ export default class Settings {
       name: 'Forien.Armoury.Settings.CastingFatigue.NegativeMEPerStep',
       hint: 'Forien.Armoury.Settings.CastingFatigue.NegativeMEPerStepHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: 5,
       type: Number
     });
@@ -51,7 +61,7 @@ export default class Settings {
       name: 'Forien.Armoury.Settings.CastingFatigue.UseBaseCN',
       hint: 'Forien.Armoury.Settings.CastingFatigue.UseBaseCNHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: true,
       type: Boolean
     });
@@ -61,7 +71,7 @@ export default class Settings {
       name: 'Forien.Armoury.Settings.CastingFatigue.MaxME',
       hint: 'Forien.Armoury.Settings.CastingFatigue.MaxMEHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: 'TBtimesWPB',
       type: String,
       choices: {
@@ -76,7 +86,7 @@ export default class Settings {
       name: 'Forien.Armoury.Settings.CombatFatigue.Enable',
       hint: 'Forien.Armoury.Settings.CombatFatigue.EnableHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: false,
       type: Boolean
     });
@@ -86,7 +96,7 @@ export default class Settings {
       name: 'Forien.Armoury.Settings.CombatFatigue.EnableNPC',
       hint: 'Forien.Armoury.Settings.CombatFatigue.EnableNPCHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: true,
       type: Boolean
     });
@@ -96,7 +106,7 @@ export default class Settings {
       name: 'Forien.Armoury.Settings.ArrowReclamation.Enable',
       hint: 'Forien.Armoury.Settings.ArrowReclamation.EnableHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: false,
       type: Boolean
     });
@@ -106,7 +116,7 @@ export default class Settings {
       name: 'Forien.Armoury.Settings.ArrowReclamation.EnableArrows',
       hint: 'Forien.Armoury.Settings.ArrowReclamation.EnableArrowsHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: true,
       type: Boolean
     });
@@ -115,7 +125,7 @@ export default class Settings {
       name: 'Forien.Armoury.Settings.ArrowReclamation.EnableBolts',
       hint: 'Forien.Armoury.Settings.ArrowReclamation.EnableBoltsHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: false,
       type: Boolean
     });
@@ -124,7 +134,7 @@ export default class Settings {
       name: 'Forien.Armoury.Settings.ArrowReclamation.EnableBullets',
       hint: 'Forien.Armoury.Settings.ArrowReclamation.EnableBulletsHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: true,
       type: Boolean
     });
@@ -134,7 +144,7 @@ export default class Settings {
       name: 'Forien.Armoury.Settings.ArrowReclamation.Rule',
       hint: 'Forien.Armoury.Settings.ArrowReclamation.RuleHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: 'default',
       type: String,
       choices: {
@@ -154,7 +164,7 @@ export default class Settings {
       name: 'Forien.Armoury.Settings.ArrowReclamation.Percentage',
       hint: 'Forien.Armoury.Settings.ArrowReclamation.PercentageHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: 50,
       type: Number
     });

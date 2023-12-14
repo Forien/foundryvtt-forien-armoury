@@ -24,7 +24,7 @@ export default class ArrowReclamation {
   }
 
   getTemplates() {
-    return Object.values(this.templates);
+    return this.templates;
   }
 
   /**

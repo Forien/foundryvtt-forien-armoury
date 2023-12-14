@@ -57,12 +57,20 @@ export default class Utility {
   /**
    * Preloads provided templates
    *
-   * @param {string[]} templates
+   * @param {{}} templates
    */
-  static preloadTemplates(templates = []) {
+  static preloadTemplates(templates = {}) {
     Utility.notify("Preloading Templates.", {consoleOnly: true})
 
-    templates = templates.map(Utility.getTemplate);
+    // templates = templates.map(Utility.getTemplate);
+    console.log('Preloading Templates before flat', {templates: foundry.utils.duplicate(templates)})
+    templates = foundry.utils.flattenObject(templates)
+    console.log('Preloading Templates after flat', {templates: foundry.utils.duplicate(templates)})
+
+    for (let [key, template] of Object.entries(templates)) {
+      templates[key] = Utility.getTemplate(template);
+    }
+
     loadTemplates(templates).then(() => {
       Utility.notify("Templates preloaded.", {consoleOnly: true})
     });

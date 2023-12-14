@@ -16,7 +16,7 @@ export default class ItemRepair {
   }
 
   getTemplates() {
-    return Object.values(this.templates);
+    return this.templates;
   }
 
   /**

@@ -137,8 +137,7 @@
       grid-template-areas: ". .";
 
       .image {
-        width: 50px;
-        height: 50px;
+        @include square(50px);
         display: block;
       }
 
@@ -232,7 +231,126 @@
       }
     }
   }
+}
 
+#forien-armoury-settings-app {
+  $baseColorLight: #352516;
+  $baseColorMedium: #1a1007;
+  $baseColorDark: #110a04;
+  $colorDarkest: #080808;
+
+  form {
+    padding: 8px 3px;
+    overflow: hidden;
+
+    .tabs {
+      font-family: CaslonAntique, serif;
+      height: 25px;
+      //flex-wrap: wrap;
+
+      .item {
+        display: flex;
+        //flex-basis: 25%;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        width: 100%;
+        margin: 0 -5px;
+        background-color: $baseColorLight;
+        border-radius: 10px 10px 0 0;
+        border: 1px solid $baseColorDark;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .content {
+      width: 100%;
+      height: calc(100% - 25px - 30px - 5px);
+      //height: fit-content;
+      font-family: CaslonPro, serif;
+      background-color: transparentize($baseColorMedium, 0.25);
+      border: 1px solid $baseColorDark;
+      padding: 6px 10px;
+      border-radius: 0 0 5px 5px;
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      .form-group {
+        margin: 6px 0;
+        background-color: transparentize($colorDarkest, 0.25);
+        padding: 4px;
+      }
+
+      .settings-enabled {
+        display: none;
+        margin-top: 8px;
+
+        &.active {
+          display: block;
+        }
+      }
+
+      .settings-group {
+        margin: 6px 0;
+        padding: 2px 6px;
+        border: solid 2px $baseColorLight;
+        border-radius: 4px;
+      }
+
+      input[type=checkbox] {
+        box-shadow: none;
+        &:checked {
+          accent-color: $baseColorLight;
+        }
+      }
+    }
+
+    button[type="submit"] {
+      margin-top: 5px;
+    }
+
+    .promo {
+      border: 3px solid $baseColorLight;
+      border-radius: 5px;
+      padding: 4px 8px;
+
+      p {
+        font-family: 'Lato', sans-serif;
+        text-align: justify;
+      }
+
+      a {
+        cursor: pointer;
+      }
+
+      .support-links {
+        text-align: center;
+        margin: 10px 0 ;
+
+        a {
+          display: inline-block;
+          height: 30px;
+          text-decoration: none;
+
+          &:hover {
+            box-shadow: #a08349 0 0 6px 4px;
+          }
+        }
+      }
+
+      .other-links {
+        p {
+          text-align: left;
+        }
+      }
+    }
+  }
 }
 
 .app.window-app.sheet.wfrp4e.actor {

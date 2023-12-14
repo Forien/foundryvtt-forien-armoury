@@ -1,0 +1,25 @@
+{{#each settings.always as |setting s|}}
+    {{> forien-armoury.settings.setting setting}}
+{{/each}}
+
+{{#if settings.enable}}
+    <div class="settings-enabled" data-show-when="{{settings.enable.when}}">
+        {{#each settings.enable.settings as |setting s|}}
+            {{> forien-armoury.settings.setting setting}}
+        {{/each}}
+    </div>
+{{/if}}
+
+{{#if settings.groups}}
+    {{#each settings.groups as |group g|}}
+    <div class="settings-group">
+        {{#each group as |setting s|}}
+            {{> forien-armoury.settings.setting setting}}
+        {{/each}}
+    </div>
+    {{/each}}
+{{/if}}
+
+{{#if promo}}
+ {{> forien-armoury.settings.promo}}
+{{/if}}

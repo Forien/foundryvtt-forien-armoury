@@ -11,6 +11,7 @@ import ItemProperties from "./features/ItemProperties.mjs";
 import {Debug} from "./utility/Debug.mjs";
 import {styleHelpers} from "./helpers/styleHelpers.js";
 import CastingFatigue from "./features/CastingFatigue.mjs";
+import SettingsApp from "./apps/SettingsApp.mjs";
 
 export default class ForienArmoury {
   /**
@@ -123,11 +124,22 @@ export default class ForienArmoury {
    * Preloads templates used by the modules.
    */
   #preloadTemplates() {
-    let itemRepairTemplates = this.itemRepair.getTemplates();
-    let arrowReclamationTemplates = this.arrowReclamation.getTemplates();
-    let checkCareersTemplates = this.checkCareers.templates;
-    let magicalEnduranceTemplates = this.magicEndurance.templates;
-    let templates = [...itemRepairTemplates, ...arrowReclamationTemplates, ...checkCareersTemplates, ...magicalEnduranceTemplates];
+    let itemRepair = this.itemRepair.getTemplates();
+    let arrowReclamation = this.arrowReclamation.getTemplates();
+    let checkCareers = this.checkCareers.templates;
+    let magicalEndurance = this.magicEndurance.templates;
+    let settings = SettingsApp.partials;
+    // let templates = [...itemRepairTemplates, ...arrowReclamationTemplates, ...checkCareersTemplates, ...magicalEnduranceTemplates];
+
+    let templates = {
+      [constants.moduleId]: {
+        itemRepair,
+        arrowReclamation,
+        checkCareers,
+        magicalEndurance,
+        settings
+      }
+    };
 
     Utility.preloadTemplates(templates);
   }

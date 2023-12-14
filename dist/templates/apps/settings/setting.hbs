@@ -1,0 +1,26 @@
+<div class="form-group" data-setting-id="{{this.id}}">
+    <label>{{this.name}}</label>
+    <div class="form-fields">
+
+        {{#if this.isCheckbox}}
+            <input type="checkbox" name="{{this.key}}" data-dtype="Boolean" {{checked this.value}}/>
+
+        {{else if this.isSelect}}
+            <select name="{{this.key}}" data-dtype="{{this.type}}">
+                {{#select this.value}}
+                    {{#each this.choices as |name k|}}
+                        <option value="{{k}}">{{localize name}}</option>
+                    {{/each}}
+                {{/select}}
+            </select>
+
+        {{else if this.isNumber}}
+            {{numberInput this.value name=this.key}}
+
+        {{else}}
+            <input type="text" name="{{this.key}}" value="{{this.value}}" data-dtype="{{this.type}}"/>
+        {{/if}}
+    </div>
+
+    <p class="notes">{{this.hint}}</p>
+</div>
