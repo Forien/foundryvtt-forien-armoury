@@ -39,7 +39,6 @@ export default class WorldTimeObserver extends ForienBaseModule {
    */
   async #checkSubscriberTime(time, subscriber) {
     const passedTime = time - subscriber.last;
-    debug('[WorldTimeObserver] Checking events for a subscriber', {time, subscriber, passedTime, last: subscriber.last});
     if (passedTime < subscriber.every) return;
 
     // how many times the event should've happened by now?
