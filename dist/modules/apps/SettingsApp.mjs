@@ -169,6 +169,7 @@ export default class SettingsApp extends FormApplication {
             settings.magicalEndurance.costOfChanneling,
             settings.magicalEndurance.negativeMEPerStep,
             settings.magicalEndurance.useBaseCN,
+            settings.magicalEndurance.autoRegen,
           ]
         }
       },

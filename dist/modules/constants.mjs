@@ -73,7 +73,8 @@ const settings = {
     maxME_TBplus2WPB: 'TBplus2WPB',
     costOfChanneling: 'magicalEndurance.costOfChanneling',
     negativeMEPerStep: 'magicalEndurance.negativeMEPerStep',
-    useBaseCN: 'magicalEndurance.useBaseCN'
+    useBaseCN: 'magicalEndurance.useBaseCN',
+    autoRegen: 'magicalEndurance.automateRegen'
   }
 }
 

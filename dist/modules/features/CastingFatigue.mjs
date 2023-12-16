@@ -5,6 +5,9 @@ import MagicEnduranceDataModel from "../data-models/MagicEnduranceDataModel.js";
 import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 
 export default class CastingFatigue extends ForienBaseModule {
+  #observer;
+  #events = new Map();
+
   templates = {
     magicalEndurance: 'partials/actor-sheet-wfrp4e-magical-endurance.hbs',
   }
@@ -17,6 +20,7 @@ export default class CastingFatigue extends ForienBaseModule {
     Hooks.on("wfrp4e:rollCastTest", this.#processRollCastTest.bind(this));
     Hooks.on("renderActorSheetWfrp4eCharacter", this.#onRenderActorSheet.bind(this));
     Hooks.on("renderActorSheetWfrp4eNPC", this.#onRenderActorSheet.bind(this));
+    Hooks.on("ready", this.#registerAutoRegenListeners.bind(this))
   }
 
   /**
@@ -178,9 +182,9 @@ export default class CastingFatigue extends ForienBaseModule {
    */
   async #performEnduranceTest(actor, difficulty) {
     const enduranceSkill = game.i18n.localize("NAME.Endurance");
-    const failure = [game.i18n.format("Forien.Armoury.MagicalEndurance.TestFailure", {character: actor.name})];
-    const success = [game.i18n.format("Forien.Armoury.MagicalEndurance.TestSuccess", {character: actor.name})];
-    const appendTitle = game.i18n.localize("Forien.Armoury.MagicalEndurance.MagicalEnduranceTest");
+    const failure = [game.i18n.format("Forien.Armoury.CastingFatigue.TestFailure", {character: actor.name})];
+    const success = [game.i18n.format("Forien.Armoury.CastingFatigue.TestSuccess", {character: actor.name})];
+    const appendTitle = game.i18n.localize("Forien.Armoury.CastingFatigue.MagicalEnduranceTest");
 
     const test = await actor.setupSkill(enduranceSkill, {
       context: {failure, success},
@@ -274,6 +278,8 @@ export default class CastingFatigue extends ForienBaseModule {
     const data = actor.getFlag(constants.moduleId, flags.magicalEndurance.flag);
     const model = new MagicEnduranceDataModel(data);
 
+    model.virtual = (model.maximum === undefined);
+
     // always recalculate regen and maximum
     model.maximum = this.getMaxMagicalEndurance(actor);
     model.regen = this.getMagicalEnduranceRegeneration(actor);
@@ -281,6 +287,10 @@ export default class CastingFatigue extends ForienBaseModule {
     // if value was never set, set it to maximum
     if (model.value === undefined)
       model.value = model.maximum;
+
+    // if lastRegen was never set, but autoRegen is enabled, set it to current world time
+    if (model.lastRegen === undefined && Utility.getSetting(settings.magicalEndurance.autoRegen))
+      model.lastRegen = game.time.worldTime;
 
     return model;
   }
@@ -293,6 +303,8 @@ export default class CastingFatigue extends ForienBaseModule {
    */
   async saveMagicalEnduranceData(actor, data) {
     await actor.setFlag(constants.moduleId, flags.magicalEndurance.flag, data.toObject());
+    if (!this.#events.has(actor.id))
+      this.#registerAutoRegenListener(actor);
   }
 
   /**
@@ -304,5 +316,67 @@ export default class CastingFatigue extends ForienBaseModule {
     const talentName = game.i18n.localize("Forien.Armoury.Settings.CastingFatigue.FortifiedMindTalent");
 
     return actor.itemCategories.talent.filter(t => t.name === talentName).length;
+  }
+
+  /**
+   * On load, loop through all Actors and attempt to register listeners
+   */
+  #registerAutoRegenListeners() {
+    if (!Utility.getSetting(settings.magicalEndurance.autoRegen)) return;
+
+    this.#observer = game.modules.get(constants.moduleId).api.modules.get('worldTimeObserver');
+
+    for (let actor of game.actors.contents) {
+      if (!actor.isOwner) continue;
+      this.#registerAutoRegenListener(actor);
+    }
+  }
+
+  /**
+   * Registers new listener with the WorldTimeObserver for Actors that use Magical Endurance Data
+   *
+   * @param actor
+   */
+  #registerAutoRegenListener(actor) {
+    let data = this.getMagicalEnduranceData(actor);
+
+    // No reason to listen on non-mage actors.
+    if (data.virtual) return;
+
+    let eventId = this.#observer.subscribe(this.#handleAutoRegenEvent.bind(this), {
+      args: {id: actor.id},
+      every: 3600,
+      last: data.lastRegen
+    });
+
+    this.#events.set(actor.id, eventId);
+  }
+
+  /**
+   * Handles regenerating ME whenever fired by WorldTimeObserver
+   *
+   * @param {{id: string}} args
+   * @param {number} time
+   *
+   * @return {Promise<*>}
+   */
+  async #handleAutoRegenEvent(args, time) {
+    const {id} = args;
+    const actor = game.actors.get(id);
+
+    if (!actor) {
+      let eventId = this.#events.get(id);
+      this.#observer.unsubscribe(eventId);
+
+      return this.#events.delete(id);
+    }
+
+    let data = this.getMagicalEnduranceData(actor);
+    if (data.value >= data.maximum)
+      return;
+
+    data.value += data.regen;
+    data.lastRegen = time;
+    await this.saveMagicalEnduranceData(actor, data);
   }
 }

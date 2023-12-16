@@ -1,5 +1,6 @@
 import {constants, settings} from "./constants.mjs";
 import SettingsApp from "./apps/SettingsApp.mjs";
+import Utility from "./utility/Utility.mjs";
 
 /**
  * Registers settings with the Foundry
@@ -76,6 +77,24 @@ function registerSettings() {
       [settings.magicalEndurance.maxME_TBtimesWPB]: 'Forien.Armoury.Settings.CastingFatigue.TBtimesWPB',
       [settings.magicalEndurance.maxME_TBplusWPB]: 'Forien.Armoury.Settings.CastingFatigue.TBplusWPB',
       [settings.magicalEndurance.maxME_TBplus2WPB]: 'Forien.Armoury.Settings.CastingFatigue.TBplus2WPB'
+    }
+  });
+
+  // Select a calculation method for maximum magical endurance
+  game.settings.register(constants.moduleId, settings.magicalEndurance.autoRegen, {
+    name: 'Forien.Armoury.Settings.CastingFatigue.AutoRegen',
+    hint: 'Forien.Armoury.Settings.CastingFatigue.AutoRegenHint',
+    scope: 'world',
+    config: false,
+    default: false,
+    type: Boolean,
+    onChange: (value) => {
+      if (value && game.time.worldTime === 0) {
+        Utility.notify(game.i18n.localize("Forien.Armoury.Settings.CastingFatigue.AutoRegenNoWorldTime"), {type: 'warning', permanent: true});
+        game.settings.set(constants.moduleId, settings.magicalEndurance.autoRegen, false);
+      } else if (game.time.worldTime !== 0) {
+        SettingsConfig.reloadConfirm({world: true})
+      }
     }
   });
 

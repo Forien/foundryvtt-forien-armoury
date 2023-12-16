@@ -13,11 +13,12 @@ export default class MagicEnduranceDataModel {
   /**
    * @type {number}
    */
-  #latRegen;
+  #lastRegen;
   /**
    * @type {number}
    */
   #maximum;
+  #virtual
 
   constructor(object) {
     Object.assign(this, object);
@@ -61,17 +62,16 @@ export default class MagicEnduranceDataModel {
    *
    * @return {number}
    */
-  get latRegen() {
-    return this.#latRegen;
+  get lastRegen() {
+    return this.#lastRegen;
   }
 
   /**
    * @param {*} value
    */
-  set latRegen(value) {
-    this.#latRegen = parseInt(value);
+  set lastRegen(value) {
+    this.#lastRegen = parseInt(value);
   }
-
 
   /**
    *
@@ -88,12 +88,20 @@ export default class MagicEnduranceDataModel {
     this.#maximum = parseInt(value);
   }
 
+  get virtual() {
+    return this.#virtual;
+  }
+
+  set virtual(value) {
+    this.#virtual = !!value;
+  }
+
   /**
    * @return {{lastRegen: number, regen: number, value: number}}
    */
   toObject() {
     return {
-      [flags.magicalEndurance.lastRegen]: this.latRegen,
+      [flags.magicalEndurance.lastRegen]: this.lastRegen,
       [flags.magicalEndurance.regenPerHour]: this.regen,
       [flags.magicalEndurance.maximum]: this.maximum,
       [flags.magicalEndurance.value]: this.value,

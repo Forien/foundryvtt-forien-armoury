@@ -374,7 +374,10 @@
           "MaxMEHint": "How should maximum amount of Magical Endurance be calculated for a character?",
           "TBtimesWPB": "Toughness Bonus × Willpower Bonus",
           "TBplusWPB": "Toughness Bonus + Willpower Bonus",
-          "TBplus2WPB": "Toughness Bonus + 2 × Willpower Bonus"
+          "TBplus2WPB": "Toughness Bonus + 2 × Willpower Bonus",
+          "AutoRegen": "Automate Regeneration?",
+          "AutoRegenHint": "If checked, module will regenerate Actors' ME automatically (Requires a time tracking module. <a href=\"https://foundryvtt.com/packages/foundryvtt-simple-calendar\" target=\"_blank\"><b>Simple Calendar</b></a> is recommended).",
+          "AutoRegenNoWorldTime": "WorldTime hasn't been set. Please activate and configure a time tracking module (for example, Simple Calendar) before enabling Automated Regeneration."
         },
 
         "ATL": {

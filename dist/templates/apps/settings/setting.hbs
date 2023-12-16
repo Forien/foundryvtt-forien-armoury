@@ -1,5 +1,5 @@
 <div class="form-group" data-setting-id="{{this.id}}">
-    <label>{{this.name}}</label>
+    <label for="{{this.key}}">{{this.name}}</label>
     <div class="form-fields">
 
         {{#if this.isCheckbox}}
@@ -22,5 +22,5 @@
         {{/if}}
     </div>
 
-    <p class="notes">{{this.hint}}</p>
+    <p class="notes">{{{this.hint}}}</p>
 </div>

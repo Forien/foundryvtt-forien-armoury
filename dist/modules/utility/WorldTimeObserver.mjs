@@ -39,20 +39,22 @@ export default class WorldTimeObserver extends ForienBaseModule {
    */
   async #checkSubscriberTime(time, subscriber) {
     const passedTime = time - subscriber.last;
+    debug('[WorldTimeObserver] Checking events for a subscriber', {time, subscriber, passedTime, last: subscriber.last});
     if (passedTime < subscriber.every) return;
 
     // how many times the event should've happened by now?
     const passedUnits = Math.floor(passedTime / subscriber.every);
 
     for (let i = 0; i < passedUnits; i++) {
-      await subscriber.callback.call(this, subscriber.args)
+      let eventTime = subscriber.last + (passedUnits * subscriber.every);
+      await subscriber.callback.call(this, subscriber.args, eventTime)
     }
 
     // set `last` to last time the event should happen, not necessarily current time.
     // e.g.: `last`:100, `time`:115, `every`:10. New `last` should be set to 110 to trigger at 120, not 125.
     const newLast = time - (passedTime % subscriber.every);
+    debug('[WorldTimeObserver] Handled events for a subscriber', {time, subscriber, passedTime, passedUnits, last: subscriber.last, newLast});
     subscriber.last = time;
-    debug('[WorldTimeObserver] Handled events for a subscriber', {time, subscriber, passedTime, passedUnits, newLast});
   }
 
   /**
