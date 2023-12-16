@@ -5,7 +5,6 @@ import CombatFatigue from "./features/CombatFatigue.mjs";
 import Integrations from "./Integrations.mjs";
 import ItemProperties from "./features/ItemProperties.mjs";
 import ItemRepair from "./features/ItemRepair.mjs";
-import Settings from "./Settings.mjs";
 import SettingsApp from "./apps/SettingsApp.mjs";
 import TemporaryRunes from "./features/Runes.mjs";
 import Utility from "./utility/Utility.mjs";
@@ -13,6 +12,7 @@ import WorldTimeObserver from "./utility/WorldTimeObserver.mjs";
 import {Debug} from "./utility/Debug.mjs";
 import {constants, settings} from "./constants.mjs";
 import {styleHelpers} from "./helpers/styleHelpers.js";
+import {registerSettings} from "./Settings.mjs";
 
 export default class ForienArmoury {
   /**
@@ -46,12 +46,6 @@ export default class ForienArmoury {
    * @public
    */
   helpers;
-
-  /**
-   * @type {Settings}
-   * @public
-   */
-  #settings;
 
   constructor() {
     this.#initializeModules();
@@ -130,8 +124,6 @@ export default class ForienArmoury {
       this.modules.set(Module.camelName, Module);
     }
 
-    this.#settings = new Settings();
-
     this.helpers = {
       styles: styleHelpers
     };
@@ -147,7 +139,7 @@ export default class ForienArmoury {
         this.modules.get('arrowReclamation').registerSockets(this.#socket);
       }
 
-      if (game.settings.get(constants.moduleId, settings.initialized) === false) {
+      if (Utility.getSetting(settings.initialized) === false) {
         this.#initialConfig()
       }
     });
@@ -191,7 +183,7 @@ export default class ForienArmoury {
    * Registers settings with the Foundry
    */
   #registerSettings() {
-    this.#settings.registerSettings();
+    registerSettings();
     this.modules.forEach((module) => {
       module.registerSettings();
     })
