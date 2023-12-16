@@ -16,8 +16,11 @@
 * Modified some icons by adding a wfrp4e-style border to them.
 * Improved the API and streamlined a lot of code responsible for handling ESModules.
   * API is now version `1.1.0`, should be backwards-compatible.
+* Added `Casting Fatigue` feature, proposed and designed by VividOblivion. 
 * Created a `WorldTimeObserver`, which allows me to track world time updates and fire off events based on passed time
 * Hooked up Magical Endurance Regeneration (from Casting Fatigue) to the `WorldTimeObserver` for automated regeneration
+  * This requires some time tracking module (like `Simple Calendar`) to actually modify the `World Time` setting.
+* Created am Automatic Disease Progression, which will progress diseases' duration and incubation automatically
   * This requires some time tracking module (like `Simple Calendar`) to actually modify the `World Time` setting.
 * Improved Debug readability, by adding tags based on ESModule name, as well as trace to warnings and errors. 
 

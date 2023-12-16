@@ -20,6 +20,9 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
   * `Fighting Style (Any)` and `Fighting Master (Style)` along with variant for every of the three styles.
 * Introducing _„RassilonMonk's Cauldron of Nurgle“_, a bundle of symptoms and diseases to use during your games in perilous Old World
   * Added 4 new **Symptoms**: Vertigo, Scarring, Rashes and Taint
+* Created am Automatic Disease Progression, which will progress diseases' duration and incubation automatically
+  * This requires some time tracking module (like `Simple Calendar`) to actually modify the `World Time` setting.
+* Added `Casting Fatigue` feature, proposed and designed by VividOblivion.
 * Added new journal: `Forien's Lore`
   * Describing **Hunters' Guild** and **Runebounds**
 * Added accessory: `Amulet of „Resilience“`
@@ -59,13 +62,13 @@ Once installed, while in World using WFRP4e game system, enable `Forien's Armour
 ## Contents
 ### Features
 This Module adds some QoL and automation features, including mechanics that:
-* Allow for automatic removal of Temporary Runes when they get disabled (preferably by `Times Up` Module). 
+* Allow for automatic removal of **Temporary Runes** when they get disabled (preferably by `Times Up` Module). 
   * Optionally allows for damaging an Item when Rune is removed (disabled by default).
-* Item Repair (Macro), allow players to easily repair their equipment for free or for price, using Macro and clean, readable auto-updating Chat Card
-* Check Careers (Macro), allows players to quickly check their progress through current Career and how far are they from completing it.
-* Arrow Reclamation, allowing players to recover some of ammunition (arrows, bolts or sling bullets) after an encounter. Defaults to even rolls. Disabled by default.
-* Combat Fatigue, using optional "Getting Tired" ruleset.
-* Casting Fatigue, providing soft limit to amount of spells that can be cast in short amount of time.
+* **Item Repair** (Macro), allow players to easily repair their equipment for free or for price, using Macro and clean, readable auto-updating Chat Card
+* **Check Careers** (Macro), allows players to quickly check their progress through current Career and how far are they from completing it.
+* **Arrow Reclamation**, allowing players to recover some of ammunition (arrows, bolts or sling bullets) after an encounter. Defaults to even rolls. Disabled by default.
+* **Combat Fatigue**, using optional _„Getting Tired“_ ruleset.
+* **Casting Fatigue**, providing soft limit to amount of spells that can be cast in short amount of time.
 
 
 ### Items
@@ -199,6 +202,7 @@ _Disclaimer: I kept all acknowledgments, even if their respective work was lost 
 * Thanks to [silent_mark](https://github.com/silentmark) for contributing to Polish translation!
 * Thanks to Nibbler from The Rat Catchers Guild on Discord for providing his price tables
 * Thanks to VividOblivion for proposing and designing a `Casting Fatigue` rule!
+* Thanks to RassilonMonk for contributing symptoms and diseases as a part of his _„RassilonMonk's Cauldron of Nurgle“_!
 
 
 
