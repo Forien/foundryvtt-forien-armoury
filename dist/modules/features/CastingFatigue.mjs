@@ -89,7 +89,7 @@ export default class CastingFatigue extends ForienBaseModule {
   #processRollCastTest(test, options) {
     if (!this.magicalEnduranceEnabled) return;
 
-    debug('magicalEndurance #processRollCastTest', {test, options, enabled: this.magicalEnduranceEnabled});
+    debug('[CastingFatigue] Casting Test Rolled', {test, options, enabled: this.magicalEnduranceEnabled});
 
     if (!(test.actor instanceof ActorWfrp4e && test.actor.isOwner))
       return;
@@ -103,7 +103,7 @@ export default class CastingFatigue extends ForienBaseModule {
    */
   #processRollChannelTest(test, options) {
     if (!this.magicalEnduranceEnabled) return;
-    debug('magicalEndurance #processRollChannelTest', {test, options, enabled: this.magicalEnduranceEnabled});
+    debug('[CastingFatigue] Channeling Test Rolled', {test, options, enabled: this.magicalEnduranceEnabled});
 
     if (!(test.actor instanceof ActorWfrp4e && test.actor.isOwner))
       return;
@@ -164,7 +164,7 @@ export default class CastingFatigue extends ForienBaseModule {
     if (outcome === 'failure')
       await actor.addCondition('fatigued');
 
-    debug('magicalEndurance dropped below 0', {magicalEndurance, steps, difficulty, test, outcome});
+    debug('[CastingFatigue] Magical Endurance dropped below 0', {magicalEndurance, steps, difficulty, test, outcome});
 
     return test;
   }

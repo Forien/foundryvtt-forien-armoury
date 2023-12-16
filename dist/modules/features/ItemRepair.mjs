@@ -294,12 +294,12 @@ export default class ItemRepair extends ForienBaseModule {
         return;
 
       let damagedItem = this.checkTrappingDamage(item, paid);
-      debug('Checking item for damage', {item, damagedItem});
+      debug('[ItemRepair] Checking item for damage', {item, damagedItem});
 
       if (damagedItem?.damaged)
         damagedItems.push(damagedItem);
     });
-    debug('Checked Items for damage', {damagedItems});
+    debug('[ItemRepair] Checked Items for damage', {damagedItems});
 
     return damagedItems;
   }
@@ -320,12 +320,12 @@ export default class ItemRepair extends ForienBaseModule {
         return;
 
       let damagedItem = this.checkArmourDamage(item, paid);
-      debug('Checking Armour item for damage', {item, damagedItem});
+      debug('[ItemRepair] Checking Armour item for damage', {item, damagedItem});
 
       if (damagedItem?.damaged)
         damagedItems.push(damagedItem);
     });
-    debug('Checked Armour for damage', {damagedItems});
+    debug('[ItemRepair] Checked Armour for damage', {damagedItems});
 
     return damagedItems;
   }
@@ -351,7 +351,7 @@ export default class ItemRepair extends ForienBaseModule {
       return Utility.notify(game.i18n.localize('Forien.Armoury.ItemRepair.NoActorSelected'), {type: 'warning'});
     }
 
-    debug('Checking inventory for damaged items', {actor, paid, chatMessageId, type, subtype, user});
+    debug('[ItemRepair] Checking inventory for damaged items', {actor, paid, chatMessageId, type, subtype, user});
 
     let chatMessage;
     let content;
@@ -379,7 +379,7 @@ export default class ItemRepair extends ForienBaseModule {
     if (templateData.armour.length === 0 && templateData.weapons.length === 0 && templateData.trappings.length === 0)
       templateData.empty = true;
 
-    debug('Template Data ready', templateData);
+    debug('[ItemRepair] Template Data ready', templateData);
     let html = await renderTemplate(Utility.getTemplate(this.templates.chatMessage), templateData);
 
     if (!chatMessageId) {
@@ -394,13 +394,13 @@ export default class ItemRepair extends ForienBaseModule {
       await chatMessage.setFlag(constants.moduleId, flags.itemRepair.type, type);
       await chatMessage.setFlag(constants.moduleId, flags.itemRepair.subtype, subtype);
       content = chatMessage.content;
-      debug('Chat Message created', {chatMessage, content});
+      debug('[ItemRepair] Chat Message created', {chatMessage, content});
     } else {
       content = html;
     }
 
     content = content.replaceAll('ChatMessageId', chatMessage._id);
     await chatMessage.update({content: content});
-    debug('Chat Message updated', {chatMessage, content});
+    debug('[ItemRepair] Chat Message updated', {chatMessage, content});
   }
 }

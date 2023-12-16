@@ -21,7 +21,7 @@ export default class TemporaryRunes extends ForienBaseModule {
    */
   #onEffectUpdate(effect, update, _data) {
     if (this.#isRuneTemporary(effect) && effect.parent instanceof Actor) {
-      debug('Effect Updated is a rune', {effect, update, _data});
+      debug('[TemporaryRunes] Effect Updated is a rune', {effect, update, _data});
 
       if (update.disabled === true) {
         this.processRemovingRune(effect).then(msg => {
@@ -62,7 +62,7 @@ export default class TemporaryRunes extends ForienBaseModule {
      * @type {ActorWfrp4e|null}
      */
     await actor.deleteEmbeddedDocuments("ActiveEffect", [effect._id]);
-    debug('Deleted ActiveEffect from Actor', {actor, effect});
+    debug('[TemporaryRunes] Deleted ActiveEffect from Actor', {actor, effect});
 
     /**
      * @type {ItemWfrp4e|null}
@@ -71,14 +71,14 @@ export default class TemporaryRunes extends ForienBaseModule {
     let itemEffect = item.effects.find(e => e.name === effect.name);
 
     await item.deleteEmbeddedDocuments("ActiveEffect", [itemEffect._id]);
-    debug('Deleted ActiveEffect from Item', {item, itemEffect});
+    debug('[TemporaryRunes] Deleted ActiveEffect from Item', {item, itemEffect});
 
     let itemDamaged = ``;
     if (game.settings.get(constants.moduleId, settings.runes.enableDamage)) {
       itemDamaged = await this.damageFromRune(item, actor);
-      debug('Item damaged because of dissipated Rune', {actor, item, message: itemDamaged});
+      debug('[TemporaryRunes] Item damaged because of dissipated Rune', {actor, item, message: itemDamaged});
     } else {
-      debug('Item Damage from dissipating Runes is disabled');
+      debug('[TemporaryRunes] Item Damage from dissipating Runes is disabled');
     }
 
     let msg = game.i18n.format('Forien.Armoury.Runes.RemovedEffectTemporaryRuneDisabled', {

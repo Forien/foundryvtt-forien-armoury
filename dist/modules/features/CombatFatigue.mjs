@@ -20,7 +20,7 @@ export default class CombatFatigue extends ForienBaseModule {
    */
   async #processCombatTurn(combat, change, _options, _userId) {
     if (change.turn === undefined) return;
-    if (Utility.getSetting(settings.combatFatigue.enable) === false) return debug('Combat Fatigue is not enabled');
+    if (Utility.getSetting(settings.combatFatigue.enable) === false) return debug('[CombatFatigue] Combat Fatigue is not enabled');
     if (!combat.previous || !combat.previous.combatantId) return;
 
     const previousCombatant = combat.combatants.get(combat.previous.combatantId);
@@ -28,13 +28,13 @@ export default class CombatFatigue extends ForienBaseModule {
 
     if (!actor) return;
     if (!actor.isOwner)
-      return debug('You are not an Owner of previous combatant', {previousCombatant, actor});
+      return debug('[CombatFatigue] You are not an Owner of previous combatant', {previousCombatant, actor});
 
     if (game.user.isGM && !Utility.getSetting(settings.combatFatigue.enableNPC))
-      return debug('You are a GM and Combat Fatigue has been disabled for NPCs');
+      return debug('[CombatFatigue] You are a GM and Combat Fatigue has been disabled for NPCs');
 
     if (game.user.isGM && actor.hasPlayerOwner)
-      return debug('You are a GM and previous combatant is Player Owned Actor', {previousCombatant, actor});
+      return debug('[CombatFatigue] You are a GM and previous combatant is Player Owned Actor', {previousCombatant, actor});
 
     await this.#processCombatFatigue(previousCombatant);
   }
@@ -52,7 +52,7 @@ export default class CombatFatigue extends ForienBaseModule {
     let roundsBeforeTest = this.#getRoundsBeforeTest(previousCombatant, actor);
     roundsBeforeTest--;
 
-    debug('Combat Fatigue status', previousCombatant, actor, roundsBeforeTest);
+    debug('[CombatFatigue] Combat Fatigue status', previousCombatant, actor, roundsBeforeTest);
 
     if (roundsBeforeTest <= 0) {
       const {outcome, SL} = await this.#performTest(actor);
@@ -65,7 +65,7 @@ export default class CombatFatigue extends ForienBaseModule {
         roundsBeforeTest += parseInt(SL);
       }
 
-      debug('Combat Fatigue Test result', {outcome, SL, roundsBeforeTest});
+      debug('[CombatFatigue] Combat Fatigue Test result', {outcome, SL, roundsBeforeTest});
     }
 
     await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, roundsBeforeTest)

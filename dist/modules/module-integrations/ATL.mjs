@@ -28,7 +28,7 @@ export default class ATL {
   setPresets() {
     const presets = this.getWFRP4ePresets();
     game.settings.set("ATL", "presets", presets);
-    debug('ATL presets have been overwritten with custom presets:', presets);
+    debug('[Integrations.ATL] ATL presets have been overwritten with custom presets:', presets);
   }
 
   getWFRP4ePresets() {

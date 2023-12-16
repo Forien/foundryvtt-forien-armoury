@@ -21,7 +21,7 @@ export default class CheckCareers extends ForienBaseModule {
         users = users.filter(u => u.active === true);
       }
       characters = users.map(u => u.character);
-      debug(`Checking player characters' careers as GM`, {onlyOnline, characters});
+      debug(`[CheckCareers] Checking player characters' careers as GM`, {onlyOnline, characters});
 
       this.checkCareers(characters);
     } else {
@@ -33,7 +33,7 @@ export default class CheckCareers extends ForienBaseModule {
    * Permorms Career Check for assigned character only
    */
   checkMyCareer() {
-    debug(`Checking my character's career`, {character: game.user.character});
+    debug(`[CheckCareers] Checking my character's career`, {character: game.user.character});
 
     if (game.user.character instanceof ActorWfrp4e)
       this.checkCareer(game.user.character);
@@ -60,7 +60,7 @@ export default class CheckCareers extends ForienBaseModule {
     let requiredAdvances = careerLevel * 5;
 
     if (currentCareer.complete.value === true)
-      return debug('Current Career is marked as finished, skipping', {character, currentCareer});
+      return debug('[CheckCareers] Current Career is marked as finished, skipping', {character, currentCareer});
 
     const characteristics = this.#checkCharacteristics(character, currentCareer, requiredAdvances);
     const talents = this.#checkTalents(character, currentCareer);
@@ -70,7 +70,7 @@ export default class CheckCareers extends ForienBaseModule {
     let conclusion = (characteristics.done >= characteristics.total && skills.done >= 8 && talents.done >= 1);
     let conclusionPotential = (skills.potentialCount > 0 || talents.potentialCount > 0);
 
-    debug(`Character's Career checked`, {
+    debug(`[CheckCareers] Character's Career checked`, {
       character,
       currentCareer,
       requiredAdvances,

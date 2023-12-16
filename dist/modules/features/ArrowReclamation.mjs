@@ -138,7 +138,7 @@ export default class ArrowReclamation extends ForienBaseModule {
   checkRollWeaponTest(roll, _cardOptions) {
     // if feature not enabled, do nothing
     if (!game.settings.get(constants.moduleId, settings.arrowReclamation.enable))
-      return debug('Arrow Reclamation is not enabled');
+      return debug('[ArrowReclamation] Arrow Reclamation is not enabled');
 
     // if there is no ammo, do nothing
     const weapon = roll.weapon;
@@ -149,7 +149,7 @@ export default class ArrowReclamation extends ForienBaseModule {
 
     // if type is not recognized or not allowed, do nothing
     if (type === null)
-      return debug('Ammunition cannot be recovered', {type, ammo});
+      return debug('[ArrowReclamation] Ammunition cannot be recovered', {type, ammo});
 
     // define chat messages
     type = game.i18n.localize('Forien.Armoury.Arrows.' + type);
@@ -157,7 +157,7 @@ export default class ArrowReclamation extends ForienBaseModule {
     let messageFuture = game.i18n.format('Forien.Armoury.Arrows.recoveredFuture', {type});
 
     const {recovered, rule, percentageTotal, percentageTarget} = this.#isProjectileSaved(roll, ammo);
-    debug('Ammunition recovery status:', {recovered, rule, roll, percentageTarget, percentageTotal, type, ammo});
+    debug('[ArrowReclamation] Ammunition recovery status:', {recovered, rule, roll, percentageTarget, percentageTotal, type, ammo});
 
     const ammoId = weapon.system.currentAmmo.value;
     const actorId = roll.actor._id;
@@ -226,7 +226,7 @@ export default class ArrowReclamation extends ForienBaseModule {
 
       ammoEntity.system.quantity.value += quantity;
       actor.updateEmbeddedDocuments("Item", [{_id: ammoId, "system.quantity.value": ammoEntity.system.quantity.value}]);
-      debug('Ammunition recovered:', {ammoId, recoveredQuantity: quantity, newQuantity: ammoEntity.system.quantity.value});
+      debug('[ArrowReclamation] Ammunition recovered:', {ammoId, recoveredQuantity: quantity, newQuantity: ammoEntity.system.quantity.value});
 
       if (bulk) this.notifyAmmoReturned(actor, ammoEntity, userId, quantity);
     }, timeout);

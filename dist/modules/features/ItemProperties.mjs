@@ -73,7 +73,7 @@ export default class ItemProperties extends ForienBaseModule {
       extraMessages
     } = args;
 
-    debug('ItemProperties.onApplyDamage args:', args);
+    debug('[ItemProperties] onApplyDamage arguments:', args);
     this.#checkForSlashing(opposedTest, AP, actor, extraMessages);
     this.#checkForIncendiary(opposedTest, actor, extraMessages);
     this.#checkForBlinding(opposedTest, actor, extraMessages);
@@ -91,7 +91,7 @@ export default class ItemProperties extends ForienBaseModule {
     const blinding = opposedTest.attackerTest.weapon?.properties.qualities.blinding?.value ?? null;
     if (blinding === null) return;
 
-    debug('Blinding property used:', {opposedTest, actor, extraMessages, rating: blinding});
+    debug('[ItemProperties] Blinding property used:', {opposedTest, actor, extraMessages, rating: blinding});
     actor.addCondition("blinded", blinding);
     extraMessages.push(game.i18n.format("Forien.Armoury.Arrows.Properties.Blinding.Message", {rating: blinding}));
   }
@@ -108,7 +108,7 @@ export default class ItemProperties extends ForienBaseModule {
     if (incendiary === null) return;
 
     const die = opposedTest.attackerTest.result.roll % 10;
-    debug('Incendiary property used:', {opposedTest, actor, extraMessages, die, rating: incendiary});
+    debug('[ItemProperties] Incendiary property used:', {opposedTest, actor, extraMessages, die, rating: incendiary});
     if (die > incendiary) return;
 
     actor.addCondition("ablaze");
@@ -130,7 +130,7 @@ export default class ItemProperties extends ForienBaseModule {
     if (poisonous === null) return;
 
     const sl = parseInt(opposedTest.attackerTest.result.SL);
-    debug('Poisonous property used:', {opposedTest, actor, extraMessages, sl, rating: poisonous});
+    debug('[ItemProperties] Poisonous property used:', {opposedTest, actor, extraMessages, sl, rating: poisonous});
     if (sl > poisonous) return;
 
     actor.addCondition("poisoned");
@@ -149,7 +149,7 @@ export default class ItemProperties extends ForienBaseModule {
     const slashing = opposedTest.attackerTest.weapon?.properties.qualities.slashing?.value ?? null;
     if (slashing === null) return;
 
-    debug('Slashing property used:', {opposedTest, actor, extraMessages, rating: slashing, ap: AP.used});
+    debug('[ItemProperties] Slashing property used:', {opposedTest, actor, extraMessages, rating: slashing, ap: AP.used});
     if (slashing < AP.used) return;
 
     actor.addCondition('bleeding');

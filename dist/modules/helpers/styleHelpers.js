@@ -39,7 +39,7 @@ async function replaceWithStyle(args, self) {
         callback: async html => {
           const id = html.find('input[name=talent]:checked').data('id');
           const talent = await addTalentToActorAndCareer(id, self);
-          debug('"Fighting Style (Any)" has been replaced with: ', {
+          debug('[styleHelpers] "Fighting Style (Any)" has been replaced with: ', {
             talent,
             compendiumId: id,
             styleTalents,
@@ -79,7 +79,7 @@ async function replaceWithMastery(args, self) {
   const talent = await addTalentToActorAndCareer(id, self);
 
   await self.actor.deleteEmbeddedDocuments("Item", [self.effect.item._id]);
-  debug('"Fighting Master (Style)" has been replaced with: ', {
+  debug('[styleHelpers] "Fighting Master (Style)" has been replaced with: ', {
     talent,
     compendiumId: id,
     masteryTalents,
@@ -164,7 +164,7 @@ function steelstormAssault(args, self) {
     warnNotEnoughAdvances(self, advances, required);
   }
 
-  debug('"Steelstorm Assault" has been invoked.', {weapon, advances, required, effectArgs: args, effectThis: self});
+  debug('[styleHelpers] "Steelstorm Assault" has been invoked.', {weapon, advances, required, effectArgs: args, effectThis: self});
 }
 
 /**
@@ -199,7 +199,7 @@ function steelstormHandling(args, self) {
       }
     }
 
-    debug('"Steelstorm Handling" checked equipped melee weapon during Item Preparation.', {
+    debug('[styleHelpers] "Steelstorm Handling" checked equipped melee weapon during Item Preparation.', {
       weapon,
       advances,
       required,
@@ -249,7 +249,7 @@ function goAllIn(args, self) {
     warnNotEnoughAdvances(self, advances, required);
   }
 
-  debug('"Go All In" has been invoked.', {weapon, advances, required, effectArgs: args, effectThis: self});
+  debug('[styleHelpers] "Go All In" has been invoked.', {weapon, advances, required, effectArgs: args, effectThis: self});
 }
 
 /**
@@ -271,7 +271,7 @@ function goingAllIn(args, self) {
     if (advances >= required)
       args.prefillModifiers.modifier += 20;
 
-    debug('"Going All In" is active on Prefill Dialog.', {
+    debug('[styleHelpers] "Going All In" is active on Prefill Dialog.', {
       weapon: args.item,
       advances,
       required,
@@ -313,7 +313,7 @@ function goingAllInMastery(args, self) {
       }
     }
 
-    debug('"Going All In (Mastery)" is active on Prefill Dialog.', {
+    debug('[styleHelpers] "Going All In (Mastery)" is active on Prefill Dialog.', {
       weapon: args.item,
       advances,
       required,
@@ -335,7 +335,7 @@ function goingAllInMastery(args, self) {
 async function addMeleeParryCurrent(args, self) {
   const career = args.actor?.currentCareer;
 
-  debug('Checking current career for Ironshield.', {career, effectArgs: args, effectThis: self});
+  debug('[styleHelpers] Checking current career for Ironshield.', {career, effectArgs: args, effectThis: self});
   if (career) await addMeleeParryToCareer(career);
 }
 
@@ -349,7 +349,7 @@ async function addMeleeParryFuture(args, self) {
   if (args.item.type !== 'career') return;
   if (args.item.current?.value !== true) return;
 
-  debug('Checking current career for Ironshield.', {career: args.item, effectArgs: args, effectThis: self});
+  debug('[styleHelpers] Checking current career for Ironshield.', {career: args.item, effectArgs: args, effectThis: self});
   await addMeleeParryToCareer(args.item);
 }
 
@@ -372,7 +372,7 @@ function bracing(args, self) {
     if (advances >= required)
       args.prefillModifiers.modifier += 20;
 
-    debug('"Bracing" is active on Prefill Dialog.', {
+    debug('[styleHelpers] "Bracing" is active on Prefill Dialog.', {
       weapon: args.item,
       advances,
       required,
@@ -410,7 +410,7 @@ function brace(args, self) {
     warnNotEnoughAdvances(self, advances, required);
   }
 
-  debug('"Brace!" has been invoked.', {weapon, advances, required, effectArgs: args, effectThis: self});
+  debug('[styleHelpers] "Brace!" has been invoked.', {weapon, advances, required, effectArgs: args, effectThis: self});
 }
 
 /**
@@ -441,7 +441,7 @@ function ironshieldWard(args, self) {
         })
       }
     }
-    debug('"Ironshield Ward" checked equipped melee weapon during Item Preparation.', {
+    debug('[styleHelpers] "Ironshield Ward" checked equipped melee weapon during Item Preparation.', {
       weapon,
       advances,
       required,
@@ -480,7 +480,7 @@ function ironshieldRiposte(args, self) {
     args.opposedTest.data.opposeResult.other.push(content);
   }
 
-  debug('"Ironshield Riposte" is checking Opposed Defender.', {
+  debug('[styleHelpers] "Ironshield Riposte" is checking Opposed Defender.', {
     weapon: args.defenderTest.weapon,
     advances,
     required,
@@ -514,7 +514,7 @@ async function addMeleeParryToCareer(career) {
     });
   }
 
-  debug('"Melee (Basic)" has been replaced with "Melee (Parry).', {career, meleeBasic, meleeParry});
+  debug('[styleHelpers] "Melee (Basic)" has been replaced with "Melee (Parry).', {career, meleeBasic, meleeParry});
 }
 
 
@@ -547,7 +547,7 @@ function shrewdTrickery(args, self) {
   } else {
     warnNotEnoughAdvances(self, advances, required);
   }
-  debug('"Shrewd Trickery" has been invoked.', {weapon, advances, required, effectArgs: args, effectThis: self});
+  debug('[styleHelpers] "Shrewd Trickery" has been invoked.', {weapon, advances, required, effectArgs: args, effectThis: self});
 }
 
 /**
@@ -576,7 +576,7 @@ function shrewdEvadecraft(args, self) {
   if (isRangedAttack && shieldRating < 2)
     args.prefillModifiers.modifier -= 20;
 
-  debug('"Shrewd Evadecraft" is active during Prefill Dialog when opposing.', {
+  debug('[styleHelpers] "Shrewd Evadecraft" is active during Prefill Dialog when opposing.', {
     weapon: args.item,
     advances,
     required,
@@ -612,7 +612,7 @@ function luckyEvadecraft(args, self) {
     args.opposedTest.data.opposeResult.other.push(content)
   }
 
-  debug('"Lucky Evadecraft" is active during Pre-Opposed Defender.', {
+  debug('[styleHelpers] "Lucky Evadecraft" is active during Pre-Opposed Defender.', {
     weapon: args.defenderTest.weapon,
     advances,
     required,
@@ -679,7 +679,7 @@ async function invokeEvadecraftMastery(args, self) {
                 ${learnedMovesDescription}`
   });
 
-  debug('"Evadecraft Mastery" has been invoked.', {targetToken, target, effect, effectArgs: args, effectThis: self});
+  debug('[styleHelpers] "Evadecraft Mastery" has been invoked.', {targetToken, target, effect, effectArgs: args, effectThis: self});
 }
 
 /**
@@ -705,7 +705,7 @@ function learnedMoves(args, self) {
       args.prefillModifiers.modifier += 10;
   }
 
-  debug('"Learned Moves" is active during Prefill Dialog.', {
+  debug('[styleHelpers] "Learned Moves" is active during Prefill Dialog.', {
     target,
     attacker,
     opponent,
