@@ -174,7 +174,12 @@ export default class ForienArmoury {
    */
   #hackWFRP4e() {
     game.wfrp4e.config.magicLores.runebound = 'Forien.Armoury.Runebound.LoreName';
-    this.modules.get('itemProperties').appendProperties();
+
+    this.modules.forEach((module, _name) => {
+      let config = module.applyWfrp4eConfig();
+
+      foundry.utils.mergeObject(game.wfrp4e.config, config)
+    })
 
     Utility.notify("WFRP4e patched.", {consoleOnly: true});
   }

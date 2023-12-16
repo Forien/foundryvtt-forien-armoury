@@ -3,7 +3,7 @@ import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 
 export default class ItemProperties extends ForienBaseModule {
   /**
-   * Binds hooks
+   * @inheritDoc
    */
   bindHooks() {
     Hooks.on("wfrp4e:applyDamage", this.onApplyDamage.bind(this));
@@ -11,8 +11,10 @@ export default class ItemProperties extends ForienBaseModule {
 
   /**
    * Appends new qualities and flaws to WFRP4e's config, so it's recognized by the system
+   *
+   * @inheritDoc
    */
-  appendProperties() {
+  applyWfrp4eConfig() {
     const config = {};
 
     config.weaponQualities = {
@@ -48,7 +50,7 @@ export default class ItemProperties extends ForienBaseModule {
       unrecoverable: 'Forien.Armoury.Arrows.Properties.Unrecoverable.Description',
     };
 
-    foundry.utils.mergeObject(game.wfrp4e.config, config)
+    return config;
   }
 
   /**

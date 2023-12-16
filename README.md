@@ -14,13 +14,15 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
 
 
 ### Notable changes in v1.4.0
-* Added accessory: `Amulet of „Resilience“`
 * Added new career: `Monster Hunter`
   * This career utilizes one of three unique **Fighting Styles** and focuses on tracking down and fighting monstrous beasts
-* Added new journal: `Forien's Lore`
-  * Describing **Hunters' Guild** and **Runebounds**
 * Added 8 new Talents
   * `Fighting Style (Any)` and `Fighting Master (Style)` along with variant for every of the three styles.
+* Introducing _„RassilonMonk's Cauldron of Nurgle“_, a bundle of symptoms and diseases to use during your games in perilous Old World
+  * Added 4 new **Symptoms**: Vertigo, Scarring, Rashes and Taint
+* Added new journal: `Forien's Lore`
+  * Describing **Hunters' Guild** and **Runebounds**
+* Added accessory: `Amulet of „Resilience“`
 * Created Settings App, which allows to display settings in more visually appealing and intuitive way
 * Several smaller changes, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
 
