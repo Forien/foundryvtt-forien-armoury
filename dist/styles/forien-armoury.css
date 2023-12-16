@@ -189,13 +189,14 @@
 }
 #forien-armoury-settings-app form .tabs {
   font-family: CaslonAntique, serif;
-  height: 25px;
+  height: 30px;
 }
 #forien-armoury-settings-app form .tabs .item {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 100%;
+  align-self: end;
+  height: 75%;
   width: 100%;
   margin: 0 -5px;
   background-color: #352516;
@@ -207,6 +208,13 @@
 }
 #forien-armoury-settings-app form .tabs .item:last-of-type {
   margin-right: 0;
+}
+#forien-armoury-settings-app form .tabs .item.active {
+  height: 100%;
+  font-size: var(--font-size-16);
+  align-items: flex-start;
+  padding-top: 5px;
+  z-index: 1;
 }
 #forien-armoury-settings-app form .content {
   width: 100%;
