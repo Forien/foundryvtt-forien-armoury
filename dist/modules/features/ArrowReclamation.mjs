@@ -1,6 +1,7 @@
 import Utility from "../utility/Utility.mjs";
 import {constants, flags, settings} from "../constants.mjs";
 import {debug} from "../utility/Debug.mjs";
+import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 
 /**
  * ArrowReclamation class is mostly repurposed code from the legacy version of Forien's Armoury module
@@ -8,12 +9,7 @@ import {debug} from "../utility/Debug.mjs";
  *
  * All rules about ammo Qualities/Flaws are disabled for now.
  */
-export default class ArrowReclamation {
-  /**
-   * @type SocketlibSocket
-   */
-  socket;
-
+export default class ArrowReclamation extends ForienBaseModule {
   templates = {
     ammoRecovery: 'ammo-recovery.hbs'
   }
@@ -23,20 +19,9 @@ export default class ArrowReclamation {
     Hooks.on("deleteCombat", this.processEndOfCombat.bind(this));
   }
 
-  getTemplates() {
-    return this.templates;
-  }
-
-  /**
-   * Registers sockets used by this module
-   *
-   * @param {SocketlibSocket} socket
-   */
-  registerSockets(socket) {
-    this.socket = socket;
+  registerSocketMethods(socket) {
     this.socket.register('addArrowToReclaim', this.addAmmoToReplenish);
   }
-
 
   /**
    * Gets a type of projectile based on ammunition group of a weapon

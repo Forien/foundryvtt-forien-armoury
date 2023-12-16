@@ -1,10 +1,7 @@
 import {debug} from "../utility/Debug.mjs";
+import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 
-export default class ItemProperties {
-  constructor() {
-
-  }
-
+export default class ItemProperties extends ForienBaseModule {
   /**
    * Binds hooks
    */

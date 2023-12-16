@@ -1,9 +1,9 @@
 import Utility from "../utility/Utility.mjs";
 import {constants, flags} from "../constants.mjs";
 import {debug} from "../utility/Debug.mjs";
+import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 
-export default class ItemRepair {
-
+export default class ItemRepair extends ForienBaseModule {
   templates = {
     chatMessage: 'repair-chat-message.hbs',
     repairItemEntry: 'partials/repair-item-entry.hbs',
@@ -15,10 +15,6 @@ export default class ItemRepair {
     Hooks.on('renderChatLog', this.#setChatListeners.bind(this));
   }
 
-  getTemplates() {
-    return this.templates;
-  }
-
   /**
    * @param log
    * @param html
@@ -26,7 +22,6 @@ export default class ItemRepair {
   #setChatListeners(log, html) {
     html.on("click", ".chat-button.forien-repair-item", this.#onRepairItem.bind(this));
   }
-
 
   /**
    * Repairs Armour Item based on provided data

@@ -7,7 +7,7 @@ Hooks.once("init", () => {
 })
 
 Hooks.once("ready", () => {
-  game.modules.get(constants.moduleId).api.integrations.ready();
+  game.modules.get(constants.moduleId).api.modules.get('integrations').onReady();
 
   Debug.logSettings();
 })

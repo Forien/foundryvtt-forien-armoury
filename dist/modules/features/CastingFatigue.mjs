@@ -2,14 +2,21 @@ import {debug} from "../utility/Debug.mjs";
 import {constants, flags, settings} from "../constants.mjs";
 import Utility from "../utility/Utility.mjs";
 import MagicEnduranceDataModel from "../data-models/MagicEnduranceDataModel.js";
+import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 
-export default class CastingFatigue {
-  #templates = {
+export default class CastingFatigue extends ForienBaseModule {
+  templates = {
     magicalEndurance: 'partials/actor-sheet-wfrp4e-magical-endurance.hbs',
   }
 
-  get templates() {
-    return this.#templates;
+  /**
+   *
+   */
+  bindHooks() {
+    Hooks.on("wfrp4e:rollChannelTest", this.#processRollChannelTest.bind(this));
+    Hooks.on("wfrp4e:rollCastTest", this.#processRollCastTest.bind(this));
+    Hooks.on("renderActorSheetWfrp4eCharacter", this.#onRenderActorSheet.bind(this));
+    Hooks.on("renderActorSheetWfrp4eNPC", this.#onRenderActorSheet.bind(this));
   }
 
   /**
@@ -26,6 +33,7 @@ export default class CastingFatigue {
     return Utility.getSetting(settings.magicalEndurance.negativeMEPerStep);
   }
 
+
   /**
    * @return {boolean}
    */
@@ -33,22 +41,11 @@ export default class CastingFatigue {
     return Utility.getSetting(settings.magicalEndurance.useBaseCN)
   }
 
-
   /**
    * @return {boolean}
    */
   get magicalEnduranceEnabled() {
     return Utility.getSetting(settings.magicalEndurance.enabled)
-  }
-
-  /**
-   *
-   */
-  bindHooks() {
-    Hooks.on("wfrp4e:rollChannelTest", this.#processRollChannelTest.bind(this));
-    Hooks.on("wfrp4e:rollCastTest", this.#processRollCastTest.bind(this));
-    Hooks.on("renderActorSheetWfrp4eCharacter", this.#onRenderActorSheet.bind(this));
-    Hooks.on("renderActorSheetWfrp4eNPC", this.#onRenderActorSheet.bind(this));
   }
 
   /**
@@ -64,7 +61,7 @@ export default class CastingFatigue {
     const actor = sheet.actor;
     const magicalEndurance = this.getMagicalEnduranceData(actor);
 
-    renderTemplate(Utility.getTemplate(this.#templates.magicalEndurance), magicalEndurance).then(content => {
+    renderTemplate(Utility.getTemplate(this.templates.magicalEndurance), magicalEndurance).then(content => {
       tabMagic.prepend(content);
 
       html.find('#magical-endurance-value').change((ev) => this.#onMagicalEnduranceValueChange(ev, actor));

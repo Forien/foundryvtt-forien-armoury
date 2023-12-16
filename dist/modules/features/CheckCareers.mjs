@@ -1,13 +1,10 @@
 import Utility from "../utility/Utility.mjs";
 import {debug} from "../utility/Debug.mjs";
+import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 
-export default class CheckCareers {
-  static #templates = {
+export default class CheckCareers extends ForienBaseModule {
+  templates = {
     checkCareer: 'check-career.hbs',
-  }
-
-  static get templates() {
-    return CheckCareers.#templates;
   }
 
   /**
@@ -15,7 +12,7 @@ export default class CheckCareers {
    *
    * @param {boolean} onlyOnline should check careers only for characters of online users?
    */
-  static checkPlayersCareers(onlyOnline = true) {
+  checkPlayersCareers(onlyOnline = true) {
     let characters = [];
 
     if (game.user.isGM) {
@@ -26,20 +23,20 @@ export default class CheckCareers {
       characters = users.map(u => u.character);
       debug(`Checking player characters' careers as GM`, {onlyOnline, characters});
 
-      CheckCareers.checkCareers(characters);
+      this.checkCareers(characters);
     } else {
-      CheckCareers.checkMyCareer();
+      this.checkMyCareer();
     }
   }
 
   /**
    * Permorms Career Check for assigned character only
    */
-  static checkMyCareer() {
+  checkMyCareer() {
     debug(`Checking my character's career`, {character: game.user.character});
 
     if (game.user.character instanceof ActorWfrp4e)
-      CheckCareers.checkCareer(game.user.character);
+      this.checkCareer(game.user.character);
   }
 
   /**
@@ -47,8 +44,8 @@ export default class CheckCareers {
    *
    * @param {ActorWfrp4e[]} actors Actors for whom to perform career checks
    */
-  static checkCareers(actors = []) {
-    actors.forEach(actor => CheckCareers.checkCareer(actor))
+  checkCareers(actors = []) {
+    actors.forEach(actor => this.checkCareer(actor))
   }
 
   /**
@@ -56,7 +53,7 @@ export default class CheckCareers {
    *
    * @param {ActorWfrp4e} character Character to perform a Career Check for
    */
-  static checkCareer(character) {
+  checkCareer(character) {
     if (!(character instanceof ActorWfrp4e) || character.type !== 'character') return;
     let currentCareer = character.currentCareer;
     let careerLevel = currentCareer.level.value;
@@ -97,7 +94,7 @@ export default class CheckCareers {
       conclusionPotential
     }
 
-    renderTemplate(Utility.getTemplate(CheckCareers.#templates.checkCareer), templateData).then(content => {
+    renderTemplate(Utility.getTemplate(this.templates.checkCareer), templateData).then(content => {
       ChatMessage.create({
         speaker: ChatMessage.getSpeakerActor(character),
         user: game.user._id,
@@ -113,7 +110,7 @@ export default class CheckCareers {
    * @param {ActorWfrp4e} character
    * @return {*[]}
    */
-  static #getOwners(character) {
+  #getOwners(character) {
     let owners = [];
     if (game.user.isGM) {
       for (let id in character.ownership) {
@@ -135,7 +132,7 @@ export default class CheckCareers {
    * @param {number} requiredAdvances
    * @return {{hasPotential: boolean, potentialCount: number, done: number, potential: string}}
    */
-  static #checkSkills(character, currentCareer, requiredAdvances) {
+  #checkSkills(character, currentCareer, requiredAdvances) {
     let done = 0;
     let potentialSkills = [];
 
@@ -163,7 +160,7 @@ export default class CheckCareers {
    * @param {ItemWfrp4e} currentCareer
    * @return {{hasPotential: boolean, potentialCount: number, done: number, potential: string}}
    */
-  static #checkTalents(character, currentCareer) {
+  #checkTalents(character, currentCareer) {
     let done = 0;
     let potentialTalents = [];
 
@@ -190,7 +187,7 @@ export default class CheckCareers {
    * @param {number} requiredAdvances
    * @return {{total: number, done: number}}
    */
-  static #checkCharacteristics(character, currentCareer, requiredAdvances) {
+  #checkCharacteristics(character, currentCareer, requiredAdvances) {
     let done = 0;
     let total = 0;
 

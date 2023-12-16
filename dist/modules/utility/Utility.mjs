@@ -11,6 +11,8 @@ export default class Utility {
    * @param {boolean} consoleOnly                       should the notification be suppressed and only shown in console?
    * @param {*} data                                    additional data to output in the console
    * @param {boolean} trace                             whether to use `console.trace()` instead of `console.log()`
+   *
+   * @return {false}
    */
   static notify(notification, {type = 'info', permanent = false, consoleOnly = false, data = '', trace = false} = {}) {
     // brand colour: '#3e1395' is too dark for dark mode console;
@@ -41,6 +43,8 @@ export default class Utility {
 
     if (!consoleOnly)
       ui?.notifications?.notify(notification, type, {permanent: permanent, console: false});
+
+    return false;
   }
 
   /**
@@ -51,6 +55,9 @@ export default class Utility {
    * @return {string}
    */
   static getTemplate(template) {
+    if (typeof template !== 'string')
+      return undefined;
+
     return `modules/${constants.moduleId}/templates/${template}`;
   }
 
@@ -61,14 +68,11 @@ export default class Utility {
    */
   static preloadTemplates(templates = {}) {
     Utility.notify("Preloading Templates.", {consoleOnly: true})
-
-    // templates = templates.map(Utility.getTemplate);
-    console.log('Preloading Templates before flat', {templates: foundry.utils.duplicate(templates)})
     templates = foundry.utils.flattenObject(templates)
-    console.log('Preloading Templates after flat', {templates: foundry.utils.duplicate(templates)})
 
     for (let [key, template] of Object.entries(templates)) {
       templates[key] = Utility.getTemplate(template);
+      if (templates[key] === undefined) delete templates[key];
     }
 
     loadTemplates(templates).then(() => {

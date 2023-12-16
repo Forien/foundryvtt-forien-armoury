@@ -4,7 +4,6 @@ import TemporaryRunes from "./features/Runes.mjs";
 import ArrowReclamation from "./features/ArrowReclamation.mjs";
 import Settings from "./Settings.mjs";
 import Integrations from "./Integrations.mjs";
-import CheckCareers from "./features/CheckCareers.mjs";
 import {constants, settings} from "./constants.mjs";
 import CombatFatigue from "./features/CombatFatigue.mjs";
 import ItemProperties from "./features/ItemProperties.mjs";
@@ -12,54 +11,40 @@ import {Debug} from "./utility/Debug.mjs";
 import {styleHelpers} from "./helpers/styleHelpers.js";
 import CastingFatigue from "./features/CastingFatigue.mjs";
 import SettingsApp from "./apps/SettingsApp.mjs";
+import CheckCareers from "./features/CheckCareers.mjs";
 
 export default class ForienArmoury {
+  /**
+   * List of Modules to be initialized and added to API
+   */
+  #modules = [
+    ArrowReclamation,
+    CastingFatigue,
+    CheckCareers,
+    CombatFatigue,
+    Integrations,
+    ItemProperties,
+    ItemRepair,
+    TemporaryRunes,
+  ]
+
+  /**
+   * Actually initialized modules
+   */
+  modules = new Map();
+
   /**
    * @type {SocketlibSocket}
    * @public
    */
-  socket;
+  #socket;
+
   /**
-   * @type {TemporaryRunes}
+   * @type {{}}
    * @public
    */
-  runes;
   helpers;
-  /**
-   * @type {ItemRepair}
-   * @public
-   */
-  itemRepair;
-  /**
-   * @type {CombatFatigue}
-   * @public
-   */
-  combatFatigue;
-  /**
-   * @type {CastingFatigue}
-   * @public
-   */
-  magicEndurance;
-  /**
-   * @type {ItemProperties}
-   * @public
-   */
-  itemProperties;
-  /**
-   * @type {ArrowReclamation}
-   * @public
-   */
-  arrowReclamation;
-  /**
-   * @type {CheckCareers}
-   * @public
-   */
-  checkCareers;
-  /**
-   * @type {Integrations}
-   * @public
-   */
-  integrations;
+
   /**
    * @type {Settings}
    * @public
@@ -77,18 +62,74 @@ export default class ForienArmoury {
   }
 
   /**
+   *
+   * @return {TemporaryRunes}
+   */
+  get runes() {
+    return this.modules.get('temporaryRunes');
+  }
+
+  /**
+   *
+   * @return {ItemRepair}
+   */
+  get itemRepair() {
+    return this.modules.get('itemRepair');
+  }
+
+  /**
+   * @return {CombatFatigue}
+   */
+  get combatFatigue() {
+    return this.modules.get('combatFatigue');
+  };
+
+  /**
+   * @return {CastingFatigue}
+   */
+  get castingFatigue() {
+    return this.modules.get('castingFatigue');
+  };
+
+  /**
+   * @return {ItemProperties}
+   */
+  get itemProperties() {
+    return this.modules.get('itemProperties');
+  };
+
+  /**
+   * @return {ArrowReclamation}
+   */
+  get arrowReclamation() {
+    return this.modules.get('arrowReclamation');
+  };
+
+  /**
+   * @return {CheckCareers}
+   */
+  get checkCareers() {
+    return this.modules.get('checkCareers');
+  };
+
+  /**
+   * @return {Integrations}
+   */
+  get integrations() {
+    return this.modules.get('integrations');
+  };
+
+  /**
    * Initializes API modules
    */
   #initializeModules() {
-    this.runes = new TemporaryRunes();
-    this.itemRepair = new ItemRepair();
-    this.combatFatigue = new CombatFatigue();
-    this.magicEndurance = new CastingFatigue();
-    this.itemProperties = new ItemProperties();
-    this.arrowReclamation = new ArrowReclamation();
-    this.checkCareers = CheckCareers;
-    this.integrations = new Integrations();
+    for (let module of this.#modules) {
+      const Module = new module();
+      this.modules.set(Module.camelName, Module);
+    }
+
     this.#settings = new Settings();
+
     this.helpers = {
       styles: styleHelpers
     };
@@ -100,8 +141,8 @@ export default class ForienArmoury {
   #bindHooks() {
     Hooks.once('ready', () => {
       if (game.modules.get("socketlib")?.active) {
-        this.socket = socketlib.registerModule(constants.moduleId);
-        this.arrowReclamation.registerSockets(this.socket);
+        this.#socket = socketlib.registerModule(constants.moduleId);
+        this.modules.get('arrowReclamation').registerSockets(this.#socket);
       }
 
       if (game.settings.get(constants.moduleId, settings.initialized) === false) {
@@ -109,13 +150,7 @@ export default class ForienArmoury {
       }
     });
 
-    this.runes.bindHooks();
-    this.itemRepair.bindHooks();
-    this.combatFatigue.bindHooks();
-    this.magicEndurance.bindHooks();
-    this.itemProperties.bindHooks();
-    this.arrowReclamation.bindHooks();
-    this.integrations.bindHooks();
+    this.modules.forEach(module => module.bindHooks());
 
     Utility.notify("Hooks registered.", {consoleOnly: true});
   }
@@ -124,22 +159,16 @@ export default class ForienArmoury {
    * Preloads templates used by the modules.
    */
   #preloadTemplates() {
-    let itemRepair = this.itemRepair.getTemplates();
-    let arrowReclamation = this.arrowReclamation.getTemplates();
-    let checkCareers = this.checkCareers.templates;
-    let magicalEndurance = this.magicEndurance.templates;
-    let settings = SettingsApp.partials;
-    // let templates = [...itemRepairTemplates, ...arrowReclamationTemplates, ...checkCareersTemplates, ...magicalEnduranceTemplates];
-
-    let templates = {
+    const templates = {
       [constants.moduleId]: {
-        itemRepair,
-        arrowReclamation,
-        checkCareers,
-        magicalEndurance,
-        settings
+        settings: SettingsApp.partials
       }
     };
+
+    this.modules.forEach((module, name) => {
+      templates[constants.moduleId][name] = module.getTemplates();
+    })
+
 
     Utility.preloadTemplates(templates);
   }
@@ -151,7 +180,7 @@ export default class ForienArmoury {
    */
   #hackWFRP4e() {
     game.wfrp4e.config.magicLores.runebound = 'Forien.Armoury.Runebound.LoreName';
-    this.itemProperties.appendProperties();
+    this.modules.get('itemProperties').appendProperties();
 
     Utility.notify("WFRP4e patched.", {consoleOnly: true});
   }
@@ -161,12 +190,16 @@ export default class ForienArmoury {
    */
   #registerSettings() {
     this.#settings.registerSettings();
-    this.integrations.registerSettings();
+    this.modules.forEach((module) => {
+      module.registerSettings();
+    })
     Debug.registerSetting();
   }
 
   #initialConfig() {
-    this.integrations.initialConfig();
+    this.modules.forEach((module) => {
+      module.registerSettings();
+    })
   }
 
   /**
@@ -174,6 +207,6 @@ export default class ForienArmoury {
    * @return {string}
    */
   version() {
-    return '1.0.0';
+    return '1.1.0';
   }
 }

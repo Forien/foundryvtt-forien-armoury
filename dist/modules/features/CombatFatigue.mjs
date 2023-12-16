@@ -1,8 +1,9 @@
 import {constants, flags, settings} from "../constants.mjs";
 import Utility from "../utility/Utility.mjs";
 import {debug} from "../utility/Debug.mjs";
+import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 
-export default class CombatFatigue {
+export default class CombatFatigue extends ForienBaseModule {
   bindHooks() {
     Hooks.on("updateCombat", this.#processCombatTurn.bind(this));
   }

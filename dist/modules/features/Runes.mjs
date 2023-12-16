@@ -1,8 +1,9 @@
 import Utility from "../utility/Utility.mjs";
-import {constants} from "../constants.mjs";
+import {constants, settings} from "../constants.mjs";
 import {debug} from "../utility/Debug.mjs";
+import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 
-export default class TemporaryRunes {
+export default class TemporaryRunes extends ForienBaseModule {
   /**
    * Binds hooks
    */
