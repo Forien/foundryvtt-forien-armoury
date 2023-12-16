@@ -301,6 +301,13 @@
         }
       },
 
+      "WorldTimeObserver": {
+        "NotAFunction": "Passed `callable` argument is not a Function",
+        "NotAnInteger": "Passed `{arg}` argument is not an Integer, or is of invalid value",
+        "NotAnObject": "Passed `args` argument is not an Object",
+        "LoopError": "Somehow, impossible happened. ID generating loop hit an upper limit of attempts. Check console (F12) for details."
+      },
+
       "Settings": {
         "MenuName": "Access Armoury's Settings",
         "MenuLabel": "Settings",

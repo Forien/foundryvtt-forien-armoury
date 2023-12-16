@@ -1,7 +1,8 @@
 const constants = {
   modulePath: 'modules/forien-armoury',
   moduleId: 'forien-armoury',
-  moduleLabel: 'Forien\'s Armoury'
+  moduleLabel: 'Forien\'s Armoury',
+  loopLimit: 100
 };
 
 const defaults = {}

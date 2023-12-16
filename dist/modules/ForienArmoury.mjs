@@ -27,6 +27,7 @@ export default class ForienArmoury {
     ItemProperties,
     ItemRepair,
     TemporaryRunes,
+    WorldTimeObserver,
   ]
 
   /**
