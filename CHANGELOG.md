@@ -13,6 +13,12 @@
 * Reworked structure of `.mjs` files in the module, since codebase grows
 * Created Settings App, which allows to display settings in more visually appealing and intuitive way
 * Modified some icons by adding a wfrp4e-style border to them.
+* Improved the API and streamlined a lot of code responsible for handling ESModules.
+  * API is now version `1.1.0`, should be backwards-compatible.
+* Created a `WorldTimeObserver`, which allows me to track world time updates and fire off events based on passed time
+* Hooked up Magical Endurance Regeneration (from Casting Fatigue) to the `WorldTimeObserver` for automated regeneration
+  * This requires some time tracking module (like `Simple Calendar`) to actually modify the `World Time` setting.
+* Improved Debug readability, by adding tags based on ESModule name. 
 
 ### v1.3.2
 * Added full debug support. Can be enabled in settings (client side)
