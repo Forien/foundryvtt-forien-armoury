@@ -1,17 +1,18 @@
-import Utility from "./utility/Utility.mjs";
-import ItemRepair from "./features/ItemRepair.mjs";
-import TemporaryRunes from "./features/Runes.mjs";
 import ArrowReclamation from "./features/ArrowReclamation.mjs";
-import Settings from "./Settings.mjs";
-import Integrations from "./Integrations.mjs";
-import {constants, settings} from "./constants.mjs";
-import CombatFatigue from "./features/CombatFatigue.mjs";
-import ItemProperties from "./features/ItemProperties.mjs";
-import {Debug} from "./utility/Debug.mjs";
-import {styleHelpers} from "./helpers/styleHelpers.js";
 import CastingFatigue from "./features/CastingFatigue.mjs";
-import SettingsApp from "./apps/SettingsApp.mjs";
 import CheckCareers from "./features/CheckCareers.mjs";
+import CombatFatigue from "./features/CombatFatigue.mjs";
+import Integrations from "./Integrations.mjs";
+import ItemProperties from "./features/ItemProperties.mjs";
+import ItemRepair from "./features/ItemRepair.mjs";
+import Settings from "./Settings.mjs";
+import SettingsApp from "./apps/SettingsApp.mjs";
+import TemporaryRunes from "./features/Runes.mjs";
+import Utility from "./utility/Utility.mjs";
+import WorldTimeObserver from "./utility/WorldTimeObserver.mjs";
+import {Debug} from "./utility/Debug.mjs";
+import {constants, settings} from "./constants.mjs";
+import {styleHelpers} from "./helpers/styleHelpers.js";
 
 export default class ForienArmoury {
   /**
