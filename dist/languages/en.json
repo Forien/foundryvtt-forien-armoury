@@ -305,7 +305,8 @@
         "NotAFunction": "Passed `callable` argument is not a Function",
         "NotAnInteger": "Passed `{arg}` argument is not an Integer, or is of invalid value",
         "NotAnObject": "Passed `args` argument is not an Object",
-        "LoopError": "Somehow, impossible happened. ID generating loop hit an upper limit of attempts. Check console (F12) for details."
+        "LoopError": "Somehow, impossible happened. ID generating loop hit an upper limit of attempts. Check console (F12) for details.",
+        "CallbackError": "There was an Error when executing a Callback. Check the console (F12) for details."
       },
 
       "Symptoms": {
@@ -348,6 +349,12 @@
         "Runes": {
           "Enable": "Item damage from Runes",
           "EnableHint": "If enabled, Items will get damaged when a Temporary Rune engraved on them is disabled/used."
+        },
+
+        "Diseases": {
+          "AutoProgress": "Automated Disease Progression",
+          "AutoProgressHint": "If checked, module will progress Actors' diseases automatically (Requires a time tracking module. <a href=\"https://foundryvtt.com/packages/foundryvtt-simple-calendar\" target=\"_blank\"><b>Simple Calendar</b></a> is recommended).",
+          "AutoProgressNoWorldTime": "WorldTime hasn't been set. Please activate and configure a time tracking module (for example, Simple Calendar) before enabling Automated Disease Progression."
         },
 
         "ArrowReclamation": {

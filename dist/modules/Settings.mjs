@@ -25,6 +25,24 @@ function registerSettings() {
     type: Boolean
   });
 
+  //
+  game.settings.register(constants.moduleId, settings.diseases.autoProgress, {
+    name: 'Forien.Armoury.Settings.Diseases.AutoProgress',
+    hint: 'Forien.Armoury.Settings.Diseases.AutoProgressHint',
+    scope: 'world',
+    config: false,
+    default: false,
+    type: Boolean,
+    onChange: (value) => {
+      if (value && game.time.worldTime === 0) {
+        Utility.notify(game.i18n.localize("Forien.Armoury.Settings.Diseases.AutoProgressNoWorldTime"), {type: 'warning', permanent: true});
+        game.settings.set(constants.moduleId, settings.magicalEndurance.autoRegen, false);
+      } else if (game.time.worldTime !== 0) {
+        SettingsConfig.reloadConfirm({world: true})
+      }
+    }
+  });
+
   // Add enable/disable setting for Casting Fatigue feature
   game.settings.register(constants.moduleId, settings.magicalEndurance.enabled, {
     name: 'Forien.Armoury.Settings.CastingFatigue.Enable',
@@ -80,7 +98,7 @@ function registerSettings() {
     }
   });
 
-  // Select a calculation method for maximum magical endurance
+  //
   game.settings.register(constants.moduleId, settings.magicalEndurance.autoRegen, {
     name: 'Forien.Armoury.Settings.CastingFatigue.AutoRegen',
     hint: 'Forien.Armoury.Settings.CastingFatigue.AutoRegenHint',

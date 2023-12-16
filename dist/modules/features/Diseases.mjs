@@ -1,6 +1,20 @@
 import ForienBaseModule from "../utility/ForienBaseModule.mjs";
+import Utility from "../utility/Utility.mjs";
+import {constants, flags, settings} from "../constants.mjs";
+import {debug} from "../utility/Debug.mjs";
 
 export default class Diseases extends ForienBaseModule {
+  #observer;
+  #listeners = new Map();
+
+  /**
+   * @inheritDoc
+   */
+  bindHooks() {
+    Hooks.on("ready", this.#registerActorDiseaseListeners.bind(this));
+    Hooks.on("createItem", this.#registerCreatedDiseaseListener.bind(this));
+  }
+
   /**
    * Applies the symptoms to WFRP4e System.
    *
@@ -10,7 +24,12 @@ export default class Diseases extends ForienBaseModule {
    * @return {{}}
    */
   applyWfrp4eConfig() {
-    const config = {};
+    const config = {
+      symptoms: {},
+      symptomDescriptions: {},
+      symptomTreatment: {},
+      symptomEffects: {},
+    };
 
     //#region Vertigo
     config.symptoms["vertigo"] = game.i18n.localize("Forien.Armoury.Symptoms.Vertigo.Name");
@@ -119,5 +138,263 @@ export default class Diseases extends ForienBaseModule {
     //#endregion
 
     return config;
+  }
+
+
+  /**
+   * On load, loop through all Actors and attempt to register listeners
+   */
+  async #registerActorDiseaseListeners() {
+    if (!game.user.isGM) return;
+    if (!Utility.getSetting(settings.diseases.autoProgress)) return;
+
+    this.#observer = game.modules.get(constants.moduleId).api.modules.get('worldTimeObserver');
+
+    for (let actor of game.actors.contents) {
+      await this.#registerActorDiseaseListener(actor);
+    }
+
+    debug('[Diseases] Registered disease listeners', {listeners: this.#listeners})
+  }
+
+  /**
+   * Registers new listener with the WorldTimeObserver for Actors that have diseases
+   *
+   * @param {ActorWfrp4e} actor
+   */
+  async #registerActorDiseaseListener(actor) {
+    let diseases = actor.itemCategories.disease;
+
+    for (let disease of diseases) {
+      await this.#registerDiseaseListener(actor, disease);
+    }
+  }
+
+  /**
+   * Registers new listener with the WorldTimeObserver for Actors that got a new disease
+   *
+   * @param disease
+   *
+   * @return {Promise<void>}
+   */
+  async #registerCreatedDiseaseListener(disease) {
+    if (!game.user.isGM) return;
+    let actor = disease.actor;
+
+    if (!(actor instanceof ActorWfrp4e)) return;
+
+    await this.#registerDiseaseListener(actor, disease);
+    debug('[Diseases] Registered a listener for newly created disease', {actor, disease, listeners: this.#listeners})
+  }
+
+  /**
+   * Actually handle registering the listener for a specific disease
+   *
+   * @param {ActorWfrp4e} actor
+   * @param {ItemWfrp4e} disease
+   *
+   * @return {Promise<void>}
+   */
+  async #registerDiseaseListener(actor, disease) {
+    let type = disease.system.duration.active ? 'duration' : 'incubation';
+    let unit = disease.system[type].unit;
+    let unitSeconds = this.#getUnitSeconds(unit);
+    if (unitSeconds === false) return;
+
+    if (isNaN(disease.system[type].value))
+      await this.#rollDisease(actor, disease, type);
+
+    let {lastProgress, saved} = this.#getLastProgress(disease);
+
+    this.#subscribeToObserver(actor, disease, type, unitSeconds, lastProgress);
+
+    if (!saved)
+      await this.#saveLastProgress(disease, lastProgress);
+  }
+
+  /**
+   * Register listener to the WorldTimeObserver
+   *
+   * @param {ActorWfrp4e} actor
+   * @param {ItemWfrp4e} disease
+   * @param {string} type
+   * @param {number} unitSeconds
+   * @param {number} lastProgress
+   */
+  #subscribeToObserver(actor, disease, type, unitSeconds, lastProgress) {
+    let listenerId = this.#observer.subscribe(this.#handleAutoProgressEvent.bind(this), {
+      args: {actorId: actor.id, diseaseId: disease.id, type},
+      every: unitSeconds,
+      last: lastProgress
+    });
+
+    this.#listeners.set(disease.uuid, listenerId);
+  }
+
+  /**
+   * Roll disease value for duration or incubation.
+   *
+   * @param {ActorWfrp4e} actor
+   * @param {ItemWfrp4e} disease
+   * @param {string} type
+   *
+   * @return {Promise<ItemWfrp4e|false>}
+   */
+  async #rollDisease(actor, disease, type) {
+    debug('[Diseases] Disease value is NaN, attempting to roll on it', {actor, disease, type});
+    disease = disease.toObject();
+    try {
+      disease.system[type].value = (await new Roll(disease.system[type].value).roll()).total;
+
+      if (type === 'duration')
+        disease.system.duration.active = true;
+    } catch {
+      ui.notifications.error(game.i18n.localize("ERROR.ParseDisease"));
+
+      return false;
+    }
+
+    return await actor.updateEmbeddedDocuments("Item", [disease]);
+  }
+
+  /**
+   * Retrieves last time a disease progressed, or current World Time if it hasn't,
+   * along with boolean telling if the value was saved before.
+   *
+   * @param {ItemWfrp4e} disease
+   *
+   * @return {{saved: boolean, lastProgress: number}}
+   */
+  #getLastProgress(disease) {
+    let lastProgress = disease.getFlag(constants.moduleId, flags.diseases.lastProgress)
+    if (lastProgress)
+      return {lastProgress, saved: true};
+
+    return {lastProgress: game.time.worldTime, saved: false};
+  }
+
+  /**
+   * Saves timestamp of the last progression of the disease.
+   *
+   * @param {ItemWfrp4e} disease
+   * @param {number} lastProgress
+   *
+   * @return {Promise<void>}
+   */
+  async #saveLastProgress(disease, lastProgress) {
+    await disease.setFlag(constants.moduleId, flags.diseases.lastProgress, lastProgress);
+  }
+
+  /**
+   * Converts string time unit to its representation in seconds.
+   *
+   * @param {string} unit
+   *
+   * @return {number|false}
+   */
+  #getUnitSeconds(unit) {
+    switch (unit) {
+      case game.i18n.localize("Days"):
+        return 86400;
+      case game.i18n.localize("Hours"):
+        return 3600;
+      case game.i18n.localize("Minutes"):
+        return 60;
+      default:
+        return false;
+    }
+  }
+
+  /**
+   * Handles progression of diseases, whenever fired by WorldTimeObserver
+   *
+   * @param {{id: string}} args
+   * @param {number} time
+   *
+   * @return {Promise<*>}
+   */
+  async #handleAutoProgressEvent(args, time) {
+    const {actorId, diseaseId, type} = args;
+    const uuid = `Actor.${actorId}.Item.${diseaseId}`;
+    const actor = game.actors.get(actorId);
+    const disease = actor?.items.get(diseaseId);
+
+    if (!actor || !disease) {
+      return this.#removeListener(uuid);
+    }
+
+    await this.#saveLastProgress(disease, time);
+
+    // await actor.decrementDisease(disease);
+    let newType = await this.#decrementDisease(actor, disease, type);
+
+    if (newType !== type) {
+      this.#removeListener(uuid);
+
+      if (newType === null) return;
+
+      let unit = disease.system[newType].unit;
+      let unitSeconds = this.#getUnitSeconds(unit);
+
+      if (unitSeconds === false) return;
+
+      this.#subscribeToObserver(actor, disease, newType, unitSeconds, time);
+    }
+
+    debug('[Diseases] Handled disease progression event', {actor, disease, type, newType, listeners: this.#listeners})
+  }
+
+  /**
+   * Removes the listener and unsubscribes from WorldTimeObserver
+   *
+   * @param {string} uuid
+   *
+   * @return {boolean}
+   */
+  #removeListener(uuid) {
+    let listenerId = this.#listeners.get(uuid);
+    this.#observer.unsubscribe(listenerId);
+
+    return this.#listeners.delete(uuid);
+  }
+
+  /**
+   * Just a better and properly working version of `ActorWfrp4e.decrementDisease()`.
+   * @todo Remove this after fixing the methods in WFRP4e.
+   *
+   * @param {ActorWfrp4e} actor
+   * @param {ItemWfrp4e} disease
+   * @param {string} type
+   *
+   * @return {Promise<string>}
+   */
+  async #decrementDisease(actor, disease, type) {
+    disease = disease.toObject();
+    let newType = type;
+    if (Number.isNumeric(disease.system[type].value)) {
+      disease.system[type].value--;
+
+      if (disease.system[type].value <= 0) {
+        disease.system[type].value = 0;
+
+        if (type === 'incubation') {
+          await actor.activateDisease(disease);
+          newType = 'duration';
+        }
+
+        if (type === 'duration') {
+          await actor.finishDisease(disease);
+          newType = null;
+        }
+      }
+    } else {
+      let chatData = game.wfrp4e.utility.chatDataSetup(`Attempted to decrement ${disease.name} ${type} but value is non-numeric`, "gmroll", false)
+      chatData.speaker = {alias: actor.name}
+      ChatMessage.create(chatData)
+    }
+
+    await actor.updateEmbeddedDocuments("Item", [disease])
+
+    return newType;
   }
 }

@@ -378,5 +378,7 @@ export default class CastingFatigue extends ForienBaseModule {
     data.value += data.regen;
     data.lastRegen = time;
     await this.saveMagicalEnduranceData(actor, data);
+
+    debug('[CastingFatigue] Handled Automated Regeneration event', {actor, magicalEndurance: data, listeners: this.#events})
   }
 }

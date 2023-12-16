@@ -28,7 +28,7 @@ export default class SettingsApp extends FormApplication {
     options.id = settings.app;
     options.template = Utility.getTemplate(this.partials.app)
     options.width = 600;
-    options.height = 580;
+    options.height = 650;
     options.minimizable = true;
     options.resizable = false;
     options.tabs = [{navSelector: ".tabs", contentSelector: ".content", initial: "main"}]
@@ -126,6 +126,7 @@ export default class SettingsApp extends FormApplication {
       main: {
         always: [
           settings.runes.enableDamage,
+          settings.diseases.autoProgress,
           Debug.setting,
         ]
       },

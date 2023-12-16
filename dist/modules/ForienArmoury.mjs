@@ -2,6 +2,7 @@ import ArrowReclamation from "./features/ArrowReclamation.mjs";
 import CastingFatigue from "./features/CastingFatigue.mjs";
 import CheckCareers from "./features/CheckCareers.mjs";
 import CombatFatigue from "./features/CombatFatigue.mjs";
+import Diseases from "./features/Diseases.mjs";
 import Integrations from "./Integrations.mjs";
 import ItemProperties from "./features/ItemProperties.mjs";
 import ItemRepair from "./features/ItemRepair.mjs";
@@ -23,6 +24,7 @@ export default class ForienArmoury {
     CastingFatigue,
     CheckCareers,
     CombatFatigue,
+    Diseases,
     Integrations,
     ItemProperties,
     ItemRepair,

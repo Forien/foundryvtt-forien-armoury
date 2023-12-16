@@ -34,6 +34,9 @@ const flags = {
     regenPerHour: 'regen',
     lastRegen: 'lastRegen',
     maximum: 'maximum'
+  },
+  diseases: {
+    lastProgress: 'lastProgress'
   }
 }
 
@@ -75,6 +78,9 @@ const settings = {
     negativeMEPerStep: 'magicalEndurance.negativeMEPerStep',
     useBaseCN: 'magicalEndurance.useBaseCN',
     autoRegen: 'magicalEndurance.automateRegen'
+  },
+  diseases: {
+    autoProgress: 'diseases.automateProgression'
   }
 }
 

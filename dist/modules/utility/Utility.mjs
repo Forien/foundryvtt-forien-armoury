@@ -48,6 +48,25 @@ export default class Utility {
   }
 
   /**
+   * Provides a single point of entry to handle all Module's errors in a consistent manner
+   *
+   * @param {string} notification         Text of the notification
+   * @param {Error} error                 original error object
+   * @param {boolean} permanent           should the notification stay until closed?
+   * @param {*} data                      additional data to output in the console
+   *
+   * @return {false}
+   */
+  static error(notification, {permanent = false, data = {}, error = null} = {}) {
+    Utility.notify(notification, {type: 'error', consoleOnly: false, permanent, data});
+
+    if (error)
+      console.error(error);
+
+    return false;
+  }
+
+  /**
    * Returns full module path for the template based on relative path/name only
    *
    * @param {string} template relative path / template's name

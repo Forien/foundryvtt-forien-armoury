@@ -46,7 +46,11 @@ export default class WorldTimeObserver extends ForienBaseModule {
 
     for (let i = 0; i < passedUnits; i++) {
       let eventTime = subscriber.last + (passedUnits * subscriber.every);
-      await subscriber.callback.call(this, subscriber.args, eventTime)
+      try {
+        await subscriber.callback.call(this, subscriber.args, eventTime)
+      } catch (error) {
+        Utility.error(game.i18n.localize("Forien.Armoury.WorldTimeObserver.CallbackError"), {error, data: {subscriber, eventTime, error}});
+      }
     }
 
     // set `last` to last time the event should happen, not necessarily current time.
