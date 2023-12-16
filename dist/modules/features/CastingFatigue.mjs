@@ -13,14 +13,14 @@ export default class CastingFatigue extends ForienBaseModule {
   }
 
   /**
-   *
+   * @inheritDoc
    */
   bindHooks() {
     Hooks.on("wfrp4e:rollChannelTest", this.#processRollChannelTest.bind(this));
     Hooks.on("wfrp4e:rollCastTest", this.#processRollCastTest.bind(this));
     Hooks.on("renderActorSheetWfrp4eCharacter", this.#onRenderActorSheet.bind(this));
     Hooks.on("renderActorSheetWfrp4eNPC", this.#onRenderActorSheet.bind(this));
-    Hooks.on("ready", this.#registerAutoRegenListeners.bind(this))
+    Hooks.on("ready", this.#registerAutoRegenListeners.bind(this));
   }
 
   /**
@@ -42,14 +42,14 @@ export default class CastingFatigue extends ForienBaseModule {
    * @return {boolean}
    */
   get useBaseCN() {
-    return Utility.getSetting(settings.magicalEndurance.useBaseCN)
+    return Utility.getSetting(settings.magicalEndurance.useBaseCN);
   }
 
   /**
    * @return {boolean}
    */
   get magicalEnduranceEnabled() {
-    return Utility.getSetting(settings.magicalEndurance.enabled)
+    return Utility.getSetting(settings.magicalEndurance.enabled);
   }
 
   /**
@@ -246,7 +246,7 @@ export default class CastingFatigue extends ForienBaseModule {
         break;
       case settings.magicalEndurance.maxME_TBtimesWPB:
       default:
-        value = actor.characteristics.t.bonus * actor.characteristics.wp.bonus
+        value = actor.characteristics.t.bonus * actor.characteristics.wp.bonus;
     }
 
     const talents = this.#countFortifiedMindTalent(actor);
