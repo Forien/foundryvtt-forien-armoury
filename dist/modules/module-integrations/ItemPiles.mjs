@@ -13,7 +13,7 @@ export default class ItemPiles {
       name: 'Forien.Armoury.Settings.ItemPiles.SetCurrencies',
       hint: 'Forien.Armoury.Settings.ItemPiles.SetCurrenciesHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: false,
       type: Boolean,
       onChange: async (value) =>
@@ -35,7 +35,7 @@ export default class ItemPiles {
       name: 'Forien.Armoury.Settings.ItemPiles.RolltablesImport',
       hint: 'Forien.Armoury.Settings.ItemPiles.RolltablesImportHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: false,
       type: Boolean,
       onChange: async (value) =>

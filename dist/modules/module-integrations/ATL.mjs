@@ -12,7 +12,7 @@ export default class ATL {
       name: 'Forien.Armoury.Settings.ATL.ResetPresets',
       hint: 'Forien.Armoury.Settings.ATL.ResetPresetsHint',
       scope: 'world',
-      config: true,
+      config: false,
       default: false,
       type: Boolean,
       onChange: async (value) =>
