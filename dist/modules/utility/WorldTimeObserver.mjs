@@ -120,31 +120,47 @@ export default class WorldTimeObserver extends ForienBaseModule {
    * Unsubscribes listener with a given id.
    *
    * @param {string} id
+   *
+   * @return {boolean}
    */
   unsubscribe(id) {
-    this.#subscribers.delete(id)
-    debug('[WorldTimeObserver] Unsubscribed listener with the specified id', {observer: this.constructor.name, id})
+    const success = this.#subscribers.delete(id);
+    debug('[WorldTimeObserver] Unsubscribed listener with the specified id', {observer: this.constructor.name, id, success})
+
+    return success;
   }
 
   /**
    * Unsubscribes all listeners that share a callback.
    *
-   * @param callback
+   * @param {function} callback
+   *
+   * @return {number}
    */
   unsubscribeBulk(callback) {
+    let count = 0;
     this.#subscribers.forEach((value, key, map) => {
-      if (value.callback === callback)
+      if (value.callback === callback) {
         map.delete(key);
+        count++;
+      }
     })
-    debug('[WorldTimeObserver] Unsubscribed all listeners with the specified callback', {observer: this.constructor.name, callback})
+    debug('[WorldTimeObserver] Unsubscribed all listeners with the specified callback', {observer: this.constructor.name, callback, count})
+
+    return count;
   }
 
   /**
    * Unsubscribes all listeners.
+   *
+   * @return {number}
    */
   unsubscribeAll() {
+    const count = this.#subscribers.size;
     this.#subscribers.clear();
-    debug('[WorldTimeObserver] Unsubscribed all listeners', {observer: this.constructor.name})
+    debug('[WorldTimeObserver] Unsubscribed all listeners', {observer: this.constructor.name, count})
+
+    return count;
   }
 
 
