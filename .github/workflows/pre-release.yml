@@ -49,4 +49,4 @@ jobs:
           draft: true
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: './dist/module.json, ./dist/module.zip'
-          tag: ${{ github.ref }}
+          tag: ${{ github.ref_name }}
