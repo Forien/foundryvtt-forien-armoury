@@ -46,7 +46,7 @@ jobs:
         with:
           allowUpdates: true
           name: Pre-Release ${{steps.get_version.outputs.version}}
-          draft: true
+          prerelease: true
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: './dist/module.json, ./dist/module.zip'
-          tag: ${{ github.ref_name }}
+          tag: ${{ github.ref }}
