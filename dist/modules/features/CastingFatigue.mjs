@@ -6,7 +6,7 @@ import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 
 export default class CastingFatigue extends ForienBaseModule {
   #observer;
-  #events = new Map();
+  #listeners = new Map();
 
   templates = {
     magicalEndurance: 'partials/actor-sheet-wfrp4e-magical-endurance.hbs',
@@ -303,8 +303,9 @@ export default class CastingFatigue extends ForienBaseModule {
    */
   async saveMagicalEnduranceData(actor, data) {
     await actor.setFlag(constants.moduleId, flags.magicalEndurance.flag, data.toObject());
-    if (!this.#events.has(actor.id))
-      this.#registerAutoRegenListener(actor);
+
+    if (!this.#listeners.has(actor.id))
+      this.#registerAutoRegenListener(actor, game.time.worldTime);
   }
 
   /**
@@ -335,21 +336,23 @@ export default class CastingFatigue extends ForienBaseModule {
   /**
    * Registers new listener with the WorldTimeObserver for Actors that use Magical Endurance Data
    *
-   * @param actor
+   * @param {ActorWfrp4e} actor
+   * @param {number|null} lastRegen
    */
-  #registerAutoRegenListener(actor) {
+  #registerAutoRegenListener(actor, lastRegen = null) {
     let data = this.getMagicalEnduranceData(actor);
 
     // No reason to listen on non-mage actors.
     if (data.virtual) return;
+    if (data.value === data.maximum) return;
 
     let eventId = this.#observer.subscribe(this.#handleAutoRegenEvent.bind(this), {
       args: {id: actor.id},
       every: 3600,
-      last: data.lastRegen
+      last: lastRegen ?? data.lastRegen
     });
 
-    this.#events.set(actor.id, eventId);
+    this.#listeners.set(actor.id, eventId);
   }
 
   /**
@@ -364,21 +367,31 @@ export default class CastingFatigue extends ForienBaseModule {
     const {id} = args;
     const actor = game.actors.get(id);
 
-    if (!actor) {
-      let eventId = this.#events.get(id);
-      this.#observer.unsubscribe(eventId);
-
-      return this.#events.delete(id);
-    }
+    if (!actor)
+      return this.#unregisterListener(id);
 
     let data = this.getMagicalEnduranceData(actor);
     if (data.value >= data.maximum)
-      return;
+      return this.#unregisterListener(id);
 
     data.value += data.regen;
     data.lastRegen = time;
     await this.saveMagicalEnduranceData(actor, data);
 
-    debug('[CastingFatigue] Handled Automated Regeneration event', {actor, magicalEndurance: data, listeners: this.#events})
+    debug('[CastingFatigue] Handled Automated Regeneration event', {actor, magicalEndurance: data, listeners: this.#listeners})
+  }
+
+  /**
+   * Unsubscribes specified listener from WorldTimeObserver
+   *
+   * @param {string} listenerId
+   *
+   * @return {boolean}
+   */
+  #unregisterListener(listenerId) {
+    let eventId = this.#listeners.get(listenerId);
+    this.#observer.unsubscribe(eventId);
+
+    return this.#listeners.delete(listenerId);
   }
 }
