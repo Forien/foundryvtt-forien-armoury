@@ -25,8 +25,8 @@ export default class WorldTimeObserver extends ForienBaseModule {
    * @return {Promise<void>}
    */
   async #onWorldTimeUpdate(time, increment, _options) {
-    for (let [_id, subscriber] of this.#subscribers) {
-      await this.#checkSubscriberTime(time, subscriber);
+    for (let [id, subscriber] of this.#subscribers) {
+      await this.#checkSubscriberTime(time, subscriber, id);
     }
   }
 
@@ -34,10 +34,11 @@ export default class WorldTimeObserver extends ForienBaseModule {
    *
    * @param {number} time
    * @param {{callback: function, args: {}, every: number, last: number}} subscriber
+   * @param {string} subscriberId
    *
-   * @return {Promise<void>}
+   * @return {Promise<void|false>}
    */
-  async #checkSubscriberTime(time, subscriber) {
+  async #checkSubscriberTime(time, subscriber, subscriberId) {
     const passedTime = time - subscriber.last;
     if (passedTime < subscriber.every) return;
 
@@ -49,7 +50,8 @@ export default class WorldTimeObserver extends ForienBaseModule {
       try {
         await subscriber.callback.call(this, subscriber.args, eventTime)
       } catch (error) {
-        Utility.error(game.i18n.localize("Forien.Armoury.WorldTimeObserver.CallbackError"), {error, data: {subscriber, eventTime, error}});
+        this.unsubscribe(subscriberId);
+        return Utility.error(game.i18n.localize("Forien.Armoury.WorldTimeObserver.CallbackError"), {error, data: {subscriber, eventTime, error}});
       }
     }
 

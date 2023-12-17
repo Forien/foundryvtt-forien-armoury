@@ -179,6 +179,7 @@ export default class Diseases extends ForienBaseModule {
    */
   async #registerCreatedDiseaseListener(disease) {
     if (!game.user.isGM) return;
+    if (!Utility.getSetting(settings.diseases.autoProgress)) return;
     let actor = disease.actor;
 
     if (!(actor instanceof ActorWfrp4e)) return;
@@ -371,6 +372,7 @@ export default class Diseases extends ForienBaseModule {
   async #decrementDisease(actor, disease, type) {
     disease = disease.toObject();
     let newType = type;
+
     if (Number.isNumeric(disease.system[type].value)) {
       disease.system[type].value--;
 
