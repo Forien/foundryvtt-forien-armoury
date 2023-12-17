@@ -1,0 +1,29 @@
+{
+  "name": "Malaise",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": false,
+  "flags": {
+    "wfrp4e": {
+      "effectApplication": "actor",
+      "effectTrigger": "prepareData",
+      "symptom": true,
+      "script": "\n                    if (game.user.isUniqueGM)\n                    {\n                        let fatigued = args.actor.hasCondition(\"fatigued\")\n                        if (!fatigued)\n                        {\n                            args.actor.addCondition(\"fatigued\")\n                            ui.notifications.notify(\"Fatigued added to \" + args.actor.name + \" which cannot be removed until the Malaise symptom is gone.\")\n                        }\n                    }\n                    "
+    }
+  },
+  "_id": "mVlJFwW5gMBBctkI",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!A5Ehm29WuOXCFP4O.mVlJFwW5gMBBctkI"
+}

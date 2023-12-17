@@ -1,0 +1,74 @@
+{
+  "name": "The Spews",
+  "type": "disease",
+  "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The marshes of the Old World are rife with diseases, the most common of which is \"The Spews\". This disease results in the body generating loathsome fluids that fill the stomach and lungs of of the victim. Eventually the body rejects the fluids in fits of coughing and vomiting. Treatment requires a clean environment, plenty of rest and warm fluids, and some herbal remedies can also assist in the recovery. This disease is contracted through being bitten by any of the numerous blood sucking insects or creatures in the marshes such as ticks, leeches or mosquitos.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "contraction": {
+      "label": "Contraction",
+      "value": "Failing an Average (+20) Endurance Test when bitten by an infected insect or leech. ",
+      "type": "String"
+    },
+    "incubation": {
+      "label": "Incubation",
+      "value": "1d10",
+      "unit": "hours",
+      "type": "String"
+    },
+    "duration": {
+      "label": "Duration",
+      "value": "1d10",
+      "type": "String",
+      "unit": "days",
+      "active": false
+    },
+    "symptoms": {
+      "label": "Symptoms",
+      "value": "Malaise, Nausea, Coughs and Sneezes",
+      "type": "String"
+    },
+    "permanent": {
+      "label": "Permanent",
+      "value": "",
+      "type": "String"
+    }
+  },
+  "effects": [
+    "hnGcYOcTmbrckZzf",
+    "aWqPB3kDpkLJZdOA"
+  ],
+  "folder": "CnjDdyOSP29fHa3S",
+  "ownership": {
+    "default": 0,
+    "XoHsMevsFtsW7WqO": 3
+  },
+  "flags": {
+    "core": {},
+    "exportSource": {
+      "world": "wfrp-test-world",
+      "system": "wfrp4e",
+      "coreVersion": "11.315",
+      "systemVersion": "7.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1702667075123,
+    "modifiedTime": 1702847344880,
+    "lastModifiedBy": "XoHsMevsFtsW7WqO"
+  },
+  "_id": "cj4SrShYSdmWMEmE",
+  "sort": 0,
+  "_key": "!items!cj4SrShYSdmWMEmE"
+}

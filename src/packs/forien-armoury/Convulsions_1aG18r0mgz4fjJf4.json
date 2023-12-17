@@ -1,0 +1,29 @@
+{
+  "name": "Convulsions",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": false,
+  "flags": {
+    "wfrp4e": {
+      "effectApplication": "actor",
+      "effectTrigger": "prefillDialog",
+      "symptom": true,
+      "script": "\n                        let modifier = 0\n                        if (this.effect.name.includes(\"Moderate\"))\n                            modifier = -20\n                        else\n                            modifier = -10\n                        \n                        let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"]\n                        if (args.type == \"weapon\")\n                            args.prefillModifiers.modifier += modifier\n                        else if (args.type == \"characteristic\")\n                        {\n                            if (applicableCharacteristics.includes(args.item))\n                                args.prefillModifiers.modifier += modifier\n                        }\n                        else if (args.type == \"skill\")\n                        {\n                            if (applicableCharacteristics.includes(args.item.characteristic.key))\n                                args.prefillModifiers.modifier += modifier\n                        }"
+    }
+  },
+  "_id": "1aG18r0mgz4fjJf4",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!h4XCqO6phthpJ78V.1aG18r0mgz4fjJf4"
+}

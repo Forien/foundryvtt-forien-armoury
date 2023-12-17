@@ -1,0 +1,29 @@
+{
+  "name": "Buboes",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": false,
+  "flags": {
+    "wfrp4e": {
+      "effectApplication": "actor",
+      "effectTrigger": "prefillDialog",
+      "symptom": true,
+      "script": "\n                    let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"]\n                    if (args.type == \"weapon\")\n                        args.prefillModifiers.modifier -= 10\n                    else if (args.type == \"characteristic\")\n                    {\n                        if (applicableCharacteristics.includes(args.item))\n                            args.prefillModifiers.modifier -= 10\n                    }\n                    else if (args.type == \"skill\")\n                    {\n                        if (applicableCharacteristics.includes(args.item.characteristic.key))\n                            args.prefillModifiers.modifier -= 10\n                    }\n            "
+    }
+  },
+  "_id": "kIJ6bSNzxmuM1BnC",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!h4XCqO6phthpJ78V.kIJ6bSNzxmuM1BnC"
+}

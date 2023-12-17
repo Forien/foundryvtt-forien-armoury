@@ -1,0 +1,75 @@
+{
+  "name": "Gonorrhoea (The Clap)",
+  "type": "disease",
+  "_id": "A5Ehm29WuOXCFP4O",
+  "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>One of the most common infections in the Empire. Gonorrhea, also known as \"The Clap\" or \"The Drip\" is a sexually transmitted infection, also called a sexually transmitted disease, caused by bacteria. Sexually transmitted diseases are infections spread mainly by contact with genitals or bodily fluids. Also called STDs, STIs or venereal disease, sexually transmitted infections are caused by bacteria, viruses or parasites. Symptoms vary between the sexes but can include pain or rashes in the area, unusual discharges, and pain or burning sensation when urinating. This disease is fairly rampant amongst the brothels and taverns of the Old World.</p><p>Treatment include some herbal remedies but tend to cost in the region of 1/-. Magical remedies may also cure the disease.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "contraction": {
+      "label": "Contraction",
+      "value": "Failing an Average (+20) Endurance Test after sexual contact with an infected person.",
+      "type": "String"
+    },
+    "incubation": {
+      "label": "Incubation",
+      "value": "1d10",
+      "unit": "days",
+      "type": "String"
+    },
+    "duration": {
+      "label": "Duration",
+      "value": "3d20*10",
+      "type": "String",
+      "unit": "days",
+      "active": false
+    },
+    "symptoms": {
+      "label": "Symptoms",
+      "value": "Lingering (Challenging), Malaise, Rashes",
+      "type": "String"
+    },
+    "permanent": {
+      "label": "Permanent",
+      "value": "",
+      "type": "String"
+    }
+  },
+  "effects": [
+    "219JmXKadKQ6Jl9k",
+    "mVlJFwW5gMBBctkI",
+    "2WCVx3BEOxz7h1Z0"
+  ],
+  "folder": "CnjDdyOSP29fHa3S",
+  "ownership": {
+    "default": 0,
+    "XoHsMevsFtsW7WqO": 3
+  },
+  "flags": {
+    "core": {},
+    "exportSource": {
+      "world": "wfrp-test-world",
+      "system": "wfrp4e",
+      "coreVersion": "11.315",
+      "systemVersion": "7.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1702257094378,
+    "modifiedTime": 1702847341974,
+    "lastModifiedBy": "XoHsMevsFtsW7WqO"
+  },
+  "sort": 200000,
+  "_key": "!items!A5Ehm29WuOXCFP4O"
+}

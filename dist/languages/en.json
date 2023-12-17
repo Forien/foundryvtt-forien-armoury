@@ -327,8 +327,8 @@
         },
         "Taint": {
           "Name": "Taint",
-          "Description": "Forien.Armoury.Symptoms.Taint.Description",
-          "Treatment": "Forien.Armoury.Symptoms.Taint.Treatment",
+          "Description": "This disease is tainted by the powers of Chaos and affects the very soul of the suffering victim. Unless the victim passes a <b>Challenging (+0) Endurance Test</b>, they suffer 1 point of @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.115GzWrmkD4viyy5]{Corruption}.",
+          "Treatment": "There is no treatment for the Taint.",
           "Failure": "{character} gains 1 point of Corruption"
         }
       },

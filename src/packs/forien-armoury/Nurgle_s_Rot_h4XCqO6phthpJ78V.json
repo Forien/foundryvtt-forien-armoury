@@ -1,0 +1,78 @@
+{
+  "name": "Nurgle's Rot",
+  "type": "disease",
+  "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The most feared disease in the Empire. This horrible disease not only rots and destroys the bodies with its pestilence, but eats away at the sould of the victim. The victim suffers from a number of noxious symptoms including Fevers, Poxes and convulsions as their bodies change under this horrifying disease. Nurgle's Rot spreads through contact with an infected individual. For those that contract Nurgle's Rot their futures are almost certainly written and hold death after an agonizing decline. Only extremely powerful Shallyan healing can cure Nurgle's Rot, however it is incredibly rare and expensive. Usually individuals contract this disease through contact with fluids or wounds caused by Nurgles minions, however it has been known to manifist in other ways through the machinations of the Plague Lord's servants.</p><p>Most who contract it end their lives prematurely as their sanity slips away and the taint of the disease corrupts and mutates their bodies and minds. Many others are slain by the faithful or Witch Hunters as their mutations arise and can no longer be concealed. Nurgle's Rot has a corrupting taint and the infected individual must make a Challenging (+0) Endurance Test each day or fall victim to the taint, gaining 1 point of @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.115GzWrmkD4viyy5]{Corruption}. At the end of the duration of the disease the infected individual must also make daily <strong>Blight</strong> tests. Those who die from Nurgle's Rot turn into a Plaguebearer if they roll a 1 on [[/roll 1d10 ]]. These unfortunates live on to server Grandfather Nurgle as a Deamon that does his bidding.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "contraction": {
+      "label": "Contraction",
+      "value": "If you fail an Average (+20) Endurance Test when contact is made with an infected individual or Beast of Nurgle.",
+      "type": "String"
+    },
+    "incubation": {
+      "label": "Incubation",
+      "value": "1d10",
+      "unit": "days",
+      "type": "String"
+    },
+    "duration": {
+      "label": "Duration",
+      "value": "3d10",
+      "type": "String",
+      "unit": "days",
+      "active": false
+    },
+    "symptoms": {
+      "label": "Symptoms",
+      "value": "Buboes, Fever, Convulsions, Pox, Taint, Blight (Severe)",
+      "type": "String"
+    },
+    "permanent": {
+      "label": "Permanent",
+      "value": "",
+      "type": "String"
+    }
+  },
+  "effects": [
+    "kIJ6bSNzxmuM1BnC",
+    "CZku4XajnpCLVhh8",
+    "1aG18r0mgz4fjJf4",
+    "Th1douL3GTNrebmG",
+    "nH9cugwHwiDsHAeM",
+    "vtBUKR4foF8Es2pX"
+  ],
+  "folder": "CnjDdyOSP29fHa3S",
+  "ownership": {
+    "default": 0,
+    "XoHsMevsFtsW7WqO": 3
+  },
+  "flags": {
+    "core": {},
+    "exportSource": {
+      "world": "wfrp-test-world",
+      "system": "wfrp4e",
+      "coreVersion": "11.315",
+      "systemVersion": "7.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1702258209456,
+    "modifiedTime": 1702847341974,
+    "lastModifiedBy": "XoHsMevsFtsW7WqO"
+  },
+  "_id": "h4XCqO6phthpJ78V",
+  "sort": 100000,
+  "_key": "!items!h4XCqO6phthpJ78V"
+}

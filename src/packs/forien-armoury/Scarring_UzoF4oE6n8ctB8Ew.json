@@ -1,0 +1,29 @@
+{
+  "name": "Scarring",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": true,
+  "flags": {
+    "wfrp4e": {
+      "effectApplication": "actor",
+      "effectTrigger": "prePrepareData",
+      "symptom": true,
+      "script": "args.actor.system.characteristics.fel.modifier -= 10"
+    }
+  },
+  "_id": "UzoF4oE6n8ctB8Ew",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!unUpalcn4mGtb0bQ.UzoF4oE6n8ctB8Ew"
+}

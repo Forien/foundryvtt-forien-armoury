@@ -1,0 +1,76 @@
+{
+  "name": "Ragpicker's Disease (Anthrax)",
+  "type": "disease",
+  "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Ragpicker's Disease as it is known in the Empire is an infectious disease that occurs naturally in soil. It commonly affects domestic and wild animals and can be contracted via contact with infected animals or animal byproducts that are contaminated. The name comes from the poorer classes who tend to pick through rags and cast-offs and commonly come into contact with the spores of the disease. Farmers, Hunters, Tanners and other careers that work with animals and livestock also frequently fall victim to this disease. Once the disease has become activated antitoxins would be required in addition to other medicinal treatments to eradicate the disease.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "contraction": {
+      "label": "Contraction",
+      "value": "Failing an Average (+20) Endurance test after Contact, inhalation, or ingestion of spores from infected animals or animal tissue.",
+      "type": "String"
+    },
+    "incubation": {
+      "label": "Incubation",
+      "value": "1d60",
+      "unit": "days",
+      "type": "String"
+    },
+    "duration": {
+      "label": "Duration",
+      "value": "1d20",
+      "type": "String",
+      "unit": "days",
+      "active": false
+    },
+    "symptoms": {
+      "label": "Symptoms",
+      "value": "Fever, Blight, Buboes, Scarring",
+      "type": "String"
+    },
+    "permanent": {
+      "label": "Permanent",
+      "value": "",
+      "type": "String"
+    }
+  },
+  "effects": [
+    "HKNCIaAjlwkfPcYm",
+    "25kReyJQJApobVpJ",
+    "mbooaUsyiG1m4sSn",
+    "UzoF4oE6n8ctB8Ew"
+  ],
+  "folder": "CnjDdyOSP29fHa3S",
+  "ownership": {
+    "default": 0,
+    "XoHsMevsFtsW7WqO": 3
+  },
+  "flags": {
+    "core": {},
+    "exportSource": {
+      "world": "wfrp-test-world",
+      "system": "wfrp4e",
+      "coreVersion": "11.315",
+      "systemVersion": "7.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1702260216639,
+    "modifiedTime": 1702847343284,
+    "lastModifiedBy": "XoHsMevsFtsW7WqO"
+  },
+  "_id": "unUpalcn4mGtb0bQ",
+  "sort": 0,
+  "_key": "!items!unUpalcn4mGtb0bQ"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Taint",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": false,
+  "flags": {
+    "wfrp4e": {
+      "effectApplication": "actor",
+      "effectTrigger": "invoke",
+      "symptom": true,
+      "script": "\n                          const difficulty = \"challenging\";\n                          if (this.actor.isOwner) {\n                            const setupData = await args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {\n                              context: {failure: args.actor.name + \" gains 1 point of Corruption\"},\n                              absolute: {difficulty},\n                              appendTitle: \" - Taint\"\n                            })\n                          \n                            const test = await args.actor.basicTest(setupData)\n                          \n                            if (test.result.outcome === \"failure\") {\n                              const newCorruption = args.actor.system.status.corruption.value + 1;\n                              await args.actor.update({\"system.status.corruption.value\": newCorruption});\n                            }\n                          }"
+    }
+  },
+  "_id": "nH9cugwHwiDsHAeM",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!h4XCqO6phthpJ78V.nH9cugwHwiDsHAeM"
+}

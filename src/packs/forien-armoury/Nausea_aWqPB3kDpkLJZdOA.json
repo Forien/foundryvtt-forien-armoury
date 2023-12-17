@@ -1,0 +1,29 @@
+{
+  "name": "Nausea",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": false,
+  "flags": {
+    "wfrp4e": {
+      "effectApplication": "actor",
+      "effectTrigger": "rollTest",
+      "symptom": true,
+      "script": "\n                    if (this.actor.isOwner && args.test.result.outcome == \"failure\")\n                    {\n                        let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"]\n                        if (applicableCharacteristics.includes(args.test.characteristicKey))\n                            this.actor.addCondition(\"stunned\")\n    \n                    }\n                    "
+    }
+  },
+  "_id": "aWqPB3kDpkLJZdOA",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!cj4SrShYSdmWMEmE.aWqPB3kDpkLJZdOA"
+}
