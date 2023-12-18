@@ -1,0 +1,44 @@
+{
+  "folder": "TLJDDCjqzOJlUlJ1",
+  "name": "Tools and Kits Scarce",
+  "_id": "wAAL6gqc4M2V2FJk",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "QEd5ygkQ3z7NmLjl",
+    "mMvy5uDp07plpYLV",
+    "G6mvLKUrJyeUorDN",
+    "nAaYoGxJ5Y4p4Xti",
+    "AlmdqAdgxHEJQ9H9",
+    "8d7KECz3O67BSFXz",
+    "bbGTUOnaal9y4Bba",
+    "XD4l1rGYMWRORgXD",
+    "OtxfzygEElhmDzbl",
+    "1anfurzF8lOg0PI9",
+    "hdStYMjW9uAGNGIZ",
+    "Fz3bAOLkrvE17Vtq"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690165183615,
+    "modifiedTime": 1690165210469,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d12",
+  "_key": "!tables!wAAL6gqc4M2V2FJk"
+}

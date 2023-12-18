@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    9,
+    9
+  ],
+  "drawn": false,
+  "text": "Instrument",
+  "documentId": "Wp9qIwlQo6dpszOw",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/instrument.png",
+  "_id": "rWpsrmzynZCCP1gg",
+  "flags": {},
+  "_key": "!tables.results!SkcgjETudOZ1v52p.rWpsrmzynZCCP1gg"
+}

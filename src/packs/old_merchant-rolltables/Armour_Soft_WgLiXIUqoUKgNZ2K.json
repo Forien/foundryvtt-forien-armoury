@@ -1,0 +1,41 @@
+{
+  "folder": "auoZIFXuUhCbaVFh",
+  "name": "Armour Soft",
+  "_id": "WgLiXIUqoUKgNZ2K",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "wvi6Cg9MY4ajfB5Z",
+    "zVdHPdh4b3evObTm",
+    "y31dIJ53O9tDvajM",
+    "Au7fpcoqDdI0sS6i",
+    "CGKKhdgw3j1EWgYK",
+    "1U5du57p5bzk5xTG",
+    "6vgzA5K52fUnnJzw",
+    "flpmmx3AK1ZRdE2j",
+    "DiXogEoJs1de7XtJ"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690161227798,
+    "modifiedTime": 1690161817325,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d37",
+  "_key": "!tables!WgLiXIUqoUKgNZ2K"
+}

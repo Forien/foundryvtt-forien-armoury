@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    26,
+    26
+  ],
+  "drawn": false,
+  "text": "Plate",
+  "documentId": "68cSNeXpwBdXLPgb",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/plate.png",
+  "_id": "tecmzXo7R5K5H0ZG",
+  "flags": {},
+  "_key": "!tables.results!0Uvy8Rqc849Ork8O.tecmzXo7R5K5H0ZG"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 30,
+  "range": [
+    1,
+    30
+  ],
+  "drawn": false,
+  "text": "Clothing Common",
+  "documentId": "DkyB96EbXiOEGTk0",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "o9eql90mXTDr29HH",
+  "flags": {},
+  "_key": "!tables.results!KpefCK4r7TgYfO1w.o9eql90mXTDr29HH"
+}

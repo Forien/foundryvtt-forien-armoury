@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 30,
+  "range": [
+    1,
+    30
+  ],
+  "drawn": false,
+  "text": "Boat Hook",
+  "documentId": "erQvZYGF2HQB2QEB",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/boat-hook.png",
+  "_id": "sGuAJvsSXXZXikft",
+  "flags": {},
+  "_key": "!tables.results!i4RnSWGAnDizNxSU.sGuAJvsSXXZXikft"
+}

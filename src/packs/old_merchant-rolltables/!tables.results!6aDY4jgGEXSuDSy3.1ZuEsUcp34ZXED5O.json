@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    9,
+    9
+  ],
+  "drawn": false,
+  "text": "Halberd",
+  "documentId": "jxTsO0vrf53pCxCb",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/halberd.png",
+  "_id": "1ZuEsUcp34ZXED5O",
+  "flags": {},
+  "_key": "!tables.results!6aDY4jgGEXSuDSy3.1ZuEsUcp34ZXED5O"
+}

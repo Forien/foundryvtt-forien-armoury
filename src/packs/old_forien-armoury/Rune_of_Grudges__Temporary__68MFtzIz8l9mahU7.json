@@ -1,0 +1,34 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of Grudges (Temporary)",
+  "_id": "68MFtzIz8l9mahU7",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Character wielding weapon Engraved with this Rune can, on the first Round of Combat, nominate an enemy as the Target of this Rune. For the remainder of the Combat, you can reroll all failed attacks against the Target. One use only.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "invoke",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.effect');\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});\n\nthis.effect.update({\n  flags: {\n    wfrp4e: {\n      effectTrigger: \"endCombat\",\n      script: \"this.effect.update({disabled: true});\"\n    }\n  }\n});\n"
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    }
+  },
+  "tint": "#ff0000",
+  "_key": "!items.effects!a0HD1sx7SS4ZCw5A.68MFtzIz8l9mahU7"
+}

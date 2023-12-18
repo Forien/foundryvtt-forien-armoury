@@ -1,0 +1,38 @@
+{
+  "folder": "1Dr5AYNUnFcc22OL",
+  "name": "Containers Misc",
+  "_id": "ffYe4byROeFcNsvl",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "BopKUZXi9FX4qQiw",
+    "kCeL9Yr9iTQLTVa4",
+    "ReTbvbuiMm0zlTpt",
+    "lLVKFRur0e9qTnRU",
+    "C4kRse8gvHaiq8GK",
+    "o2gupvSn9aoX04wD"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690164662766,
+    "modifiedTime": 1690167749935,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d6",
+  "_key": "!tables!ffYe4byROeFcNsvl"
+}

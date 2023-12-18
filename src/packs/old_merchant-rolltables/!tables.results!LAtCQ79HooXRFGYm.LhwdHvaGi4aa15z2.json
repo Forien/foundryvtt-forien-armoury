@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 15,
+  "range": [
+    31,
+    45
+  ],
+  "drawn": false,
+  "text": "Healing Draught",
+  "documentId": "gxdjLQoQUTYgD6fm",
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-draught.png",
+  "_id": "LhwdHvaGi4aa15z2",
+  "flags": {},
+  "_key": "!tables.results!LAtCQ79HooXRFGYm.LhwdHvaGi4aa15z2"
+}

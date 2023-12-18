@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 15,
+  "range": [
+    16,
+    30
+  ],
+  "drawn": false,
+  "text": "Bodkin Bolt",
+  "documentId": "jCZpu8nn4FrKhMD0",
+  "img": "icons/weapons/ammunition/arrow-broadhead-green.webp",
+  "_id": "JOhWWWkSwA97U297",
+  "flags": {},
+  "_key": "!tables.results!yhRuXuNa9QmVZaIF.JOhWWWkSwA97U297"
+}

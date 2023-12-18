@@ -1,0 +1,106 @@
+{
+  "folder": "T3Shw97R3ln1UkQq",
+  "name": "Room, private double",
+  "type": "ammunition",
+  "img": "icons/environment/settlement/house-city.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "15",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "ammunitionType": {
+      "type": "String",
+      "label": "Ammunition Type",
+      "value": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {},
+    "item-piles": {
+      "system": {
+        "quantityForPrice": 1
+      },
+      "item": {
+        "keepZeroQuantity": true,
+        "isService": true,
+        "keepOnMerchant": true
+      },
+      "version": "2.7.5"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
+    "createdTime": 1690204180313,
+    "modifiedTime": 1690204303246,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "sfMetQLVzPHHMbxz",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!items!sfMetQLVzPHHMbxz"
+}

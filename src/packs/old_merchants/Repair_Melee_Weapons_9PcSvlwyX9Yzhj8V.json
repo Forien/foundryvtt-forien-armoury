@@ -1,0 +1,110 @@
+{
+  "folder": "T3Shw97R3ln1UkQq",
+  "name": "Repair Melee Weapons",
+  "type": "ammunition",
+  "img": "icons/skills/trades/smithing-tongs-metal-red.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "ammunitionType": {
+      "type": "String",
+      "label": "Ammunition Type",
+      "value": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.UVJnSz3VIw5M8tJn"
+    },
+    "item-piles": {
+      "system": {
+        "quantityForPrice": 1
+      },
+      "item": {
+        "keepZeroQuantity": true,
+        "isService": true,
+        "keepOnMerchant": true,
+        "infiniteQuantity": "yes",
+        "macro": "Compendium.forien-armoury.macros.Repair Melee Weapons"
+      },
+      "version": "2.7.6"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
+    "createdTime": 1690204180313,
+    "modifiedTime": 1690508822781,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "9PcSvlwyX9Yzhj8V",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!actors.items!1ZQaS9L6g7W5yYUT.9PcSvlwyX9Yzhj8V"
+}

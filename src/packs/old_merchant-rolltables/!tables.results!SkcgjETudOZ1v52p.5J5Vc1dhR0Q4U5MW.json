@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    2,
+    2
+  ],
+  "drawn": false,
+  "text": "Captain Braun's Multi-Stove",
+  "documentId": "sGnHloIvMJwcmfSJ",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "_id": "5J5Vc1dhR0Q4U5MW",
+  "flags": {},
+  "_key": "!tables.results!SkcgjETudOZ1v52p.5J5Vc1dhR0Q4U5MW"
+}

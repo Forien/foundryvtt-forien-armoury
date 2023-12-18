@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    5,
+    5
+  ],
+  "drawn": false,
+  "text": "Ranald's Delight",
+  "documentId": "jTFOrokjEHbi12rT",
+  "img": "modules/wfrp4e-core/icons/equipment/drugs_and_poisons/ranalds-delight.png",
+  "_id": "fQEHFGu9QzTLY4si",
+  "flags": {},
+  "_key": "!tables.results!3816iarb5kPKaOuJ.fQEHFGu9QzTLY4si"
+}

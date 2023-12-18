@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 1,
+  "range": [
+    51,
+    51
+  ],
+  "drawn": false,
+  "text": "Ammunition Exotic",
+  "documentId": "bAhlsrgiWq99rTju",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "nDwBhYlgD3jj0e1i",
+  "flags": {},
+  "_key": "!tables.results!ahQ9wn45iBNWvAb4.nDwBhYlgD3jj0e1i"
+}

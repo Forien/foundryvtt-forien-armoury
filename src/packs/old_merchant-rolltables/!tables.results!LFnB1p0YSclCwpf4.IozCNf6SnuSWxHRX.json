@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 6,
+  "range": [
+    6,
+    11
+  ],
+  "drawn": false,
+  "text": "Mail Coat",
+  "documentId": "i76oPVM2eFEs5IBh",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/mail-coat.png",
+  "_id": "IozCNf6SnuSWxHRX",
+  "flags": {},
+  "_key": "!tables.results!LFnB1p0YSclCwpf4.IozCNf6SnuSWxHRX"
+}

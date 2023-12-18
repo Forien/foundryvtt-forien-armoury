@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 30,
+  "range": [
+    1,
+    30
+  ],
+  "drawn": false,
+  "text": "Axe",
+  "documentId": "FaPOAjXnBXWLjQBl",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/axe.png",
+  "_id": "wM8Hxms7nQ3DRHsL",
+  "flags": {},
+  "_key": "!tables.results!NbQj13peakFFZ7y7.wM8Hxms7nQ3DRHsL"
+}

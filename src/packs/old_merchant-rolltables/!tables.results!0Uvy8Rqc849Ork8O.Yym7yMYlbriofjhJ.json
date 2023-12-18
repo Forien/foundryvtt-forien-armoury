@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 1,
+  "range": [
+    24,
+    24
+  ],
+  "drawn": false,
+  "text": "Oil Lamp",
+  "documentId": "jCryH7kR8bJc9eoC",
+  "img": "icons/sundries/lights/candle-unlit-yellow.webp",
+  "_id": "Yym7yMYlbriofjhJ",
+  "flags": {},
+  "_key": "!tables.results!0Uvy8Rqc849Ork8O.Yym7yMYlbriofjhJ"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 15,
+  "range": [
+    96,
+    110
+  ],
+  "drawn": false,
+  "text": "Partizan/Glaive",
+  "documentId": "miQuUfezjlRKNRyp",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/partizan.png",
+  "_id": "GUQheLvpkLNtFvY5",
+  "flags": {},
+  "_key": "!tables.results!b2Gc1oLA2NSrhR20.GUQheLvpkLNtFvY5"
+}

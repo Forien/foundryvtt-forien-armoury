@@ -1,0 +1,49 @@
+{
+  "folder": "Y1kRDKj14dTLeSyo",
+  "name": "Clothing Common",
+  "_id": "DkyB96EbXiOEGTk0",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "956O5NXtBUzAsOYc",
+    "i4e0jM7s8rya8uet",
+    "rdErYvFKUC53fNMz",
+    "4v00ua8L4qU6wVIO",
+    "1RlVstSsc0vVv4XI",
+    "r3Inx1Zy4MbGZOLc",
+    "zKOD7iVNSloN3oZI",
+    "JY8Pr4SPtqHSUKIC",
+    "bYqIAzqdLSLVCmPO",
+    "zNGC3wWcyZigwE7u",
+    "AUT2NIOSIhC1JcyE",
+    "cSgRG4ZZesA6Em48",
+    "fclos64w5EFVo2G0",
+    "MvIwNW0cPoMwu4fR",
+    "N7nP9yqkzvjL4zbL",
+    "SLkXOVUwDNHBGKsp",
+    "0uEi6usIJzW951QQ"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690164774157,
+    "modifiedTime": 1690164805294,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d17",
+  "_key": "!tables!DkyB96EbXiOEGTk0"
+}

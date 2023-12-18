@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 10,
+  "range": [
+    47,
+    56
+  ],
+  "drawn": false,
+  "text": "Boiled Leather Breastplate",
+  "documentId": "tIG1TGcmU2i4rgFh",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/boiled-leather-breastplate.png",
+  "_id": "8HBx9CYrbGZpeIqo",
+  "flags": {},
+  "_key": "!tables.results!bcfWOzoAXLS0r4OE.8HBx9CYrbGZpeIqo"
+}

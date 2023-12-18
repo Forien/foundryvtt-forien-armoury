@@ -1,0 +1,26 @@
+{
+  "name": "Lingering (Challenging)",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": false,
+  "flags": {
+    "wfrp4e": {
+      "symptom": true
+    }
+  },
+  "_id": "219JmXKadKQ6Jl9k",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!A5Ehm29WuOXCFP4O.219JmXKadKQ6Jl9k"
+}

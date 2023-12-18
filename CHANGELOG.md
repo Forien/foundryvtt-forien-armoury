@@ -10,7 +10,10 @@
   * Describing Hunters' Guild and Runebounds
 * Added 8 new Talents
   * `Fighting Style (Any)` and `Fighting Master (Style)` along with variant for every of the three styles.
-* Added 4 symptoms made by RassilonMonk 
+* Added 4 symptoms made by RassilonMonk
+* Added 5 new Diseases by RassilonMonk
+* Added a `Drunk` Trait
+* Added a general Macro to quickly open the Forien's Armoury Settings
 * Reworked structure of `.mjs` files in the module, since codebase grows
 * Created Settings App, which allows to display settings in more visually appealing and intuitive way
 * Modified some icons by adding a wfrp4e-style border to them.

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Book, Apothecary",
+  "documentId": "AWx6rqwOlN68pN6I",
+  "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-apothecary.png",
+  "_id": "JpPAkCywJw7gKkx0",
+  "flags": {},
+  "_key": "!tables.results!wH3MvT7J3UlRR00y.JpPAkCywJw7gKkx0"
+}

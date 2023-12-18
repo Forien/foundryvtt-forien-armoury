@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 20,
+  "range": [
+    61,
+    80
+  ],
+  "drawn": false,
+  "text": "Gambeson Shirt",
+  "documentId": "wkTgfXYKNDDUmL1m",
+  "img": "modules/forien-armoury/icons/gambeson-shirt.png",
+  "_id": "eDuaH8AduHdU7cMB",
+  "flags": {},
+  "_key": "!tables.results!R7GDdlzGIyNxLVv3.eDuaH8AduHdU7cMB"
+}

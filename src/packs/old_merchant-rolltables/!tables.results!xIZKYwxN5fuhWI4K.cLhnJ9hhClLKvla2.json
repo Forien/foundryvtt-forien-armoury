@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Book, Religion",
+  "documentId": "PKkGM5Q0Chmt5qFe",
+  "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-religion.png",
+  "_id": "cLhnJ9hhClLKvla2",
+  "flags": {},
+  "_key": "!tables.results!xIZKYwxN5fuhWI4K.cLhnJ9hhClLKvla2"
+}

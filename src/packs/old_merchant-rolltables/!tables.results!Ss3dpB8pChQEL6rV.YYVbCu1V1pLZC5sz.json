@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 10,
+  "range": [
+    41,
+    50
+  ],
+  "drawn": false,
+  "text": "Mail Chausses",
+  "documentId": "XWlkZVUhzO0CwaiJ",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/mail-chausses.png",
+  "_id": "YYVbCu1V1pLZC5sz",
+  "flags": {},
+  "_key": "!tables.results!Ss3dpB8pChQEL6rV.YYVbCu1V1pLZC5sz"
+}

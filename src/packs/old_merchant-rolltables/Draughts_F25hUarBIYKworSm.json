@@ -1,0 +1,19 @@
+{
+  "name": "Draughts",
+  "sorting": "a",
+  "folder": "U5LJnQZHd1Js6YML",
+  "type": "RollTable",
+  "_id": "F25hUarBIYKworSm",
+  "sort": 300000,
+  "color": "#afa146",
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": null,
+    "modifiedTime": 1690165937482,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!folders!F25hUarBIYKworSm"
+}

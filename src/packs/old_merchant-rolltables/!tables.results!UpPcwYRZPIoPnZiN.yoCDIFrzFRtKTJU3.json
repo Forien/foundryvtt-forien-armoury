@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 4,
+  "range": [
+    9,
+    12
+  ],
+  "drawn": false,
+  "text": "Weapons Ranged Bow",
+  "documentId": "u7KC15yrzT8FQgbA",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "yoCDIFrzFRtKTJU3",
+  "flags": {},
+  "_key": "!tables.results!UpPcwYRZPIoPnZiN.yoCDIFrzFRtKTJU3"
+}

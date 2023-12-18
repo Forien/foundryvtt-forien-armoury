@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 5,
+  "range": [
+    46,
+    50
+  ],
+  "drawn": false,
+  "text": "Weapons Melee Rare",
+  "documentId": "Qrn0SkDfC4s8EHhu",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "UtCa9efVYz8kgEdb",
+  "flags": {},
+  "_key": "!tables.results!pKyv4Jc6muNC94g7.UtCa9efVYz8kgEdb"
+}

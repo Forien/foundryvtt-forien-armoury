@@ -1,0 +1,61 @@
+{
+  "name": "Fighting Master (Ironshield)",
+  "type": "talent",
+  "img": "modules/forien-armoury/icons/talents/style_defensive_master.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Can only be learned by characters knowing @UUID[Compendium.forien-armoury.forien-armoury.Item.Da4zReU57OnesKGd]{Fighting Style (Ironshield)}.</p><ul><li><p>During riposte you may choose one of the following additional effects:</p><ul><li><p>Cause 1 @Condition[Bleeding] Condition,</p></li><li><p>Perform @UUID[Compendium.wfrp4e-core.items.Item.jt0DmVK9IiF6Sd2h]{Strike to Stun} with your shield, as if you had the Talent,</p></li><li><p>Give –10 modifier to defend against the riposte.</p></li></ul></li></ul>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "effects": [],
+  "folder": "c6bIK3vGnIqNXscz",
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "core": {},
+    "forien-armoury": {
+      "fighting-master": true
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1702057628149,
+    "modifiedTime": 1702482639285,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "uL8T7Gy9rRq74HIN",
+  "sort": 800000,
+  "_key": "!items!uL8T7Gy9rRq74HIN"
+}

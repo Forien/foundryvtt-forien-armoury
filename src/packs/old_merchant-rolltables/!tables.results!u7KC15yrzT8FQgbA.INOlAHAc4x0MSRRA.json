@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 30,
+  "range": [
+    1,
+    30
+  ],
+  "drawn": false,
+  "text": "Bow",
+  "documentId": "U94l3IDj3xfIc78i",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/bow.png",
+  "_id": "INOlAHAc4x0MSRRA",
+  "flags": {},
+  "_key": "!tables.results!u7KC15yrzT8FQgbA.INOlAHAc4x0MSRRA"
+}

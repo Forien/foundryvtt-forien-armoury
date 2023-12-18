@@ -1,0 +1,101 @@
+{
+  "folder": "ACZwDoSnT2eWvGBp",
+  "name": "Runebound Ranger",
+  "type": "career",
+  "img": "modules/forien-armoury/icons/careers/runebound-ranger-2.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.lV438LtXZvxHkmmK]{Runebound Ranger}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Runebound Ranger"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Monster Hunters"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "2"
+    },
+    "status": {
+      "tier": "s",
+      "standing": 1
+    },
+    "characteristics": [
+      "t",
+      "ws",
+      "ag",
+      "wp"
+    ],
+    "skills": [
+      "Animal Care",
+      "Athletics",
+      "Channelling",
+      "Dodge",
+      "Endurance",
+      "Lore (Beasts)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception",
+      "Set Trap",
+      "Cool",
+      "Heal",
+      "Intuition",
+      "Melee (Two-Handed)",
+      "Outdoor Survival",
+      "Trade (Apothecary)"
+    ],
+    "talents": [
+      "Acute Sense (any)",
+      "Ambidextrous",
+      "Combat Aware",
+      "Runebound Magic"
+    ],
+    "trappings": [
+      "Silvered Sword",
+      "Runebound Insignia"
+    ],
+    "incomeSkill": [
+      6
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688251075008,
+    "modifiedTime": 1689017834447,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "21HzH7b9KhYTbodZ",
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!21HzH7b9KhYTbodZ"
+}

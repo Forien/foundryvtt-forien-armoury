@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 30,
+  "range": [
+    131,
+    160
+  ],
+  "drawn": false,
+  "text": "Quarterstaff",
+  "documentId": "Dk3jOsooVXua0GSi",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/quarterstaff.png",
+  "_id": "HxCbbrd8G3y4RHtl",
+  "flags": {},
+  "_key": "!tables.results!b2Gc1oLA2NSrhR20.HxCbbrd8G3y4RHtl"
+}

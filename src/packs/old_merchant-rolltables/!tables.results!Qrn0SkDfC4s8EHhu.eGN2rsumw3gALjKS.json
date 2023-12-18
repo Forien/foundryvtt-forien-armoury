@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    7,
+    7
+  ],
+  "drawn": false,
+  "text": "Swordbreaker",
+  "documentId": "uDavMIqhDl5aDNOy",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/swordbreaker.png",
+  "_id": "eGN2rsumw3gALjKS",
+  "flags": {},
+  "_key": "!tables.results!Qrn0SkDfC4s8EHhu.eGN2rsumw3gALjKS"
+}

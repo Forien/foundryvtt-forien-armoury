@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 1,
+  "range": [
+    51,
+    51
+  ],
+  "drawn": false,
+  "text": "Weapons Ranged Exotic",
+  "documentId": "Pdyhzp5OM17XSMoK",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "zQiQeTw9No3PFw5F",
+  "flags": {},
+  "_key": "!tables.results!y5SW5JyTnLMGZ493.zQiQeTw9No3PFw5F"
+}

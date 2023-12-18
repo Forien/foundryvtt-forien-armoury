@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    2,
+    2
+  ],
+  "drawn": false,
+  "text": "Bolt",
+  "documentId": "kFROfGFdExfyJTg9",
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/bolt.png",
+  "_id": "4gTJJ2n9MbeCLV6q",
+  "flags": {},
+  "_key": "!tables.results!j2rN0bLGn7OJ2YKN.4gTJJ2n9MbeCLV6q"
+}

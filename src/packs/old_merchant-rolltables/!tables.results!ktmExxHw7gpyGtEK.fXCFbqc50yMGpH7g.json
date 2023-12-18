@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 5,
+  "range": [
+    57,
+    61
+  ],
+  "drawn": false,
+  "text": "Pistol",
+  "documentId": "pu2OkOWm15zEqWzz",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/pistol.png",
+  "_id": "fXCFbqc50yMGpH7g",
+  "flags": {},
+  "_key": "!tables.results!ktmExxHw7gpyGtEK.fXCFbqc50yMGpH7g"
+}

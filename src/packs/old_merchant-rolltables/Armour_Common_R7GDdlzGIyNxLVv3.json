@@ -1,0 +1,41 @@
+{
+  "folder": "1s3VG4H3m9vYvDhz",
+  "name": "Armour Common",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "P6udhLRbXubh6KW2",
+    "ZSsGP7BNxzeI6rYG",
+    "rrsvAVJumE5kP2Yk",
+    "eDuaH8AduHdU7cMB",
+    "Hk5q6Xc1j82AjPYX",
+    "AcNggZPYRLwPa8AB",
+    "YICuwKoAyNasH210",
+    "jwEZGrYZLYayz0wm",
+    "D5hpHhD69CtE3Q16"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690160129029,
+    "modifiedTime": 1690161830863,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d200",
+  "_id": "R7GDdlzGIyNxLVv3",
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!tables!R7GDdlzGIyNxLVv3"
+}

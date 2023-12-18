@@ -1,0 +1,37 @@
+{
+  "folder": "OIXKjAS72VZJ0m0z",
+  "name": "Weapons Ranged Bow",
+  "_id": "u7KC15yrzT8FQgbA",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "INOlAHAc4x0MSRRA",
+    "wJcCWdCa3OS5InnO",
+    "mWlw6rzdG5MYA8LW",
+    "YDqF3pr43CZxjGEs",
+    "YN2xlTEt4M5bVXBB"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690163291237,
+    "modifiedTime": 1690163359042,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d106",
+  "_key": "!tables!u7KC15yrzT8FQgbA"
+}

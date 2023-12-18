@@ -1,0 +1,44 @@
+{
+  "folder": "pKEh2I51xgzWgJK5",
+  "name": "Weapons Ranged Exotic",
+  "_id": "Pdyhzp5OM17XSMoK",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "XXadJ4Bllypu8EMc",
+    "oe6b0cjTJrBsm3rg",
+    "NdLky4GVeZ6SqPbj",
+    "oPgHWQnlM3MlZVUw",
+    "YdN6KQ4i1pUVytvB",
+    "vUdj0DsEgYiOIkOq",
+    "2xoI311KmrEUKld5",
+    "b02X1zyHqDjrALER",
+    "xUZSzzMeFbBY28TM",
+    "gYjyiHNEQJJdIj1J",
+    "RU6ZCBpzCWGUoeWW",
+    "aLcjix63xmluMSM5"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690163152335,
+    "modifiedTime": 1690164145737,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d12",
+  "_key": "!tables!Pdyhzp5OM17XSMoK"
+}

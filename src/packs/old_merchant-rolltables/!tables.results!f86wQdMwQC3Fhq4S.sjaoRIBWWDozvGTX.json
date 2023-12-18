@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    9,
+    9
+  ],
+  "drawn": false,
+  "text": "Paper Cartridge",
+  "documentId": "WVAWy4XCobfFdSeR",
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png",
+  "_id": "sjaoRIBWWDozvGTX",
+  "flags": {},
+  "_key": "!tables.results!f86wQdMwQC3Fhq4S.sjaoRIBWWDozvGTX"
+}

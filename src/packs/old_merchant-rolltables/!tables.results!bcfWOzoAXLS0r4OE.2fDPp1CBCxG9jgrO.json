@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 7,
+  "range": [
+    30,
+    36
+  ],
+  "drawn": false,
+  "text": "Plate Leggings",
+  "documentId": "bY6M9XxbqmFmqpA8",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/plate-leggings.png",
+  "_id": "2fDPp1CBCxG9jgrO",
+  "flags": {},
+  "_key": "!tables.results!bcfWOzoAXLS0r4OE.2fDPp1CBCxG9jgrO"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Runebound Ranger",
+  "sorting": "m",
+  "folder": "7fDQlUW1KkJTw9MJ",
+  "type": "Item",
+  "_id": "ACZwDoSnT2eWvGBp",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": null,
+    "modifiedTime": 1688388980642,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_key": "!folders!ACZwDoSnT2eWvGBp"
+}

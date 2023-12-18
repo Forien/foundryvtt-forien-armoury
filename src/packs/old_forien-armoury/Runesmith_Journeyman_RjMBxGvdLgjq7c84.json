@@ -1,0 +1,102 @@
+{
+  "folder": "aGq6qQUjoQUkTz0N",
+  "name": "Runesmith Journeyman",
+  "type": "career",
+  "img": "modules/forien-armoury/icons/careers/runesmith-2.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.e0UGR1lJQjdA68Er]{Runesmith}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Runesmith"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Academics"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "2"
+    },
+    "status": {
+      "tier": "s",
+      "standing": 5
+    },
+    "characteristics": [
+      "dex",
+      "int",
+      "wp",
+      "s"
+    ],
+    "skills": [
+      "Art (Engraving)",
+      "Cool",
+      "Endurance",
+      "Evaluate",
+      "Language (Magick)",
+      "Lore (Runes)",
+      "Melee (Basic)",
+      "Perception",
+      "Runecraft",
+      "Trade (Smith)",
+      "Dodge",
+      "Gossip",
+      "Haggle",
+      "Lore (History)",
+      "Melee (any)",
+      "Trade (any)"
+    ],
+    "talents": [
+      "Craftsman (Smith)",
+      "Detect Artifact",
+      "Magical Sense",
+      "Nimble Fingered"
+    ],
+    "trappings": [
+      "Guild License",
+      "Runecrafting Tools",
+      "1 Runic Item"
+    ],
+    "incomeSkill": [
+      8
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688388710193,
+    "modifiedTime": 1689017861262,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "RjMBxGvdLgjq7c84",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!RjMBxGvdLgjq7c84"
+}

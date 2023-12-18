@@ -1,0 +1,35 @@
+{
+  "icon": "icons/tools/scribal/spectacles-glasses.webp",
+  "transfer": true,
+  "name": "Spectacles",
+  "_id": "FpSiaPDvgSspxHGv",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "prePrepareData",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.actor.characteristics.i.value < 40)\n  args.actor.characteristics.i.modifier += 3; ",
+      "reduceQuantity": false
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!1jBWWFFhyGAN4r2R.FpSiaPDvgSspxHGv"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 7,
+  "range": [
+    15,
+    21
+  ],
+  "drawn": false,
+  "text": "Plate Bracers",
+  "documentId": "oW7wSkl4JMb5sBH8",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/plate-bracers.png",
+  "_id": "qgv1lF3grmniJ5os",
+  "flags": {},
+  "_key": "!tables.results!bcfWOzoAXLS0r4OE.qgv1lF3grmniJ5os"
+}

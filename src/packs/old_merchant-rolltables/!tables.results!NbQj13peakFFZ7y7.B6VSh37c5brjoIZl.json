@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 30,
+  "range": [
+    396,
+    425
+  ],
+  "drawn": false,
+  "text": "Shield (Buckler)",
+  "documentId": "J9sVeK9nbQLFyUMU",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/shield-buckler.png",
+  "_id": "B6VSh37c5brjoIZl",
+  "flags": {},
+  "_key": "!tables.results!NbQj13peakFFZ7y7.B6VSh37c5brjoIZl"
+}

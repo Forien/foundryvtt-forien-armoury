@@ -1,0 +1,34 @@
+{
+  "icon": "icons/magic/acid/dissolve-vomit-green-brown.webp",
+  "transfer": true,
+  "name": "Drunk",
+  "_id": "x5R1aQSLJa0HpL77",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "prePrepareData",
+      "effectApplication": "actor",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "args.actor.characteristics.ws.modifier -= 10;\nargs.actor.characteristics.bs.modifier -= 10;\nargs.actor.characteristics.ag.modifier -= 10;\nargs.actor.characteristics.dex.modifier -= 10;\nargs.actor.characteristics.int.modifier -= 10;"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!0jF3n0qU0JklSQTz.x5R1aQSLJa0HpL77"
+}

@@ -1,0 +1,49 @@
+{
+  "folder": "yOsuU5LCBM5bt9yt",
+  "name": "Sundries",
+  "_id": "2zf6KYSJvwjQSn0a",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "rq1Vk2oh5JHbtluO",
+    "iTo3iLjpyM6irGVR",
+    "bwXd7Xs3aqQBR3Kd",
+    "9GRrAdHCHEkcghM3",
+    "YhBz9ozI3tzF9S96",
+    "F6rdDymh0CRbPzOW",
+    "lfAX9HYmzkx3HWMR",
+    "EVkEJpcaI7UTqacl",
+    "FfoSYqLFFJhfBs1H",
+    "RVxgyJrc4YaTsjmL",
+    "j70khlkUQXsDIwY4",
+    "IZULwdKnZ4KS65EQ",
+    "b5yEnSAnoLbh8Bun",
+    "Zu1n9zcBd7dv26p2",
+    "Ur6NJy0asI4Tr4aH",
+    "UUGvAvp4fboYxneL",
+    "LfRwhqcYY14SComL"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690166919439,
+    "modifiedTime": 1690167040682,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d136",
+  "_key": "!tables!2zf6KYSJvwjQSn0a"
+}

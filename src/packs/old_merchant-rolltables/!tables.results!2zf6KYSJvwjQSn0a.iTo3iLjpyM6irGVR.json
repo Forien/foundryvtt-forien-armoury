@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 10,
+  "range": [
+    6,
+    15
+  ],
+  "drawn": false,
+  "text": "Doll",
+  "documentId": "QpqxyJ8dkzG3qKrE",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/doll.png",
+  "_id": "iTo3iLjpyM6irGVR",
+  "flags": {},
+  "_key": "!tables.results!2zf6KYSJvwjQSn0a.iTo3iLjpyM6irGVR"
+}

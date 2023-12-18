@@ -1,0 +1,19 @@
+{
+  "name": "Containers",
+  "sorting": "a",
+  "folder": null,
+  "type": "RollTable",
+  "_id": "1Dr5AYNUnFcc22OL",
+  "sort": 0,
+  "color": "#3e281e",
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690164543809,
+    "modifiedTime": 1690164543809,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!folders!1Dr5AYNUnFcc22OL"
+}

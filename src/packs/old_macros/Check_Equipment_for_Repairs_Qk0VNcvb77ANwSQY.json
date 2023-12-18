@@ -1,0 +1,27 @@
+{
+  "name": "Check Equipment for Repairs",
+  "type": "script",
+  "scope": "global",
+  "author": "ZJyAmf2sKocHG1ud",
+  "img": "icons/skills/trades/smithing-anvil-brown.webp",
+  "command": "const api = game.modules.get(\"forien-armoury\")?.api.itemRepair;\n\nif (api)\n  api.checkInventoryForDamage(actor, {paid: true});",
+  "folder": "K7bIr7HUorfHR7Xh",
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
+    "createdTime": 1688684806315,
+    "modifiedTime": 1690870432371,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "Qk0VNcvb77ANwSQY",
+  "sort": 200000,
+  "_key": "!macros!Qk0VNcvb77ANwSQY"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 5,
+  "range": [
+    31,
+    35
+  ],
+  "drawn": false,
+  "text": "Main Gauche",
+  "documentId": "mY6RyN2rn7h6uaeB",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/main-gauche.png",
+  "_id": "zdKqc6V9l2hL1wl7",
+  "flags": {},
+  "_key": "!tables.results!8HxsHxZgPSeKvt6o.zdKqc6V9l2hL1wl7"
+}

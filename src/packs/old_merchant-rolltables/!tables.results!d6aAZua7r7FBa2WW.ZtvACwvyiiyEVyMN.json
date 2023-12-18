@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-zoo.items",
+  "weight": 5,
+  "range": [
+    1,
+    5
+  ],
+  "drawn": false,
+  "text": "Net",
+  "documentId": "2yJbfJDQs9cEaT86",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/net.png",
+  "_id": "ZtvACwvyiiyEVyMN",
+  "flags": {},
+  "_key": "!tables.results!d6aAZua7r7FBa2WW.ZtvACwvyiiyEVyMN"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    52,
+    52
+  ],
+  "drawn": false,
+  "text": "Hunting Dog",
+  "documentId": "y28P2G0NEVZvMzS5",
+  "img": "modules/wfrp4e-core/icons/equipment/animals_and_vehicles/hunting-dog.png",
+  "_id": "lfAX9HYmzkx3HWMR",
+  "flags": {},
+  "_key": "!tables.results!2zf6KYSJvwjQSn0a.lfAX9HYmzkx3HWMR"
+}

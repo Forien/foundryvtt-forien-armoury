@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 5,
+  "range": [
+    12,
+    16
+  ],
+  "drawn": false,
+  "text": "Mail Coif",
+  "documentId": "4xV16ttsxCa311vl",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/mail-coif.png",
+  "_id": "QGJvmEncQDnmcM3X",
+  "flags": {},
+  "_key": "!tables.results!LFnB1p0YSclCwpf4.QGJvmEncQDnmcM3X"
+}

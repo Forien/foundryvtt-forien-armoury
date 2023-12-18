@@ -1,0 +1,89 @@
+{
+  "name": "Master Talismanic Runes",
+  "type": "trapping",
+  "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    "2yJmMuInI1M4GLAu",
+    "oVov3CH6XUrXpjtS",
+    "zukSJOlAJDW13F2c",
+    "Ch4a85kEBNmLgBP6",
+    "46bUOQI2kouAYPOq",
+    "mPh0Rs0DGLDw0brH"
+  ],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688413119645,
+    "modifiedTime": 1688942857203,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "folder": "3OEI9PiGaa4rGQHy",
+  "_id": "BUv7dGYQSklq6UXj",
+  "sort": 75000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!items!BUv7dGYQSklq6UXj"
+}

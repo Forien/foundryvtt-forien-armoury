@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    27,
+    27
+  ],
+  "drawn": false,
+  "text": "Rags",
+  "documentId": "TfRdF6baYuGd6i53",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/rags.png",
+  "_id": "ZItmIDn9WXDlu1t6",
+  "flags": {},
+  "_key": "!tables.results!0Uvy8Rqc849Ork8O.ZItmIDn9WXDlu1t6"
+}

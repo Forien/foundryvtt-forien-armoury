@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    7,
+    7
+  ],
+  "drawn": false,
+  "text": "Lock Picks",
+  "documentId": "oGzxLBKOwJ8C0q3E",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/lock-picks.png",
+  "_id": "bbGTUOnaal9y4Bba",
+  "flags": {},
+  "_key": "!tables.results!wAAL6gqc4M2V2FJk.bbGTUOnaal9y4Bba"
+}

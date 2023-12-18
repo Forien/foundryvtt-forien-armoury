@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 10,
+  "range": [
+    97,
+    106
+  ],
+  "drawn": false,
+  "text": "Lamp Oil",
+  "documentId": "Bal23aLiOmnht42h",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/lamp-oil.png",
+  "_id": "j3NbAkzuKPqJLxjt",
+  "flags": {},
+  "_key": "!tables.results!fMXHQvh485Pd62Q2.j3NbAkzuKPqJLxjt"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    5,
+    5
+  ],
+  "drawn": false,
+  "text": "Gilded Nose",
+  "documentId": "qDEu30xKhIxfSckg",
+  "img": "modules/wfrp4e-core/icons/equipment/prosthetics/gilded-nose.png",
+  "_id": "nEIISy7gNW72LjAk",
+  "flags": {},
+  "_key": "!tables.results!SkcgjETudOZ1v52p.nEIISy7gNW72LjAk"
+}

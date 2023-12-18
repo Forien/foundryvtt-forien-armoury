@@ -33,15 +33,11 @@
     ],
     "recommends": [
       {
-        "id": "ATL",
-        "type": "module"
-      },
-      {
-        "id": "item-piles",
-        "type": "module"
-      },
-      {
         "id": "times-up",
+        "type": "module"
+      },
+      {
+        "id": "foundryvtt-simple-calendar",
         "type": "module"
       }
     ]

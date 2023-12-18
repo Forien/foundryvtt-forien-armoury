@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    2,
+    2
+  ],
+  "drawn": false,
+  "text": "Bomb",
+  "documentId": "X8WFQf0HB9yXKjdD",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/bomb.png",
+  "_id": "3jBnQX4MylRLzZdh",
+  "flags": {},
+  "_key": "!tables.results!g9nAK5VCHXFCHhzT.3jBnQX4MylRLzZdh"
+}

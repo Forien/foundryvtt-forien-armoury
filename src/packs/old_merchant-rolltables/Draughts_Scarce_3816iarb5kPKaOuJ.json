@@ -1,0 +1,38 @@
+{
+  "folder": "F25hUarBIYKworSm",
+  "name": "Draughts Scarce",
+  "_id": "3816iarb5kPKaOuJ",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "zfvDJIWTY4W4uDu6",
+    "ICIhsyk9bSk6COY9",
+    "7RhUq2yxH2G1Mhrp",
+    "nKBgBPkBhe4ydPuS",
+    "fQEHFGu9QzTLY4si",
+    "fepLxNItONoVGtP1"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690165705017,
+    "modifiedTime": 1690165723842,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d6",
+  "_key": "!tables!3816iarb5kPKaOuJ"
+}

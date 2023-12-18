@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    3,
+    3
+  ],
+  "drawn": false,
+  "text": "Broom",
+  "documentId": "w9VCyP12U7MrC3jk",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/broom.png",
+  "_id": "HJKmxVj8BrNeqg3Y",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.HJKmxVj8BrNeqg3Y"
+}

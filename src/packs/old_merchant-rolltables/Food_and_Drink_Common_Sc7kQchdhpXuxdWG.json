@@ -1,0 +1,36 @@
+{
+  "folder": "vUXBvutCfP5bBtmP",
+  "name": "Food and Drink Common",
+  "_id": "Sc7kQchdhpXuxdWG",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "qoAPSeLgrMTO6w07",
+    "y9rBbWpD7UqDoik7",
+    "hD6QS4GrT1x76aYw",
+    "is9YmwvRByG68blc"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690164971467,
+    "modifiedTime": 1690164993073,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "",
+  "_key": "!tables!Sc7kQchdhpXuxdWG"
+}

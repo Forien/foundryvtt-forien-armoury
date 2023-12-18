@@ -1,0 +1,90 @@
+{
+  "name": "Improved Gunpowder, Keg",
+  "type": "trapping",
+  "img": "icons/containers/barrels/barrel-apple-steel-orange.webp",
+  "effects": [
+    "xw4rj0sreWwUuyW6",
+    "FXUStJvWY3xHM2Il"
+  ],
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><em>Current capacity: 144 / 144</em></p><p>Holds enough gunpowder for 144 @UUID[Compendium.forien-armoury.forien-armoury.Item.RN5mc97zk1Bd7jRx]{improved shots} (12 standard horns)</p><p><em>Includes price of a 1/6 for a keg.</em></p><p><strong>To apply improved gunpowder</strong>, drag the Effects to any ammunition you want, and enable \"Apply to Actor\" on new effects on the ammunition. Do this before adding ammunition item to Actor.</p><p>Improved Gunpowder provides various benefits. @UUID[JournalEntry.4spGTAnh7qc2JDqY.JournalEntryPage.TwuMMg4t9QPf89rT#alchemical-products]{Read more here}.</p><ul><li><p>Reduces reload time.</p></li><li><p>Makes it possible to ignore effects of a Misfire.</p></li></ul>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 5
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "2",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "misc"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1663627495296,
+    "modifiedTime": 1701587797379,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "folder": "EMM7NeZE1NBThlpp",
+  "_id": "geiipKKwUUiREPAi",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!geiipKKwUUiREPAi"
+}

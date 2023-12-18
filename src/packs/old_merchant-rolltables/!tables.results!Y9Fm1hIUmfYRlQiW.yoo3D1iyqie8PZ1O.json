@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 15,
+  "range": [
+    64,
+    78
+  ],
+  "drawn": false,
+  "text": "Pan",
+  "documentId": "YIUJ8FnHDm4OMRES",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/pan.png",
+  "_id": "yoo3D1iyqie8PZ1O",
+  "flags": {},
+  "_key": "!tables.results!Y9Fm1hIUmfYRlQiW.yoo3D1iyqie8PZ1O"
+}

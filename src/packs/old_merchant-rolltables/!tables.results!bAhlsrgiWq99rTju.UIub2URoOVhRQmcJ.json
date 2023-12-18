@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    2,
+    2
+  ],
+  "drawn": false,
+  "text": "Elf Arrow",
+  "documentId": "NQ4OVp1ZfinJ7lQH",
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/elf-arrow.png",
+  "_id": "UIub2URoOVhRQmcJ",
+  "flags": {},
+  "_key": "!tables.results!bAhlsrgiWq99rTju.UIub2URoOVhRQmcJ"
+}

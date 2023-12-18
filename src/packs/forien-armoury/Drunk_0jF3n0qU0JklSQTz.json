@@ -1,0 +1,71 @@
+{
+  "name": "Drunk",
+  "type": "trait",
+  "img": "icons/magic/acid/dissolve-vomit-green-brown.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>A fast and convenient way to apply the Characteristics modifiers that come from failed @UUID[JournalEntry.6zOdTLv3YeYeJ4hR.JournalEntryPage.38Ux3mEWYuQ4heIT]{Consume Alcohol} Test</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<blockquote class=\"foundry-note\"><p>To apply the modifiers, you can drag the entire <strong>Trait</strong> to the Actor, or just move the \"Drunk\" effect from the <strong>Effects</strong> tab.</p></blockquote>"
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    "x5R1aQSLJa0HpL77"
+  ],
+  "folder": "PQAanEQoiIOxQp1r",
+  "ownership": {
+    "default": 0,
+    "XoHsMevsFtsW7WqO": 3
+  },
+  "flags": {
+    "exportSource": {
+      "world": "wfrp4e",
+      "system": "wfrp4e",
+      "coreVersion": "11.315",
+      "systemVersion": "7.0.3"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1702579795492,
+    "modifiedTime": 1702856829867,
+    "lastModifiedBy": "XoHsMevsFtsW7WqO"
+  },
+  "_id": "0jF3n0qU0JklSQTz",
+  "sort": 100000,
+  "_key": "!items!0jF3n0qU0JklSQTz"
+}

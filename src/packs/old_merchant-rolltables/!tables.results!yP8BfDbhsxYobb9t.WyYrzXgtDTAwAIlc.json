@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    6,
+    6
+  ],
+  "drawn": false,
+  "text": "Javelin",
+  "documentId": "q3dEaQLL3ZYCZtU4",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/javelin.png",
+  "_id": "WyYrzXgtDTAwAIlc",
+  "flags": {},
+  "_key": "!tables.results!yP8BfDbhsxYobb9t.WyYrzXgtDTAwAIlc"
+}

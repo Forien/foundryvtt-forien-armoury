@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    28,
+    28
+  ],
+  "drawn": false,
+  "text": "Griffonsfoot Pistol",
+  "documentId": "jVXLYH6RexF1SUnP",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/griffonsfoot.png",
+  "_id": "FgUO4ROW6eQYW6ct",
+  "flags": {},
+  "_key": "!tables.results!ktmExxHw7gpyGtEK.FgUO4ROW6eQYW6ct"
+}

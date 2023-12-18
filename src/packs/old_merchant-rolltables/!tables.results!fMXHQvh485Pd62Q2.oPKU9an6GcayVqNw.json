@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 10,
+  "range": [
+    29,
+    38
+  ],
+  "drawn": false,
+  "text": "Rope, 10 yards",
+  "documentId": "horFAtaDz0EbuY3R",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/rope-10-yards.png",
+  "_id": "oPKU9an6GcayVqNw",
+  "flags": {},
+  "_key": "!tables.results!fMXHQvh485Pd62Q2.oPKU9an6GcayVqNw"
+}

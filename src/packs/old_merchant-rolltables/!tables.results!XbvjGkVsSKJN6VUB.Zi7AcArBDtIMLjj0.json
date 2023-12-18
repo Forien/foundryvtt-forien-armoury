@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 4,
+  "range": [
+    16,
+    19
+  ],
+  "drawn": false,
+  "text": "Weapons Ranged Entangling",
+  "documentId": "d6aAZua7r7FBa2WW",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "Zi7AcArBDtIMLjj0",
+  "flags": {},
+  "_key": "!tables.results!XbvjGkVsSKJN6VUB.Zi7AcArBDtIMLjj0"
+}

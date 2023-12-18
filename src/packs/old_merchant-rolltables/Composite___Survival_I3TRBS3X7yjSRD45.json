@@ -1,0 +1,35 @@
+{
+  "folder": "VHKLqMoEnxqUOJc0",
+  "name": "Composite – Survival",
+  "_id": "I3TRBS3X7yjSRD45",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "DdQtAsrwyEFPLGgf",
+    "AjFSHqo7dtPMm3C3",
+    "539R9A7fp2lht2HF"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690167294806,
+    "modifiedTime": 1690167321219,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d13",
+  "_key": "!tables!I3TRBS3X7yjSRD45"
+}

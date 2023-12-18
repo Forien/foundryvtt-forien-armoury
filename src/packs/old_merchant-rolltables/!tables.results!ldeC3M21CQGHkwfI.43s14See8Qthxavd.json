@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    8,
+    8
+  ],
+  "drawn": false,
+  "text": "Throwing Axe",
+  "documentId": "Xjwk84KnOKDaiZs1",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/throwing-axe.png",
+  "_id": "43s14See8Qthxavd",
+  "flags": {},
+  "_key": "!tables.results!ldeC3M21CQGHkwfI.43s14See8Qthxavd"
+}

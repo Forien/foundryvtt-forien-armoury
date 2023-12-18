@@ -1,0 +1,69 @@
+{
+  "_id": "CcNJsS4jSwB6Ug1J",
+  "name": "Endurance",
+  "type": "skill",
+  "img": "modules/wfrp4e-core/icons/skills/basic-skill-t.png",
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {
+    "_sheetTab": "details"
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.E9UyI8AMrBqgCX4a]{Endurance}"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "advanced": {
+      "value": "bsc",
+      "type": "String"
+    },
+    "grouped": {
+      "value": "noSpec",
+      "type": "String"
+    },
+    "characteristic": {
+      "type": "String",
+      "label": "Characteristic",
+      "value": "t"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 0,
+      "costModifier": 0,
+      "force": false
+    },
+    "modifier": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 0
+    },
+    "total": {
+      "type": "Number",
+      "label": "Total"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.1.2",
+    "coreVersion": "10.285",
+    "createdTime": null,
+    "modifiedTime": 1663569418165,
+    "lastModifiedBy": "FIIsUxJ6xGvEDRPV"
+  },
+  "_key": "!actors.items!vE7hkKLeNjh6AOXJ.CcNJsS4jSwB6Ug1J"
+}

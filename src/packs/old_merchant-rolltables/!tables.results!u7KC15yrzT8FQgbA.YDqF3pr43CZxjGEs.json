@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 30,
+  "range": [
+    62,
+    91
+  ],
+  "drawn": false,
+  "text": "Shortbow",
+  "documentId": "CRNrEnLXTGXVT1UW",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/shortbow.png",
+  "_id": "YDqF3pr43CZxjGEs",
+  "flags": {},
+  "_key": "!tables.results!u7KC15yrzT8FQgbA.YDqF3pr43CZxjGEs"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    3,
+    3
+  ],
+  "drawn": false,
+  "text": "Brass Penny",
+  "documentId": "0MYOJFx3vkYA95B4",
+  "img": "modules/wfrp4e-core/icons/currency/brasspenny.png",
+  "_id": "0u30BKAWnne9q4Pv",
+  "flags": {},
+  "_key": "!tables.results!ZAIWwl9tQDUh6V2n.0u30BKAWnne9q4Pv"
+}

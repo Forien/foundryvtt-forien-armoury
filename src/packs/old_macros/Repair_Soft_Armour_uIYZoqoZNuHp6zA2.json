@@ -1,0 +1,27 @@
+{
+  "name": "Repair Soft Armour",
+  "type": "script",
+  "scope": "global",
+  "author": "ZJyAmf2sKocHG1ud",
+  "img": "icons/skills/trades/textiles-knitting-yarn-red.webp",
+  "command": "const api = game.modules.get(\"forien-armoury\")?.api.itemRepair;\n\nif (api && scope.buyer && scope.userId) {\n  api.checkInventoryForDamage(scope.buyer, {\n    paid: true,\n    type: \"armour\",\n    subtype: \"softLeather\",\n    user: scope.userId\n  });\n}",
+  "folder": "PrF8OmDhD6LXHdz1",
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
+    "createdTime": 1690506986386,
+    "modifiedTime": 1690870672942,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "uIYZoqoZNuHp6zA2",
+  "sort": 300000,
+  "_key": "!macros!uIYZoqoZNuHp6zA2"
+}

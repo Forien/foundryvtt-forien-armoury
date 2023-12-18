@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-archives1.items",
+  "weight": 30,
+  "range": [
+    31,
+    60
+  ],
+  "drawn": false,
+  "text": "Eonir Spear",
+  "documentId": "LIzUGidgb1mkXcZB",
+  "img": "modules/wfrp4e-archives1/assets/icons/eonir-spear.png",
+  "_id": "gPkF4OEBcKd0Mr1z",
+  "flags": {},
+  "_key": "!tables.results!b2Gc1oLA2NSrhR20.gPkF4OEBcKd0Mr1z"
+}

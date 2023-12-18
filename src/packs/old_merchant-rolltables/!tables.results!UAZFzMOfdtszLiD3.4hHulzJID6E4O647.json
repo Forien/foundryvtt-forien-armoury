@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 5,
+  "range": [
+    1,
+    5
+  ],
+  "drawn": false,
+  "text": "Ammunition Sling",
+  "documentId": "WiECkYvbqPun3mV3",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "4hHulzJID6E4O647",
+  "flags": {},
+  "_key": "!tables.results!UAZFzMOfdtszLiD3.4hHulzJID6E4O647"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-zoo.items",
+  "weight": 1,
+  "range": [
+    11,
+    11
+  ],
+  "drawn": false,
+  "text": "Razorburn",
+  "documentId": "KXhiZHs48dq64973",
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-draught.png",
+  "_id": "e7QxdSC6Ik4fRyeN",
+  "flags": {},
+  "_key": "!tables.results!iSSAhSzHjaqigUz0.e7QxdSC6Ik4fRyeN"
+}

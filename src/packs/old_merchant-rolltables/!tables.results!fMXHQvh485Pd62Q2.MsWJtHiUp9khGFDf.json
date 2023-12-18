@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 10,
+  "range": [
+    1,
+    10
+  ],
+  "drawn": false,
+  "text": "Bedroll",
+  "documentId": "IFtoI87gZ4phMHy9",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/bedroll.png",
+  "_id": "MsWJtHiUp9khGFDf",
+  "flags": {},
+  "_key": "!tables.results!fMXHQvh485Pd62Q2.MsWJtHiUp9khGFDf"
+}

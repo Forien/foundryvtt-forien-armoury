@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    9,
+    9
+  ],
+  "drawn": false,
+  "text": "Gun Axe",
+  "documentId": "umOvfObukES6LRvT",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/great-axe-fine.png",
+  "_id": "xUZSzzMeFbBY28TM",
+  "flags": {},
+  "_key": "!tables.results!Pdyhzp5OM17XSMoK.xUZSzzMeFbBY28TM"
+}

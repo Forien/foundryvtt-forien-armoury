@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 10,
+  "range": [
+    17,
+    26
+  ],
+  "drawn": false,
+  "text": "Sack, Large",
+  "documentId": "2znfMGBp5GOQ12M0",
+  "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/sack-large.png",
+  "_id": "U4qU167U4nxd1lYQ",
+  "flags": {},
+  "_key": "!tables.results!9akb7ZJ2HPYaNzuU.U4qU167U4nxd1lYQ"
+}

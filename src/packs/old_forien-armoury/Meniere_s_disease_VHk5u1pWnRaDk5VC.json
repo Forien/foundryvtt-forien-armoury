@@ -1,0 +1,73 @@
+{
+  "name": "Meniere's disease",
+  "type": "disease",
+  "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Meniere's disease</strong> is an inner ear problem that can cause dizzy spells, also called vertigo, and hearing loss. Most of the time, Meniere's disease affects only one ear. Meniere's disease can happen at any age.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "contraction": {
+      "label": "Contraction",
+      "value": "Can occur via some viral infections or circumstances affecting ear pressure",
+      "type": "String"
+    },
+    "incubation": {
+      "label": "Incubation",
+      "value": "1d4",
+      "unit": "days",
+      "type": "String"
+    },
+    "duration": {
+      "label": "Duration",
+      "value": "permanent",
+      "type": "String",
+      "unit": "",
+      "active": false
+    },
+    "symptoms": {
+      "label": "Symptoms",
+      "value": "Vertigo",
+      "type": "String"
+    },
+    "permanent": {
+      "label": "Permanent",
+      "value": "",
+      "type": "String"
+    }
+  },
+  "effects": [
+    "jhEANy3ZWSEjHhSO"
+  ],
+  "folder": "CnjDdyOSP29fHa3S",
+  "ownership": {
+    "default": 0,
+    "XoHsMevsFtsW7WqO": 3
+  },
+  "flags": {
+    "core": {},
+    "exportSource": {
+      "world": "wfrp-test-world",
+      "system": "wfrp4e",
+      "coreVersion": "11.315",
+      "systemVersion": "7.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1701526805476,
+    "modifiedTime": 1702848384620,
+    "lastModifiedBy": "XoHsMevsFtsW7WqO"
+  },
+  "_id": "VHk5u1pWnRaDk5VC",
+  "sort": 300000,
+  "_key": "!items!VHk5u1pWnRaDk5VC"
+}

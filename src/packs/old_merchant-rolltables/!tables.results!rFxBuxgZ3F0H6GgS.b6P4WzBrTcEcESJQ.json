@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 1,
+  "range": [
+    16,
+    16
+  ],
+  "drawn": false,
+  "text": "Pickaxe",
+  "documentId": "ws5f2yvbXpHZSPob",
+  "img": "icons/weapons/axes/pickaxe-gray.webp",
+  "_id": "b6P4WzBrTcEcESJQ",
+  "flags": {},
+  "_key": "!tables.results!rFxBuxgZ3F0H6GgS.b6P4WzBrTcEcESJQ"
+}

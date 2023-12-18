@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 30,
+  "range": [
+    16,
+    45
+  ],
+  "drawn": false,
+  "text": "Grain Flail",
+  "documentId": "29BZiQUmNboB1Ebn",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/grain-flail.png",
+  "_id": "eXkE8xr4FLe9oD7B",
+  "flags": {},
+  "_key": "!tables.results!JWGDM8xppMY1G2Wk.eXkE8xr4FLe9oD7B"
+}

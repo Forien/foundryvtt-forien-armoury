@@ -1,0 +1,66 @@
+{
+  "name": "Fighting Style (Evadecraft)",
+  "type": "talent",
+  "img": "modules/forien-armoury/icons/talents/style_survival.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Adherents of the Shrewd Evadecraft fighting style thrive on adaptive survival. Masters of trickery, nimble dodging, and keen observation, they keep themselves alive by outsmarting foes and deftly navigating the ebb and flow of battle. In the chaotic symphony of combat, they are the agile orchestrators, learning and countering their adversaries' moves with a calculated finesse.</p><ul><li><p>Once per Encounter you may safely <strong>Disengage</strong> without spending Advantage</p></li></ul><p>You also receive following perks, depending on Advances in Melee or Ranged Skill used with currently equipped weapon:</p><ul><li><p><strong>5+</strong> – <em>Shrewd Evadecraft</em> — You may use your weapon to oppose Ranged Attacks with –20 modifier.</p></li><li><p><strong>10+</strong> – <em>Lucky Evadecraft</em> — Whenever an enemy is about to critically hit you, you may spend a Fortune point to force the enemy to reroll</p></li><li><p><strong>15+</strong> – <em>Shrewd Trickery</em> — You gain +10 modifier to <strong>Trick </strong>ability. Winning by 4 SL or more gives 2 Advantage instead of 1.</p><ul><li><p>If you play without Group Advantage ruleset, you may <em>still</em> use the Trick ability as described by Group Advantage rules within the \"Up in Arms\" rulebook</p></li></ul></li></ul>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Dodge Tests when fighting larger enemies, or when outnumbered"
+    }
+  },
+  "effects": [
+    "JF1Zwh2g10mJhfDM",
+    "GZtQY6CGge6lXPOE",
+    "Lqz79qx7ll5t5Mtn",
+    "ICOkLnA6NThAZGGi"
+  ],
+  "folder": "c6bIK3vGnIqNXscz",
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "core": {},
+    "forien-armoury": {
+      "fighting-style": true
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1702057628149,
+    "modifiedTime": 1702395624970,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "CUWdlx3IhkmTPL57",
+  "sort": 900000,
+  "_key": "!items!CUWdlx3IhkmTPL57"
+}

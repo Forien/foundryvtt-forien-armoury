@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 15,
+  "range": [
+    1,
+    15
+  ],
+  "drawn": false,
+  "text": "Bowl",
+  "documentId": "8TKV6yGaUHrf75UH",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/bowl.png",
+  "_id": "hsweZ2WcktnDkcw8",
+  "flags": {},
+  "_key": "!tables.results!Y9Fm1hIUmfYRlQiW.hsweZ2WcktnDkcw8"
+}

@@ -1,0 +1,58 @@
+{
+  "folder": "c6bIK3vGnIqNXscz",
+  "name": "Dawi Runes",
+  "type": "talent",
+  "img": "modules/forien-armoury/icons/dawi-runes.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>First time you take this level, immediately learn Willpower Bonus number of @UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.MJssx3cDKIqZVdXq#runes]{Runes}.</p><p>Every additional level of this talent allows @UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.e0UGR1lJQjdA68Er]{Runesmith} to learn another Willpower Bonus Runes for 50 XP each.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "int"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Runecraft"
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1688388211259,
+    "modifiedTime": 1702229677710,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "uHpjp2h82lqMGD4B",
+  "sort": 1100000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!uHpjp2h82lqMGD4B"
+}

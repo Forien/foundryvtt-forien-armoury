@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    11,
+    11
+  ],
+  "drawn": false,
+  "text": "Jewellery",
+  "documentId": "8MpTb12W1x6ECZzt",
+  "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/jewellery.png",
+  "_id": "AUT2NIOSIhC1JcyE",
+  "flags": {},
+  "_key": "!tables.results!DkyB96EbXiOEGTk0.AUT2NIOSIhC1JcyE"
+}

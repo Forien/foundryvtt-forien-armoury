@@ -1,0 +1,108 @@
+{
+  "folder": "T3Shw97R3ln1UkQq",
+  "name": "Repair Soft Armour",
+  "type": "ammunition",
+  "img": "icons/skills/trades/textiles-knitting-yarn-red.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 10
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "ammunitionType": {
+      "type": "String",
+      "label": "Ammunition Type",
+      "value": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {},
+    "item-piles": {
+      "system": {
+        "quantityForPrice": 1
+      },
+      "item": {
+        "keepZeroQuantity": true,
+        "isService": true,
+        "keepOnMerchant": true,
+        "infiniteQuantity": "yes",
+        "macro": "Compendium.forien-armoury.macros.Repair Soft Armour"
+      },
+      "version": "2.7.6"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
+    "createdTime": 1690204180313,
+    "modifiedTime": 1690508577351,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "UG8Dfz7zPorRuqrD",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!items!UG8Dfz7zPorRuqrD"
+}

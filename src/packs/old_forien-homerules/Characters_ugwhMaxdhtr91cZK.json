@@ -1,0 +1,35 @@
+{
+  "sort": 125000,
+  "name": "Characters",
+  "type": "text",
+  "_id": "ugwhMaxdhtr91cZK",
+  "title": {
+    "show": true,
+    "level": 1
+  },
+  "image": {},
+  "text": {
+    "format": 1,
+    "content": "<h2>Psychology at character creation</h2><ul><li><p><strong>Humans:</strong> Choose up to 2 more @UUID[Compendium.wfrp4e-core.items.Item.klCJX0mNpXYH5AIx]{Prejudices} for +20 XP each. You can also take a single @UUID[Compendium.wfrp4e-core.items.Item.5hH73j2NgPdsLCZN]{Hatred} or @UUID[Compendium.wfrp4e-core.items.Item.0VpT5yubw4UL7j6f]{Animosity} to support your background, but gain no XP for this.</p></li><li><p><strong>Dwarfs:</strong> Choose up to 3 more @UUID[Compendium.wfrp4e-core.items.Item.klCJX0mNpXYH5AIx]{Prejudices} for +10 XP each. And 1 @UUID[Compendium.wfrp4e-core.items.Item.5hH73j2NgPdsLCZN]{Hatred} for 10 XP. Animosity (Elves) is an optional free extra (but only if there are no Elves in the party). Can take 1 extra Hatred to support your background, but gain no XP for this.</p></li><li><p><strong>Elves:</strong> Choose extra @UUID[Compendium.wfrp4e-core.items.Item.klCJX0mNpXYH5AIx]{Prejudices} (no limit - sniffy Elves) and another @UUID[Compendium.wfrp4e-core.items.Item.Q2MCUrG2HppMcvN0]{Animosity}, all to support your background, but gain no XP.</p></li><li><p><strong>Halflings</strong>: Cannot choose Prejudices, Animosities, or Hatreds at all at chargen. You can add @UUID[Compendium.wfrp4e-core.items.Item.jbQDTxc4QNZDLaXm]{Love}, @UUID[Compendium.wfrp4e-core.items.Item.EBmSCscpk4vEDCD3]{Camaraderie}, or similar @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.5w5YLPNd6AaU4f85#custom-psychology]{Custom Psychologies}, but gain no XP for this.</p></li></ul><p></p><h2>Skill Changes</h2><ul><li><p>A Character cannot take more advances into @UUID[Compendium.wfrp4e-core.items.Item.2Y91ebFapH6zRfHk]{Ranged (Engineering)} than it has advances in @UUID[Compendium.wfrp4e-core.items.Item.osMw1Be6YgRBolTm]{Lore (Engineering)}</p></li></ul>"
+  },
+  "video": {
+    "controls": true,
+    "volume": 0.5
+  },
+  "src": null,
+  "system": {},
+  "ownership": {
+    "default": -1,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1688211280961,
+    "modifiedTime": 1701640960623,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!journal.pages!u2f4n9KXYBmBvZw3.ugwhMaxdhtr91cZK"
+}

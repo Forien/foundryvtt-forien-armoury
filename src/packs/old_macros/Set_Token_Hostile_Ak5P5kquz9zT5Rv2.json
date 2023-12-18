@@ -1,0 +1,25 @@
+{
+  "name": "Set Token Hostile",
+  "type": "script",
+  "scope": "global",
+  "_id": "Ak5P5kquz9zT5Rv2",
+  "author": "aDepqlKkeOa13DWo",
+  "img": "icons/skills/melee/weapons-crossed-daggers-orange.webp",
+  "command": "async function setToken(token, disp)\n{\n\tawait token.document.update({disposition: disp});\n\ttoken.refresh(true);\n}\n\ncanvas.tokens.controlled.forEach(tkn => setToken(tkn, -1));",
+  "folder": "rJKAafA2UXxZbP3p",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1687706457494,
+    "modifiedTime": 1689019651728,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!macros!Ak5P5kquz9zT5Rv2"
+}

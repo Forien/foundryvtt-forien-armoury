@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 5,
+  "range": [
+    3,
+    3
+  ],
+  "drawn": false,
+  "text": "Books Rare",
+  "documentId": "6K91R8eci6zxdHAQ",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "6RAka5RV8DUad1zt",
+  "flags": {},
+  "_key": "!tables.results!i6gGiqSyqCS4jSan.6RAka5RV8DUad1zt"
+}

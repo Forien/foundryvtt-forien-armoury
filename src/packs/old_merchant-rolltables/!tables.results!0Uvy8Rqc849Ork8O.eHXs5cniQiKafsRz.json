@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 1,
+  "range": [
+    22,
+    22
+  ],
+  "drawn": false,
+  "text": "Lantern",
+  "documentId": "wTi7GD0yyAFZdfkc",
+  "img": "icons/sundries/lights/lantern-iron-lit-yellow.webp",
+  "_id": "eHXs5cniQiKafsRz",
+  "flags": {},
+  "_key": "!tables.results!0Uvy8Rqc849Ork8O.eHXs5cniQiKafsRz"
+}

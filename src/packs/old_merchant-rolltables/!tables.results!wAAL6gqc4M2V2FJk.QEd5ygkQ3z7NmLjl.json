@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Abacus",
+  "documentId": "Ldf5kDBob8H0v6iV",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/abacus.png",
+  "_id": "QEd5ygkQ3z7NmLjl",
+  "flags": {},
+  "_key": "!tables.results!wAAL6gqc4M2V2FJk.QEd5ygkQ3z7NmLjl"
+}

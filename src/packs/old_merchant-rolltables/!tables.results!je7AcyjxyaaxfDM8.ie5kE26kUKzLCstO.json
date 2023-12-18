@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    20,
+    20
+  ],
+  "drawn": false,
+  "text": "Rake",
+  "documentId": "Y55qCcUkHVZAbG8s",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/rake.png",
+  "_id": "ie5kE26kUKzLCstO",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.ie5kE26kUKzLCstO"
+}

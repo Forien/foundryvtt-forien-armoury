@@ -1,0 +1,66 @@
+{
+  "name": "Brass Penny",
+  "type": "money",
+  "img": "modules/wfrp4e-core/icons/currency/brasspenny.png",
+  "effects": [],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {
+      "sourceId": "Compendium.wfrp4e-core.items.0MYOJFx3vkYA95B4"
+    },
+    "item-piles": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 0
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0.005
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "coinValue": {
+      "label": "Value (in d)",
+      "type": "Number",
+      "value": 1
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
+    "createdTime": 1663627495169,
+    "modifiedTime": 1690205013585,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "vIi8uQGRVlYiU2a5",
+  "folder": null,
+  "sort": 225000,
+  "ownership": {
+    "default": 0,
+    "FIIsUxJ6xGvEDRPV": 3,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!actors.items!vE7hkKLeNjh6AOXJ.vIi8uQGRVlYiU2a5"
+}

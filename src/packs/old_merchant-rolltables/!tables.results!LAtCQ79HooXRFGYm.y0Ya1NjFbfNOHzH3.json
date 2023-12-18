@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 30,
+  "range": [
+    122,
+    151
+  ],
+  "drawn": false,
+  "text": "Digestive Tonic",
+  "documentId": "aUQDbW33bWqVeY9V",
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/digestive-tonic.png",
+  "_id": "y0Ya1NjFbfNOHzH3",
+  "flags": {},
+  "_key": "!tables.results!LAtCQ79HooXRFGYm.y0Ya1NjFbfNOHzH3"
+}

@@ -1,0 +1,27 @@
+{
+  "folder": null,
+  "name": "Forien's Careers",
+  "pages": [
+    "lV438LtXZvxHkmmK",
+    "e0UGR1lJQjdA68Er",
+    "A8Es3aCGIbGOfuUR"
+  ],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1688246284014,
+    "modifiedTime": 1702398275705,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "OVrtFjJzqXZMf0uf",
+  "sort": 500000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!journal!OVrtFjJzqXZMf0uf"
+}

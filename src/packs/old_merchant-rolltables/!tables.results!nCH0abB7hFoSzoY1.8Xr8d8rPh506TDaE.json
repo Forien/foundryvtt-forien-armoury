@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 1,
+  "range": [
+    9,
+    9
+  ],
+  "drawn": false,
+  "text": "Stables",
+  "documentId": "9YDQFP3fcKPRbJCB",
+  "img": "icons/environment/settlement/house-city.webp",
+  "_id": "8Xr8d8rPh506TDaE",
+  "flags": {},
+  "_key": "!tables.results!nCH0abB7hFoSzoY1.8Xr8d8rPh506TDaE"
+}

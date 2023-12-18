@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    11,
+    11
+  ],
+  "drawn": false,
+  "text": "Hochland Long Rifle",
+  "documentId": "PFUozVSLLO2MLjA1",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/hochland-long-rifle.png",
+  "_id": "RU6ZCBpzCWGUoeWW",
+  "flags": {},
+  "_key": "!tables.results!Pdyhzp5OM17XSMoK.RU6ZCBpzCWGUoeWW"
+}

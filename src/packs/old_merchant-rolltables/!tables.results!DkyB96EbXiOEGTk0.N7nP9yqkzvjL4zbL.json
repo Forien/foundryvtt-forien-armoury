@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    15,
+    15
+  ],
+  "drawn": false,
+  "text": "Robes",
+  "documentId": "EDnMXoxQTU4TMrRV",
+  "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/robes.png",
+  "_id": "N7nP9yqkzvjL4zbL",
+  "flags": {},
+  "_key": "!tables.results!DkyB96EbXiOEGTk0.N7nP9yqkzvjL4zbL"
+}

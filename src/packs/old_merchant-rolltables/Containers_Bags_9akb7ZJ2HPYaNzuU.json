@@ -1,0 +1,37 @@
+{
+  "folder": "1Dr5AYNUnFcc22OL",
+  "name": "Containers Bags",
+  "_id": "9akb7ZJ2HPYaNzuU",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "fjMDPNXG14pkBz6h",
+    "3DxNQtljGvYmn3Hz",
+    "klL4EZNnr1A1sJ8N",
+    "U4qU167U4nxd1lYQ",
+    "WtLru5oviyieyoRz"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690164555332,
+    "modifiedTime": 1690164699432,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d34",
+  "_key": "!tables!9akb7ZJ2HPYaNzuU"
+}

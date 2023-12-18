@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 30,
+  "range": [
+    36,
+    65
+  ],
+  "drawn": false,
+  "text": "Knuckledusters",
+  "documentId": "HYJSv2QxaS3c3Jvb",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/knuckledusters.png",
+  "_id": "LO5J78t8a9j9awS0",
+  "flags": {},
+  "_key": "!tables.results!i4RnSWGAnDizNxSU.LO5J78t8a9j9awS0"
+}

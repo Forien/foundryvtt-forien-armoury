@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 15,
+  "range": [
+    31,
+    45
+  ],
+  "drawn": false,
+  "text": "Tools and Kits Scarce",
+  "documentId": "wAAL6gqc4M2V2FJk",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "S0IQuP5qDKAHg4uR",
+  "flags": {},
+  "_key": "!tables.results!9k3gd2aEG4TnqnYl.S0IQuP5qDKAHg4uR"
+}

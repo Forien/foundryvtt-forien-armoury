@@ -1,0 +1,34 @@
+{
+  "icon": "modules/forien-armoury/icons/talents/style_survival.webp",
+  "transfer": true,
+  "name": "Lucky Evadecraft",
+  "_id": "ICOkLnA6NThAZGGi",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "preOpposedDefender",
+      "effectApplication": "actor",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.luckyEvadecraft(args, this);"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!CUWdlx3IhkmTPL57.ICOkLnA6NThAZGGi"
+}

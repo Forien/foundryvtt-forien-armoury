@@ -1,0 +1,89 @@
+{
+  "name": "Lantern",
+  "type": "trapping",
+  "img": "icons/sundries/lights/lantern-iron-lit-yellow.webp",
+  "effects": [
+    "za7XlKi8UGGfjuDs"
+  ],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>A @UUID[Compendium.wfrp4e-core.items.Item.mcJi9yqMFRJRkhJs]{Lantern} prepared with ATL compatible Effects</p><p>Requires @UUID[Compendium.wfrp4e-core.items.Item.Bal23aLiOmnht42h]{Lamp Oil}.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "12",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "misc"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.305",
+    "createdTime": 1663627495386,
+    "modifiedTime": 1690135315229,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "folder": "ALm6rINfMUWhLplE",
+  "_id": "wTi7GD0yyAFZdfkc",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!items!wTi7GD0yyAFZdfkc"
+}

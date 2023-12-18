@@ -19,6 +19,7 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
 * Added 8 new Talents
   * `Fighting Style (Any)` and `Fighting Master (Style)` along with variant for every of the three styles.
 * Introducing _„RassilonMonk's Cauldron of Nurgle“_, a bundle of symptoms and diseases to use during your games in perilous Old World
+  * Added 5 new **Diseases**: Gonorrhoea, Meniere's disease, Nurgle's Rot, Ragpicker's Disease, The Spews
   * Added 4 new **Symptoms**: Vertigo, Scarring, Rashes and Taint
 * Created am Automatic Disease Progression, which will progress diseases' duration and incubation automatically
   * This requires some time tracking module (like `Simple Calendar`) to actually modify the `World Time` setting.
@@ -26,8 +27,9 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
 * Added new journal: `Forien's Lore`
   * Describing **Hunters' Guild** and **Runebounds**
 * Added accessory: `Amulet of „Resilience“`
+* Added trait: `Drunk`
 * Created Settings App, which allows to display settings in more visually appealing and intuitive way
-* Several smaller changes, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
+* Several other changes to both content and codebase, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
 
 ### Notable changes in v1.3.0
 * Reintroduced the **Slashing**, **Recoverable** and **Unrecoverable** properties for weapons and ammunition
@@ -69,6 +71,7 @@ This Module adds some QoL and automation features, including mechanics that:
 * **Arrow Reclamation**, allowing players to recover some of ammunition (arrows, bolts or sling bullets) after an encounter. Defaults to even rolls. Disabled by default.
 * **Combat Fatigue**, using optional _„Getting Tired“_ ruleset.
 * **Casting Fatigue**, providing soft limit to amount of spells that can be cast in short amount of time.
+* **Automated Disease Progression**, allowing for `incubation` and `duration` of diseases to countdown automatically.
 
 
 ### Items
@@ -81,7 +84,7 @@ Module contains single Compendium pack containing over 117 entries (items and ef
 * Added 32 Runes implemented as working Active Effects
 * Added 1 new **Skill** (Runecraft)
 * Added 11 new **Talents** (Dawi Runes, Runebound Magic, Fortifiend Mind, 3x Fighting Styles and 3x Fighting Masters)
-* Added 2 new **Traits** (Point Blank Rule, Repulsive)
+* Added 3 new **Traits** (Drunk, Point Blank Rule, Repulsive)
 * Added 11 new and rebalanced **Armour** items:
   * Added Gambesons as an alternative to Leather armour
   * Rebalanced Leather armour (is more expensive than Gambesons, but Durable)
@@ -110,6 +113,12 @@ Module contains single Compendium pack containing over 117 entries (items and ef
   * Spectacles
 * Added 8 new **Containers**
   * 3 Quivers, 3 Powder Horns, 2 Bags
+* Added 5 new **Diseases**
+  * Gonorrhoea, 
+  * Meniere's disease, 
+  * Nurgle's Rot,
+  * Ragpicker's Disease, 
+  * The Spews
 * Added 10 new generic **Ingredients** for each Arcane Lore
 * Added some miscellaneous **Trappings**
 
@@ -123,15 +132,16 @@ Module contains single Compendium Pack containing two Journals:
 
 
 ### Macros
-Module contains a single Compendium Pack containing 9 Macros:
+Module contains a single Compendium Pack containing 10 Macros:
 
 * GM Macro to quickly set Infighting on target Tokens
-* GM Macros to quickly set selected tokens' dispositions
+* 3 GM Macros to quickly set selected tokens' dispositions
 * Player Macro to check their Career progression
 * Player Macros to check for their Damaged Equipment
 * Player Macro to generate specific Ingredient for, and based on a specific Spell
-* Player Macro to quickly open a WFRP4e Item Browser
 * Player Macro to roll for advanced Skill with limited SL result
+* General Macro to quickly open a WFRP4e Item Browser
+* General Macro to quickly open the Forien's Armoury Settings
 
 
 ## Troubleshooting and Debug
@@ -147,7 +157,8 @@ You can open the console by using `F12` keybind on most browsers.
 
 ## Recommended 3rd Party Modules
 These modules are important for functionality of this module's **Features**. While not strictly **required**, I highly recommend using them:
-* [Times Up](https://foundryvtt.com/packages/times-up) — Allows for automatic disabling of effects, especially useful for Temporary Runes introduced in Forien's Armoury
+* [Times Up](https://foundryvtt.com/packages/times-up) — Allows for automatic disabling of effects, especially useful for Temporary Runes introduced in Forien's Armoury.
+* [Simple Calendar](https://foundryvtt.com/packages/foundryvtt-simple-calendar) — A time tracking module is _**required**_ for **Automatic Disease Progression** as well as **Automated Magical Endurance Regeneration**. Simple Calendar is recommended since it works well with WFRP4e! 
 
 ### Other suggested modules
 These modules work with _some Documents_ (Actors, Items etc.) I provide in the Compendiums. Those are only necessary if you plan on using those Documents.
@@ -169,11 +180,16 @@ These modules work with _some Documents_ (Actors, Items etc.) I provide in the C
 * New Career Paths
   * [Added in v1.4.0] ~~Monster Hunter – mundane alternative to the Runebound Ranger, trained to specialize in one of several fighting style~~
   * Hunter Engineer – an Engineer that specializes in weapons, traps and gadgets designed to be effective against monsters
+  * Balancing tweaks to all careers in Monster Hunter Class, if needed
 * More dwarven Runes
 
 *If you have **any** suggestion or idea on new contents, open an [Issue](https://github.com/Forien/foundryvtt-forien-armoury/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=) or hit me up on Discord!*
 
 
+## Known issues
+
+* Sometimes, the **Automated Disease Progression** feature will stop on `duration = 1` and throw an error. This is due to a bug existing in the WFRP4e itself. 
+  * **Workaround:** When you see this error, consider disease `finished` and follow-up accordingly. Usually deleting the disease Item from Actor is the right course of action.
 
 
 ## Contact

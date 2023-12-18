@@ -1,0 +1,19 @@
+{
+  "name": "Wearables",
+  "sorting": "a",
+  "folder": "YORP103HITjrXJC1",
+  "type": "Item",
+  "_id": "4yqmjrkdpjUayWXP",
+  "sort": 400000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": null,
+    "modifiedTime": 1688254323978,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_key": "!folders!4yqmjrkdpjUayWXP"
+}

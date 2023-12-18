@@ -1,0 +1,58 @@
+{
+  "folder": "TLJDDCjqzOJlUlJ1",
+  "name": "Tools and Kits Common",
+  "_id": "je7AcyjxyaaxfDM8",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "gMl6TyhfSVkuGVrV",
+    "XAqQHhLUiKeudYSR",
+    "HJKmxVj8BrNeqg3Y",
+    "OIbwMra3NPuFfGa3",
+    "tr16dugfeWosIaEV",
+    "ur8SIBLW2k5CXYC9",
+    "v3QT1pdatdQ614S4",
+    "cJALLPdp5eZdBS4r",
+    "OnmQTr3IaITxKvnN",
+    "oAjap5jaQZsxZR4i",
+    "BHLxlt7yBSskc4Pj",
+    "JRIRYzJUU8HgVFZv",
+    "XZWmsQaPgolqcn2g",
+    "XjCDP0QfBPnjXnNI",
+    "WVRrm5Kp4fAQQPND",
+    "PE2QXfHK0kNcLSoH",
+    "89vmObhZOdtU7eIe",
+    "WiQHEuizSSMybeW4",
+    "1TkqwswjB0APpNew",
+    "ie5kE26kUKzLCstO",
+    "F4YuBpgMzuhup3Z6",
+    "f6BsZN0vpVZoAOrC",
+    "7TdVxXvku8IYrwiF",
+    "XxdtOfqotmZMd2HU",
+    "ij2WustGwpuut8nw",
+    "kJxpBLgrz8XPAlDN"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690165120780,
+    "modifiedTime": 1690165176315,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d26",
+  "_key": "!tables!je7AcyjxyaaxfDM8"
+}

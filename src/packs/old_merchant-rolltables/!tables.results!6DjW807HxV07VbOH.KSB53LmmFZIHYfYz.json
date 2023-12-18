@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 3,
+  "range": [
+    6,
+    8
+  ],
+  "drawn": false,
+  "text": "Big Powder Horn",
+  "documentId": "m0JzXLIjaskvNi5v",
+  "img": "icons/containers/ammunition/powder-horn-worn.webp",
+  "_id": "KSB53LmmFZIHYfYz",
+  "flags": {},
+  "_key": "!tables.results!6DjW807HxV07VbOH.KSB53LmmFZIHYfYz"
+}

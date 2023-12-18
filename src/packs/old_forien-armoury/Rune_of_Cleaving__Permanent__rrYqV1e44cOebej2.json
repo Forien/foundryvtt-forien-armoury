@@ -1,0 +1,34 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+  "transfer": true,
+  "name": "Rune of Cleaving (Permanent)",
+  "_id": "rrYqV1e44cOebej2",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Attacks made with a weapon engraved with this Rune deal +1 Damage",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "calculateOpposedDamage",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);\n}"
+    },
+    "forien-armoury": {
+      "isTemporary": false
+    }
+  },
+  "tint": "#ff0000",
+  "_key": "!items.effects!a0HD1sx7SS4ZCw5A.rrYqV1e44cOebej2"
+}

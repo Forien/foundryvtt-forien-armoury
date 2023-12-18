@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 4,
+  "range": [
+    21,
+    24
+  ],
+  "drawn": false,
+  "text": "Weapons Melee Polearm",
+  "documentId": "b2Gc1oLA2NSrhR20",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "X1uGyCOdYZ1BTTbJ",
+  "flags": {},
+  "_key": "!tables.results!hvqbuVn1qgidw5Nh.X1uGyCOdYZ1BTTbJ"
+}

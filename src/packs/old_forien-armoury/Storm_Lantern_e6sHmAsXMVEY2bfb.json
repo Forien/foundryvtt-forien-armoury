@@ -1,0 +1,38 @@
+{
+  "icon": "icons/sundries/lights/lantern-iron-yellow.webp",
+  "transfer": true,
+  "name": "Storm Lantern",
+  "_id": "e6sHmAsXMVEY2bfb",
+  "changes": [
+    {
+      "key": "ATL.preset",
+      "mode": 2,
+      "value": "lantern"
+    }
+  ],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": 14400,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "",
+      "effectApplication": "actor",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "",
+      "reduceQuantity": false
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!WTDH1NSk1ufd5vx9.e6sHmAsXMVEY2bfb"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    8,
+    8
+  ],
+  "drawn": false,
+  "text": "Manacles",
+  "documentId": "zIf0i6DBqGlyQ5By",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/manacles.png",
+  "_id": "XD4l1rGYMWRORgXD",
+  "flags": {},
+  "_key": "!tables.results!wAAL6gqc4M2V2FJk.XD4l1rGYMWRORgXD"
+}

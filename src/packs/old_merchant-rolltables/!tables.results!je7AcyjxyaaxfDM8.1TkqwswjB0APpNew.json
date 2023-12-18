@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    19,
+    19
+  ],
+  "drawn": false,
+  "text": "Quill Pen",
+  "documentId": "61Fx3RHhSqaLCnao",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/quill-pen.png",
+  "_id": "1TkqwswjB0APpNew",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.1TkqwswjB0APpNew"
+}

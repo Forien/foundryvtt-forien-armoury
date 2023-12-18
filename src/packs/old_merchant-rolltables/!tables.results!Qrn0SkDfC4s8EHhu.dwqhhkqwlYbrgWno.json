@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    5,
+    5
+  ],
+  "drawn": false,
+  "text": "Pavise",
+  "documentId": "Af9lywXZb4jSg3Go",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/pavise.png",
+  "_id": "dwqhhkqwlYbrgWno",
+  "flags": {},
+  "_key": "!tables.results!Qrn0SkDfC4s8EHhu.dwqhhkqwlYbrgWno"
+}

@@ -1,0 +1,35 @@
+{
+  "folder": "ZFxCXjlzdPvfK9vU",
+  "name": "Ammunition Crossbow",
+  "_id": "yhRuXuNa9QmVZaIF",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "sqd5eLgw186qKaha",
+    "JOhWWWkSwA97U297",
+    "CQpwl7ukohc9p8aw"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
+    "createdTime": 1690164399355,
+    "modifiedTime": 1690870510048,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d60",
+  "_key": "!tables!yhRuXuNa9QmVZaIF"
+}

@@ -1,0 +1,89 @@
+{
+  "name": "Oil Lamp",
+  "type": "trapping",
+  "img": "icons/sundries/lights/candle-unlit-yellow.webp",
+  "effects": [
+    "KqxCaHoHDsajIYAC"
+  ],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Provides illumination for 10 yards when lit.</p><p>Requires @UUID[Compendium.wfrp4e-core.items.Item.Bal23aLiOmnht42h]{Oil}.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0.25
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "2",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "misc"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.305",
+    "createdTime": 1663627495178,
+    "modifiedTime": 1690135323174,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "folder": "ALm6rINfMUWhLplE",
+  "_id": "jCryH7kR8bJc9eoC",
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!items!jCryH7kR8bJc9eoC"
+}

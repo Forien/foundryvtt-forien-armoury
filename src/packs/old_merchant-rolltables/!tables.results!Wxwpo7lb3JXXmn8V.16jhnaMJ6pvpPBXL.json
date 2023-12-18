@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 5,
+  "range": [
+    8,
+    12
+  ],
+  "drawn": false,
+  "text": "Repeater Handgun",
+  "documentId": "vwvprQOKH9Rtti4b",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/repeater-handgun.png",
+  "_id": "16jhnaMJ6pvpPBXL",
+  "flags": {},
+  "_key": "!tables.results!Wxwpo7lb3JXXmn8V.16jhnaMJ6pvpPBXL"
+}

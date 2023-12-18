@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    11,
+    11
+  ],
+  "drawn": false,
+  "text": "Stone Bullet",
+  "documentId": "mik7s6AqS8SMSaJ8",
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/stone-bullet.png",
+  "_id": "uiNC7USJUIbcA4bc",
+  "flags": {},
+  "_key": "!tables.results!j2rN0bLGn7OJ2YKN.uiNC7USJUIbcA4bc"
+}

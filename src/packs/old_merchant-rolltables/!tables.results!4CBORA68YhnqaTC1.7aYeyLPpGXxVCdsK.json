@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 15,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Foil",
+  "documentId": "SQakHYxBYiPbHi3i",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/foil.png",
+  "_id": "7aYeyLPpGXxVCdsK",
+  "flags": {},
+  "_key": "!tables.results!4CBORA68YhnqaTC1.7aYeyLPpGXxVCdsK"
+}

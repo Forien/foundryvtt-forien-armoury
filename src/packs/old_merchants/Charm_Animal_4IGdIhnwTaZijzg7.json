@@ -1,0 +1,69 @@
+{
+  "_id": "4IGdIhnwTaZijzg7",
+  "name": "Charm Animal",
+  "type": "skill",
+  "img": "modules/wfrp4e-core/icons/skills/basic-skill-wp.png",
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {
+    "_sheetTab": "details"
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.1N6sOXgrqF1KkIh0]{Charm Animal}"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "advanced": {
+      "value": "bsc",
+      "type": "String"
+    },
+    "grouped": {
+      "value": "noSpec",
+      "type": "String"
+    },
+    "characteristic": {
+      "type": "String",
+      "label": "Characteristic",
+      "value": "wp"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 0,
+      "costModifier": 0,
+      "force": false
+    },
+    "modifier": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 0
+    },
+    "total": {
+      "type": "Number",
+      "label": "Total"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.1.2",
+    "coreVersion": "10.285",
+    "createdTime": null,
+    "modifiedTime": 1663569418132,
+    "lastModifiedBy": "FIIsUxJ6xGvEDRPV"
+  },
+  "_key": "!actors.items!vE7hkKLeNjh6AOXJ.4IGdIhnwTaZijzg7"
+}

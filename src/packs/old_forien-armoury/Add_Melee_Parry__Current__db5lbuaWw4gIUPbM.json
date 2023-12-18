@@ -1,0 +1,34 @@
+{
+  "icon": "modules/forien-armoury/icons/talents/style_defensive.webp",
+  "transfer": true,
+  "name": "Add Melee Parry (Current)",
+  "_id": "db5lbuaWw4gIUPbM",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "addItems",
+      "effectApplication": "item",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "await game.modules.get(\"forien-armoury\")?.api.helpers.styles.addMeleeParryCurrent(args, this);"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!Da4zReU57OnesKGd.db5lbuaWw4gIUPbM"
+}

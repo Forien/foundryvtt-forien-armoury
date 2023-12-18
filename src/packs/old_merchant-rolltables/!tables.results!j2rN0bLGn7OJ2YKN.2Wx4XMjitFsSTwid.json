@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    3,
+    3
+  ],
+  "drawn": false,
+  "text": "Bullet and Powder",
+  "documentId": "Bjewc1ehUeeQTnXs",
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png",
+  "_id": "2Wx4XMjitFsSTwid",
+  "flags": {},
+  "_key": "!tables.results!j2rN0bLGn7OJ2YKN.2Wx4XMjitFsSTwid"
+}

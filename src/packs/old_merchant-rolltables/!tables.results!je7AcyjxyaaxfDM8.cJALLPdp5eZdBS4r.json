@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    8,
+    8
+  ],
+  "drawn": false,
+  "text": "Crutch",
+  "documentId": "t2CmR9kFUJr5yE5E",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/crutch.png",
+  "_id": "cJALLPdp5eZdBS4r",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.cJALLPdp5eZdBS4r"
+}

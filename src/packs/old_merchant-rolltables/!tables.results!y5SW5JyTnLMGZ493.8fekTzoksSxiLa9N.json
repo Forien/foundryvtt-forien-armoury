@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 30,
+  "range": [
+    1,
+    30
+  ],
+  "drawn": false,
+  "text": "Weapons Ranged Common",
+  "documentId": "ldeC3M21CQGHkwfI",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "8fekTzoksSxiLa9N",
+  "flags": {},
+  "_key": "!tables.results!y5SW5JyTnLMGZ493.8fekTzoksSxiLa9N"
+}

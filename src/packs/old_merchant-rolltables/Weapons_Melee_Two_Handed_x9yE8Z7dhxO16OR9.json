@@ -1,0 +1,40 @@
+{
+  "folder": "PrOJN66daLYe6ZJc",
+  "name": "Weapons Melee Two-Handed",
+  "_id": "x9yE8Z7dhxO16OR9",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "c5T5iUTunVNoEEfO",
+    "K9vbG2UDQn8yze9J",
+    "nvFiLJmXaMbTZJds",
+    "rvO0lbWzvGl0qQw2",
+    "14JDxmQ3lPUk3E25",
+    "YO2u9cm2zEsEWNMS",
+    "OgcBWTvgSlwy6IxB",
+    "dE3IwJ0EMkzYRsjs"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690162463579,
+    "modifiedTime": 1690162526549,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d137",
+  "_key": "!tables!x9yE8Z7dhxO16OR9"
+}

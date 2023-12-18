@@ -1,0 +1,34 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of Resistance (Temporary)",
+  "_id": "JhgWaE6GNfr7MFtc",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "If a character wearing an Armour Engraved with this Rune is about to lose Wounds due to an attack or effect that ignores Toughness Bonus and Armour Points, the character can make a Toughness Test with -5 modifier per Wound to be lost. If succeeded, character loses no Wounds. Lasts 1 minute.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "opposedDefender",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.effect');\n\nargs.opposedTest.result.other.push(`<strong>${name}:</strong> ${effect}`);"
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!JV4MzBoyCXZBeKx5.JhgWaE6GNfr7MFtc"
+}

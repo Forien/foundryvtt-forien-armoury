@@ -1,0 +1,38 @@
+{
+  "folder": "Y1kRDKj14dTLeSyo",
+  "name": "Clothing Scarce",
+  "_id": "EqPLOrxIR3quFvzT",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "2jIzPhVpAzWqcjU3",
+    "xkqo99HSN9YNM2Y2",
+    "ARh4GaEuonpHfJX0",
+    "CRE5hWOyBEqWUfSF",
+    "OiTFTf2YLUyGgbwq",
+    "OUbkLhKbgQ8NlK2e"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690164810869,
+    "modifiedTime": 1690164830788,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d6",
+  "_key": "!tables!EqPLOrxIR3quFvzT"
+}

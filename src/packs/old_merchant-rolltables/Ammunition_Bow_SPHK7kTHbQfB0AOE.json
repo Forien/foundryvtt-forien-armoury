@@ -1,0 +1,39 @@
+{
+  "folder": "ZFxCXjlzdPvfK9vU",
+  "name": "Ammunition Bow",
+  "_id": "SPHK7kTHbQfB0AOE",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "Y9omBi7uDEBWGPnk",
+    "zlTSy8r0aRsnsrti",
+    "JoMKcRzLWd0O6U1f",
+    "qwpOqBPE2PPJVWX0",
+    "IvCLGFs6I4Xz7xXx",
+    "mmfvve37s5O2DREX",
+    "Lfp7rYxeheTW0g3f"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
+    "createdTime": 1690164328637,
+    "modifiedTime": 1690870502818,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d97",
+  "_key": "!tables!SPHK7kTHbQfB0AOE"
+}

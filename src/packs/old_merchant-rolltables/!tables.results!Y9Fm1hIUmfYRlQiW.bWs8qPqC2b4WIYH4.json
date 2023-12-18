@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 10,
+  "range": [
+    54,
+    63
+  ],
+  "drawn": false,
+  "text": "Cutlery",
+  "documentId": "gLGSO3xrpAua0ydw",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/cutlery.png",
+  "_id": "bWs8qPqC2b4WIYH4",
+  "flags": {},
+  "_key": "!tables.results!Y9Fm1hIUmfYRlQiW.bWs8qPqC2b4WIYH4"
+}

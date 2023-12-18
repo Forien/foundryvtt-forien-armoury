@@ -1,0 +1,34 @@
+{
+  "icon": "modules/forien-armoury/icons/talents/style_defensive.webp",
+  "transfer": true,
+  "name": "Add Melee Parry (Future)",
+  "_id": "ggtWbptc9QNtSuMi",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "effectTrigger": "update",
+      "effectApplication": "actor",
+      "hide": true,
+      "preventDuplicateEffects": false,
+      "script": "await game.modules.get(\"forien-armoury\")?.api.helpers.styles.addMeleeParryFuture(args, this);"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!Da4zReU57OnesKGd.ggtWbptc9QNtSuMi"
+}

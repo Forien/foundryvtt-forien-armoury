@@ -1,0 +1,40 @@
+{
+  "folder": "yOsuU5LCBM5bt9yt",
+  "name": "Medical",
+  "_id": "LAtCQ79HooXRFGYm",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "6gG0P85YJUkBPAFQ",
+    "LhwdHvaGi4aa15z2",
+    "U2aCSwFRbdUcNQnx",
+    "G8anrEVbU76a8IWV",
+    "zCjGSvxNuOsLgtnS",
+    "KtYCCMFkRjbQnjpA",
+    "y0Ya1NjFbfNOHzH3",
+    "RiFmpZXbpWKoyX2P"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690166597735,
+    "modifiedTime": 1690166892634,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d166",
+  "_key": "!tables!LAtCQ79HooXRFGYm"
+}

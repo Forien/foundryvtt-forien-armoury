@@ -1,0 +1,47 @@
+{
+  "folder": "yOsuU5LCBM5bt9yt",
+  "name": "Survival",
+  "_id": "fMXHQvh485Pd62Q2",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "MsWJtHiUp9khGFDf",
+    "niNPAj1rIogk8KjR",
+    "zN580r4xyNcCNAF0",
+    "oPKU9an6GcayVqNw",
+    "VvsX0gCKRfIl7ijl",
+    "8LlinGzxJ0brx0SY",
+    "TW3wd165Wolg1Cs0",
+    "RXKkyhlXjqNnxwlF",
+    "0ppg1mkWEhvJRLOg",
+    "DtxGQ5nCWyxHgy0c",
+    "2gXzNyMfHBsFz4ja",
+    "j3NbAkzuKPqJLxjt",
+    "sT4wW1tFJUuNf38Z",
+    "CpJNLdwhKaX0dDjB",
+    "BG2OVyIosxlAnuWm"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690166342189,
+    "modifiedTime": 1690166664660,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d122",
+  "_key": "!tables!fMXHQvh485Pd62Q2"
+}

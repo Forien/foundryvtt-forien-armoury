@@ -1,0 +1,33 @@
+{
+  "folder": "Y1kRDKj14dTLeSyo",
+  "name": "Clothing Rare",
+  "_id": "oKh5ri3b16tcW47T",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "qthe1BUWYG6R2eTr"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.306",
+    "createdTime": 1690164839737,
+    "modifiedTime": 1690506260128,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d1",
+  "_key": "!tables!oKh5ri3b16tcW47T"
+}

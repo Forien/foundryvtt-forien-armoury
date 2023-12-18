@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-zoo.items",
+  "weight": 1,
+  "range": [
+    12,
+    12
+  ],
+  "drawn": false,
+  "text": "Seer Snake Liquor",
+  "documentId": "JtjpbW08z56rMgbe",
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-draught.png",
+  "_id": "9BfaR4SyNwaFf1Pp",
+  "flags": {},
+  "_key": "!tables.results!iSSAhSzHjaqigUz0.9BfaR4SyNwaFf1Pp"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 30,
+  "range": [
+    88,
+    117
+  ],
+  "drawn": false,
+  "text": "Improvised Shot and Powder",
+  "documentId": "xvMebzMBlcfjWGEa",
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/improvised-shot-and-powder.png",
+  "_id": "gmHFY7HZnkNZ92Nf",
+  "flags": {},
+  "_key": "!tables.results!YUwVdxuWAWiLp0CZ.gmHFY7HZnkNZ92Nf"
+}

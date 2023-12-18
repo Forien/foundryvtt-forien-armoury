@@ -1,0 +1,90 @@
+{
+  "name": "Storm Lantern",
+  "type": "trapping",
+  "img": "icons/sundries/lights/lantern-iron-yellow.webp",
+  "effects": [
+    "e6sHmAsXMVEY2bfb",
+    "Bocay7NF6UUCshrJ"
+  ],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>A @UUID[Compendium.wfrp4e-core.items.Item.9pJenZDZD2lV75vq]{Storm Lantern} prepared with ATL compatible Effects</p><p>Requires @UUID[Compendium.wfrp4e-core.items.Item.Bal23aLiOmnht42h]{Lamp Oil}.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "1",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "misc"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.0",
+    "coreVersion": "11.305",
+    "createdTime": 1663627495177,
+    "modifiedTime": 1690135335327,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "folder": "ALm6rINfMUWhLplE",
+  "_id": "WTDH1NSk1ufd5vx9",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_key": "!items!WTDH1NSk1ufd5vx9"
+}

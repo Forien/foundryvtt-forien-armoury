@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    76,
+    76
+  ],
+  "drawn": false,
+  "text": "Faxtoryll",
+  "documentId": "nRfcszo6wF2sVFDn",
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/faxtoryll.png",
+  "_id": "G8anrEVbU76a8IWV",
+  "flags": {},
+  "_key": "!tables.results!LAtCQ79HooXRFGYm.G8anrEVbU76a8IWV"
+}

@@ -1,0 +1,47 @@
+{
+  "folder": "ZFxCXjlzdPvfK9vU",
+  "name": "Ammunition Blackpowder and Engineering",
+  "_id": "YUwVdxuWAWiLp0CZ",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "ENUNXYMsXD6sgDTB",
+    "kEPqLyfc6rjhUIKN",
+    "IHhf6EozyUg2WRfO",
+    "SYDPqZEwDWCEmTuM",
+    "RHdwFLLIoOX9hjHs",
+    "xFOXOm5aTHsDhKbD",
+    "O6qQ6OgX5QPx54Bv",
+    "qcOJEztcekcTphMD",
+    "gmHFY7HZnkNZ92Nf",
+    "bmiVBzffE731Z2ix",
+    "iZePauyx9Vvq1EVJ",
+    "ODqIWYtrxJ0OyGJs",
+    "0OXwHyrrtH57sQOm",
+    "yvu0CgXeRXoTOX3A",
+    "IS0cY3YBEXeSmoQL"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690164178685,
+    "modifiedTime": 1690164301359,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d252",
+  "_key": "!tables!YUwVdxuWAWiLp0CZ"
+}

@@ -1,0 +1,107 @@
+{
+  "folder": "3hR05PJN5Gtv1I97",
+  "name": "Monster Hunter Veteran",
+  "type": "career",
+  "img": "modules/forien-armoury/icons/careers/monster-hunter-3.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.A8Es3aCGIbGOfuUR]{Monster Hunter}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Monster Hunter"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Monster Hunters"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "3"
+    },
+    "status": {
+      "tier": "s",
+      "standing": 4
+    },
+    "characteristics": [
+      "ws",
+      "s",
+      "ag",
+      "i",
+      "t"
+    ],
+    "skills": [
+      "Athletics",
+      "Dodge",
+      "Endurance",
+      "Gossip",
+      "Lore (Beasts)",
+      "Melee (Basic)",
+      "Perception",
+      "Ranged (Crossbow)",
+      "Set Trap",
+      "Track",
+      "Consume Alcohol",
+      "Cool",
+      "Language (Battle)",
+      "Melee (Two-Handed)",
+      "Outdoor Survival",
+      "Secret Signs (Scout)",
+      "Intimidate",
+      "Intuition",
+      "Melee (Any)",
+      "Navigation"
+    ],
+    "talents": [
+      "Combat Aware",
+      "Fighting Master (Style)",
+      "Seasoned Traveller",
+      "Sturdy"
+    ],
+    "trappings": [
+      "High Quality Weapon",
+      "Scar"
+    ],
+    "incomeSkill": [
+      5
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1688251075008,
+    "modifiedTime": 1702340041382,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "_id": "LU5khvOfdIJBNZSZ",
+  "sort": 300000,
+  "_key": "!items!LU5khvOfdIJBNZSZ"
+}

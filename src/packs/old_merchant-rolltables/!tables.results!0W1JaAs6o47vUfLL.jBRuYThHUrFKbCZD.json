@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 2,
+  "range": [
+    11,
+    12
+  ],
+  "drawn": false,
+  "text": "Containers Powder Horns",
+  "documentId": "yTOmoQCY6LsQy9G7",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "jBRuYThHUrFKbCZD",
+  "flags": {},
+  "_key": "!tables.results!0W1JaAs6o47vUfLL.jBRuYThHUrFKbCZD"
+}

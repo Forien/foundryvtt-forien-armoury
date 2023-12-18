@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 3,
+  "range": [
+    14,
+    16
+  ],
+  "drawn": false,
+  "text": "Weapons Melee Flail",
+  "documentId": "JWGDM8xppMY1G2Wk",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "oIEQo1yDTaHCPOQo",
+  "flags": {},
+  "_key": "!tables.results!hvqbuVn1qgidw5Nh.oIEQo1yDTaHCPOQo"
+}

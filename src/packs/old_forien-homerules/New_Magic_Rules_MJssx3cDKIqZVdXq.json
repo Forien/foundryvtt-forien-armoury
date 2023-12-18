@@ -1,0 +1,35 @@
+{
+  "sort": 1100000,
+  "name": "New Magic Rules",
+  "type": "text",
+  "_id": "MJssx3cDKIqZVdXq",
+  "title": {
+    "show": false,
+    "level": 1
+  },
+  "image": {},
+  "text": {
+    "format": 1,
+    "content": "<h1>Runebound Magic</h1><p>Runebound magic is innate ability of the Runebound, artificially enhanced Humans. However, not every Runebound can use the magic and even among those that can, not all are proficient at the same level.</p><p>Unlike Arcane Magic, Runebound Magic does not require spoken chants. It uses @UUID[Compendium.wfrp4e-core.items.Item.V8eRx66SxB9Jha0Q]{Channelling} to gather and move Winds through the body and form spells by hand signs and gestures. Therefore, a Runebound wanting to use Runebound Magic (called Runes or Runebound Spells) <strong>needs to have at least one hand free</strong>.</p><ul><li><p>Runes can be cast and channelled. Both actions use the same skill.</p></li><li><p>Runes can be dispelled as any other magic.</p></li><li><p>All Runes count as magical source of damage.</p></li><li><p><strong>Minor Miscasts</strong> are ignored and <strong>Major Miscasts</strong> become <strong>Minor</strong> instead</p></li><li><p>Runes can only be accessed when talent @UUID[Compendium.forien-armoury.forien-armoury.Item.XK4JNjFfh6xqui0k]{Runebound Magic} is purchased</p></li><li><p>\"Memorized\" Runes can be cast using Free Action <strong>once</strong> per Round.</p><ul><li><p>@UUID[Compendium.wfrp4e-core.items.Item.tXKX29QZBdHmyMc7]{Combat Reflexes} Talent allows to use Runes while using two-handed weapons (of any Category). This reflects the required reflexes to quickly use one hand to form a Rune while using two-handed weapons without any penalties.</p></li><li><p>Runes can only be Memorized through the @UUID[Compendium.forien-armoury.forien-armoury.Item.XK4JNjFfh6xqui0k]{Runebound Magic} Talent</p></li></ul></li></ul><p></p><h2>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.1KixRsjyMULqAzSZ#runebound-spells]{Runebound Spells}</h2><p></p><p></p><h1>Dwarven Runes</h1><h2>Rules for Runes</h2><h3>Rule of Three</h3><p>Maximum of three Runes can be engraved on a single item.</p><h3>Rule of Pride</h3><p>Runesmiths don't like repeating itself and they treat their work with utmost respect. Unless very specific circumstances, they will not make an item identical to one they already made.</p><h3>Rule of Time</h3><p>Only one Rune can be worked on at the same time.</p><h3>Rule of Form</h3><p>Runes must be engraved on an item of appropriate type. Furthermore, they need to be carved in a solid, resilient substance like metal, wood, bone and stone. Soft and brittle materials like leather, fabric, paper, ceramic are not suitable for the Art of Runecrafting!</p><h3>Rule of Mastery</h3><p>Master Runes are too powerful to share an artifact with other runes. Master Runes count as 3 Runes for the purpose of Rule of Three.</p><p></p><h2>Cr<strong>eat</strong>ing a Rune</h2><p>To be able to create a rune, a character must meet these requirements:</p><ul><li><p>Must be a dwarf,</p></li><li><p>Must have a Runecraft skill,</p></li><li><p>Must know a Rune; either by using a Dawi Runes talent or by having exact recipe to read,</p></li><li><p>Must have a Language (Magick) skill,</p></li><li><p>Must have a workshop and tools.</p></li></ul><p></p><p>Creating runes happens in three steps:</p><ol><li><p><strong>Engraving</strong> — Runesmith needs to engrave runes on the item, it requires a <strong>Dramatic Challenging (+0) Art (Engraving) Test</strong>, where any success allows for a temporary rune and an Impressive Success (+4 SL) allows for a permanent rune. Process takes 4 hours.</p><ul><li><p>Engraving Master Runes requires an Astounding Success (+6 SL) for Permanent effect and a Success (+3 SL) for a Temporary effect</p></li></ul></li><li><p><strong>Empowering</strong> — Runesmith needs to fill the rune with magical power. To do this, an <strong>Extended Runecrafting Test</strong> with target SL being the Power statistic found in the specific rune's description. For permanent runes, the target SL is 10 times higher. Every Test represents one hour of work and Runesmith can only Empower the Rune for a maximum of Willpower Bonus hours a day.</p><ul><li><p>Optionally — Empowering Permanent Runes may require Rune's Power SL, but then each Test represents a Week of daily work</p></li></ul></li><li><p><strong>Binding</strong> — Runesmith needs to bind the power in the rune and close it. This step does not require a Test, only time. Time is equal to Rune's Power days for permanent Runes and Rune's Power x10 minutes for temporary Runes.</p></li></ol><p></p><h2>Ways to Fail</h2><p>There are number of ways a Runecrafting can fail. Here are some examples, but as always, GM's choice:</p><ol><li><p>During Engraving, if test fails, an Item receives 1 Damage (if applicable) and Runecrafting cannot be performed on that item unless it's repaired/mended. If test results in a Fumble, Item receives cannot be Engraved even when repaired/mended.</p></li><li><p>When Empowering, a Fumble during any roll of the Extended Test results in a \"Failed Empowering Attempt\" and the effect can range from \"just wasted time\" through \"weapon explodes\" to a \"spawn of chaos\". GM's choice really. <em><strong>[Maybe To Do a Rollable Table]</strong></em></p></li><li><p>When Binding a Permanent Rune, if a Runesmith skip a day, there is a chance that power of the Rune dissipates and Rune immediately changes into a Temporary one. There is also a chance that power will explode, injuring Runesmith on the next attempt.</p></li></ol><p></p><h2>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.1KixRsjyMULqAzSZ#runes]{Rune list}</h2><p></p>"
+  },
+  "video": {
+    "controls": true,
+    "volume": 0.5
+  },
+  "src": null,
+  "system": {},
+  "ownership": {
+    "default": -1,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688254907055,
+    "modifiedTime": 1689012640473,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!journal.pages!u2f4n9KXYBmBvZw3.MJssx3cDKIqZVdXq"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 1,
+  "range": [
+    6,
+    6
+  ],
+  "drawn": false,
+  "text": "Room, private double",
+  "documentId": "sfMetQLVzPHHMbxz",
+  "img": "icons/environment/settlement/house-city.webp",
+  "_id": "oeIqn1rb0GJMAkmm",
+  "flags": {},
+  "_key": "!tables.results!nCH0abB7hFoSzoY1.oeIqn1rb0GJMAkmm"
+}

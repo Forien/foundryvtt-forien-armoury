@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Davrich Lamp",
+  "documentId": "JX4Qy1qVog3PZBvA",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/davrich-lamp.png",
+  "_id": "7fDKbrHS4Wc5GqC3",
+  "flags": {},
+  "_key": "!tables.results!PjU4kouaMcBciake.7fDKbrHS4Wc5GqC3"
+}

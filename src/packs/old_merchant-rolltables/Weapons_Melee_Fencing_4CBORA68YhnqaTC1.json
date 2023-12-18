@@ -1,0 +1,35 @@
+{
+  "folder": "PrOJN66daLYe6ZJc",
+  "name": "Weapons Melee Fencing",
+  "_id": "4CBORA68YhnqaTC1",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "7aYeyLPpGXxVCdsK",
+    "GOuLGYdevQbaqCfe",
+    "sfNVVWv9p9lT9L5p"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690162176438,
+    "modifiedTime": 1690162204364,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "",
+  "_key": "!tables!4CBORA68YhnqaTC1"
+}

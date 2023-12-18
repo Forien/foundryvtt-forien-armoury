@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 10,
+  "range": [
+    11,
+    20
+  ],
+  "drawn": false,
+  "text": "Blanket",
+  "documentId": "3GlaCQyLuugXHEM2",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/blanket.png",
+  "_id": "niNPAj1rIogk8KjR",
+  "flags": {},
+  "_key": "!tables.results!fMXHQvh485Pd62Q2.niNPAj1rIogk8KjR"
+}

@@ -1,0 +1,42 @@
+{
+  "folder": "KMmVMr0I2vRhAP6i",
+  "name": "Ammunition Scarce",
+  "_id": "f86wQdMwQC3Fhq4S",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "w6Gj1XFownTRr400",
+    "30JC6xPT53J3IpPA",
+    "DFxweGg6K721Rj76",
+    "QKJAvqZDpUx5IG0C",
+    "ZxPvym5eqZO4D9Nh",
+    "rPSXL143QbHCDWqG",
+    "u4WTc6PeseJ0qAhZ",
+    "TMpSIR1rc7tExfY3",
+    "sjaoRIBWWDozvGTX",
+    "S1D1fMLdfyWKMwNk"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 125000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690163942270,
+    "modifiedTime": 1690164125687,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d10",
+  "_key": "!tables!f86wQdMwQC3Fhq4S"
+}

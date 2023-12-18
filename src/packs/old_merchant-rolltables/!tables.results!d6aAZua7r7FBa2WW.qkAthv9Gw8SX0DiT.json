@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 30,
+  "range": [
+    36,
+    65
+  ],
+  "drawn": false,
+  "text": "Whip",
+  "documentId": "xiOYNJcfqPselfwT",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/whip.png",
+  "_id": "qkAthv9Gw8SX0DiT",
+  "flags": {},
+  "_key": "!tables.results!d6aAZua7r7FBa2WW.qkAthv9Gw8SX0DiT"
+}

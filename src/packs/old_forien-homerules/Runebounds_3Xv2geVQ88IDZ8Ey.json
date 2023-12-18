@@ -1,0 +1,35 @@
+{
+  "sort": 200000,
+  "name": "Runebounds",
+  "type": "text",
+  "_id": "3Xv2geVQ88IDZ8Ey",
+  "title": {
+    "show": true,
+    "level": 1
+  },
+  "image": {},
+  "text": {
+    "format": 1,
+    "content": "<h2>Origin</h2><p>A several dozens of years ago, in the shadowed corridors of the Hunters' Guild, where the pursuit of mastery over monsters knew no bounds, a controversial and secretive initiative has taken root. With the goal of forging ultimate warriors to combat the relentless Chaos Beasts and the ceaseless hordes of Undead, some enterprising individuals within the Guild have delved into the forbidden realm of Runebinding.</p><p>The process began in total secret, even from the Guild's leader. Researchers abducted orphans to experiment on with no regard to their wellbeing and survivability. Eventually, after countless \"failures\", they succeeded. The result was the birth of three original Runebounds — beings where magic and mortal are indistinguishably entwined. They were named Harkyn, Yuro and Fysh, originally orphans from Middenheim. </p><p>This magical infusion doesn't merely grant the Runebound new abilities; it transforms them into something beyond human. They become living conduits of magic, capable of wielding spells with a finesse unmatched by conventional mortals. However, the price of this power is steep — the loss of their humanity, as many outside the Guild see them as nothing more than mutants, heretics, or monsters to be hunted.</p><p>Upon discovery by the Council, it stood as a testament to fortune that the researchers, teetering on the edge of heresy, were not summarily executed alongside their arcane creations. Now, under stringent scrutiny, the Runebinding process underwent a meticulous refinement, evolving to a stage where willing participants stood a relative chance of surviving the transformative ordeal. However, a glaring truth emerged: the older the individual, the more perilous the journey through the transition, underscoring the inherent risks woven into the very fabric of this mystical metamorphosis.</p><h2>Process nowadays</h2><p>Within the Guild, the creation process of Runebounds remains a closely guarded secret. Only the most seasoned and trustworthy individuals are privy to the details of this experimental program. Runebounds, though potent allies against the forces of darkness, navigate a precarious existence within the Guild. While their powers are indispensable, they face the disdain of those who question the morality and wisdom of tampering with the very fabric of humanity. As Runebounds continue to emerge as a controversial asset in the Guild's arsenal, the delicate balance between wielding their formidable abilities and managing the societal backlash becomes an ongoing challenge for the Guild's leadership.</p><p>Guild actively discourages any individual from undergoing the process, but there is no shortage of young, strong-willed volunteers. </p>"
+  },
+  "video": {
+    "controls": true,
+    "volume": 0.5
+  },
+  "src": null,
+  "system": {},
+  "ownership": {
+    "default": -1,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1702395997199,
+    "modifiedTime": 1702396980332,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!journal.pages!Gkp2fY7NEJJ3FlGe.3Xv2geVQ88IDZ8Ey"
+}

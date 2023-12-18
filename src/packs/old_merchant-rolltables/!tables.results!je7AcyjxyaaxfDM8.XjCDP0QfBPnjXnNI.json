@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    14,
+    14
+  ],
+  "drawn": false,
+  "text": "Mop",
+  "documentId": "d4iZk3dpNCZvsRJE",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/mop.png",
+  "_id": "XjCDP0QfBPnjXnNI",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.XjCDP0QfBPnjXnNI"
+}

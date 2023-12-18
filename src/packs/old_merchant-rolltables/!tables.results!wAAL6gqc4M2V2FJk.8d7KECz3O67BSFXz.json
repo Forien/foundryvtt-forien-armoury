@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    6,
+    6
+  ],
+  "drawn": false,
+  "text": "Gavel",
+  "documentId": "tzMoFhFAWUGaqhxq",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/gavel.png",
+  "_id": "8d7KECz3O67BSFXz",
+  "flags": {},
+  "_key": "!tables.results!wAAL6gqc4M2V2FJk.8d7KECz3O67BSFXz"
+}

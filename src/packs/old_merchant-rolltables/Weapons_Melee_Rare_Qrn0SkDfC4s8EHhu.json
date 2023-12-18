@@ -1,0 +1,39 @@
+{
+  "folder": "qadSv8WiQda0kwDd",
+  "name": "Weapons Melee Rare",
+  "_id": "Qrn0SkDfC4s8EHhu",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "gc7gKRjb7AZkC3WG",
+    "twVevnq0XJSYcfxp",
+    "gpBgHGx1HEyptNLi",
+    "50dlCNXIoyWx3eho",
+    "dwqhhkqwlYbrgWno",
+    "X1KBZh3CLN24tnyH",
+    "eGN2rsumw3gALjKS"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690161639859,
+    "modifiedTime": 1690161716873,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d7",
+  "_key": "!tables!Qrn0SkDfC4s8EHhu"
+}

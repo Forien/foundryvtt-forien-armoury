@@ -1,0 +1,53 @@
+{
+  "folder": "PrOJN66daLYe6ZJc",
+  "name": "Weapons Melee Basic",
+  "_id": "NbQj13peakFFZ7y7",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "wM8Hxms7nQ3DRHsL",
+    "baNXGQXXXdr0UJWF",
+    "OruFu8i2BtESUbEm",
+    "jMj86MF8YWJsEDJA",
+    "sq2NocVtxrhyAZnJ",
+    "H2hf8Ysk0THXRygE",
+    "JFAgAh48aYoVFQ9w",
+    "M6FjPIv03mYxImey",
+    "lloktRKjZM176BWb",
+    "C3QyI072u0UwB9He",
+    "69z3Jxpn6CJjvBEG",
+    "eEf2hDFnscTfE21S",
+    "mUNAs0NzOJoRIz3A",
+    "eVRCHjZo3TsJs4Hv",
+    "l76Sabu8G0sA8x5M",
+    "sLr6exrdHS03DeKe",
+    "B6VSh37c5brjoIZl",
+    "98VwnPPboS6afERa",
+    "421pUokY4LKnh3CN",
+    "LL1Rf5lnJwvUAjUj",
+    "5WeFl2nbgvl9pojX"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690161893780,
+    "modifiedTime": 1690162082513,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d515",
+  "_key": "!tables!NbQj13peakFFZ7y7"
+}

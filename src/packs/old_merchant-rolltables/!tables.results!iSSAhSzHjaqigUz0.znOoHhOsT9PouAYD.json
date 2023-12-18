@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-zoo.items",
+  "weight": 1,
+  "range": [
+    7,
+    7
+  ],
+  "drawn": false,
+  "text": "Longsleep",
+  "documentId": "KASxUXDyBB28ZslG",
+  "img": "modules/wfrp4e-core/icons/equipment/drugs_and_poisons/spit.png",
+  "_id": "znOoHhOsT9PouAYD",
+  "flags": {},
+  "_key": "!tables.results!iSSAhSzHjaqigUz0.znOoHhOsT9PouAYD"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 15,
+  "range": [
+    17,
+    31
+  ],
+  "drawn": false,
+  "text": "Dice",
+  "documentId": "eZN8HuDV0OnjIWM9",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/dice.png",
+  "_id": "9GRrAdHCHEkcghM3",
+  "flags": {},
+  "_key": "!tables.results!2zf6KYSJvwjQSn0a.9GRrAdHCHEkcghM3"
+}

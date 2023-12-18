@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-archives1.items",
+  "weight": 15,
+  "range": [
+    151,
+    165
+  ],
+  "drawn": false,
+  "text": "Dwarf Hammer",
+  "documentId": "Fs7tl8V78Ie4INPX",
+  "img": "modules/wfrp4e-archives1/assets/icons/dwarf-hammer.png",
+  "_id": "H2hf8Ysk0THXRygE",
+  "flags": {},
+  "_key": "!tables.results!NbQj13peakFFZ7y7.H2hf8Ysk0THXRygE"
+}

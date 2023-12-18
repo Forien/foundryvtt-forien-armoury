@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    9,
+    9
+  ],
+  "drawn": false,
+  "text": "Flail",
+  "documentId": "Qi8gXIjgUSsNLf1Z",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/flail.png",
+  "_id": "WQxxND5YzLUrxs7A",
+  "flags": {},
+  "_key": "!tables.results!rFxBuxgZ3F0H6GgS.WQxxND5YzLUrxs7A"
+}

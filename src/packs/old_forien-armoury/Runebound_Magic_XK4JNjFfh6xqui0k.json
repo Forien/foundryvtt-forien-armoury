@@ -1,0 +1,58 @@
+{
+  "folder": "c6bIK3vGnIqNXscz",
+  "name": "Runebound Magic",
+  "type": "talent",
+  "img": "modules/forien-armoury/icons/runebound-magic.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Upon taking this talent you immediately gain access to all Runebound Runes (Spells).</p><p>Using Runes, unlike Arcane Magic, does not require ability to speak aloud incantation, instead it's sone by @UUID[Compendium.wfrp4e-core.items.Item.V8eRx66SxB9Jha0Q]{Channelling} winds of magic through hand signs. To cast a Rune, character needs ability to use at least one hand freely.</p><p>Having @UUID[Compendium.wfrp4e-core.items.Item.tXKX29QZBdHmyMc7]{Combat Reflexes} Talent allows using Runes when using Two-Handed weapons (of any Category).</p><p>For every level of this talent taken, except the first, you can \"Memorize\" a single Rune. You can use Memorized Runes as a Free Action</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "int"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Channelling"
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1688252626857,
+    "modifiedTime": 1702229677710,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "XK4JNjFfh6xqui0k",
+  "sort": 1000000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!XK4JNjFfh6xqui0k"
+}

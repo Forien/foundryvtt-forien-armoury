@@ -1,0 +1,44 @@
+{
+  "folder": "KMmVMr0I2vRhAP6i",
+  "name": "Ammunition Common",
+  "_id": "j2rN0bLGn7OJ2YKN",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "6WLIoaYakQIuYUmT",
+    "4gTJJ2n9MbeCLV6q",
+    "2Wx4XMjitFsSTwid",
+    "7KUzwzeKPklGnCCL",
+    "ogcbqpCLB4K0GzaG",
+    "bCN564JpR19SnUQJ",
+    "T0czX5ih0IOQZLbL",
+    "eBRT4pWbqcFHr4gt",
+    "KcrqABzFr7hvA78j",
+    "slzPDiU5SPWuO0Wc",
+    "uiNC7USJUIbcA4bc",
+    "zGdVKQZJCK87XQMI"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690163859654,
+    "modifiedTime": 1690164122731,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d12",
+  "_key": "!tables!j2rN0bLGn7OJ2YKN"
+}

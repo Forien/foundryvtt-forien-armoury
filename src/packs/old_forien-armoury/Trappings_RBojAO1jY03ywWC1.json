@@ -1,0 +1,19 @@
+{
+  "name": "Trappings",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "RBojAO1jY03ywWC1",
+  "sort": 500000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.305",
+    "createdTime": null,
+    "modifiedTime": 1689341864311,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!folders!RBojAO1jY03ywWC1"
+}

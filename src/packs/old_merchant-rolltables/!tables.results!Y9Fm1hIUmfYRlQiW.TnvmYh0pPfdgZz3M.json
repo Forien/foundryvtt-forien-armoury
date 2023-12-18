@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 15,
+  "range": [
+    24,
+    38
+  ],
+  "drawn": false,
+  "text": "Cooking Pot",
+  "documentId": "dyt9NYLGBcgOxaMQ",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/cooking-pot.png",
+  "_id": "TnvmYh0pPfdgZz3M",
+  "flags": {},
+  "_key": "!tables.results!Y9Fm1hIUmfYRlQiW.TnvmYh0pPfdgZz3M"
+}

@@ -1,0 +1,35 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
+  "transfer": true,
+  "name": "Rune of Warding (Permanent)",
+  "_id": "5pzeDFMgBWK5FMbs",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Wielder of an accessory Engraved with this Rune gains a Magic Resistance Talent.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "addItems",
+      "effectApplication": "equipped",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "fromUuid(\"Compendium.wfrp4e-core.items.Item.eowbsW6oHGSNJmxV\").then(item => Item.create(item.toObject(), {fromEffect : this.effect.id, parent : this.actor}))",
+      "reduceQuantity": false
+    },
+    "forien-armoury": {
+      "isTemporary": false
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!VZyMhFCFlkPZ47J8.5pzeDFMgBWK5FMbs"
+}

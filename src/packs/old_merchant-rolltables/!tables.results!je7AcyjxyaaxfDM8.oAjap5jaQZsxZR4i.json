@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    10,
+    10
+  ],
+  "drawn": false,
+  "text": "Floor Brush",
+  "documentId": "mu9ysWvO9QwQbd8S",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/floor-brush.png",
+  "_id": "oAjap5jaQZsxZR4i",
+  "flags": {},
+  "_key": "!tables.results!je7AcyjxyaaxfDM8.oAjap5jaQZsxZR4i"
+}

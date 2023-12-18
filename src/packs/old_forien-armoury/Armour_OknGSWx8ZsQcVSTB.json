@@ -1,0 +1,19 @@
+{
+  "name": "Armour",
+  "sorting": "a",
+  "folder": "YORP103HITjrXJC1",
+  "type": "Item",
+  "_id": "OknGSWx8ZsQcVSTB",
+  "sort": 200000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": null,
+    "modifiedTime": 1688254316799,
+    "lastModifiedBy": "aDepqlKkeOa13DWo"
+  },
+  "_key": "!folders!OknGSWx8ZsQcVSTB"
+}

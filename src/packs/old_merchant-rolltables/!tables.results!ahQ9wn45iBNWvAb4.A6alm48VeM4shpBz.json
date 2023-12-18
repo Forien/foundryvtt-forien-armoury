@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 5,
+  "range": [
+    46,
+    50
+  ],
+  "drawn": false,
+  "text": "Ammunition Rare",
+  "documentId": "OTB4IeQNtPfhT2Qb",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "A6alm48VeM4shpBz",
+  "flags": {},
+  "_key": "!tables.results!ahQ9wn45iBNWvAb4.A6alm48VeM4shpBz"
+}

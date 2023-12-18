@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Wooden Teeth",
+  "documentId": "0ohrc7pJtVTo9IFk",
+  "img": "modules/wfrp4e-core/icons/equipment/prosthetics/wooden-teeth.png",
+  "_id": "RsorGnM4ji2r9WGW",
+  "flags": {},
+  "_key": "!tables.results!RAtQKHJuwzetzLES.RsorGnM4ji2r9WGW"
+}

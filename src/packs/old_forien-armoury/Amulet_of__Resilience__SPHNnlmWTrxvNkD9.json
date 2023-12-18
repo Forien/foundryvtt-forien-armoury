@@ -1,0 +1,84 @@
+{
+  "folder": "4yqmjrkdpjUayWXP",
+  "name": "Amulet of „Resilience“",
+  "type": "trapping",
+  "_id": "SPHNnlmWTrxvNkD9",
+  "img": "icons/equipment/neck/amulet-carved-stone-spiral.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Through the power of placebo, increases the Toughness of a wearer.</p><p>Doesn't work on intelligent people as they easily realize this is a simple piece of wood.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0.1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "10"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    "bWkSgjBVcFO2d73J"
+  ],
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1701953582024,
+    "modifiedTime": 1702041771476,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "sort": 200000,
+  "_key": "!items!SPHNnlmWTrxvNkD9"
+}

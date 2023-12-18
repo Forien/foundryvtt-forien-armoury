@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Aqshy-Infused Powder",
+  "documentId": "KrDAJBXWWh48XxgC",
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png",
+  "_id": "ENUNXYMsXD6sgDTB",
+  "flags": {},
+  "_key": "!tables.results!YUwVdxuWAWiLp0CZ.ENUNXYMsXD6sgDTB"
+}

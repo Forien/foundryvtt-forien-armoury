@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    4,
+    4
+  ],
+  "drawn": false,
+  "text": "Handgun",
+  "documentId": "ivuGhpoG9e9fN3Ks",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/handgun.png",
+  "_id": "1x6GegjORhYZRwLm",
+  "flags": {},
+  "_key": "!tables.results!yP8BfDbhsxYobb9t.1x6GegjORhYZRwLm"
+}

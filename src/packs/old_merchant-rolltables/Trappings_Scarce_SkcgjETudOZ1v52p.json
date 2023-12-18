@@ -1,0 +1,45 @@
+{
+  "folder": "d63kxDM97w0JVZSM",
+  "name": "Trappings Scarce",
+  "_id": "SkcgjETudOZ1v52p",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "XLtlDwZ4bXw9cKeZ",
+    "5J5Vc1dhR0Q4U5MW",
+    "UeVb4m8sL31FxGH2",
+    "w0kdNP0kxNy4ijrX",
+    "nEIISy7gNW72LjAk",
+    "CdRcXRTpS5kyKJLP",
+    "x4k9fZjUCF3sTrs0",
+    "CzRl1w3aZrGI5sb4",
+    "rWpsrmzynZCCP1gg",
+    "VoaZTtuT3w0By1p7",
+    "Z0sbDaHtnOwtgVjZ",
+    "GILOiYwSghNMzjEM",
+    "rJBdFuw6Zh7GS6qB"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690166043928,
+    "modifiedTime": 1690166088607,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d13",
+  "_key": "!tables!SkcgjETudOZ1v52p"
+}

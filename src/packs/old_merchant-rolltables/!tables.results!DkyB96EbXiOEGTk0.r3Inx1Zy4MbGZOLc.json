@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    6,
+    6
+  ],
+  "drawn": false,
+  "text": "Coat",
+  "documentId": "Ieyr3r0Skl57DkAJ",
+  "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/coat.png",
+  "_id": "r3Inx1Zy4MbGZOLc",
+  "flags": {},
+  "_key": "!tables.results!DkyB96EbXiOEGTk0.r3Inx1Zy4MbGZOLc"
+}

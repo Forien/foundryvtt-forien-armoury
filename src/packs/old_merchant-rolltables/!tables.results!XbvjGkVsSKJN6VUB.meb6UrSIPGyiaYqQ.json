@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.merchant-rolltables",
+  "weight": 7,
+  "range": [
+    8,
+    14
+  ],
+  "drawn": false,
+  "text": "Weapons Ranged Crossbow",
+  "documentId": "VyiaKI5Bu355FN85",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "_id": "meb6UrSIPGyiaYqQ",
+  "flags": {},
+  "_key": "!tables.results!XbvjGkVsSKJN6VUB.meb6UrSIPGyiaYqQ"
+}

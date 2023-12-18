@@ -1,0 +1,35 @@
+{
+  "icon": "icons/containers/ammunition/shot-barrel.webp",
+  "transfer": false,
+  "name": "Improved Blackpowder (reload)",
+  "_id": "xw4rj0sreWwUuyW6",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "effectTrigger": "prepareItem",
+      "effectApplication": "actor",
+      "hide": false,
+      "preventDuplicateEffects": false,
+      "script": "if (args.item.type == \"weapon\") {\n    let thisAmmo = args.item.ammo?.id === this.item.id;\n\n    if (thisAmmo) {\n        args.item.system.flaws.value.forEach(flaw => {if (flaw.name == \"reload\" && flaw.value > 1) flaw.value -= 1});\n    }\n}",
+      "promptItem": false
+    },
+    "core": {
+      "sourceId": "Compendium.forien-armoury.forien-armoury.Item.RN5mc97zk1Bd7jRx.ActiveEffect.aVqsNFyVjiYt4nnC"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!geiipKKwUUiREPAi.xw4rj0sreWwUuyW6"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    11,
+    11
+  ],
+  "drawn": false,
+  "text": "Wine, bottle",
+  "documentId": "7CJfiEV10299s7c1",
+  "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/wine-bottle.png",
+  "_id": "MB3ZzFRikOaaYOyO",
+  "flags": {},
+  "_key": "!tables.results!xWAdSs7VKilJzYPH.MB3ZzFRikOaaYOyO"
+}

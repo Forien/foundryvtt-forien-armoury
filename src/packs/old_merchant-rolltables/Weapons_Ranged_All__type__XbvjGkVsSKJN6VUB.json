@@ -1,0 +1,40 @@
+{
+  "folder": "OIXKjAS72VZJ0m0z",
+  "name": "Weapons Ranged All (type)",
+  "_id": "XbvjGkVsSKJN6VUB",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "4yu1HapAAfS8sfxE",
+    "meb6UrSIPGyiaYqQ",
+    "vbs88gSJQVgcWFOA",
+    "Zi7AcArBDtIMLjj0",
+    "OyjMHRIZzSO0yvHn",
+    "P0CmIRrNvbfDFHC6",
+    "24EimrXl8AOJGskA",
+    "vrnj2BJTXVvwku7U"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690163697344,
+    "modifiedTime": 1690163823965,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "formula": "1d39",
+  "_key": "!tables!XbvjGkVsSKJN6VUB"
+}

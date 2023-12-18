@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 15,
+  "range": [
+    1,
+    15
+  ],
+  "drawn": false,
+  "text": "Cavalry Hammer",
+  "documentId": "wZlAownYMsDtEDEj",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/warhammer-basic.png",
+  "_id": "IQ9pO8f2xMzt6Lri",
+  "flags": {},
+  "_key": "!tables.results!yIcvwk4epdz6Rmg1.IQ9pO8f2xMzt6Lri"
+}

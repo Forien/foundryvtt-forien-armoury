@@ -1,0 +1,35 @@
+{
+  "sort": 837500,
+  "name": "RassilonMonk's Cauldron of Nurgle",
+  "type": "text",
+  "_id": "3f9WadqrJ4ovFtQ2",
+  "title": {
+    "show": true,
+    "level": 2
+  },
+  "image": {},
+  "text": {
+    "format": 1,
+    "content": "<blockquote><p style=\"text-align:justify\">Before you lies the <strong>„RassilonMonk's Cauldron of Nurgle“</strong>, a fan-crafted anthology that delves deep into the noxious secrets of the Old World's most despicable Diseases and Symptoms, concocted with the macabre ingenuity of Nurgle himself.</p><p style=\"text-align:justify\">As you navigate this tome, be prepared to encounter afflictions that sprawl from the mundane to the grotesque, each woven with a malecolent creativity to challenge the hardiest of adventures.</p></blockquote><p style=\"text-align:justify\"></p><p style=\"text-align:justify\">Now that we've got our ChatGPT-enhanced intro behind ourselves, let me present you a collection of new Diseases and Symptoms prepared by RassilonMonk, who generously agreed to showcase them in this Armoury.</p><p></p><h2>New Symptoms</h2><ul><li><p>@Symptom[Vertigo] — applies a penalty to <strong>Weapon Tests</strong> and Tests based on <strong>Agility</strong>, <strong>Dexterity</strong>, and <strong>Intelligence</strong></p></li><li><p>@Symptom[Scarring] — applies a penalty to <strong>Fellowship Tests</strong></p></li><li><p>@Symptom[Rashes] — applies a penalty to <strong>Dexterity</strong> and <strong>Fellowship</strong> Characteristics</p></li><li><p>@Symptom[Taint] — carries a risk of gaining @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.115GzWrmkD4viyy5]{Corruption}</p></li></ul><p></p><h2>New Diseases</h2><ul><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.A5Ehm29WuOXCFP4O]{Gonorrhoea (The Clap)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.VHk5u1pWnRaDk5VC]{Meniere's disease}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.h4XCqO6phthpJ78V]{Nurgle's Rot}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.unUpalcn4mGtb0bQ]{Ragpicker's Disease (Anthrax)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.cj4SrShYSdmWMEmE]{The Spews}</p></li></ul>"
+  },
+  "video": {
+    "controls": true,
+    "volume": 0.5
+  },
+  "src": null,
+  "system": {},
+  "ownership": {
+    "default": -1,
+    "XoHsMevsFtsW7WqO": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1702857224776,
+    "modifiedTime": 1702857859812,
+    "lastModifiedBy": "XoHsMevsFtsW7WqO"
+  },
+  "_key": "!journal.pages!u2f4n9KXYBmBvZw3.3f9WadqrJ4ovFtQ2"
+}

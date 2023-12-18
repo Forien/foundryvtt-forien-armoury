@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-up-in-arms.items",
+  "weight": 1,
+  "range": [
+    12,
+    12
+  ],
+  "drawn": false,
+  "text": "Repeater Pistol",
+  "documentId": "Neriv2FSubZWLTTq",
+  "img": "modules/wfrp4e-up-in-arms/assets/icons/repeater-pistol.png",
+  "_id": "GqPv3wHgiodEhqwT",
+  "flags": {},
+  "_key": "!tables.results!g9nAK5VCHXFCHhzT.GqPv3wHgiodEhqwT"
+}

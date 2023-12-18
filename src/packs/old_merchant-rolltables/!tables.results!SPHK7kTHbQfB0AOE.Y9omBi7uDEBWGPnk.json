@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 30,
+  "range": [
+    1,
+    30
+  ],
+  "drawn": false,
+  "text": "Arrow",
+  "documentId": "6GNNpWIGxO9CkTCR",
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/arrow.png",
+  "_id": "Y9omBi7uDEBWGPnk",
+  "flags": {},
+  "_key": "!tables.results!SPHK7kTHbQfB0AOE.Y9omBi7uDEBWGPnk"
+}

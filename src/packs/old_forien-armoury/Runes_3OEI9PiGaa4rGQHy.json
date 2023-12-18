@@ -1,0 +1,19 @@
+{
+  "name": "Runes",
+  "sorting": "m",
+  "folder": null,
+  "type": "Item",
+  "_id": "3OEI9PiGaa4rGQHy",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.305",
+    "createdTime": null,
+    "modifiedTime": 1689341864311,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!folders!3OEI9PiGaa4rGQHy"
+}

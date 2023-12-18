@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    1,
+    1
+  ],
+  "drawn": false,
+  "text": "Hand Mirror",
+  "documentId": "H4nKliXRB93HKH4r",
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/hand-mirror.png",
+  "_id": "xKPcXR0wZGynNNeX",
+  "flags": {},
+  "_key": "!tables.results!tYMTor2r7jYPonVN.xKPcXR0wZGynNNeX"
+}

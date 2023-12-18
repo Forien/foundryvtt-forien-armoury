@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 15,
+  "range": [
+    32,
+    46
+  ],
+  "drawn": false,
+  "text": "Deck of Cards",
+  "documentId": "F65NP8BmRo66nQOm",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/deck-of-cards.png",
+  "_id": "YhBz9ozI3tzF9S96",
+  "flags": {},
+  "_key": "!tables.results!2zf6KYSJvwjQSn0a.YhBz9ozI3tzF9S96"
+}

@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    2,
+    2
+  ],
+  "drawn": false,
+  "text": "Black Lotus",
+  "documentId": "qfd01sggD9xbCuJY",
+  "img": "modules/wfrp4e-core/icons/equipment/drugs_and_poisons/black-lotus.png",
+  "_id": "vM9qLylE6qEl4EDS",
+  "flags": {},
+  "_key": "!tables.results!7fJhVT1tBT3c0Gdj.vM9qLylE6qEl4EDS"
+}

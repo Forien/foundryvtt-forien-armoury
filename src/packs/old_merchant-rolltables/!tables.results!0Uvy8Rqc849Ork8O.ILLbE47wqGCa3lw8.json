@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 1,
+  "range": [
+    2,
+    2
+  ],
+  "drawn": false,
+  "text": "Bandage",
+  "documentId": "1wtW4N8l3UKwlLI3",
+  "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/bandage.png",
+  "_id": "ILLbE47wqGCa3lw8",
+  "flags": {},
+  "_key": "!tables.results!0Uvy8Rqc849Ork8O.ILLbE47wqGCa3lw8"
+}
