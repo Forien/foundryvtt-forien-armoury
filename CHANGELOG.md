@@ -2,6 +2,9 @@
 
 ## v1.X.X
 
+### v1.4.1
+* Fixed harmless console error that appeared when creating new Item on Actor that isn't a Disease
+
 ### v1.4.0
 * Added accessory: Amulet of „Resilience“
 * Added new career: Monster Hunter

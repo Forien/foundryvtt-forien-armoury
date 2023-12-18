@@ -180,6 +180,7 @@ export default class Diseases extends ForienBaseModule {
   async #registerCreatedDiseaseListener(disease) {
     if (!game.user.isGM) return;
     if (!Utility.getSetting(settings.diseases.autoProgress)) return;
+    if (disease.type !== 'disease') return;
     let actor = disease.actor;
 
     if (!(actor instanceof ActorWfrp4e)) return;
