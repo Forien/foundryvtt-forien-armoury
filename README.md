@@ -16,8 +16,9 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
 ### Notable changes in v1.4.0
 * Added new career: `Monster Hunter`
   * This career utilizes one of three unique **Fighting Styles** and focuses on tracking down and fighting monstrous beasts
-* Added 8 new Talents
+* Added 9 new Talents
   * `Fighting Style (Any)` and `Fighting Master (Style)` along with variant for every of the three styles.
+  * `Fortified Mind`, a Talent designed to work with the `Casting Fatigue` feature
 * Introducing _„RassilonMonk's Cauldron of Nurgle“_, a bundle of symptoms and diseases to use during your games in perilous Old World
   * Added 5 new **Diseases**: Gonorrhoea, Meniere's disease, Nurgle's Rot, Ragpicker's Disease, The Spews
   * Added 4 new **Symptoms**: Vertigo, Scarring, Rashes and Taint
@@ -75,7 +76,7 @@ This Module adds some QoL and automation features, including mechanics that:
 
 
 ### Items
-Module contains single Compendium pack containing over 117 entries (items and effects).
+Module contains single Compendium pack containing over 150 (Item and Active Effect) entries.
 
 * Added 12 new **Careers** across 3 new Career Paths
   * Monster Hunter
@@ -120,7 +121,7 @@ Module contains single Compendium pack containing over 117 entries (items and ef
   * Ragpicker's Disease, 
   * The Spews
 * Added 10 new generic **Ingredients** for each Arcane Lore
-* Added some miscellaneous **Trappings**
+* Added some miscellaneous **Trappings**, **Money** and Item Pile **Services**
 
 
 ### Journals
