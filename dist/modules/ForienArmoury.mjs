@@ -7,6 +7,7 @@ import Integrations from "./Integrations.mjs";
 import ItemProperties from "./features/ItemProperties.mjs";
 import ItemRepair from "./features/ItemRepair.mjs";
 import SettingsApp from "./apps/SettingsApp.mjs";
+import Species from "./features/Species.mjs";
 import TemporaryRunes from "./features/Runes.mjs";
 import Utility from "./utility/Utility.mjs";
 import WorldTimeObserver from "./utility/WorldTimeObserver.mjs";
@@ -28,6 +29,7 @@ export default class ForienArmoury {
     Integrations,
     ItemProperties,
     ItemRepair,
+    Species,
     TemporaryRunes,
     WorldTimeObserver,
   ]
