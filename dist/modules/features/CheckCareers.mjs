@@ -56,6 +56,7 @@ export default class CheckCareers extends ForienBaseModule {
   checkCareer(character) {
     if (!(character instanceof ActorWfrp4e) || character.type !== 'character') return;
     let currentCareer = character.currentCareer;
+    if (!currentCareer) return;
     let careerLevel = currentCareer.level.value;
     let requiredAdvances = careerLevel * 5;
 
@@ -136,7 +137,7 @@ export default class CheckCareers extends ForienBaseModule {
     let done = 0;
     let potentialSkills = [];
 
-    character.itemCategories.skill.forEach(skill => {
+    character.itemTypes.skill.forEach(skill => {
       if (skill.advances.value < requiredAdvances) return;
       if (currentCareer.skills.includes(skill.name))
         done++;
@@ -164,7 +165,7 @@ export default class CheckCareers extends ForienBaseModule {
     let done = 0;
     let potentialTalents = [];
 
-    character.itemCategories.talent.forEach(talent => {
+    character.itemTypes.talent.forEach(talent => {
       if (currentCareer.talents.includes(talent.name))
         done++
       else if (talent.advances.indicator)

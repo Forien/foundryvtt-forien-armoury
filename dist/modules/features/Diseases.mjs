@@ -163,7 +163,7 @@ export default class Diseases extends ForienBaseModule {
    * @param {ActorWfrp4e} actor
    */
   async #registerActorDiseaseListener(actor) {
-    let diseases = actor.itemCategories.disease;
+    let diseases = actor.itemTypes.disease;
 
     for (let disease of diseases) {
       await this.#registerDiseaseListener(actor, disease);

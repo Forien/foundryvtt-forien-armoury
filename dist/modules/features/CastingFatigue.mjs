@@ -316,7 +316,7 @@ export default class CastingFatigue extends ForienBaseModule {
   #countFortifiedMindTalent(actor) {
     const talentName = game.i18n.localize("Forien.Armoury.Settings.CastingFatigue.FortifiedMindTalent");
 
-    return actor.itemCategories.talent.filter(t => t.name === talentName).length;
+    return actor.itemTypes.talent.filter(t => t.name === talentName).length;
   }
 
   /**

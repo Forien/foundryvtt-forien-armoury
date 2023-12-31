@@ -70,7 +70,7 @@ async function replaceWithStyle(args, self) {
  * @return {Promise<boolean>}
  */
 async function replaceWithMastery(args, self) {
-  const styleTalent = args.actor.itemCategories.talent.find(t => t.flags[constants.moduleId]?.[flags.talents.fightingStyle]);
+  const styleTalent = args.actor.itemTypes.talent.find(t => t.flags[constants.moduleId]?.[flags.talents.fightingStyle]);
   const style = styleTalent?.name.split("(")[1]?.replace(")", "");
 
   const masteryTalents = await getCompendiumTalentsByFlag(flags.talents.fightingMaster);
@@ -726,7 +726,7 @@ function learnedMoves(args, self) {
  * @return {ItemWfrp4e|null}
  */
 function hasMastery(actor) {
-  return actor.itemCategories.talent.find(t => t.flags[constants.moduleId]?.[flags.talents.fightingMaster]) || null;
+  return actor.itemTypes.talent.find(t => t.flags[constants.moduleId]?.[flags.talents.fightingMaster]) || null;
 }
 
 /**
@@ -759,7 +759,7 @@ function checkAdvances(weapon) {
  * @return {ItemWfrp4e|null}
  */
 function findActorsMainWeapon(actor) {
-  return actor.itemCategories.weapon.find(w => w.equipped && w.offhand.value === false) || null;
+  return actor.itemTypes.weapon.find(w => w.equipped && w.offhand.value === false) || null;
 }
 
 /**

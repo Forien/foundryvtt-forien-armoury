@@ -81,7 +81,7 @@ export default class CombatFatigue extends ForienBaseModule {
   async #performTest(actor) {
     const appendTitle = game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueTest")
     const enduranceName = game.i18n.localize("NAME.Endurance");
-    const skill = actor.itemCategories.skill.find(s => s.name === enduranceName);
+    const skill = actor.itemTypes.skill.find(s => s.name === enduranceName);
     let test;
 
     if (skill)
