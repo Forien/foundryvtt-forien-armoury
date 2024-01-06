@@ -20,7 +20,7 @@ export default class TemporaryRunes extends ForienBaseModule {
    * @param {{}} _data
    */
   #onEffectUpdate(effect, update, _data) {
-    if (this.#isRuneTemporary(effect) && effect.parent instanceof Actor) {
+    if (this.#isRuneTemporary(effect) && effect.parent instanceof Actor || effect.parent?.parent instanceof Actor) {
       debug('[TemporaryRunes] Effect Updated is a rune', {effect, update, _data});
 
       if (update.disabled === true) {
