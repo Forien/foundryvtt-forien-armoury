@@ -98,7 +98,7 @@ export default class Diseases extends ForienBaseModule {
           `
         }
       }
-    }
+    };
     //#endregion
 
     //#region Taint
@@ -134,7 +134,44 @@ export default class Diseases extends ForienBaseModule {
           `
         }
       }
-    }
+    };
+    //#endregion
+
+    //#region Purblind
+    config.symptoms["purblind"] = game.i18n.localize("Forien.Armoury.Symptoms.Purblind.Name");
+    config.symptomDescriptions["purblind"] = game.i18n.localize("Forien.Armoury.Symptoms.Purblind.Description");
+    config.symptomTreatment["purblind"] = game.i18n.localize("Forien.Armoury.Symptoms.Purblind.Treatment");
+    config.symptomEffects["purblind"] = {
+      name: game.i18n.localize("Forien.Armoury.Symptoms.Purblind.Name"),
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      transfer: true,
+      flags: {
+        wfrp4e: {
+          "effectApplication": "actor",
+          "effectTrigger": "prefillDialog",
+          "symptom": true,
+          "script": `
+          let modifier = -10;
+          if (this.effect.name.includes("Severe")) {
+              modifier = -30;
+          } else if (this.effect.name.includes("Moderate")) {
+              modifier = -20;
+          }
+
+          let applicableSkills = ["Art","Dodge","Drive","Evaluate","Melee","Navigation","Perception","Pick Lock","Ranged","Research","Ride","Row","Sail","Secret Signs","Set Trap","Stealth", "Track"];
+          let applicableCharacteristics = ["ws", "bs", "ag", "dex"];
+    
+          if (args.type === "weapon") {
+            args.prefillModifiers.modifier += modifier;
+          } else if (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) {
+              args.prefillModifiers.modifier += modifier;
+          } else if (args.type === "skill" &&  applicableSkills.includes(args.item.name)) {
+              args.prefillModifiers.modifier += modifier;
+          }
+          `
+        }
+      }
+    };
     //#endregion
 
     return config;

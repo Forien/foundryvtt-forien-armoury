@@ -312,17 +312,17 @@
       "Symptoms": {
         "Vertigo": {
           "Name": "Vertigo",
-          "Description": "You have trouble staying balanced and feel the sensation of spinning around. All <b>Weapon Tests</b>, as well as Tests based on either <b>Agility</b>, <b>Dexterity</b>, or <b>Intelligence</b> suffer a penalty of <b>–2 SL</b> while you are dizzy.",
+          "Description": "You have trouble staying balanced and feel the sensation of spinning around. All <b>Weapon Tests</b>, as well as Tests based on either <b>Agility</b>, <b>Dexterity</b>, or <b>Intelligence</b> suffer a penalty of <b>-2 SL</b> while you are dizzy.",
           "Treatment": "There is no treatment available for Vertigo, this symptom ends when the cause of it ends."
         },
         "Scarring": {
           "Name": "Scarring",
-          "Description": "You have been horribly scarred by your ordeal and your appearance unsettles or disgusts others. As a result you suffer a <b>–10</b> penalty to all <b>Fellowship Tests</b>.",
+          "Description": "You have been horribly scarred by your ordeal and your appearance unsettles or disgusts others. As a result you suffer a <b>-10</b> penalty to all <b>Fellowship Tests</b>.",
           "Treatment": "Scarring is usually permanent barring special magic."
         },
         "Rashes": {
           "Name": "Rashes",
-          "Description": "You have numerous red, itchy rashes. As a result your appearance is slightly marred and you lose some of your deftness as you scratch and squirm. Receive a <b>–5 modifier</b> to your <b>Dexterity</b> and <b>Fellowship</b> Characteristics.",
+          "Description": "You have numerous red, itchy rashes. As a result your appearance is slightly marred and you lose some of your deftness as you scratch and squirm. Receive a <b>-5 modifier</b> to your <b>Dexterity</b> and <b>Fellowship</b> Characteristics.",
           "Treatment": "Depending on the disease some herbs and alchemical mixes can alleviate rashes. Of course there are also many fake remedies available for sale that do nothing and a purchased treatment has a 10% chance of being snake-oil. Treatments cost from 10 brass pennies and upwards depending on the status of the purchaser and the reputation of the seller. Anyone with <b>Trade (Apothecary)</b> or <b>Trade (Alchemist)</b> with access to appropriate ingredients (costing 5 pennies) can create enough salve that when applied daily can alleviate the symptoms for a week."
         },
         "Taint": {
