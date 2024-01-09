@@ -161,13 +161,62 @@ export default class Diseases extends ForienBaseModule {
           let applicableSkills = ["Art","Dodge","Drive","Evaluate","Melee","Navigation","Perception","Pick Lock","Ranged","Research","Ride","Row","Sail","Secret Signs","Set Trap","Stealth", "Track"];
           let applicableCharacteristics = ["ws", "bs", "ag", "dex"];
     
-          if (args.type === "weapon") {
-            args.prefillModifiers.modifier += modifier;
-          } else if (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) {
-              args.prefillModifiers.modifier += modifier;
-          } else if (args.type === "skill" &&  applicableSkills.includes(args.item.name)) {
+          if (args.type === "weapon") || (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) || (args.type === "skill" &&  applicableSkills.includes(args.item.name)) {
               args.prefillModifiers.modifier += modifier;
           }
+          `
+        }
+      }
+    };
+    //#endregion
+
+    //#region Wasting
+    config.symptoms["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.wasting.Name");
+    config.symptomDescriptions["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.wasting.Description");
+    config.symptomTreatment["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.wasting.Treatment");
+    config.symptomEffects["wasting"] = {
+      name: game.i18n.localize("Forien.Armoury.Symptoms.wasting.Name"),
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      transfer: true,
+      flags: {
+        wfrp4e: {
+          "effectApplication": "actor",
+          "effectTrigger": "prefillDialog",
+          "symptom": true,
+          "script": `
+          let modifier = -10;
+          if (this.effect.name.includes("Severe")) {
+              modifier = -30;
+          } else if (this.effect.name.includes("Moderate")) {
+              modifier = -20;
+          }
+          let applicableCharacteristics = ["s", "t", "ag", "dex"];
+    
+          if (args.type === "weapon") || (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) || (args.type === "skill" && applicableCharacteristics.includes(args.item.characteristic.key)) {
+              args.prefillModifiers.modifier += modifier;
+          }
+          `
+        }
+      }
+    };
+    //#endregion
+
+    //#region Dementia
+    config.symptoms["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.dementia.Name");
+    config.symptomDescriptions["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.dementia.Description");
+    config.symptomTreatment["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.dementia.Treatment");
+    config.symptomEffects["dementia"] = {
+      name: game.i18n.localize("Forien.Armoury.Symptoms.dementia.Name"),
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      transfer: true,
+      flags: {
+        wfrp4e: {
+          "effectApplication": "actor",
+          "effectTrigger": "prePrepareData",
+          "symptom": true,
+          "script": `
+            args.actor.system.characteristics.i.modifier -= 15;
+            args.actor.system.characteristics.int.modifier -= 20;
           `
         }
       }
