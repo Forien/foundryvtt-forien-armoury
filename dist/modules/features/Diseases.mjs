@@ -171,11 +171,11 @@ export default class Diseases extends ForienBaseModule {
     //#endregion
 
     //#region Wasting
-    config.symptoms["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.wasting.Name");
-    config.symptomDescriptions["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.wasting.Description");
-    config.symptomTreatment["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.wasting.Treatment");
+    config.symptoms["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.Wasting.Name");
+    config.symptomDescriptions["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.Wasting.Description");
+    config.symptomTreatment["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.Wasting.Treatment");
     config.symptomEffects["wasting"] = {
-      name: game.i18n.localize("Forien.Armoury.Symptoms.wasting.Name"),
+      name: game.i18n.localize("Forien.Armoury.Symptoms.Wasting.Name"),
       icon: "modules/wfrp4e-core/icons/diseases/disease.png",
       transfer: true,
       flags: {
@@ -202,11 +202,11 @@ export default class Diseases extends ForienBaseModule {
     //#endregion
 
     //#region Dementia
-    config.symptoms["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.dementia.Name");
-    config.symptomDescriptions["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.dementia.Description");
-    config.symptomTreatment["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.dementia.Treatment");
+    config.symptoms["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.Dementia.Name");
+    config.symptomDescriptions["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.Dementia.Description");
+    config.symptomTreatment["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.Dementia.Treatment");
     config.symptomEffects["dementia"] = {
-      name: game.i18n.localize("Forien.Armoury.Symptoms.dementia.Name"),
+      name: game.i18n.localize("Forien.Armoury.Symptoms.Dementia.Name"),
       icon: "modules/wfrp4e-core/icons/diseases/disease.png",
       transfer: true,
       flags: {
