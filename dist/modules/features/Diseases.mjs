@@ -161,7 +161,7 @@ export default class Diseases extends ForienBaseModule {
           let applicableSkills = ["Art","Dodge","Drive","Evaluate","Melee","Navigation","Perception","Pick Lock","Ranged","Research","Ride","Row","Sail","Secret Signs","Set Trap","Stealth", "Track"];
           let applicableCharacteristics = ["ws", "bs", "ag", "dex"];
     
-          if (args.type === "weapon") || (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) || (args.type === "skill" &&  applicableSkills.includes(args.item.name)) {
+          if ((args.type === "weapon") || (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) || (args.type === "skill" &&  applicableSkills.includes(args.item.name))) {
               args.prefillModifiers.modifier += modifier;
           }
           `
@@ -190,9 +190,9 @@ export default class Diseases extends ForienBaseModule {
           } else if (this.effect.name.includes("Moderate")) {
               modifier = -20;
           }
-          let applicableCharacteristics = ["s", "t", "ag", "dex"];
+          let applicableCharacteristics = ["s", "t", "ag", "ws", "bs", "dex"];
     
-          if (args.type === "weapon") || (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) || (args.type === "skill" && applicableCharacteristics.includes(args.item.characteristic.key)) {
+          if ((args.type === "weapon") || (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) || (args.type === "skill" && applicableCharacteristics.includes(args.item.characteristic.key))) {
               args.prefillModifiers.modifier += modifier;
           }
           `
