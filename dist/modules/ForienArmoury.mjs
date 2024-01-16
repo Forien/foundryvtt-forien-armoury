@@ -15,6 +15,8 @@ import {Debug} from "./utility/Debug.mjs";
 import {constants, settings} from "./constants.mjs";
 import {styleHelpers} from "./helpers/styleHelpers.js";
 import {registerSettings} from "./Settings.mjs";
+import ScrollSheet from "./apps/ScrollSheet.mjs";
+import ScrollModel from "./data-models/Scroll.mjs";
 
 export default class ForienArmoury {
   /**
@@ -52,6 +54,7 @@ export default class ForienArmoury {
   helpers;
 
   constructor() {
+    this.#registerDataModels();
     this.#initializeModules();
     this.#bindHooks();
     this.#preloadTemplates();
@@ -118,6 +121,17 @@ export default class ForienArmoury {
   get integrations() {
     return this.modules.get('integrations');
   };
+
+  #registerDataModels() {
+    console.log("game.wfrp4e", duplicate(game.wfrp4e));
+    Object.assign(CONFIG.Item.dataModels, {
+      "forien-armoury.scroll": ScrollModel,
+    });
+    DocumentSheetConfig.registerSheet(Item, "forien-armoury", ScrollSheet, {
+      types: ["forien-armoury.scroll"],
+      makeDefault: true
+    });
+  }
 
   /**
    * Initializes API modules

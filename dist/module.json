@@ -138,6 +138,12 @@
       "path": "languages/pl.json"
     }
   ],
+  "documentTypes": {
+    "Item": {
+      "scroll": {
+      }
+    }
+  },
   "flags": {
     "hotReload": {
       "extensions": [
