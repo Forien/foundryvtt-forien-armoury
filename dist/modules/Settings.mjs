@@ -204,6 +204,16 @@ function registerSettings() {
     type: Number
   });
 
+  // Add Percentage setting for Percentage rules
+  game.settings.register(constants.moduleId, settings.scrolls.allowOvercasting, {
+    name: 'Forien.Armoury.Settings.Scrolls.AllowOvercasting',
+    hint: 'Forien.Armoury.Settings.Scrolls.AllowOvercastingHint',
+    scope: 'world',
+    config: false,
+    default: false,
+    type: Boolean
+  });
+
   game.settings.register(constants.moduleId, settings.initialized, {
     scope: 'world',
     config: false,

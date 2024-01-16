@@ -182,6 +182,48 @@
   display: inline-block;
   color: #111;
 }
+.forien-armoury.app.window-app.sheet.scroll-sheet {
+  min-width: 550px;
+}
+.forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell .spell-refresh {
+  font-size: var(--font-size-12);
+}
+.forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell .scroll-spell {
+  display: flex;
+  gap: 5px;
+}
+.forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell .scroll-spell img {
+  width: 60px;
+  height: 60px;
+}
+.forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell .scroll-spell .spell-details {
+  padding: 3px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell .scroll-spell .spell-details .spell-name {
+  font-family: CaslonAntique, serif;
+  font-size: var(--font-size-18);
+  font-weight: bold;
+  margin-top: -5px;
+}
+.forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell .scroll-spell .spell-details .tags {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2px 3px;
+}
+.forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell .scroll-spell .spell-details .tag {
+  margin: 0;
+  padding: 0 2px;
+  font-size: var(--font-size-12);
+  font-family: Signika, sans-serif;
+  line-height: 16px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.05);
+}
 
 #forien-armoury-settings-app form {
   padding: 8px 3px;

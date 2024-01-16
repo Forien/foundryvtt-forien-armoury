@@ -1,0 +1,17 @@
+<div class="wfrp4e chat-card forien-armoury" data-actor-id="{{actorId}}" data-hide={{hideData}}>
+    {{> systems/wfrp4e/templates/chat/roll/test-card.hbs}}
+
+    {{#if test.context.templates.length}}
+        {{#if test.spell.system.range.vortex}}
+            <a class="chat-button vortex-movement">{{localize "CHAT.VortexMove"}}</a>
+        {{/if}}
+    {{/if}}
+
+    {{#if test.context.allowOvercasting}}
+        {{#if (settings "useWoMOvercast")}}
+            {{> systems/wfrp4e/templates/partials/wom-overcasts.hbs}}
+        {{else}}
+            {{> systems/wfrp4e/templates/partials/overcasts.hbs}}
+        {{/if}}
+    {{/if}}
+</div>

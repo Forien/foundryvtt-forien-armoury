@@ -17,6 +17,7 @@ import {styleHelpers} from "./helpers/styleHelpers.js";
 import {registerSettings} from "./Settings.mjs";
 import ScrollSheet from "./apps/ScrollSheet.mjs";
 import ScrollModel from "./data-models/Scroll.mjs";
+import Scrolls from "./features/Scrolls.mjs";
 
 export default class ForienArmoury {
   /**
@@ -31,6 +32,7 @@ export default class ForienArmoury {
     Integrations,
     ItemProperties,
     ItemRepair,
+    Scrolls,
     Species,
     TemporaryRunes,
     WorldTimeObserver,
