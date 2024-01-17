@@ -225,6 +225,23 @@
   background: rgba(0, 0, 0, 0.05);
 }
 
+.app.window-app.sheet.wfrp4e.actor .tab.inventory .scrolls .scroll-spell-link {
+  font-weight: bold;
+  cursor: pointer;
+}
+.app.window-app.sheet.wfrp4e.actor .tab.inventory .scrolls .scroll-spell-cast {
+  box-shadow: inset 0 1px 0 0 #a6827e;
+  background: rgba(125, 93, 59, 0) linear-gradient(to bottom, rgba(33, 55, 74, 0.9882352941) 5%, rgba(21, 40, 51, 0.6705882353) 100%);
+  border-radius: 3px;
+  border: 2px ridge #846109;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: CaslonPro, serif;
+  font-size: var(--font-size-14);
+  padding: 4px 12px 0 12px;
+}
+
 #forien-armoury-settings-app form {
   padding: 8px 3px;
   overflow: hidden;

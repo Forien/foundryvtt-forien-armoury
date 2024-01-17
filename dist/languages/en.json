@@ -309,6 +309,11 @@
         "CallbackError": "There was an Error when executing a Callback. Check the console (F12) for details."
       },
 
+      "Scrolls": {
+        "LoreOf": "Lore of {lore}",
+        "CastFromScroll": "Cast {spell} from scroll"
+      },
+
       "Symptoms": {
         "Vertigo": {
           "Name": "Vertigo",

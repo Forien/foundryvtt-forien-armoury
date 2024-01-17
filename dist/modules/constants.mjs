@@ -5,6 +5,10 @@ const constants = {
   loopLimit: 100
 };
 
+const dataTypes = {
+  scroll: `${constants.moduleId}.scroll`
+}
+
 const defaults = {}
 
 const flags = {
@@ -87,4 +91,4 @@ const settings = {
   }
 }
 
-export {constants, defaults, flags, settings};
+export {constants, dataTypes, defaults, flags, settings};

@@ -12,7 +12,7 @@ import TemporaryRunes from "./features/Runes.mjs";
 import Utility from "./utility/Utility.mjs";
 import WorldTimeObserver from "./utility/WorldTimeObserver.mjs";
 import {Debug} from "./utility/Debug.mjs";
-import {constants, settings} from "./constants.mjs";
+import {constants, dataTypes, settings} from "./constants.mjs";
 import {styleHelpers} from "./helpers/styleHelpers.js";
 import {registerSettings} from "./Settings.mjs";
 import ScrollSheet from "./apps/ScrollSheet.mjs";
@@ -125,12 +125,11 @@ export default class ForienArmoury {
   };
 
   #registerDataModels() {
-    console.log("game.wfrp4e", duplicate(game.wfrp4e));
     Object.assign(CONFIG.Item.dataModels, {
-      "forien-armoury.scroll": ScrollModel,
+      [dataTypes.scroll]: ScrollModel,
     });
-    DocumentSheetConfig.registerSheet(Item, "forien-armoury", ScrollSheet, {
-      types: ["forien-armoury.scroll"],
+    DocumentSheetConfig.registerSheet(Item, constants.moduleId, ScrollSheet, {
+      types: [dataTypes.scroll],
       makeDefault: true
     });
   }

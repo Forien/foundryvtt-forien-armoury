@@ -2,26 +2,39 @@ import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 import Utility from "../utility/Utility.mjs";
 import ScrollDialog from "../apps/ScrollDialog.mjs";
 import ScrollTest from "../tests/ScrollTest.mjs";
+import {dataTypes} from "../constants.mjs";
 
 export default class Scrolls extends ForienBaseModule {
   bindHooks() {
-    // Hooks.on("renderActorSheetWfrp4eCharacter", this.#onRenderActorSheet.bind(this));
-    // Hooks.on("renderActorSheetWfrp4eNPC", this.#onRenderActorSheet.bind(this));
+    Hooks.on("renderActorSheetWfrp4eCharacter", this.#onRenderActorSheet.bind(this));
+    Hooks.on("renderActorSheetWfrp4eNPC", this.#onRenderActorSheet.bind(this));
+    Hooks.on("wfrp4e:constructInventory", this.#onWfrp4eConstructInventory.bind(this));
+  }
+
+  #onWfrp4eConstructInventory(sheet, categories, collapsed) {
+    categories.scrolls = {
+      label: game.i18n.localize("Forien.Armoury.Scrolls.MagicScrolls"),
+      items: sheet.actor.itemTypes[dataTypes.scroll],
+      show: true,
+      collapsed : collapsed?.scrolls,
+      dataType: dataTypes.scroll
+    }
   }
 
   #onRenderActorSheet(sheet, html, _options) {
-    // setting enabled
-    // if (!this.magicalEnduranceEnabled) return;
-    //
-    // const tabMagic = html.find('.content .tab.magic');
-    // const actor = sheet.actor;
-    // const magicalEndurance = this.getMagicalEnduranceData(actor);
-    //
-    // renderTemplate(Utility.getTemplate(this.templates.magicalEndurance), magicalEndurance).then(content => {
-    //   tabMagic.prepend(content);
-    //
-    //   html.find('#magical-endurance-value').change((ev) => this.#onMagicalEnduranceValueChange(ev, actor));
-    // });
+    html.on("click", ".scroll-spell-link", (event) => this.#onScrollSpellLinkClick(event));
+    html.on("click", ".scroll-spell-cast", (event) => this.#onScrollSpellCastClick(sheet, event));
+  }
+
+  #onScrollSpellCastClick(sheet, event) {
+    const uuid = event.currentTarget.closest('.item').dataset.id;
+    const actor = sheet.actor;
+  }
+
+  #onScrollSpellLinkClick(event) {
+    const uuid = event.currentTarget.dataset.uuid;
+
+    fromUuid(uuid).then(item => item?.sheet.render(true));
   }
 
   applyWfrp4eConfig() {
