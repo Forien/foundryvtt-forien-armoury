@@ -310,8 +310,25 @@
       },
 
       "Scrolls": {
+        "MagicScroll": "Magic Scroll",
+        "MagicScrolls": "Magic Scrolls",
+        "Scroll": "Scroll",
+        "Scrolls": "Scrolls",
         "LoreOf": "Lore of {lore}",
-        "CastFromScroll": "Cast {spell} from scroll"
+        "ScrollOf": "Scroll of {spell}",
+        "CastFromScroll": "Cast {spell} from scroll",
+        "ScrollTest": "Scroll Reading Test",
+        "DropHere": "Drop Spell here to attach it",
+
+        "NewScrollDefaultName": "Empty Magic Scroll",
+
+        "ChangeScrollNameTitle": "Update Scroll's name?",
+        "ChangeScrollNameContent": "Update Scroll's name to „{name}”?",
+
+        "ItemNotFound": "Something went wrong. Dropped Item was not found!",
+        "MustHaveSource": "Spell must have a source in, or originate from, World or Compendium in order to create a Scroll!",
+        "NotASpell": "Only Spells can be inscribed on a Scroll!",
+        "MustHaveLore": "Only Spells with Lore can be inscribed on a Scroll!"
       },
 
       "Symptoms": {
@@ -348,6 +365,7 @@
           "ArrowReclamation": "Arrow Reclamation",
           "CombatFatigue": "Combat Fatigue",
           "CastingFatigue": "Casting Fatigue",
+          "Scrolls": "Scrolls",
           "Integrations": "Integrations"
         },
 
@@ -414,6 +432,13 @@
           "AutoRegen": "Automate Regeneration?",
           "AutoRegenHint": "If checked, module will regenerate Actors' ME automatically (Requires a time tracking module. <a href=\"https://foundryvtt.com/packages/foundryvtt-simple-calendar\" target=\"_blank\"><b>Simple Calendar</b></a> is recommended).",
           "AutoRegenNoWorldTime": "WorldTime hasn't been set. Please activate and configure a time tracking module (for example, Simple Calendar) before enabling Automated Regeneration."
+        },
+
+        "Scrolls": {
+          "AllowOvercasting":  "Allow Overcasting",
+          "AllowOvercastingHint": "Should spells cast from Scrolls be able to be overcast?",
+          "OwnCategory":  "Own Inventory Group",
+          "OwnCategoryHint": "Should scrolls appear in inventory as their own, separate group? If false, they will be attached to Books and Documents."
         },
 
         "ATL": {

@@ -1,0 +1,35 @@
+<div class="inventory-header item lore-header">
+    <div class="name">
+        {{localize "Forien.Armoury.Scrolls.Scrolls"}}
+        <a class="sort-items" title="{{localize 'SHEET.SortItems'}}" data-type="spell">
+            <i class="fas fa-sort-alpha-down"></i>
+        </a>
+    </div>
+    <div {{#unless isOwner}}style="visibility: hidden;"{{/unless}} id="scroll-add" class="item-controls">
+        <a class="item-control item-create" title="{{localize 'SHEET.CreateItem'}}" data-type="{{dataType}}"
+           data-spell-type="">
+            <i class="fas fa-plus"></i>
+        </a>
+    </div>
+</div>
+<ol class="inventory-list lore-list scrolls">
+    {{#each scrolls as |item i|}}
+        <li class="item lore-item" data-id="{{item.id}}">
+            <div class="content">
+                <div class="item-name scroll-name">
+                    <div class="image" style="background-image: url({{item.img}})"></div>
+                    <a class="name scroll-roll">{{item.name}} ({{item.system.quantity.value}})</a>
+                </div>
+
+                <div class="item-controls" {{#unless ../isOwner}}style="visibility: hidden;"{{/unless}}>
+                    <a class="item-post" title="{{localize 'SHEET.PostItem'}}"><i class="fas fa-comment"></i></a>
+                    <a class="item-control item-edit" title="{{localize 'SHEET.EditItem'}}"><i class="fas fa-edit"></i></a>
+                    <a class="item-dropdown" title="{{localize 'SHEET.Dropdown'}}"><i
+                            class="fas fa-chevron-down"></i></a>
+                    <a class="item-control item-delete" title="{{localize 'SHEET.DeleteItem'}}"><i
+                            class="fas fa-trash"></i></a>
+                </div>
+            </div>
+        </li>
+    {{/each}}
+</ol>

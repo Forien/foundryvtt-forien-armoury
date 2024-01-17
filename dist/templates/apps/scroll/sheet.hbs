@@ -35,45 +35,52 @@
             <div class="form-group stacked spell" data-uuid="{{spell.uuid}}">
                 <label style="flex-grow: 2;" class="label-text">
                     {{localize "Spell"}}
-                    <i class="fas fa-undo spell-refresh" data-tooltip="{{localize "Forien.Armoury.Scrolls.Refresh"}}"></i>
+                    <i class="fas fa-undo spell-refresh"
+                       data-tooltip="{{localize "Forien.Armoury.Scrolls.Refresh"}}"></i>
                 </label>
                 <div class="scroll-spell">
-                    <img src="{{spell.img}}" alt="{{spell.name}}"/>
-                    <div class="spell-details">
-                        <div class="spell-name">
-                            {{spell.name}}
-                        </div>
-                        {{#if spell.system}}
-                            <div class="tags">
-                                <span class="tag">{{localize "Lore"}}: {{lookup magicLores spell.system.lore.value}}</span>
-                                <span class="tag">{{localize "CN"}}: {{spell.system.cn.value}}</span>
-                                {{#if spell.system.ritual.value}}
-                                    <span class="tag">{{localize "ITEM.Ritual"}}</span>
-                                {{/if}}
-                                {{#if spell.system.magicMissile.value}}
-                                    <span class="tag">{{localize "Magic Missile"}}</span>
-                                {{/if}}
-                                {{#if spell.system.target.aoe}}
-                                    <span class="tag">{{localize "AoE"}}</span>
-                                {{/if}}
-                                {{#if spell.system.range.vortex}}
-                                    <span class="tag">{{localize "ITEM.RandomVortex"}}</span>
-                                {{/if}}
-                                <span class="tag">{{localize "Range"}}: {{spell.system.range.value}}</span>
-                                {{#if spell.system.damage.value}}
-                                    <span class="tag">{{localize "Damage"}}: {{spell.system.damage.value}}</span>
-                                {{/if}}
-                                <span class="tag">{{localize "Duration"}}: {{spell.system.duration.value}}</span>
+                    {{#if spell}}
+                        <img src="{{spell.img}}" alt="{{spell.name}}"/>
+                        <div class="spell-details">
+                            <div class="spell-name">
+                                {{spell.name}}
                             </div>
-                        {{/if}}
-                    </div>
+                            {{#if spell.system}}
+                                <div class="tags">
+                                    <span class="tag">{{localize "Lore"}}: {{lookup magicLores
+                                                                                    spell.system.lore.value}}</span>
+                                    <span class="tag">{{localize "CN"}}: {{spell.system.cn.value}}</span>
+                                    {{#if spell.system.ritual.value}}
+                                        <span class="tag">{{localize "ITEM.Ritual"}}</span>
+                                    {{/if}}
+                                    {{#if spell.system.magicMissile.value}}
+                                        <span class="tag">{{localize "Magic Missile"}}</span>
+                                    {{/if}}
+                                    {{#if spell.system.target.aoe}}
+                                        <span class="tag">{{localize "AoE"}}</span>
+                                    {{/if}}
+                                    {{#if spell.system.range.vortex}}
+                                        <span class="tag">{{localize "ITEM.RandomVortex"}}</span>
+                                    {{/if}}
+                                    <span class="tag">{{localize "Range"}}: {{spell.system.range.value}}</span>
+                                    {{#if spell.system.damage.value}}
+                                        <span class="tag">{{localize "Damage"}}: {{spell.system.damage.value}}</span>
+                                    {{/if}}
+                                    <span class="tag">{{localize "Duration"}}: {{spell.system.duration.value}}</span>
+                                </div>
+                            {{/if}}
+                        </div>
+                    {{else}}
+                        <div class="spell-drop-zone">{{localize "Forien.Armoury.Scrolls.DropHere"}}</div>
+                    {{/if}}
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="label-text">{{localize "NAME.Language"}}</label>
                 <div class="input-box">
-                    <input class="input-text" type="text" name="system.language" value="{{system.language}}" data-dtype="String" />
+                    <input class="input-text" type="text" name="system.language" value="{{system.language}}"
+                           data-dtype="String"/>
                 </div>
             </div>
 

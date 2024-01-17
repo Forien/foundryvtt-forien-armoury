@@ -127,7 +127,6 @@ export default class SettingsApp extends FormApplication {
         always: [
           settings.runes.enableDamage,
           settings.diseases.autoProgress,
-          settings.scrolls.allowOvercasting,
           Debug.setting,
         ]
       },
@@ -174,6 +173,13 @@ export default class SettingsApp extends FormApplication {
             settings.magicalEndurance.autoRegen,
           ]
         }
+      },
+
+      scrolls: {
+        always: [
+          settings.scrolls.allowOvercasting,
+          settings.scrolls.ownCategory
+        ]
       },
 
       integrations: {

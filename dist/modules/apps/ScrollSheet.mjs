@@ -9,7 +9,7 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
   static get defaultOptions() {
     const options = super.defaultOptions;
 
-    options.classes.push('forien-armoury', 'scroll-sheet', 'item-sheet');
+    options.classes.push('forien-armoury', 'scroll-sheet');
 
     return options;
   }
@@ -41,7 +41,7 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
     let item = await Item.implementation.fromDropData(data);
 
     if (!item)
-      return Utility.notify(game.i18n.localize("Forien.Armoury.Scrolls.ItemNotFound"), {type: "error"});
+      return Utility.notify(game.i18n.localize("Forien.Armoury.Scrolls.ItemNotFound"), {type: "error", data: {data, event}, trace: true});
 
     // If dragged a Spell from Actor, retrieve the original World/Compendium Spell
     if (item.parent instanceof Actor) {

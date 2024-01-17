@@ -14,6 +14,7 @@ export default class ScrollTest extends WomCastTest {
 
     this.allowOvercasting = Utility.getSetting(settings.scrolls.allowOvercasting);
     this.data.context.allowOvercasting = this.allowOvercasting;
+    this.computeTargetNumber();
   }
 
   get item() {
@@ -24,16 +25,29 @@ export default class ScrollTest extends WomCastTest {
     return item;
   }
 
-  computeTargetNumber() {
-    let skill = this.skill;
-    if (!skill)
-      this.result.target = this.actor.characteristics.int.value;
-    else
-      this.result.target = skill.total.value;
-
-    if (this.preData.target)
-      this.data.result.target = this.preData.target
-    else
-      this.data.result.target += this.targetModifiers
+  /**
+   * Scrolls always count as Casting with Ingredient
+   *
+   * @returns {true}
+   */
+  get hasIngredient() {
+    return true;
   }
+
+  /**
+   * Ma
+   */
+  // computeTargetNumber() {
+  //   let skill = this.actor?.itemTypes.skill.find(skill => skill.name === this.data.result.skillSelected);
+  //
+  //   if (!skill)
+  //     this.result.target = this.actor.characteristics.int.value;
+  //   else
+  //     this.result.target = skill.total.value;
+  //
+  //   if (this.preData.target)
+  //     this.data.result.target = this.preData.target
+  //   else
+  //     this.data.result.target += this.targetModifiers
+  // }
 }

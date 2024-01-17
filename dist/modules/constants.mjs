@@ -87,7 +87,8 @@ const settings = {
     autoProgress: 'diseases.automateProgression'
   },
   scrolls: {
-    allowOvercasting: 'scrolls.allowOvercasting'
+    allowOvercasting: 'scrolls.allowOvercasting',
+    ownCategory: 'scrolls.ownCategory'
   }
 }
 

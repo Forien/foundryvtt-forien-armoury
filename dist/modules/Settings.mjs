@@ -204,13 +204,23 @@ function registerSettings() {
     type: Number
   });
 
-  // Add Percentage setting for Percentage rules
+  // Allow Overcasting when casting from Scrolls
   game.settings.register(constants.moduleId, settings.scrolls.allowOvercasting, {
     name: 'Forien.Armoury.Settings.Scrolls.AllowOvercasting',
     hint: 'Forien.Armoury.Settings.Scrolls.AllowOvercastingHint',
     scope: 'world',
     config: false,
     default: false,
+    type: Boolean
+  });
+
+  // Should scroll have their own category in inventory?
+  game.settings.register(constants.moduleId, settings.scrolls.ownCategory, {
+    name: 'Forien.Armoury.Settings.Scrolls.OwnCategory',
+    hint: 'Forien.Armoury.Settings.Scrolls.OwnCategoryHint',
+    scope: 'client',
+    config: false,
+    default: true,
     type: Boolean
   });
 

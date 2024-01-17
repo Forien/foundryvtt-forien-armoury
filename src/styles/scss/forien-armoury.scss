@@ -285,6 +285,20 @@
                       background: rgba(0, 0, 0, 0.05);
                     }
                   }
+
+                  .spell-drop-zone {
+                    margin: 2px;
+                    height: 80px;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.10);
+                    border: 2px dotted rgba(0, 0, 0, 0.35);
+                    border-radius: 8px;
+                    font-family: CaslonAntique, serif;
+                    font-size: var(--font-size-18);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  }
                 }
               }
             }
@@ -297,8 +311,8 @@
 }
 
 .app.window-app.sheet.wfrp4e.actor {
-  .tab.inventory {
-    .scrolls {
+  .tab.inventory, .tab.magic {
+    .scrolls, .booksAndDocuments {
       .scroll-spell-link {
         font-weight: bold;
         cursor: pointer;
@@ -347,6 +361,7 @@
         background-color: $baseColorLight;
         border-radius: 10px 10px 0 0;
         border: 1px solid $baseColorDark;
+        flex: fit-content;
 
         &:first-of-type {
           margin-left: 0;

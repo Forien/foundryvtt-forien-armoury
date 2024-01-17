@@ -11,7 +11,7 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
     let schema = super.defineSchema();
 
     schema.spellUuid = new fields.StringField({blank: true, nullable: true, initial: null});
-    schema.language = new fields.StringField({blank: true, nullable: true, initial: null});
+    schema.language = new fields.StringField({blank: true, nullable: true, initial: game.i18n.localize("SPEC.Magick")});
 
     return schema;
   }
@@ -24,12 +24,61 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
     return fromUuidSync(this.spellUuid);
   }
 
+  async loadSpell() {
+    return await fromUuid(this.spellUuid);
+  }
+
   get canUse() {
     const notZero = this.quantity.value > 0;
-    const languageLocalized = game.i18n.localize("NAME.Language");
-    const knowsLanguage = this.parent.actor?.itemTypes.skill.some(skill => skill.name.includes(languageLocalized) && skill.name.includes(this.language));
+    const knowsLanguage = this.languageSkill;
 
     return notZero && knowsLanguage;
+  }
+
+  get isMagick() {
+    return this.language.toLowerCase() === game.i18n.localize("SPEC.Magick").toLowerCase();
+  }
+
+  get languageSkill() {
+    return this.parent.actor?.itemTypes.skill.find(skill => skill.name.toLowerCase() === this.languageSkillName.toLowerCase());
+  }
+
+  get languageSkillName() {
+    return `${game.i18n.localize("NAME.Language")} (${this.language})`;
+  }
+
+  // *** Creation ***
+  async preCreateData(data, options, user)
+  {
+    const preCreateData = await super.preCreateData(data, options, user);
+
+    if (!data.img || data.img === "icons/svg/item-bag.svg" || data.img === "systems/wfrp4e/icons/blank.png") {
+      const number = data.name.match(/(\(\d+\))/i)[1];
+      preCreateData.img = "icons/sundries/scrolls/scroll-bound-green.webp";
+      preCreateData.name = game.i18n.localize("Forien.Armoury.Scrolls.NewScrollDefaultName") + ` ${number}`;
+    }
+
+    return preCreateData;
+  }
+
+  updateChecks(data, options, user) {
+    super.updateChecks(data);
+
+    if (data.system?.spellUuid) {
+      this.#promptForScrollNameChange();
+    }
+  }
+
+  async #promptForScrollNameChange() {
+    const scrollName = game.i18n.format("Forien.Armoury.Scrolls.ScrollOf", {spell: this.spell.name});
+
+    const agreed = await Dialog.confirm({
+      title: 'Forien.Armoury.Scrolls.ChangeScrollNameTitle',
+      content: game.i18n.format("Forien.Armoury.Scrolls.ChangeScrollNameContent", {name: scrollName})
+    });
+
+    if (agreed === true)
+      this.parent.update({name: scrollName});
   }
 
   async expandData(htmlOptions) {

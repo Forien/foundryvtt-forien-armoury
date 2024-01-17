@@ -128,6 +128,9 @@ export default class ForienArmoury {
     Object.assign(CONFIG.Item.dataModels, {
       [dataTypes.scroll]: ScrollModel,
     });
+    Object.assign(CONFIG.Item.typeLabels, {
+      [dataTypes.scroll]: "Forien.Armoury.Scrolls.MagicScroll",
+    });
     DocumentSheetConfig.registerSheet(Item, constants.moduleId, ScrollSheet, {
       types: [dataTypes.scroll],
       makeDefault: true
