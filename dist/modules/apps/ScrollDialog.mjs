@@ -7,12 +7,26 @@ export default class ScrollDialog extends CastDialog {
   testClass = ScrollTest;
   chatTemplate = Utility.getTemplate("chat-rolls/scroll-card.hbs");
 
+  /**
+   * @inheritDoc
+   *
+   * @returns {{}}
+   */
   static get defaultOptions() {
     const options = super.defaultOptions;
     options.classes = options.classes.concat(["spell-roll-dialog"]);
     return options;
   }
 
+  /**
+   * @inheritDoc
+   *
+   * @param {{}} fields
+   * @param {{}} data
+   * @param {{}} options
+   *
+   * @returns {Promise<ScrollDialog>}
+   */
   static async setup(fields = {}, data = {}, options = {}) {
     options.title = options.title || game.i18n.localize("Forien.Armoury.Scrolls.ScrollTest") + " - " + data.scroll.name;
     options.title += options.appendTitle || "";
@@ -22,12 +36,17 @@ export default class ScrollDialog extends CastDialog {
 
     data.scripts = data.scripts.concat(data.spell?.getScripts("dialog"), data.skill?.getScripts("dialog") || [])
 
-    console.log("ScrollDialog.setup()", data.skill, data.characteristic)
     return new Promise(resolve => {
       new this(fields, data, resolve, options).render(true);
     });
   }
 
+  /**
+   * @inheritDoc
+   *
+   * @returns {{}}
+   * @protected
+   */
   _constructTestData() {
     let data = super._constructTestData();
 

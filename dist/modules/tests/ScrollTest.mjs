@@ -19,6 +19,9 @@ export default class ScrollTest extends WomCastTest {
     this.computeTargetNumber();
   }
 
+  /**
+   * @inheritDoc
+   */
   get item() {
     let item = super.item;
 
@@ -30,12 +33,17 @@ export default class ScrollTest extends WomCastTest {
   /**
    * Scrolls always count as Casting with Ingredient
    *
+   * @inheritDoc
+   *
    * @returns {true}
    */
   get hasIngredient() {
     return true;
   }
 
+  /**
+   * @inheritDoc
+   */
   async postTest() {
     super.postTest();
 

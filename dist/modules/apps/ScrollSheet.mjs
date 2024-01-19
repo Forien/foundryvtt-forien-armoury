@@ -6,6 +6,11 @@ import Utility from "../utility/Utility.mjs";
  * @extends ItemSheetWfrp4e
  */
 export default class ScrollSheet extends ItemSheetWfrp4e {
+  /**
+   * @inheritDoc
+   *
+   * @returns {{}}
+   */
   static get defaultOptions() {
     const options = super.defaultOptions;
 
@@ -14,10 +19,20 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
     return options;
   }
 
+  /**
+   * @inheritDoc
+   *
+   * @returns {string}
+   */
   get template() {
     return `modules/${constants.moduleId}/templates/apps/scroll/sheet.hbs`;
   }
 
+  /**
+   * @inheritDoc
+   *
+   * @returns {Promise<{}>}
+   */
   async getData() {
     const data = await super.getData();
 
@@ -28,6 +43,13 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
     return data;
   }
 
+  /**
+   * @inheritDoc
+   *
+   * @param {DragEvent} event
+   * @returns {Promise<ItemWfrp4e|boolean>}
+   * @protected
+   */
   async _onDrop(event)
   {
     let done = await super._onDrop(event);
@@ -63,6 +85,11 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
     return this.item.update({"system.spellUuid": item.uuid}).then(() => this.render());
   }
 
+  /**
+   * @inheritDoc
+   *
+   * @param {jQuery} html
+   */
   activateListeners(html) {
     super.activateListeners(html);
 
@@ -70,12 +97,22 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
     html.on("click", ".spell .spell-refresh", this.#onSpellRefreshClick.bind(this))
   }
 
+  /**
+   * Open Spell's Sheet when clicked on Spell
+   *
+   * @param {MouseEvent} event
+   */
   #onScrollSpellClick(event) {
     const uuid = event.currentTarget.closest('.spell').dataset.uuid;
 
     fromUuid(uuid).then(item => item?.sheet.render(true));
   }
 
+  /**
+   * Reloads the Data for Spell.
+   *
+   * @param {MouseEvent} event
+   */
   #onSpellRefreshClick(event) {
     const uuid = event.currentTarget.closest('.spell').dataset.uuid;
 

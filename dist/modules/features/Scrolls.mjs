@@ -9,12 +9,22 @@ export default class Scrolls extends ForienBaseModule {
     magicScrolls: 'partials/actor-sheet-wfrp4e-magic-scrolls.hbs',
   }
 
+  /**
+   * @inheritDoc
+   */
   bindHooks() {
     Hooks.on("renderActorSheetWfrp4eCharacter", this.#onRenderActorSheet.bind(this));
     Hooks.on("renderActorSheetWfrp4eNPC", this.#onRenderActorSheet.bind(this));
     Hooks.on("wfrp4e:constructInventory", this.#onWfrp4eConstructInventory.bind(this));
   }
 
+  /**
+   * Add Scrolls to appropriate Inventory categories
+   *
+   * @param {ActorSheetWfrp4e} sheet
+   * @param {{}} categories
+   * @param {{}} collapsed
+   */
   #onWfrp4eConstructInventory(sheet, categories, collapsed) {
     const scrolls = sheet.actor.itemTypes[dataTypes.scroll];
 
@@ -31,6 +41,15 @@ export default class Scrolls extends ForienBaseModule {
     }
   }
 
+  /**
+   * Adds scrolls to Magic tab and registers Scroll-specific Event Listeners
+   *
+   * @param {ActorSheetWfrp4e} sheet
+   * @param {jQuery} html
+   * @param {{}} _options
+   *
+   * @returns {Promise<void>}
+   */
   async #onRenderActorSheet(sheet, html, _options) {
     const actor = sheet.actor;
     const scrolls = actor.itemTypes[dataTypes.scroll];
@@ -51,12 +70,19 @@ export default class Scrolls extends ForienBaseModule {
     }
   }
 
-  #onScrollSpellCastClick(sheet, event) {
+  /**
+   * When scroll is clicked to be used (for example by clicking on "Use Scroll" button), prepare the Test.
+   *
+   * @param {ActorSheetWfrp4e} sheet
+   * @param {MouseEvent} event
+   *
+   * @returns {Promise<ScrollTest|false>}
+   */
+  async #onScrollSpellCastClick(sheet, event) {
     const id = event.currentTarget.closest('.item').dataset.id;
-    const actor = sheet.actor;
-    const scroll = actor.items.get(id);
+    const scroll = sheet.actor.items.get(id);
 
-    if (!scroll) return;
+    if (!scroll) return false;
 
     if (!scroll.system.canUse)
       return Utility.notify(game.i18n.format("Forien.Armoury.Scrolls.ActorCanNotUse", {
@@ -64,30 +90,57 @@ export default class Scrolls extends ForienBaseModule {
         language: scroll.system.language
       }));
 
-    this.#prepareScrollTest(actor, scroll);
+    return this.prepareScrollTest(scroll);
   }
 
-  #onScrollRollClick(sheet, event) {
+  /**
+   * When Scroll is clicked directly on Magic tab, unveil the Item Summary (on right click) or use the scroll
+   *
+   * @param {ActorSheetWfrp4e} sheet
+   * @param {MouseEvent} event
+   *
+   * @returns {Promise<ScrollTest|void|false>}
+   */
+  async #onScrollRollClick(sheet, event) {
     event.preventDefault();
     if (event.button === 2)
-      return sheet._onItemSummary(event);
+      return await sheet._onItemSummary(event);
 
-    this.#onScrollSpellCastClick(sheet, event);
+    return await this.#onScrollSpellCastClick(sheet, event);
   }
 
+  /**
+   * When Spell's tag is clicked, render the Spell's Sheet
+   *
+   * @param {MouseEvent} event
+   */
   #onScrollSpellLinkClick(event) {
     const uuid = event.currentTarget.dataset.uuid;
 
     fromUuid(uuid).then(item => item?.sheet.render(true));
   }
 
+  /**
+   * @inheritDoc
+   */
   applyWfrp4eConfig() {
     foundry.utils.mergeObject(game.wfrp4e.rolls, {"ScrollTest": ScrollTest})
 
     return {};
   }
 
-  async #prepareScrollTest(actor, scroll) {
+  /**
+   * Prepares the Scroll Dialog and performs the Scroll Test
+   *
+   * @param {ItemWfrp4e} scroll
+   *
+   * @returns {Promise<ScrollTest>}
+   */
+  async prepareScrollTest(scroll) {
+    /**
+     * @type {ActorWfrp4e}
+     */
+    const actor = scroll.actor;
     const compendiumSpell = await scroll.system.loadSpell();
     const spellData = compendiumSpell.toObject();
     const skill = scroll.system.languageSkill;
@@ -118,6 +171,6 @@ export default class Scrolls extends ForienBaseModule {
     }
 
     const test = await actor._setupTest(dialogData, ScrollDialog)
-    await test.roll();
+    return await test.roll();
   }
 }
