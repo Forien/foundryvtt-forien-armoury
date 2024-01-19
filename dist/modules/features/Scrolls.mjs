@@ -85,10 +85,14 @@ export default class Scrolls extends ForienBaseModule {
     if (!scroll) return false;
 
     if (!scroll.system.canUse)
-      return Utility.notify(game.i18n.format("Forien.Armoury.Scrolls.ActorCanNotUse", {
-        scroll: scroll.name,
-        language: scroll.system.language
-      }));
+      return Utility.notify(
+        game.i18n.format("Forien.Armoury.Scrolls.ActorCanNotUse", {
+          actor: sheet.actor.name,
+          scroll: scroll.name,
+          language: scroll.system.language
+        }),
+        {type: "warning"}
+      );
 
     return this.prepareScrollTest(scroll);
   }
@@ -149,7 +153,7 @@ export default class Scrolls extends ForienBaseModule {
     spellData.system.cn.value = 0;
     spellData.system.skill.value = skill.name;
 
-    let difficulty = 'hard';
+    let difficulty = Utility.getSetting(settings.scrolls.difficulty);
 
     if (scroll.system.isMagick)
       difficulty = 'challenging';

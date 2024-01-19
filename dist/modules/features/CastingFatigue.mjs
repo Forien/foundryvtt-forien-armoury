@@ -3,6 +3,7 @@ import {constants, flags, settings} from "../constants.mjs";
 import Utility from "../utility/Utility.mjs";
 import MagicEnduranceDataModel from "../data-models/MagicEnduranceDataModel.js";
 import ForienBaseModule from "../utility/ForienBaseModule.mjs";
+import ScrollTest from "../tests/ScrollTest.mjs";
 
 export default class CastingFatigue extends ForienBaseModule {
   #observer;
@@ -98,6 +99,9 @@ export default class CastingFatigue extends ForienBaseModule {
     if (!(test.actor instanceof ActorWfrp4e && test.actor.isOwner))
       return;
 
+    if (Utility.getSetting(settings.scrolls.magicalEndurance) <= 0)
+      return;
+
     this.spendMagicalEndurance(test.actor, this.getCnToUse(test));
   }
 
@@ -121,6 +125,9 @@ export default class CastingFatigue extends ForienBaseModule {
    * @return {number}
    */
   getCnToUse(test) {
+    if (test instanceof ScrollTest)
+      return Utility.getSetting(settings.scrolls.magicalEndurance);
+
     return parseInt(this.useBaseCN ? test.spell?.cn.value : (test.spell?.cn.value - test.spell?.cn.SL));
   }
 

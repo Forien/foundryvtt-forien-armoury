@@ -210,8 +210,24 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.Scrolls.AllowOvercastingHint',
     scope: 'world',
     config: false,
-    default: false,
-    type: Boolean
+    default: 'magick',
+    type: String,
+    choices: {
+      [settings.scrolls.allowOvercastingMagick]: 'Forien.Armoury.Settings.Scrolls.AllowOvercastingMagick',
+      [settings.scrolls.always]: 'Forien.Armoury.Settings.Scrolls.Always',
+      [settings.scrolls.never]: 'Forien.Armoury.Settings.Scrolls.Never',
+    }
+  });
+
+  // Difficulty of non Magick languages
+  game.settings.register(constants.moduleId, settings.scrolls.difficulty, {
+    name: 'Forien.Armoury.Settings.Scrolls.Difficulty',
+    hint: 'Forien.Armoury.Settings.Scrolls.DifficultyHint',
+    scope: 'world',
+    config: false,
+    default: 'hard',
+    type: String,
+    choices: game.wfrp4e.config.difficultyLabels
   });
 
   // Should scroll have their own category in inventory?
@@ -219,6 +235,41 @@ function registerSettings() {
     name: 'Forien.Armoury.Settings.Scrolls.OwnCategory',
     hint: 'Forien.Armoury.Settings.Scrolls.OwnCategoryHint',
     scope: 'client',
+    config: false,
+    default: true,
+    type: Boolean
+  });
+
+  // How much Magical Endurance using scroll costs?
+  game.settings.register(constants.moduleId, settings.scrolls.magicalEndurance, {
+    name: 'Forien.Armoury.Settings.Scrolls.MagicalEndurance',
+    hint: 'Forien.Armoury.Settings.Scrolls.MagicalEnduranceHint',
+    scope: 'world',
+    config: false,
+    default: 0,
+    type: Number
+  });
+
+  // Should scroll have replaced Description with one from the spell as well?
+  game.settings.register(constants.moduleId, settings.scrolls.updateName, {
+    name: 'Forien.Armoury.Settings.Scrolls.UpdateName',
+    hint: 'Forien.Armoury.Settings.Scrolls.UpdateNameHint',
+    scope: 'world',
+    config: false,
+    default: 'ask',
+    type: String,
+    choices: {
+      [settings.scrolls.ask]: 'Forien.Armoury.Settings.Scrolls.Ask',
+      [settings.scrolls.always]: 'Forien.Armoury.Settings.Scrolls.Always',
+      [settings.scrolls.never]: 'Forien.Armoury.Settings.Scrolls.Never',
+    }
+  });
+
+  // Should scroll have replaced Description with one from the spell as well?
+  game.settings.register(constants.moduleId, settings.scrolls.replaceDescription, {
+    name: 'Forien.Armoury.Settings.Scrolls.ReplaceDescription',
+    hint: 'Forien.Armoury.Settings.Scrolls.ReplaceDescriptionHint',
+    scope: 'world',
     config: false,
     default: true,
     type: Boolean

@@ -326,6 +326,7 @@
         "ChangeScrollNameContent": "Update Scroll's name to „{name}”?",
         "ChangeScrollDescription": "This will also replace Scroll's Description!",
 
+        "ActorCanNotUse": "{actor} can't use the „{scroll}”. Either there are no scrolls left, or Actor does not know {language}.",
         "ItemNotFound": "Something went wrong. Dropped Item was not found!",
         "MustHaveSource": "Spell must have a source in, or originate from, World or Compendium in order to create a Scroll!",
         "NotASpell": "Only Spells can be inscribed on a Scroll!",
@@ -438,8 +439,25 @@
         "Scrolls": {
           "AllowOvercasting":  "Allow Overcasting",
           "AllowOvercastingHint": "Should spells cast from Scrolls be able to be overcast?",
+          "AllowOvercastingMagick": "Only with Language (Magick)",
+          "Always": "Always",
+          "Never": "Never",
+
+          "Difficulty": "Non-Magick Difficulty",
+          "DifficultyHint": "What should be default difficulty for Scrolls written in Language other than Magick?",
+
           "OwnCategory":  "Own Inventory Group",
-          "OwnCategoryHint": "Should scrolls appear in inventory as their own, separate group? If false, they will be attached to Books and Documents."
+          "OwnCategoryHint": "Should scrolls appear in inventory as their own, separate group? If false, they will be attached to Books and Documents.",
+
+          "MagicalEndurance": "Magical Endurance cost",
+          "MagicalEnduranceHint": "How much ME should using Scrolls cost? Requires Casting Fatigue feature enabled. Set to 0 to disable.",
+
+          "UpdateName": "Update Scroll's Name",
+          "UpdateNameHint": "Should Scroll's name be automatically updated whenever a new Spell is attached to the Scroll?",
+          "Ask": "Ask",
+
+          "ReplaceDescription": "Replace Scroll's Description?",
+          "ReplaceDescriptionHint": "Should Scroll's description also be updated along with the Name?"
         },
 
         "ATL": {

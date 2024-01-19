@@ -1,3 +1,6 @@
+import Utility from "../utility/Utility.mjs";
+import {settings} from "../constants.mjs";
+
 const fields = foundry.data.fields;
 
 /**
@@ -111,19 +114,32 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
    * @returns {Promise<void>}
    */
   async #promptForScrollNameChange() {
+    const setting = Utility.getSetting(settings.scrolls.updateName);
+
+    if (setting === settings.scrolls.never) return;
+
     const spell = await this.loadSpell();
     const scrollName = game.i18n.format("Forien.Armoury.Scrolls.ScrollOf", {spell: spell.name});
+    const updateData = {name: scrollName};
 
-    let content = game.i18n.format("Forien.Armoury.Scrolls.ChangeScrollNameContent", {name: scrollName});
-    content += game.i18n.localize("Forien.Armoury.Scrolls.ChangeScrollDescription");
+    let content = game.i18n.format("Forien.Armoury.Scrolls.ChangeScrollNameContent", updateData);
 
-    const agreed = await Dialog.confirm({
-      title: 'Forien.Armoury.Scrolls.ChangeScrollNameTitle',
-      content
-    });
+    if (Utility.getSetting(settings.scrolls.replaceDescription)) {
+      content += "<br>" + game.i18n.localize("Forien.Armoury.Scrolls.ChangeScrollDescription");
+      updateData["system.description.value"] = spell.description.value;
+    }
+
+    let agreed = true;
+
+    if (setting === settings.scrolls.ask) {
+      agreed = await Dialog.confirm({
+        title: 'Forien.Armoury.Scrolls.ChangeScrollNameTitle',
+        content
+      });
+    }
 
     if (agreed === true)
-      this.parent.update({name: scrollName, "system.description.value": spell.description.value});
+      this.parent.update(updateData);
   }
 
   /**

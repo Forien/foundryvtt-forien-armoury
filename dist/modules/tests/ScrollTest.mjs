@@ -12,11 +12,28 @@ export default class ScrollTest extends WomCastTest {
     if (!data)
       return
 
-    this.allowOvercasting = Utility.getSetting(settings.scrolls.allowOvercasting);
-    this.data.context.allowOvercasting = this.allowOvercasting;
     this.data.preData.scroll = data.scroll;
+    this.data.context.isScroll = true;
+    this.data.context.allowOvercasting = this.allowOvercasting;
 
     this.computeTargetNumber();
+  }
+
+  /**
+   * Can overcasting be employed?
+   *
+   * @returns {boolean}
+   */
+  get allowOvercasting() {
+    let allowOvercasting = Utility.getSetting(settings.scrolls.allowOvercasting);
+
+    if (allowOvercasting === settings.scrolls.never)
+      return false;
+
+    if (allowOvercasting === settings.scrolls.always)
+      return true;
+
+    return this.data.preData.scroll.system.isMagick;
   }
 
   /**

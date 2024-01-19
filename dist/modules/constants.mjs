@@ -88,7 +88,15 @@ const settings = {
   },
   scrolls: {
     allowOvercasting: 'scrolls.allowOvercasting',
-    ownCategory: 'scrolls.ownCategory'
+    allowOvercastingMagick: 'magick',
+    ownCategory: 'scrolls.ownCategory',
+    difficulty: 'scrolls.difficulty',
+    magicalEndurance: 'scrolls.magicalEndurance',
+    updateName: 'scrolls.updateName',
+    ask: 'ask',
+    always: 'always',
+    never: 'never',
+    replaceDescription: 'scrolls.replaceDescription',
   }
 }
 
