@@ -14,11 +14,10 @@ export default class ScrollDialog extends CastDialog {
   }
 
   static async setup(fields = {}, data = {}, options = {}) {
-    let spell = data.spell;
-    options.title = options.title || game.i18n.localize("Forien.Armoury.Scrolls.ScrollTest") + " - " + spell.name;
+    options.title = options.title || game.i18n.localize("Forien.Armoury.Scrolls.ScrollTest") + " - " + data.scroll.name;
     options.title += options.appendTitle || "";
 
-    data.skill = data.skill ?? spell.skillToUse;
+    data.skill = data.skill ?? data.spell.skillToUse;
     data.characteristic = data.skill?.system?.characteristic?.key || "int";
 
     data.scripts = data.scripts.concat(data.spell?.getScripts("dialog"), data.skill?.getScripts("dialog") || [])
@@ -33,6 +32,7 @@ export default class ScrollDialog extends CastDialog {
     let data = super._constructTestData();
 
     data.item = this.data.spell;
+    data.scroll = this.data.scroll;
 
     return data;
   }

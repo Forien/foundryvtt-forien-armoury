@@ -7,6 +7,11 @@ const fields = foundry.data.fields;
  */
 export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
 
+  /**
+   * @inheritDoc
+   *
+   * @returns {DataSchema}
+   */
   static defineSchema() {
     let schema = super.defineSchema();
 
@@ -24,10 +29,16 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
     return fromUuidSync(this.spellUuid);
   }
 
+  /**
+   * @returns {Promise<ItemWfrp4e|null>}
+   */
   async loadSpell() {
     return await fromUuid(this.spellUuid);
   }
 
+  /**
+   * @returns {boolean}
+   */
   get canUse() {
     const notZero = this.quantity.value > 0;
     const knowsLanguage = this.languageSkill;
@@ -35,21 +46,39 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
     return notZero && knowsLanguage;
   }
 
+  /**
+   * @returns {boolean}
+   */
   get isMagick() {
     return this.language.toLowerCase() === game.i18n.localize("SPEC.Magick").toLowerCase();
   }
 
+  /**
+   *
+   * @returns {string|undefined}
+   */
   get languageSkill() {
     return this.parent.actor?.itemTypes.skill.find(skill => skill.name.toLowerCase() === this.languageSkillName.toLowerCase());
   }
 
+  /**
+   *
+   * @returns {string}
+   */
   get languageSkillName() {
     return `${game.i18n.localize("NAME.Language")} (${this.language})`;
   }
 
   // *** Creation ***
-  async preCreateData(data, options, user)
-  {
+  /**
+   * @inheritDoc
+   *
+   * @param data
+   * @param options
+   * @param user
+   * @returns {Promise<{}>}
+   */
+  async preCreateData(data, options, user) {
     const preCreateData = await super.preCreateData(data, options, user);
 
     if (!data.img || data.img === "icons/svg/item-bag.svg" || data.img === "systems/wfrp4e/icons/blank.png") {
@@ -61,6 +90,13 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
     return preCreateData;
   }
 
+  /**
+   * @inheritDoc
+   *
+   * @param data
+   * @param options
+   * @param user
+   */
   updateChecks(data, options, user) {
     super.updateChecks(data);
 
@@ -69,18 +105,33 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
     }
   }
 
+  /**
+   * @inheritDoc
+   *
+   * @returns {Promise<void>}
+   */
   async #promptForScrollNameChange() {
-    const scrollName = game.i18n.format("Forien.Armoury.Scrolls.ScrollOf", {spell: this.spell.name});
+    const spell = await this.loadSpell();
+    const scrollName = game.i18n.format("Forien.Armoury.Scrolls.ScrollOf", {spell: spell.name});
+
+    let content = game.i18n.format("Forien.Armoury.Scrolls.ChangeScrollNameContent", {name: scrollName});
+    content += game.i18n.localize("Forien.Armoury.Scrolls.ChangeScrollDescription");
 
     const agreed = await Dialog.confirm({
       title: 'Forien.Armoury.Scrolls.ChangeScrollNameTitle',
-      content: game.i18n.format("Forien.Armoury.Scrolls.ChangeScrollNameContent", {name: scrollName})
+      content
     });
 
     if (agreed === true)
-      this.parent.update({name: scrollName});
+      this.parent.update({name: scrollName, "system.description.value": spell.description.value});
   }
 
+  /**
+   * @inheritDoc
+   *
+   * @param htmlOptions
+   * @returns {Promise<{}>}
+   */
   async expandData(htmlOptions) {
     let data = await super.expandData(htmlOptions);
 
@@ -115,5 +166,4 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
 
     return data;
   }
-
 }

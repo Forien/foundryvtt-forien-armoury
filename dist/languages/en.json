@@ -324,6 +324,7 @@
 
         "ChangeScrollNameTitle": "Update Scroll's name?",
         "ChangeScrollNameContent": "Update Scroll's name to „{name}”?",
+        "ChangeScrollDescription": "This will also replace Scroll's Description!",
 
         "ItemNotFound": "Something went wrong. Dropped Item was not found!",
         "MustHaveSource": "Spell must have a source in, or originate from, World or Compendium in order to create a Scroll!",

@@ -23,7 +23,7 @@ export default class Scrolls extends ForienBaseModule {
         label: game.i18n.localize("Forien.Armoury.Scrolls.MagicScrolls"),
         items: scrolls,
         show: true,
-        collapsed : collapsed?.scrolls,
+        collapsed: collapsed?.scrolls,
         dataType: dataTypes.scroll
       }
     } else {
@@ -35,7 +35,11 @@ export default class Scrolls extends ForienBaseModule {
     const actor = sheet.actor;
     const scrolls = actor.itemTypes[dataTypes.scroll];
 
-    let content = await renderTemplate(Utility.getTemplate(this.templates.magicScrolls), {scrolls, isOwner: sheet.document.isOwner, dataType: dataTypes.scroll})
+    let content = await renderTemplate(Utility.getTemplate(this.templates.magicScrolls), {
+      scrolls,
+      isOwner: sheet.document.isOwner,
+      dataType: dataTypes.scroll
+    })
     html.find('.content .tab.magic').append(content);
 
     // register listeners only if it's the first render of outer application:
@@ -55,8 +59,10 @@ export default class Scrolls extends ForienBaseModule {
     if (!scroll) return;
 
     if (!scroll.system.canUse)
-      return Utility.notify(game.i18n.format("Forien.Armoury.Scrolls.ActorCanNotUse", {scroll: scroll.name, language: scroll.system.language}));
-
+      return Utility.notify(game.i18n.format("Forien.Armoury.Scrolls.ActorCanNotUse", {
+        scroll: scroll.name,
+        language: scroll.system.language
+      }));
 
     this.#prepareScrollTest(actor, scroll);
   }
@@ -70,7 +76,6 @@ export default class Scrolls extends ForienBaseModule {
   }
 
   #onScrollSpellLinkClick(event) {
-    console.log('renderActorSheetWfrp4eNPC, onScrollSpellLinkClick');
     const uuid = event.currentTarget.dataset.uuid;
 
     fromUuid(uuid).then(item => item?.sheet.render(true));
@@ -96,70 +101,23 @@ export default class Scrolls extends ForienBaseModule {
     if (scroll.system.isMagick)
       difficulty = 'challenging';
 
-    const spell = new CONFIG.Item.documentClass(spellData, { parent: actor });
+    const spell = new CONFIG.Item.documentClass(spellData, {parent: actor});
     spell.system.computeOvercastingData();
 
-
-    console.log("#prepareScrollTest", actor, scroll, spell, skill)
-    let dialogData = {
-      fields : {
+    const dialogData = {
+      fields: {
         difficulty
       },
-      data : {
+      data: {
         scroll,
         spell,
-        hitLoc : !!spell.system.damage.value,
+        hitLoc: !!spell.system.damage.value,
         skill: skill
       },
-      options : {}
+      options: {}
     }
-    let test = await actor._setupTest(dialogData, ScrollDialog)
+
+    const test = await actor._setupTest(dialogData, ScrollDialog)
     await test.roll();
-  }
-
-  async test() {
-    const actor = game.actors.get("ajqitmwP2dWjFZUm");
-
-    /**
-     *
-     * @type {ItemWfrp4e}
-     */
-    let compendiumSpell = await fromUuid("Compendium.wfrp4e-core.items.Item.1RjTFiv9ooOW35LV");
-    let spellData = compendiumSpell.toObject();
-
-    spellData.system.memorized.value = true;
-    spellData.system.cn.value = 0;
-    spellData.system.skill.value = "Language (Reikspiel)";
-
-    let spell = new CONFIG.Item.documentClass(spellData, { parent: actor });
-
-    // console.log("Scrolls.test()", spell)
-    //
-    // let created = await actor.createEmbeddedDocuments("Item", [spell]);
-    // spell = created[0];
-    // actor.system.computeItems();
-    // actor.prepareDerivedData();
-
-    // console.log("Scrolls.test() overcast before", foundry.utils.deepClone(spell.system.overcast));
-    spell.system.computeOvercastingData();
-    // console.log("Scrolls.test() overcast after", foundry.utils.deepClone(spell.system.overcast));
-
-    console.log("Scrolls.test()", foundry.utils.deepClone(spell))
-
-    let dialogData = {
-      fields : {},  // Fields are data properties in the dialog template
-      data : {                  // Data is internal dialog data
-        spell,
-        hitLoc : !!spell.system.damage.value,
-        skill: actor.items.find(i => i.type === "skill")
-      },
-      options : {}         // Application/optional properties
-    }
-    let setupData = await actor._setupTest(dialogData, ScrollDialog)
-    console.log("Scrolls.test()", setupData);
-    let test = await actor.castTest(setupData);
-    console.log("Scrolls.test()", test);
-
-    // await actor.deleteEmbeddedDocuments("Item", [spell._id]);
   }
 }

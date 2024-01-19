@@ -7,7 +7,7 @@
         {{/if}}
     {{/if}}
 
-    {{#if test.context.allowOvercasting}}
+    {{#if (and test.context.allowOvercasting (eq test.result.outcome 'success'))}}
         {{#if (settings "useWoMOvercast")}}
             {{> systems/wfrp4e/templates/partials/wom-overcasts.hbs}}
         {{else}}

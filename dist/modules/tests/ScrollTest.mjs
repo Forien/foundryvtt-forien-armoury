@@ -14,6 +14,8 @@ export default class ScrollTest extends WomCastTest {
 
     this.allowOvercasting = Utility.getSetting(settings.scrolls.allowOvercasting);
     this.data.context.allowOvercasting = this.allowOvercasting;
+    this.data.preData.scroll = data.scroll;
+
     this.computeTargetNumber();
   }
 
@@ -34,20 +36,10 @@ export default class ScrollTest extends WomCastTest {
     return true;
   }
 
-  /**
-   * Ma
-   */
-  // computeTargetNumber() {
-  //   let skill = this.actor?.itemTypes.skill.find(skill => skill.name === this.data.result.skillSelected);
-  //
-  //   if (!skill)
-  //     this.result.target = this.actor.characteristics.int.value;
-  //   else
-  //     this.result.target = skill.total.value;
-  //
-  //   if (this.preData.target)
-  //     this.data.result.target = this.preData.target
-  //   else
-  //     this.data.result.target += this.targetModifiers
-  // }
+  async postTest() {
+    super.postTest();
+
+    if (this.result.outcome === 'success')
+      await this.result.scroll.system.reduceQuantity();
+  }
 }
