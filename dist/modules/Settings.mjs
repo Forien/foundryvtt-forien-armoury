@@ -1,4 +1,4 @@
-import {constants, settings} from "./constants.mjs";
+import {constants, defaults, settings} from "./constants.mjs";
 import SettingsApp from "./apps/SettingsApp.mjs";
 import Utility from "./utility/Utility.mjs";
 
@@ -210,7 +210,7 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.Scrolls.AllowOvercastingHint',
     scope: 'world',
     config: false,
-    default: 'magick',
+    default: settings.scrolls.allowOvercasting,
     type: String,
     choices: {
       [settings.scrolls.allowOvercastingMagick]: 'Forien.Armoury.Settings.Scrolls.AllowOvercastingMagick',
@@ -220,12 +220,23 @@ function registerSettings() {
   });
 
   // Difficulty of non Magick languages
+  game.settings.register(constants.moduleId, settings.scrolls.difficultyMagick, {
+    name: 'Forien.Armoury.Settings.Scrolls.DifficultyMagick',
+    hint: 'Forien.Armoury.Settings.Scrolls.DifficultyMagickHint',
+    scope: 'world',
+    config: false,
+    default: defaults.scrolls.difficultyMagick,
+    type: String,
+    choices: game.wfrp4e.config.difficultyLabels
+  });
+
+  // Difficulty of non Magick languages
   game.settings.register(constants.moduleId, settings.scrolls.difficulty, {
     name: 'Forien.Armoury.Settings.Scrolls.Difficulty',
     hint: 'Forien.Armoury.Settings.Scrolls.DifficultyHint',
     scope: 'world',
     config: false,
-    default: 'hard',
+    default: defaults.scrolls.difficulty,
     type: String,
     choices: game.wfrp4e.config.difficultyLabels
   });

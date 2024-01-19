@@ -1,5 +1,6 @@
 import Utility from "../utility/Utility.mjs";
 import {settings} from "../constants.mjs";
+import ScrollDialog from "../apps/ScrollDialog.mjs";
 
 const fields = foundry.data.fields;
 
@@ -58,7 +59,7 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
 
   /**
    *
-   * @returns {string|undefined}
+   * @returns {ItemWfrp4e|undefined}
    */
   get languageSkill() {
     return this.parent.actor?.itemTypes.skill.find(skill => skill.name.toLowerCase() === this.languageSkillName.toLowerCase());
@@ -181,5 +182,51 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
     data.properties = data.properties.filter(p => !!p);
 
     return data;
+  }
+
+
+  /**
+   * Prepares the Scroll Dialog and performs the Scroll Test
+   *
+   * @returns {Promise<ScrollTest|null>}
+   */
+  async prepareScrollTest() {
+    /**
+     * @type {ActorWfrp4e}
+     */
+    const actor = this.parent.actor;
+    if (!actor) return null;
+
+    const compendiumSpell = await this.loadSpell();
+    const spellData = compendiumSpell.toObject();
+    const skill = this.languageSkill;
+
+    spellData.system.memorized.value = true;
+    spellData.system.cn.value = 0;
+    spellData.system.skill.value = skill.name;
+
+    let difficulty = Utility.getSetting(settings.scrolls.difficulty);
+
+    if (this.isMagick)
+      difficulty = Utility.getSetting(settings.scrolls.difficultyMagick);
+
+    const spell = new CONFIG.Item.documentClass(spellData, {parent: actor});
+    spell.system.computeOvercastingData();
+
+    const dialogData = {
+      fields: {
+        difficulty
+      },
+      data: {
+        scroll: this.parent,
+        spell,
+        hitLoc: !!spell.system.damage.value,
+        skill: skill
+      },
+      options: {}
+    }
+
+    const test = await actor._setupTest(dialogData, ScrollDialog)
+    return await test.roll();
   }
 }

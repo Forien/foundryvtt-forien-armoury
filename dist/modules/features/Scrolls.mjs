@@ -94,7 +94,7 @@ export default class Scrolls extends ForienBaseModule {
         {type: "warning"}
       );
 
-    return this.prepareScrollTest(scroll);
+    return scroll.system.prepareScrollTest();
   }
 
   /**
@@ -156,7 +156,7 @@ export default class Scrolls extends ForienBaseModule {
     let difficulty = Utility.getSetting(settings.scrolls.difficulty);
 
     if (scroll.system.isMagick)
-      difficulty = 'challenging';
+      difficulty = Utility.getSetting(settings.scrolls.difficultyMagick);
 
     const spell = new CONFIG.Item.documentClass(spellData, {parent: actor});
     spell.system.computeOvercastingData();

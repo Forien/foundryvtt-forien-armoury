@@ -179,6 +179,7 @@ export default class SettingsApp extends FormApplication {
         always: [
           settings.scrolls.allowOvercasting,
           settings.scrolls.ownCategory,
+          settings.scrolls.difficultyMagick,
           settings.scrolls.difficulty,
           settings.scrolls.magicalEndurance,
           settings.scrolls.updateName,

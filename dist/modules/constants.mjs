@@ -9,8 +9,6 @@ const dataTypes = {
   scroll: `${constants.moduleId}.scroll`
 }
 
-const defaults = {}
-
 const flags = {
   ammoReplenish: 'ammoReplenish',
   combatFatigue: {
@@ -90,6 +88,7 @@ const settings = {
     allowOvercasting: 'scrolls.allowOvercasting',
     allowOvercastingMagick: 'magick',
     ownCategory: 'scrolls.ownCategory',
+    difficultyMagick: 'scrolls.difficultyMagick',
     difficulty: 'scrolls.difficulty',
     magicalEndurance: 'scrolls.magicalEndurance',
     updateName: 'scrolls.updateName',
@@ -97,6 +96,14 @@ const settings = {
     always: 'always',
     never: 'never',
     replaceDescription: 'scrolls.replaceDescription',
+  }
+}
+
+const defaults = {
+  scrolls: {
+    allowOvercasting: settings.scrolls.allowOvercastingMagick,
+    difficulty: 'hard',
+    difficultyMagick: 'challenging'
   }
 }
 

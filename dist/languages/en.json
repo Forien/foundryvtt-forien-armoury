@@ -443,6 +443,10 @@
           "Always": "Always",
           "Never": "Never",
 
+          "DifficultyMagick": "Magick Difficulty",
+          "DifficultyMagickHint": "What should be default difficulty for Scrolls written in Language (Magick)?",
+
+
           "Difficulty": "Non-Magick Difficulty",
           "DifficultyHint": "What should be default difficulty for Scrolls written in Language other than Magick?",
 
