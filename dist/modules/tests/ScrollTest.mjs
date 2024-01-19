@@ -5,8 +5,6 @@ import {settings} from "../constants.mjs";
  * @extends WomCastTest
  */
 export default class ScrollTest extends WomCastTest {
-  allowOvercasting = false;
-
   constructor(data, actor) {
     super(data, actor)
     if (!data)
