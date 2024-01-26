@@ -96,6 +96,12 @@ const settings = {
     always: 'always',
     never: 'never',
     replaceDescription: 'scrolls.replaceDescription',
+  },
+  socketTests: {
+    always: 'always',
+    never: 'never',
+    onKeyPress: 'onKeyPress',
+    mode: 'socketTests.mode'
   }
 }
 

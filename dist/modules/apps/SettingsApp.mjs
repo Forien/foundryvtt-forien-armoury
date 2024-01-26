@@ -127,6 +127,7 @@ export default class SettingsApp extends FormApplication {
         always: [
           settings.runes.enableDamage,
           settings.diseases.autoProgress,
+          settings.socketTests.mode,
           Debug.setting,
         ]
       },

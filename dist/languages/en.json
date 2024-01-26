@@ -333,6 +333,14 @@
         "MustHaveLore": "Only Spells with Lore can be inscribed on a Scroll!"
       },
 
+      "SocketTests": {
+        "Mode": "Socket Tests Mode",
+        "ModeHint": "Socket Tests is a feature that allows GMs (and sometimes players) request a specific test from an actor owned by another user. In normal circumstances, any Test that is initialized either from Actor Sheet, Token Action Hud, Macro or effect, will be either started in context of executing user or failed in case of lack of permissions to do so. This feature will allow one of three options. <br/><b>Never</b> - will always start a test in context of the user that is executing the test (original system behavior).<br/><br/><b>Always</b> - When test is initialized by GM in context of the actor that has non-GM owner online, test dialog will be opened for non-GM player, and vice-versa - when Player would initialized a test for not owned actor, a test dialog would be opened for GM. (this option can be suspended temporarly by pressing Ctrl Key)<br/><b>On Ctrl Key Pressed</b> - The opposite of Always - initialized test will have its Test Dialog window opened for owninig player only when Ctrl Key is pressed. Otherwise, game will work as if this feature was disabled.",
+        "OnKeyPress": "On Ctrl Key Pressed",
+        "Always": "Always (unless Ctrl is pressed)",
+        "Never": "Never"
+      },
+
       "Symptoms": {
         "Vertigo": {
           "Name": "Vertigo",
