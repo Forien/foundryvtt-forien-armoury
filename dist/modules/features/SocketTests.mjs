@@ -17,9 +17,8 @@ export default class SocketTests extends ForienBaseModule {
     if (!Utility.getSetting(settings.socketTests.mode) === settings.socketTests.never) return;
 
     // this is lazy hack to handle Ctrl key being pressed - we simply assume that this is the right key...
-    const doc = $(document);
-    doc.on("keydown", this.setSocketTests)
-    doc.on("keyup", this.resetSocketTests);
+    document.addEventListener('keydown', this.setSocketTests.bind(this));
+    document.addEventListener('keyup', this.resetSocketTests.bind(this));
 
     game.wfrp4e.socket.setupSocketTest = async function(payload) {
         let dialogData = payload.dialogData;
@@ -218,11 +217,15 @@ export default class SocketTests extends ForienBaseModule {
   }
 
   setSocketTests(event) {
-    this.#ctrlKeyPressed = true;
+    if (event.ctrlKey) {
+      this.#ctrlKeyPressed = true;
+    }
   }
 
   resetSocketTests(event) {
-    this.#ctrlKeyPressed = false;
+    if (!event.ctrlKey) {
+      this.#ctrlKeyPressed = false;
+    }
   }
 
   isSocketTest() {
