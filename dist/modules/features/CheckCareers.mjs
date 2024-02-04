@@ -85,6 +85,8 @@ export default class CheckCareers extends ForienBaseModule {
 
     const templateData = {
       character: character.name,
+      exp: character.system.details.experience.current,
+      hasExp: character.system.details.experience.current >= 25,
       currentCareer: currentCareer.name,
       requiredAdvances,
       careerLevel,

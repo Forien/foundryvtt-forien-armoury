@@ -148,7 +148,7 @@
         },
         "MasterRuneOfDismay": {
           "name": "Master Rune of Dismay",
-          "effect": "All enemies within 48 yards of the user must make a Willpower Test or suffer a @Condition[Stunned]{Stunned} Condition. Activation takes an Action, can only be used once per Encounter."
+          "effect": "All enemies within 24 yards of the user must make a Willpower Test or suffer a @Condition[Stunned]{Stunned} Condition. Activation takes an Action, can only be used once per Encounter."
         },
         "MasterRuneOfSpite": {
           "name": "Master Rune of Spite",
@@ -247,7 +247,8 @@
         "YouHaveTalents": "You have bought <strong>{done}</strong> career talents.",
         "ConclusionCannot": "You can't complete your career yet.",
         "ConclusionCan": "Congratulations! You can complete your current career!",
-        "ConclusionPotential": "You have „potential“ skills and/or talents, talk to your GM. They might count towards your career!"
+        "ConclusionPotential": "You have „potential“ skills and/or talents, talk to your GM. They might count towards your career!",
+        "HasSpareExp": "You have {exp} spare experience you may spend!"
       },
 
       "Effects": {
