@@ -13,7 +13,8 @@
       },
 
       "CombatFatigue": {
-        "CombatFatigueTest": " — Combat Fatigue"
+        "CombatFatigueTest": " — Combat Fatigue",
+        "CombatFatigueToolTip": "Combat Fatigue - Rounds to Endurance Test"
       },
 
       "CastingFatigue": {
