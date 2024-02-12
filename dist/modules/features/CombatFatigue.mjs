@@ -28,7 +28,7 @@ export default class CombatFatigue extends ForienBaseModule {
       combatants.forEach(c => {
         let $controls = html.find(`.combatant[data-combatant-id="${c.id}"] .token-effects`);
         const control = `<a class="combatant-control" role="textbox" data-control="combatFatigue">
-                          <input data-tooltip=${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueToolTip")} type="text" name="flags.forien-armoury.roundsBeforeTest" value="${this.#getRoundsBeforeTest(c, c.actor)}">
+                          <input data-tooltip="${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueToolTip")}" type="text" name="flags.forien-armoury.roundsBeforeTest" value="${this.#getRoundsBeforeTest(c, c.actor)}">
                         </a>`;
         $controls.before(control);
         $controls.prev().children('input').change(c.id, function (event) { 
@@ -37,7 +37,7 @@ export default class CombatFatigue extends ForienBaseModule {
         });
         if (c.actor.status.wounds.value == 0) {
           const passOutControl = `<a class="combatant-control" role="textbox" data-control="combatPassOut">
-                                  <input data-tooltip=${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatPassOutToollTip")} type="text" name="flags.forien-armoury.roundsBeforePassOut" value="${this.#getRoundsBeforePassOut(c, c.actor)}">
+                                  <input data-tooltip="${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatPassOutToollTip")}" type="text" name="flags.forien-armoury.roundsBeforePassOut" value="${this.#getRoundsBeforePassOut(c, c.actor)}">
                                   </a>`
           $controls.before(passOutControl);
           $controls.prev().children('input').change(c.id, function (event) { 
