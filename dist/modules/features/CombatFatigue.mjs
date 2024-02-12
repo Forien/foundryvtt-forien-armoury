@@ -7,11 +7,11 @@ export default class CombatFatigue extends ForienBaseModule {
 
 
   bindHooks() {
-    Hooks.on("ready", this.#setupEndTrunScript.bind(this));
+    Hooks.on("ready", this.#setupEndTurnScript.bind(this));
     Hooks.on("renderCombatTracker", this.#renderRoundsBeforeTest.bind(this));
   }
 
-  #setupEndTrunScript() {
+  #setupEndTurnScript() {
     let that = this;
     let f = async function(combat, combatant) {
       await that.#processCombatTurn(combat, combatant);
