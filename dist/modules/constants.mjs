@@ -12,7 +12,8 @@ const dataTypes = {
 const flags = {
   ammoReplenish: 'ammoReplenish',
   combatFatigue: {
-    roundsBeforeTest: 'roundsBeforeTest'
+    roundsBeforeTest: 'roundsBeforeTest',
+    roundsBeforePassOut: 'roundsBeforePassOut'
   },
   itemRepair: {
     type: 'type',

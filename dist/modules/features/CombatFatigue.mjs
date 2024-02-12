@@ -29,12 +29,22 @@ export default class CombatFatigue extends ForienBaseModule {
         let $controls = html.find(`.combatant[data-combatant-id="${c.id}"] .token-effects`);
         const control = `<a class="combatant-control" role="textbox" data-control="combatFatigue">
                           <input data-tooltip=${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueToolTip")} type="text" name="flags.forien-armoury.roundsBeforeTest" value="${this.#getRoundsBeforeTest(c, c.actor)}">
-                        </a>`
+                        </a>`;
         $controls.before(control);
         $controls.prev().children('input').change(c.id, function (event) { 
           let target = game.combat.combatants.find(x=>x.id == event.data);
           target.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, this.value);
         });
+        if (c.actor.status.wounds.value == 0) {
+          const passOutControl = `<a class="combatant-control" role="textbox" data-control="combatPassOut">
+                                  <input data-tooltip=${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatPassOutToollTip")} type="text" name="flags.forien-armoury.roundsBeforePassOut" value="${this.#getRoundsBeforePassOut(c, c.actor)}">
+                                  </a>`
+          $controls.before(passOutControl);
+          $controls.prev().children('input').change(c.id, function (event) { 
+            let target = game.combat.combatants.find(x=>x.id == event.data);
+            target.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforePassOut, this.value);
+          });
+        }
       });
     }
   }
@@ -64,6 +74,7 @@ export default class CombatFatigue extends ForienBaseModule {
       return debug('[CombatFatigue] You are a GM and previous combatant is Player Owned Actor', {previousCombatant, actor});
 
     await this.#processCombatFatigue(previousCombatant);
+    await this.#processCombatPassOut(previousCombatant);
   }
 
   /**
@@ -97,6 +108,22 @@ export default class CombatFatigue extends ForienBaseModule {
     }
 
     await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, roundsBeforeTest)
+  }
+
+  async #processCombatPassOut(previousCombatant) {
+    /** @type {ActorWfrp4e} */
+    const actor = previousCombatant.actor;
+    if (actor.status.wounds.value != 0) return;
+
+    let roundsBeforePassOut = this.#getRoundsBeforePassOut(previousCombatant, actor);
+    roundsBeforePassOut--;
+
+    if (roundsBeforePassOut <= 0 && !actor.hasCondition('unconscious')) {
+      await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforePassOut, 0);
+      await actor.addCondition('unconscious');
+    } else {
+      await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforePassOut, Math.max(roundsBeforePassOut, 0));
+    }
   }
 
   /**
@@ -141,5 +168,13 @@ export default class CombatFatigue extends ForienBaseModule {
       roundsBeforeTest = actor.characteristics.t.bonus;
 
     return roundsBeforeTest;
+  }
+
+  #getRoundsBeforePassOut(currentCombatant, actor) {
+    let roundsBeforePassOut = currentCombatant.getFlag(constants.moduleId, flags.combatFatigue.roundsBeforePassOut) ?? null;
+    if (roundsBeforePassOut === null)
+      roundsBeforePassOut = actor.characteristics.t.bonus;
+
+    return roundsBeforePassOut;
   }
 }
