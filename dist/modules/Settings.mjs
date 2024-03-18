@@ -292,6 +292,21 @@ function registerSettings() {
     default: false,
     type: Boolean
   });
+  
+  // Should scroll have replaced Description with one from the spell as well?
+  game.settings.register(constants.moduleId, settings.socketTests.mode, {
+    name: 'Forien.Armoury.Settings.SocketTests.Mode',
+    hint: 'Forien.Armoury.Settings.SocketTests.ModeHint',
+    scope: 'world',
+    config: false,
+    default: 'onKeyPress',
+    type: String,
+    choices: {
+      [settings.socketTests.onKeyPress]: 'Forien.Armoury.Settings.SocketTests.OnKeyPress',
+      [settings.socketTests.always]: 'Forien.Armoury.Settings.SocketTests.Always',
+      [settings.socketTests.never]: 'Forien.Armoury.Settings.SocketTests.Never',
+    }
+  });
 }
 
 export {registerSettings};

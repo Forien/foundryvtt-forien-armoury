@@ -12,7 +12,8 @@ const dataTypes = {
 const flags = {
   ammoReplenish: 'ammoReplenish',
   combatFatigue: {
-    roundsBeforeTest: 'roundsBeforeTest'
+    roundsBeforeTest: 'roundsBeforeTest',
+    roundsBeforePassOut: 'roundsBeforePassOut'
   },
   itemRepair: {
     type: 'type',
@@ -96,6 +97,12 @@ const settings = {
     always: 'always',
     never: 'never',
     replaceDescription: 'scrolls.replaceDescription',
+  },
+  socketTests: {
+    always: 'always',
+    never: 'never',
+    onKeyPress: 'onKeyPress',
+    mode: 'socketTests.mode'
   }
 }
 

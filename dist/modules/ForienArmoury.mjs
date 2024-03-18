@@ -11,6 +11,7 @@ import Species from "./features/Species.mjs";
 import TemporaryRunes from "./features/Runes.mjs";
 import Utility from "./utility/Utility.mjs";
 import WorldTimeObserver from "./utility/WorldTimeObserver.mjs";
+import SocketTests from "./features/SocketTests.mjs";
 import {Debug} from "./utility/Debug.mjs";
 import {constants, dataTypes, settings} from "./constants.mjs";
 import {styleHelpers} from "./helpers/styleHelpers.js";
@@ -36,6 +37,7 @@ export default class ForienArmoury {
     Species,
     TemporaryRunes,
     WorldTimeObserver,
+    SocketTests
   ]
 
   /**
@@ -123,6 +125,13 @@ export default class ForienArmoury {
   get integrations() {
     return this.modules.get('integrations');
   };
+
+  /**
+   * @return {SocketTests}
+   */
+  get socketTests() {
+    return this.modules.get('socketTests');
+  }
 
   #registerDataModels() {
     Object.assign(CONFIG.Item.dataModels, {
