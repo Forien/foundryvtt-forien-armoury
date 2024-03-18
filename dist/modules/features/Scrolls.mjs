@@ -27,17 +27,18 @@ export default class Scrolls extends ForienBaseModule {
    */
   #onWfrp4eConstructInventory(sheet, categories, collapsed) {
     const scrolls = sheet.actor.itemTypes[dataTypes.scroll];
-
-    if (Utility.getSetting(settings.scrolls.ownCategory)) {
-      categories.scrolls = {
-        label: game.i18n.localize("Forien.Armoury.Scrolls.MagicScrolls"),
-        items: scrolls,
-        show: true,
-        collapsed: collapsed?.scrolls,
-        dataType: dataTypes.scroll
+    if (scrolls) {
+      if (Utility.getSetting(settings.scrolls.ownCategory)) {
+        categories.scrolls = {
+          label: game.i18n.localize("Forien.Armoury.Scrolls.MagicScrolls"),
+          items: scrolls,
+          show: true,
+          collapsed: collapsed?.scrolls,
+          dataType: dataTypes.scroll
+        }
+      } else {
+        categories.booksAndDocuments.items.push(...scrolls);
       }
-    } else {
-      categories.booksAndDocuments.items.push(...scrolls);
     }
   }
 
