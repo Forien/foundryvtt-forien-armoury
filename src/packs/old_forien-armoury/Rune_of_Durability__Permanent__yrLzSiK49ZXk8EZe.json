@@ -1,0 +1,70 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+  "transfer": true,
+  "name": "Rune of Durability (Permanent)",
+  "_id": "yrLzSiK49ZXk8EZe",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "<p>Weapon Engraved with this Rune gains Unbreakable Quality.</p>",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "promptItem": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Item",
+        "equipTransfer": false,
+        "avoidTest": {
+          "value": "none"
+        },
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Rune of Durability (Permanent)",
+          "trigger": "prepareOwned",
+          "script": "args.item.system.qualities.value.push({name: \"unbreakable\", value: null});",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "prepareItem",
+        "preventDuplicateEffects": false,
+        "script": "if (args.item?._id === this.item?.id) {\n  args.item.qualities.value.push({name: \"unbreakable\", value: null});\n}"
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": false
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.ApUMYhBlTxss0bdr"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": "#ff0000",
+  "_key": "!items.effects!a0HD1sx7SS4ZCw5A.yrLzSiK49ZXk8EZe"
+}

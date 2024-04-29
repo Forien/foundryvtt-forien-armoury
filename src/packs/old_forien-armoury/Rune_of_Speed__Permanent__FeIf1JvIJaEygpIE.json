@@ -1,0 +1,54 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+  "transfer": true,
+  "name": "Rune of Speed (Permanent)",
+  "_id": "FeIf1JvIJaEygpIE",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "If the wielder is not Surprised and has this weapon in hands at the start of the Combat, he gains +1d10 bonus to his combat initiative score.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": true
+      },
+      "scriptData": [
+        {
+          "label": "Rune of Speed (Permanent)",
+          "trigger": "getInitiativeFormula",
+          "script": "args.initiative += ` + 1d10`;\nlet rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});"
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "getInitiativeFormula",
+        "preventDuplicateEffects": false,
+        "script": "args.initiative += ` + 1d10`;\nlet rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});"
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": false
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.9cYvjllfcFyaAfLJ"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": "#ff0000",
+  "_key": "!items.effects!a0HD1sx7SS4ZCw5A.FeIf1JvIJaEygpIE"
+}

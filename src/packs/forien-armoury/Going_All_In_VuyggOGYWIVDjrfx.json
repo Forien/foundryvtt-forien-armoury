@@ -4,13 +4,13 @@
   "name": "Going All In",
   "_id": "VuyggOGYWIVDjrfx",
   "changes": [],
-  "disabled": false,
+  "disabled": true,
   "duration": {
     "startTime": null,
     "seconds": null,
     "combat": null,
-    "rounds": 1,
-    "turns": null,
+    "rounds": null,
+    "turns": 2,
     "startRound": null,
     "startTurn": null
   },
@@ -22,13 +22,69 @@
       "isPassive": true
     },
     "wfrp4e": {
-      "effectTrigger": "prefillDialog",
-      "effectApplication": "actor",
       "hide": false,
-      "preventDuplicateEffects": false,
-      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.goingAllIn(args, this);"
+      "applicationData": {
+        "type": "other",
+        "documentType": "Actor",
+        "equipTransfer": false,
+        "avoidTest": {
+          "value": "none"
+        },
+        "testIndependent": false,
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Going All In",
+          "trigger": "dialog",
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.goingAllIn(args, this);",
+          "options": {
+            "dialog": {
+              "activateScript": "return true"
+            }
+          }
+        },
+        {
+          "label": "Going All In (Mastery)",
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.goingAllInMastery(args, this);",
+          "trigger": "prepareItem",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        },
+        {
+          "label": "Target is Going All In",
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.goingAllIn(args, this);",
+          "trigger": "targetPrefillDialog",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "prefillDialog",
+        "preventDuplicateEffects": false,
+        "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.goingAllIn(args, this);"
+      }
     }
   },
   "tint": null,
-  "_key": "!items.effects!O987u5M0SL46gm3v.VuyggOGYWIVDjrfx"
+  "_key": "!items.effects!APBiM8PBN1I9xVHY.VuyggOGYWIVDjrfx"
 }

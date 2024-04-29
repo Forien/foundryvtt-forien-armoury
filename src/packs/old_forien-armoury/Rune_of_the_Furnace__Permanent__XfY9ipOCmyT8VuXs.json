@@ -1,0 +1,54 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
+  "transfer": true,
+  "name": "Rune of the Furnace (Permanent)",
+  "_id": "XfY9ipOCmyT8VuXs",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Character bearing an item inscribed with this Rune is immune to fire damage of any kind. Additionally, Ablaze Conditions are immediately removed after they are gained.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": true
+      },
+      "scriptData": [
+        {
+          "label": "Rune of the Furnace (Permanent)",
+          "trigger": "update",
+          "script": "let ablaze = this.actor.hasCondition(\"ablaze\");\n\nif (ablaze) {\n  let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.effect');\n\n  ablaze.delete();\n  ui.notifications?.notify(`<strong>${name}</strong>  ${effect}`);\n}"
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "update",
+        "preventDuplicateEffects": false,
+        "script": "let ablaze = this.actor.hasCondition(\"ablaze\");\n\nif (ablaze) {\n  let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.effect');\n\n  ablaze.delete();\n  ui.notifications?.notify(`<strong>${name}</strong>  ${effect}`);\n}"
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": false
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.ABXyOPDXVrfGVDv1"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!VZyMhFCFlkPZ47J8.XfY9ipOCmyT8VuXs"
+}

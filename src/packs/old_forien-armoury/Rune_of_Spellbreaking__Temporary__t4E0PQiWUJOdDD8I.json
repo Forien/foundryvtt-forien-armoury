@@ -1,0 +1,56 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of Spellbreaking (Temporary)",
+  "_id": "t4E0PQiWUJOdDD8I",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "<p>Activate this Rune to immediately end any persistent spell within 12 yards. Additionally, if Runesmith is holding this item, he can instead attempt to Dispel any incoming spell and gains +20 modifier to that attempt. Activating this rune takes an Action.</p>",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "reduceQuantity": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Item",
+        "equipTransfer": false,
+        "avoidTest": {
+          "value": "none"
+        },
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Rune of Spellbreaking (Temporary)",
+          "trigger": "manual",
+          "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});"
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "invoke",
+        "preventDuplicateEffects": false,
+        "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});"
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.XgocVKbsL3tTQp97"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!VZyMhFCFlkPZ47J8.t4E0PQiWUJOdDD8I"
+}

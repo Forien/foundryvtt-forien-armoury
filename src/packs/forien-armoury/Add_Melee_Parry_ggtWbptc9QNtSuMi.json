@@ -1,0 +1,69 @@
+{
+  "icon": "modules/forien-armoury/icons/talents/style_defensive.webp",
+  "transfer": true,
+  "name": "Add Melee Parry",
+  "_id": "ggtWbptc9QNtSuMi",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "times-up": {
+      "isPassive": true
+    },
+    "wfrp4e": {
+      "hide": true,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": false,
+        "avoidTest": {
+          "value": "none"
+        },
+        "testIndependent": false,
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Add Melee Parry (Future)",
+          "trigger": "update",
+          "script": "await game.modules.get(\"forien-armoury\")?.api.helpers.styles.addMeleeParryFuture(args, this);"
+        },
+        {
+          "label": "Add Melee Parry (Current)",
+          "script": "await game.modules.get(\"forien-armoury\")?.api.helpers.styles.addMeleeParryCurrent(args, this);",
+          "trigger": "immediate",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "update",
+        "preventDuplicateEffects": false,
+        "script": "await game.modules.get(\"forien-armoury\")?.api.helpers.styles.addMeleeParryFuture(args, this);"
+      }
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!dV7lAlVYKiHcCXBT.ggtWbptc9QNtSuMi"
+}

@@ -60,23 +60,19 @@
     }
   },
   "effects": [
-    "2yJmMuInI1M4GLAu",
-    "oVov3CH6XUrXpjtS",
-    "zukSJOlAJDW13F2c",
-    "Ch4a85kEBNmLgBP6",
-    "46bUOQI2kouAYPOq",
-    "mPh0Rs0DGLDw0brH"
+    "E5ijDLz2sc6n65Y1",
+    "UT5zwRpeN5kB4bYe"
   ],
   "flags": {
     "core": {}
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
     "createdTime": 1688413119645,
-    "modifiedTime": 1688942857203,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "modifiedTime": 1705686994995,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
   },
   "folder": "3OEI9PiGaa4rGQHy",
   "_id": "BUv7dGYQSklq6UXj",

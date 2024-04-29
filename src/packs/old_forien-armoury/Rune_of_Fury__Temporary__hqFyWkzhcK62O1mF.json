@@ -1,0 +1,86 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of Fury (Temporary)",
+  "_id": "hqFyWkzhcK62O1mF",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "<p>Wielder of a weapon engraved with this Rune gains a Furious Assault talent. Lasts 1 minute.</p>",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Item",
+        "equipTransfer": false,
+        "avoidTest": {
+          "value": "none"
+        },
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Rune of Fury (Temporary)",
+          "trigger": "calculateOpposedDamage",
+          "script": "\n  if (args.opposedTest.result.winner === \"attacker\") {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.effect');\n    let text = `<strong>${rune}:</strong> ${effect}`;\n    args.opposedTest.result.other.push(text);\n  }\n\n",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        },
+        {
+          "label": "Activate Rune of Fury",
+          "string": "",
+          "trigger": "manual",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          },
+          "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "calculateOpposedDamage",
+        "preventDuplicateEffects": false,
+        "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.result.winner === \"attacker\") {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.effect');\n    let text = `<strong>${rune}:</strong> ${effect}`;\n    args.opposedTest.result.other.push(text);\n  }\n}\n"
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.G9l7OAE88croafaV"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!a0HD1sx7SS4ZCw5A.hqFyWkzhcK62O1mF"
+}

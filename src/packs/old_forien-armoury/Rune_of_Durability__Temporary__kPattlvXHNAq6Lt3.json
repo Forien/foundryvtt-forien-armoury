@@ -1,0 +1,87 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of Durability (Temporary)",
+  "_id": "kPattlvXHNAq6Lt3",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "<p>Weapon Engraved with this Rune gains Unbreakable Quality. Lasts 1 minute</p>",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "promptItem": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Item",
+        "equipTransfer": false,
+        "avoidTest": {
+          "value": "none"
+        },
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Rune of Durability (Temporary)",
+          "trigger": "prepareOwned",
+          "script": "args.item.system.qualities.value.push({name: \"unbreakable\", value: null});",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        },
+        {
+          "label": "Activate Rune of Durability",
+          "string": "",
+          "trigger": "manual",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          },
+          "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "prepareItem",
+        "preventDuplicateEffects": false,
+        "script": "if (args.item?._id === this.item?.id) {\n  args.item.qualities.value.push({name: \"unbreakable\", value: null});\n}"
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.mqkO6Bpu7vsX9S3k"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": "#ff0000",
+  "_key": "!items.effects!a0HD1sx7SS4ZCw5A.kPattlvXHNAq6Lt3"
+}

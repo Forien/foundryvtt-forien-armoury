@@ -1,0 +1,70 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of Page (Temporary)",
+  "_id": "XM6R0dCmOz74iesB",
+  "changes": [
+    {
+      "key": "system.details.move.value",
+      "mode": 2,
+      "value": "1",
+      "priority": null
+    }
+  ],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Wielder of an accessory Engraved with this Rune gains +1 Movement. Lasts 1 minute.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "reduceQuantity": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": true
+      },
+      "scriptData": [
+        {
+          "label": "Activate Rune of Page",
+          "trigger": "manual",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          },
+          "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nawait this.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "",
+        "preventDuplicateEffects": false,
+        "script": ""
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.jwtzbHAmtHpQJ6fL"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!VZyMhFCFlkPZ47J8.XM6R0dCmOz74iesB"
+}

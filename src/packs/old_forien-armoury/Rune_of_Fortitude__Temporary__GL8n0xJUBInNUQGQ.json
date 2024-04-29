@@ -1,0 +1,75 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of Fortitude (Temporary)",
+  "_id": "GL8n0xJUBInNUQGQ",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "<p>Wearer of an Armour Engraved with this Rune gains +4 Wounds.</p>",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": true,
+        "avoidTest": {
+          "value": "none"
+        },
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Rune of Fortitude (Temporary)",
+          "trigger": "woundCalc",
+          "script": "args.wounds += 4"
+        },
+        {
+          "label": "Activate Rune of Fortitude",
+          "string": "",
+          "trigger": "manual",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          },
+          "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "woundCalc",
+        "preventDuplicateEffects": false,
+        "script": "args.wounds += 4"
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.JV4MzBoyCXZBeKx5.ActiveEffect.C25fFcCoWt7QygAk"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!JV4MzBoyCXZBeKx5.GL8n0xJUBInNUQGQ"
+}

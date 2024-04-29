@@ -60,17 +60,17 @@
     }
   },
   "effects": [
-    "vdHxUWCzrQwwkl5F",
-    "ABXyOPDXVrfGVDv1",
-    "z14tQJTUvGkWLp9C",
-    "4FNqO1L1hfgnhisU",
-    "7zY7AKHRLaTAGyNE",
-    "XgocVKbsL3tTQp97",
-    "vyrlzGAdppxyjydw",
-    "5pzeDFMgBWK5FMbs",
-    "M5BSkkepbE4SCrzk",
-    "i0GTHQefhwTQ2LEL",
-    "jwtzbHAmtHpQJ6fL"
+    "PGqEL1cQF5dl1Kbt",
+    "XfY9ipOCmyT8VuXs",
+    "Q4qXVW6NyTAmLvtX",
+    "8AnVxYN0k0Uk9thi",
+    "Nf76EDZmdi8EDlrf",
+    "t4E0PQiWUJOdDD8I",
+    "8ncYF3091SCrrrJz",
+    "xdklDXVTgiTm1RSc",
+    "a1onZaHqnDpRLc4a",
+    "nE9oKHSB8JwHessd",
+    "XM6R0dCmOz74iesB"
   ],
   "folder": "3OEI9PiGaa4rGQHy",
   "flags": {
@@ -78,11 +78,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
     "createdTime": 1688413119645,
-    "modifiedTime": 1689088509242,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "modifiedTime": 1706287163882,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
   },
   "_id": "VZyMhFCFlkPZ47J8",
   "sort": 50000,

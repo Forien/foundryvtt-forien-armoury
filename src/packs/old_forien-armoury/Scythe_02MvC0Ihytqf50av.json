@@ -1,0 +1,150 @@
+{
+  "folder": "UrA89QPP0urkYvZk",
+  "name": "Scythe",
+  "type": "weapon",
+  "_id": "02MvC0Ihytqf50av",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Specially made polearm that resembles its civilian counterpart, but is specifically made for combat.</p><p>Most commonly seen used by Morr's @UUID[Compendium.wfrp4e-core.journals.JournalEntry.wczCPcuHT4VQDLpL.JournalEntryPage.iYVpqJ6bz8fokdmf]{warrior priests}, @UUID[Compendium.wfrp4e-wom.journals.JournalEntry.hFQtvGpxh0D8Xfcl.JournalEntryPage.i7trRLZo2Pp05UnQ]{spiriters} and necromancers.</p><p>It's a long shaft with a perpendicularly mounted curved blade. Unlike farmer's scythe, the blade is not angled and there is no additional handle on the shaft, as this weapon is designed to cut enemies' heads, not grass.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 3
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 2,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": null,
+      "shield": null
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "SB+4"
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": "long"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": true
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": ""
+    },
+    "currentAmmo": {
+      "value": ""
+    },
+    "consumesAmmo": {
+      "value": false
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "polearm"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "damaging",
+          "value": null
+        },
+        {
+          "name": "slash",
+          "value": 2
+        }
+      ]
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": [
+        {
+          "name": "unbalanced",
+          "value": null
+        }
+      ]
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "equipped": false,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rTgnwDbJCJYDenyf": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1710405788512,
+    "modifiedTime": 1710427930790,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "_key": "!items!02MvC0Ihytqf50av"
+}

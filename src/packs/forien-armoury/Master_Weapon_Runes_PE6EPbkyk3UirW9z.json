@@ -84,8 +84,8 @@
       "value": ""
     },
     "currentAmmo": {
-      "type": "Number",
-      "value": 0
+      "value": 0,
+      "type": "Number"
     },
     "consumesAmmo": {
       "value": true
@@ -119,18 +119,18 @@
     }
   },
   "effects": [
-    "ZM1KHe4lw53HRkjS",
-    "8ss06CRTNbRyufRP",
-    "4tJdRSQGa8WTbn6Z",
-    "Q2KUdPD85kOKK4Y9",
-    "GIzBYIlrTnG7nBa0",
-    "6gyPUG9tkYoTb2T5",
-    "rm0LntQUOAOqXkkP",
-    "asEVG8jALVLaG0QT",
-    "CnyQtehyIA6J9l02",
-    "pj1v84x5KkWBA5xV",
-    "nqwanAkGJnddHg8X",
-    "p3qLFQxL85HhqeC8"
+    "lUbwP70wDI5Th7bP",
+    "HZ3VSvyhJl2agkXl",
+    "M8I0wBGhZeJ0Wcvn",
+    "CSUOejTRe8PkIrfM",
+    "5yxJtpmUVIulDZii",
+    "jzLtBtcxxelz9f0S",
+    "cXR49Z9BWlC5nxt5",
+    "DTHpg1fqn2nkELA5",
+    "vu7lLIvI7wWd4eDB",
+    "k69UJgbOOQONyHyX",
+    "EqLoSwFFzlWbrQFD",
+    "iuF9Ql6VWt9LU1pH"
   ],
   "sort": 400000,
   "ownership": {
@@ -140,11 +140,11 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.6.0",
-    "coreVersion": "11.306",
+    "systemVersion": "7.1.2",
+    "coreVersion": "11.315",
     "createdTime": 1688747984973,
-    "modifiedTime": 1690869795098,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "modifiedTime": 1714213697262,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
   },
   "_key": "!items!PE6EPbkyk3UirW9z"
 }

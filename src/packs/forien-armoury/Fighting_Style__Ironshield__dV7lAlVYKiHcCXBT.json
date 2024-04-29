@@ -1,0 +1,68 @@
+{
+  "name": "Fighting Style (Ironshield)",
+  "type": "talent",
+  "img": "modules/forien-armoury/icons/talents/style_defensive.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Disciples of the Ironshield Ward are stalwart defenders, skilled in the art of parrying, riposte, and counterattacks. They embody the unyielding strength of the empire's defenses, turning aside blows and repelling adversaries with disciplined precision.</p><ul><li><p>Replace @UUID[Compendium.wfrp4e-core.items.Item.rOPmyLWa37e7s9v6]{Melee (Basic)} with @UUID[Compendium.wfrp4e-core.items.Item.bJBesrdCaDqaXbQg]{Melee (Parry)} in your current Career, as well as every Career you enter.</p></li></ul><p>You also receive following perks, depending on Advances in Melee Skill used with currently equipped weapon:</p><ul><li><p><strong>5+</strong> – <em>Ironshield Ward</em> — Treat every melee weapon you wield as if it were Defensive</p></li><li><p><strong>10+</strong> – <em>Brace!</em> — If you haven't moved this turn, you may perform <strong>Brace</strong> Action, receiving +20 modifier to all your defensive Weapon Tests for as long as you are Bracing. While under effect of Brace, you can only move using your Walk speed and you cannot perform Actions (Free Actions are up to GM). Brace ends the moment your character initiates an Attack.</p><ul><li><p>If using Group Advantage rules, you gain Advantage for successfully defending during Brace</p></li></ul></li><li><p><strong>15+</strong> – <em>Ironshield Riposte</em> — Whenever you are attacked in melee, you may spend 2 Advantage to perform a counter-attack (immediately attack your attacker). This Attack does not end Brace.</p></li></ul>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Melee Tests to defend against enemy attacks"
+    }
+  },
+  "effects": [
+    "ggtWbptc9QNtSuMi",
+    "uvQPByonJ8u5osiL",
+    "mMc6i3cW4qZEKugK",
+    "ZTvdWXgPsTVE1HZ0",
+    "QQc5Uz0Z9OW643GB"
+  ],
+  "folder": "c6bIK3vGnIqNXscz",
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3,
+    "rTgnwDbJCJYDenyf": 3
+  },
+  "flags": {
+    "core": {},
+    "forien-armoury": {
+      "fighting-style": true
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.1.2",
+    "coreVersion": "11.315",
+    "createdTime": 1702057628149,
+    "modifiedTime": 1714322706187,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "_id": "dV7lAlVYKiHcCXBT",
+  "sort": 300000,
+  "_key": "!items!dV7lAlVYKiHcCXBT"
+}

@@ -1,0 +1,65 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of Fate (Temporary)",
+  "_id": "PGqEL1cQF5dl1Kbt",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Negates the first attack that would reduce Wounds to 0.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": true
+      },
+      "scriptData": [
+        {
+          "label": "Rune of Fate (Temporary)",
+          "trigger": "takeDamage",
+          "script": "let wounds = args.actor.status.wounds.value;\nlet woundLoss = args.totalWoundLoss;\nlet woundsAfter = wounds - woundLoss;\n\nif (woundsAfter < 0) {\n  args.totalWoundLoss = 0;\n  let msg = `<strong>${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.name')}:</strong> ${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.effect')}`\n  args.extraMessages.push(msg);\n\n  this.effect.update({disabled: true});\n}",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "preTakeDamage",
+        "preventDuplicateEffects": false,
+        "script": "let wounds = args.actor.status.wounds.value;\nlet woundLoss = args.totalWoundLoss;\nlet woundsAfter= wounds - woundLoss;\n\nif (woundsAfter < 0) {\n  args.totalWoundLoss = 0;\n  let msg = `<strong>${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.name')}:</strong> ${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.effect')}`\n  args.extraMessages.push(msg);\n\n  this.effect.update({disabled: true});\n}"
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.vdHxUWCzrQwwkl5F"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!VZyMhFCFlkPZ47J8.PGqEL1cQF5dl1Kbt"
+}

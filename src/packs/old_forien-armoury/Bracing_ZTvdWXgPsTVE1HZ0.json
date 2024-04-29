@@ -26,7 +26,15 @@
       "effectApplication": "actor",
       "hide": false,
       "preventDuplicateEffects": false,
-      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.bracing(args, this);"
+      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.bracing(args, this);",
+      "applicationData": {
+        "type": "other",
+        "avoidTest": {
+          "value": "none"
+        },
+        "testIndependent": false,
+        "prompt": false
+      }
     }
   },
   "tint": null,

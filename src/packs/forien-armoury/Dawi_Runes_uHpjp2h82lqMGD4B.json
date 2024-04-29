@@ -36,20 +36,22 @@
       "value": "Runecraft"
     }
   },
-  "effects": [],
+  "effects": [
+    "tkJZRbEgU57MtfCa"
+  ],
   "flags": {
     "core": {}
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
+    "systemVersion": "7.1.2",
     "coreVersion": "11.315",
     "createdTime": 1688388211259,
-    "modifiedTime": 1702229677710,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "modifiedTime": 1714322706187,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
   },
   "_id": "uHpjp2h82lqMGD4B",
-  "sort": 1100000,
+  "sort": 1200000,
   "ownership": {
     "default": 0,
     "aDepqlKkeOa13DWo": 3

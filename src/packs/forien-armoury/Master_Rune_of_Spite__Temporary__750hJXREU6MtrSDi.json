@@ -1,0 +1,84 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+  "transfer": true,
+  "name": "Master Rune of Spite (Temporary)",
+  "_id": "750hJXREU6MtrSDi",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "<p>Talisman Engraved with this Rune reduced damage from incoming attacks by 2. Works even against attacks that normally ignore Armour. Lasts 1 minute.</p>",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "reduceQuantity": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": true,
+        "avoidTest": {
+          "value": "none"
+        },
+        "testIndependent": false,
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Master Rune of Spite (Temporary)",
+          "trigger": "computeTakeDamageModifiers",
+          "script": "let name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSpite.name');\n\nargs.modifiers.other.push({key: \"master-rune-of-spite\", label: name, value: -2})",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        },
+        {
+          "label": "Activate Master Rune of Spite",
+          "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+          "trigger": "manual",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "preTakeDamage",
+        "preventDuplicateEffects": false,
+        "script": "let name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSpite.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSpite.effect');\n\nargs.totalWoundLoss-= 2;\nargs.extraMessages.push(`<strong>${name}:</strong> ${effect}.`);"
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.BUv7dGYQSklq6UXj.ActiveEffect.mPh0Rs0DGLDw0brH"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!BUv7dGYQSklq6UXj.750hJXREU6MtrSDi"
+}

@@ -1,27 +1,17 @@
 # Changelog
 
-## v1.X.X
+## v2.X.X
 
-### v1.5.0 TODO
+### v2.0.0
 * Added Runebound species with Reiklander and Orphaned subspecies
 * Updated code to be compatible with wfrp4e v7.1.0, namely changed `actor.itemCategories` to `actor.itemTypes`
 * Updated all effects to make them work properly with new Active Effect rework
+* Created `Magic Scrolls` type for Items.
+  * This is new item type in the system, which allows casting Spells from Scrolls, without need to add spell itself to an Actor
+* New Weapon Rune
+  * Rune of Fracture. Adds Impact, but damages weapon by 2 per attack.
 
-
-* @todo revisit 
-  * Master Rune of Breaking
-  * Rune of Grudges
-  * Master Rune of Dismay
-* zapytać Moo o:
-  * Manual Invoke on Armor (Temporary Rune of Iron) and Clothing/Accessories
-  * Target application
-  * Immediate (Rune of Luck) -> Item.create(item.toObject(), {fromEffect : this.effect.id, parent : this.actor})
-    * Czy można zrobić, żeby item znikał jak effect przestaje być applied (unequip)
-    * Czy można zrobić, żeby Immediate odpalało się za każdym razem jak item z nim jest wyposażany
-    * Opcjonalnie nowe triggery "Equipped"/"Unequipped"
-* make new runes
-  * Weapon rune. Prefill Dialog Add Impact, but damage weapon by 2. 
-
+## v1.X.X
 
 ### v1.4.1
 * Fixed harmless console error that appeared when creating new Item on Actor that isn't a Disease

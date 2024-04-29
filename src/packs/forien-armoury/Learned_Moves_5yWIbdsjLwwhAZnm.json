@@ -1,0 +1,73 @@
+{
+  "name": "Learned Moves",
+  "icon": "modules/forien-armoury/icons/talents/style_survival_master.webp",
+  "_id": "5yWIbdsjLwwhAZnm",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "transfer": true,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "applicationData": {
+        "type": "other",
+        "documentType": "Actor",
+        "avoidTest": {
+          "value": "none",
+          "opposed": false,
+          "prevention": true,
+          "reversed": false,
+          "manual": false,
+          "script": "",
+          "difficulty": "",
+          "characteristic": "",
+          "skill": ""
+        },
+        "keep": false,
+        "radius": null,
+        "areaType": "sustained",
+        "renderAura": true,
+        "targetedAura": false,
+        "testIndependent": false,
+        "preApplyScript": "",
+        "equipTransfer": false,
+        "enableConditionScript": "",
+        "filter": "",
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Learned Moves",
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.learnedMoves(args, this);",
+          "trigger": "dialog",
+          "options": {
+            "dialog": {
+              "hideScript": "return !game.modules.get(\"forien-armoury\")?.api.helpers.styles.canUseLearnedMoves(args, this);",
+              "activateScript": "return true;",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        }
+      ]
+    },
+    "core": {
+      "sourceId": "Actor.OEKABPctmJnUDtfA.Item.7TAvxBNl3pup6Liu.ActiveEffect.WSWQdKGuySfWO36g"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!MCQGW6z3fWNdR5hO.5yWIbdsjLwwhAZnm"
+}

@@ -1,0 +1,73 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+  "transfer": true,
+  "name": "Master Rune of Snorri Spangelhelm (Temporary)",
+  "_id": "DTHpg1fqn2nkELA5",
+  "changes": [
+    {
+      "key": "system.characteristics.ws.modifier",
+      "mode": 2,
+      "value": "30",
+      "priority": null
+    }
+  ],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "Wielder of a Weapon Engraved with this Rune gains +30 Weapon Skill. Lasts 1 minute",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "promptItem": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": true
+      },
+      "scriptData": [
+        {
+          "label": "Activate Master Rune of Snorri Spangelhelm",
+          "trigger": "manual",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          },
+          "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "",
+        "preventDuplicateEffects": false,
+        "script": ""
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.pj1v84x5KkWBA5xV"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!PE6EPbkyk3UirW9z.DTHpg1fqn2nkELA5"
+}

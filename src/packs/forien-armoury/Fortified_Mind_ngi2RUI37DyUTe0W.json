@@ -37,8 +37,10 @@
       "value": "Any tests to resist mind probing and reading"
     }
   },
-  "effects": [],
-  "sort": 0,
+  "effects": [
+    "YAlTF1hzDotOfnDo"
+  ],
+  "sort": 1050000,
   "ownership": {
     "default": 0,
     "ZJyAmf2sKocHG1ud": 3
@@ -46,11 +48,11 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
+    "systemVersion": "7.1.2",
     "coreVersion": "11.315",
     "createdTime": 1702479664625,
-    "modifiedTime": 1702482658965,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "modifiedTime": 1714322749142,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
   },
   "_key": "!items!ngi2RUI37DyUTe0W"
 }
