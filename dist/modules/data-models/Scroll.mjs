@@ -86,8 +86,13 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
     const preCreateData = await super.preCreateData(data, options, user);
 
     if (!data.img || data.img === "icons/svg/item-bag.svg" || data.img === "systems/wfrp4e/icons/blank.png") {
-      const number = data.name.match(/(\(\d+\))/i)[1];
+      const match = data.name.match(/(\(\d+\))/i);
       preCreateData.img = "icons/sundries/scrolls/scroll-bound-green.webp";
+
+      if (!match)
+        return preCreateData;
+
+      const number = match[1];
       preCreateData.name = game.i18n.localize("Forien.Armoury.Scrolls.NewScrollDefaultName") + ` ${number}`;
     }
 

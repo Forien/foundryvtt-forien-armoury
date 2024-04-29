@@ -1,5 +1,6 @@
 import ScrollTest from "../tests/ScrollTest.mjs";
 import Utility from "../utility/Utility.mjs";
+import {debug} from "../utility/Debug.mjs";
 
 
 export default class ScrollDialog extends CastDialog {

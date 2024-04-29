@@ -56,6 +56,29 @@ export default class ScrollTest extends WomCastTest {
     return true;
   }
 
+  get scroll() {
+    return this.data.preData.scroll;
+  }
+
+  get damageEffects() {
+    return this.item.damageEffects.map(this.#mapEffects.bind(this));
+  }
+
+  get targetEffects() {
+    return this.item.targetEffects.map(this.#mapEffects.bind(this));
+  }
+
+  get areaEffects() {
+    return this.item.areaEffects.map(this.#mapEffects.bind(this));
+  }
+
+  #mapEffects(e) {
+    let effect = foundry.utils.duplicate(e);
+    effect.uuid = `${this.scroll.system.spellUuid}.${effect.documentName}.${effect._id}`;
+
+    return effect;
+  }
+
   /**
    * @inheritDoc
    */

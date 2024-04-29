@@ -227,6 +227,10 @@
         }
       },
 
+      "Skills": {
+        "Runecraft": "Runecraft"
+      },
+
       "CheckCareer": {
         "CurrentCareer": "Your current career is <strong>{currentCareer}</strong>.",
         "CurrentCareerLevel": "It is <strong>Level {careerLevel}</strong> career, so required amount of advances is <strong>{requiredAdvances}</strong>.",
@@ -255,6 +259,7 @@
         "SelectTalent": "Select Talent to add",
         "AddTalent": "Add Talent",
         "NotEnoughAdvances": "You do not have enough advances to run the \"{effect}\" effect! You have {advances}, but the effect requires {required}.",
+        "NotEnoughAdvantage": "You do not have enough Advantage to spend on {name} action. You have {have} and need {need}.",
 
         "Steelstorm": {
           "Assault": {
@@ -263,15 +268,17 @@
           },
           "AllIn": {
             "Name": "Going All In",
-            "Description": "{character} goes <b>All In</b>, gaining +20 modifier to all attacks until the start of their next turn. However, during this time, all attackes aimed at this character will be <b>Unopposed</b>.",
-            "Mastery": "Because of Mastery, non-Damaging weapons become Damaging, while Damaging weapons become Impact instead"
+            "Description": "{character} goes <b>All In</b>, gaining +20 modifier to all attacks until the start of their next turn. However, during this time, all attacks aimed at this character will be <b>Unopposed</b>.",
+            "Mastery": "Because of Mastery, non-Damaging weapons become Damaging, while Damaging weapons become Impact instead",
+            "Notice": "Attacks against {target} are unopposed."
           }
         },
 
         "Ironshield": {
           "Bracing": {
             "Name": "Bracing",
-            "Description": "{character} is <b>Bracing</b> against incoming attacks, gaining +20 modifier to all defensive Weapon Tests. <br/>While Bracing, character can only move using their Walk speed and they are unable to perform any Actions (Free Actions are up to GM). <br/>Bracing ends the moment character initiates an Attack."
+            "Description": "{character} is <b>Bracing</b> against incoming attacks, gaining +20 modifier to all defensive Weapon Tests. <br/>While Bracing, character can only move using their Walk speed and they are unable to perform any Actions (Free Actions are up to GM). <br/>Bracing ends the moment character initiates an Attack.",
+            "Reminder": "{character} is <b>Bracing</b> against incoming attacks and can only Move using Walk speed and cannot perform Actions."
           },
           "Riposte": {
             "Name": "Ironshield Riposte",
