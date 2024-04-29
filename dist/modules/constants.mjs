@@ -55,7 +55,8 @@ const settings = {
   },
   combatFatigue: {
     enable: 'combatFatigue.enable',
-    enableNPC: 'combatFatigue.enableNPC'
+    enableNPC: 'combatFatigue.enableNPC',
+    enableCorePassOut: 'combatFatigue.enableCorePassOut'
   },
   initialized: 'module.initialized',
   integrations: {

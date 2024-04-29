@@ -136,6 +136,16 @@ function registerSettings() {
     type: Boolean
   });
 
+  // Enable Core Pass Out rules
+  game.settings.register(constants.moduleId, settings.combatFatigue.enableCorePassOut, {
+    name: 'Forien.Armoury.Settings.CombatFatigue.EnableCorePassOut',
+    hint: 'Forien.Armoury.Settings.CombatFatigue.EnableCorePassOutHint',
+    scope: 'world',
+    config: false,
+    default: false,
+    type: Boolean
+  });
+
   // Add enable/disable setting for arrow reclamation feature
   game.settings.register(constants.moduleId, settings.arrowReclamation.enable, {
     name: 'Forien.Armoury.Settings.ArrowReclamation.Enable',

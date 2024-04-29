@@ -10,12 +10,13 @@
   * This is new item type in the system, which allows casting Spells from Scrolls, without need to add spell itself to an Actor
 * New Weapon Rune
   * Rune of Fracture. Adds Impact, but damages weapon by 2 per attack.
+* Added Combat Fatigue rounds counter to Combat Tracker (thanks to silent_mark) 
+* Added setting to allow automatic falling unconscious of characters from 0 wounds in CRB ruleset (thanks to silent_mark) 
 
 @todo
 - check symptom effects
 - add runebound rolltables to compendium
 - make makro for generating random scroll
-- merge and test PR from silent_mark
 
 ## v1.X.X
 

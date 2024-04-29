@@ -12,40 +12,50 @@ export default class CombatFatigue extends ForienBaseModule {
   }
 
   #setupEndTurnScript() {
-    let that = this;
-    let f = async function(combat, combatant) {
-      await that.#processCombatTurn(combat, combatant);
-    }
-    game.wfrp4e.combat.scripts.endTurn.push(f);
+    game.wfrp4e.combat.scripts.endTurn.push(this.#processCombatTurn.bind(this));
   }
 
-  async #renderRoundsBeforeTest(app, html, options) {
+  /**
+   * Renders inputs in Combat Tracker that allow tracking and editing Rounds Before Test
+   * and Rounds Before Pass Out.
+   *
+   * @param {CombatTracker} app
+   * @param {jQuery} html
+   * @param {{}} _options
+   *
+   * @returns {Promise<void>}
+   */
+  async #renderRoundsBeforeTest(app, html, _options) {
     if (Utility.getSetting(settings.combatFatigue.enable) === false) return;
 
     if (game.combat) {
       const combatants = game.combat.combatants.filter(combatant => combatant.actor.ownership[game.userId] > CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER);
 
-      combatants.forEach(c => {
-        let $controls = html.find(`.combatant[data-combatant-id="${c.id}"] .token-effects`);
+      for (let combatant of combatants) {
+        let $controls = html.find(`.combatant[data-combatant-id="${combatant.id}"] .token-effects`);
         const control = `<a class="combatant-control" role="textbox" data-control="combatFatigue">
-                          <input data-tooltip="${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueToolTip")}" type="text" name="flags.forien-armoury.roundsBeforeTest" value="${this.#getRoundsBeforeTest(c, c.actor)}">
+                          <input data-tooltip="${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueToolTip")}" type="text" name="flags.forien-armoury.roundsBeforeTest" value="${this.#getRoundsBeforeTest(combatant, combatant.actor)}">
                         </a>`;
         $controls.before(control);
-        $controls.prev().children('input').change(c.id, function (event) { 
-          let target = game.combat.combatants.find(x=>x.id == event.data);
+        $controls.prev().children('input').change(combatant.id, function (event) {
+          let target = game.combat.combatants.find(x => x.id === event.data);
           target.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, this.value);
         });
-        if (c.actor.status.wounds.value == 0) {
+
+        if (Utility.getSetting(settings.combatFatigue.enableCorePassOut) === false)
+          continue;
+
+        if (combatant.actor.status.wounds.value === 0) {
           const passOutControl = `<a class="combatant-control" role="textbox" data-control="combatPassOut">
-                                  <input data-tooltip="${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatPassOutToollTip")}" type="text" name="flags.forien-armoury.roundsBeforePassOut" value="${this.#getRoundsBeforePassOut(c, c.actor)}">
+                                  <input data-tooltip="${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatPassOutToollTip")}" type="text" name="flags.forien-armoury.roundsBeforePassOut" value="${this.#getRoundsBeforePassOut(combatant, combatant.actor)}">
                                   </a>`
           $controls.before(passOutControl);
-          $controls.prev().children('input').change(c.id, function (event) { 
-            let target = game.combat.combatants.find(x=>x.id == event.data);
+          $controls.prev().children('input').change(combatant.id, function (event) {
+            let target = game.combat.combatants.find(x => x.id === event.data);
             target.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforePassOut, this.value);
           });
         }
-      });
+      }
     }
   }
 
@@ -53,9 +63,7 @@ export default class CombatFatigue extends ForienBaseModule {
    * Processes Combat's turn in order to apply Combat Fatigue rules, if enabled.
    *
    * @param {Combat} combat
-   * @param {{}} change
-   * @param {{}} _options
-   * @param {string} _userId
+   * @param {Combatant} previousCombatant
    *
    * @return {Promise<void>}
    */
@@ -65,6 +73,7 @@ export default class CombatFatigue extends ForienBaseModule {
     const actor = previousCombatant?.actor;
 
     if (!actor) return;
+
     if (!actor.isOwner)
       return debug('[CombatFatigue] You are not an Owner of previous combatant', {previousCombatant, actor});
 
@@ -91,7 +100,7 @@ export default class CombatFatigue extends ForienBaseModule {
     let roundsBeforeTest = this.#getRoundsBeforeTest(previousCombatant, actor);
     roundsBeforeTest--;
 
-    debug('[CombatFatigue] Combat Fatigue status', previousCombatant, actor, roundsBeforeTest);
+    debug('[CombatFatigue] Combat Fatigue status', {previousCombatant, actor, roundsBeforeTest});
 
     if (roundsBeforeTest <= 0) {
       await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, 0)
@@ -111,10 +120,18 @@ export default class CombatFatigue extends ForienBaseModule {
     await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, roundsBeforeTest)
   }
 
+  /**
+   * Processes Passing Out rule from CRB for specified Combatant
+   *
+   * @param {Combatant} previousCombatant
+   *
+   * @returns {Promise<void>}
+   */
   async #processCombatPassOut(previousCombatant) {
-    /** @type {ActorWfrp4e} */
+    if (Utility.getSetting(settings.combatFatigue.enableCorePassOut) === false) return;
+      /** @type {ActorWfrp4e} */
     const actor = previousCombatant.actor;
-    if (actor.status.wounds.value != 0) return;
+    if (actor.status.wounds.value !== 0) return;
 
     let roundsBeforePassOut = this.#getRoundsBeforePassOut(previousCombatant, actor);
     roundsBeforePassOut--;
@@ -171,6 +188,16 @@ export default class CombatFatigue extends ForienBaseModule {
     return roundsBeforeTest;
   }
 
+  /**
+   * Returns the number of Rounds before the Actor falls unconscious.
+   *
+   * Number of Rounds is stored in Combatant's flag, if it's not present, the Toughness Bonus is returned.
+   *
+   * @param {Combatant} currentCombatant
+   * @param {ActorWfrp4e} actor
+   *
+   * @returns {number}
+   */
   #getRoundsBeforePassOut(currentCombatant, actor) {
     let roundsBeforePassOut = currentCombatant.getFlag(constants.moduleId, flags.combatFatigue.roundsBeforePassOut) ?? null;
     if (roundsBeforePassOut === null)

@@ -154,7 +154,8 @@ export default class SettingsApp extends FormApplication {
         enable: {
           when: settings.combatFatigue.enable,
           settings: [
-            settings.combatFatigue.enableNPC
+            settings.combatFatigue.enableNPC,
+            settings.combatFatigue.enableCorePassOut
           ]
         }
       },
