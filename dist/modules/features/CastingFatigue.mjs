@@ -336,6 +336,7 @@ export default class CastingFatigue extends ForienBaseModule {
 
     for (let actor of game.actors.contents) {
       if (!actor.isOwner) continue;
+      if (!(actor.system instanceof StandardActorModel)) continue;
       this.#registerAutoRegenListener(actor);
     }
   }
