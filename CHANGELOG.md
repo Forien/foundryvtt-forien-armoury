@@ -11,6 +11,12 @@
 * New Weapon Rune
   * Rune of Fracture. Adds Impact, but damages weapon by 2 per attack.
 
+@todo
+- check symptom effects
+- add runebound rolltables to compendium
+- make makro for generating random scroll
+- merge and test PR from silent_mark
+
 ## v1.X.X
 
 ### v1.4.1
