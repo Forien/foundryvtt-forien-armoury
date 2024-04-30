@@ -51,7 +51,17 @@ const settings = {
     enableBolts: 'arrowReclamation.EnableBolts',
     enableBullets: 'arrowReclamation.EnableBullets',
     rule: 'arrowReclamation.Rule',
-    percentage: 'arrowReclamation.Percentage'
+    percentage: 'arrowReclamation.Percentage',
+    choices: {
+      default: 'default',
+      success: 'success',
+      noCrit: 'noCrit',
+      successNoCrit: 'successNoCrit',
+      failure: 'failure',
+      failureNoCrit: 'failureNoCrit',
+      percentage: 'percentage',
+      percentageNoCrit: 'percentageNoCrit'
+    }
   },
   combatFatigue: {
     enable: 'combatFatigue.enable',
@@ -104,10 +114,43 @@ const settings = {
 }
 
 const defaults = {
+  runes: {
+    enableDamage: false
+  },
+  diseases: {
+    autoProgress: false
+  },
+  magicalEndurance: {
+    enabled: false,
+    costOfChanneling: 1,
+    negativeMEPerStep: 5,
+    useBaseCN: true,
+    maxME: settings.magicalEndurance.maxME_TBtimesWPB,
+    autoRegen: false
+  },
+  combatFatigue: {
+    enable: false,
+    enableNPC: true,
+    enableCorePassOut: false,
+  },
+  arrowReclamation: {
+    enable: false,
+    enableArrows: true,
+    enableBolts: false,
+    enableBullets: true,
+    rule: settings.arrowReclamation.choices.default,
+    percentage: 50
+  },
   scrolls: {
     allowOvercasting: settings.scrolls.allowOvercastingMagick,
     difficulty: 'hard',
-    difficultyMagick: 'challenging'
+    difficultyMagick: 'challenging',
+    ownCategory: true,
+    magicalEndurance: 0,
+    updateName: settings.scrolls.ask,
+    replaceDescription: true,
+    defaultEncumbrance: 0.05,
+    defaultAvailability: "exotic",
   }
 }
 
