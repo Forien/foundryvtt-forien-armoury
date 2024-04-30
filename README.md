@@ -26,6 +26,7 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
   * Added Rolltables for Runebound Career and Runebound Random Talents for use during Chargen
 * Added `Combat Fatigue – Rounds Before Test` counter to Combat Tracker (thanks to silent_mark)
 * Added setting to allow automatic falling unconscious of characters from 0 wounds in CRB ruleset (thanks to silent_mark)
+* Added 3 new Diseases and 3 new Symptoms to _„RassilonMonk's Cauldron of Nurgle“_
 * Several other changes to both content and codebase, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
 
 ### Notable changes in v1.4.0
