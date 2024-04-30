@@ -15,21 +15,20 @@ const flags = {
     roundsBeforeTest: 'roundsBeforeTest',
     roundsBeforePassOut: 'roundsBeforePassOut'
   },
-  itemRepair: {
-    type: 'type',
-    subtype: 'subtype'
+  diseases: {
+    lastProgress: 'lastProgress'
+  },
+  effects: {
+    target: 'target'
   },
   integrations: {
     itemPiles: {
       isImportFolder: 'isImportFolder'
     }
   },
-  talents: {
-    fightingStyle: 'fighting-style',
-    fightingMaster: 'fighting-master'
-  },
-  effects: {
-    target: 'target'
+  itemRepair: {
+    type: 'type',
+    subtype: 'subtype'
   },
   magicalEndurance: {
     flag: 'magical-endurance',
@@ -38,8 +37,9 @@ const flags = {
     lastRegen: 'lastRegen',
     maximum: 'maximum'
   },
-  diseases: {
-    lastProgress: 'lastProgress'
+  talents: {
+    fightingStyle: 'fighting-style',
+    fightingMaster: 'fighting-master'
   }
 }
 
@@ -68,6 +68,9 @@ const settings = {
     enableNPC: 'combatFatigue.enableNPC',
     enableCorePassOut: 'combatFatigue.enableCorePassOut'
   },
+  diseases: {
+    autoProgress: 'diseases.automateProgression'
+  },
   initialized: 'module.initialized',
   integrations: {
     atl: {
@@ -78,9 +81,6 @@ const settings = {
       rolltablesImported: 'itempiles.rolltablesImported',
       reimportRolltables: 'itempiles.rolltablesImport',
     }
-  },
-  runes: {
-    enableDamage: 'runes.damageEnable'
   },
   magicalEndurance: {
     enabled: 'magicalEndurance.enabled',
@@ -93,8 +93,8 @@ const settings = {
     useBaseCN: 'magicalEndurance.useBaseCN',
     autoRegen: 'magicalEndurance.automateRegen'
   },
-  diseases: {
-    autoProgress: 'diseases.automateProgression'
+  runes: {
+    enableDamage: 'runes.damageEnable'
   },
   scrolls: {
     allowOvercasting: 'scrolls.allowOvercasting',
@@ -114,8 +114,18 @@ const settings = {
 }
 
 const defaults = {
-  runes: {
-    enableDamage: false
+  arrowReclamation: {
+    enable: false,
+    enableArrows: true,
+    enableBolts: false,
+    enableBullets: true,
+    rule: settings.arrowReclamation.choices.default,
+    percentage: 50
+  },
+  combatFatigue: {
+    enable: false,
+    enableNPC: true,
+    enableCorePassOut: false,
   },
   diseases: {
     autoProgress: false
@@ -128,18 +138,8 @@ const defaults = {
     maxME: settings.magicalEndurance.maxME_TBtimesWPB,
     autoRegen: false
   },
-  combatFatigue: {
-    enable: false,
-    enableNPC: true,
-    enableCorePassOut: false,
-  },
-  arrowReclamation: {
-    enable: false,
-    enableArrows: true,
-    enableBolts: false,
-    enableBullets: true,
-    rule: settings.arrowReclamation.choices.default,
-    percentage: 50
+  runes: {
+    enableDamage: false
   },
   scrolls: {
     allowOvercasting: settings.scrolls.allowOvercastingMagick,
