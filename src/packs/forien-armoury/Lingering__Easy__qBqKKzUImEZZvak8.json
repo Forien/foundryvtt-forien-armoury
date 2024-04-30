@@ -1,0 +1,32 @@
+{
+  "name": "Lingering (Easy)",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": false,
+  "flags": {
+    "wfrp4e": {
+      "symptom": true,
+      "applicationData": {},
+      "scriptData": [],
+      "_legacyData": {}
+    },
+    "times-up": {
+      "isPassive": false
+    }
+  },
+  "_id": "qBqKKzUImEZZvak8",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!r2OI99qUvtFWN8t0.qBqKKzUImEZZvak8"
+}

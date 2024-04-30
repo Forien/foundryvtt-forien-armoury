@@ -1,0 +1,51 @@
+{
+  "name": "Fever",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": false,
+  "flags": {
+    "wfrp4e": {
+      "symptom": true,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": false
+      },
+      "scriptData": [
+        {
+          "label": "Fever",
+          "trigger": "dialog",
+          "script": "\n                       \n                    let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"]\n    \n                    if (args.type == \"weapon\")\n                        args.prefillModifiers.modifier -= 10\n                    else if (args.type == \"characteristic\")\n                    {\n                        if (applicableCharacteristics.includes(args.item))\n                            args.prefillModifiers.modifier -= 10\n                    }\n                    else if (args.type == \"skill\")\n                    {\n                        if (applicableCharacteristics.includes(args.item.characteristic.key))\n                            args.prefillModifiers.modifier -= 10\n                    }",
+          "options": {
+            "dialog": {
+              "activateScript": "return true"
+            }
+          }
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "prefillDialog",
+        "script": "\n                       \n                    let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"]\n    \n                    if (args.type == \"weapon\")\n                        args.prefillModifiers.modifier -= 10\n                    else if (args.type == \"characteristic\")\n                    {\n                        if (applicableCharacteristics.includes(args.item))\n                            args.prefillModifiers.modifier -= 10\n                    }\n                    else if (args.type == \"skill\")\n                    {\n                        if (applicableCharacteristics.includes(args.item.characteristic.key))\n                            args.prefillModifiers.modifier -= 10\n                    }"
+      }
+    },
+    "times-up": {
+      "isPassive": false
+    }
+  },
+  "_id": "77XC86MJjB0WwDFh",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!r2OI99qUvtFWN8t0.77XC86MJjB0WwDFh"
+}

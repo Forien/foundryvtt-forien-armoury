@@ -1,0 +1,67 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+  "transfer": true,
+  "name": "Master Rune of Breaking (Permanent)",
+  "_id": "EqLoSwFFzlWbrQFD",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "<p>After a successfull parry (won Opposed Melee Test), the wielder of a Wepon Engraved with this Rune may perform an Opposed Strength Test against the opponent. If wielder wins, the opponent's weapon breaks (unless it has an Unbreakable Quality).</p>",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Item",
+        "equipTransfer": true,
+        "avoidTest": {
+          "value": "none"
+        },
+        "testIndependent": false,
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Master Rune of Breaking (Permanent)",
+          "trigger": "opposedDefender",
+          "script": "if (args.opposedTest.result.winner === \"defender\") {\n    let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.effect');\n    let rune = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.name');\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n}",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "opposedDefender",
+        "preventDuplicateEffects": false,
+        "script": "if (args.opposedTest.defenderTest.weapon?._id === this.item.id) {\n  if (args.opposedTest.result.winner === \"defender\") {\n    let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.effect');\n    let rune = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.name');\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n  }\n}"
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": false
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.4tJdRSQGa8WTbn6Z"
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!PE6EPbkyk3UirW9z.EqLoSwFFzlWbrQFD"
+}

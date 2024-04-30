@@ -4,7 +4,7 @@
   "name": "Bracing",
   "_id": "ZTvdWXgPsTVE1HZ0",
   "changes": [],
-  "disabled": false,
+  "disabled": true,
   "duration": {
     "startTime": null,
     "seconds": null,
@@ -33,10 +33,46 @@
           "value": "none"
         },
         "testIndependent": false,
-        "prompt": false
-      }
+        "prompt": false,
+        "documentType": "Actor",
+        "equipTransfer": false
+      },
+      "scriptData": [
+        {
+          "label": "Bracing",
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.bracing(args, this);",
+          "trigger": "dialog",
+          "options": {
+            "dialog": {
+              "hideScript": "return args.item?.type !== \"weapon\" || !args.actor.isOpposing;",
+              "activateScript": "return true;",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        },
+        {
+          "label": "Bracing Reminder",
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.bracingReminder(args, this);",
+          "trigger": "startTurn",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        }
+      ]
     }
   },
   "tint": null,
-  "_key": "!items.effects!Da4zReU57OnesKGd.ZTvdWXgPsTVE1HZ0"
+  "_key": "!items.effects!dV7lAlVYKiHcCXBT.ZTvdWXgPsTVE1HZ0"
 }

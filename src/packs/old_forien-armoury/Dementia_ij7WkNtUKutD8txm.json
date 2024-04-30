@@ -1,0 +1,46 @@
+{
+  "name": "Dementia",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": true,
+  "flags": {
+    "wfrp4e": {
+      "symptom": true,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": false
+      },
+      "scriptData": [
+        {
+          "label": "Dementia",
+          "trigger": "prePrepareData",
+          "script": "\n            args.actor.system.characteristics.i.modifier -= 15;\n            args.actor.system.characteristics.int.modifier -= 20;\n          "
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "prePrepareData",
+        "script": "\n            args.actor.system.characteristics.i.modifier -= 15;\n            args.actor.system.characteristics.int.modifier -= 20;\n          "
+      }
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "_id": "ij7WkNtUKutD8txm",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!CHrsWEDlvlnTle9q.ij7WkNtUKutD8txm"
+}

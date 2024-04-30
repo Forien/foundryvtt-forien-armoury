@@ -6,7 +6,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>To learn this Talent you must know one of:</p><ul><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.O987u5M0SL46gm3v]{Fighting Style (Steelstorm)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.Da4zReU57OnesKGd]{Fighting Style (Ironshield)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.CUWdlx3IhkmTPL57]{Fighting Style (Evadecraft)}</p></li></ul><p>If you do, you can buy a respective <strong>Fighting Master</strong> Talent with the matching Style:</p><ul><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.F5UwuMe5XHl44Jrt]{Fighting Master (Steelstorm)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.uL8T7Gy9rRq74HIN]{Fighting Master (Ironshield)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.MCQGW6z3fWNdR5hO]{Fighting Master (Evadecraft)}</p></li></ul>"
+      "value": "<p>To learn this Talent you must know one of:</p><ul><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.APBiM8PBN1I9xVHY]{Fighting Style (Steelstorm)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.dV7lAlVYKiHcCXBT]{Fighting Style (Ironshield)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.CUWdlx3IhkmTPL57]{Fighting Style (Evadecraft)}</p></li></ul><p>If you do, you can buy a respective <strong>Fighting Master</strong> Talent with the matching Style:</p><ul><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.F5UwuMe5XHl44Jrt]{Fighting Master (Steelstorm)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.uL8T7Gy9rRq74HIN]{Fighting Master (Ironshield)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.MCQGW6z3fWNdR5hO]{Fighting Master (Evadecraft)}</p></li></ul>"
     },
     "gmdescription": {
       "type": "String",
@@ -48,13 +48,13 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
+    "systemVersion": "7.1.3",
     "coreVersion": "11.315",
     "createdTime": 1702057628149,
-    "modifiedTime": 1702229683449,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "modifiedTime": 1714394690898,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
   },
   "_id": "45vQxqVDSgCAJoLw",
-  "sort": 300000,
+  "sort": 50000,
   "_key": "!items!45vQxqVDSgCAJoLw"
 }

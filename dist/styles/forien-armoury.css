@@ -359,4 +359,34 @@
   max-width: 120px;
 }
 
+.combat-sidebar li.combatant .token-name .combatant-control[data-control=combatFatigue] input[type=text] {
+  line-height: 18px;
+  height: 18px;
+  min-height: 18px;
+  max-height: 18px;
+  width: 18px;
+  max-width: 18px;
+  min-width: 18px;
+  padding: 0;
+  margin: 0;
+  color: rgba(254, 255, 239, 0.8392156863);
+  font-size: medium;
+  text-align: center;
+}
+
+.combat-sidebar li.combatant .token-name .combatant-control[data-control=combatPassOut] input[type=text] {
+  line-height: 18px;
+  height: 18px;
+  min-height: 18px;
+  max-height: 18px;
+  width: 18px;
+  max-width: 18px;
+  min-width: 18px;
+  padding: 0;
+  margin: 0;
+  color: #ed4c66;
+  font-size: medium;
+  text-align: center;
+}
+
 /*# sourceMappingURL=forien-armoury.css.map */

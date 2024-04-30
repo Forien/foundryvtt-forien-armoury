@@ -22,13 +22,48 @@
       "isPassive": true
     },
     "wfrp4e": {
-      "effectTrigger": "invoke",
-      "effectApplication": "actor",
       "hide": false,
-      "preventDuplicateEffects": false,
-      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.steelstormAssault(args, this);"
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": false,
+        "avoidTest": {
+          "value": "none"
+        },
+        "testIndependent": false,
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Steelstorm Assault",
+          "trigger": "manual",
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.steelstormAssault(args, this);"
+        },
+        {
+          "label": "@item.system.tests.value",
+          "script": "args.fields.successBonus++;",
+          "trigger": "dialog",
+          "options": {
+            "dialog": {
+              "hideScript": "return args.item?.type !== \"weapon\";",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "invoke",
+        "preventDuplicateEffects": false,
+        "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.steelstormAssault(args, this);"
+      }
     }
   },
   "tint": null,
-  "_key": "!items.effects!O987u5M0SL46gm3v.tbjnVqFS8nuQX0sG"
+  "_key": "!items.effects!APBiM8PBN1I9xVHY.tbjnVqFS8nuQX0sG"
 }

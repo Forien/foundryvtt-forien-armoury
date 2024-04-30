@@ -482,7 +482,7 @@
           "DifficultyHint": "What should be default difficulty for Scrolls written in Language other than Magick?",
 
           "OwnCategory":  "Own Inventory Group",
-          "OwnCategoryHint": "Should scrolls appear in inventory as their own, separate group? If false, they will be attached to Books and Documents.",
+          "OwnCategoryHint": "Should scrolls appear in inventory as their own, separate group? If false, they will be attached to Books and Documents. <em>(client-side setting)</em>",
 
           "MagicalEndurance": "Magical Endurance cost",
           "MagicalEnduranceHint": "How much ME should using Scrolls cost? Requires Casting Fatigue feature enabled. Set to 0 to disable.",

@@ -1,0 +1,51 @@
+{
+  "name": "Purblind (Severe)",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": false,
+  "flags": {
+    "wfrp4e": {
+      "symptom": true,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": false
+      },
+      "scriptData": [
+        {
+          "label": "Purblind (Severe)",
+          "trigger": "dialog",
+          "script": "\n                      // console.log(\"prefillDialog args:\", {args})\n                      let modifier = -10\n                        if (this.effect.name.includes(\"Severe\"))\n                            modifier = -30\n                        else if (this.effect.name.includes(\"Moderate\"))\n                            modifier = -20\n\n                      let applicableSkills = [\"Art\",\"Dodge\",\"Drive\",\"Evaluate\",\"Melee\",\"Navigation\",\"Perception\",\"Pick Lock\",\"Ranged\",\"Research\",\"Ride\",\"Row\",\"Sail\",\"Secret Signs\",\"Set Trap\",\"Stealth\", \"Track\"]\n                      let applicableCharacteristics = [\"ws\", \"bs\", \"ag\", \"dex\"]\n                      if (args.type == \"weapon\")\n                          args.prefillModifiers.modifier += modifier\n                      else if (args.type == \"characteristic\")\n                      {\n                          if (applicableCharacteristics.includes(args.item))\n                              args.prefillModifiers.modifier += modifier\n                      }\n                      else if (args.type == \"skill\")\n                      {\n                          if (applicableSkills.includes(args.item.name))\n                              args.prefillModifiers.modifier += modifier\n                      }\n                      ",
+          "options": {
+            "dialog": {
+              "activateScript": "return true"
+            }
+          }
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "prefillDialog",
+        "script": "\n                      // console.log(\"prefillDialog args:\", {args})\n                      let modifier = -10\n                        if (this.effect.name.includes(\"Severe\"))\n                            modifier = -30\n                        else if (this.effect.name.includes(\"Moderate\"))\n                            modifier = -20\n\n                      let applicableSkills = [\"Art\",\"Dodge\",\"Drive\",\"Evaluate\",\"Melee\",\"Navigation\",\"Perception\",\"Pick Lock\",\"Ranged\",\"Research\",\"Ride\",\"Row\",\"Sail\",\"Secret Signs\",\"Set Trap\",\"Stealth\", \"Track\"]\n                      let applicableCharacteristics = [\"ws\", \"bs\", \"ag\", \"dex\"]\n                      if (args.type == \"weapon\")\n                          args.prefillModifiers.modifier += modifier\n                      else if (args.type == \"characteristic\")\n                      {\n                          if (applicableCharacteristics.includes(args.item))\n                              args.prefillModifiers.modifier += modifier\n                      }\n                      else if (args.type == \"skill\")\n                      {\n                          if (applicableSkills.includes(args.item.name))\n                              args.prefillModifiers.modifier += modifier\n                      }\n                      "
+      }
+    },
+    "times-up": {
+      "isPassive": false
+    }
+  },
+  "_id": "6fJeGCw6i40ZehMZ",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!r2OI99qUvtFWN8t0.6fJeGCw6i40ZehMZ"
+}

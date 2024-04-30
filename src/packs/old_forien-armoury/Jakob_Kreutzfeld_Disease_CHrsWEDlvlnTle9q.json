@@ -1,0 +1,75 @@
+{
+  "name": "Jakob Kreutzfeld Disease",
+  "type": "disease",
+  "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Named after the famed, and ill-fated, Altdorf physician and university professor who contracted this disease while conducting surgical research into brain diseases. There were subsequent rumours that Jakob was participating in unsanctioned research and experimentation although it was never proven as his research lab mysteriously burnt down not long after he began to suffer the effects of the disease.</p><p>This disease attacks the brain matter of the sufferer, gradually turning it into a sponge-like matter and leading eventually to death as the brain ceases to function properly. There is no known traditional cure.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "contraction": {
+      "label": "Contraction",
+      "value": "This disease spreads through infected surgical tools operating on the head or consumption of infected material.  Failing a Difficult (-10) Endurance Test in these circumstances results in infection.",
+      "type": "String"
+    },
+    "incubation": {
+      "label": "Incubation",
+      "value": "3d10+30",
+      "unit": "days",
+      "type": "String"
+    },
+    "duration": {
+      "label": "Duration",
+      "value": "(1d6+6)*32",
+      "type": "String",
+      "unit": "days",
+      "active": false
+    },
+    "symptoms": {
+      "label": "Symptoms",
+      "value": "Malaise, Dementia",
+      "type": "String"
+    },
+    "permanent": {
+      "label": "Permanent",
+      "value": "",
+      "type": "String"
+    },
+    "diagnosed": false
+  },
+  "effects": [
+    "rR7DQr4p4fnD035c",
+    "ij7WkNtUKutD8txm"
+  ],
+  "folder": "CnjDdyOSP29fHa3S",
+  "ownership": {
+    "default": 0,
+    "rTgnwDbJCJYDenyf": 3
+  },
+  "flags": {
+    "core": {},
+    "exportSource": {
+      "world": "wfrp-test-world",
+      "system": "wfrp4e",
+      "coreVersion": "11.315",
+      "systemVersion": "7.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1704832670849,
+    "modifiedTime": 1714398770199,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "_id": "CHrsWEDlvlnTle9q",
+  "sort": 100000,
+  "_key": "!items!CHrsWEDlvlnTle9q"
+}

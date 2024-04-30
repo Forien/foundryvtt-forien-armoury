@@ -1,0 +1,51 @@
+{
+  "name": "Wasting (Moderate)",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": true,
+  "flags": {
+    "wfrp4e": {
+      "symptom": true,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": false
+      },
+      "scriptData": [
+        {
+          "label": "Wasting (Moderate)",
+          "trigger": "dialog",
+          "script": "\n          let modifier = -10;\n          if (this.effect.name.includes(\"Severe\")) {\n              modifier = -30;\n          } else if (this.effect.name.includes(\"Moderate\")) {\n              modifier = -20;\n          }\n          let applicableCharacteristics = [\"s\", \"t\", \"ag\", \"dex\"];\n    \n          if ((args.type === \"weapon\") || (args.type === \"characteristic\" && applicableCharacteristics.includes(args.item)) || (args.type === \"skill\" && applicableCharacteristics.includes(args.item.characteristic.key))) {\n              args.prefillModifiers.modifier += modifier;\n          }\n          ",
+          "options": {
+            "dialog": {
+              "activateScript": "return true"
+            }
+          }
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "prefillDialog",
+        "script": "\n          let modifier = -10;\n          if (this.effect.name.includes(\"Severe\")) {\n              modifier = -30;\n          } else if (this.effect.name.includes(\"Moderate\")) {\n              modifier = -20;\n          }\n          let applicableCharacteristics = [\"s\", \"t\", \"ag\", \"dex\"];\n    \n          if ((args.type === \"weapon\") || (args.type === \"characteristic\" && applicableCharacteristics.includes(args.item)) || (args.type === \"skill\" && applicableCharacteristics.includes(args.item.characteristic.key))) {\n              args.prefillModifiers.modifier += modifier;\n          }\n          "
+      }
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "_id": "zwRbTbR1Kcy2mUHA",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!GMDXqhVYA5qIVEwl.zwRbTbR1Kcy2mUHA"
+}

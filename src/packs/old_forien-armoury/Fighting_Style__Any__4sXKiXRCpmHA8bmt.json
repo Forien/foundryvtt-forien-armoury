@@ -26,7 +26,35 @@
       "effectApplication": "actor",
       "hide": false,
       "preventDuplicateEffects": false,
-      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.replaceWithStyle(args, this)"
+      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.replaceWithStyle(args, this)",
+      "scriptData": [
+        {
+          "label": "Fighting Style (Any)",
+          "trigger": "addItems",
+          "script": "return await game.modules.get(\"forien-armoury\")?.api.helpers.styles.replaceWithStyle(args, this);",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        }
+      ],
+      "applicationData": {
+        "avoidTest": {
+          "value": "none"
+        },
+        "testIndependent": false,
+        "prompt": false,
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": false
+      }
     }
   },
   "tint": null,
