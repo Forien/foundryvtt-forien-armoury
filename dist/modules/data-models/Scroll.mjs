@@ -89,11 +89,18 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
       const match = data.name.match(/(\(\d+\))/i);
       preCreateData.img = "icons/sundries/scrolls/scroll-bound-green.webp";
 
-      if (!match)
-        return preCreateData;
+      if (match) {
+        const number = match[1];
+        preCreateData.name = game.i18n.localize("Forien.Armoury.Scrolls.NewScrollDefaultName") + ` ${number}`;
+      }
+    }
 
-      const number = match[1];
-      preCreateData.name = game.i18n.localize("Forien.Armoury.Scrolls.NewScrollDefaultName") + ` ${number}`;
+    if (!preCreateData.system?.encumbrance?.value) {
+      foundry.utils.setProperty(preCreateData, 'system.encumbrance.value', Utility.getSetting(settings.scrolls.defaultEncumbrance));
+    }
+
+    if (!preCreateData.system?.availability?.value) {
+      foundry.utils.setProperty(preCreateData, 'system.availability.value', Utility.getSetting(settings.scrolls.defaultAvailability));
     }
 
     return preCreateData;
@@ -110,7 +117,7 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
     super.updateChecks(data);
 
     if (data.system?.spellUuid) {
-      this.#promptForScrollNameChange();
+      this.#promptForScrollNameChange(options);
     }
   }
 
@@ -119,10 +126,10 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
    *
    * @returns {Promise<void>}
    */
-  async #promptForScrollNameChange() {
+  async #promptForScrollNameChange(options = {}) {
     const setting = Utility.getSetting(settings.scrolls.updateName);
 
-    if (setting === settings.scrolls.never) return;
+    if (!options.skipAsk && setting === settings.scrolls.never) return;
 
     const spell = await this.loadSpell();
     const scrollName = game.i18n.format("Forien.Armoury.Scrolls.ScrollOf", {spell: spell.name});
@@ -130,14 +137,14 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
 
     let content = game.i18n.format("Forien.Armoury.Scrolls.ChangeScrollNameContent", updateData);
 
-    if (Utility.getSetting(settings.scrolls.replaceDescription)) {
+    if (options.skipAsk || Utility.getSetting(settings.scrolls.replaceDescription)) {
       content += "<br>" + game.i18n.localize("Forien.Armoury.Scrolls.ChangeScrollDescription");
       updateData["system.description.value"] = spell.description.value;
     }
 
     let agreed = true;
 
-    if (setting === settings.scrolls.ask) {
+    if (!options.skipAsk && setting === settings.scrolls.ask) {
       agreed = await Dialog.confirm({
         title: 'Forien.Armoury.Scrolls.ChangeScrollNameTitle',
         content

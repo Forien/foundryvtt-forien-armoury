@@ -177,4 +177,50 @@ export default class Scrolls extends ForienBaseModule {
     const test = await actor._setupTest(dialogData, ScrollDialog)
     return await test.roll();
   }
+
+  /**
+   *
+   * @returns {Promise<Application|*>}
+   */
+  async generateRandomScroll() {
+    const loreTable = game.wfrp4e.tables.findTable('scroll', 'lore');
+    const cnTable = game.wfrp4e.tables.findTable('scroll', 'cn');
+
+    const loreResult = (await loreTable.roll()).results[0];
+    const match = loreResult?.text.match(/\{([a-zA-Z]+)}/);
+
+    if (!match) return;
+    const lore = match[1] ?? '';
+    let lores = [lore.toLowerCase()];
+
+    if (lores.includes("chaos magic"))
+      lores = ["tzeentch", "nurgle", "slaanesh", "undivided"];
+
+    const maxCNResult = (await cnTable.roll()).results[0];
+    const maxCN = Number(maxCNResult?.text) || 0;
+
+    const spells = await game.wfrp4e.utility.findAll("spell");
+    const validSpells = [];
+
+    for (const spell of spells) {
+      if (spell.system.cn.value > maxCN) continue;
+      if (
+        !lores.includes(spell.system.lore.value) &&
+        !(lores.includes("arcane") && spell.system.lore.value === '')
+      ) {
+        continue;
+      }
+
+      validSpells.push(spell);
+    }
+
+    if (!validSpells.length)
+      return Utility.notify(game.i18n.format("Forien.Armoury.Scrolls.MacroCantFind", {lore, maxCN}));
+
+    const selectedSpell = validSpells[Math.floor(CONFIG.Dice.randomUniform() * validSpells.length)];
+    const item = await Item.implementation.create({name: 'Temporary Scroll Name', type: dataTypes.scroll});
+    await item.update({"system.spellUuid": selectedSpell.uuid}, {skipAsk: true});
+
+    setTimeout(() => item.sheet.render(true), 500);
+  }
 }

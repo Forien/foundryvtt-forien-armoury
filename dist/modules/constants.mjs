@@ -98,6 +98,8 @@ const settings = {
     always: 'always',
     never: 'never',
     replaceDescription: 'scrolls.replaceDescription',
+    defaultEncumbrance: 'scrolls.defaultEncumbrance',
+    defaultAvailability: 'scrolls.defaultAvailability'
   }
 }
 

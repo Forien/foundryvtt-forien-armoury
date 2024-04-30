@@ -296,6 +296,27 @@ function registerSettings() {
     type: Boolean
   });
 
+  //
+  game.settings.register(constants.moduleId, settings.scrolls.defaultEncumbrance, {
+    name: 'Forien.Armoury.Settings.Scrolls.DefaultEncumbrance',
+    hint: 'Forien.Armoury.Settings.Scrolls.DefaultEncumbranceHint',
+    scope: 'world',
+    config: false,
+    default: 0.05,
+    type: Number
+  });
+
+  //
+  game.settings.register(constants.moduleId, settings.scrolls.defaultAvailability, {
+    name: 'Forien.Armoury.Settings.Scrolls.DefaultAvailability',
+    hint: 'Forien.Armoury.Settings.Scrolls.DefaultAvailabilityHint',
+    scope: 'world',
+    config: false,
+    default: "exotic",
+    choices: game.wfrp4e.config.availability,
+    type: String
+  });
+
   game.settings.register(constants.moduleId, settings.initialized, {
     scope: 'world',
     config: false,
