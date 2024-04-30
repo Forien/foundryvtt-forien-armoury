@@ -14,6 +14,9 @@
   * Added Rolltables for Runebound Career and Runebound Random Talents for use during Chargen
 * Added Combat Fatigue rounds counter to Combat Tracker (thanks to silent_mark) 
 * Added setting to allow automatic falling unconscious of characters from 0 wounds in CRB ruleset (thanks to silent_mark)
+* Added 3 more Diseases: Jakob Kreutzfeld Disease, The Martyr's Smear and The Wither (thanks to RassilonMonk)
+* Added 3 new Symptoms: Purblind, Wasting and Dementia (thanks to RassilonMonk)
+* Added 15 new Petty Spells
 
 ## v1.X.X
 
