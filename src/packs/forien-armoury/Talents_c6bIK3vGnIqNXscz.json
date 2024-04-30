@@ -4,15 +4,15 @@
   "folder": null,
   "type": "Item",
   "_id": "c6bIK3vGnIqNXscz",
-  "sort": 800000,
+  "sort": 1000000,
   "color": null,
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.1.2",
+    "systemVersion": "7.1.3",
     "coreVersion": "11.315",
     "createdTime": null,
-    "modifiedTime": 1714323101580,
+    "modifiedTime": 1714495128370,
     "lastModifiedBy": "rTgnwDbJCJYDenyf"
   },
   "_key": "!folders!c6bIK3vGnIqNXscz"

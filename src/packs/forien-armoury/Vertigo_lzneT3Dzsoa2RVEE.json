@@ -1,0 +1,45 @@
+{
+  "name": "Vertigo",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": true,
+  "flags": {
+    "wfrp4e": {
+      "symptom": true,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor"
+      },
+      "scriptData": [
+        {
+          "label": "Vertigo",
+          "trigger": "dialog",
+          "script": "args.fields.slBonus -= 2;",
+          "options": {
+            "dialog": {
+              "activateScript": "return true;",
+              "hideScript": "\n                      const applicableCharacteristics = [\"ag\", \"int\", \"dex\"];\n                      \n                      return args.type !== \"weapon\" && !applicableCharacteristics.includes(args.data.characteristic);\n                    ",
+              "submissionScript": "",
+              "targeter": false
+            }
+          }
+        }
+      ]
+    }
+  },
+  "_id": "lzneT3Dzsoa2RVEE",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!VHk5u1pWnRaDk5VC.lzneT3Dzsoa2RVEE"
+}

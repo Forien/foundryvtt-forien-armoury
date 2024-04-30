@@ -3,20 +3,17 @@
 ## v2.X.X
 
 ### v2.0.0
-* Added Runebound species with Reiklander and Orphaned subspecies
 * Updated code to be compatible with wfrp4e v7.1.0, namely changed `actor.itemCategories` to `actor.itemTypes`
 * Updated all effects to make them work properly with new Active Effect rework
 * Created `Magic Scrolls` type for Items.
   * This is new item type in the system, which allows casting Spells from Scrolls, without need to add spell itself to an Actor
+* Added "Generate Random Scroll" Macro, which improves the WoM macro by creating Magic Scroll Item
 * New Weapon Rune
   * Rune of Fracture. Adds Impact, but damages weapon by 2 per attack.
+* Added Runebound species with Reiklander and Orphaned subspecies
+  * Added Rolltables for Runebound Career and Runebound Random Talents for use during Chargen
 * Added Combat Fatigue rounds counter to Combat Tracker (thanks to silent_mark) 
 * Added setting to allow automatic falling unconscious of characters from 0 wounds in CRB ruleset (thanks to silent_mark)
-* Added "Generate Random Scroll" Macro, which improves the WoM macro by creating Magic Scroll Item
-
-@todo
-- check symptom effects
-- add runebound rolltables to compendium
 
 ## v1.X.X
 

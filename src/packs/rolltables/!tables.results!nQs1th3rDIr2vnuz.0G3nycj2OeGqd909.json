@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 5,
+  "range": [
+    76,
+    80
+  ],
+  "drawn": false,
+  "text": "Tenacious",
+  "documentId": "jviOQmy0luQOySC2",
+  "img": "modules/wfrp4e-core/icons/talents/tenacious.png",
+  "_id": "0G3nycj2OeGqd909",
+  "flags": {},
+  "_key": "!tables.results!nQs1th3rDIr2vnuz.0G3nycj2OeGqd909"
+}

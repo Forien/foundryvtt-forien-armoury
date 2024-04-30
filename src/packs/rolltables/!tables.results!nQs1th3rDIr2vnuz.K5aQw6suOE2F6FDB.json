@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 5,
+  "range": [
+    96,
+    100
+  ],
+  "drawn": false,
+  "text": "Well-prepared",
+  "documentId": "SHH2vUpNxj0wmmPT",
+  "img": "modules/wfrp4e-core/icons/talents/well-prepared.png",
+  "_id": "K5aQw6suOE2F6FDB",
+  "flags": {},
+  "_key": "!tables.results!nQs1th3rDIr2vnuz.K5aQw6suOE2F6FDB"
+}

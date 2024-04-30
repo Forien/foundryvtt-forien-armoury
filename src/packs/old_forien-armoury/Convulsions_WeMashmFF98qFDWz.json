@@ -1,0 +1,42 @@
+{
+  "name": "Convulsions",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "flags": {
+    "wfrp4e": {
+      "symptom": true,
+      "applicationData": {
+        "type": "document"
+      },
+      "scriptData": [
+        {
+          "trigger": "dialog",
+          "label": "@effect.name",
+          "script": "\n                            let modifier = 0\n                            if (this.effect.name.includes(\"Moderate\"))\n                                modifier = -20\n                            else\n                                modifier = -10\n                            args.fields.modifier += modifier\n                            ",
+          "options": {
+            "dialog": {
+              "hideScript": "return ![\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
+              "activateScript": "return [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "_id": "WeMashmFF98qFDWz",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "transfer": true,
+  "statuses": [],
+  "_key": "!items.effects!h4XCqO6phthpJ78V.WeMashmFF98qFDWz"
+}

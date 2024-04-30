@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 5,
+  "range": [
+    21,
+    25
+  ],
+  "drawn": false,
+  "text": "Frightening",
+  "documentId": "mqo51ORnxijcqNNu",
+  "img": "modules/wfrp4e-core/icons/talents/frightening.png",
+  "_id": "J9kJyA7NmjJzoO64",
+  "flags": {},
+  "_key": "!tables.results!nQs1th3rDIr2vnuz.J9kJyA7NmjJzoO64"
+}

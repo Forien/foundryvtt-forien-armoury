@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "forien-armoury.forien-armoury",
+  "weight": 5,
+  "range": [
+    1,
+    5
+  ],
+  "drawn": false,
+  "_id": "2DBXQvyDNKngFR4q",
+  "text": "Runebound Mutation",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "documentId": "GokzIKw9WT3KltXc",
+  "flags": {},
+  "_key": "!tables.results!nQs1th3rDIr2vnuz.2DBXQvyDNKngFR4q"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Purblind (Severe)",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": false,
+  "flags": {
+    "wfrp4e": {
+      "symptom": true,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor"
+      },
+      "scriptData": [
+        {
+          "label": "Sight-based Tests from Purblind",
+          "trigger": "dialog",
+          "script": "\n                let modifier = -10;\n                if (this.effect.name.includes(\"Moderate\"))\n                  modifier = -20;\n                else if (this.effect.name.includes(\"Severe\"))\n                  modifier = -30;\n                \n                args.fields.modifier += modifier;\n              ",
+          "options": {
+            "dialog": {
+              "activateScript": "return true;",
+              "hideScript": "\n                    let applicableSkills = [\"NAME.Art\",  \"NAME.Dodge\",  \"NAME.Drive\",  \"NAME.Evaluate\",  \"NAME.Melee\",  \"NAME.Navigation\",  \"NAME.Perception\",  \"NAME.PickLock\",  \"NAME.Ranged\",  \"NAME.Research\",  \"NAME.Ride\",  \"NAME.Row\",  \"NAME.Sail\",  \"NAME.SecretSigns\",  \"NAME.SetTrap\",  \"NAME.Stealth\",  \"NAME.Track\"];\n                    applicableSkills = applicableSkills.map(s => game.i18n.localize(s));\n                    let applicableCharacteristics = [\"ws\", \"bs\", \"ag\", \"dex\"];\n                    \n                    return !(\n                      (args.type === \"weapon\") ||\n                      (args.type === \"characteristic\" && applicableCharacteristics.includes(args.item)) ||\n                      (args.type === \"skill\" && applicableSkills.includes(args.item.name))\n                    )\n                  ",
+              "submissionScript": ""
+            }
+          }
+        }
+      ]
+    }
+  },
+  "_id": "OeEtvo9pi76j4bYY",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!r2OI99qUvtFWN8t0.OeEtvo9pi76j4bYY"
+}
