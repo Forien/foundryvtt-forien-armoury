@@ -1,0 +1,56 @@
+{
+  "folder": "c6bIK3vGnIqNXscz",
+  "name": "Runebound Mutation",
+  "type": "talent",
+  "_id": "GokzIKw9WT3KltXc",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Since becoming a Runebound is a somewhat controlled ritual, Mutations gained at this point are mostly aesthetics. Choose one that's cool, but be ready for consequences. </p><p>If GM decides, they can modify your characteristics by up to -3/+3.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "effects": [],
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "rTgnwDbJCJYDenyf": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.1.2",
+    "coreVersion": "11.315",
+    "createdTime": 1703948915543,
+    "modifiedTime": 1714322706187,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "_key": "!items!GokzIKw9WT3KltXc"
+}

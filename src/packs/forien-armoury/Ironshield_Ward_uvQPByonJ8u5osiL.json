@@ -22,14 +22,49 @@
       "isPassive": true
     },
     "wfrp4e": {
-      "effectTrigger": "prepareItem",
-      "effectApplication": "actor",
       "hide": false,
-      "preventDuplicateEffects": false,
-      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.ironshieldWard(args, this);",
-      "promptItem": false
+      "promptItem": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": false,
+        "avoidTest": {
+          "value": "none"
+        },
+        "testIndependent": false,
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Ironshield Ward",
+          "trigger": "prepareItem",
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.ironshieldWard(args, this);"
+        },
+        {
+          "label": "@item.system.tests.value",
+          "script": "args.fields.successBonus++;",
+          "trigger": "dialog",
+          "options": {
+            "dialog": {
+              "hideScript": "return args.item?.type !== \"weapon\" || !args.actor.isOpposing;",
+              "activateScript": "return args.item?.isMelee;",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "prepareItem",
+        "preventDuplicateEffects": false,
+        "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.ironshieldWard(args, this);"
+      }
     }
   },
   "tint": null,
-  "_key": "!items.effects!Da4zReU57OnesKGd.uvQPByonJ8u5osiL"
+  "_key": "!items.effects!dV7lAlVYKiHcCXBT.uvQPByonJ8u5osiL"
 }

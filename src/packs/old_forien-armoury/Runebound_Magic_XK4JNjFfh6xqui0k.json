@@ -36,20 +36,22 @@
       "value": "Channelling"
     }
   },
-  "effects": [],
+  "effects": [
+    "pOZuWgd2BdjU3nq6"
+  ],
   "flags": {
     "core": {}
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
+    "systemVersion": "7.1.2",
     "coreVersion": "11.315",
     "createdTime": 1688252626857,
-    "modifiedTime": 1702229677710,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "modifiedTime": 1714322706187,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
   },
   "_id": "XK4JNjFfh6xqui0k",
-  "sort": 1000000,
+  "sort": 1100000,
   "ownership": {
     "default": 0,
     "aDepqlKkeOa13DWo": 3

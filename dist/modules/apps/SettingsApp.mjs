@@ -154,7 +154,8 @@ export default class SettingsApp extends FormApplication {
         enable: {
           when: settings.combatFatigue.enable,
           settings: [
-            settings.combatFatigue.enableNPC
+            settings.combatFatigue.enableNPC,
+            settings.combatFatigue.enableCorePassOut
           ]
         }
       },
@@ -173,6 +174,20 @@ export default class SettingsApp extends FormApplication {
             settings.magicalEndurance.autoRegen,
           ]
         }
+      },
+
+      scrolls: {
+        always: [
+          settings.scrolls.allowOvercasting,
+          settings.scrolls.ownCategory,
+          settings.scrolls.difficultyMagick,
+          settings.scrolls.difficulty,
+          settings.scrolls.magicalEndurance,
+          settings.scrolls.updateName,
+          settings.scrolls.replaceDescription,
+          settings.scrolls.defaultEncumbrance,
+          settings.scrolls.defaultAvailability,
+        ]
       },
 
       integrations: {

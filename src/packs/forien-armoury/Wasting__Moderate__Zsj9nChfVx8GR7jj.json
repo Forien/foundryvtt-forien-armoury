@@ -1,0 +1,44 @@
+{
+  "name": "Wasting (Moderate)",
+  "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "transfer": true,
+  "flags": {
+    "wfrp4e": {
+      "symptom": true,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor"
+      },
+      "scriptData": [
+        {
+          "label": "Wasting",
+          "trigger": "dialog",
+          "script": "\n                  let modifier = -10;\n                  if (this.effect.name.includes(\"Moderate\"))\n                    modifier = -20;\n                  else if (this.effect.name.includes(\"Severe\"))\n                    modifier = -30;\n                  \n                  args.fields.modifier += modifier;\n                ",
+          "options": {
+            "dialog": {
+              "activateScript": "return true;",
+              "hideScript": "\n                    const applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"t\", \"ag\", \"dex\"];\n\n                    return args.type !== \"weapon\" && !applicableCharacteristics.includes(args.data.characteristic);\n                  ",
+              "submissionScript": ""
+            }
+          }
+        }
+      ]
+    }
+  },
+  "_id": "Zsj9nChfVx8GR7jj",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "",
+  "origin": null,
+  "statuses": [],
+  "_key": "!items.effects!GMDXqhVYA5qIVEwl.Zsj9nChfVx8GR7jj"
+}

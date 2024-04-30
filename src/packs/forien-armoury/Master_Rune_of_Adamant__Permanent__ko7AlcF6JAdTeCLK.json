@@ -1,0 +1,60 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
+  "transfer": true,
+  "name": "Master Rune of Adamant (Permanent)",
+  "_id": "ko7AlcF6JAdTeCLK",
+  "changes": [
+    {
+      "key": "system.characteristics.t.modifier",
+      "mode": 2,
+      "value": "10",
+      "priority": null
+    }
+  ],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "<p>Wearer of an Armour Engraved with this Rune gains +10 Toughness.</p>",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "promptItem": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": true,
+        "avoidTest": {
+          "value": "none"
+        },
+        "prompt": false
+      },
+      "scriptData": [],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "",
+        "preventDuplicateEffects": false,
+        "script": ""
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": false
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.C0uWiIL7yEzK98IY.ActiveEffect.ZHCC3kuLQf3jBX65"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!C0uWiIL7yEzK98IY.ko7AlcF6JAdTeCLK"
+}

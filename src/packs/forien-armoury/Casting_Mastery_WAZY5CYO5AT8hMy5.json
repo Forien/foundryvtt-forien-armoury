@@ -1,0 +1,71 @@
+{
+  "name": "Casting Mastery",
+  "type": "trait",
+  "_id": "WAZY5CYO5AT8hMy5",
+  "img": "icons/magic/symbols/runes-triangle-orange-purple.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Allows the Actor to always succeed Casting Tests with WPB SL.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    "kpg6tadsVNoK2M1j"
+  ],
+  "folder": "PQAanEQoiIOxQp1r",
+  "ownership": {
+    "default": 0,
+    "rTgnwDbJCJYDenyf": 3
+  },
+  "flags": {
+    "exportSource": {
+      "world": "wfrp4e",
+      "system": "wfrp4e",
+      "coreVersion": "11.315",
+      "systemVersion": "7.0.3"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1704563206482,
+    "modifiedTime": 1705180064071,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "sort": 0,
+  "_key": "!items!WAZY5CYO5AT8hMy5"
+}

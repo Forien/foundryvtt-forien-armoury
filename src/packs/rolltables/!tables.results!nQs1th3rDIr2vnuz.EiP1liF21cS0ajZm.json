@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 5,
+  "range": [
+    81,
+    85
+  ],
+  "drawn": false,
+  "text": "Unshakable",
+  "documentId": "8oWhzlcw7oiHGMFu",
+  "img": "modules/wfrp4e-core/icons/talents/unshakable.png",
+  "_id": "EiP1liF21cS0ajZm",
+  "flags": {},
+  "_key": "!tables.results!nQs1th3rDIr2vnuz.EiP1liF21cS0ajZm"
+}

@@ -6,7 +6,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>Can only be learned by characters knowing @UUID[Compendium.forien-armoury.forien-armoury.Item.O987u5M0SL46gm3v]{Fighting Style (Steelstorm)}.</p><ul><li><p>When you go <strong>ALL IN</strong>, your weapon becomes Damaging. If it already was Damaging, <strong>replace</strong> Damaging with Impact.</p></li></ul>"
+      "value": "<p>Can only be learned by characters knowing @UUID[Compendium.forien-armoury.forien-armoury.Item.APBiM8PBN1I9xVHY]{Fighting Style (Steelstorm)}</p><ul><li><p>When you go <strong>ALL IN</strong>, your weapon becomes Damaging. If it already was Damaging, <strong>replace</strong> Damaging with Impact.</p></li></ul>"
     },
     "gmdescription": {
       "type": "String",
@@ -49,13 +49,13 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
+    "systemVersion": "7.1.2",
     "coreVersion": "11.315",
     "createdTime": 1702057628149,
-    "modifiedTime": 1702482633753,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "modifiedTime": 1714322706187,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
   },
   "_id": "F5UwuMe5XHl44Jrt",
-  "sort": 400000,
+  "sort": 700000,
   "_key": "!items!F5UwuMe5XHl44Jrt"
 }

@@ -26,7 +26,32 @@
       "effectApplication": "actor",
       "hide": false,
       "preventDuplicateEffects": false,
-      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.replaceWithMastery(args, this)"
+      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.replaceWithMastery(args, this)",
+      "scriptData": [
+        {
+          "label": "Fighting Master (Style)",
+          "trigger": "addItems",
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.replaceWithMastery(args, this)",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        }
+      ],
+      "applicationData": {
+        "avoidTest": {
+          "value": "none"
+        },
+        "testIndependent": false,
+        "prompt": false
+      }
     }
   },
   "tint": null,

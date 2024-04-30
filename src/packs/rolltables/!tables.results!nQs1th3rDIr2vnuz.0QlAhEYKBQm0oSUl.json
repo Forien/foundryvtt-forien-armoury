@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 5,
+  "range": [
+    56,
+    60
+  ],
+  "drawn": false,
+  "text": "Strong Back",
+  "documentId": "FF41XPboORgyDNsv",
+  "img": "modules/wfrp4e-core/icons/talents/strong-back.png",
+  "_id": "0QlAhEYKBQm0oSUl",
+  "flags": {},
+  "_key": "!tables.results!nQs1th3rDIr2vnuz.0QlAhEYKBQm0oSUl"
+}

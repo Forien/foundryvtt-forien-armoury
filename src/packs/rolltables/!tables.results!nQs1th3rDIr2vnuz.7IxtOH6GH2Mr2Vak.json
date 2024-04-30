@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 5,
+  "range": [
+    71,
+    75
+  ],
+  "drawn": false,
+  "text": "Sturdy",
+  "documentId": "qZ4cFy6z482ZONuA",
+  "img": "modules/wfrp4e-core/icons/talents/sturdy.png",
+  "_id": "7IxtOH6GH2Mr2Vak",
+  "flags": {},
+  "_key": "!tables.results!nQs1th3rDIr2vnuz.7IxtOH6GH2Mr2Vak"
+}

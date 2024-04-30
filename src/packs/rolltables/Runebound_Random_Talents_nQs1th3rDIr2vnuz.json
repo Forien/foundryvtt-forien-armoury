@@ -1,0 +1,52 @@
+{
+  "name": "Runebound Random Talents",
+  "_id": "nQs1th3rDIr2vnuz",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    "2DBXQvyDNKngFR4q",
+    "h1VKpd61p9zpgV0o",
+    "J3IVY1gFGcsoWZ7F",
+    "KmLK4KwM3aprox7U",
+    "J9kJyA7NmjJzoO64",
+    "AEJx77oYi9cQzYNN",
+    "sj3EdjcYnXnj6Y41",
+    "xrvae4O85psQkIrv",
+    "exMxZUSa24ybsJ0S",
+    "iKywKCGsPGp9LVHv",
+    "3I4XqyVkW7Kf2Nos",
+    "0QlAhEYKBQm0oSUl",
+    "HSXvr4ZOMK31dC0S",
+    "0dV54aqAjVgUlfTz",
+    "7IxtOH6GH2Mr2Vak",
+    "0G3nycj2OeGqd909",
+    "EiP1liF21cS0ajZm",
+    "PT83CNKp5FUf51jY",
+    "WCZEU6NStuaiqwsD",
+    "K5aQw6suOE2F6FDB"
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "j1vqMtlcpWWz1G9T",
+  "ownership": {
+    "default": 0,
+    "rTgnwDbJCJYDenyf": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "runebound-talents",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1703929246035,
+    "modifiedTime": 1714495578061,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "formula": "1d100",
+  "sort": 200000,
+  "_key": "!tables!nQs1th3rDIr2vnuz"
+}

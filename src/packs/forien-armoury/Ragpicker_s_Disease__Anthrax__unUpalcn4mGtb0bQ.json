@@ -43,10 +43,10 @@
     }
   },
   "effects": [
-    "HKNCIaAjlwkfPcYm",
-    "25kReyJQJApobVpJ",
-    "mbooaUsyiG1m4sSn",
-    "UzoF4oE6n8ctB8Ew"
+    "p6IwcoRTSLekrqWl",
+    "wgYynv0OByn8rDnN",
+    "tdcv17EVnZI1NfMA",
+    "sm1moEHNnoN70Cv6"
   ],
   "folder": "CnjDdyOSP29fHa3S",
   "ownership": {
@@ -64,13 +64,13 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
+    "systemVersion": "7.1.3",
     "coreVersion": "11.315",
     "createdTime": 1702260216639,
-    "modifiedTime": 1702856222723,
-    "lastModifiedBy": "XoHsMevsFtsW7WqO"
+    "modifiedTime": 1714493631011,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
   },
   "_id": "unUpalcn4mGtb0bQ",
-  "sort": 0,
+  "sort": 300000,
   "_key": "!items!unUpalcn4mGtb0bQ"
 }

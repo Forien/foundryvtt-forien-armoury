@@ -27,7 +27,7 @@
         "id": "wfrp4e",
         "type": "system",
         "compatibility": {
-          "minimum": "7.0.0"
+          "minimum": "7.1.0"
         }
       }
     ],
@@ -77,6 +77,17 @@
       "system": "wfrp4e"
     },
     {
+      "name": "rolltables",
+      "label": "Forien's Rolltables",
+      "path": "packs/rolltables",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
+    },
+    {
       "name": "merchant-rolltables",
       "label": "Merchant Rolltables (Forien's Armoury)",
       "path": "packs/merchant-rolltables",
@@ -106,7 +117,8 @@
       "packs": [
         "forien-armoury",
         "macros",
-        "forien-homerules"
+        "forien-homerules",
+        "rolltables"
       ],
       "folders": [
         {
@@ -138,6 +150,12 @@
       "path": "languages/pl.json"
     }
   ],
+  "documentTypes": {
+    "Item": {
+      "scroll": {
+      }
+    }
+  },
   "flags": {
     "hotReload": {
       "extensions": [

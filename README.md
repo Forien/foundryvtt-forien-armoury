@@ -13,6 +13,22 @@ This module is a collection of custom trappings and features for Warhammer Fanta
 Forien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded
 
 
+### Notable changes in v2.0.0
+* Updated all of module's Active Effect to work or take advantage of WFRP4e's [Effect Refactor Update](https://github.com/moo-man/WFRP4e-FoundryVTT/releases/tag/7.1.0)
+  * Because of that, all Active Effects (such as Runes, some trappings, traits and talents) on existing Actors need to be replaced with new ones from compendium! 
+* Created `Magic Scrolls` type for Items
+  * This is new item type in the system, which allows casting Spells from Scrolls, without need to add spell itself to an Actor
+* Added `Generate Random Scroll` Macro, which improves the WoM macro by creating Magic Scroll Item
+* New Weapon Rune
+  * Rune of Fracture. Adds Impact, but damages weapon by 2 per attack.
+* 15 new Petty Spells of Silliness. They are quite silly!
+* Added `Runebound` species with `Reiklander` and `Orphaned` subspecies to Chargen
+  * Added Rolltables for Runebound Career and Runebound Random Talents for use during Chargen
+* Added `Combat Fatigue – Rounds Before Test` counter to Combat Tracker (thanks to silent_mark)
+* Added setting to allow automatic falling unconscious of characters from 0 wounds in CRB ruleset (thanks to silent_mark)
+* Added 3 new Diseases and 3 new Symptoms to _„RassilonMonk's Cauldron of Nurgle“_
+* Several other changes to both content and codebase, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
+
 ### Notable changes in v1.4.0
 * Added new career: `Monster Hunter`
   * This career utilizes one of three unique **Fighting Styles** and focuses on tracking down and fighting monstrous beasts
@@ -31,18 +47,6 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
 * Added trait: `Drunk`
 * Created Settings App, which allows to display settings in more visually appealing and intuitive way
 * Several other changes to both content and codebase, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
-
-### Notable changes in v1.3.0
-* Reintroduced the **Slashing**, **Recoverable** and **Unrecoverable** properties for weapons and ammunition
-* Introduced new **Incendiary, Poisonous** and **Blinding** qualities
-* Added **Combat Fatigue feature** (implementing Getting Tired from CRB p.168)
-* Added **new items**
-  * Cutlass, Light Bomb, Cracker Bullet, Razor Bullet, Poisoned Arrows, Fire Arrows, Winged Arrows
-* Added Repulsive trait
-* Added new Macro for testing **Advanced Skills** with result limits
-* Updated the Journals with new information
-* Minor fixes to items (improved gunpowder, powder horns)
-* Several smaller changes and fixes, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
 
 
 ## Installation
@@ -67,6 +71,8 @@ Once installed, while in World using WFRP4e game system, enable `Forien's Armour
 This Module adds some QoL and automation features, including mechanics that:
 * Allow for automatic removal of **Temporary Runes** when they get disabled (preferably by `Times Up` Module). 
   * Optionally allows for damaging an Item when Rune is removed (disabled by default).
+* **Magic Scrolls**, completely new, independent Item type that allows characters to cast spells from scrolls without needing to know the Spell
+* **Generate Random Scroll** (Macro), improved WoM macro that now creates usable Magic Scroll
 * **Item Repair** (Macro), allow players to easily repair their equipment for free or for price, using Macro and clean, readable auto-updating Chat Card
 * **Check Careers** (Macro), allows players to quickly check their progress through current Career and how far are they from completing it.
 * **Arrow Reclamation**, allowing players to recover some of ammunition (arrows, bolts or sling bullets) after an encounter. Defaults to even rolls. Disabled by default.
@@ -82,10 +88,13 @@ Module contains single Compendium pack containing over 150 (Item and Active Effe
   * Monster Hunter
   * Runebound Ranger
   * Runesmith
-* Added 32 Runes implemented as working Active Effects
+* Added 33 Runes implemented as working Active Effects
+* Added 22 new **Spells**
+  * 15 Petty Spells of Silliness
+  * 7 Runebound Runic Spells
 * Added 1 new **Skill** (Runecraft)
 * Added 11 new **Talents** (Dawi Runes, Runebound Magic, Fortifiend Mind, 3x Fighting Styles and 3x Fighting Masters)
-* Added 3 new **Traits** (Drunk, Point Blank Rule, Repulsive)
+* Added 4 new **Traits** (Drunk, Point Blank Rule, Repulsive, Casting Mastery)
 * Added 11 new and rebalanced **Armour** items:
   * Added Gambesons as an alternative to Leather armour
   * Rebalanced Leather armour (is more expensive than Gambesons, but Durable)
@@ -114,12 +123,15 @@ Module contains single Compendium pack containing over 150 (Item and Active Effe
   * Spectacles
 * Added 8 new **Containers**
   * 3 Quivers, 3 Powder Horns, 2 Bags
-* Added 5 new **Diseases**
-  * Gonorrhoea, 
+* Added 8 new **Diseases**
+  * Gonorrhoea,
+  * Jakob Kreutzfeld Disease
   * Meniere's disease, 
   * Nurgle's Rot,
-  * Ragpicker's Disease, 
+  * Ragpicker's Disease,
+  * The Martyr's Smear
   * The Spews
+  * The Wither
 * Added 10 new generic **Ingredients** for each Arcane Lore
 * Added some miscellaneous **Trappings**, **Money** and Item Pile **Services**
 
@@ -137,6 +149,7 @@ Module contains a single Compendium Pack containing 10 Macros:
 
 * GM Macro to quickly set Infighting on target Tokens
 * 3 GM Macros to quickly set selected tokens' dispositions
+* GM Macro to quickly generate a random, fully usable Magic Scroll
 * Player Macro to check their Career progression
 * Player Macros to check for their Damaged Equipment
 * Player Macro to generate specific Ingredient for, and based on a specific Spell

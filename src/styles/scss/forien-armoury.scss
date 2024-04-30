@@ -231,6 +231,107 @@
       }
     }
   }
+
+  &.app.window-app.sheet {
+    &.scroll-sheet {
+      min-width: 550px;
+
+      .window-content {
+        .tab {
+          &.details {
+            .form-group {
+              &.spell {
+                .spell-refresh {
+                  font-size: var(--font-size-12);
+                }
+
+                .scroll-spell {
+                  display: flex;
+                  gap: 5px;
+
+                  img {
+                    @include square(60px);
+                  }
+
+                  .spell-details {
+                    padding: 3px 0 0 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .spell-name {
+                      font-family: CaslonAntique, serif;
+                      font-size: var(--font-size-18);
+                      font-weight: bold;
+                      margin-top: -5px;
+                    }
+
+                    .tags {
+                      display: flex;
+                      flex-wrap: wrap;
+                      flex-direction: row;
+                      gap: 2px 3px;
+                    }
+
+                    .tag {
+                      //float: left;
+                      margin: 0;
+                      padding: 0 2px;
+                      font-size: var(--font-size-12);
+                      font-family: Signika, sans-serif;
+                      line-height: 16px;
+                      border: 1px solid #999;
+                      border-radius: 3px;
+                      background: rgba(0, 0, 0, 0.05);
+                    }
+                  }
+
+                  .spell-drop-zone {
+                    margin: 2px;
+                    height: 80px;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.10);
+                    border: 2px dotted rgba(0, 0, 0, 0.35);
+                    border-radius: 8px;
+                    font-family: CaslonAntique, serif;
+                    font-size: var(--font-size-18);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.app.window-app.sheet.wfrp4e.actor {
+  .tab.inventory, .tab.magic {
+    .scrolls, .booksAndDocuments {
+      .scroll-spell-link {
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .scroll-spell-cast {
+        box-shadow: inset 0 1px 0 0 #a6827e;
+        background: #7d5d3b00 linear-gradient(to bottom, #21374afc 5%, #152833ab 100%);
+        border-radius: 3px;
+        border: 2px ridge #846109;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: CaslonPro, serif;
+        font-size: var(--font-size-14);
+        padding: 4px 12px 0 12px;
+      }
+    }
+  }
 }
 
 #forien-armoury-settings-app {
@@ -260,10 +361,12 @@
         background-color: $baseColorLight;
         border-radius: 10px 10px 0 0;
         border: 1px solid $baseColorDark;
+        flex: fit-content;
 
         &:first-of-type {
           margin-left: 0;
         }
+
         &:last-of-type {
           margin-right: 0;
         }
@@ -314,6 +417,7 @@
 
       input[type=checkbox] {
         box-shadow: none;
+
         &:checked {
           accent-color: $baseColorLight;
         }
@@ -340,7 +444,7 @@
 
       .support-links {
         text-align: center;
-        margin: 10px 0 ;
+        margin: 10px 0;
 
         a {
           display: inline-block;
@@ -369,5 +473,39 @@
         max-width: 120px;
       }
     }
+  }
+}
+
+.combat-sidebar li.combatant .token-name .combatant-control[data-control="combatFatigue"] {
+  input[type="text"] {
+    line-height: 18px;
+    height: 18px;
+    min-height: 18px;
+    max-height: 18px;
+    width: 18px;
+    max-width: 18px;
+    min-width: 18px;
+    padding: 0;
+    margin: 0;
+    color: #feffefd6;
+    font-size: medium;
+    text-align: center;
+  }
+}
+
+.combat-sidebar li.combatant .token-name .combatant-control[data-control="combatPassOut"] {
+  input[type="text"] {
+    line-height: 18px;
+    height: 18px;
+    min-height: 18px;
+    max-height: 18px;
+    width: 18px;
+    max-width: 18px;
+    min-width: 18px;
+    padding: 0;
+    margin: 0;
+    color: #ed4c66;
+    font-size: medium;
+    text-align: center;
   }
 }

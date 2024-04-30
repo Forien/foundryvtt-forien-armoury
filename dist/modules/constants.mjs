@@ -5,28 +5,30 @@ const constants = {
   loopLimit: 100
 };
 
-const defaults = {}
+const dataTypes = {
+  scroll: `${constants.moduleId}.scroll`
+}
 
 const flags = {
   ammoReplenish: 'ammoReplenish',
   combatFatigue: {
-    roundsBeforeTest: 'roundsBeforeTest'
+    roundsBeforeTest: 'roundsBeforeTest',
+    roundsBeforePassOut: 'roundsBeforePassOut'
   },
-  itemRepair: {
-    type: 'type',
-    subtype: 'subtype'
+  diseases: {
+    lastProgress: 'lastProgress'
+  },
+  effects: {
+    target: 'target'
   },
   integrations: {
     itemPiles: {
       isImportFolder: 'isImportFolder'
     }
   },
-  talents: {
-    fightingStyle: 'fighting-style',
-    fightingMaster: 'fighting-master'
-  },
-  effects: {
-    target: 'target'
+  itemRepair: {
+    type: 'type',
+    subtype: 'subtype'
   },
   magicalEndurance: {
     flag: 'magical-endurance',
@@ -35,8 +37,9 @@ const flags = {
     lastRegen: 'lastRegen',
     maximum: 'maximum'
   },
-  diseases: {
-    lastProgress: 'lastProgress'
+  talents: {
+    fightingStyle: 'fighting-style',
+    fightingMaster: 'fighting-master'
   }
 }
 
@@ -48,11 +51,25 @@ const settings = {
     enableBolts: 'arrowReclamation.EnableBolts',
     enableBullets: 'arrowReclamation.EnableBullets',
     rule: 'arrowReclamation.Rule',
-    percentage: 'arrowReclamation.Percentage'
+    percentage: 'arrowReclamation.Percentage',
+    choices: {
+      default: 'default',
+      success: 'success',
+      noCrit: 'noCrit',
+      successNoCrit: 'successNoCrit',
+      failure: 'failure',
+      failureNoCrit: 'failureNoCrit',
+      percentage: 'percentage',
+      percentageNoCrit: 'percentageNoCrit'
+    }
   },
   combatFatigue: {
     enable: 'combatFatigue.enable',
-    enableNPC: 'combatFatigue.enableNPC'
+    enableNPC: 'combatFatigue.enableNPC',
+    enableCorePassOut: 'combatFatigue.enableCorePassOut'
+  },
+  diseases: {
+    autoProgress: 'diseases.automateProgression'
   },
   initialized: 'module.initialized',
   integrations: {
@@ -65,9 +82,6 @@ const settings = {
       reimportRolltables: 'itempiles.rolltablesImport',
     }
   },
-  runes: {
-    enableDamage: 'runes.damageEnable'
-  },
   magicalEndurance: {
     enabled: 'magicalEndurance.enabled',
     maxME: 'magicalEndurance.maxME',
@@ -79,9 +93,65 @@ const settings = {
     useBaseCN: 'magicalEndurance.useBaseCN',
     autoRegen: 'magicalEndurance.automateRegen'
   },
-  diseases: {
-    autoProgress: 'diseases.automateProgression'
+  runes: {
+    enableDamage: 'runes.damageEnable'
+  },
+  scrolls: {
+    allowOvercasting: 'scrolls.allowOvercasting',
+    allowOvercastingMagick: 'magick',
+    ownCategory: 'scrolls.ownCategory',
+    difficultyMagick: 'scrolls.difficultyMagick',
+    difficulty: 'scrolls.difficulty',
+    magicalEndurance: 'scrolls.magicalEndurance',
+    updateName: 'scrolls.updateName',
+    ask: 'ask',
+    always: 'always',
+    never: 'never',
+    replaceDescription: 'scrolls.replaceDescription',
+    defaultEncumbrance: 'scrolls.defaultEncumbrance',
+    defaultAvailability: 'scrolls.defaultAvailability'
   }
 }
 
-export {constants, defaults, flags, settings};
+const defaults = {
+  arrowReclamation: {
+    enable: false,
+    enableArrows: true,
+    enableBolts: false,
+    enableBullets: true,
+    rule: settings.arrowReclamation.choices.default,
+    percentage: 50
+  },
+  combatFatigue: {
+    enable: false,
+    enableNPC: true,
+    enableCorePassOut: false,
+  },
+  diseases: {
+    autoProgress: false
+  },
+  magicalEndurance: {
+    enabled: false,
+    costOfChanneling: 1,
+    negativeMEPerStep: 5,
+    useBaseCN: true,
+    maxME: settings.magicalEndurance.maxME_TBtimesWPB,
+    autoRegen: false
+  },
+  runes: {
+    enableDamage: false
+  },
+  scrolls: {
+    allowOvercasting: settings.scrolls.allowOvercastingMagick,
+    difficulty: 'hard',
+    difficultyMagick: 'challenging',
+    ownCategory: true,
+    magicalEndurance: 0,
+    updateName: settings.scrolls.ask,
+    replaceDescription: true,
+    defaultEncumbrance: 0.05,
+    defaultAvailability: "exotic",
+  }
+}
+
+export {constants, dataTypes, defaults, flags, settings};

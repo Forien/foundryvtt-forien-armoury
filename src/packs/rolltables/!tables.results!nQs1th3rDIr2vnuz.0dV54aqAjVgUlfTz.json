@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 5,
+  "range": [
+    66,
+    70
+  ],
+  "drawn": false,
+  "text": "Strong-minded",
+  "documentId": "Ywo6fZNPC4zbHHSQ",
+  "img": "modules/wfrp4e-core/icons/talents/strong-minded.png",
+  "_id": "0dV54aqAjVgUlfTz",
+  "flags": {},
+  "_key": "!tables.results!nQs1th3rDIr2vnuz.0dV54aqAjVgUlfTz"
+}

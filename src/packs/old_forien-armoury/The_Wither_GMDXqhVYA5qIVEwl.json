@@ -1,0 +1,75 @@
+{
+  "name": "The Wither",
+  "type": "disease",
+  "_id": "GMDXqhVYA5qIVEwl",
+  "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The Wither is a disease often contracted is musty tombs and mausoleums when encountering long dead corpses or the undead. The choking infected dust enters the body through the airways and begins to atrophy and wither away the host subject. As the disease runs its course the subject begins to appear skeletal and gaunt and may be mistaken for an undead creature.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "contraction": {
+      "label": "Contraction",
+      "value": "Failing an Average (+20) Endurance test after contact with corpses, undead or inhalation of tomb air in an infected area.",
+      "type": "String"
+    },
+    "incubation": {
+      "label": "Incubation",
+      "value": "1d10",
+      "unit": "days",
+      "type": "String"
+    },
+    "duration": {
+      "label": "Duration",
+      "value": "1d10*32",
+      "type": "String",
+      "unit": "days",
+      "active": false
+    },
+    "symptoms": {
+      "label": "Symptoms",
+      "value": "Lingering, Wasting (Moderate), Coughs and Sneezes",
+      "type": "String"
+    },
+    "permanent": {
+      "label": "Permanent",
+      "value": "",
+      "type": "String"
+    },
+    "diagnosed": false
+  },
+  "effects": [
+    "LNqcF41wFXfbW6m2",
+    "Zsj9nChfVx8GR7jj"
+  ],
+  "folder": "CnjDdyOSP29fHa3S",
+  "ownership": {
+    "default": 0,
+    "rTgnwDbJCJYDenyf": 3
+  },
+  "flags": {
+    "core": {},
+    "exportSource": {
+      "world": "wfrp-test-world",
+      "system": "wfrp4e",
+      "coreVersion": "11.315",
+      "systemVersion": "7.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1704834593590,
+    "modifiedTime": 1714493662263,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "sort": 0,
+  "_key": "!items!GMDXqhVYA5qIVEwl"
+}

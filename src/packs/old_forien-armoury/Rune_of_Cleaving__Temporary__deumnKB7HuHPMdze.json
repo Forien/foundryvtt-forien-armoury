@@ -1,0 +1,86 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of Cleaving (Temporary)",
+  "_id": "deumnKB7HuHPMdze",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "<p>Attacks made with a weapon engraved with this Rune deal +1 Damage. Lasts 1 minute.</p>",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Item",
+        "equipTransfer": false,
+        "avoidTest": {
+          "value": "none"
+        },
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Rune of Cleaving (Temporary)",
+          "trigger": "calculateOpposedDamage",
+          "script": "\n  args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);\n",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        },
+        {
+          "label": "Activate Rune of Cleaving",
+          "string": "",
+          "trigger": "manual",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          },
+          "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "calculateOpposedDamage",
+        "preventDuplicateEffects": false,
+        "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);\n}"
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.POWvKoi6MDYkT2ba"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": "#e25532",
+  "_key": "!items.effects!a0HD1sx7SS4ZCw5A.deumnKB7HuHPMdze"
+}

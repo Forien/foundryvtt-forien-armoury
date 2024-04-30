@@ -22,14 +22,33 @@
       "isPassive": true
     },
     "wfrp4e": {
-      "effectTrigger": "prepareItem",
-      "effectApplication": "actor",
       "hide": false,
-      "preventDuplicateEffects": false,
-      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.steelstormHandling(args, this);",
-      "promptItem": false
+      "promptItem": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": false,
+        "avoidTest": {
+          "value": "none"
+        },
+        "testIndependent": false,
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Steelstorm Handling",
+          "trigger": "prepareItem",
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.steelstormHandling(args, this);"
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "prepareItem",
+        "preventDuplicateEffects": false,
+        "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.steelstormHandling(args, this);"
+      }
     }
   },
   "tint": null,
-  "_key": "!items.effects!O987u5M0SL46gm3v.7Vg2r1TdLtsLuwG9"
+  "_key": "!items.effects!APBiM8PBN1I9xVHY.7Vg2r1TdLtsLuwG9"
 }

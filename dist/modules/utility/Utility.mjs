@@ -42,7 +42,7 @@ export default class Utility {
       console.log(`🦊 %c${constants.moduleLabel}: %c${notification}`, `color: ${purple}`, `color: ${colour}`, data);
 
     if (!consoleOnly)
-      ui?.notifications?.notify(notification, type, {permanent: permanent, console: false});
+      ui?.notifications?.notify(notification, type, {permanent: permanent, console: false, localize: true});
 
     return false;
   }

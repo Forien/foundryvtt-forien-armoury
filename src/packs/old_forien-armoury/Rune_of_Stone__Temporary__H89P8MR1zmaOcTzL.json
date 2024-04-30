@@ -1,0 +1,87 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+  "transfer": true,
+  "name": "Rune of Stone (Temporary)",
+  "_id": "H89P8MR1zmaOcTzL",
+  "changes": [],
+  "disabled": true,
+  "duration": {
+    "startTime": null,
+    "seconds": 60,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "<p>Armour Engraved with this Rune gains +1 AP on all of its protected locations. Lasts 1 minute.</p>",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "promptItem": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Item",
+        "equipTransfer": false,
+        "avoidTest": {
+          "value": "none"
+        },
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Rune of Stone (Temporary)",
+          "trigger": "prepareOwned",
+          "script": "let ap = args.item.system.AP;\n\nfor (let loc in ap) {\n  let location = args.item.system.AP[loc];\n  if (location > 0)\n  args.item.system.AP[loc] += 1;\n};",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        },
+        {
+          "label": "Activate Rune of Stone",
+          "string": "",
+          "trigger": "manual",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          },
+          "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "prepareItem",
+        "preventDuplicateEffects": false,
+        "script": "if (args.item?._id === this.item?.id) {\n  let ap = args.item.system.AP;\n\n  for (let loc in ap) {\n    let location = args.item.system.AP[loc];\n    if (location > 0)\n      args.item.system.AP[loc] += 1;\n  };\n}"
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": true
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.JV4MzBoyCXZBeKx5.ActiveEffect.rmY3T5ItD4NrVjMr"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!JV4MzBoyCXZBeKx5.H89P8MR1zmaOcTzL"
+}

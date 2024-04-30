@@ -11,6 +11,9 @@
         {{#if tabs.castingFatigue}}
             <a class="item" data-tab="casting-fatigue">{{localize "Forien.Armoury.Settings.Tabs.CastingFatigue"}}</a>
         {{/if}}
+        {{#if tabs.scrolls}}
+            <a class="item" data-tab="scrolls">{{localize "Forien.Armoury.Settings.Tabs.Scrolls"}}</a>
+        {{/if}}
         {{#if tabs.integrations}}
             <a class="item" data-tab="integrations">{{localize "Forien.Armoury.Settings.Tabs.Integrations"}}</a>
         {{/if}}
@@ -28,6 +31,9 @@
         </div>
         <div class="tab" data-tab="casting-fatigue">
             {{> forien-armoury.settings.tab settings=tabs.castingFatigue}}
+        </div>
+        <div class="tab" data-tab="scrolls">
+            {{> forien-armoury.settings.tab settings=tabs.scrolls}}
         </div>
         <div class="tab" data-tab="integrations">
             {{> forien-armoury.settings.tab settings=tabs.integrations}}

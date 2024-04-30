@@ -1,0 +1,16 @@
+{
+  "type": 2,
+  "documentCollection": "wfrp4e-core.items",
+  "weight": 5,
+  "range": [
+    26,
+    30
+  ],
+  "drawn": false,
+  "text": "Hardy",
+  "documentId": "zImcTgEl2XNnbu5W",
+  "img": "modules/wfrp4e-core/icons/talents/hardy.png",
+  "_id": "AEJx77oYi9cQzYNN",
+  "flags": {},
+  "_key": "!tables.results!nQs1th3rDIr2vnuz.AEJx77oYi9cQzYNN"
+}

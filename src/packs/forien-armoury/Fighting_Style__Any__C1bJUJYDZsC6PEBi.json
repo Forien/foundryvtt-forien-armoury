@@ -6,7 +6,7 @@
     "description": {
       "type": "String",
       "label": "Description",
-      "value": "<p>You must choose one of:</p><ul><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.O987u5M0SL46gm3v]{Fighting Style (Steelstorm)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.Da4zReU57OnesKGd]{Fighting Style (Ironshield)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.CUWdlx3IhkmTPL57]{Fighting Style (Evadecraft)}</p></li></ul><p>And replace this talent with chosen one</p>"
+      "value": "<p>You must choose one of:</p><ul><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.APBiM8PBN1I9xVHY]{Fighting Style (Steelstorm)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.dV7lAlVYKiHcCXBT]{Fighting Style (Ironshield)}</p></li><li><p>@UUID[Compendium.forien-armoury.forien-armoury.Item.CUWdlx3IhkmTPL57]{Fighting Style (Evadecraft)}</p></li></ul><p>And replace this talent with chosen one</p>"
     },
     "gmdescription": {
       "type": "String",
@@ -48,13 +48,13 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
+    "systemVersion": "7.1.2",
     "coreVersion": "11.315",
     "createdTime": 1702057628149,
-    "modifiedTime": 1702398322302,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "modifiedTime": 1714324639381,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
   },
   "_id": "C1bJUJYDZsC6PEBi",
-  "sort": 350000,
+  "sort": 0,
   "_key": "!items!C1bJUJYDZsC6PEBi"
 }

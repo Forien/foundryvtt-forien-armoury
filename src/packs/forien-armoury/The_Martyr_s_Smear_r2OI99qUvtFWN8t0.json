@@ -1,0 +1,76 @@
+{
+  "name": "The Martyr's Smear",
+  "type": "disease",
+  "_id": "r2OI99qUvtFWN8t0",
+  "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The Martyrs smear is a terrible affliction that attacks the eyes of the subject and causes painful swelling and lesions around the eyes. Eventually the suffering individual’s eyes will start to leak blood which, if left, will flow down their face in rivulets. This disease tends to spread more easily in remote areas of the Empire, or in fanatical religious communities where it is often misconstrued as a stigmata or “sign” from their gods. In these circumstances ignorant folk tend to willingly expose themselves to the host.  If there is any god behind it, one suspects the Fly Lord’s corrupting machinations have a hand in it’s spread.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "contraction": {
+      "label": "Contraction",
+      "value": "Failing a Difficult (-10) Endurance Test when you encounter the weeping fluids of an infected individual.",
+      "type": "String"
+    },
+    "incubation": {
+      "label": "Incubation",
+      "value": "1d8",
+      "unit": "days",
+      "type": "String"
+    },
+    "duration": {
+      "label": "Duration",
+      "value": "4d10",
+      "type": "String",
+      "unit": "days",
+      "active": false
+    },
+    "symptoms": {
+      "label": "Symptoms",
+      "value": "Purblind (Severe), Fever, Lingering (Easy)",
+      "type": "String"
+    },
+    "permanent": {
+      "label": "Permanent",
+      "value": "",
+      "type": "String"
+    },
+    "diagnosed": false
+  },
+  "effects": [
+    "OeEtvo9pi76j4bYY",
+    "4DpxgIjeJN6LRSxi",
+    "4mhSSevliSMwDV23"
+  ],
+  "folder": "CnjDdyOSP29fHa3S",
+  "ownership": {
+    "default": 0,
+    "rTgnwDbJCJYDenyf": 3
+  },
+  "flags": {
+    "core": {},
+    "exportSource": {
+      "world": "for-sigmar",
+      "system": "wfrp4e",
+      "coreVersion": "11.315",
+      "systemVersion": "7.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1703953425560,
+    "modifiedTime": 1714493639022,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "sort": 0,
+  "_key": "!items!r2OI99qUvtFWN8t0"
+}

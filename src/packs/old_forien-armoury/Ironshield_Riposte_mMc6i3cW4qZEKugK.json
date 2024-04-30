@@ -22,13 +22,32 @@
       "isPassive": true
     },
     "wfrp4e": {
-      "effectTrigger": "opposedDefender",
-      "effectApplication": "actor",
       "hide": false,
-      "preventDuplicateEffects": false,
-      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.ironshieldRiposte(args, this);"
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": false,
+        "avoidTest": {
+          "value": "none"
+        },
+        "testIndependent": false,
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Ironshield Riposte",
+          "trigger": "opposedDefender",
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.ironshieldRiposte(args, this);"
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "opposedDefender",
+        "preventDuplicateEffects": false,
+        "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.ironshieldRiposte(args, this);"
+      }
     }
   },
   "tint": null,
-  "_key": "!items.effects!Da4zReU57OnesKGd.mMc6i3cW4qZEKugK"
+  "_key": "!items.effects!dV7lAlVYKiHcCXBT.mMc6i3cW4qZEKugK"
 }

@@ -22,13 +22,32 @@
       "isPassive": true
     },
     "wfrp4e": {
-      "effectTrigger": "invoke",
-      "effectApplication": "actor",
       "hide": false,
-      "preventDuplicateEffects": false,
-      "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.brace(args, this);"
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": false,
+        "avoidTest": {
+          "value": "none"
+        },
+        "testIndependent": false,
+        "prompt": false
+      },
+      "scriptData": [
+        {
+          "label": "Brace!",
+          "trigger": "manual",
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.brace(args, this);"
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "actor",
+        "effectTrigger": "invoke",
+        "preventDuplicateEffects": false,
+        "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.brace(args, this);"
+      }
     }
   },
   "tint": null,
-  "_key": "!items.effects!Da4zReU57OnesKGd.QQc5Uz0Z9OW643GB"
+  "_key": "!items.effects!dV7lAlVYKiHcCXBT.QQc5Uz0Z9OW643GB"
 }

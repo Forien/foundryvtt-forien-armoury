@@ -13,7 +13,9 @@
       },
 
       "CombatFatigue": {
-        "CombatFatigueTest": " — Combat Fatigue"
+        "CombatFatigueTest": " — Combat Fatigue",
+        "CombatFatigueToolTip": "Combat Fatigue - Rounds to Endurance Test",
+        "CombatPassOutToollTip": "Combat Fatigue - Rounds to Pass Out"
       },
 
       "CastingFatigue": {
@@ -148,7 +150,7 @@
         },
         "MasterRuneOfDismay": {
           "name": "Master Rune of Dismay",
-          "effect": "All enemies within 48 yards of the user must make a Willpower Test or suffer a @Condition[Stunned]{Stunned} Condition. Activation takes an Action, can only be used once per Encounter."
+          "effect": "All enemies within 24 yards of the user must make a Willpower Test or suffer a @Condition[Stunned]{Stunned} Condition. Activation takes an Action, can only be used once per Encounter."
         },
         "MasterRuneOfSpite": {
           "name": "Master Rune of Spite",
@@ -227,6 +229,10 @@
         }
       },
 
+      "Skills": {
+        "Runecraft": "Runecraft"
+      },
+
       "CheckCareer": {
         "CurrentCareer": "Your current career is <strong>{currentCareer}</strong>.",
         "CurrentCareerLevel": "It is <strong>Level {careerLevel}</strong> career, so required amount of advances is <strong>{requiredAdvances}</strong>.",
@@ -247,13 +253,15 @@
         "YouHaveTalents": "You have bought <strong>{done}</strong> career talents.",
         "ConclusionCannot": "You can't complete your career yet.",
         "ConclusionCan": "Congratulations! You can complete your current career!",
-        "ConclusionPotential": "You have „potential“ skills and/or talents, talk to your GM. They might count towards your career!"
+        "ConclusionPotential": "You have „potential“ skills and/or talents, talk to your GM. They might count towards your career!",
+        "HasSpareExp": "You have {exp} spare experience you may spend!"
       },
 
       "Effects": {
         "SelectTalent": "Select Talent to add",
         "AddTalent": "Add Talent",
         "NotEnoughAdvances": "You do not have enough advances to run the \"{effect}\" effect! You have {advances}, but the effect requires {required}.",
+        "NotEnoughAdvantage": "You do not have enough Advantage to spend on {name} action. You have {have} and need {need}.",
 
         "Steelstorm": {
           "Assault": {
@@ -262,15 +270,17 @@
           },
           "AllIn": {
             "Name": "Going All In",
-            "Description": "{character} goes <b>All In</b>, gaining +20 modifier to all attacks until the start of their next turn. However, during this time, all attackes aimed at this character will be <b>Unopposed</b>.",
-            "Mastery": "Because of Mastery, non-Damaging weapons become Damaging, while Damaging weapons become Impact instead"
+            "Description": "{character} goes <b>All In</b>, gaining +20 modifier to all attacks until the start of their next turn. However, during this time, all attacks aimed at this character will be <b>Unopposed</b>.",
+            "Mastery": "Because of Mastery, non-Damaging weapons become Damaging, while Damaging weapons become Impact instead",
+            "Notice": "Attacks against {target} are unopposed."
           }
         },
 
         "Ironshield": {
           "Bracing": {
             "Name": "Bracing",
-            "Description": "{character} is <b>Bracing</b> against incoming attacks, gaining +20 modifier to all defensive Weapon Tests. <br/>While Bracing, character can only move using their Walk speed and they are unable to perform any Actions (Free Actions are up to GM). <br/>Bracing ends the moment character initiates an Attack."
+            "Description": "{character} is <b>Bracing</b> against incoming attacks, gaining +20 modifier to all defensive Weapon Tests. <br/>While Bracing, character can only move using their Walk speed and they are unable to perform any Actions (Free Actions are up to GM). <br/>Bracing ends the moment character initiates an Attack.",
+            "Reminder": "{character} is <b>Bracing</b> against incoming attacks and can only Move using Walk speed and cannot perform Actions."
           },
           "Riposte": {
             "Name": "Ironshield Riposte",
@@ -309,20 +319,46 @@
         "CallbackError": "There was an Error when executing a Callback. Check the console (F12) for details."
       },
 
+      "Scrolls": {
+        "MagicScroll": "Magic Scroll",
+        "MagicScrolls": "Magic Scrolls",
+        "Scroll": "Scroll",
+        "Scrolls": "Scrolls",
+        "LoreOf": "Lore of {lore}",
+        "ScrollOf": "Scroll of {spell}",
+        "CastFromScroll": "Cast {spell} from scroll",
+        "ScrollTest": "Scroll Reading Test",
+        "DropHere": "Drop Spell here to attach it",
+
+        "NewScrollDefaultName": "Empty Magic Scroll",
+
+        "MacroCantFind": "Could not find a Spell of „{lore}” Lore and maximum CN of {maxCN}.",
+
+        "ChangeScrollNameTitle": "Update Scroll's name?",
+        "ChangeScrollNameContent": "Update Scroll's name to „{name}”?",
+        "ChangeScrollDescription": "This will also replace Scroll's Description!",
+
+        "ActorCanNotUse": "{actor} can't use the „{scroll}”. Either there are no scrolls left, or Actor does not know {language}.",
+        "ItemNotFound": "Something went wrong. Dropped Item was not found!",
+        "MustHaveSource": "Spell must have a source in, or originate from, World or Compendium in order to create a Scroll!",
+        "NotASpell": "Only Spells can be inscribed on a Scroll!",
+        "MustHaveLore": "Only Spells with Lore can be inscribed on a Scroll!"
+      },
+
       "Symptoms": {
         "Vertigo": {
           "Name": "Vertigo",
-          "Description": "You have trouble staying balanced and feel the sensation of spinning around. All <b>Weapon Tests</b>, as well as Tests based on either <b>Agility</b>, <b>Dexterity</b>, or <b>Intelligence</b> suffer a penalty of <b>–2 SL</b> while you are dizzy.",
+          "Description": "You have trouble staying balanced and feel the sensation of spinning around. All <b>Weapon Tests</b>, as well as Tests based on either <b>Agility</b>, <b>Dexterity</b>, or <b>Intelligence</b> suffer a penalty of <b>-2 SL</b> while you are dizzy.",
           "Treatment": "There is no treatment available for Vertigo, this symptom ends when the cause of it ends."
         },
         "Scarring": {
           "Name": "Scarring",
-          "Description": "You have been horribly scarred by your ordeal and your appearance unsettles or disgusts other. As a result you suffer a <b>–10</b> penalty to all <b>Fellowship Tests</b>.",
+          "Description": "You have been horribly scarred by your ordeal and your appearance unsettles or disgusts others. As a result you suffer a <b>-10</b> penalty to all <b>Fellowship Tests</b>.",
           "Treatment": "Scarring is usually permanent barring special magic."
         },
         "Rashes": {
           "Name": "Rashes",
-          "Description": "You have a number of red, itchy rashes. As a result your appearance is slightly marred and you lose some of your deftness as you scratch and squirm. Receive a <b>–5 modifier</b> to your <b>Dexterity</b> and <b>Fellowship</b> Characteristics.",
+          "Description": "You have numerous red, itchy rashes. As a result your appearance is slightly marred and you lose some of your deftness as you scratch and squirm. Receive a <b>-5</b> modifier to your <b>Dexterity</b> and <b>Fellowship</b> Characteristics.",
           "Treatment": "Depending on the disease some herbs and alchemical mixes can alleviate rashes. Of course there are also many fake remedies available for sale that do nothing and a purchased treatment has a 10% chance of being snake-oil. Treatments cost from 10 brass pennies and upwards depending on the status of the purchaser and the reputation of the seller. Anyone with <b>Trade (Apothecary)</b> or <b>Trade (Alchemist)</b> with access to appropriate ingredients (costing 5 pennies) can create enough salve that when applied daily can alleviate the symptoms for a week."
         },
         "Taint": {
@@ -330,7 +366,24 @@
           "Description": "This disease is tainted by the powers of Chaos and affects the very soul of the suffering victim. Unless the victim passes a <b>Challenging (+0) Endurance Test</b>, they suffer 1 point of @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.115GzWrmkD4viyy5]{Corruption}.",
           "Treatment": "There is no treatment for the Taint.",
           "Failure": "{character} gains 1 point of Corruption"
+        },
+        "Purblind": {
+          "Name": "Purblind",
+          "Description": "Your eyes have been afflicted causing them to swell and weep pus, blood or other fluids. You are blinded to a degree based on how severe it is. You suffer a <b>-10</b> penalty to all sight-based attributes and skill checks including attacks. This penalty rises to <b>-20</b> for Moderate, and <b>-30</b> for Severe levels of affliction.",
+          "Treatment": "This symptom lasts until the source of it has been dealt with. Cold cloths with a mix of medicinal herbs can be applied over the eyes to help relieve some of the pressure, but that will not help with the loss of sight."
+        },
+        "Wasting": {
+          "Name": "Wasting",
+          "Description": "This disease has attacked and atrophied your muscles and ligaments. As the disease progresses you are gradually wasting away and suffer from a <b>-10</b> penalty to your <b>Strength</b>, <b>Agility</b>, <b>Toughness</b> and <b>Dexterity</b>, as well as all <b>Weapon Tests</b>. This penalty grows to <b>-20</b> for Moderate and  <b>-30</b> for Severe. Any victim whose <b>Toughness</b> is reduced to 0 eventually dies from the disease as it runs its course.",
+          "Treatment": "Wasting can only be cured by addressing the underlying disease. A subject who is being cared for and well fed above their normal intake (Requiring a status expenditure of <b>2 Standing levels</b> higher than your career) can make a weekly <b>Difficult (-10) Endurance Test</b> to temporarily reduce the effect by <b>10</b> for a week."
+        },
+        "Dementia": {
+          "Name": "Dementia",
+          "Description": "The disease has influenced your cognitive faculties. Your ability to think clearly, reason, or remember is adversely affected and you suffer a <b>-20</b> penalty to your <b>Intelligence</b> and <b>-15</b> to your <b>Initiative</b>.",
+          "Treatment": "There is no known treatment for Dementia, and it lasts for the duration of the disease affecting your thinking capacity."
         }
+
+
       },
 
       "Settings": {
@@ -343,6 +396,7 @@
           "ArrowReclamation": "Arrow Reclamation",
           "CombatFatigue": "Combat Fatigue",
           "CastingFatigue": "Casting Fatigue",
+          "Scrolls": "Scrolls",
           "Integrations": "Integrations"
         },
 
@@ -388,7 +442,9 @@
           "Enable": "Enable Combat Fatigue",
           "EnableHint": "When enabled, combatants will have to pass Endurance Test after TB rounds, or gain Fatigue",
           "EnableNPC": "NPC Combat Fatigue",
-          "EnableNPCHint": "Should NPCs follow the rules of Combat Fatigue (if enabled)?"
+          "EnableNPCHint": "Should NPCs follow the rules of Combat Fatigue (if enabled)?",
+          "EnableCorePassOut": "Enable Core Pass Out",
+          "EnableCorePassOutHint": "Enable this to automate characters losing consciousness according to CRB rules on page 172. Disable if you are playing on Up in Arms ruleset."
         },
 
         "CastingFatigue": {
@@ -409,6 +465,40 @@
           "AutoRegen": "Automate Regeneration?",
           "AutoRegenHint": "If checked, module will regenerate Actors' ME automatically (Requires a time tracking module. <a href=\"https://foundryvtt.com/packages/foundryvtt-simple-calendar\" target=\"_blank\"><b>Simple Calendar</b></a> is recommended).",
           "AutoRegenNoWorldTime": "WorldTime hasn't been set. Please activate and configure a time tracking module (for example, Simple Calendar) before enabling Automated Regeneration."
+        },
+
+        "Scrolls": {
+          "AllowOvercasting":  "Allow Overcasting",
+          "AllowOvercastingHint": "Should spells cast from Scrolls be able to be overcast?",
+          "AllowOvercastingMagick": "Only with Language (Magick)",
+          "Always": "Always",
+          "Never": "Never",
+
+          "DifficultyMagick": "Magick Difficulty",
+          "DifficultyMagickHint": "What should be default difficulty for Scrolls written in Language (Magick)?",
+
+
+          "Difficulty": "Non-Magick Difficulty",
+          "DifficultyHint": "What should be default difficulty for Scrolls written in Language other than Magick?",
+
+          "OwnCategory":  "Own Inventory Group",
+          "OwnCategoryHint": "Should scrolls appear in inventory as their own, separate group? If false, they will be attached to Books and Documents. <em>(client-side setting)</em>",
+
+          "MagicalEndurance": "Magical Endurance cost",
+          "MagicalEnduranceHint": "How much ME should using Scrolls cost? Requires Casting Fatigue feature enabled. Set to 0 to disable.",
+
+          "UpdateName": "Update Scroll's Name",
+          "UpdateNameHint": "Should Scroll's name be automatically updated whenever a new Spell is attached to the Scroll?",
+          "Ask": "Ask",
+
+          "ReplaceDescription": "Replace Scroll's Description?",
+          "ReplaceDescriptionHint": "Should Scroll's description also be updated along with the Name?",
+
+          "DefaultEncumbrance": "Default Encumbrance",
+          "DefaultEncumbranceHint": "Select what default Encumbrance for Magic Scroll items should be. Remember that Encumbrance is representing both weight and volume.",
+
+          "DefaultAvailability": "Default Availability",
+          "DefaultAvailabilityHint": "Select what default Availability for Magic Scroll items should be."
         },
 
         "ATL": {

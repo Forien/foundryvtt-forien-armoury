@@ -1,0 +1,34 @@
+{
+  "name": "Career - Runebound",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "results": [
+    "SCMOXcTOPia2WYsj"
+  ],
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "wfrp4e": {
+      "key": "career",
+      "column": "runebound"
+    }
+  },
+  "description": "",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1657737418930,
+    "modifiedTime": 1714495577324,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "folder": "j1vqMtlcpWWz1G9T",
+  "ownership": {
+    "default": 0,
+    "lH03X01PvrUb1jYg": 3,
+    "rTgnwDbJCJYDenyf": 3
+  },
+  "_id": "Mj72jAZUKwqXVM31",
+  "sort": 100000,
+  "_key": "!tables!Mj72jAZUKwqXVM31"
+}

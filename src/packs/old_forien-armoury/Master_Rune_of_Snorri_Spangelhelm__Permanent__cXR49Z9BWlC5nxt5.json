@@ -1,0 +1,60 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+  "transfer": true,
+  "name": "Master Rune of Snorri Spangelhelm (Permanent)",
+  "_id": "cXR49Z9BWlC5nxt5",
+  "changes": [
+    {
+      "key": "system.characteristics.ws.modifier",
+      "mode": 2,
+      "value": "30",
+      "priority": null
+    }
+  ],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "<p>Wielder of a Weapon Engraved with this Rune gains +30 Weapon Skill.</p>",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "promptItem": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": true,
+        "avoidTest": {
+          "value": "none"
+        },
+        "prompt": false
+      },
+      "scriptData": [],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "",
+        "preventDuplicateEffects": false,
+        "script": ""
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": false
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.CnyQtehyIA6J9l02"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!PE6EPbkyk3UirW9z.cXR49Z9BWlC5nxt5"
+}

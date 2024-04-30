@@ -41,20 +41,30 @@ export default class Diseases extends ForienBaseModule {
       transfer: true,
       flags: {
         wfrp4e: {
-          "effectApplication": "actor",
-          "effectTrigger": "prefillDialog",
-          "symptom": true,
-          "script": `
-            let applicableCharacteristics = ["ag", "int", "dex"];
-
-            if (args.type === "weapon") {
-              args.prefillModifiers.slBonus -= 2;
-            } else if (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) {
-              args.prefillModifiers.slBonus -= 2;
-            } else if (args.type === "skill" && applicableCharacteristics.includes(args.item.characteristic.key)) {
-              args.prefillModifiers.slBonus -= 2;
+          symptom: true,
+          applicationData: {
+            type: "document",
+            documentType: "Actor"
+          },
+          scriptData: [
+            {
+              label: "Vertigo",
+              trigger: "dialog",
+              script: "args.fields.slBonus -= 2;",
+              options: {
+                dialog: {
+                  activateScript: "return true;",
+                  hideScript: `
+                      const applicableCharacteristics = ["ag", "int", "dex"];
+                      
+                      return args.type !== "weapon" && !applicableCharacteristics.includes(args.data.characteristic);
+                    `,
+                  submissionScript: "",
+                  targeter: false
+                }
+              }
             }
-          `
+          ]
         }
       }
     };
@@ -70,10 +80,18 @@ export default class Diseases extends ForienBaseModule {
       transfer: true,
       flags: {
         wfrp4e: {
-          "effectApplication": "actor",
-          "effectTrigger": "prePrepareData",
-          "symptom": true,
-          "script": `args.actor.system.characteristics.fel.modifier -= 10;`
+          symptom: true,
+          applicationData: {
+            type: "document",
+            documentType: "Actor"
+          },
+          scriptData: [
+            {
+              label: "Scarring",
+              trigger: "prePrepareData",
+              script: "args.actor.system.characteristics.fel.modifier -= 10"
+            }
+          ]
         }
       }
     };
@@ -89,16 +107,24 @@ export default class Diseases extends ForienBaseModule {
       transfer: true,
       flags: {
         wfrp4e: {
-          "effectApplication": "actor",
-          "effectTrigger": "prePrepareData",
-          "symptom": true,
-          "script": `
-            args.actor.system.characteristics.fel.modifier -= 5;
-            args.actor.system.characteristics.dex.modifier -= 5;
-          `
+          symptom: true,
+          applicationData: {
+            type: "document",
+            documentType: "Actor"
+          },
+          scriptData: [
+            {
+              label: "Scarring",
+              trigger: "prePrepareData",
+              script: `
+                args.actor.system.characteristics.fel.modifier -= 5;
+                args.actor.system.characteristics.dex.modifier -= 5;
+              `
+            }
+          ]
         }
       }
-    }
+    };
     //#endregion
 
     //#region Taint
@@ -108,33 +134,167 @@ export default class Diseases extends ForienBaseModule {
     config.symptomEffects["taint"] = {
       name: game.i18n.localize("Forien.Armoury.Symptoms.Taint.Name"),
       icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      transfer: true,
+      flags: {
+        wfrp4e: {
+          symptom: true,
+          applicationData: {
+            type: "document",
+            documentType: "Actor"
+          },
+          scriptData: [
+            {
+              label: "Taint",
+              trigger: "manual",
+              script: `
+                const difficulty = "challenging";
+                
+                const setupData = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {
+                  context: {failure: game.i18n.format("Forien.Armoury.Symptoms.Taint.Failure", {character: args.actor.name})},
+                  absolute: {difficulty},
+                  appendTitle: " – " + game.i18n.localize("Forien.Armoury.Symptoms.Taint.Name"),
+                })
+                
+                const test = await args.actor.basicTest(setupData);
+                
+                if (test.result.outcome === "failure") {
+                  const newCorruption = args.actor.system.status.corruption.value + 1;
+                  await args.actor.update({"system.status.corruption.value": newCorruption});
+                }
+              `,
+            }
+          ]
+        }
+      }
+    };
+    //#endregion
+
+    //#region Purblind
+    config.symptoms["purblind"] = game.i18n.localize("Forien.Armoury.Symptoms.Purblind.Name");
+    config.symptomDescriptions["purblind"] = game.i18n.localize("Forien.Armoury.Symptoms.Purblind.Description");
+    config.symptomTreatment["purblind"] = game.i18n.localize("Forien.Armoury.Symptoms.Purblind.Treatment");
+    config.symptomEffects["purblind"] = {
+      name: game.i18n.localize("Forien.Armoury.Symptoms.Purblind.Name"),
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
       transfer: false,
       flags: {
         wfrp4e: {
-          "effectApplication": "actor",
-          "effectTrigger": "invoke",
-          "symptom": true,
-          "script": `
-            const difficulty = "challenging";
-            
-            if (this.actor.isOwner) {
-              const setupData = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {
-                context: {failure: game.i18n.format("Forien.Armoury.Symptoms.Taint.Failure", {character: args.actor.name})},
-                absolute: {difficulty},
-                appendTitle: " – " + game.i18n.localize("Forien.Armoury.Symptoms.Taint.Name"),
-              })
-            
-              const test = await args.actor.basicTest(setupData);
-            
-              if (test.result.outcome === "failure") {
-                const newCorruption = args.actor.system.status.corruption.value + 1;
-                await args.actor.update({"system.status.corruption.value": newCorruption});
+          symptom: true,
+          applicationData: {
+            type: "document",
+            documentType: "Actor"
+          },
+          scriptData: [
+            {
+              label: "Sight-based Tests from Purblind",
+              trigger: "dialog",
+              script: `
+                let modifier = -10;
+                if (this.effect.name.includes("Moderate"))
+                  modifier = -20;
+                else if (this.effect.name.includes("Severe"))
+                  modifier = -30;
+                
+                args.fields.modifier += modifier;
+              `,
+              options: {
+                dialog: {
+                  activateScript: "return true;",
+                  hideScript: `
+                    let applicableSkills = ["NAME.Art",  "NAME.Dodge",  "NAME.Drive",  "NAME.Evaluate",  "NAME.Melee",  "NAME.Navigation",  "NAME.Perception",  "NAME.PickLock",  "NAME.Ranged",  "NAME.Research",  "NAME.Ride",  "NAME.Row",  "NAME.Sail",  "NAME.SecretSigns",  "NAME.SetTrap",  "NAME.Stealth",  "NAME.Track"];
+                    applicableSkills = applicableSkills.map(s => game.i18n.localize(s));
+                    let applicableCharacteristics = ["ws", "bs", "ag", "dex"];
+                    
+                    return !(
+                      (args.type === "weapon") ||
+                      (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) ||
+                      (args.type === "skill" && applicableSkills.includes(args.item.name))
+                    )
+                  `,
+                  submissionScript: ""
+                }
               }
             }
-          `
+          ]
         }
       }
-    }
+    };
+    //#endregion
+
+    //#region Wasting
+    config.symptoms["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.Wasting.Name");
+    config.symptomDescriptions["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.Wasting.Description");
+    config.symptomTreatment["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.Wasting.Treatment");
+    config.symptomEffects["wasting"] = {
+      name: game.i18n.localize("Forien.Armoury.Symptoms.Wasting.Name"),
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      transfer: true,
+      flags: {
+        wfrp4e: {
+          symptom: true,
+          applicationData: {
+            type: "document",
+            documentType: "Actor"
+          },
+          scriptData: [
+            {
+              label: "Wasting",
+              trigger: "dialog",
+              script: `
+                  let modifier = -10;
+                  if (this.effect.name.includes("Moderate"))
+                    modifier = -20;
+                  else if (this.effect.name.includes("Severe"))
+                    modifier = -30;
+                  
+                  args.fields.modifier += modifier;
+                `,
+              options: {
+                dialog: {
+                  activateScript: "return true;",
+                  hideScript: `
+                    const applicableCharacteristics = ["ws", "bs", "s", "t", "ag", "dex"];
+
+                    return args.type !== "weapon" && !applicableCharacteristics.includes(args.data.characteristic);
+                  `,
+                  submissionScript: ""
+                }
+              }
+            }
+          ]
+        }
+      }
+    };
+    //#endregion
+
+    //#region Dementia
+    config.symptoms["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.Dementia.Name");
+    config.symptomDescriptions["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.Dementia.Description");
+    config.symptomTreatment["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.Dementia.Treatment");
+    config.symptomEffects["dementia"] = {
+      name: game.i18n.localize("Forien.Armoury.Symptoms.Dementia.Name"),
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      transfer: true,
+      flags: {
+        wfrp4e: {
+          symptom: true,
+          applicationData: {
+            type: "document",
+            documentType: "Actor"
+          },
+          scriptData: [
+            {
+              label: "Dementia",
+              trigger: "prePrepareData",
+              script: `
+                args.actor.system.characteristics.i.modifier -= 15;
+                args.actor.system.characteristics.int.modifier -= 20;
+              `
+            }
+          ]
+        }
+      }
+    };
     //#endregion
 
     return config;
@@ -163,7 +323,7 @@ export default class Diseases extends ForienBaseModule {
    * @param {ActorWfrp4e} actor
    */
   async #registerActorDiseaseListener(actor) {
-    let diseases = actor.itemCategories.disease;
+    let diseases = actor.itemTypes.disease;
 
     for (let disease of diseases) {
       await this.#registerDiseaseListener(actor, disease);

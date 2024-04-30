@@ -1,0 +1,19 @@
+{
+  "name": "Character Creation",
+  "sorting": "a",
+  "folder": null,
+  "type": "RollTable",
+  "_id": "j1vqMtlcpWWz1G9T",
+  "sort": 0,
+  "color": "#3a8352",
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1714495575665,
+    "modifiedTime": 1714495584444,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "_key": "!folders!j1vqMtlcpWWz1G9T"
+}

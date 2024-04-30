@@ -1,4 +1,4 @@
-import {constants, settings} from "./constants.mjs";
+import {constants, defaults, settings} from "./constants.mjs";
 import SettingsApp from "./apps/SettingsApp.mjs";
 import Utility from "./utility/Utility.mjs";
 
@@ -21,17 +21,17 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.Runes.EnableHint',
     scope: 'world',
     config: false,
-    default: false,
+    default: defaults.runes.enableDamage,
     type: Boolean
   });
 
-  //
+  // Should disease progress automatically with passage of time?
   game.settings.register(constants.moduleId, settings.diseases.autoProgress, {
     name: 'Forien.Armoury.Settings.Diseases.AutoProgress',
     hint: 'Forien.Armoury.Settings.Diseases.AutoProgressHint',
     scope: 'world',
     config: false,
-    default: false,
+    default: defaults.diseases.autoProgress,
     type: Boolean,
     onChange: (value) => {
       if (value && game.time.worldTime === 0) {
@@ -49,7 +49,7 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.CastingFatigue.EnableHint',
     scope: 'world',
     config: false,
-    default: false,
+    default: defaults.magicalEndurance.enabled,
     type: Boolean
   });
 
@@ -59,7 +59,7 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.CastingFatigue.CostOfChannelingHint',
     scope: 'world',
     config: false,
-    default: 1,
+    default: defaults.magicalEndurance.costOfChanneling,
     type: Number
   });
 
@@ -69,7 +69,7 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.CastingFatigue.NegativeMEPerStepHint',
     scope: 'world',
     config: false,
-    default: 5,
+    default: defaults.magicalEndurance.negativeMEPerStep,
     type: Number
   });
 
@@ -79,7 +79,7 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.CastingFatigue.UseBaseCNHint',
     scope: 'world',
     config: false,
-    default: true,
+    default: defaults.magicalEndurance.useBaseCN,
     type: Boolean
   });
 
@@ -89,7 +89,7 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.CastingFatigue.MaxMEHint',
     scope: 'world',
     config: false,
-    default: 'TBtimesWPB',
+    default: defaults.magicalEndurance.maxME,
     type: String,
     choices: {
       [settings.magicalEndurance.maxME_TBtimesWPB]: 'Forien.Armoury.Settings.CastingFatigue.TBtimesWPB',
@@ -98,13 +98,13 @@ function registerSettings() {
     }
   });
 
-  //
+  // Should Magical Endurance be renegerating automatically with passage of time?
   game.settings.register(constants.moduleId, settings.magicalEndurance.autoRegen, {
     name: 'Forien.Armoury.Settings.CastingFatigue.AutoRegen',
     hint: 'Forien.Armoury.Settings.CastingFatigue.AutoRegenHint',
     scope: 'world',
     config: false,
-    default: false,
+    default: defaults.magicalEndurance.autoRegen,
     type: Boolean,
     onChange: (value) => {
       if (value && game.time.worldTime === 0) {
@@ -122,7 +122,7 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.CombatFatigue.EnableHint',
     scope: 'world',
     config: false,
-    default: false,
+    default: defaults.combatFatigue.enable,
     type: Boolean
   });
 
@@ -132,7 +132,17 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.CombatFatigue.EnableNPCHint',
     scope: 'world',
     config: false,
-    default: true,
+    default: defaults.combatFatigue.enableNPC,
+    type: Boolean
+  });
+
+  // Enable Core Pass Out rules
+  game.settings.register(constants.moduleId, settings.combatFatigue.enableCorePassOut, {
+    name: 'Forien.Armoury.Settings.CombatFatigue.EnableCorePassOut',
+    hint: 'Forien.Armoury.Settings.CombatFatigue.EnableCorePassOutHint',
+    scope: 'world',
+    config: false,
+    default: defaults.combatFatigue.enableCorePassOut,
     type: Boolean
   });
 
@@ -142,7 +152,7 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.ArrowReclamation.EnableHint',
     scope: 'world',
     config: false,
-    default: false,
+    default: defaults.arrowReclamation.enable,
     type: Boolean
   });
 
@@ -152,7 +162,7 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.ArrowReclamation.EnableArrowsHint',
     scope: 'world',
     config: false,
-    default: true,
+    default: defaults.arrowReclamation.enableArrows,
     type: Boolean
   });
   // Add enable/disable recovery of Bolts
@@ -161,7 +171,7 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.ArrowReclamation.EnableBoltsHint',
     scope: 'world',
     config: false,
-    default: false,
+    default: defaults.arrowReclamation.enableBolts,
     type: Boolean
   });
   // Add enable/disable recovery of Bullets
@@ -170,7 +180,7 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.ArrowReclamation.EnableBulletsHint',
     scope: 'world',
     config: false,
-    default: true,
+    default: defaults.arrowReclamation.enableBullets,
     type: Boolean
   });
 
@@ -180,17 +190,17 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.ArrowReclamation.RuleHint',
     scope: 'world',
     config: false,
-    default: 'default',
+    default: defaults.arrowReclamation.rule,
     type: String,
     choices: {
-      'default': 'Forien.Armoury.Settings.ArrowReclamation.DefaultRule',
-      'success': 'Forien.Armoury.Settings.ArrowReclamation.SuccessRule',
-      'noCrit': 'Forien.Armoury.Settings.ArrowReclamation.NoCritRule',
-      'successNoCrit': 'Forien.Armoury.Settings.ArrowReclamation.SuccessNoCritRule',
-      'failure': 'Forien.Armoury.Settings.ArrowReclamation.FailureRule',
-      'failureNoCrit': 'Forien.Armoury.Settings.ArrowReclamation.FailureNoCritRule',
-      'percentage': 'Forien.Armoury.Settings.ArrowReclamation.PercentageRule',
-      'percentageNoCrit': 'Forien.Armoury.Settings.ArrowReclamation.PercentageNoCritRule',
+      [settings.arrowReclamation.choices.default]: 'Forien.Armoury.Settings.ArrowReclamation.DefaultRule',
+      [settings.arrowReclamation.choices.success]: 'Forien.Armoury.Settings.ArrowReclamation.SuccessRule',
+      [settings.arrowReclamation.choices.noCrit]: 'Forien.Armoury.Settings.ArrowReclamation.NoCritRule',
+      [settings.arrowReclamation.choices.successNoCrit]: 'Forien.Armoury.Settings.ArrowReclamation.SuccessNoCritRule',
+      [settings.arrowReclamation.choices.failure]: 'Forien.Armoury.Settings.ArrowReclamation.FailureRule',
+      [settings.arrowReclamation.choices.failureNoCrit]: 'Forien.Armoury.Settings.ArrowReclamation.FailureNoCritRule',
+      [settings.arrowReclamation.choices.percentage]: 'Forien.Armoury.Settings.ArrowReclamation.PercentageRule',
+      [settings.arrowReclamation.choices.percentageNoCrit]: 'Forien.Armoury.Settings.ArrowReclamation.PercentageNoCritRule',
     }
   });
 
@@ -200,8 +210,111 @@ function registerSettings() {
     hint: 'Forien.Armoury.Settings.ArrowReclamation.PercentageHint',
     scope: 'world',
     config: false,
-    default: 50,
+    default: defaults.arrowReclamation.percentage,
     type: Number
+  });
+
+  // Allow Overcasting when casting from Scrolls
+  game.settings.register(constants.moduleId, settings.scrolls.allowOvercasting, {
+    name: 'Forien.Armoury.Settings.Scrolls.AllowOvercasting',
+    hint: 'Forien.Armoury.Settings.Scrolls.AllowOvercastingHint',
+    scope: 'world',
+    config: false,
+    default: settings.scrolls.allowOvercasting,
+    type: String,
+    choices: {
+      [settings.scrolls.allowOvercastingMagick]: 'Forien.Armoury.Settings.Scrolls.AllowOvercastingMagick',
+      [settings.scrolls.always]: 'Forien.Armoury.Settings.Scrolls.Always',
+      [settings.scrolls.never]: 'Forien.Armoury.Settings.Scrolls.Never',
+    }
+  });
+
+  // Difficulty of Magick language
+  game.settings.register(constants.moduleId, settings.scrolls.difficultyMagick, {
+    name: 'Forien.Armoury.Settings.Scrolls.DifficultyMagick',
+    hint: 'Forien.Armoury.Settings.Scrolls.DifficultyMagickHint',
+    scope: 'world',
+    config: false,
+    default: defaults.scrolls.difficultyMagick,
+    type: String,
+    choices: game.wfrp4e.config.difficultyLabels
+  });
+
+  // Difficulty of non Magick languages
+  game.settings.register(constants.moduleId, settings.scrolls.difficulty, {
+    name: 'Forien.Armoury.Settings.Scrolls.Difficulty',
+    hint: 'Forien.Armoury.Settings.Scrolls.DifficultyHint',
+    scope: 'world',
+    config: false,
+    default: defaults.scrolls.difficulty,
+    type: String,
+    choices: game.wfrp4e.config.difficultyLabels
+  });
+
+  // Should scroll have their own category in inventory?
+  game.settings.register(constants.moduleId, settings.scrolls.ownCategory, {
+    name: 'Forien.Armoury.Settings.Scrolls.OwnCategory',
+    hint: 'Forien.Armoury.Settings.Scrolls.OwnCategoryHint',
+    scope: 'client',
+    config: false,
+    default: defaults.scrolls.ownCategory,
+    type: Boolean
+  });
+
+  // How much Magical Endurance using scroll costs?
+  game.settings.register(constants.moduleId, settings.scrolls.magicalEndurance, {
+    name: 'Forien.Armoury.Settings.Scrolls.MagicalEndurance',
+    hint: 'Forien.Armoury.Settings.Scrolls.MagicalEnduranceHint',
+    scope: 'world',
+    config: false,
+    default: defaults.scrolls.magicalEndurance,
+    type: Number
+  });
+
+  // Should scroll have replaced Description with one from the spell as well?
+  game.settings.register(constants.moduleId, settings.scrolls.updateName, {
+    name: 'Forien.Armoury.Settings.Scrolls.UpdateName',
+    hint: 'Forien.Armoury.Settings.Scrolls.UpdateNameHint',
+    scope: 'world',
+    config: false,
+    default: defaults.scrolls.updateName,
+    type: String,
+    choices: {
+      [settings.scrolls.ask]: 'Forien.Armoury.Settings.Scrolls.Ask',
+      [settings.scrolls.always]: 'Forien.Armoury.Settings.Scrolls.Always',
+      [settings.scrolls.never]: 'Forien.Armoury.Settings.Scrolls.Never',
+    }
+  });
+
+  // Should scroll have replaced Description with one from the spell as well?
+  game.settings.register(constants.moduleId, settings.scrolls.replaceDescription, {
+    name: 'Forien.Armoury.Settings.Scrolls.ReplaceDescription',
+    hint: 'Forien.Armoury.Settings.Scrolls.ReplaceDescriptionHint',
+    scope: 'world',
+    config: false,
+    default: defaults.scrolls.replaceDescription,
+    type: Boolean
+  });
+
+  // What should be default Encumbrance for newly created Magic Scrolls?
+  game.settings.register(constants.moduleId, settings.scrolls.defaultEncumbrance, {
+    name: 'Forien.Armoury.Settings.Scrolls.DefaultEncumbrance',
+    hint: 'Forien.Armoury.Settings.Scrolls.DefaultEncumbranceHint',
+    scope: 'world',
+    config: false,
+    default: defaults.scrolls.defaultEncumbrance,
+    type: Number
+  });
+
+  // What should be default Availability for newly created Magic Scrolls?
+  game.settings.register(constants.moduleId, settings.scrolls.defaultAvailability, {
+    name: 'Forien.Armoury.Settings.Scrolls.DefaultAvailability',
+    hint: 'Forien.Armoury.Settings.Scrolls.DefaultAvailabilityHint',
+    scope: 'world',
+    config: false,
+    default: defaults.scrolls.defaultAvailability,
+    choices: game.wfrp4e.config.availability,
+    type: String
   });
 
   game.settings.register(constants.moduleId, settings.initialized, {

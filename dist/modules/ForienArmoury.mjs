@@ -12,9 +12,12 @@ import TemporaryRunes from "./features/Runes.mjs";
 import Utility from "./utility/Utility.mjs";
 import WorldTimeObserver from "./utility/WorldTimeObserver.mjs";
 import {Debug} from "./utility/Debug.mjs";
-import {constants, settings} from "./constants.mjs";
+import {constants, dataTypes, settings} from "./constants.mjs";
 import {styleHelpers} from "./helpers/styleHelpers.js";
 import {registerSettings} from "./Settings.mjs";
+import ScrollSheet from "./apps/ScrollSheet.mjs";
+import ScrollModel from "./data-models/Scroll.mjs";
+import Scrolls from "./features/Scrolls.mjs";
 
 export default class ForienArmoury {
   /**
@@ -29,6 +32,7 @@ export default class ForienArmoury {
     Integrations,
     ItemProperties,
     ItemRepair,
+    Scrolls,
     Species,
     TemporaryRunes,
     WorldTimeObserver,
@@ -52,6 +56,7 @@ export default class ForienArmoury {
   helpers;
 
   constructor() {
+    this.#registerDataModels();
     this.#initializeModules();
     this.#bindHooks();
     this.#preloadTemplates();
@@ -118,6 +123,19 @@ export default class ForienArmoury {
   get integrations() {
     return this.modules.get('integrations');
   };
+
+  #registerDataModels() {
+    Object.assign(CONFIG.Item.dataModels, {
+      [dataTypes.scroll]: ScrollModel,
+    });
+    Object.assign(CONFIG.Item.typeLabels, {
+      [dataTypes.scroll]: "Forien.Armoury.Scrolls.MagicScroll",
+    });
+    DocumentSheetConfig.registerSheet(Item, constants.moduleId, ScrollSheet, {
+      types: [dataTypes.scroll],
+      makeDefault: true
+    });
+  }
 
   /**
    * Initializes API modules
@@ -210,6 +228,6 @@ export default class ForienArmoury {
    * @return {string}
    */
   version() {
-    return '1.1.0';
+    return '1.2.0';
   }
 }

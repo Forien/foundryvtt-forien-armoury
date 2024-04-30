@@ -136,7 +136,7 @@ export default class Species extends ForienBaseModule {
       talents: [
         "Doomed",
         "Flee!, Stone Soup",
-        "Small, random[1][runebound-talents]"
+        "Nimble Fingered, random[1][runebound-talents]"
       ],
       randomTalents: {
         'runebound-talents': 3

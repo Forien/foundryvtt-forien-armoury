@@ -1,0 +1,65 @@
+{
+  "icon": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
+  "transfer": true,
+  "name": "Rune of Iron (Permanent)",
+  "_id": "YSKa6PFb3aEKSM0G",
+  "changes": [],
+  "disabled": false,
+  "duration": {
+    "startTime": null,
+    "seconds": null,
+    "combat": null,
+    "rounds": null,
+    "turns": null,
+    "startRound": null,
+    "startTurn": null
+  },
+  "description": "This Rune reduces damage from incoming attacks by 1. Works even against attacks that normally ignore Armour.",
+  "origin": null,
+  "statuses": [],
+  "flags": {
+    "wfrp4e": {
+      "hide": false,
+      "applicationData": {
+        "type": "document",
+        "documentType": "Actor",
+        "equipTransfer": true
+      },
+      "scriptData": [
+        {
+          "label": "Rune of Iron (Permanent)",
+          "trigger": "preTakeDamage",
+          "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.effect');\n\nargs.totalWoundLoss -= 1;\nargs.opposedTest.result.other.push(`<strong>${name}:</strong> ${effect}`);",
+          "options": {
+            "dialog": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false
+            },
+            "immediate": {
+              "deleteEffect": false
+            }
+          }
+        }
+      ],
+      "_legacyData": {
+        "effectApplication": "equipped",
+        "effectTrigger": "preTakeDamage",
+        "preventDuplicateEffects": false,
+        "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.effect');\n\nargs.totalWoundLoss-= 1;\nargs.opposedTest.result.other.push(`<strong>${name}:</strong> ${effect}`);"
+      }
+    },
+    "forien-armoury": {
+      "isTemporary": false
+    },
+    "core": {
+      "sourceId": "Compendium.world.foriens-armoury-backup.Item.JV4MzBoyCXZBeKx5.ActiveEffect.5pobiT1OYmTsOt0x"
+    },
+    "times-up": {
+      "isPassive": true
+    }
+  },
+  "tint": null,
+  "_key": "!items.effects!JV4MzBoyCXZBeKx5.YSKa6PFb3aEKSM0G"
+}
