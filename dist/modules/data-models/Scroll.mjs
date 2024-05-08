@@ -202,12 +202,25 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
    *
    * @returns {Promise<ScrollTest|null>}
    */
-  async prepareScrollTest() {
+  async prepareScrollTest(options = {}) {
     /**
      * @type {ActorWfrp4e}
      */
     const actor = this.parent.actor;
     if (!actor) return null;
+
+    if (!this.canUse) {
+      Utility.notify(
+        game.i18n.format("Forien.Armoury.Scrolls.ActorCanNotUse", {
+          actor: sheet.actor.name,
+          scroll: scroll.name,
+          language: scroll.system.language
+        }),
+        {type: "warning"}
+      );
+
+      return null;
+    }
 
     const compendiumSpell = await this.loadSpell();
     const spellData = compendiumSpell.toObject();
@@ -226,16 +239,16 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
     spell.system.computeOvercastingData();
 
     const dialogData = {
-      fields: {
+      fields: foundry.utils.mergeObject(options.fields || {}, {
         difficulty
-      },
+      }),
       data: {
         scroll: this.parent,
         spell,
         hitLoc: !!spell.system.damage.value,
         skill: skill
       },
-      options: {}
+      options: options || {}
     }
 
     const test = await actor._setupTest(dialogData, ScrollDialog)

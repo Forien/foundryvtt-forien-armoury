@@ -84,16 +84,6 @@ export default class Scrolls extends ForienBaseModule {
 
     if (!scroll) return false;
 
-    if (!scroll.system.canUse)
-      return Utility.notify(
-        game.i18n.format("Forien.Armoury.Scrolls.ActorCanNotUse", {
-          actor: sheet.actor.name,
-          scroll: scroll.name,
-          language: scroll.system.language
-        }),
-        {type: "warning"}
-      );
-
     return scroll.system.prepareScrollTest();
   }
 
@@ -131,51 +121,6 @@ export default class Scrolls extends ForienBaseModule {
     foundry.utils.mergeObject(game.wfrp4e.rolls, {"ScrollTest": ScrollTest})
 
     return {};
-  }
-
-  /**
-   * Prepares the Scroll Dialog and performs the Scroll Test
-   *
-   * @param {ItemWfrp4e} scroll
-   *
-   * @returns {Promise<ScrollTest>}
-   */
-  async prepareScrollTest(scroll) {
-    /**
-     * @type {ActorWfrp4e}
-     */
-    const actor = scroll.actor;
-    const compendiumSpell = await scroll.system.loadSpell();
-    const spellData = compendiumSpell.toObject();
-    const skill = scroll.system.languageSkill;
-
-    spellData.system.memorized.value = true;
-    spellData.system.cn.value = 0;
-    spellData.system.skill.value = skill.name;
-
-    let difficulty = Utility.getSetting(settings.scrolls.difficulty);
-
-    if (scroll.system.isMagick)
-      difficulty = Utility.getSetting(settings.scrolls.difficultyMagick);
-
-    const spell = new CONFIG.Item.documentClass(spellData, {parent: actor});
-    spell.system.computeOvercastingData();
-
-    const dialogData = {
-      fields: {
-        difficulty
-      },
-      data: {
-        scroll,
-        spell,
-        hitLoc: !!spell.system.damage.value,
-        skill: skill
-      },
-      options: {}
-    }
-
-    const test = await actor._setupTest(dialogData, ScrollDialog)
-    return await test.roll();
   }
 
   /**

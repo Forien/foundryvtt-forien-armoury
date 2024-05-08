@@ -2,6 +2,11 @@
 
 ## v2.X.X
 
+### v2.0.1
+* Changed imrpoved blackpoweder reload scripts from `prepateData` to `prepareOwned` to fix Foundry's bug with 
+  prepare data running twice on items
+* Added options to `Scroll.prepareScrollTest()` method allowing to pass fields and options to Dialog
+
 ### v2.0.0
 * Updated code to be compatible with wfrp4e v7.1.0, namely changed `actor.itemCategories` to `actor.itemTypes`
 * Updated all effects to make them work properly with new Active Effect rework
