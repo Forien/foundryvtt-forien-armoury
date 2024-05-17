@@ -1,0 +1,27 @@
+{
+  "name": "Award XP to Party",
+  "type": "script",
+  "scope": "global",
+  "author": "rTgnwDbJCJYDenyf",
+  "img": "icons/magic/holy/barrier-shield-winged-blue.webp",
+  "command": "// set below to IDs of folders that contain actors for characters and companions.\n// only actors directly in that folder will be counted. Sub-folders are ignored.\nconst characterFolderId = \"R7s18IlEapZx8tF2\";\nconst companionFolderId = \"7aygzIdVgF005qSn\"; // optional, can leave empty\n\n// should Chat Message be generated? If so, define options:\nconst showMessage = true;\nconst messageFlavor = \"XP award!\";\nconst messageShowTotalXP = false;\n\n\nconst macros = game.modules.get(\"forien-armoury\")?.api.macros;\nawait macros.awardXP(this, {characterFolderId, companionFolderId, showMessage, messageFlavor, messageShowTotalXP});",
+  "folder": "rJKAafA2UXxZbP3p",
+  "ownership": {
+    "default": 0,
+    "rTgnwDbJCJYDenyf": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.1.5",
+    "coreVersion": "11.315",
+    "createdTime": 1715931769421,
+    "modifiedTime": 1715931991452,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "_id": "3HNUGUmqo6lVfdOS",
+  "sort": 0,
+  "_key": "!macros!3HNUGUmqo6lVfdOS"
+}

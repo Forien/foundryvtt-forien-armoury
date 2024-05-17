@@ -1,0 +1,27 @@
+{
+  "name": "Cantrip Macro Template",
+  "type": "script",
+  "scope": "global",
+  "author": "rTgnwDbJCJYDenyf",
+  "img": "icons/magic/light/explosion-star-glow-blue.webp",
+  "command": "// Duplicate this Macro and edit its name and variables below with proper data\n// Name of Macro becomes name of Cant\nconst requiredSL  = 1;                         // amount of SL that is spend to use this Cant\nconst lore              = \"heavens\";           // lore this Cant is part of\nconst description  = \"do the thing\";    // description of what Cant does\n\nconst macros = game.modules.get(\"forien-armoury\")?.api.macros;\nconst success = await macros.cantrip(this, {requiredSL, description, lore});\n\nif (success) {\n  // if you want additional effects to run only if Cant was successfully used, put the code here\n}",
+  "folder": "K7bIr7HUorfHR7Xh",
+  "ownership": {
+    "default": 0,
+    "rTgnwDbJCJYDenyf": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.1.5",
+    "coreVersion": "11.315",
+    "createdTime": 1715644586645,
+    "modifiedTime": 1715928381795,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "_id": "hhLO0omAZLsg3oYj",
+  "sort": 0,
+  "_key": "!macros!hhLO0omAZLsg3oYj"
+}
