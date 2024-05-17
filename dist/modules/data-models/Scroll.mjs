@@ -212,9 +212,9 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
     if (!this.canUse) {
       Utility.notify(
         game.i18n.format("Forien.Armoury.Scrolls.ActorCanNotUse", {
-          actor: sheet.actor.name,
-          scroll: scroll.name,
-          language: scroll.system.language
+          actor: actor.name,
+          scroll: this.parent.name,
+          language: this.language
         }),
         {type: "warning"}
       );

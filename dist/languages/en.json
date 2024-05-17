@@ -338,7 +338,7 @@
         "ChangeScrollNameContent": "Update Scroll's name to „{name}”?",
         "ChangeScrollDescription": "This will also replace Scroll's Description!",
 
-        "ActorCanNotUse": "{actor} can't use the „{scroll}”. Either there are no scrolls left, or Actor does not know {language}.",
+        "ActorCanNotUse": "{actor} can't use the „{scroll}”. Either there are no scrolls left, or Actor does not know „Language ({language})”.",
         "ItemNotFound": "Something went wrong. Dropped Item was not found!",
         "MustHaveSource": "Spell must have a source in, or originate from, World or Compendium in order to create a Scroll!",
         "NotASpell": "Only Spells can be inscribed on a Scroll!",
