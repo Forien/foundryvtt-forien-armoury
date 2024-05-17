@@ -18,6 +18,7 @@ import {registerSettings} from "./Settings.mjs";
 import ScrollSheet from "./apps/ScrollSheet.mjs";
 import ScrollModel from "./data-models/Scroll.mjs";
 import Scrolls from "./features/Scrolls.mjs";
+import Macros from "./features/Macros.js";
 
 export default class ForienArmoury {
   /**
@@ -32,6 +33,7 @@ export default class ForienArmoury {
     Integrations,
     ItemProperties,
     ItemRepair,
+    Macros,
     Scrolls,
     Species,
     TemporaryRunes,
@@ -115,6 +117,13 @@ export default class ForienArmoury {
    */
   get checkCareers() {
     return this.modules.get('checkCareers');
+  };
+
+  /**
+   * @return {Macros}
+   */
+  get macros() {
+    return this.modules.get('macros');
   };
 
   /**

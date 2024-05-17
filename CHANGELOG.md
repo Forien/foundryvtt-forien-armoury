@@ -2,6 +2,16 @@
 
 ## v2.X.X
 
+### v2.1.0
+* Fixed notification not showing when Actor can't use scroll due to quantity or language
+* Fixed Applicable Effects not working from Chat Cards
+* Added following GM only Macros:
+  * Character Status summary — lets GM generate a quick table showing basic summary of party composition - careers, fate/resilience points, experience
+  * Award XP with Companions — allows GM to award party the XP, based on whether Actors are in specified folders. Companions receive half.
+* Added following GM & Player Macros:
+  * Use Cantrip — allows using "Cants" using rules from `Archives of the Empire Vol.III`. Require duplication and setup
+  * Make Extended Lockpick Test — allows both GMs and Players to create Extended Lockpick Tests for their characters to attempt. Configuration available
+
 ### v2.0.1
 * Changed imrpoved blackpoweder reload scripts from `prepateData` to `prepareOwned` to fix Foundry's bug with 
   prepare data running twice on items

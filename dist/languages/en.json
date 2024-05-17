@@ -9,7 +9,48 @@
         "Cancel": "Cancel",
         "Roll": "Roll",
         "IngredientFor": "Ingredient for",
-        "AvailableSpells": "Available spells"
+        "AvailableSpells": "Available spells",
+        "NotAGM": "You must be a GM to use this macro!",
+
+        "Cant": {
+          "UseWomChannelling": "To use Cants, WoM Channelling rules must be enabled in Settings!",
+          "NotEnoughSL": "{actor} does not have enough channelled SL for Lore of {lore} to use {macro} Cant! Has {SL} out of {requiredSL} needed.",
+          "SLCost": "SL cost",
+          "LoreOf": "Lore of {lore} Cant",
+          "ChannelledSlChanged": "Channelled SL changed from {old} to {new}"
+        },
+
+        "Lockpick": {
+          "DialogTitle": "Create Extended Lock Pick Test",
+          "SLNaN": "SL must be a number!",
+          "DifficultyEmpty": "Difficulty must not be empty!"
+        },
+
+        "CheckStatus": {
+          "NoActorsFound": "No actors found in provided Folders",
+
+          "MessageHeader": "Character status summary",
+          "Name": "Name",
+          "Career": "Career",
+          "Points": "Points",
+          "FortunePointsShort": "Fort",
+          "FatePointsShort": "Fate",
+          "ResolvePointsShort": "Rslv",
+          "ResiliencePointsShort": "Resi",
+          "Experience": "Experience",
+          "ExperienceLeft": "Left",
+          "ExperienceTotal": "Total"
+        },
+
+        "AwardXP": {
+          "DialogTitle": "Grant XP to Party",
+          "Amount": "Amount",
+          "Reason": "Reason",
+          "Award": "Award",
+
+          "XPNaN": "XP must be a number!",
+          "ReasonEmpty": "Reason must not be empty!"
+        }
       },
 
       "CombatFatigue": {
