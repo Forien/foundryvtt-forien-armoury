@@ -13,6 +13,15 @@ This module is a collection of custom trappings and features for Warhammer Fanta
 Forien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded
 
 
+### Notable changes in v2.1.0
+* Added following GM only Macros:
+  * Character Status summary — lets GM generate a quick table showing basic summary of party composition - careers, fate/resilience points, experience
+  * Award XP with Companions — allows GM to award party the XP, based on whether Actors are in specified folders. Companions receive half.
+* Added following GM & Player Macros:
+  * Use Cantrip — allows using "Cants" using rules from `Archives of the Empire Vol.III`. Require duplication and setup
+  * Make Extended Lockpick Test — allows both GMs and Players to create Extended Lockpick Tests for their characters to attempt. Configuration available
+
+
 ### Notable changes in v2.0.0
 * Updated all of module's Active Effect to work or take advantage of WFRP4e's [Effect Refactor Update](https://github.com/moo-man/WFRP4e-FoundryVTT/releases/tag/7.1.0)
   * Because of that, all Active Effects (such as Runes, some trappings, traits and talents) on existing Actors need to be replaced with new ones from compendium! 
@@ -72,14 +81,16 @@ This Module adds some QoL and automation features, including mechanics that:
 * Allow for automatic removal of **Temporary Runes** when they get disabled (preferably by `Times Up` Module). 
   * Optionally allows for damaging an Item when Rune is removed (disabled by default).
 * **Magic Scrolls**, completely new, independent Item type that allows characters to cast spells from scrolls without needing to know the Spell
-* **Generate Random Scroll** (Macro), improved WoM macro that now creates usable Magic Scroll
-* **Item Repair** (Macro), allow players to easily repair their equipment for free or for price, using Macro and clean, readable auto-updating Chat Card
-* **Check Careers** (Macro), allows players to quickly check their progress through current Career and how far are they from completing it.
-* **Arrow Reclamation**, allowing players to recover some of ammunition (arrows, bolts or sling bullets) after an encounter. Defaults to even rolls. Disabled by default.
+* **Arrow Reclamation**, allowing players to recover some of the ammunition (arrows, bolts or sling bullets) after an encounter. Defaults to even rolls. Disabled by default.
 * **Combat Fatigue**, using optional _„Getting Tired“_ ruleset.
 * **Casting Fatigue**, providing soft limit to amount of spells that can be cast in short amount of time.
 * **Automated Disease Progression**, allowing for `incubation` and `duration` of diseases to countdown automatically.
+* Additionally this module contains quite a bit of utility or quality of life macros. You can find full list [down below](#Macros), but here are few:
+  * **Generate Random Scroll** (Macro), improved WoM macro that now creates usable Magic Scroll
+  * **Check Careers** (Macro), allows players to quickly check their progress through current Career and how far are they from completing it.
+  * **Item Repair** (Macro), allow players to easily repair their equipment for free or for price, using Macro and clean, readable auto-updating Chat Card
 
+### Macros
 
 ### Items
 Module contains single Compendium pack containing over 150 (Item and Active Effect) entries.
@@ -150,10 +161,14 @@ Module contains a single Compendium Pack containing 10 Macros:
 * GM Macro to quickly set Infighting on target Tokens
 * 3 GM Macros to quickly set selected tokens' dispositions
 * GM Macro to quickly generate a random, fully usable Magic Scroll
+* GM Macro to generate a table where they can quickly check basic status of PCs
+* GM Macro to easily award XP to party based on folders, including half XP for companions
 * Player Macro to check their Career progression
-* Player Macros to check for their Damaged Equipment
+* 2 Player Macros to check for their Damaged Equipment
 * Player Macro to generate specific Ingredient for, and based on a specific Spell
 * Player Macro to roll for advanced Skill with limited SL result
+* Player Macro to quickly and easily create an Extended Lockpicking Test
+* Player Macro to implement "Cants" (Cantrips) from AotE3, requires setup.
 * General Macro to quickly open a WFRP4e Item Browser
 * General Macro to quickly open the Forien's Armoury Settings
 
