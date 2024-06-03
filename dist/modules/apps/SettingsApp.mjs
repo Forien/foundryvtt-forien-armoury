@@ -190,6 +190,14 @@ export default class SettingsApp extends FormApplication {
         ]
       },
 
+      grimoires: {
+        always: [
+          settings.grimoires.ownCategory,
+          settings.grimoires.defaultEncumbrance,
+          settings.grimoires.defaultAvailability,
+        ]
+      },
+
       integrations: {
         groups: [
           [

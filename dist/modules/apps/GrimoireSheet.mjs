@@ -5,7 +5,7 @@ import Utility from "../utility/Utility.mjs";
 /**
  * @extends ItemSheetWfrp4e
  */
-export default class ScrollSheet extends ItemSheetWfrp4e {
+export default class GrimoireSheet extends ItemSheetWfrp4e {
   /**
    * @inheritDoc
    *
@@ -14,7 +14,7 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
   static get defaultOptions() {
     const options = super.defaultOptions;
 
-    options.classes.push('forien-armoury', 'scroll-sheet');
+    options.classes.push('forien-armoury', 'grimoire-sheet');
 
     return options;
   }
@@ -25,7 +25,7 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
    * @returns {string}
    */
   get template() {
-    return `modules/${constants.moduleId}/templates/apps/scroll/sheet.hbs`;
+    return `modules/${constants.moduleId}/templates/apps/grimoire/sheet.hbs`;
   }
 
   /**
@@ -37,7 +37,7 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
     const data = await super.getData();
 
     data.width = 550;
-    data.spell = await fromUuid(this.item.system.spellUuid);
+    data.spells = await this.item.system.loadSpells();
     data.magicLores = game.wfrp4e.config.magicLores;
 
     return data;
@@ -82,7 +82,7 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
     if (!item.system.lore?.value)
       return Utility.notify(game.i18n.localize("Forien.Armoury.Scrolls.MustHaveLore"), {type: "warning"});
 
-    return this.item.update({"system.spellUuid": item.uuid}).then(() => this.render());
+    return this.item.system.addSpell(item).then(() => this.render());
   }
 
   /**
@@ -93,8 +93,9 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
   activateListeners(html) {
     super.activateListeners(html);
 
-    html.on("click", ".spell", this.#onScrollSpellClick.bind(this))
-    html.on("click", ".spell-container .spell-refresh", this.#onSpellRefreshClick.bind(this))
+    html.on("click", ".spell img", this.#onSpellClick.bind(this))
+    html.on("click", ".spells-remove", this.#onSpellsRemoveClick.bind(this))
+    html.on("change", ".spell-name input", this.#onSpellLabelChange.bind(this))
   }
 
   /**
@@ -102,20 +103,26 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
    *
    * @param {MouseEvent} event
    */
-  #onScrollSpellClick(event) {
-    const uuid = event.currentTarget.closest('.spell-container').dataset.uuid;
+  #onSpellClick(event) {
+    const uuid = event.currentTarget.closest('.spell').dataset.uuid;
 
     fromUuid(uuid).then(item => item?.sheet.render(true));
   }
 
   /**
-   * Reloads the Data for Spell.
-   *
-   * @param {MouseEvent} event
+   * Remove all Spells from Grimoire
    */
-  #onSpellRefreshClick(event) {
-    const uuid = event.currentTarget.closest('.spell-container').dataset.uuid;
+  #onSpellsRemoveClick(event) {
+    this.item.update({"system.spells": []});
+  }
 
-    fromUuid(uuid).then(() => this.render(true));
+  /**
+   * Update name of the spell written in Grimoire
+   */
+  #onSpellLabelChange(event) {
+    const uuid = event.currentTarget.closest('.spell').dataset.uuid;
+    const value = event.currentTarget.value;
+
+    this.item.system.changeSpellsName(uuid, value);
   }
 }

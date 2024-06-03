@@ -1,0 +1,101 @@
+#forien-armoury-settings-app form {
+  padding: 8px 3px;
+  overflow: hidden;
+}
+#forien-armoury-settings-app form .tabs {
+  font-family: CaslonAntique, serif;
+  height: 30px;
+}
+#forien-armoury-settings-app form .tabs .item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-self: end;
+  height: 75%;
+  width: 100%;
+  margin: 0 -5px;
+  background-color: #352516;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #110a04;
+  flex: fit-content;
+}
+#forien-armoury-settings-app form .tabs .item:first-of-type {
+  margin-left: 0;
+}
+#forien-armoury-settings-app form .tabs .item:last-of-type {
+  margin-right: 0;
+}
+#forien-armoury-settings-app form .tabs .item.active {
+  height: 100%;
+  font-size: var(--font-size-16);
+  align-items: flex-start;
+  padding-top: 5px;
+  z-index: 1;
+}
+#forien-armoury-settings-app form .content {
+  width: 100%;
+  height: calc(100% - 25px - 30px - 5px);
+  font-family: CaslonPro, serif;
+  background-color: rgba(26, 16, 7, 0.75);
+  border: 1px solid #110a04;
+  padding: 6px 10px;
+  border-radius: 0 0 5px 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#forien-armoury-settings-app form .content .form-group {
+  margin: 6px 0;
+  background-color: rgba(8, 8, 8, 0.75);
+  padding: 4px;
+}
+#forien-armoury-settings-app form .content .settings-enabled {
+  display: none;
+  margin-top: 8px;
+}
+#forien-armoury-settings-app form .content .settings-enabled.active {
+  display: block;
+}
+#forien-armoury-settings-app form .content .settings-group {
+  margin: 6px 0;
+  padding: 2px 6px;
+  border: solid 2px #352516;
+  border-radius: 4px;
+}
+#forien-armoury-settings-app form .content input[type=checkbox] {
+  box-shadow: none;
+}
+#forien-armoury-settings-app form .content input[type=checkbox]:checked {
+  accent-color: #352516;
+}
+#forien-armoury-settings-app form button[type=submit] {
+  margin-top: 5px;
+}
+#forien-armoury-settings-app form .promo {
+  border: 3px solid #352516;
+  border-radius: 5px;
+  padding: 4px 8px;
+}
+#forien-armoury-settings-app form .promo p {
+  font-family: "Lato", sans-serif;
+  text-align: justify;
+}
+#forien-armoury-settings-app form .promo a {
+  cursor: pointer;
+}
+#forien-armoury-settings-app form .promo .support-links {
+  text-align: center;
+  margin: 10px 0;
+}
+#forien-armoury-settings-app form .promo .support-links a {
+  display: inline-block;
+  height: 30px;
+  text-decoration: none;
+}
+#forien-armoury-settings-app form .promo .support-links a:hover {
+  box-shadow: #a08349 0 0 6px 4px;
+}
+#forien-armoury-settings-app form .promo .other-links p {
+  text-align: left;
+}
+
+/*# sourceMappingURL=settings-app.css.map */

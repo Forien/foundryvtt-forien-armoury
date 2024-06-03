@@ -43,6 +43,8 @@ function registerSettings() {
     }
   });
 
+  //#region Casting Fatigue
+
   // Add enable/disable setting for Casting Fatigue feature
   game.settings.register(constants.moduleId, settings.magicalEndurance.enabled, {
     name: 'Forien.Armoury.Settings.CastingFatigue.Enable',
@@ -145,7 +147,9 @@ function registerSettings() {
     default: defaults.combatFatigue.enableCorePassOut,
     type: Boolean
   });
+  //#endregion
 
+  //#region Arrow Reclamation
   // Add enable/disable setting for arrow reclamation feature
   game.settings.register(constants.moduleId, settings.arrowReclamation.enable, {
     name: 'Forien.Armoury.Settings.ArrowReclamation.Enable',
@@ -213,7 +217,9 @@ function registerSettings() {
     default: defaults.arrowReclamation.percentage,
     type: Number
   });
+  //#endregion
 
+  //#region Scrolls
   // Allow Overcasting when casting from Scrolls
   game.settings.register(constants.moduleId, settings.scrolls.allowOvercasting, {
     name: 'Forien.Armoury.Settings.Scrolls.AllowOvercasting',
@@ -316,6 +322,40 @@ function registerSettings() {
     choices: game.wfrp4e.config.availability,
     type: String
   });
+  //#endregion
+
+  //#region Grimoires
+  // Should scroll have their own category in inventory?
+  game.settings.register(constants.moduleId, settings.grimoires.ownCategory, {
+    name: 'Forien.Armoury.Settings.Grimoires.OwnCategory',
+    hint: 'Forien.Armoury.Settings.Grimoires.OwnCategoryHint',
+    scope: 'client',
+    config: false,
+    default: defaults.grimoires.ownCategory,
+    type: Boolean
+  });
+
+  // What should be default Encumbrance for newly created Grimoires?
+  game.settings.register(constants.moduleId, settings.grimoires.defaultEncumbrance, {
+    name: 'Forien.Armoury.Settings.Grimoires.DefaultEncumbrance',
+    hint: 'Forien.Armoury.Settings.Grimoires.DefaultEncumbranceHint',
+    scope: 'world',
+    config: false,
+    default: defaults.grimoires.defaultEncumbrance,
+    type: Number
+  });
+
+  // What should be default Availability for newly created Grimoires?
+  game.settings.register(constants.moduleId, settings.grimoires.defaultAvailability, {
+    name: 'Forien.Armoury.Settings.Grimoires.DefaultAvailability',
+    hint: 'Forien.Armoury.Settings.Grimoires.DefaultAvailabilityHint',
+    scope: 'world',
+    config: false,
+    default: defaults.grimoires.defaultAvailability,
+    choices: game.wfrp4e.config.availability,
+    type: String
+  });
+  //#endregion
 
   game.settings.register(constants.moduleId, settings.initialized, {
     scope: 'world',

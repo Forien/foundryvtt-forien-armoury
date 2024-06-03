@@ -270,6 +270,15 @@
         }
       },
 
+      "Grimoires": {
+        "Grimoires": "Grimoires",
+        "Grimoire": "Grimoire",
+        "Spells": "Spells",
+        "DropHere": "Drop Spells here to add them to the Grimoire",
+        "RemoveSpells": "Remove all Spells from Grimoire",
+        "WrittenIn": "Written in {language}"
+      },
+
       "Skills": {
         "Runecraft": "Runecraft"
       },
@@ -438,6 +447,7 @@
           "CombatFatigue": "Combat Fatigue",
           "CastingFatigue": "Casting Fatigue",
           "Scrolls": "Scrolls",
+          "Grimoires": "Grimoires",
           "Integrations": "Integrations"
         },
 
@@ -540,6 +550,17 @@
 
           "DefaultAvailability": "Default Availability",
           "DefaultAvailabilityHint": "Select what default Availability for Magic Scroll items should be."
+        },
+
+        "Grimoires": {
+          "OwnCategory":  "Own Inventory Group",
+          "OwnCategoryHint": "Should grimoires appear in inventory as their own, separate group? If false, they will be attached to Books and Documents. <em>(client-side setting)</em>",
+
+          "DefaultEncumbrance": "Default Encumbrance",
+          "DefaultEncumbranceHint": "Select what default Encumbrance for Grimoire items should be. Remember that Encumbrance is representing both weight and volume.",
+
+          "DefaultAvailability": "Default Availability",
+          "DefaultAvailabilityHint": "Select what default Availability for Grimoire items should be."
         },
 
         "ATL": {

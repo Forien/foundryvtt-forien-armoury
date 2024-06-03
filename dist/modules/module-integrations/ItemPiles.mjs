@@ -237,7 +237,6 @@ export default class ItemPiles {
   }
 
   async #createFolder() {
-    debugger;
     let folder = game.folders.find(f => f.type === "RollTable" && f.getFlag(constants.moduleId, flags.integrations.itemPiles.isImportFolder));
     if (folder) {
       let rollTables = folder.contents;
