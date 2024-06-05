@@ -325,7 +325,47 @@ function registerSettings() {
   //#endregion
 
   //#region Grimoires
-  // Should scroll have their own category in inventory?
+  // Should grimoires only transfer spells when equipped?
+  game.settings.register(constants.moduleId, settings.grimoires.requireEquipped, {
+    name: 'Forien.Armoury.Settings.Grimoires.RequireEquipped',
+    hint: 'Forien.Armoury.Settings.Grimoires.RequireEquippedHint',
+    scope: 'world',
+    config: false,
+    default: defaults.grimoires.requireEquipped,
+    type: Boolean
+  });
+
+  // Should grimoires transfer spells that actor has no lore for?
+  game.settings.register(constants.moduleId, settings.grimoires.transferWithoutLore, {
+    name: 'Forien.Armoury.Settings.Grimoires.TransferWithoutLore',
+    hint: 'Forien.Armoury.Settings.Grimoires.TransferWithoutLoreHint',
+    scope: 'world',
+    config: false,
+    default: defaults.grimoires.transferWithoutLore,
+    type: Boolean
+  });
+
+  // Hide spells in grimoire if Actor doesn't know how to read?
+  game.settings.register(constants.moduleId, settings.grimoires.requireReadWrite, {
+    name: 'Forien.Armoury.Settings.Grimoires.RequireReadWrite',
+    hint: 'Forien.Armoury.Settings.Grimoires.RequireReadWriteHint',
+    scope: 'world',
+    config: false,
+    default: defaults.grimoires.requireReadWrite,
+    type: Boolean
+  });
+
+  // Hide spells in grimoire if Actor doesn't know the language?
+  game.settings.register(constants.moduleId, settings.grimoires.hideSpellsWithoutLanguage, {
+    name: 'Forien.Armoury.Settings.Grimoires.HideSpellsWithoutLanguage',
+    hint: 'Forien.Armoury.Settings.Grimoires.HideSpellsWithoutLanguageHint',
+    scope: 'world',
+    config: false,
+    default: defaults.grimoires.hideSpellsWithoutLanguage,
+    type: Boolean
+  });
+
+  // Should grimoires have their own category in inventory?
   game.settings.register(constants.moduleId, settings.grimoires.ownCategory, {
     name: 'Forien.Armoury.Settings.Grimoires.OwnCategory',
     hint: 'Forien.Armoury.Settings.Grimoires.OwnCategoryHint',

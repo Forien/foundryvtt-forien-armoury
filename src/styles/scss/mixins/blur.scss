@@ -1,0 +1,3 @@
+@mixin blur($radius) {
+  filter: blur($radius);
+}

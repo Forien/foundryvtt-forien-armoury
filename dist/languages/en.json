@@ -276,7 +276,9 @@
         "Spells": "Spells",
         "DropHere": "Drop Spells here to add them to the Grimoire",
         "RemoveSpells": "Remove all Spells from Grimoire",
-        "WrittenIn": "Written in {language}"
+        "WrittenIn": "Written in {language}",
+        "ReadWriteTalent": "Read/Write",
+        "ArcaneMagicTalent": "Arcane Magic ({lore})"
       },
 
       "Skills": {
@@ -553,8 +555,20 @@
         },
 
         "Grimoires": {
+          "RequireEquipped": "Require Equipped",
+          "RequireEquippedHint": "Should spells from Grimoires be only transferred to Actor and available for Casting, when Grimoire is equipped? If false, spells are transferred when Grimoire is being added to Actor.",
+
+          "TransferWithoutLore": "Transfer Without Lore",
+          "TransferWithoutLoreHint": "Should spells from Grimoires be transferred even if Actor does not know respective „Arcane Magic (Lore)” Talent?",
+
+          "RequireReadWrite": "Require Read/Write",
+          "RequireReadWriteHint": "Hides spells from Grimoires and prevent their transfer if character doesn't know how to Read.",
+
+          "HideSpellsWithoutLanguage": "Hide Spells without Language",
+          "HideSpellsWithoutLanguageHint": "Hides spells from Grimoires and prevent their transfer if character doesn't know language in which the Grimoire is written.",
+
           "OwnCategory":  "Own Inventory Group",
-          "OwnCategoryHint": "Should grimoires appear in inventory as their own, separate group? If false, they will be attached to Books and Documents. <em>(client-side setting)</em>",
+          "OwnCategoryHint": "Should Grimoires appear in inventory as their own, separate group? If false, they will be attached to Books and Documents. <em>(client-side setting)</em>",
 
           "DefaultEncumbrance": "Default Encumbrance",
           "DefaultEncumbranceHint": "Select what default Encumbrance for Grimoire items should be. Remember that Encumbrance is representing both weight and volume.",

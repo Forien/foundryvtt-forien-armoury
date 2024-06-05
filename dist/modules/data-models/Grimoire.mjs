@@ -118,7 +118,7 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
    * @returns {ItemWfrp4e|undefined}
    */
   get languageSkill() {
-    return this.parent.actor?.itemTypes.skill.find(skill => skill.name.toLowerCase() === this.languageSkillName.toLowerCase());
+    return this.reader?.itemTypes.skill.find(skill => skill.name.toLowerCase() === this.languageSkillName.toLowerCase());
   }
 
   /**
@@ -164,17 +164,19 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
 
     let lores = new Set();
 
-    for (let spell of await this.loadSpells()) {
-      data.properties.push(`<a class="grimoire-spell-link" data-uuid="${spell.uuid}">${spell.name}</a>`);
+    if (!this.hideSpells) {
+      for (let spell of await this.loadSpells()) {
+        data.properties.push(`<a class="grimoire-spell-link" data-uuid="${spell.uuid}">${spell.name}</a>`);
 
-      const lore = game.wfrp4e.config.magicLores[spell.system?.lore?.value] ?? null;
-      const loreLabel = game.i18n.format("Forien.Armoury.Scrolls.LoreOf", {lore});
-      if (lore)
-        lores.add(loreLabel);
+        const lore = game.wfrp4e.config.magicLores[spell.system?.lore?.value] ?? null;
+        const loreLabel = game.i18n.format("Forien.Armoury.Scrolls.LoreOf", {lore});
+        if (lore)
+          lores.add(loreLabel);
+      }
+
+      for (let lore of lores)
+        data.properties.push(lore);
     }
-
-    for (let lore of lores)
-      data.properties.push(lore);
 
     let itemProperties = this.OriginalQualities.concat(this.OriginalFlaws);
     for (let prop of itemProperties)
@@ -186,6 +188,8 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
   }
 
   async applySpells() {
+    if (this.hideSpells) return;
+
     const spells = this.spells;
     const actor = this.parent.actor;
     const items = [];
@@ -194,6 +198,11 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
       const item = await fromUuid(spell.uuid);
       if (!item || actor.itemTypes.spell.find(s => s.name === spell.name || s.flags.core?.sourceId === spell.uuid))
         continue;
+
+      if (
+        !Utility.getSetting(settings.grimoires.transferWithoutLore) &&
+        !this.doesActorKnowLore(item.system?.lore?.value)
+      ) continue;
 
       const data = item.toObject();
 
@@ -220,6 +229,7 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
   }
 
   async onEquipToggle(data, options, user) {
+    if (!Utility.getSetting(settings.grimoires.requireEquipped)) return;
     if (user !== game.user.id) return;
 
     if (data.system.equipped.value) {
@@ -227,5 +237,57 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
     } else {
       await this.removeSpells();
     }
+  }
+
+  async createChecks(data, options, user) {
+    if (Utility.getSetting(settings.grimoires.requireEquipped)) return;
+    if (user !== game.user.id) return;
+
+    await this.applySpells();
+  }
+
+  async deleteChecks(options, user) {
+    if (user !== game.user.id) return;
+
+    await this.removeSpells();
+  }
+
+  /**
+   * @param {string} lore
+   *
+   * @returns {boolean}
+   */
+  doesActorKnowLore(lore) {
+    lore = game.wfrp4e.config.magicLores[lore] ?? lore;
+    const talent = game.i18n.format("Forien.Armoury.Grimoires.ArcaneMagicTalent", {lore});
+
+    return this.parent.actor?.itemTypes.talent.some(t => t.name === talent) || false;
+  }
+
+  /**
+   * @returns {boolean}
+   */
+  get canActorWrite() {
+    return this.reader?.itemTypes.talent.some(t => t.name === game.i18n.localize("Forien.Armoury.Grimoires.ReadWriteTalent")) || false;
+  }
+
+  /**
+   * @returns {boolean}
+   */
+  get hideSpells() {
+    if (Utility.getSetting(settings.grimoires.hideSpellsWithoutLanguage))
+      return !this.languageSkill;
+
+    if (Utility.getSetting(settings.grimoires.requireReadWrite))
+      return !this.canActorWrite;
+
+    return false;
+  }
+
+  /**
+   * @returns {ActorWfrp4e|null}
+   */
+  get reader() {
+    return this.parent.actor || game.user.character || canvas.tokens.controlled[0]?.actor || null;
   }
 }

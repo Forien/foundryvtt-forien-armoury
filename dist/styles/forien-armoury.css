@@ -171,6 +171,12 @@
 .forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell-container .spells .spell:nth-of-type(even), .forien-armoury.app.window-app.sheet.grimoire-sheet .window-content .tab.details .form-group.spell-container .spells .spell:nth-of-type(even) {
   background: rgba(0, 0, 0, 0.075);
 }
+.forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell-container .spells.blurred .spell img, .forien-armoury.app.window-app.sheet.grimoire-sheet .window-content .tab.details .form-group.spell-container .spells.blurred .spell img {
+  filter: blur(5px);
+}
+.forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell-container .spells.blurred .spell .spell-details, .forien-armoury.app.window-app.sheet.grimoire-sheet .window-content .tab.details .form-group.spell-container .spells.blurred .spell .spell-details {
+  filter: blur(5px);
+}
 .forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell-container .spell-drop-zone, .forien-armoury.app.window-app.sheet.grimoire-sheet .window-content .tab.details .form-group.spell-container .spell-drop-zone {
   margin: 2px;
   height: 80px;

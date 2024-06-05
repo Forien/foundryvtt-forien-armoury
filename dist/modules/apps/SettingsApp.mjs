@@ -192,6 +192,10 @@ export default class SettingsApp extends FormApplication {
 
       grimoires: {
         always: [
+          settings.grimoires.requireEquipped,
+          settings.grimoires.transferWithoutLore,
+          settings.grimoires.requireReadWrite,
+          settings.grimoires.hideSpellsWithoutLanguage,
           settings.grimoires.ownCategory,
           settings.grimoires.defaultEncumbrance,
           settings.grimoires.defaultAvailability,

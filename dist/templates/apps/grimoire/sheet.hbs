@@ -40,23 +40,28 @@
                            data-tooltip="{{localize "Forien.Armoury.Grimoires.RemoveSpells"}}"></i>
                     {{/if}}
                 </label>
-                <div class="spells">
+                <div class="spells {{#if hideSpells}}blurred{{/if}}">
                     {{#if spells.length}}
                         {{#each spells as |spell s|}}
-                        <div class="spell" data-uuid="{{spell.uuid}}">
-                            <img src="{{spell.img}}" alt="{{spell.name}}"/>
-                            <div class="spell-details">
-                                <div class="spell-name">
-                                    <input type="text" value="{{spell.name}}"/>
-                                </div>
-                                {{#if spell.system}}
-                                    <div class="tags">
-                                        <span class="tag">{{localize "Lore"}}: {{lookup ../magicLores spell.system.lore.value}}</span>
-                                        <span class="tag">{{localize "CN"}}: {{spell.grimoireCN}}</span>
+                            <div class="spell" data-uuid="{{spell.uuid}}">
+                                <img src="{{spell.img}}" alt="{{spell.name}}"/>
+                                <div class="spell-details">
+                                    <div class="spell-name">
+                                        {{#if ../hideSpells}}
+                                            {{spell.name}}
+                                        {{else}}
+                                            <input type="text" value="{{spell.name}}"/>
+                                        {{/if}}
                                     </div>
-                                {{/if}}
+                                    {{#if spell.system}}
+                                        <div class="tags">
+                                                <span class="tag">{{localize "Lore"}}: {{lookup ../magicLores
+                                                                                                spell.system.lore.value}}</span>
+                                            <span class="tag">{{localize "CN"}}: {{spell.grimoireCN}}</span>
+                                        </div>
+                                    {{/if}}
+                                </div>
                             </div>
-                        </div>
                         {{/each}}
                     {{else}}
                         <div class="spell-drop-zone">{{localize "Forien.Armoury.Grimoires.DropHere"}}</div>
@@ -68,7 +73,7 @@
                 <label class="label-text">{{localize "NAME.Language"}}</label>
                 <div class="input-box">
                     <input class="input-text" type="text" name="system.language" value="{{system.language}}"
-                           data-dtype="String"/>
+                           data-dtype="String" {{#unless canEditLanguage}}disabled{{/unless}}/>
                 </div>
             </div>
 

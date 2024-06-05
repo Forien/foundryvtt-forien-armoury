@@ -1,4 +1,5 @@
 @import "../mixins/square";
+@import "../mixins/blur";
 
 .forien-armoury {
   &.app.window-app.sheet {
@@ -93,7 +94,18 @@
                     }
 
                     &:nth-of-type(even) {
-                      background: rgba(0,0,0,0.075);
+                      background: rgba(0, 0, 0, 0.075);
+                    }
+                  }
+
+                  &.blurred {
+                    .spell {
+                      img {
+                        @include blur(5px);
+                      }
+                      .spell-details{
+                        @include blur(5px);
+                      }
                     }
                   }
                 }

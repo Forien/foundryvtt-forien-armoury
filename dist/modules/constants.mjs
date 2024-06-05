@@ -76,6 +76,10 @@ const settings = {
     autoProgress: 'diseases.automateProgression'
   },
   grimoires: {
+    requireEquipped: 'grimoires.requireEquipped',
+    transferWithoutLore: 'grimoires.transferWithoutLore',
+    requireReadWrite: 'grimoires.requireReadWrite',
+    hideSpellsWithoutLanguage: 'grimoires.hideSpellsWithoutLanguage',
     ownCategory: 'grimoires.ownCategory',
     defaultEncumbrance: 'grimoires.defaultEncumbrance',
     defaultAvailability: 'grimoires.defaultAvailability'
@@ -140,6 +144,10 @@ const defaults = {
     autoProgress: false
   },
   grimoires: {
+    requireEquipped: true,
+    transferWithoutLore: false,
+    requireReadWrite: true,
+    hideSpellsWithoutLanguage: true,
     ownCategory: true,
     defaultEncumbrance: 1,
     defaultAvailability: "exotic",

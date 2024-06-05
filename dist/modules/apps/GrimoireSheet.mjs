@@ -39,6 +39,8 @@ export default class GrimoireSheet extends ItemSheetWfrp4e {
     data.width = 550;
     data.spells = await this.item.system.loadSpells();
     data.magicLores = game.wfrp4e.config.magicLores;
+    data.hideSpells = this.item.system.hideSpells && !game.user.isGM;
+    data.canEditLanguage = game.user.isGM || !this.item.system.language;
 
     return data;
   }
@@ -92,6 +94,8 @@ export default class GrimoireSheet extends ItemSheetWfrp4e {
    */
   activateListeners(html) {
     super.activateListeners(html);
+
+    if (this.item.system.hideSpells) return;
 
     html.on("click", ".spell img", this.#onSpellClick.bind(this))
     html.on("click", ".spells-remove", this.#onSpellsRemoveClick.bind(this))
