@@ -2,6 +2,10 @@
 
 ## v2.X.X
 
+### v2.1.1
+* Added support for rerolling Combat Fatigue Tests
+* Fixed input for Combat Fatigue not rendering without explicit ownership (affects mostly GMs)
+
 ### v2.1.0
 * Fixed notification not showing when Actor can't use scroll due to quantity or language
 * Fixed Applicable Effects not working from Chat Cards

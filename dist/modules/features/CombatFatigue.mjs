@@ -9,6 +9,7 @@ export default class CombatFatigue extends ForienBaseModule {
   bindHooks() {
     Hooks.on("ready", this.#setupEndTurnScript.bind(this));
     Hooks.on("renderCombatTracker", this.#renderRoundsBeforeTest.bind(this));
+    Hooks.on("wfrp4e:rollTest", this.#onRollTest.bind(this));
   }
 
   #setupEndTurnScript() {
@@ -29,7 +30,7 @@ export default class CombatFatigue extends ForienBaseModule {
     if (Utility.getSetting(settings.combatFatigue.enable) === false) return;
 
     if (game.combat) {
-      const combatants = game.combat.combatants.filter(combatant => combatant.actor.ownership[game.userId] > CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER);
+      const combatants = game.combat.combatants.filter(combatant => combatant.actor.isOwner);
 
       for (let combatant of combatants) {
         let $controls = html.find(`.combatant[data-combatant-id="${combatant.id}"] .token-effects`);
@@ -57,6 +58,40 @@ export default class CombatFatigue extends ForienBaseModule {
         }
       }
     }
+  }
+
+  /**
+   * Handles rerolls to Combat Fatigue tests, adjusting results accordingly
+   *
+   * @param {TestWFRP} test
+   * @param {{}} options
+   * @returns {Promise<void>}
+   */
+  async #onRollTest(test, options) {
+    if (test.data?.preData?.options?.isCastingFatigue !== true) return;
+    if (test.data?.context?.reroll !== true) return;
+
+    const combatant = game.combat.combatants.find(combatant => combatant.actor === test.actor);
+    const actor = combatant?.actor;
+
+    if (!actor) return;
+
+    const previousOutcome = test.data.context.previousResult.outcome;
+    const outcome = test.data.result.outcome;
+    const SL = test.data.result.SL;
+
+    let roundsBeforeTest = actor.characteristics.t.bonus;
+
+    if (previousOutcome === 'success' && outcome === 'failure') {
+      await actor.addCondition('fatigued');
+    } else if (previousOutcome === 'failure' && outcome === 'success') {
+      roundsBeforeTest += parseInt(SL);
+      await actor.removeCondition('fatigued', 1);
+    }
+
+    debug('[CombatFatigue] Combat Fatigue Test Reroll results', {outcome, SL, roundsBeforeTest, previousOutcome, combatant});
+
+    await combatant?.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, roundsBeforeTest);
   }
 
   /**
@@ -157,10 +192,19 @@ export default class CombatFatigue extends ForienBaseModule {
     const skill = actor.itemTypes.skill.find(s => s.name === enduranceName);
     let test;
 
+    const options = {
+      appendTitle,
+      isCastingFatigue: true,
+      context: {
+        failure: game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueTestFailure"),
+        success: game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueTestSuccess"),
+      }
+    };
+
     if (skill)
-      test = await actor.setupSkill(skill, {appendTitle});
+      test = await actor.setupSkill(skill, options);
     else
-      test = await actor.setupCharacteristic('t', {appendTitle});
+      test = await actor.setupCharacteristic('t', options);
 
     await test.roll();
 
