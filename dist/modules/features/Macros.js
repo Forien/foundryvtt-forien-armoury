@@ -401,6 +401,17 @@ export default class Macros extends ForienBaseModule {
       return output;
     }
 
+    function makeDialogList(actors, type) {
+      let output = '';
+
+      for (const actor of actors) {
+        output += `<input type="checkbox" id="${actor.id}" name="${type}" value="${actor.id}" style="width: 14px;height: 14px;" checked/>`;
+        output += `<label for="${actor.id}">${actor.name}</label><br />`;
+      }
+
+      return output;
+    }
+
     async function awardXP(xp, reason, characters, companions) {
       const halfXp = Math.floor(xp / 2);
       await updateActors(characters, xp, reason);
@@ -440,8 +451,8 @@ grid-auto-flow: row;
 grid-template-areas: 'headerCharacters headerCompanions'
 'characters companions';`
 
-    let characterList = makeList(characters);
-    let companionList = makeList(companions);
+    let characterList = makeDialogList(characters, 'characters');
+    let companionList = makeDialogList(companions, 'companions');
     let reason = '';
 
     let sessionId = game.gmtoolkit?.utility.getSession()?.id;
@@ -478,6 +489,12 @@ grid-template-areas: 'headerCharacters headerCompanions'
               return Utility.notify(game.i18n.localize("Forien.Armoury.Macros.AwardXP.XPNaN"), {type: "warning"});
             if (!reason)
               return Utility.notify(game.i18n.localize("Forien.Armoury.Macros.AwardXP.ReasonEmpty"), {type: "warning"});
+
+            let characters = [];
+            let companions = [];
+
+            html.find("[name='characters']:checked").each((i, e) => characters.push(game.actors.get(e.value)));
+            html.find("[name='companions']:checked").each((i, e) => companions.push(game.actors.get(e.value)));
 
             return awardXP(xp, reason, characters, companions);
           }
