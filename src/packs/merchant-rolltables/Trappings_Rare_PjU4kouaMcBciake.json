@@ -5,10 +5,70 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "7fDKbrHS4Wc5GqC3",
-    "7DifDdN99KMYAfHD",
-    "hAC0ydigK9hlauON",
-    "MEM9oF63egX6FBiS"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Davrich Lamp",
+      "documentId": "JX4Qy1qVog3PZBvA",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/davrich-lamp.png",
+      "_id": "7fDKbrHS4Wc5GqC3",
+      "flags": {},
+      "_key": "!tables.results!PjU4kouaMcBciake.7fDKbrHS4Wc5GqC3"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "False Eye",
+      "documentId": "wVL0ugPXCBLGzdNm",
+      "img": "modules/wfrp4e-core/icons/equipment/prosthetics/false-eye.png",
+      "_id": "7DifDdN99KMYAfHD",
+      "flags": {},
+      "_key": "!tables.results!PjU4kouaMcBciake.7DifDdN99KMYAfHD"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Hunting Dog",
+      "documentId": "y28P2G0NEVZvMzS5",
+      "img": "modules/wfrp4e-core/icons/equipment/animals_and_vehicles/hunting-dog.png",
+      "_id": "hAC0ydigK9hlauON",
+      "flags": {},
+      "_key": "!tables.results!PjU4kouaMcBciake.hAC0ydigK9hlauON"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Ostrich Feather",
+      "documentId": "GGIp6i3pbvnkp9VW",
+      "img": "systems/wfrp4e/icons/blank.png",
+      "_id": "MEM9oF63egX6FBiS",
+      "flags": {},
+      "_key": "!tables.results!PjU4kouaMcBciake.MEM9oF63egX6FBiS"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

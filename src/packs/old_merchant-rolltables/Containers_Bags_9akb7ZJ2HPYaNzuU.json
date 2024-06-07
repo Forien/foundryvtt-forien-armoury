@@ -5,11 +5,86 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "fjMDPNXG14pkBz6h",
-    "3DxNQtljGvYmn3Hz",
-    "klL4EZNnr1A1sJ8N",
-    "U4qU167U4nxd1lYQ",
-    "WtLru5oviyieyoRz"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 5,
+      "range": [
+        1,
+        5
+      ],
+      "drawn": false,
+      "text": "Backpack",
+      "documentId": "kJziKlct30lfAiYA",
+      "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/backpack.png",
+      "_id": "fjMDPNXG14pkBz6h",
+      "flags": {},
+      "_key": "!tables.results!9akb7ZJ2HPYaNzuU.fjMDPNXG14pkBz6h"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "text": "Potion Bag",
+      "documentId": "a9ns2EksvvtdUvn4",
+      "img": "icons/containers/bags/case-embossed-leather-tan.webp",
+      "_id": "3DxNQtljGvYmn3Hz",
+      "flags": {},
+      "_key": "!tables.results!9akb7ZJ2HPYaNzuU.3DxNQtljGvYmn3Hz"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 10,
+      "range": [
+        7,
+        16
+      ],
+      "drawn": false,
+      "text": "Sack",
+      "documentId": "RHqux3m4dgJoDkqG",
+      "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/sack-large.png",
+      "_id": "klL4EZNnr1A1sJ8N",
+      "flags": {},
+      "_key": "!tables.results!9akb7ZJ2HPYaNzuU.klL4EZNnr1A1sJ8N"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 10,
+      "range": [
+        17,
+        26
+      ],
+      "drawn": false,
+      "text": "Sack, Large",
+      "documentId": "2znfMGBp5GOQ12M0",
+      "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/sack-large.png",
+      "_id": "U4qU167U4nxd1lYQ",
+      "flags": {},
+      "_key": "!tables.results!9akb7ZJ2HPYaNzuU.U4qU167U4nxd1lYQ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 8,
+      "range": [
+        27,
+        34
+      ],
+      "drawn": false,
+      "text": "Sling Bag",
+      "documentId": "bImtd1QDrQWp53Ua",
+      "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/sling-bag.png",
+      "_id": "WtLru5oviyieyoRz",
+      "flags": {},
+      "_key": "!tables.results!9akb7ZJ2HPYaNzuU.WtLru5oviyieyoRz"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

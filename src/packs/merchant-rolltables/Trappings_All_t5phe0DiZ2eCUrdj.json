@@ -5,10 +5,70 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "x5ohZFVFUj8L9mlz",
-    "IL5zUfTeW3f4dRY5",
-    "jzPlHAa5qUrzSE8o",
-    "pWwwvkNiimrsAWUh"
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 30,
+      "range": [
+        1,
+        30
+      ],
+      "drawn": false,
+      "text": "Trappings Common",
+      "documentId": "0Uvy8Rqc849Ork8O",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "x5ohZFVFUj8L9mlz",
+      "flags": {},
+      "_key": "!tables.results!t5phe0DiZ2eCUrdj.x5ohZFVFUj8L9mlz"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 15,
+      "range": [
+        31,
+        45
+      ],
+      "drawn": false,
+      "text": "Trappings Scarce",
+      "documentId": "SkcgjETudOZ1v52p",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "IL5zUfTeW3f4dRY5",
+      "flags": {},
+      "_key": "!tables.results!t5phe0DiZ2eCUrdj.IL5zUfTeW3f4dRY5"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 5,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "text": "Trappings Rare",
+      "documentId": "PjU4kouaMcBciake",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "jzPlHAa5qUrzSE8o",
+      "flags": {},
+      "_key": "!tables.results!t5phe0DiZ2eCUrdj.jzPlHAa5qUrzSE8o"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 1,
+      "range": [
+        51,
+        51
+      ],
+      "drawn": false,
+      "text": "Trappings Exotic",
+      "documentId": "RAtQKHJuwzetzLES",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "pWwwvkNiimrsAWUh",
+      "flags": {},
+      "_key": "!tables.results!t5phe0DiZ2eCUrdj.pWwwvkNiimrsAWUh"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

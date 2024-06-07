@@ -5,9 +5,54 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "G0z0HFJbZZBTHKBU",
-    "eXkE8xr4FLe9oD7B",
-    "ydxBqIuuB2NcPXAg"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 15,
+      "range": [
+        1,
+        15
+      ],
+      "drawn": false,
+      "text": "Flail",
+      "documentId": "Qi8gXIjgUSsNLf1Z",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/flail.png",
+      "_id": "G0z0HFJbZZBTHKBU",
+      "flags": {},
+      "_key": "!tables.results!JWGDM8xppMY1G2Wk.G0z0HFJbZZBTHKBU"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 30,
+      "range": [
+        16,
+        45
+      ],
+      "drawn": false,
+      "text": "Grain Flail",
+      "documentId": "29BZiQUmNboB1Ebn",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/grain-flail.png",
+      "_id": "eXkE8xr4FLe9oD7B",
+      "flags": {},
+      "_key": "!tables.results!JWGDM8xppMY1G2Wk.eXkE8xr4FLe9oD7B"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 5,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "text": "Military Flail",
+      "documentId": "sVIALrzjX22wUef9",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/military-flail.png",
+      "_id": "ydxBqIuuB2NcPXAg",
+      "flags": {},
+      "_key": "!tables.results!JWGDM8xppMY1G2Wk.ydxBqIuuB2NcPXAg"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

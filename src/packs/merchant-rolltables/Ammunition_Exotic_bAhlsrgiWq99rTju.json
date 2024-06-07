@@ -5,10 +5,70 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "O3G7NEvSDCwbCb1K",
-    "UIub2URoOVhRQmcJ",
-    "gCFCstoXvclN6FuD",
-    "7M05NbDr0Q1aNDlb"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Aqshy-Infused Powder",
+      "documentId": "KrDAJBXWWh48XxgC",
+      "img": "modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png",
+      "_id": "O3G7NEvSDCwbCb1K",
+      "flags": {},
+      "_key": "!tables.results!bAhlsrgiWq99rTju.O3G7NEvSDCwbCb1K"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Elf Arrow",
+      "documentId": "NQ4OVp1ZfinJ7lQH",
+      "img": "modules/wfrp4e-core/icons/equipment/ammunition/elf-arrow.png",
+      "_id": "UIub2URoOVhRQmcJ",
+      "flags": {},
+      "_key": "!tables.results!bAhlsrgiWq99rTju.UIub2URoOVhRQmcJ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Grapeshot and Powder",
+      "documentId": "PinFSQuQvxqaobSf",
+      "img": "modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png",
+      "_id": "gCFCstoXvclN6FuD",
+      "flags": {},
+      "_key": "!tables.results!bAhlsrgiWq99rTju.gCFCstoXvclN6FuD"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-archives1.items",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Starfire Shafts",
+      "documentId": "ws96ig1WPFRecmCn",
+      "img": "modules/wfrp4e-archives1/assets/icons/starfire-shafts.png",
+      "_id": "7M05NbDr0Q1aNDlb",
+      "flags": {},
+      "_key": "!tables.results!bAhlsrgiWq99rTju.7M05NbDr0Q1aNDlb"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

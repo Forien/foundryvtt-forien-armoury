@@ -2,7 +2,22 @@
   "name": "Career - Runebound",
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "results": [
-    "SCMOXcTOPia2WYsj"
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 100,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Runebound Neophyte",
+      "documentId": "lJgKS7d86MaVVyK2",
+      "img": "modules/forien-armoury/icons/careers/runebound-ranger-1.webp",
+      "_id": "SCMOXcTOPia2WYsj",
+      "flags": {},
+      "_key": "!tables.results!Mj72jAZUKwqXVM31.SCMOXcTOPia2WYsj"
+    }
   ],
   "formula": "1d100",
   "replacement": true,

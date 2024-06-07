@@ -5,10 +5,70 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "VJ7VKesxyyAYVpHM",
-    "S0IQuP5qDKAHg4uR",
-    "8RuYQzBIUg5X8R9u",
-    "oEqnRkzhURQPNNcS"
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 30,
+      "range": [
+        1,
+        30
+      ],
+      "drawn": false,
+      "text": "Tools and Kits Common",
+      "documentId": "je7AcyjxyaaxfDM8",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "VJ7VKesxyyAYVpHM",
+      "flags": {},
+      "_key": "!tables.results!9k3gd2aEG4TnqnYl.VJ7VKesxyyAYVpHM"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 15,
+      "range": [
+        31,
+        45
+      ],
+      "drawn": false,
+      "text": "Tools and Kits Scarce",
+      "documentId": "wAAL6gqc4M2V2FJk",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "S0IQuP5qDKAHg4uR",
+      "flags": {},
+      "_key": "!tables.results!9k3gd2aEG4TnqnYl.S0IQuP5qDKAHg4uR"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 5,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "text": "Tools and Kits Rare",
+      "documentId": "hysJLUNEEoNHrUOj",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "8RuYQzBIUg5X8R9u",
+      "flags": {},
+      "_key": "!tables.results!9k3gd2aEG4TnqnYl.8RuYQzBIUg5X8R9u"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 1,
+      "range": [
+        51,
+        51
+      ],
+      "drawn": false,
+      "text": "Tools and Kits Exotic",
+      "documentId": "tYMTor2r7jYPonVN",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "oEqnRkzhURQPNNcS",
+      "flags": {},
+      "_key": "!tables.results!9k3gd2aEG4TnqnYl.oEqnRkzhURQPNNcS"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

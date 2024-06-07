@@ -5,8 +5,38 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "DyQLeOgqSOyau2iB",
-    "cRdsimaTy8f0s5bF"
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 30,
+      "range": [
+        1,
+        30
+      ],
+      "drawn": false,
+      "text": "Food and Drink Common",
+      "documentId": "Sc7kQchdhpXuxdWG",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "DyQLeOgqSOyau2iB",
+      "flags": {},
+      "_key": "!tables.results!Lyg86KOLxhKBYyjT.DyQLeOgqSOyau2iB"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 1,
+      "range": [
+        31,
+        31
+      ],
+      "drawn": false,
+      "text": "Food and Drink Exotic",
+      "documentId": "u4wfmPOh5HeiB3H2",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "cRdsimaTy8f0s5bF",
+      "flags": {},
+      "_key": "!tables.results!Lyg86KOLxhKBYyjT.cRdsimaTy8f0s5bF"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

@@ -43,7 +43,40 @@
     }
   },
   "effects": [
-    "ZW9h1JGyrnEGPzQW"
+    {
+      "icon": "icons/magic/unholy/strike-body-life-soul-green.webp",
+      "transfer": true,
+      "name": "Repulsive",
+      "_id": "ZW9h1JGyrnEGPzQW",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "prepareData",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "args.actor.system.characteristics.fel.value = Math.floor(args.actor.system.characteristics.fel.value / 2);"
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!NRVJQWYBfbZsPM4s.ZW9h1JGyrnEGPzQW"
+    }
   ],
   "sort": 300000,
   "ownership": {

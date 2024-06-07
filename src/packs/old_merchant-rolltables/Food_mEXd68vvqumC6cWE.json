@@ -5,12 +5,102 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "Bek7borGbfuuLaTt",
-    "hIZTSIb4Dj9thGqQ",
-    "x2dTK70RNQ4L0rFk",
-    "kicFWvSRSxSIvlFF",
-    "0tJCfPQYIspdECkp",
-    "cYZBUDq9Du0yswIY"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 30,
+      "range": [
+        1,
+        30
+      ],
+      "drawn": false,
+      "text": "Food, groceries/day",
+      "documentId": "jA5TSMX64RR5paKk",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/food-groceries-day.png",
+      "_id": "Bek7borGbfuuLaTt",
+      "flags": {},
+      "_key": "!tables.results!mEXd68vvqumC6cWE.Bek7borGbfuuLaTt"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 20,
+      "range": [
+        31,
+        50
+      ],
+      "drawn": false,
+      "text": "Rations, 1 day",
+      "documentId": "EVERNFcYxY7WY8ur",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/rations-1-day.png",
+      "_id": "hIZTSIb4Dj9thGqQ",
+      "flags": {},
+      "_key": "!tables.results!mEXd68vvqumC6cWE.hIZTSIb4Dj9thGqQ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 15,
+      "range": [
+        51,
+        65
+      ],
+      "drawn": false,
+      "text": "Wine, bottle",
+      "documentId": "7CJfiEV10299s7c1",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/wine-bottle.png",
+      "_id": "x2dTK70RNQ4L0rFk",
+      "flags": {},
+      "_key": "!tables.results!mEXd68vvqumC6cWE.x2dTK70RNQ4L0rFk"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        66,
+        66
+      ],
+      "drawn": false,
+      "text": "Bugman’s XXXXXX Ale, pint",
+      "documentId": "KzJkoB12jpidtngo",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/bugmans-xxxxxx-ale-pint.png",
+      "_id": "kicFWvSRSxSIvlFF",
+      "flags": {},
+      "_key": "!tables.results!mEXd68vvqumC6cWE.kicFWvSRSxSIvlFF"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 30,
+      "range": [
+        67,
+        96
+      ],
+      "drawn": false,
+      "text": "Ale, Keg",
+      "documentId": "jyphOMwPqNU9KgmS",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/ale-keg.png",
+      "_id": "0tJCfPQYIspdECkp",
+      "flags": {},
+      "_key": "!tables.results!mEXd68vvqumC6cWE.0tJCfPQYIspdECkp"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 20,
+      "range": [
+        97,
+        116
+      ],
+      "drawn": false,
+      "text": "Flask of Spirits",
+      "documentId": "f6cvUapo8tQHp2OL",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/spirits-pint.png",
+      "_id": "cYZBUDq9Du0yswIY",
+      "flags": {},
+      "_key": "!tables.results!mEXd68vvqumC6cWE.cYZBUDq9Du0yswIY"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

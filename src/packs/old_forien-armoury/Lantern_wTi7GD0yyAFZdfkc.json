@@ -3,7 +3,42 @@
   "type": "trapping",
   "img": "icons/sundries/lights/lantern-iron-lit-yellow.webp",
   "effects": [
-    "za7XlKi8UGGfjuDs"
+    {
+      "icon": "icons/sundries/lights/lantern-iron-lit-yellow.webp",
+      "transfer": true,
+      "name": "Lantern",
+      "_id": "za7XlKi8UGGfjuDs",
+      "changes": [
+        {
+          "key": "ATL.preset",
+          "mode": 2,
+          "value": "lantern"
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": 14400,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!wTi7GD0yyAFZdfkc.za7XlKi8UGGfjuDs"
+    }
   ],
   "flags": {
     "_sheetTab": "description",

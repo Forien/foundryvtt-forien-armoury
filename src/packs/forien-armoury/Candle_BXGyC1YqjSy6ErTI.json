@@ -3,7 +3,42 @@
   "type": "trapping",
   "img": "icons/sundries/lights/candle-unlit-grey.webp",
   "effects": [
-    "zUn7o4oGRBwnlmoX"
+    {
+      "icon": "icons/sundries/lights/candle-unlit-grey.webp",
+      "transfer": true,
+      "name": "Candle",
+      "_id": "zUn7o4oGRBwnlmoX",
+      "changes": [
+        {
+          "key": "ATL.preset",
+          "mode": 2,
+          "value": "candle"
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": 7200,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!BXGyC1YqjSy6ErTI.zUn7o4oGRBwnlmoX"
+    }
   ],
   "flags": {
     "_sheetTab": "description",

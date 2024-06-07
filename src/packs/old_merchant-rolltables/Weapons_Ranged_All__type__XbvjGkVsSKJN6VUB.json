@@ -5,14 +5,134 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "4yu1HapAAfS8sfxE",
-    "meb6UrSIPGyiaYqQ",
-    "vbs88gSJQVgcWFOA",
-    "Zi7AcArBDtIMLjj0",
-    "OyjMHRIZzSO0yvHn",
-    "P0CmIRrNvbfDFHC6",
-    "24EimrXl8AOJGskA",
-    "vrnj2BJTXVvwku7U"
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 7,
+      "range": [
+        1,
+        7
+      ],
+      "drawn": false,
+      "text": "Weapons Ranged Bow",
+      "documentId": "u7KC15yrzT8FQgbA",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "4yu1HapAAfS8sfxE",
+      "flags": {},
+      "_key": "!tables.results!XbvjGkVsSKJN6VUB.4yu1HapAAfS8sfxE"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 7,
+      "range": [
+        8,
+        14
+      ],
+      "drawn": false,
+      "text": "Weapons Ranged Crossbow",
+      "documentId": "VyiaKI5Bu355FN85",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "meb6UrSIPGyiaYqQ",
+      "flags": {},
+      "_key": "!tables.results!XbvjGkVsSKJN6VUB.meb6UrSIPGyiaYqQ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "text": "Weapons Ranged Engineering",
+      "documentId": "Wxwpo7lb3JXXmn8V",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "vbs88gSJQVgcWFOA",
+      "flags": {},
+      "_key": "!tables.results!XbvjGkVsSKJN6VUB.vbs88gSJQVgcWFOA"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 4,
+      "range": [
+        16,
+        19
+      ],
+      "drawn": false,
+      "text": "Weapons Ranged Entangling",
+      "documentId": "d6aAZua7r7FBa2WW",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "Zi7AcArBDtIMLjj0",
+      "flags": {},
+      "_key": "!tables.results!XbvjGkVsSKJN6VUB.Zi7AcArBDtIMLjj0"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 3,
+      "range": [
+        20,
+        22
+      ],
+      "drawn": false,
+      "text": "Weapons Ranged Explosives",
+      "documentId": "0uz6Av9prMPCWCAQ",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "OyjMHRIZzSO0yvHn",
+      "flags": {},
+      "_key": "!tables.results!XbvjGkVsSKJN6VUB.OyjMHRIZzSO0yvHn"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 8,
+      "range": [
+        23,
+        30
+      ],
+      "drawn": false,
+      "text": "Weapons Ranged Sling",
+      "documentId": "sVeSgf9FFQlvkf86",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "P0CmIRrNvbfDFHC6",
+      "flags": {},
+      "_key": "!tables.results!XbvjGkVsSKJN6VUB.P0CmIRrNvbfDFHC6"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 5,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "text": "Weapons Ranged Throwing",
+      "documentId": "6doUzn9m0jBvUuA3",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "24EimrXl8AOJGskA",
+      "flags": {},
+      "_key": "!tables.results!XbvjGkVsSKJN6VUB.24EimrXl8AOJGskA"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 4,
+      "range": [
+        36,
+        39
+      ],
+      "drawn": false,
+      "text": "Weapons Ranged Blackpowder",
+      "documentId": "ktmExxHw7gpyGtEK",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "vrnj2BJTXVvwku7U",
+      "flags": {},
+      "_key": "!tables.results!XbvjGkVsSKJN6VUB.vrnj2BJTXVvwku7U"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

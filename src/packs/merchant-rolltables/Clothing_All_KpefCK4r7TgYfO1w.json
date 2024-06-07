@@ -5,9 +5,54 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "o9eql90mXTDr29HH",
-    "jjtAQNu7D0RA1xUu",
-    "VBNwECzCggrxXzcC"
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 30,
+      "range": [
+        1,
+        30
+      ],
+      "drawn": false,
+      "text": "Clothing Common",
+      "documentId": "DkyB96EbXiOEGTk0",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "o9eql90mXTDr29HH",
+      "flags": {},
+      "_key": "!tables.results!KpefCK4r7TgYfO1w.o9eql90mXTDr29HH"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 5,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "text": "Clothing Rare",
+      "documentId": "oKh5ri3b16tcW47T",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "jjtAQNu7D0RA1xUu",
+      "flags": {},
+      "_key": "!tables.results!KpefCK4r7TgYfO1w.jjtAQNu7D0RA1xUu"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 15,
+      "range": [
+        36,
+        50
+      ],
+      "drawn": false,
+      "text": "Clothing Scarce",
+      "documentId": "EqPLOrxIR3quFvzT",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "VBNwECzCggrxXzcC",
+      "flags": {},
+      "_key": "!tables.results!KpefCK4r7TgYfO1w.VBNwECzCggrxXzcC"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

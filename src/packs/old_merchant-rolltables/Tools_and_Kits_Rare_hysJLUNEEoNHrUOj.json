@@ -5,8 +5,38 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "JY0fTO9f0mSG6syg",
-    "2OOeIqy3WvGjdwH2"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Reading Lens",
+      "documentId": "ZaJHpJKlib0LoOd2",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/reading-lens.png",
+      "_id": "JY0fTO9f0mSG6syg",
+      "flags": {},
+      "_key": "!tables.results!hysJLUNEEoNHrUOj.JY0fTO9f0mSG6syg"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Telescope",
+      "documentId": "lJfy4k1wXI25Dq9D",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/telescope.png",
+      "_id": "2OOeIqy3WvGjdwH2",
+      "flags": {},
+      "_key": "!tables.results!hysJLUNEEoNHrUOj.2OOeIqy3WvGjdwH2"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

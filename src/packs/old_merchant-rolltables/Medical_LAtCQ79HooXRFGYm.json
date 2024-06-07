@@ -5,14 +5,134 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "6gG0P85YJUkBPAFQ",
-    "LhwdHvaGi4aa15z2",
-    "U2aCSwFRbdUcNQnx",
-    "G8anrEVbU76a8IWV",
-    "zCjGSvxNuOsLgtnS",
-    "KtYCCMFkRjbQnjpA",
-    "y0Ya1NjFbfNOHzH3",
-    "RiFmpZXbpWKoyX2P"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 30,
+      "range": [
+        1,
+        30
+      ],
+      "drawn": false,
+      "text": "Bandage",
+      "documentId": "1wtW4N8l3UKwlLI3",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/bandage.png",
+      "_id": "6gG0P85YJUkBPAFQ",
+      "flags": {},
+      "_key": "!tables.results!LAtCQ79HooXRFGYm.6gG0P85YJUkBPAFQ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 15,
+      "range": [
+        31,
+        45
+      ],
+      "drawn": false,
+      "text": "Healing Draught",
+      "documentId": "gxdjLQoQUTYgD6fm",
+      "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-draught.png",
+      "_id": "LhwdHvaGi4aa15z2",
+      "flags": {},
+      "_key": "!tables.results!LAtCQ79HooXRFGYm.LhwdHvaGi4aa15z2"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 30,
+      "range": [
+        46,
+        75
+      ],
+      "drawn": false,
+      "text": "Healing Poultice",
+      "documentId": "s2lBWQFQt6M5Pngb",
+      "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-poultice.png",
+      "_id": "U2aCSwFRbdUcNQnx",
+      "flags": {},
+      "_key": "!tables.results!LAtCQ79HooXRFGYm.U2aCSwFRbdUcNQnx"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        76,
+        76
+      ],
+      "drawn": false,
+      "text": "Faxtoryll",
+      "documentId": "nRfcszo6wF2sVFDn",
+      "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/faxtoryll.png",
+      "_id": "G8anrEVbU76a8IWV",
+      "flags": {},
+      "_key": "!tables.results!LAtCQ79HooXRFGYm.G8anrEVbU76a8IWV"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 15,
+      "range": [
+        77,
+        91
+      ],
+      "drawn": false,
+      "text": "Earth Root",
+      "documentId": "WiPzDDFjCAo2EQDT",
+      "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/earth-root.png",
+      "_id": "zCjGSvxNuOsLgtnS",
+      "flags": {},
+      "_key": "!tables.results!LAtCQ79HooXRFGYm.zCjGSvxNuOsLgtnS"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 30,
+      "range": [
+        92,
+        121
+      ],
+      "drawn": false,
+      "text": "Salwort",
+      "documentId": "mUTrC5DA6bF8DDWz",
+      "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/salwort.png",
+      "_id": "KtYCCMFkRjbQnjpA",
+      "flags": {},
+      "_key": "!tables.results!LAtCQ79HooXRFGYm.KtYCCMFkRjbQnjpA"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 30,
+      "range": [
+        122,
+        151
+      ],
+      "drawn": false,
+      "text": "Digestive Tonic",
+      "documentId": "aUQDbW33bWqVeY9V",
+      "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/digestive-tonic.png",
+      "_id": "y0Ya1NjFbfNOHzH3",
+      "flags": {},
+      "_key": "!tables.results!LAtCQ79HooXRFGYm.y0Ya1NjFbfNOHzH3"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 15,
+      "range": [
+        152,
+        166
+      ],
+      "drawn": false,
+      "text": "Vitality Draught",
+      "documentId": "ZBBi7LpWvNgQgRcw",
+      "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+      "_id": "RiFmpZXbpWKoyX2P",
+      "flags": {},
+      "_key": "!tables.results!LAtCQ79HooXRFGYm.RiFmpZXbpWKoyX2P"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

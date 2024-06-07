@@ -5,23 +5,278 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "rq1Vk2oh5JHbtluO",
-    "iTo3iLjpyM6irGVR",
-    "bwXd7Xs3aqQBR3Kd",
-    "9GRrAdHCHEkcghM3",
-    "YhBz9ozI3tzF9S96",
-    "F6rdDymh0CRbPzOW",
-    "lfAX9HYmzkx3HWMR",
-    "EVkEJpcaI7UTqacl",
-    "FfoSYqLFFJhfBs1H",
-    "RVxgyJrc4YaTsjmL",
-    "j70khlkUQXsDIwY4",
-    "IZULwdKnZ4KS65EQ",
-    "b5yEnSAnoLbh8Bun",
-    "Zu1n9zcBd7dv26p2",
-    "Ur6NJy0asI4Tr4aH",
-    "UUGvAvp4fboYxneL",
-    "LfRwhqcYY14SComL"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 5,
+      "range": [
+        1,
+        5
+      ],
+      "drawn": false,
+      "text": "Chicken",
+      "documentId": "M5rVGn8jfQXVkY57",
+      "img": "modules/wfrp4e-core/icons/equipment/animals_and_vehicles/chicken.png",
+      "_id": "rq1Vk2oh5JHbtluO",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.rq1Vk2oh5JHbtluO"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 10,
+      "range": [
+        6,
+        15
+      ],
+      "drawn": false,
+      "text": "Doll",
+      "documentId": "QpqxyJ8dkzG3qKrE",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/doll.png",
+      "_id": "iTo3iLjpyM6irGVR",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.iTo3iLjpyM6irGVR"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "text": "Dog collar and lead",
+      "documentId": "gzriPtNbRFltaAsh",
+      "img": "modules/wfrp4e-core/icons/equipment/animals_and_vehicles/dog-collar-and-lead.png",
+      "_id": "bwXd7Xs3aqQBR3Kd",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.bwXd7Xs3aqQBR3Kd"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 15,
+      "range": [
+        17,
+        31
+      ],
+      "drawn": false,
+      "text": "Dice",
+      "documentId": "eZN8HuDV0OnjIWM9",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/dice.png",
+      "_id": "9GRrAdHCHEkcghM3",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.9GRrAdHCHEkcghM3"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 15,
+      "range": [
+        32,
+        46
+      ],
+      "drawn": false,
+      "text": "Deck of Cards",
+      "documentId": "F65NP8BmRo66nQOm",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/deck-of-cards.png",
+      "_id": "YhBz9ozI3tzF9S96",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.YhBz9ozI3tzF9S96"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 5,
+      "range": [
+        47,
+        51
+      ],
+      "drawn": false,
+      "text": "Homing Pigeon",
+      "documentId": "AA7nhcqscDj1zoU9",
+      "img": "modules/wfrp4e-core/icons/equipment/animals_and_vehicles/homing-pigeons.png",
+      "_id": "F6rdDymh0CRbPzOW",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.F6rdDymh0CRbPzOW"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        52,
+        52
+      ],
+      "drawn": false,
+      "text": "Hunting Dog",
+      "documentId": "y28P2G0NEVZvMzS5",
+      "img": "modules/wfrp4e-core/icons/equipment/animals_and_vehicles/hunting-dog.png",
+      "_id": "lfAX9HYmzkx3HWMR",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.lfAX9HYmzkx3HWMR"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 10,
+      "range": [
+        53,
+        62
+      ],
+      "drawn": false,
+      "text": "Instrument",
+      "documentId": "Wp9qIwlQo6dpszOw",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/instrument.png",
+      "_id": "EVkEJpcaI7UTqacl",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.EVkEJpcaI7UTqacl"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 10,
+      "range": [
+        63,
+        72
+      ],
+      "drawn": false,
+      "text": "Saddle and Harness",
+      "documentId": "5TDwZGuGwX1QJWAg",
+      "img": "modules/wfrp4e-core/icons/equipment/animals_and_vehicles/saddle-and-harness.png",
+      "_id": "FfoSYqLFFJhfBs1H",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.FfoSYqLFFJhfBs1H"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 10,
+      "range": [
+        73,
+        82
+      ],
+      "drawn": false,
+      "text": "Empty Vial",
+      "documentId": "VX5v3rgKUIyhE5CD",
+      "img": "icons/consumables/potions/vial-cork-empty.webp",
+      "_id": "RVxgyJrc4YaTsjmL",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.RVxgyJrc4YaTsjmL"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 10,
+      "range": [
+        83,
+        92
+      ],
+      "drawn": false,
+      "text": "Chalk",
+      "documentId": "elraWaIlaaHeKwKl",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/chalk.png",
+      "_id": "j70khlkUQXsDIwY4",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.j70khlkUQXsDIwY4"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 10,
+      "range": [
+        93,
+        102
+      ],
+      "drawn": false,
+      "text": "Charcoal stick",
+      "documentId": "b8SJ8qB0TpSjUGA6",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/charcoal-stick.png",
+      "_id": "IZULwdKnZ4KS65EQ",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.IZULwdKnZ4KS65EQ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 5,
+      "range": [
+        103,
+        107
+      ],
+      "drawn": false,
+      "text": "Jewellery",
+      "documentId": "8MpTb12W1x6ECZzt",
+      "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/jewellery.png",
+      "_id": "b5yEnSAnoLbh8Bun",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.b5yEnSAnoLbh8Bun"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 3,
+      "range": [
+        108,
+        110
+      ],
+      "drawn": false,
+      "text": "Silk Underwear",
+      "documentId": "Ox4yptGb9pIxBxk5",
+      "img": "systems/wfrp4e/icons/blank.png",
+      "_id": "Zu1n9zcBd7dv26p2",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.Zu1n9zcBd7dv26p2"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 10,
+      "range": [
+        111,
+        120
+      ],
+      "drawn": false,
+      "text": "Amulet",
+      "documentId": "o6VOoj3KUlkfLCia",
+      "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/amulet.png",
+      "_id": "Ur6NJy0asI4Tr4aH",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.Ur6NJy0asI4Tr4aH"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 8,
+      "range": [
+        121,
+        128
+      ],
+      "drawn": false,
+      "text": "Perfume",
+      "documentId": "1BgoTqp0i0z8cA28",
+      "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/perfume.png",
+      "_id": "UUGvAvp4fboYxneL",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.UUGvAvp4fboYxneL"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 8,
+      "range": [
+        129,
+        136
+      ],
+      "drawn": false,
+      "text": "Face Powder",
+      "documentId": "WECvYThPGMkyagcw",
+      "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/face-powder.png",
+      "_id": "LfRwhqcYY14SComL",
+      "flags": {},
+      "_key": "!tables.results!2zf6KYSJvwjQSn0a.LfRwhqcYY14SComL"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

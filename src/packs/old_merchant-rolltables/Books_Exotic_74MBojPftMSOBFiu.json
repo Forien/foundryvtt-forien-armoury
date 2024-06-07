@@ -5,8 +5,38 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "YGhHclrkL5CVMOEt",
-    "SSzf6XyNucDLqD3t"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Book, Cryptography",
+      "documentId": "z8X2CMJdAZKoE3lk",
+      "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-cryptography.png",
+      "_id": "YGhHclrkL5CVMOEt",
+      "flags": {},
+      "_key": "!tables.results!74MBojPftMSOBFiu.YGhHclrkL5CVMOEt"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Book, Magic",
+      "documentId": "qQQ6rRUqcRIaU7kr",
+      "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-magic.png",
+      "_id": "SSzf6XyNucDLqD3t",
+      "flags": {},
+      "_key": "!tables.results!74MBojPftMSOBFiu.SSzf6XyNucDLqD3t"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

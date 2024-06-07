@@ -62,7 +62,40 @@
     }
   },
   "effects": [
-    "bWkSgjBVcFO2d73J"
+    {
+      "icon": "icons/equipment/neck/amulet-carved-stone-spiral.webp",
+      "transfer": true,
+      "name": "Amulet of „Resilience“",
+      "_id": "bWkSgjBVcFO2d73J",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "prePrepareData",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.actor.characteristics.int.value < 40)\n  args.actor.characteristics.t.modifier += 3; "
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!SPHNnlmWTrxvNkD9.bWkSgjBVcFO2d73J"
+    }
   ],
   "ownership": {
     "default": 0,

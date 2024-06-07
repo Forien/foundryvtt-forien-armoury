@@ -5,10 +5,70 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "q7DRYF7fHq5zPuTg",
-    "yoCDIFrzFRtKTJU3",
-    "mhLr3Dy18L8ypP1r",
-    "BIDw2aXZdaASifTU"
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 8,
+      "range": [
+        1,
+        8
+      ],
+      "drawn": false,
+      "text": "Ammunition Bow",
+      "documentId": "SPHK7kTHbQfB0AOE",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "q7DRYF7fHq5zPuTg",
+      "flags": {},
+      "_key": "!tables.results!UpPcwYRZPIoPnZiN.q7DRYF7fHq5zPuTg"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 4,
+      "range": [
+        9,
+        12
+      ],
+      "drawn": false,
+      "text": "Weapons Ranged Bow",
+      "documentId": "u7KC15yrzT8FQgbA",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "yoCDIFrzFRtKTJU3",
+      "flags": {},
+      "_key": "!tables.results!UpPcwYRZPIoPnZiN.yoCDIFrzFRtKTJU3"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 2,
+      "range": [
+        13,
+        14
+      ],
+      "drawn": false,
+      "text": "Bow String",
+      "documentId": "RKjHcjn71lPT06Rj",
+      "img": "systems/wfrp4e/icons/blank.png",
+      "_id": "mhLr3Dy18L8ypP1r",
+      "flags": {},
+      "_key": "!tables.results!UpPcwYRZPIoPnZiN.mhLr3Dy18L8ypP1r"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 2,
+      "range": [
+        15,
+        16
+      ],
+      "drawn": false,
+      "text": "Containers Arrows and Bolts",
+      "documentId": "xH15xfRhQlyZRXjY",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "BIDw2aXZdaASifTU",
+      "flags": {},
+      "_key": "!tables.results!UpPcwYRZPIoPnZiN.BIDw2aXZdaASifTU"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

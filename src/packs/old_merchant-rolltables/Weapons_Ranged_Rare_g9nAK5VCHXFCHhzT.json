@@ -5,18 +5,198 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "Tn623G1NYXd11SqR",
-    "3jBnQX4MylRLzZdh",
-    "FDytfb50B2I9i165",
-    "kC9waDBxoLh0HIkZ",
-    "WFgimo6rEKRZnivj",
-    "LPORdnBRBhM9nWMG",
-    "lvZs3I7BzSW8LaWy",
-    "RlH90Ya79B1dSiX4",
-    "pzG23pa6QECIGymD",
-    "g1iaavbefRkaq1vC",
-    "xITtQ0fPRGnpdqpk",
-    "GqPv3wHgiodEhqwT"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Bolas",
+      "documentId": "qim3Ad0ldTS9mXDj",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/bolas.png",
+      "_id": "Tn623G1NYXd11SqR",
+      "flags": {},
+      "_key": "!tables.results!g9nAK5VCHXFCHhzT.Tn623G1NYXd11SqR"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Bomb",
+      "documentId": "X8WFQf0HB9yXKjdD",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/bomb.png",
+      "_id": "3jBnQX4MylRLzZdh",
+      "flags": {},
+      "_key": "!tables.results!g9nAK5VCHXFCHhzT.3jBnQX4MylRLzZdh"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-archives1.items",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Dwarf Crossbow",
+      "documentId": "aQE698skxSqkrdmO",
+      "img": "modules/wfrp4e-archives1/assets/icons/dwarf-crossbow.png",
+      "_id": "FDytfb50B2I9i165",
+      "flags": {},
+      "_key": "!tables.results!g9nAK5VCHXFCHhzT.FDytfb50B2I9i165"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-archives1.items",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Dwarf Handgun",
+      "documentId": "BIW1jibsj1mZTKq0",
+      "img": "modules/wfrp4e-archives1/assets/icons/dwarf-handgun.png",
+      "_id": "kC9waDBxoLh0HIkZ",
+      "flags": {},
+      "_key": "!tables.results!g9nAK5VCHXFCHhzT.kC9waDBxoLh0HIkZ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-archives1.items",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "text": "Dwarf Pistol",
+      "documentId": "yaQBcwPMyEyP7H2f",
+      "img": "modules/wfrp4e-archives1/assets/icons/dwarf-pistol.png",
+      "_id": "WFgimo6rEKRZnivj",
+      "flags": {},
+      "_key": "!tables.results!g9nAK5VCHXFCHhzT.WFgimo6rEKRZnivj"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "text": "Heavy Crossbow",
+      "documentId": "K34pxV6XsxhoZRiQ",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/heavy-crossbow.png",
+      "_id": "LPORdnBRBhM9nWMG",
+      "flags": {},
+      "_key": "!tables.results!g9nAK5VCHXFCHhzT.LPORdnBRBhM9nWMG"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "text": "Matchlock Blunderbuss",
+      "documentId": "3pnK66EDBJXs5hai",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/blunderbuss.png",
+      "_id": "lvZs3I7BzSW8LaWy",
+      "flags": {},
+      "_key": "!tables.results!g9nAK5VCHXFCHhzT.lvZs3I7BzSW8LaWy"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "text": "Matchlock Handgun",
+      "documentId": "zcn4bYbkz5N4PZJv",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/handgun-flaw.png",
+      "_id": "RlH90Ya79B1dSiX4",
+      "flags": {},
+      "_key": "!tables.results!g9nAK5VCHXFCHhzT.RlH90Ya79B1dSiX4"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "text": "Pepperbox",
+      "documentId": "s0mBvaAbe6PLUPZb",
+      "img": "systems/wfrp4e/icons/blank.png",
+      "_id": "pzG23pa6QECIGymD",
+      "flags": {},
+      "_key": "!tables.results!g9nAK5VCHXFCHhzT.pzG23pa6QECIGymD"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "text": "Pistol",
+      "documentId": "pu2OkOWm15zEqWzz",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/pistol.png",
+      "_id": "g1iaavbefRkaq1vC",
+      "flags": {},
+      "_key": "!tables.results!g9nAK5VCHXFCHhzT.g1iaavbefRkaq1vC"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "text": "Repeater Handgun",
+      "documentId": "vwvprQOKH9Rtti4b",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/repeater-handgun.png",
+      "_id": "xITtQ0fPRGnpdqpk",
+      "flags": {},
+      "_key": "!tables.results!g9nAK5VCHXFCHhzT.xITtQ0fPRGnpdqpk"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "Repeater Pistol",
+      "documentId": "Neriv2FSubZWLTTq",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/repeater-pistol.png",
+      "_id": "GqPv3wHgiodEhqwT",
+      "flags": {},
+      "_key": "!tables.results!g9nAK5VCHXFCHhzT.GqPv3wHgiodEhqwT"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

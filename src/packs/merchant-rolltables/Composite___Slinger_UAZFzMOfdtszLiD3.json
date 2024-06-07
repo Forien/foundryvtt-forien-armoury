@@ -5,9 +5,54 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "4hHulzJID6E4O647",
-    "5DdAoiaBPO5SXJCA",
-    "OZP3o1b8jQNFh7yv"
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 5,
+      "range": [
+        1,
+        5
+      ],
+      "drawn": false,
+      "text": "Ammunition Sling",
+      "documentId": "WiECkYvbqPun3mV3",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "4hHulzJID6E4O647",
+      "flags": {},
+      "_key": "!tables.results!UAZFzMOfdtszLiD3.4hHulzJID6E4O647"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 3,
+      "range": [
+        6,
+        8
+      ],
+      "drawn": false,
+      "text": "Weapons Ranged Sling",
+      "documentId": "sVeSgf9FFQlvkf86",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "5DdAoiaBPO5SXJCA",
+      "flags": {},
+      "_key": "!tables.results!UAZFzMOfdtszLiD3.5DdAoiaBPO5SXJCA"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 2,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "text": "Shot Pouch",
+      "documentId": "izBtNy0denmW9BpV",
+      "img": "icons/containers/bags/pouch-leather-simple-tan.webp",
+      "_id": "OZP3o1b8jQNFh7yv",
+      "flags": {},
+      "_key": "!tables.results!UAZFzMOfdtszLiD3.OZP3o1b8jQNFh7yv"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

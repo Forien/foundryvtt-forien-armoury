@@ -5,18 +5,198 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "QEd5ygkQ3z7NmLjl",
-    "mMvy5uDp07plpYLV",
-    "G6mvLKUrJyeUorDN",
-    "nAaYoGxJ5Y4p4Xti",
-    "AlmdqAdgxHEJQ9H9",
-    "8d7KECz3O67BSFXz",
-    "bbGTUOnaal9y4Bba",
-    "XD4l1rGYMWRORgXD",
-    "OtxfzygEElhmDzbl",
-    "1anfurzF8lOg0PI9",
-    "hdStYMjW9uAGNGIZ",
-    "Fz3bAOLkrvE17Vtq"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Abacus",
+      "documentId": "Ldf5kDBob8H0v6iV",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/abacus.png",
+      "_id": "QEd5ygkQ3z7NmLjl",
+      "flags": {},
+      "_key": "!tables.results!wAAL6gqc4M2V2FJk.QEd5ygkQ3z7NmLjl"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Antitoxin Kit",
+      "documentId": "hhImniNwHKmcC6FK",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/antitoxin-kit.png",
+      "_id": "mMvy5uDp07plpYLV",
+      "flags": {},
+      "_key": "!tables.results!wAAL6gqc4M2V2FJk.mMvy5uDp07plpYLV"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Compass",
+      "documentId": "yqQHzGAY57NjGDTd",
+      "img": "systems/wfrp4e/icons/blank.png",
+      "_id": "G6mvLKUrJyeUorDN",
+      "flags": {},
+      "_key": "!tables.results!wAAL6gqc4M2V2FJk.G6mvLKUrJyeUorDN"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Disguise Kit",
+      "documentId": "gx451Vn2Ru3eKLIg",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/disguise-kit.png",
+      "_id": "nAaYoGxJ5Y4p4Xti",
+      "flags": {},
+      "_key": "!tables.results!wAAL6gqc4M2V2FJk.nAaYoGxJ5Y4p4Xti"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "text": "Ear Pick",
+      "documentId": "8bxAt6ru3cCyGr6N",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/ear-pick.png",
+      "_id": "AlmdqAdgxHEJQ9H9",
+      "flags": {},
+      "_key": "!tables.results!wAAL6gqc4M2V2FJk.AlmdqAdgxHEJQ9H9"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "text": "Gavel",
+      "documentId": "tzMoFhFAWUGaqhxq",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/gavel.png",
+      "_id": "8d7KECz3O67BSFXz",
+      "flags": {},
+      "_key": "!tables.results!wAAL6gqc4M2V2FJk.8d7KECz3O67BSFXz"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "text": "Lock Picks",
+      "documentId": "oGzxLBKOwJ8C0q3E",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/lock-picks.png",
+      "_id": "bbGTUOnaal9y4Bba",
+      "flags": {},
+      "_key": "!tables.results!wAAL6gqc4M2V2FJk.bbGTUOnaal9y4Bba"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "text": "Manacles",
+      "documentId": "zIf0i6DBqGlyQ5By",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/manacles.png",
+      "_id": "XD4l1rGYMWRORgXD",
+      "flags": {},
+      "_key": "!tables.results!wAAL6gqc4M2V2FJk.XD4l1rGYMWRORgXD"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "text": "Pick",
+      "documentId": "3RttGMwfxEuxRLYu",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/pick.png",
+      "_id": "OtxfzygEElhmDzbl",
+      "flags": {},
+      "_key": "!tables.results!wAAL6gqc4M2V2FJk.OtxfzygEElhmDzbl"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "text": "Stamp, engraved",
+      "documentId": "QCgsQbeEvV4dPB2D",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/stamp-engraved.png",
+      "_id": "1anfurzF8lOg0PI9",
+      "flags": {},
+      "_key": "!tables.results!wAAL6gqc4M2V2FJk.1anfurzF8lOg0PI9"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "text": "Tweezers",
+      "documentId": "3OdiPr3vLqGiMeCB",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/tweezers.png",
+      "_id": "hdStYMjW9uAGNGIZ",
+      "flags": {},
+      "_key": "!tables.results!wAAL6gqc4M2V2FJk.hdStYMjW9uAGNGIZ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "Writing Kit",
+      "documentId": "6OmsMPtz0NzCwvzL",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/writing-kit.png",
+      "_id": "Fz3bAOLkrvE17Vtq",
+      "flags": {},
+      "_key": "!tables.results!wAAL6gqc4M2V2FJk.Fz3bAOLkrvE17Vtq"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

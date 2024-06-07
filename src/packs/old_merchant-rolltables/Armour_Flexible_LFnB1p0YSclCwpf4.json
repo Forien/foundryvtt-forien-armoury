@@ -5,13 +5,118 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "UBKpYUSNnEZzO4PY",
-    "IozCNf6SnuSWxHRX",
-    "QGJvmEncQDnmcM3X",
-    "lDaQc9ZHDjl7tVsZ",
-    "JpI7izkTEaB49udF",
-    "i5ipVxU6S56xCUXW",
-    "pdSRMRYPqgvYFsLQ"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 5,
+      "range": [
+        1,
+        5
+      ],
+      "drawn": false,
+      "text": "Mail Chausses",
+      "documentId": "XWlkZVUhzO0CwaiJ",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/mail-chausses.png",
+      "_id": "UBKpYUSNnEZzO4PY",
+      "flags": {},
+      "_key": "!tables.results!LFnB1p0YSclCwpf4.UBKpYUSNnEZzO4PY"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 6,
+      "range": [
+        6,
+        11
+      ],
+      "drawn": false,
+      "text": "Mail Coat",
+      "documentId": "i76oPVM2eFEs5IBh",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/mail-coat.png",
+      "_id": "IozCNf6SnuSWxHRX",
+      "flags": {},
+      "_key": "!tables.results!LFnB1p0YSclCwpf4.IozCNf6SnuSWxHRX"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 5,
+      "range": [
+        12,
+        16
+      ],
+      "drawn": false,
+      "text": "Mail Coif",
+      "documentId": "4xV16ttsxCa311vl",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/mail-coif.png",
+      "_id": "QGJvmEncQDnmcM3X",
+      "flags": {},
+      "_key": "!tables.results!LFnB1p0YSclCwpf4.QGJvmEncQDnmcM3X"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 5,
+      "range": [
+        17,
+        21
+      ],
+      "drawn": false,
+      "text": "Mail Shirt",
+      "documentId": "cJdfHOVbghTf4Eo0",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/mail-shirt.png",
+      "_id": "lDaQc9ZHDjl7tVsZ",
+      "flags": {},
+      "_key": "!tables.results!LFnB1p0YSclCwpf4.lDaQc9ZHDjl7tVsZ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-archives2.items",
+      "weight": 2,
+      "range": [
+        22,
+        23
+      ],
+      "drawn": false,
+      "text": "Quietened Mail Chausses",
+      "documentId": "Cya63L5XXQQgphhR",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/mail-chausses.png",
+      "_id": "JpI7izkTEaB49udF",
+      "flags": {},
+      "_key": "!tables.results!LFnB1p0YSclCwpf4.JpI7izkTEaB49udF"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-archives2.items",
+      "weight": 3,
+      "range": [
+        24,
+        26
+      ],
+      "drawn": false,
+      "text": "Quietened Mail Coat",
+      "documentId": "BDbQ70J9MM8mdxxo",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/mail-coat.png",
+      "_id": "i5ipVxU6S56xCUXW",
+      "flags": {},
+      "_key": "!tables.results!LFnB1p0YSclCwpf4.i5ipVxU6S56xCUXW"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-archives2.items",
+      "weight": 2,
+      "range": [
+        27,
+        28
+      ],
+      "drawn": false,
+      "text": "Quietened Mail Coif",
+      "documentId": "3dQNE54s7ojwwqWG",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/mail-coif.png",
+      "_id": "pdSRMRYPqgvYFsLQ",
+      "flags": {},
+      "_key": "!tables.results!LFnB1p0YSclCwpf4.pdSRMRYPqgvYFsLQ"
+    }
   ],
   "replacement": true,
   "displayRoll": true,
