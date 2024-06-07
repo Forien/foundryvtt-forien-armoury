@@ -21,6 +21,7 @@ export default class ArrowReclamation extends ForienBaseModule {
 
   registerSocketMethods(socket) {
     this.socket.register('addArrowToReclaim', this.addAmmoToReplenish);
+    this.socket.register('removeArrowFromReclaim', this.removeArrowFromReclaim);
   }
 
   /**
@@ -140,6 +141,9 @@ export default class ArrowReclamation extends ForienBaseModule {
     if (!game.settings.get(constants.moduleId, settings.arrowReclamation.enable))
       return debug('[ArrowReclamation] Arrow Reclamation is not enabled');
 
+    const isReroll = roll.context?.reroll || false;
+    const wasRecovered = roll.result?.options?.recovered || false;
+
     // if there is no ammo, do nothing
     const weapon = roll.weapon;
     if (weapon === undefined || weapon.ammo === undefined || weapon.system.currentAmmo === undefined) return;
@@ -162,7 +166,7 @@ export default class ArrowReclamation extends ForienBaseModule {
     const ammoId = weapon.system.currentAmmo.value;
     const actorId = roll.actor._id;
     let message = ``;
-    if (recovered === true) {
+    if (recovered === true && (!isReroll || !wasRecovered)) {
       if (game.combat == null) {
         message = messageNow;
         this.replenishAmmo(actorId, ammoId, 1);
@@ -176,6 +180,23 @@ export default class ArrowReclamation extends ForienBaseModule {
       }
 
       roll.result.other.push(message);
+      roll.data.preData.options.recovered = true;
+    }
+
+    if (wasRecovered && recovered === false) {
+      if (game.combat == null) {
+        message = messageNow;
+        this.spendAmmo(actorId, ammoId, 1);
+      } else {
+        message = messageFuture;
+        if (game.user.isGM) {
+          this.removeArrowFromReclaim(actorId, ammoId, game.user._id);
+        } else {
+          this.socket?.executeAsGM('removeArrowFromReclaim', actorId, ammoId, game.user._id)
+        }
+      }
+
+      roll.result.other = roll.result.other.filter(v => v !== message);
     }
   }
 
@@ -210,6 +231,23 @@ export default class ArrowReclamation extends ForienBaseModule {
   }
 
   /**
+   * @param {string} actorId
+   * @param {string} ammoId
+   */
+  removeArrowFromReclaim(actorId, ammoId) {
+    let ammoReplenish = game.combat.getFlag(constants.moduleId, flags.ammoReplenish) || {};
+    let actorData = ammoReplenish[actorId] || [];
+    let ammoData = actorData.find(a => a._id === ammoId);
+
+    if (ammoData === undefined) return;
+
+    ammoData.quantity -= 1;
+    ammoReplenish[actorId] = actorData;
+
+    game.combat.setFlag(constants.moduleId, flags.ammoReplenish, ammoReplenish);
+  }
+
+  /**
    * Finds ammo in possession of an Actor and replenishes given amount
    *
    * @param {string} actorId
@@ -230,6 +268,22 @@ export default class ArrowReclamation extends ForienBaseModule {
 
       if (bulk) this.notifyAmmoReturned(actor, ammoEntity, userId, quantity);
     }, timeout);
+  }
+
+  /**
+   * Finds ammo in possession of an Actor and take away given amount
+   *
+   * @param {string} actorId
+   * @param {string} ammoId
+   * @param {string} quantity
+   */
+  spendAmmo(actorId, ammoId, quantity) {
+    let actor = game.actors.find(a => a._id === actorId);
+    let ammoEntity = actor.getEmbeddedDocument("Item", ammoId).toObject();
+
+    ammoEntity.system.quantity.value -= quantity;
+    actor.updateEmbeddedDocuments("Item", [{_id: ammoId, "system.quantity.value": ammoEntity.system.quantity.value}]);
+    debug('[ArrowReclamation] Ammunition spent:', {ammoId, recoveredQuantity: quantity, newQuantity: ammoEntity.system.quantity.value});
   }
 
   /**
