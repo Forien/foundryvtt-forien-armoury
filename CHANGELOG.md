@@ -6,6 +6,7 @@
 * Added support for rerolling Combat Fatigue Tests
 * Fixed input for Combat Fatigue not rendering without explicit ownership (affects mostly GMs)
 * Arrows should no longer be duplicated in case of rerolling ranged tests
+* "Fixed" the improved Gunpowder reducing the reload by 2 due to Foundry bug by changing script trigger 
 
 ### v2.1.0
 * Fixed notification not showing when Actor can't use scroll due to quantity or language
