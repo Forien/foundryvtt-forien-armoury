@@ -2,6 +2,9 @@
 
 ## v2.X.X
 
+### v2.1.2
+* Fixed the AP check for the Slashing weapon quality
+
 ### v2.1.1
 * `Award XP` macro now offers checkboxes to deselect characters and/or companions from getting XP
 * Added support for rerolling Combat Fatigue Tests

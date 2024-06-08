@@ -71,12 +71,12 @@ export default class ItemProperties extends ForienBaseModule {
     const {
       actor,
       opposedTest,
-      AP,
+      modifiers,
       extraMessages
     } = args;
 
     debug('[ItemProperties] onApplyDamage arguments:', args);
-    this.#checkForSlashing(opposedTest, AP, actor, extraMessages);
+    this.#checkForSlashing(opposedTest, modifiers, actor, extraMessages);
     this.#checkForIncendiary(opposedTest, actor, extraMessages);
     this.#checkForBlinding(opposedTest, actor, extraMessages);
     this.#checkForPoisonous(opposedTest, actor, extraMessages);
@@ -143,21 +143,22 @@ export default class ItemProperties extends ForienBaseModule {
    * Checks if weapon used by attacker has Slashing Quality
    *
    * @param {OpposedTest} opposedTest Opposed Test of the attack
-   * @param {{}} AP abstract object containing information about Armour Points
+   * @param {{}} modifiers abstract object containing information about damage modifiers
    * @param {ActorWfrp4e} actor Actor receiving the damage
    * @param {string[]} extraMessages Array containing additional messages that appear on the Chat Card
    */
-  #checkForSlashing(opposedTest, AP, actor, extraMessages) {
+  #checkForSlashing(opposedTest, modifiers, actor, extraMessages) {
     const slashing = opposedTest.attackerTest.weapon?.properties.qualities.slashing?.value ?? null;
     if (slashing === null) return;
 
-    debug('[ItemProperties] Slashing property used:', {opposedTest, actor, extraMessages, rating: slashing, ap: AP.used});
-    if (slashing < AP.used) return;
+    let apUsed = modifiers.ap.used;
+    debug('[ItemProperties] Slashing property used:', {opposedTest, actor, extraMessages, rating: slashing, ap: apUsed});
+    if (slashing < apUsed) return;
 
     actor.addCondition('bleeding');
     extraMessages.push(game.i18n.format("Forien.Armoury.Arrows.Properties.Slashing.Message", {
       location: AP.label,
-      ap: AP.used,
+      ap: apUsed,
       rating: slashing
     }));
   }
