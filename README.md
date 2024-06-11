@@ -13,6 +13,11 @@ This module is a collection of custom trappings and features for Warhammer Fanta
 Forien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded
 
 
+### Notable changes in v3.0.0
+* Verified for Foundry v12 and set it as minimum version due to lack of backwards compatibility
+* Fixed Item Properties, macros and some other issues
+* You can read full changelog [here](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
+
 ### Notable changes in v2.1.0
 * Added following GM only Macros:
   * Character Status summary — lets GM generate a quick table showing basic summary of party composition - careers, fate/resilience points, experience
