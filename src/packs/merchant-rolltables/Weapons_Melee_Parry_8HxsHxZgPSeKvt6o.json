@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 30,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!8HxsHxZgPSeKvt6o.Q0Cc8QOT7rtdbGqV"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 5,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!8HxsHxZgPSeKvt6o.zdKqc6V9l2hL1wl7"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 15,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!8HxsHxZgPSeKvt6o.Wl3ffMYkmgdOW77A"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 5,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!8HxsHxZgPSeKvt6o.XXOYiGTGddzMe4pw"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives1.items",
       "weight": 30,
       "range": [
@@ -86,7 +86,7 @@
       "_key": "!tables.results!8HxsHxZgPSeKvt6o.cZ4oq7BWi2uFBNFc"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -102,7 +102,7 @@
       "_key": "!tables.results!8HxsHxZgPSeKvt6o.lOeWUlFEJrF3IrDt"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -118,7 +118,7 @@
       "_key": "!tables.results!8HxsHxZgPSeKvt6o.cCiAvdVqFsIw94J4"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -150,10 +150,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.0",
-    "coreVersion": "11.306",
+    "coreVersion": "12.327",
     "createdTime": 1690162294610,
     "modifiedTime": 1690505241932,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d55",
   "_key": "!tables!8HxsHxZgPSeKvt6o"

@@ -30,10 +30,12 @@
       "_stats": {
         "systemId": "wfrp4e",
         "systemVersion": "7.0.3",
-        "coreVersion": "11.315",
+        "coreVersion": "12.327",
         "createdTime": 1702393297905,
         "modifiedTime": 1702395580418,
-        "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+        "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+        "compendiumSource": null,
+        "duplicateSource": null
       },
       "_key": "!journal.pages!Gkp2fY7NEJJ3FlGe.lgV5sjVAWAZN1WCk"
     },
@@ -65,10 +67,12 @@
       "_stats": {
         "systemId": "wfrp4e",
         "systemVersion": "7.0.3",
-        "coreVersion": "11.315",
+        "coreVersion": "12.327",
         "createdTime": 1702395997199,
         "modifiedTime": 1702396980332,
-        "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+        "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+        "compendiumSource": null,
+        "duplicateSource": null
       },
       "_key": "!journal.pages!Gkp2fY7NEJJ3FlGe.3Xv2geVQ88IDZ8Ey"
     }
@@ -83,10 +87,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1702393289299,
     "modifiedTime": 1702396980332,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_key": "!journal!Gkp2fY7NEJJ3FlGe"
 }

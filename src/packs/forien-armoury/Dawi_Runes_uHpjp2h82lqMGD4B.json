@@ -39,7 +39,6 @@
   "effects": [
     {
       "name": "Dawi Runes",
-      "icon": "modules/forien-armoury/icons/dawi-runes.webp",
       "_id": "tkJZRbEgU57MtfCa",
       "changes": [],
       "disabled": false,
@@ -104,7 +103,21 @@
           ]
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/dawi-runes.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!uHpjp2h82lqMGD4B.tkJZRbEgU57MtfCa"
     }
   ],
@@ -114,10 +127,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.2",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1688388211259,
     "modifiedTime": 1714322706187,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "uHpjp2h82lqMGD4B",
   "sort": 1200000,

@@ -94,7 +94,6 @@
   },
   "effects": [
     {
-      "icon": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
       "transfer": true,
       "name": "Master Rune of Gromril (Permanent)",
       "_id": "KbYdSxLQTrPcHDfw",
@@ -160,11 +159,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!C0uWiIL7yEzK98IY.KbYdSxLQTrPcHDfw"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
       "transfer": true,
       "name": "Master Rune of Gromril (Temporary)",
       "_id": "v2VAsIyRMh5wKYFE",
@@ -247,11 +259,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!C0uWiIL7yEzK98IY.v2VAsIyRMh5wKYFE"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
       "transfer": true,
       "name": "Master Rune of Adamant (Permanent)",
       "_id": "ko7AlcF6JAdTeCLK",
@@ -307,11 +332,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!C0uWiIL7yEzK98IY.ko7AlcF6JAdTeCLK"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
       "transfer": true,
       "name": "Master Rune of Adamant (Temporary)",
       "_id": "Ux3DZDafGePwYkkT",
@@ -385,11 +423,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!C0uWiIL7yEzK98IY.Ux3DZDafGePwYkkT"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
       "transfer": true,
       "name": "Master Rune of Steel (Permanent)",
       "_id": "LdgiHuSEOXpbl5ZF",
@@ -451,11 +502,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!C0uWiIL7yEzK98IY.LdgiHuSEOXpbl5ZF"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
       "transfer": true,
       "name": "Master Rune of Steel (Temporary)",
       "_id": "rtqCDXscsZMMEbRJ",
@@ -538,7 +602,21 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-armour-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!C0uWiIL7yEzK98IY.rtqCDXscsZMMEbRJ"
     }
   ],
@@ -548,10 +626,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1688943320462,
     "modifiedTime": 1704814814320,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "folder": "3OEI9PiGaa4rGQHy",
   "_id": "C0uWiIL7yEzK98IY",

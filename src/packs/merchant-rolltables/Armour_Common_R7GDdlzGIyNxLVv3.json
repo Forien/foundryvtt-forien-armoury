@@ -5,7 +5,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 20,
       "range": [
@@ -21,7 +21,7 @@
       "_key": "!tables.results!R7GDdlzGIyNxLVv3.P6udhLRbXubh6KW2"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 20,
       "range": [
@@ -37,7 +37,7 @@
       "_key": "!tables.results!R7GDdlzGIyNxLVv3.ZSsGP7BNxzeI6rYG"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 20,
       "range": [
@@ -53,7 +53,7 @@
       "_key": "!tables.results!R7GDdlzGIyNxLVv3.rrsvAVJumE5kP2Yk"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 20,
       "range": [
@@ -69,7 +69,7 @@
       "_key": "!tables.results!R7GDdlzGIyNxLVv3.eDuaH8AduHdU7cMB"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 20,
       "range": [
@@ -85,7 +85,7 @@
       "_key": "!tables.results!R7GDdlzGIyNxLVv3.Hk5q6Xc1j82AjPYX"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 20,
       "range": [
@@ -101,7 +101,7 @@
       "_key": "!tables.results!R7GDdlzGIyNxLVv3.AcNggZPYRLwPa8AB"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 20,
       "range": [
@@ -117,7 +117,7 @@
       "_key": "!tables.results!R7GDdlzGIyNxLVv3.YICuwKoAyNasH210"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 20,
       "range": [
@@ -133,7 +133,7 @@
       "_key": "!tables.results!R7GDdlzGIyNxLVv3.jwEZGrYZLYayz0wm"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 20,
       "range": [
@@ -160,10 +160,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690160129029,
     "modifiedTime": 1690161830863,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d200",
   "_id": "R7GDdlzGIyNxLVv3",

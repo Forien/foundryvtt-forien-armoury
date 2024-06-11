@@ -63,7 +63,6 @@
   },
   "effects": [
     {
-      "icon": "icons/tools/scribal/spectacles-glasses.webp",
       "transfer": true,
       "name": "Spectacles",
       "_id": "FpSiaPDvgSspxHGv",
@@ -94,7 +93,21 @@
           "reduceQuantity": false
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/tools/scribal/spectacles-glasses.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!1jBWWFFhyGAN4r2R.FpSiaPDvgSspxHGv"
     }
   ],
@@ -107,10 +120,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1701953803618,
     "modifiedTime": 1702041740425,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_key": "!items!1jBWWFFhyGAN4r2R"
 }

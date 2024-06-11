@@ -40,7 +40,6 @@
   "effects": [
     {
       "name": "Fortified Mind",
-      "icon": "modules/forien-armoury/icons/talents/fortified_mind.webp",
       "_id": "YAlTF1hzDotOfnDo",
       "changes": [],
       "disabled": false,
@@ -105,7 +104,21 @@
           ]
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/fortified_mind.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!ngi2RUI37DyUTe0W.YAlTF1hzDotOfnDo"
     }
   ],
@@ -118,10 +131,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.2",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1702479664625,
     "modifiedTime": 1714322749142,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_key": "!items!ngi2RUI37DyUTe0W"
 }

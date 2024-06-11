@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 5,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!xWAdSs7VKilJzYPH.28gxCVG9avaXv077"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 5,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!xWAdSs7VKilJzYPH.cuLxys2iOctWJe1V"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!xWAdSs7VKilJzYPH.MB3ZzFRikOaaYOyO"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 8,
       "range": [
@@ -86,10 +86,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690166724569,
     "modifiedTime": 1690166766285,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d19",
   "_key": "!tables!xWAdSs7VKilJzYPH"

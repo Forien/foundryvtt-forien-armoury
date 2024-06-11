@@ -37,7 +37,6 @@
   },
   "effects": [
     {
-      "icon": "icons/skills/melee/strike-axe-blood-red.webp",
       "transfer": true,
       "name": "Fighting Style (Any)",
       "_id": "4sXKiXRCpmHA8bmt",
@@ -95,7 +94,21 @@
           }
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/skills/melee/strike-axe-blood-red.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!C1bJUJYDZsC6PEBi.4sXKiXRCpmHA8bmt"
     }
   ],
@@ -110,10 +123,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.2",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1702057628149,
     "modifiedTime": 1714324639381,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "C1bJUJYDZsC6PEBi",
   "sort": 0,

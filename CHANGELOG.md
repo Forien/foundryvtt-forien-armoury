@@ -12,6 +12,7 @@
   * This change does not require re-importing the macro 
 * Fixed `Generate Ingredient for Spell` macro, and moved it to `Macros` class for better support in the future
   * This change requires re-importing the macro from Compendium
+* Removed deprecated macros from Compendium
 
 
 ## v2.X.X

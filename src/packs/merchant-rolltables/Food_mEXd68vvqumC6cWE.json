@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!mEXd68vvqumC6cWE.Bek7borGbfuuLaTt"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 20,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!mEXd68vvqumC6cWE.hIZTSIb4Dj9thGqQ"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 15,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!mEXd68vvqumC6cWE.x2dTK70RNQ4L0rFk"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!mEXd68vvqumC6cWE.kicFWvSRSxSIvlFF"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -86,7 +86,7 @@
       "_key": "!tables.results!mEXd68vvqumC6cWE.0tJCfPQYIspdECkp"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 20,
       "range": [
@@ -118,10 +118,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690166279690,
     "modifiedTime": 1690166326333,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d116",
   "_key": "!tables!mEXd68vvqumC6cWE"

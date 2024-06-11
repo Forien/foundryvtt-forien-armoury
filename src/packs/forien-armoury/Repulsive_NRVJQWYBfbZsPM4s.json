@@ -44,7 +44,6 @@
   },
   "effects": [
     {
-      "icon": "icons/magic/unholy/strike-body-life-soul-green.webp",
       "transfer": true,
       "name": "Repulsive",
       "_id": "ZW9h1JGyrnEGPzQW",
@@ -74,7 +73,21 @@
           "script": "args.actor.system.characteristics.fel.value = Math.floor(args.actor.system.characteristics.fel.value / 2);"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/magic/unholy/strike-body-life-soul-green.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!NRVJQWYBfbZsPM4s.ZW9h1JGyrnEGPzQW"
     }
   ],
@@ -87,10 +100,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1701640184018,
     "modifiedTime": 1702856365054,
-    "lastModifiedBy": "XoHsMevsFtsW7WqO"
+    "lastModifiedBy": "XoHsMevsFtsW7WqO",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_key": "!items!NRVJQWYBfbZsPM4s"
 }

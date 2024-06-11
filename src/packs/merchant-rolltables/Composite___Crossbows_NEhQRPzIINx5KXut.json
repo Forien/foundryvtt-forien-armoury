@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 8,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!NEhQRPzIINx5KXut.7csWIFj8hxLNMKQR"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 3,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!NEhQRPzIINx5KXut.3jq6KDdSVDAa2X8o"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 2,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!NEhQRPzIINx5KXut.fgOGZoVGgSdnPlrZ"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 2,
       "range": [
@@ -86,10 +86,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690167101270,
     "modifiedTime": 1690167422003,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d15",
   "_key": "!tables!NEhQRPzIINx5KXut"
