@@ -65,14 +65,14 @@ export default class ArrowReclamation extends ForienBaseModule {
   /**
    * Applies rules to see if projectile can be recovered
    *
-   * @param roll
-   * @param ammo
+   * @param {WeaponTest} roll
+   * @param {ItemWfrp4e} ammo
    *
-   * @returns {{recovered: boolean, percentageTarget, rule, percentageTotal: number}}
+   * @returns {Promise<{recovered: boolean, percentageTarget: number|null, rule, percentageTotal: number|null}>}
    */
-  #isProjectileSaved(roll, ammo) {
+  async #isProjectileSaved(roll, ammo) {
     const unbreakable = ammo.properties.qualities.unbreakable || false;
-    if (unbreakable) return true;
+    if (unbreakable) return {recovered: true, rule: null, percentageTotal: null, percentageTarget: null};
     const percentageTarget = game.settings.get(constants.moduleId, settings.arrowReclamation.percentage);
     const crit = (roll.isCritical !== undefined || roll.isFumble !== undefined);
     const even = roll.result.roll % 2 === 0;
@@ -88,9 +88,9 @@ export default class ArrowReclamation extends ForienBaseModule {
       formula = "2d100kh";
     }
 
-    const percentageTotal = new Roll(formula).roll({async: false}).total;
+    const percentageTotal = (await new Roll(formula).evaluate({allowInteractive: false})).total;
     const percentage = percentageTotal <= percentageTarget;
-    const sturdyRoll = (new Roll("1d100").roll({async: false}).total <= percentageTarget);
+    const sturdyRoll = (await new Roll("1d100").evaluate({allowInteractive: false})).total <= percentageTarget;
     const rule = game.settings.get(constants.moduleId, settings.arrowReclamation.rule);
 
     switch (rule) {
@@ -136,7 +136,7 @@ export default class ArrowReclamation extends ForienBaseModule {
    * @param {WeaponTest} roll
    * @param _cardOptions
    */
-  checkRollWeaponTest(roll, _cardOptions) {
+  async checkRollWeaponTest(roll, _cardOptions) {
     // if feature not enabled, do nothing
     if (!game.settings.get(constants.moduleId, settings.arrowReclamation.enable))
       return debug('[ArrowReclamation] Arrow Reclamation is not enabled');
@@ -160,7 +160,7 @@ export default class ArrowReclamation extends ForienBaseModule {
     let messageNow = game.i18n.format('Forien.Armoury.Arrows.recovered', {type});
     let messageFuture = game.i18n.format('Forien.Armoury.Arrows.recoveredFuture', {type});
 
-    const {recovered, rule, percentageTotal, percentageTarget} = this.#isProjectileSaved(roll, ammo);
+    const {recovered, rule, percentageTotal, percentageTarget} = await this.#isProjectileSaved(roll, ammo);
     debug('[ArrowReclamation] Ammunition recovery status:', {recovered, rule, roll, percentageTarget, percentageTotal, type, ammo});
 
     const ammoId = weapon.system.currentAmmo.value;
@@ -197,6 +197,7 @@ export default class ArrowReclamation extends ForienBaseModule {
       }
 
       roll.result.other = roll.result.other.filter(v => v !== message);
+      await roll.renderRollCard();
     }
   }
 

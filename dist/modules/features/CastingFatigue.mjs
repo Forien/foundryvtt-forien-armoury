@@ -99,7 +99,7 @@ export default class CastingFatigue extends ForienBaseModule {
     if (!(test.actor instanceof ActorWfrp4e && test.actor.isOwner))
       return;
 
-    if (Utility.getSetting(settings.scrolls.magicalEndurance) <= 0)
+    if (test instanceof ScrollTest && Utility.getSetting(settings.scrolls.magicalEndurance) <= 0)
       return;
 
     this.spendMagicalEndurance(test.actor, this.getCnToUse(test));

@@ -139,7 +139,7 @@ export default class Macros extends ForienBaseModule {
 `;
 
     await Dialog.confirm({
-      title: "Forien.Armoury.Macros.Lockpick.DialogTitle",
+      title: game.i18n.localize("Forien.Armoury.Macros.Lockpick.DialogTitle"),
       content,
       yes: async html => {
         const SL = Math.round(html.find("[name='sl']").val());
@@ -508,6 +508,130 @@ grid-template-areas: 'headerCharacters headerCompanions'
     }).render(true);
   }
 
+  async createIngredient(
+    macro,
+    {
+      addToActor = false,
+      autoPay = false,
+      quantity = 1,
+    } = {}
+  ) {
+    const {actor} = this.#getScope();
+
+    if (!actor)
+      return Utility.notify(game.i18n.localize("Forien.Armoury.Macros.MustControlActor"), {type: "warning"});
+
+    const allowedLores = [
+      'fire',
+      'heavens',
+      'metal',
+      'beasts',
+      'life',
+      'light',
+      'death',
+      'shadow',
+      'hedgecraft',
+      'witchcraft'
+    ];
+
+    const compendium = game.packs.get("forien-armoury.forien-armoury");
+
+    const loreIngredients = {
+      fire: "Fyaz0um5STWsmcL7",
+      heavens: "rX639Tm9dTFGgdEs",
+      metal: "0Xe2tUDjV3jR2o17",
+      beasts: "0IzPuMHA4a4P0PYB",
+      life: "G4EdPUHqekDS6kj8",
+      light: "uCGbBeMU5TUZPoba",
+      death: "VuO1EDySwVbmtdcH",
+      shadow: "rsQryOWSCufQnNAC",
+      hedgecraft: "gEnMIQ1x4ETY1gCB",
+      witchcraft: "relq8BaanmuOaPEP"
+    }
+
+    if (!actor)
+      return ui.notifications.notify(game.i18n.localize('Forien.Armoury.Macros.MustControlActor'), 'warning')
+
+    const spells = actor.itemTypes.spell;
+    let options = "";
+
+    spells.forEach(spell => {
+      if (allowedLores.includes(spell.lore.value)) {
+        options += `<option value="${spell.uuid}">${spell.name} (CN: ${spell.cn.value})</option>`;
+      }
+    })
+
+    /**
+     * @param {ItemWfrp4e} spell
+     * @returns {Promise<{}>}
+     */
+    async function createIngredient(spell) {
+      const lore = spell.lore.value;
+      const baseIngredient = await compendium.getDocument(loreIngredients[lore]);
+
+      const ingredientData = baseIngredient.toObject();
+      const ingredientFor = game.i18n.localize('Forien.Armoury.Macros.IngredientFor');
+      ingredientData.name = `${ingredientFor} ${spell.name}`;
+
+      switch (lore.toLowerCase()) {
+        case 'hedgecraft':
+          ingredientData.system.price.bp = 5;
+          break;
+        case 'witchcraft':
+          ingredientData.system.price.bp = spell.cn.value;
+          break;
+        default:
+          ingredientData.system.price.ss = spell.cn.value;
+      }
+      ingredientData.system.spellIngredient.value = spell._id;
+
+      if (!addToActor) {
+        return Item.implementation.create(ingredientData, {renderSheet : true});
+      }
+
+      ingredientData.system.quantity.value = quantity;
+      const ss = ingredientData.system.price.ss * quantity;
+      const bp = ingredientData.system.price.bp * quantity;
+
+      if (autoPay) {
+        const moneyPaid = MarketWfrp4e.payCommand(`${ss}ss${bp}bp`, actor);
+
+        if (moneyPaid) {
+          await actor.updateEmbeddedDocuments("Item", moneyPaid);
+          await actor.createEmbeddedDocuments("Item", [ingredientData]);
+        }
+      }
+    }
+
+    new Dialog({
+      title: game.i18n.localize('Forien.Armoury.Macros.SelectSpell'),
+      content: `<form>
+              <div class="form-group">
+                <label>${game.i18n.localize('Forien.Armoury.Macros.AvailableSpells')}</label> 
+				<select name="spell-id" id="spell-id">
+				   ${options}
+				</select>
+              </div>
+          </form>`,
+      buttons: {
+        yes: {
+          icon: "<i class='fas fa-check'></i>",
+          label: game.i18n.localize('Forien.Armoury.Macros.Generate'),
+          callback: async html => {
+            let spellUuid = html.find("#spell-id").val()
+            let spell = await fromUuid(spellUuid);
+
+            return await createIngredient(spell);
+          }
+        },
+        no: {
+          icon: "<i class='fas fa-times'></i>",
+          label: game.i18n.localize('Forien.Armoury.Macros.Cancel')
+        }
+      },
+      default: "yes"
+    }).render(true);
+  }
 
   /**
    * Borrowed from foundry.js `Macro.#executeScript`

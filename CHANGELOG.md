@@ -1,5 +1,19 @@
 # Changelog
 
+## v3.X.X
+
+### v3.0.0
+* Verified for Foundry v12 and set it as minimum version
+* Fixed Slashing label error
+* Fixed Poisonous applying on SL lower than rating instead higher than rating
+* Changed deprecated calls `roll({async: false})` to `evaluateSync()` in Arrow Reclamation
+* Fixed Magical Endurance not being retracted for directly casting spells if cost for using scrolls was set to 0
+* Fixed Dialog Title in `Make Extended Lockpick Test` macro not being localized
+  * This change does not require re-importing the macro 
+* Fixed `Generate Ingredient for Spell` macro, and moved it to `Macros` class for better support in the future
+  * This change requires re-importing the macro from Compendium
+
+
 ## v2.X.X
 
 ### v2.1.2

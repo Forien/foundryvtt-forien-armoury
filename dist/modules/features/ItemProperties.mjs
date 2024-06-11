@@ -56,27 +56,48 @@ export default class ItemProperties extends ForienBaseModule {
   /**
    * Whenever 'wfrp4e:applyDamage' Hook is called, checks for presence of certain weapon properties and applies their effects
    * @param {{
+   *   AP: {},
+   *   abort: boolean,
    *   actor: ActorWfrp4e,
+   *   applyAP: boolean,
+   *   applyTB: boolean,
+   *   attacker: ActorWfrp4e,
+   *   damageType: number,
+   *   extraMessages: string[],
+   *   modifiers: {
+   *     tb: number,
+   *     ap: {
+   *         value: number,
+   *         used: number,
+   *         ignored: number,
+   *         metal: number,
+   *         nonmetal: number,
+   *         magical: number,
+   *         shield: number,
+   *         details: []
+   *     },
+   *     other: [],
+   *     minimumOne: boolean,
+   *     total: number
+   * }
    *   opposedTest: OpposedTest,
    *   totalWoundLoss: number,
-   *   AP: {},
-   *   damageType,
-   *   updateMsg,
-   *   messageElements,
-   *   attacker: ActorWfrp4e,
-   *   extraMessages: string[]
+   *   updateMsg: string,
+   *   ward: number,
+   *   wardRoll: number
    * }} args arguments passed from WFRP4e system
    */
   onApplyDamage(args) {
     const {
       actor,
+      AP,
       opposedTest,
       modifiers,
       extraMessages
     } = args;
 
     debug('[ItemProperties] onApplyDamage arguments:', args);
-    this.#checkForSlashing(opposedTest, modifiers, actor, extraMessages);
+    this.#checkForSlashing(opposedTest, AP, modifiers, actor, extraMessages);
     this.#checkForIncendiary(opposedTest, actor, extraMessages);
     this.#checkForBlinding(opposedTest, actor, extraMessages);
     this.#checkForPoisonous(opposedTest, actor, extraMessages);
@@ -133,7 +154,7 @@ export default class ItemProperties extends ForienBaseModule {
 
     const sl = parseInt(opposedTest.attackerTest.result.SL);
     debug('[ItemProperties] Poisonous property used:', {opposedTest, actor, extraMessages, sl, rating: poisonous});
-    if (sl > poisonous) return;
+    if (sl < poisonous) return;
 
     actor.addCondition("poisoned");
     extraMessages.push(game.i18n.format("Forien.Armoury.Arrows.Properties.Poisonous.Message", {sl, rating: poisonous}));
@@ -143,11 +164,12 @@ export default class ItemProperties extends ForienBaseModule {
    * Checks if weapon used by attacker has Slashing Quality
    *
    * @param {OpposedTest} opposedTest Opposed Test of the attack
+   * @param {{}} AP abstract object containing information about Armour Points
    * @param {{}} modifiers abstract object containing information about damage modifiers
    * @param {ActorWfrp4e} actor Actor receiving the damage
    * @param {string[]} extraMessages Array containing additional messages that appear on the Chat Card
    */
-  #checkForSlashing(opposedTest, modifiers, actor, extraMessages) {
+  #checkForSlashing(opposedTest, AP, modifiers, actor, extraMessages) {
     const slashing = opposedTest.attackerTest.weapon?.properties.qualities.slashing?.value ?? null;
     if (slashing === null) return;
 
