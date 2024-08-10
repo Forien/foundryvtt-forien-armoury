@@ -119,18 +119,1119 @@
     }
   },
   "effects": [
-    "lUbwP70wDI5Th7bP",
-    "HZ3VSvyhJl2agkXl",
-    "M8I0wBGhZeJ0Wcvn",
-    "CSUOejTRe8PkIrfM",
-    "5yxJtpmUVIulDZii",
-    "jzLtBtcxxelz9f0S",
-    "cXR49Z9BWlC5nxt5",
-    "DTHpg1fqn2nkELA5",
-    "vu7lLIvI7wWd4eDB",
-    "k69UJgbOOQONyHyX",
-    "EqLoSwFFzlWbrQFD",
-    "iuF9Ql6VWt9LU1pH"
+    {
+      "transfer": true,
+      "name": "Master Rune of Alaric the Mad (Permanent)",
+      "_id": "lUbwP70wDI5Th7bP",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Attacks made with a Weapon Engraved with this Rune ignore all Armour Points.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Master Rune of Alaric the Mad (Permanent)",
+              "trigger": "preApplyDamage",
+              "script": "args.applyAP = false;",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "preApplyDamage",
+            "preventDuplicateEffects": false,
+            "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n    args.applyAP = false;\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.ZM1KHe4lw53HRkjS"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!PE6EPbkyk3UirW9z.lUbwP70wDI5Th7bP"
+    },
+    {
+      "transfer": true,
+      "name": "Master Rune of Alaric the Mad (Temporary)",
+      "_id": "HZ3VSvyhJl2agkXl",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Attacks made with a Weapon Engraved with this Rune ignore all Armour Points. Lasts 1 minute</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Master Rune of Alaric the Mad (Temporary)",
+              "trigger": "preApplyDamage",
+              "script": "args.applyAP = false;\n",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Activate Master Rune of Alaric the Mad",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "preApplyDamage",
+            "preventDuplicateEffects": false,
+            "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n    args.applyAP = false;\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.8ss06CRTNbRyufRP"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!PE6EPbkyk3UirW9z.HZ3VSvyhJl2agkXl"
+    },
+    {
+      "transfer": true,
+      "name": "Master Rune of Flight (Permanent)",
+      "_id": "M8I0wBGhZeJ0Wcvn",
+      "changes": [
+        {
+          "key": "system.characteristics.bs.modifier",
+          "mode": 2,
+          "value": "30",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": 1705551667,
+        "seconds": 6,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": 0,
+        "startTurn": null
+      },
+      "description": "<p>Can only be inscribed on a hammer. Allows the hammer to be thrown and the wielder is treated as having Ranged (Throwing) skill. Hammer has a range of 24 yards and the thrower gains a +30 Ballistic Skill. Hammer returns to the thrower’s hand at the end of his round.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "promptItem": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Master Rune of Flight (Permanent)",
+              "trigger": "prepareOwned",
+              "script": "args.item.system.range.value = \"24\";\nargs.item.system.modeOverride.value = \"ranged\";\nargs.item.system.skill.value = \"Ranged (Throwing)\";\nargs.item.system.consumesAmmo.value = false;\n",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Toggle Master Rune of Flight",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "this.effect.update({disabled: !this.effect.disabled});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "prepareItem",
+            "preventDuplicateEffects": false,
+            "script": "if (args.item?._id === this.item?.id) {\n    args.item.system.range.value = \"24\";\n    args.item.system.modeOverride.value = \"ranged\";\n    args.item.system.skill.value = \"Ranged (Throwing)\";\n    args.item.system.consumesAmmo.value = false;\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.GIzBYIlrTnG7nBa0"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!PE6EPbkyk3UirW9z.M8I0wBGhZeJ0Wcvn"
+    },
+    {
+      "transfer": true,
+      "name": "Master Rune of Flight (Temporary)",
+      "_id": "CSUOejTRe8PkIrfM",
+      "changes": [
+        {
+          "key": "system.characteristics.bs.modifier",
+          "mode": 2,
+          "value": "30",
+          "priority": null
+        }
+      ],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 6,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Can only be inscribed on a hammer. Allows the hammer to be thrown and the wielder is treated as having Ranged (Throwing) skill. Hammer has a range of 24 yards and the thrower gains a +30 Ballistic Skill. Hammer returns to the thrower’s hand at the end of his round. Can only be activated once.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "promptItem": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Master Rune of Flight (Temporary)",
+              "trigger": "prepareOwned",
+              "script": "args.item.system.range.value = \"24\";\nargs.item.system.modeOverride.value = \"ranged\";\nargs.item.system.skill.value = \"Ranged (Throwing)\";\nargs.item.system.consumesAmmo.value = false;\n",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Activate Master Rune of Flight",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            },
+            {
+              "label": "Disable Master Rune of Flight",
+              "string": "",
+              "trigger": "rollWeaponTest",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "this.effect.update({disabled: true});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "prepareItem",
+            "preventDuplicateEffects": false,
+            "script": "if (args.item?._id === this.item?.id) {\n    args.item.system.range.value = \"24\";\n    args.item.system.modeOverride.value = \"ranged\";\n    args.item.system.skill.value = \"Ranged (Throwing)\";\n    args.item.system.consumesAmmo.value = false;\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.6gyPUG9tkYoTb2T5"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!PE6EPbkyk3UirW9z.CSUOejTRe8PkIrfM"
+    },
+    {
+      "transfer": true,
+      "name": "Master Rune of Skalf Blackhammer (Permanent)",
+      "_id": "5yxJtpmUVIulDZii",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Weapon Engraved with this Rune gains Impact Quality and +3 Damage.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "promptItem": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Master Rune of Skalf Blackhammer (Permanent)",
+              "trigger": "prepareOwned",
+              "script": "let regex = /\\d{1,3}/gm;\nlet damage = Number(regex.exec(args.item.system.damage.value)[0] || 0);\nargs.item.system.qualities.value.push({name: \"impact\"});\nargs.item.system.damage.value = args.item.system.damage.value.replace(damage, damage + 3);",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "prepareItem",
+            "preventDuplicateEffects": false,
+            "script": "if (args.item?._id === this.item?.id) {\n    let regex = /\\d{1,3}/gm;\n    let damage = Number(regex.exec(args.item.system.damage.value)[0] || 0);\n    args.item.system.qualities.value.push({name: \"impact\"});\n    args.item.system.damage.value = args.item.system.damage.value.replace(damage, damage + 3);\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.rm0LntQUOAOqXkkP"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!PE6EPbkyk3UirW9z.5yxJtpmUVIulDZii"
+    },
+    {
+      "transfer": true,
+      "name": "Master Rune of Skalf Blackhammer (Temporary)",
+      "_id": "jzLtBtcxxelz9f0S",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Weapon Engraved with this Rune gains Impact Quality and +3 Damage. Lasts 1 minute</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "promptItem": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Master Rune of Skalf Blackhammer (Temporary)",
+              "trigger": "prepareOwned",
+              "script": "let regex = /\\d{1,3}/gm;\nlet damage = Number(regex.exec(args.item.system.damage.value)[0] || 0);\nargs.item.system.qualities.value.push({name: \"impact\"});\nargs.item.system.damage.value = args.item.system.damage.value.replace(damage, damage + 3);",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Activate Master Rune of Skalf Blackhammer",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "prepareItem",
+            "preventDuplicateEffects": false,
+            "script": "if (args.item?._id === this.item?.id) {\n    let regex = /\\d{1,3}/gm;\n    let damage = Number(regex.exec(args.item.system.damage.value)[0] || 0);\n    args.item.system.qualities.value.push({name: \"impact\"});\n    args.item.system.damage.value = args.item.system.damage.value.replace(damage, damage + 3);\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.asEVG8jALVLaG0QT"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!PE6EPbkyk3UirW9z.jzLtBtcxxelz9f0S"
+    },
+    {
+      "transfer": true,
+      "name": "Master Rune of Snorri Spangelhelm (Permanent)",
+      "_id": "cXR49Z9BWlC5nxt5",
+      "changes": [
+        {
+          "key": "system.characteristics.ws.modifier",
+          "mode": 2,
+          "value": "30",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Wielder of a Weapon Engraved with this Rune gains +30 Weapon Skill.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "promptItem": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "",
+            "preventDuplicateEffects": false,
+            "script": ""
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.CnyQtehyIA6J9l02"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!PE6EPbkyk3UirW9z.cXR49Z9BWlC5nxt5"
+    },
+    {
+      "transfer": true,
+      "name": "Master Rune of Snorri Spangelhelm (Temporary)",
+      "_id": "DTHpg1fqn2nkELA5",
+      "changes": [
+        {
+          "key": "system.characteristics.ws.modifier",
+          "mode": 2,
+          "value": "30",
+          "priority": null
+        }
+      ],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Wielder of a Weapon Engraved with this Rune gains +30 Weapon Skill. Lasts 1 minute",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "promptItem": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true
+          },
+          "scriptData": [
+            {
+              "label": "Activate Master Rune of Snorri Spangelhelm",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "",
+            "preventDuplicateEffects": false,
+            "script": ""
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.pj1v84x5KkWBA5xV"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!PE6EPbkyk3UirW9z.DTHpg1fqn2nkELA5"
+    },
+    {
+      "transfer": true,
+      "name": "Master Rune of Swiftness (Permanent)",
+      "_id": "vu7lLIvI7wWd4eDB",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Weapon Engraved with this Rune gains Fast Quality.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "promptItem": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Master Rune of Swiftness (Permanent)",
+              "trigger": "prepareOwned",
+              "script": "args.item.system.qualities.value.push({name: \"fast\"});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "prepareItem",
+            "preventDuplicateEffects": false,
+            "script": "if (args.item?._id === this.item?.id) {\n  args.item.system.qualities.value.push({name: \"fast\"});\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.nqwanAkGJnddHg8X"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!PE6EPbkyk3UirW9z.vu7lLIvI7wWd4eDB"
+    },
+    {
+      "transfer": true,
+      "name": "Master Rune of Swiftness (Temporary)",
+      "_id": "k69UJgbOOQONyHyX",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Weapon Engraved with this Rune gains Fast Quality. Lasts 1 minute.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "promptItem": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Master Rune of Swiftness (Temporary)",
+              "trigger": "prepareOwned",
+              "script": "args.item.system.qualities.value.push({name: \"fast\"});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Activate Master Rune of Swiftness",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "prepareItem",
+            "preventDuplicateEffects": false,
+            "script": "if (args.item?._id === this.item?.id) {\n  args.item.system.qualities.value.push({name: \"fast\"});\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.p3qLFQxL85HhqeC8"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!PE6EPbkyk3UirW9z.k69UJgbOOQONyHyX"
+    },
+    {
+      "transfer": true,
+      "name": "Master Rune of Breaking (Permanent)",
+      "_id": "EqLoSwFFzlWbrQFD",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>After a successfull parry (won Opposed Melee Test), the wielder of a Wepon Engraved with this Rune may perform an Opposed Strength Test against the opponent. If wielder wins, the opponent's weapon breaks (unless it has an Unbreakable Quality).</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Master Rune of Breaking (Permanent)",
+              "trigger": "opposedDefender",
+              "script": "if (args.opposedTest.result.winner === \"defender\") {\n    let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.effect');\n    let rune = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.name');\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "opposedDefender",
+            "preventDuplicateEffects": false,
+            "script": "if (args.opposedTest.defenderTest.weapon?._id === this.item.id) {\n  if (args.opposedTest.result.winner === \"defender\") {\n    let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.effect');\n    let rune = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.name');\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n  }\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.4tJdRSQGa8WTbn6Z"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!PE6EPbkyk3UirW9z.EqLoSwFFzlWbrQFD"
+    },
+    {
+      "transfer": true,
+      "name": "Master Rune of Breaking (Temporary)",
+      "_id": "iuF9Ql6VWt9LU1pH",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>After a successfull parry (won Opposed Melee Test), the wielder of a Wepon Engraved with this Rune may perform an Opposed Strength Test against the opponent. If wielder wins, the opponent's weapon breaks (unless it has an Unbreakable Quality). Can only be activated once.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Master Rune of Breaking (Temporary)",
+              "script": "if (args.opposedTest.result.winner === \"defender\") {\n    let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.effect');\n    let rune = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.name');\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n}",
+              "trigger": "opposedDefender",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Activate Master Rune of Breaking",
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "invoke",
+            "preventDuplicateEffects": false,
+            "script": "this.effect.update({\n  flags: {\n    wfrp4e: {\n      effectTrigger: \"opposedDefender\",\n      script: `\n\nif (args.opposedTest.defenderTest.weapon?._id === this.item.id) {\n  if (args.opposedTest.result.winner === \"defender\") {\n    let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.effect');\n    let rune = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.name');\n    args.opposedTest.result.other.push(\\`<strong>${rune}:</strong> ${effect}\\`);\n    this.effect.update({disabled: true});\n  }\n}\n\n`\n    }\n  }\n});"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.Q2KUdPD85kOKK4Y9"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!PE6EPbkyk3UirW9z.iuF9Ql6VWt9LU1pH"
+    }
   ],
   "sort": 400000,
   "ownership": {
@@ -141,10 +1242,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.2",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1688747984973,
     "modifiedTime": 1714213697262,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_key": "!items!PE6EPbkyk3UirW9z"
 }

@@ -1,0 +1,125 @@
+{
+  "name": "Summon Sock",
+  "type": "spell",
+  "img": "modules/wfrp4e-core/icons/spells/petty.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Summons a single random sock into your posession, as it will appear in random place on your person or belongings. </p><p><strong>Lore:</strong> None</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "petty",
+      "effectString": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 0,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": "0"
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "effects": [],
+  "folder": "JF9Y4Ik1pMiNEDbg",
+  "ownership": {
+    "default": 0,
+    "rTgnwDbJCJYDenyf": 3
+  },
+  "flags": {
+    "_sheetTab": "description",
+    "core": {},
+    "exportSource": {
+      "world": "wfrp4e",
+      "system": "wfrp4e",
+      "coreVersion": "11.315",
+      "systemVersion": "7.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1663652872079,
+    "modifiedTime": 1714498105851,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "_id": "iNnUnYBUSny0LQ3a",
+  "sort": 400000,
+  "_key": "!items!iNnUnYBUSny0LQ3a"
+}

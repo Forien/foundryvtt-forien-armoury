@@ -117,23 +117,1403 @@
     }
   },
   "effects": [
-    "HkqliWSrOQ0WzAaG",
-    "deumnKB7HuHPMdze",
-    "XrzOAAS9dN2JB8y4",
-    "h9LHxQ9y5zbcSTgh",
-    "3HODlHv6H7X7QXZ4",
-    "hqFyWkzhcK62O1mF",
-    "zdfVNEBuJOtZj3eD",
-    "HkhW3S46adt16XRl",
-    "hgrgZkQkmdomyWzn",
-    "AWQffFw3oaIRUcHE",
-    "FeIf1JvIJaEygpIE",
-    "1l6tZyHZlRcXMHY2",
-    "GXkTf497Sx57dm4E",
-    "LatjnddeP3qXuyaJ",
-    "yrLzSiK49ZXk8EZe",
-    "kPattlvXHNAq6Lt3",
-    "A0rKsSVqtmv6WGaE"
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Cleaving (Permanent)",
+      "_id": "HkqliWSrOQ0WzAaG",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Attacks made with a weapon engraved with this Rune deal +1 Damage</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Cleaving (Permanent)",
+              "trigger": "calculateOpposedDamage",
+              "script": "\n  args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);\n",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "calculateOpposedDamage",
+            "preventDuplicateEffects": false,
+            "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.forien-armoury.forien-armoury.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.rrYqV1e44cOebej2"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.HkqliWSrOQ0WzAaG"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Cleaving (Temporary)",
+      "_id": "deumnKB7HuHPMdze",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Attacks made with a weapon engraved with this Rune deal +1 Damage. Lasts 1 minute.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Cleaving (Temporary)",
+              "trigger": "calculateOpposedDamage",
+              "script": "\n  args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);\n",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Activate Rune of Cleaving",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "calculateOpposedDamage",
+            "preventDuplicateEffects": false,
+            "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.POWvKoi6MDYkT2ba"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#e25532",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.deumnKB7HuHPMdze"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Fire (Permanent)",
+      "_id": "XrzOAAS9dN2JB8y4",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Wielder of a weapon engraved with this Rune can command it to burst into flames. Weapon illuminates area around wielder like a Torch. Additionally, any time a target hit with this weapon suffers a Critical Hit, he receices an additional Ablaze Condition.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Fire (Permanent)",
+              "trigger": "",
+              "script": "\n  if (args.opposedTest.attackerTest.result.critical) {\n    args.actor.addCondition(\"ablaze\");\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.effect');\n    args.extraMessages.push(`<strong>${rune}:</strong> ${effect}.`);\n  }\n",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Burst Into Flames",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const torch = {\n  \"key\": \"ATL.preset\",\n  \"value\": \"torch\",\n  \"mode\": 2\n}\nconst scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"applyDamage\";\nscriptData[1].trigger = \"\";\nscriptData[2].trigger = \"manual\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, changes: [torch]});"
+            },
+            {
+              "label": "Extinguish Flames",
+              "string": "",
+              "trigger": "",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nscriptData[1].trigger = \"manual\";\nscriptData[2].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, changes: []});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "applyDamage",
+            "preventDuplicateEffects": false,
+            "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.attackerTest.result.critical) {\n    args.actor.addCondition(\"ablaze\");\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.effect');\n    args.extraMessages.push(`<strong>${rune}:</strong> ${effect}.`);\n  }\n}"
+          },
+          "scriptData[0]": {
+            "trigger": "applyDamage"
+          },
+          "scriptData[1]": {
+            "trigger": ""
+          },
+          "scriptData[2]": {
+            "trigger": "manual"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.Sn4zGIuhCWKFEazu"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.XrzOAAS9dN2JB8y4"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Fire (Temporary)",
+      "_id": "h9LHxQ9y5zbcSTgh",
+      "changes": [
+        {
+          "key": "ATL.preset",
+          "mode": 2,
+          "value": "torch"
+        }
+      ],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Wielder of a weapon engraved with this Rune can command it to burst into flames. Weapon illuminates area around wielder like a Torch. Additionally, any time a target hit with this weapon suffers a Critical Hit, he receices an additional Ablaze Condition.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Fire (Permanent)",
+              "trigger": "",
+              "script": "  if (args.opposedTest.attackerTest.result.critical) {\n    args.actor.addCondition(\"ablaze\");\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.effect');\n    args.extraMessages.push(`<strong>${rune}:</strong> ${effect}.`);\n  }\n",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Burst Into Flames",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const torch = {\n  \"key\": \"ATL.preset\",\n  \"value\": \"torch\",\n  \"mode\": 2\n}\nconst scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"applyDamage\";\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, changes: [torch], disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "applyDamage",
+            "preventDuplicateEffects": false,
+            "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.attackerTest.result.critical) {\n    args.actor.addCondition(\"ablaze\");\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.effect');\n    args.extraMessages.push(`<strong>${rune}:</strong> ${effect}.`);\n  }\n}"
+          },
+          "scriptData[0]": {
+            "trigger": "applyDamage"
+          },
+          "scriptData[1]": {
+            "trigger": ""
+          },
+          "scriptData[2]": {
+            "trigger": "manual"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.Sn4zGIuhCWKFEazu"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.h9LHxQ9y5zbcSTgh"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Fury (Permanent)",
+      "_id": "3HODlHv6H7X7QXZ4",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Wielder of a weapon engraved with this Rune gains a Furious Assault talent.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Fury (Permanent)",
+              "trigger": "calculateOpposedDamage",
+              "script": "  if (args.opposedTest.result.winner === \"attacker\") {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.effect');\n    let text = `<strong>${rune}:</strong> ${effect}`;\n    args.opposedTest.result.other.push(text);\n  }\n\n",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "calculateOpposedDamage",
+            "preventDuplicateEffects": false,
+            "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.result.winner === \"attacker\") {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.effect');\n    let text = `<strong>${rune}:</strong> ${effect}`;\n    args.opposedTest.result.other.push(text);\n  }\n}\n"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.3EBeuXMNogYGRqE4"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.3HODlHv6H7X7QXZ4"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Fury (Temporary)",
+      "_id": "hqFyWkzhcK62O1mF",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Wielder of a weapon engraved with this Rune gains a Furious Assault talent. Lasts 1 minute.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Fury (Temporary)",
+              "trigger": "calculateOpposedDamage",
+              "script": "\n  if (args.opposedTest.result.winner === \"attacker\") {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.effect');\n    let text = `<strong>${rune}:</strong> ${effect}`;\n    args.opposedTest.result.other.push(text);\n  }\n\n",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Activate Rune of Fury",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "calculateOpposedDamage",
+            "preventDuplicateEffects": false,
+            "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.result.winner === \"attacker\") {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.effect');\n    let text = `<strong>${rune}:</strong> ${effect}`;\n    args.opposedTest.result.other.push(text);\n  }\n}\n"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.G9l7OAE88croafaV"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.hqFyWkzhcK62O1mF"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Grudges (Permanent)",
+      "_id": "zdfVNEBuJOtZj3eD",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Character wielding weapon Engraved with this Rune can, on the first Round of Combat, nominate an enemy as the Target of this Rune. For the remainder of the Combat, you can reroll all failed attacks against the Target.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Grudges (Permanent)",
+              "trigger": "getInitiativeFormula",
+              "script": "let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.effect');\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: args.actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "getInitiativeFormula",
+            "preventDuplicateEffects": false,
+            "script": "let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.effect');\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.JYqy95sURGksMk22"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.zdfVNEBuJOtZj3eD"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Grudges (Temporary)",
+      "_id": "HkhW3S46adt16XRl",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Character wielding weapon Engraved with this Rune can, on the first Round of Combat, nominate an enemy as the Target of this Rune. For the remainder of the Combat, you can reroll all failed attacks against the Target. One use only.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "End Grudge",
+              "string": "",
+              "trigger": "endCombat",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "this.effect.update({disabled: true});"
+            },
+            {
+              "label": "Activate Rune of Grudges",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.effect');\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: args.actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});\n\nconst scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "invoke",
+            "preventDuplicateEffects": false,
+            "script": "let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.effect');\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});\n\nthis.effect.update({\n  flags: {\n    wfrp4e: {\n      effectTrigger: \"endCombat\",\n      script: \"this.effect.update({disabled: true});\"\n    }\n  }\n});\n"
+          },
+          "effectTrigger": "endCombat",
+          "script": "this.effect.update({disabled: true});"
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.68MFtzIz8l9mahU7"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.HkhW3S46adt16XRl"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Might (Permanent)",
+      "_id": "hgrgZkQkmdomyWzn",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Attacks made with a weapon engraved with this Rune against a target with Toughness Bonus 5 or more are treated as if the attacker had double Strength Bonus.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Might (Permanent)",
+              "trigger": "calculateOpposedDamage",
+              "script": "if (args.opposedTest.defenderTest.actor.characteristics.t.bonus >= 5) {\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.effect');\n  args.damage += args.opposedTest.attackerTest.actor.characteristics.s.bonus;\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "calculateOpposedDamage",
+            "preventDuplicateEffects": false,
+            "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.defenderTest.actor.characteristics.t.bonus >= 5) {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.effect');\n    args.damage += args.opposedTest.attackerTest.actor.characteristics.s.bonus;\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n  }\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.NHJJuRmQV0zdJQj8"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.hgrgZkQkmdomyWzn"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Might (Temporary)",
+      "_id": "AWQffFw3oaIRUcHE",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Attacks made with a weapon engraved with this Rune against a target with Toughness Bonus 5 or more are treated as if the attacker had double Strength Bonus. Lasts 1 minute.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Might (Temporary)",
+              "trigger": "calculateOpposedDamage",
+              "script": "if (args.opposedTest.defenderTest.actor.characteristics.t.bonus >= 5) {\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.effect');\n  args.damage += args.opposedTest.attackerTest.actor.characteristics.s.bonus;\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Activate Rune of Might",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "calculateOpposedDamage",
+            "preventDuplicateEffects": false,
+            "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.defenderTest.actor.characteristics.t.bonus >= 5) {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.effect');\n    args.damage += args.opposedTest.attackerTest.actor.characteristics.s.bonus;\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n  }\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.41cnCDVKFkw5TgVT"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.AWQffFw3oaIRUcHE"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Speed (Permanent)",
+      "_id": "FeIf1JvIJaEygpIE",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "If the wielder is not Surprised and has this weapon in hands at the start of the Combat, he gains +1d10 bonus to his combat initiative score.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Speed (Permanent)",
+              "trigger": "getInitiativeFormula",
+              "script": "args.initiative += ` + 1d10`;\nlet rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "getInitiativeFormula",
+            "preventDuplicateEffects": false,
+            "script": "args.initiative += ` + 1d10`;\nlet rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.9cYvjllfcFyaAfLJ"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.FeIf1JvIJaEygpIE"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Speed (Temporary)",
+      "_id": "1l6tZyHZlRcXMHY2",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>If the wielder is not Surprised and has this weapon in hands at the start of the Combat, he gains +1d10 bonus to his combat initiative score. Can only be activated once.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Speed (Temporary)",
+              "trigger": "",
+              "script": "args.initiative += ` + 1d10`;\nlet rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: args.actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});\n\nthis.effect.update({disabled: true});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Activate Rune of Speed",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"getInitiativeFormula\";\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "invoke",
+            "preventDuplicateEffects": false,
+            "script": "this.effect.update({\n  flags: {\n    wfrp4e: {\n      effectTrigger: \"getInitiativeFormula\",\n      script: `\nargs.initiative += ' + 1d10';\nlet rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: \\`\n    <h3>${rune}</h3>\n    <p>${effect}</p>\n  \\`\n});\nthis.effect.update({disabled: true});`\n    }\n  }\n});"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.z2kR53IpFshVrixt"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.1l6tZyHZlRcXMHY2"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Striking (Permanent)",
+      "_id": "GXkTf497Sx57dm4E",
+      "changes": [
+        {
+          "key": "system.characteristics.ws.modifier",
+          "mode": 2,
+          "value": "10",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Weapon Engraved with this Rune grants whoever wields it additional +10 Weapon Skill.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "",
+            "preventDuplicateEffects": false,
+            "script": ""
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.zwkd7kl5SWmoriyn"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.GXkTf497Sx57dm4E"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Striking (Temporary)",
+      "_id": "LatjnddeP3qXuyaJ",
+      "changes": [
+        {
+          "key": "system.characteristics.ws.modifier",
+          "mode": 2,
+          "value": "10",
+          "priority": null
+        }
+      ],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Weapon Engraved with this Rune grants whoever wields it additional +10 Weapon Skill. Lasts 1 minute.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Activate Rune of Striking",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "",
+            "preventDuplicateEffects": false,
+            "script": ""
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.pc9iH0FaxbVLKPV4"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.LatjnddeP3qXuyaJ"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Durability (Permanent)",
+      "_id": "yrLzSiK49ZXk8EZe",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Weapon Engraved with this Rune gains Unbreakable Quality.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "promptItem": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Durability (Permanent)",
+              "trigger": "prepareOwned",
+              "script": "args.item.system.qualities.value.push({name: \"unbreakable\", value: null});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "prepareItem",
+            "preventDuplicateEffects": false,
+            "script": "if (args.item?._id === this.item?.id) {\n  args.item.qualities.value.push({name: \"unbreakable\", value: null});\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.ApUMYhBlTxss0bdr"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.yrLzSiK49ZXk8EZe"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Durability (Temporary)",
+      "_id": "kPattlvXHNAq6Lt3",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Weapon Engraved with this Rune gains Unbreakable Quality. Lasts 1 minute</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "promptItem": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Durability (Temporary)",
+              "trigger": "prepareOwned",
+              "script": "args.item.system.qualities.value.push({name: \"unbreakable\", value: null});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Activate Rune of Durability",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "prepareItem",
+            "preventDuplicateEffects": false,
+            "script": "if (args.item?._id === this.item?.id) {\n  args.item.qualities.value.push({name: \"unbreakable\", value: null});\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.mqkO6Bpu7vsX9S3k"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.kPattlvXHNAq6Lt3"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Fracture (Permanent)",
+      "_id": "A0rKsSVqtmv6WGaE",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Wielder of a weapon engraved with this Rune can command it to be overcome with power surge. Weapon gains @Property[Impact] Quality, but loses 2 Damage per attack.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false,
+            "testIndependent": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Fire (Permanent)",
+              "trigger": "",
+              "script": "this.item.system.qualities.value.push({name: 'impact', value: null});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Surge with power",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"prepareData\";\nscriptData[1].trigger = \"\";\nscriptData[2].trigger = \"manual\";\nscriptData[3].trigger = \"rollWeaponTest\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData});"
+            },
+            {
+              "label": "Dissipate power",
+              "string": "",
+              "trigger": "",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nscriptData[1].trigger = \"manual\";\nscriptData[2].trigger = \"\";\nscriptData[3].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData});"
+            },
+            {
+              "label": "Fracture",
+              "script": "if (args.test.data.context.reroll) return;\n\nthis.item.system.damageItem(2)\n\nconsole.log(\"FRACTURE\", args)",
+              "trigger": "",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "applyDamage",
+            "preventDuplicateEffects": false,
+            "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.attackerTest.result.critical) {\n    args.actor.addCondition(\"ablaze\");\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.effect');\n    args.extraMessages.push(`<strong>${rune}:</strong> ${effect}.`);\n  }\n}"
+          },
+          "scriptData[0]": {
+            "trigger": "applyDamage"
+          },
+          "scriptData[1]": {
+            "trigger": ""
+          },
+          "scriptData[2]": {
+            "trigger": "manual"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.a0HD1sx7SS4ZCw5A.ActiveEffect.Sn4zGIuhCWKFEazu"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.A0rKsSVqtmv6WGaE"
+    }
   ],
   "folder": "3OEI9PiGaa4rGQHy",
   "flags": {

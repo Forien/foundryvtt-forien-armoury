@@ -36,11 +36,394 @@
     }
   },
   "effects": [
-    "ggtWbptc9QNtSuMi",
-    "uvQPByonJ8u5osiL",
-    "mMc6i3cW4qZEKugK",
-    "ZTvdWXgPsTVE1HZ0",
-    "QQc5Uz0Z9OW643GB"
+    {
+      "transfer": true,
+      "name": "Add Melee Parry",
+      "_id": "ggtWbptc9QNtSuMi",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "hide": true,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Add Melee Parry (Future)",
+              "trigger": "update",
+              "script": "await game.modules.get(\"forien-armoury\")?.api.helpers.styles.addMeleeParryFuture(args, this);"
+            },
+            {
+              "label": "Add Melee Parry (Current)",
+              "script": "await game.modules.get(\"forien-armoury\")?.api.helpers.styles.addMeleeParryCurrent(args, this);",
+              "trigger": "immediate",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "update",
+            "preventDuplicateEffects": false,
+            "script": "await game.modules.get(\"forien-armoury\")?.api.helpers.styles.addMeleeParryFuture(args, this);"
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_defensive.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!dV7lAlVYKiHcCXBT.ggtWbptc9QNtSuMi"
+    },
+    {
+      "transfer": true,
+      "name": "Ironshield Ward",
+      "_id": "uvQPByonJ8u5osiL",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "hide": false,
+          "promptItem": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Ironshield Ward",
+              "trigger": "prepareItem",
+              "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.ironshieldWard(args, this);"
+            },
+            {
+              "label": "@item.system.tests.value",
+              "script": "args.fields.successBonus++;",
+              "trigger": "dialog",
+              "options": {
+                "dialog": {
+                  "hideScript": "return args.item?.type !== \"weapon\" || !args.actor.isOpposing;",
+                  "activateScript": "return args.item?.isMelee;",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "prepareItem",
+            "preventDuplicateEffects": false,
+            "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.ironshieldWard(args, this);"
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_defensive.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!dV7lAlVYKiHcCXBT.uvQPByonJ8u5osiL"
+    },
+    {
+      "transfer": true,
+      "name": "Ironshield Riposte",
+      "_id": "mMc6i3cW4qZEKugK",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Ironshield Riposte",
+              "trigger": "opposedDefender",
+              "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.ironshieldRiposte(args, this);"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "opposedDefender",
+            "preventDuplicateEffects": false,
+            "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.ironshieldRiposte(args, this);"
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_defensive.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!dV7lAlVYKiHcCXBT.mMc6i3cW4qZEKugK"
+    },
+    {
+      "transfer": false,
+      "name": "Bracing",
+      "_id": "ZTvdWXgPsTVE1HZ0",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": 50,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.bracing(args, this);",
+          "applicationData": {
+            "type": "other",
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false,
+            "documentType": "Actor",
+            "equipTransfer": false
+          },
+          "scriptData": [
+            {
+              "label": "Bracing",
+              "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.bracing(args, this);",
+              "trigger": "dialog",
+              "options": {
+                "dialog": {
+                  "hideScript": "return args.item?.type !== \"weapon\" || !args.actor.isOpposing;",
+                  "activateScript": "return true;",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Bracing Reminder",
+              "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.bracingReminder(args, this);",
+              "trigger": "startTurn",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_defensive.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!dV7lAlVYKiHcCXBT.ZTvdWXgPsTVE1HZ0"
+    },
+    {
+      "transfer": false,
+      "name": "Brace!",
+      "_id": "QQc5Uz0Z9OW643GB",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Brace!",
+              "trigger": "manual",
+              "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.brace(args, this);"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "invoke",
+            "preventDuplicateEffects": false,
+            "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.brace(args, this);"
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_defensive.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!dV7lAlVYKiHcCXBT.QQc5Uz0Z9OW643GB"
+    }
   ],
   "folder": "c6bIK3vGnIqNXscz",
   "ownership": {
@@ -57,10 +440,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.2",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1702057628149,
     "modifiedTime": 1714322706187,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "dV7lAlVYKiHcCXBT",
   "sort": 300000,

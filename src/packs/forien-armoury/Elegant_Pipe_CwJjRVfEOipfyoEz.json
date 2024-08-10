@@ -62,7 +62,60 @@
     }
   },
   "effects": [
-    "rRcrSC2bf8XYxx2r"
+    {
+      "transfer": true,
+      "name": "Elegant Pipe",
+      "_id": "rRcrSC2bf8XYxx2r",
+      "changes": [
+        {
+          "key": "system.characteristics.fel.modifier",
+          "mode": 2,
+          "value": "3",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": " "
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/sundries/misc/pipe-elegant.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!CwJjRVfEOipfyoEz.rRcrSC2bf8XYxx2r"
+    }
   ],
   "sort": 300000,
   "ownership": {
@@ -73,10 +126,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1701954015373,
     "modifiedTime": 1702041724670,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_key": "!items!CwJjRVfEOipfyoEz"
 }

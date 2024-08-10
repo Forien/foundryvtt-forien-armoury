@@ -41,7 +41,55 @@
     }
   },
   "effects": [
-    "ZlHnZCI0AmLI2TKF"
+    {
+      "transfer": true,
+      "name": "Point Blank Rule",
+      "_id": "ZlHnZCI0AmLI2TKF",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prepareItem",
+          "effectApplication": "actor",
+          "hide": true,
+          "preventDuplicateEffects": true,
+          "script": "if (args.item.range && args.item.range.bands && args.item.range.bands[\"Point Blank\"].range[1] > 4) {\n    args.item.range.bands[\"Point Blank\"].range[0] = 0;\n    args.item.range.bands[\"Point Blank\"].range[1] = 4;\n    args.item.range.bands[\"Short Range\"].range[0] = 5;\n}",
+          "promptItem": false,
+          "extra": ""
+        },
+        "core": {
+          "sourceId": "Item.ZshuHu0ioO2AFySF.ActiveEffect.tHeYwr4I92TA9Lxj"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/skills/ranged/target-bullseye-arrow-blue.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!95teaIzjZcIDHTFn.ZlHnZCI0AmLI2TKF"
+    }
   ],
   "folder": "PQAanEQoiIOxQp1r",
   "flags": {
@@ -50,10 +98,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1688313896332,
     "modifiedTime": 1702856365054,
-    "lastModifiedBy": "XoHsMevsFtsW7WqO"
+    "lastModifiedBy": "XoHsMevsFtsW7WqO",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "95teaIzjZcIDHTFn",
   "sort": 200000,

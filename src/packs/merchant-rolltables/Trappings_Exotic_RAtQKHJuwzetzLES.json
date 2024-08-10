@@ -5,7 +5,22 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "RsorGnM4ji2r9WGW"
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Wooden Teeth",
+      "documentId": "0ohrc7pJtVTo9IFk",
+      "img": "modules/wfrp4e-core/icons/equipment/prosthetics/wooden-teeth.png",
+      "_id": "RsorGnM4ji2r9WGW",
+      "flags": {},
+      "_key": "!tables.results!RAtQKHJuwzetzLES.RsorGnM4ji2r9WGW"
+    }
   ],
   "replacement": true,
   "displayRoll": true,
@@ -23,10 +38,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690166115500,
     "modifiedTime": 1690166145967,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d1",
   "_key": "!tables!RAtQKHJuwzetzLES"

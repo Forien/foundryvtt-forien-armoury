@@ -117,10 +117,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.5.9",
-    "coreVersion": "11.302",
+    "coreVersion": "12.327",
     "createdTime": 1663627495277,
     "modifiedTime": 1687788096057,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "lastModifiedBy": "aDepqlKkeOa13DWo",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "folder": "OknGSWx8ZsQcVSTB",
   "_id": "MzppW5E5c3by9iBU",

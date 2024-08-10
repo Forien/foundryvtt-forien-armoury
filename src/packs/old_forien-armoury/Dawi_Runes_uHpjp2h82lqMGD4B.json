@@ -37,7 +37,76 @@
     }
   },
   "effects": [
-    "tkJZRbEgU57MtfCa"
+    {
+      "name": "Dawi Runes",
+      "icon": "modules/forien-armoury/icons/dawi-runes.webp",
+      "_id": "tkJZRbEgU57MtfCa",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": true,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "avoidTest": {
+              "value": "none",
+              "opposed": false,
+              "prevention": true,
+              "reversed": false,
+              "manual": false,
+              "script": "",
+              "difficulty": "",
+              "characteristic": "",
+              "skill": ""
+            },
+            "keep": false,
+            "radius": null,
+            "areaType": "sustained",
+            "renderAura": true,
+            "targetedAura": false,
+            "testIndependent": false,
+            "preApplyScript": "",
+            "equipTransfer": false,
+            "enableConditionScript": "",
+            "filter": "",
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "@item.system.tests.value",
+              "script": "args.fields.successBonus++;",
+              "trigger": "dialog",
+              "options": {
+                "dialog": {
+                  "hideScript": "return args.skill?.name !== game.i18n.localize(\"Forien.Armoury.Skills.Runecraft\");",
+                  "activateScript": "return args.skill?.name == game.i18n.localize(\"Forien.Armoury.Skills.Runecraft\");",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!uHpjp2h82lqMGD4B.tkJZRbEgU57MtfCa"
+    }
   ],
   "flags": {
     "core": {}

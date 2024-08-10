@@ -82,8 +82,8 @@
       "value": ""
     },
     "currentAmmo": {
-      "type": "Number",
-      "value": 0
+      "value": 0,
+      "type": "Number"
     },
     "consumesAmmo": {
       "value": true
@@ -152,10 +152,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "coreVersion": "12.327",
     "createdTime": 1669779879073,
     "modifiedTime": 1688214384315,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "lastModifiedBy": "aDepqlKkeOa13DWo",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "folder": "UrA89QPP0urkYvZk",
   "_id": "ws5f2yvbXpHZSPob",

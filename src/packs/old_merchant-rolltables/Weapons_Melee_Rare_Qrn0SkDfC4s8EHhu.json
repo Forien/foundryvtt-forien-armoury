@@ -5,13 +5,118 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "gc7gKRjb7AZkC3WG",
-    "twVevnq0XJSYcfxp",
-    "gpBgHGx1HEyptNLi",
-    "50dlCNXIoyWx3eho",
-    "dwqhhkqwlYbrgWno",
-    "X1KBZh3CLN24tnyH",
-    "eGN2rsumw3gALjKS"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Garrote",
+      "documentId": "y5J2E2PKlgJVqzV0",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/rope-10-yards.png",
+      "_id": "gc7gKRjb7AZkC3WG",
+      "flags": {},
+      "_key": "!tables.results!Qrn0SkDfC4s8EHhu.gc7gKRjb7AZkC3WG"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Main Gauche",
+      "documentId": "mY6RyN2rn7h6uaeB",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/main-gauche.png",
+      "_id": "twVevnq0XJSYcfxp",
+      "flags": {},
+      "_key": "!tables.results!Qrn0SkDfC4s8EHhu.twVevnq0XJSYcfxp"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Mancatcher",
+      "documentId": "VDXhEK2KWgCGt2SV",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/mancatcher.png",
+      "_id": "gpBgHGx1HEyptNLi",
+      "flags": {},
+      "_key": "!tables.results!Qrn0SkDfC4s8EHhu.gpBgHGx1HEyptNLi"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Military Flail",
+      "documentId": "sVIALrzjX22wUef9",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/military-flail.png",
+      "_id": "50dlCNXIoyWx3eho",
+      "flags": {},
+      "_key": "!tables.results!Qrn0SkDfC4s8EHhu.50dlCNXIoyWx3eho"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "text": "Pavise",
+      "documentId": "Af9lywXZb4jSg3Go",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/pavise.png",
+      "_id": "dwqhhkqwlYbrgWno",
+      "flags": {},
+      "_key": "!tables.results!Qrn0SkDfC4s8EHhu.dwqhhkqwlYbrgWno"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "text": "Pike",
+      "documentId": "5vIukO3mtUXaLy7G",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/pike.png",
+      "_id": "X1KBZh3CLN24tnyH",
+      "flags": {},
+      "_key": "!tables.results!Qrn0SkDfC4s8EHhu.X1KBZh3CLN24tnyH"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "text": "Swordbreaker",
+      "documentId": "uDavMIqhDl5aDNOy",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/swordbreaker.png",
+      "_id": "eGN2rsumw3gALjKS",
+      "flags": {},
+      "_key": "!tables.results!Qrn0SkDfC4s8EHhu.eGN2rsumw3gALjKS"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

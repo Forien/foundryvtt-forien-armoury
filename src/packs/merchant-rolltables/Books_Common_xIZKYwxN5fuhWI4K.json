@@ -5,8 +5,38 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "cLhnJ9hhClLKvla2",
-    "X8nRwAg4hZRY1WI8"
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Book, Religion",
+      "documentId": "PKkGM5Q0Chmt5qFe",
+      "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-religion.png",
+      "_id": "cLhnJ9hhClLKvla2",
+      "flags": {},
+      "_key": "!tables.results!xIZKYwxN5fuhWI4K.cLhnJ9hhClLKvla2"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Parchment/sheet",
+      "documentId": "fHb7bFU8QX3oi33F",
+      "img": "modules/wfrp4e-core/icons/equipment/book_documents/parchmentsheet.png",
+      "_id": "X8nRwAg4hZRY1WI8",
+      "flags": {},
+      "_key": "!tables.results!xIZKYwxN5fuhWI4K.X8nRwAg4hZRY1WI8"
+    }
   ],
   "replacement": true,
   "displayRoll": true,
@@ -24,10 +54,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690165552874,
     "modifiedTime": 1690165570138,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d2",
   "_key": "!tables!xIZKYwxN5fuhWI4K"

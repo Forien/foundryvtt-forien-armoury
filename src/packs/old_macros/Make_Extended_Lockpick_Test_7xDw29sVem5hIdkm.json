@@ -1,0 +1,27 @@
+{
+  "name": "Make Extended Lockpick Test",
+  "type": "script",
+  "scope": "global",
+  "author": "rTgnwDbJCJYDenyf",
+  "img": "icons/skills/trades/security-lockpicking-chest-blue.webp",
+  "command": "// set default values for Extended Test below\nconst name = \"Extended Pick Lock Test\";\nconst nameShowSL = false;\nconst nameShowDifficulty = true;\nconst img = \"icons/skills/trades/security-lockpicking-chest-blue.webp\";\nconst skill = game.i18n.localize(\"NAME.PickLock\");\nconst onCompletion = \"remove\"; // can be one of: \"none\", \"remove\", \"reset\"\nconst failureDecreasesSL = true;\nconst hideTest = false;\nconst hideProgress = true;\n\n\nconst macros = game.modules.get(\"forien-armoury\")?.api.macros;\nawait macros.lockpickTest(this, {name, nameShowSL, nameShowDifficulty, img, skill, onCompletion, failureDecreasesSL, hideTest, hideProgress});",
+  "folder": "K7bIr7HUorfHR7Xh",
+  "ownership": {
+    "default": 0,
+    "rTgnwDbJCJYDenyf": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.1.5",
+    "coreVersion": "11.315",
+    "createdTime": 1715929806552,
+    "modifiedTime": 1715930163758,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+  },
+  "_id": "7xDw29sVem5hIdkm",
+  "sort": 0,
+  "_key": "!macros!7xDw29sVem5hIdkm"
+}

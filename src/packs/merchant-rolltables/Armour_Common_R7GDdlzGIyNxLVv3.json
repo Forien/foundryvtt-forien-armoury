@@ -4,15 +4,150 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "P6udhLRbXubh6KW2",
-    "ZSsGP7BNxzeI6rYG",
-    "rrsvAVJumE5kP2Yk",
-    "eDuaH8AduHdU7cMB",
-    "Hk5q6Xc1j82AjPYX",
-    "AcNggZPYRLwPa8AB",
-    "YICuwKoAyNasH210",
-    "jwEZGrYZLYayz0wm",
-    "D5hpHhD69CtE3Q16"
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 20,
+      "range": [
+        1,
+        20
+      ],
+      "drawn": false,
+      "text": "Gambeson",
+      "documentId": "LNdVWroLmPIXu5Dj",
+      "img": "modules/forien-armoury/icons/gambeson.png",
+      "_id": "P6udhLRbXubh6KW2",
+      "flags": {},
+      "_key": "!tables.results!R7GDdlzGIyNxLVv3.P6udhLRbXubh6KW2"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 20,
+      "range": [
+        21,
+        40
+      ],
+      "drawn": false,
+      "text": "Gambeson Coat",
+      "documentId": "BPcUiIKFMXSobKqC",
+      "img": "modules/forien-armoury/icons/long-gambeson.png",
+      "_id": "ZSsGP7BNxzeI6rYG",
+      "flags": {},
+      "_key": "!tables.results!R7GDdlzGIyNxLVv3.ZSsGP7BNxzeI6rYG"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 20,
+      "range": [
+        41,
+        60
+      ],
+      "drawn": false,
+      "text": "Gambeson Coif",
+      "documentId": "iiYBwR0TRnrBefgp",
+      "img": "modules/forien-armoury/icons/gambeson-coif.png",
+      "_id": "rrsvAVJumE5kP2Yk",
+      "flags": {},
+      "_key": "!tables.results!R7GDdlzGIyNxLVv3.rrsvAVJumE5kP2Yk"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 20,
+      "range": [
+        61,
+        80
+      ],
+      "drawn": false,
+      "text": "Gambeson Shirt",
+      "documentId": "wkTgfXYKNDDUmL1m",
+      "img": "modules/forien-armoury/icons/gambeson-shirt.png",
+      "_id": "eDuaH8AduHdU7cMB",
+      "flags": {},
+      "_key": "!tables.results!R7GDdlzGIyNxLVv3.eDuaH8AduHdU7cMB"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 20,
+      "range": [
+        81,
+        100
+      ],
+      "drawn": false,
+      "text": "Leather Jack",
+      "documentId": "OjcHE0VOGr1aRdy9",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/leather-jack.png",
+      "_id": "Hk5q6Xc1j82AjPYX",
+      "flags": {},
+      "_key": "!tables.results!R7GDdlzGIyNxLVv3.Hk5q6Xc1j82AjPYX"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 20,
+      "range": [
+        101,
+        120
+      ],
+      "drawn": false,
+      "text": "Leather Jerkin",
+      "documentId": "ipaDvYY3qS66o593",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/leather-jerkin.png",
+      "_id": "AcNggZPYRLwPa8AB",
+      "flags": {},
+      "_key": "!tables.results!R7GDdlzGIyNxLVv3.AcNggZPYRLwPa8AB"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 20,
+      "range": [
+        121,
+        140
+      ],
+      "drawn": false,
+      "text": "Leather Leggings",
+      "documentId": "MzppW5E5c3by9iBU",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/leather-leggings.png",
+      "_id": "YICuwKoAyNasH210",
+      "flags": {},
+      "_key": "!tables.results!R7GDdlzGIyNxLVv3.YICuwKoAyNasH210"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 20,
+      "range": [
+        141,
+        160
+      ],
+      "drawn": false,
+      "text": "Leather Skullcap",
+      "documentId": "0W0kEpa2kNEcRGK0",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/leather-skullcap.png",
+      "_id": "jwEZGrYZLYayz0wm",
+      "flags": {},
+      "_key": "!tables.results!R7GDdlzGIyNxLVv3.jwEZGrYZLYayz0wm"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 20,
+      "range": [
+        161,
+        180
+      ],
+      "drawn": false,
+      "text": "Mail Coat",
+      "documentId": "i76oPVM2eFEs5IBh",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/mail-coat.png",
+      "_id": "D5hpHhD69CtE3Q16",
+      "flags": {},
+      "_key": "!tables.results!R7GDdlzGIyNxLVv3.D5hpHhD69CtE3Q16"
+    }
   ],
   "replacement": true,
   "displayRoll": true,
@@ -25,10 +160,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690160129029,
     "modifiedTime": 1690161830863,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d200",
   "_id": "R7GDdlzGIyNxLVv3",

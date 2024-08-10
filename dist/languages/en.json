@@ -55,6 +55,8 @@
 
       "CombatFatigue": {
         "CombatFatigueTest": " — Combat Fatigue",
+        "CombatFatigueTestFailure": "Fatigued! Next Test will be taken after TB Turns.",
+        "CombatFatigueTestSuccess": "Staved off Fatigue! Next Test will be taken after TB + SL Turns.",
         "CombatFatigueToolTip": "Combat Fatigue - Rounds to Endurance Test",
         "CombatPassOutToollTip": "Combat Fatigue - Rounds to Pass Out"
       },

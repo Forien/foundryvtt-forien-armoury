@@ -45,8 +45,132 @@
     "diagnosed": false
   },
   "effects": [
-    "LNqcF41wFXfbW6m2",
-    "Zsj9nChfVx8GR7jj"
+    {
+      "name": "Lingering",
+      "flags": {
+        "wfrp4e": {
+          "symptom": true,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "avoidTest": {
+              "value": "none",
+              "opposed": false,
+              "prevention": true,
+              "reversed": false,
+              "manual": false,
+              "script": "",
+              "difficulty": "",
+              "characteristic": "",
+              "skill": ""
+            },
+            "keep": false,
+            "radius": null,
+            "areaType": "sustained",
+            "renderAura": true,
+            "targetedAura": false,
+            "testIndependent": false,
+            "preApplyScript": "",
+            "equipTransfer": false,
+            "enableConditionScript": "",
+            "filter": "",
+            "prompt": false
+          },
+          "scriptData": [],
+          "_legacyData": {}
+        }
+      },
+      "_id": "LNqcF41wFXfbW6m2",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": true,
+      "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
+      "_key": "!items.effects!GMDXqhVYA5qIVEwl.LNqcF41wFXfbW6m2"
+    },
+    {
+      "name": "Wasting (Moderate)",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "symptom": true,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor"
+          },
+          "scriptData": [
+            {
+              "label": "Wasting",
+              "trigger": "dialog",
+              "script": "\n                  let modifier = -10;\n                  if (this.effect.name.includes(\"Moderate\"))\n                    modifier = -20;\n                  else if (this.effect.name.includes(\"Severe\"))\n                    modifier = -30;\n                  \n                  args.fields.modifier += modifier;\n                ",
+              "options": {
+                "dialog": {
+                  "activateScript": "return true;",
+                  "hideScript": "\n                    const applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"t\", \"ag\", \"dex\"];\n\n                    return args.type !== \"weapon\" && !applicableCharacteristics.includes(args.data.characteristic);\n                  ",
+                  "submissionScript": ""
+                }
+              }
+            }
+          ]
+        }
+      },
+      "_id": "Zsj9nChfVx8GR7jj",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
+      "_key": "!items.effects!GMDXqhVYA5qIVEwl.Zsj9nChfVx8GR7jj"
+    }
   ],
   "folder": "CnjDdyOSP29fHa3S",
   "ownership": {
@@ -65,10 +189,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1704834593590,
     "modifiedTime": 1714493662263,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "sort": 0,
   "_key": "!items!GMDXqhVYA5qIVEwl"

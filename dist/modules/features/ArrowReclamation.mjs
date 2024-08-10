@@ -21,6 +21,7 @@ export default class ArrowReclamation extends ForienBaseModule {
 
   registerSocketMethods(socket) {
     this.socket.register('addArrowToReclaim', this.addAmmoToReplenish);
+    this.socket.register('removeArrowFromReclaim', this.removeArrowFromReclaim);
   }
 
   /**
@@ -64,14 +65,14 @@ export default class ArrowReclamation extends ForienBaseModule {
   /**
    * Applies rules to see if projectile can be recovered
    *
-   * @param roll
-   * @param ammo
+   * @param {WeaponTest} roll
+   * @param {ItemWfrp4e} ammo
    *
-   * @returns {{recovered: boolean, percentageTarget, rule, percentageTotal: number}}
+   * @returns {Promise<{recovered: boolean, percentageTarget: number|null, rule, percentageTotal: number|null}>}
    */
-  #isProjectileSaved(roll, ammo) {
+  async #isProjectileSaved(roll, ammo) {
     const unbreakable = ammo.properties.qualities.unbreakable || false;
-    if (unbreakable) return true;
+    if (unbreakable) return {recovered: true, rule: null, percentageTotal: null, percentageTarget: null};
     const percentageTarget = game.settings.get(constants.moduleId, settings.arrowReclamation.percentage);
     const crit = (roll.isCritical !== undefined || roll.isFumble !== undefined);
     const even = roll.result.roll % 2 === 0;
@@ -87,9 +88,9 @@ export default class ArrowReclamation extends ForienBaseModule {
       formula = "2d100kh";
     }
 
-    const percentageTotal = new Roll(formula).roll({async: false}).total;
+    const percentageTotal = (await new Roll(formula).evaluate({allowInteractive: false})).total;
     const percentage = percentageTotal <= percentageTarget;
-    const sturdyRoll = (new Roll("1d100").roll({async: false}).total <= percentageTarget);
+    const sturdyRoll = (await new Roll("1d100").evaluate({allowInteractive: false})).total <= percentageTarget;
     const rule = game.settings.get(constants.moduleId, settings.arrowReclamation.rule);
 
     switch (rule) {
@@ -135,10 +136,13 @@ export default class ArrowReclamation extends ForienBaseModule {
    * @param {WeaponTest} roll
    * @param _cardOptions
    */
-  checkRollWeaponTest(roll, _cardOptions) {
+  async checkRollWeaponTest(roll, _cardOptions) {
     // if feature not enabled, do nothing
     if (!game.settings.get(constants.moduleId, settings.arrowReclamation.enable))
       return debug('[ArrowReclamation] Arrow Reclamation is not enabled');
+
+    const isReroll = roll.context?.reroll || false;
+    const wasRecovered = roll.result?.options?.recovered || false;
 
     // if there is no ammo, do nothing
     const weapon = roll.weapon;
@@ -156,13 +160,13 @@ export default class ArrowReclamation extends ForienBaseModule {
     let messageNow = game.i18n.format('Forien.Armoury.Arrows.recovered', {type});
     let messageFuture = game.i18n.format('Forien.Armoury.Arrows.recoveredFuture', {type});
 
-    const {recovered, rule, percentageTotal, percentageTarget} = this.#isProjectileSaved(roll, ammo);
+    const {recovered, rule, percentageTotal, percentageTarget} = await this.#isProjectileSaved(roll, ammo);
     debug('[ArrowReclamation] Ammunition recovery status:', {recovered, rule, roll, percentageTarget, percentageTotal, type, ammo});
 
     const ammoId = weapon.system.currentAmmo.value;
     const actorId = roll.actor._id;
     let message = ``;
-    if (recovered === true) {
+    if (recovered === true && (!isReroll || !wasRecovered)) {
       if (game.combat == null) {
         message = messageNow;
         this.replenishAmmo(actorId, ammoId, 1);
@@ -176,6 +180,24 @@ export default class ArrowReclamation extends ForienBaseModule {
       }
 
       roll.result.other.push(message);
+      roll.data.preData.options.recovered = true;
+    }
+
+    if (wasRecovered && recovered === false) {
+      if (game.combat == null) {
+        message = messageNow;
+        this.spendAmmo(actorId, ammoId, 1);
+      } else {
+        message = messageFuture;
+        if (game.user.isGM) {
+          this.removeArrowFromReclaim(actorId, ammoId, game.user._id);
+        } else {
+          this.socket?.executeAsGM('removeArrowFromReclaim', actorId, ammoId, game.user._id)
+        }
+      }
+
+      roll.result.other = roll.result.other.filter(v => v !== message);
+      await roll.renderRollCard();
     }
   }
 
@@ -210,6 +232,23 @@ export default class ArrowReclamation extends ForienBaseModule {
   }
 
   /**
+   * @param {string} actorId
+   * @param {string} ammoId
+   */
+  removeArrowFromReclaim(actorId, ammoId) {
+    let ammoReplenish = game.combat.getFlag(constants.moduleId, flags.ammoReplenish) || {};
+    let actorData = ammoReplenish[actorId] || [];
+    let ammoData = actorData.find(a => a._id === ammoId);
+
+    if (ammoData === undefined) return;
+
+    ammoData.quantity -= 1;
+    ammoReplenish[actorId] = actorData;
+
+    game.combat.setFlag(constants.moduleId, flags.ammoReplenish, ammoReplenish);
+  }
+
+  /**
    * Finds ammo in possession of an Actor and replenishes given amount
    *
    * @param {string} actorId
@@ -230,6 +269,22 @@ export default class ArrowReclamation extends ForienBaseModule {
 
       if (bulk) this.notifyAmmoReturned(actor, ammoEntity, userId, quantity);
     }, timeout);
+  }
+
+  /**
+   * Finds ammo in possession of an Actor and take away given amount
+   *
+   * @param {string} actorId
+   * @param {string} ammoId
+   * @param {string} quantity
+   */
+  spendAmmo(actorId, ammoId, quantity) {
+    let actor = game.actors.find(a => a._id === actorId);
+    let ammoEntity = actor.getEmbeddedDocument("Item", ammoId).toObject();
+
+    ammoEntity.system.quantity.value -= quantity;
+    actor.updateEmbeddedDocuments("Item", [{_id: ammoId, "system.quantity.value": ammoEntity.system.quantity.value}]);
+    debug('[ArrowReclamation] Ammunition spent:', {ammoId, recoveredQuantity: quantity, newQuantity: ammoEntity.system.quantity.value});
   }
 
   /**

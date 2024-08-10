@@ -5,10 +5,70 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "qoAPSeLgrMTO6w07",
-    "y9rBbWpD7UqDoik7",
-    "hD6QS4GrT1x76aYw",
-    "is9YmwvRByG68blc"
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Ale, Keg",
+      "documentId": "jyphOMwPqNU9KgmS",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/ale-keg.png",
+      "_id": "qoAPSeLgrMTO6w07",
+      "flags": {},
+      "_key": "!tables.results!Sc7kQchdhpXuxdWG.qoAPSeLgrMTO6w07"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Food, groceries/day",
+      "documentId": "jA5TSMX64RR5paKk",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/food-groceries-day.png",
+      "_id": "y9rBbWpD7UqDoik7",
+      "flags": {},
+      "_key": "!tables.results!Sc7kQchdhpXuxdWG.y9rBbWpD7UqDoik7"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Rations, 1 day",
+      "documentId": "EVERNFcYxY7WY8ur",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/rations-1-day.png",
+      "_id": "hD6QS4GrT1x76aYw",
+      "flags": {},
+      "_key": "!tables.results!Sc7kQchdhpXuxdWG.hD6QS4GrT1x76aYw"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Wine, bottle",
+      "documentId": "7CJfiEV10299s7c1",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/wine-bottle.png",
+      "_id": "is9YmwvRByG68blc",
+      "flags": {},
+      "_key": "!tables.results!Sc7kQchdhpXuxdWG.is9YmwvRByG68blc"
+    }
   ],
   "replacement": true,
   "displayRoll": true,
@@ -26,10 +86,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690164971467,
     "modifiedTime": 1690164993073,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "",
   "_key": "!tables!Sc7kQchdhpXuxdWG"

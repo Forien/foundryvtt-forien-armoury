@@ -5,10 +5,70 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "JpPAkCywJw7gKkx0",
-    "yg1WsiJyZJuFIRcH",
-    "bkYi2fDEW4RFwCIR",
-    "Nm3vc3XQC70zacCP"
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Book, Apothecary",
+      "documentId": "AWx6rqwOlN68pN6I",
+      "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-apothecary.png",
+      "_id": "JpPAkCywJw7gKkx0",
+      "flags": {},
+      "_key": "!tables.results!wH3MvT7J3UlRR00y.JpPAkCywJw7gKkx0"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Book, Art",
+      "documentId": "H5CqkYPVVUslaORH",
+      "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-art.png",
+      "_id": "yg1WsiJyZJuFIRcH",
+      "flags": {},
+      "_key": "!tables.results!wH3MvT7J3UlRR00y.yg1WsiJyZJuFIRcH"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Book, Engineer",
+      "documentId": "25Ek5A1EmQqzOcSK",
+      "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-engineer.png",
+      "_id": "bkYi2fDEW4RFwCIR",
+      "flags": {},
+      "_key": "!tables.results!wH3MvT7J3UlRR00y.bkYi2fDEW4RFwCIR"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Map",
+      "documentId": "5PWRfQbGcYm4OnKP",
+      "img": "modules/wfrp4e-core/icons/equipment/book_documents/map.png",
+      "_id": "Nm3vc3XQC70zacCP",
+      "flags": {},
+      "_key": "!tables.results!wH3MvT7J3UlRR00y.Nm3vc3XQC70zacCP"
+    }
   ],
   "replacement": true,
   "displayRoll": true,
@@ -26,10 +86,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690165577614,
     "modifiedTime": 1690165586656,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d4",
   "_key": "!tables!wH3MvT7J3UlRR00y"

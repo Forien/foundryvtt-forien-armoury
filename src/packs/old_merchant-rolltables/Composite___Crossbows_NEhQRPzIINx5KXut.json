@@ -5,10 +5,70 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "7csWIFj8hxLNMKQR",
-    "3jq6KDdSVDAa2X8o",
-    "fgOGZoVGgSdnPlrZ",
-    "Iyphd1eLmcHMjqyN"
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 8,
+      "range": [
+        1,
+        8
+      ],
+      "drawn": false,
+      "text": "Ammunition Crossbow",
+      "documentId": "yhRuXuNa9QmVZaIF",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "7csWIFj8hxLNMKQR",
+      "flags": {},
+      "_key": "!tables.results!NEhQRPzIINx5KXut.7csWIFj8hxLNMKQR"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 3,
+      "range": [
+        9,
+        11
+      ],
+      "drawn": false,
+      "text": "Weapons Ranged Crossbow",
+      "documentId": "VyiaKI5Bu355FN85",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "3jq6KDdSVDAa2X8o",
+      "flags": {},
+      "_key": "!tables.results!NEhQRPzIINx5KXut.3jq6KDdSVDAa2X8o"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 2,
+      "range": [
+        12,
+        13
+      ],
+      "drawn": false,
+      "text": "Bow String",
+      "documentId": "RKjHcjn71lPT06Rj",
+      "img": "systems/wfrp4e/icons/blank.png",
+      "_id": "fgOGZoVGgSdnPlrZ",
+      "flags": {},
+      "_key": "!tables.results!NEhQRPzIINx5KXut.fgOGZoVGgSdnPlrZ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.merchant-rolltables",
+      "weight": 2,
+      "range": [
+        14,
+        15
+      ],
+      "drawn": false,
+      "text": "Containers Arrows and Bolts",
+      "documentId": "xH15xfRhQlyZRXjY",
+      "img": "systems/wfrp4e/ui/buttons/d10.webp",
+      "_id": "Iyphd1eLmcHMjqyN",
+      "flags": {},
+      "_key": "!tables.results!NEhQRPzIINx5KXut.Iyphd1eLmcHMjqyN"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

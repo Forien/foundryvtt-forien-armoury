@@ -5,19 +5,214 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "XLtlDwZ4bXw9cKeZ",
-    "5J5Vc1dhR0Q4U5MW",
-    "UeVb4m8sL31FxGH2",
-    "w0kdNP0kxNy4ijrX",
-    "nEIISy7gNW72LjAk",
-    "CdRcXRTpS5kyKJLP",
-    "x4k9fZjUCF3sTrs0",
-    "CzRl1w3aZrGI5sb4",
-    "rWpsrmzynZCCP1gg",
-    "VoaZTtuT3w0By1p7",
-    "Z0sbDaHtnOwtgVjZ",
-    "GILOiYwSghNMzjEM",
-    "rJBdFuw6Zh7GS6qB"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Captain Braun's Insta-Boiler",
+      "documentId": "6QqNTTDzdkqYRttW",
+      "img": "systems/wfrp4e/icons/blank.png",
+      "_id": "XLtlDwZ4bXw9cKeZ",
+      "flags": {},
+      "_key": "!tables.results!SkcgjETudOZ1v52p.XLtlDwZ4bXw9cKeZ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Captain Braun's Multi-Stove",
+      "documentId": "sGnHloIvMJwcmfSJ",
+      "img": "systems/wfrp4e/icons/blank.png",
+      "_id": "5J5Vc1dhR0Q4U5MW",
+      "flags": {},
+      "_key": "!tables.results!SkcgjETudOZ1v52p.5J5Vc1dhR0Q4U5MW"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "False Leg",
+      "documentId": "lJ6Av6wQfORR4mnu",
+      "img": "modules/wfrp4e-core/icons/equipment/prosthetics/false-leg.png",
+      "_id": "UeVb4m8sL31FxGH2",
+      "flags": {},
+      "_key": "!tables.results!SkcgjETudOZ1v52p.UeVb4m8sL31FxGH2"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Fuse",
+      "documentId": "eh02s8MmaSLPDAMY",
+      "img": "systems/wfrp4e/icons/blank.png",
+      "_id": "w0kdNP0kxNy4ijrX",
+      "flags": {},
+      "_key": "!tables.results!SkcgjETudOZ1v52p.w0kdNP0kxNy4ijrX"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "text": "Gilded Nose",
+      "documentId": "qDEu30xKhIxfSckg",
+      "img": "modules/wfrp4e-core/icons/equipment/prosthetics/gilded-nose.png",
+      "_id": "nEIISy7gNW72LjAk",
+      "flags": {},
+      "_key": "!tables.results!SkcgjETudOZ1v52p.nEIISy7gNW72LjAk"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "text": "Grappling Hook",
+      "documentId": "VzwUlz7gZePXWuYz",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/grappling-hook.png",
+      "_id": "CdRcXRTpS5kyKJLP",
+      "flags": {},
+      "_key": "!tables.results!SkcgjETudOZ1v52p.CdRcXRTpS5kyKJLP"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "text": "Hook",
+      "documentId": "YivL32R2L3J098VD",
+      "img": "modules/wfrp4e-core/icons/equipment/prosthetics/engineering-marvel.png",
+      "_id": "x4k9fZjUCF3sTrs0",
+      "flags": {},
+      "_key": "!tables.results!SkcgjETudOZ1v52p.x4k9fZjUCF3sTrs0"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "text": "Homing Pigeon",
+      "documentId": "AA7nhcqscDj1zoU9",
+      "img": "modules/wfrp4e-core/icons/equipment/animals_and_vehicles/homing-pigeons.png",
+      "_id": "CzRl1w3aZrGI5sb4",
+      "flags": {},
+      "_key": "!tables.results!SkcgjETudOZ1v52p.CzRl1w3aZrGI5sb4"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "text": "Instrument",
+      "documentId": "Wp9qIwlQo6dpszOw",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/instrument.png",
+      "_id": "rWpsrmzynZCCP1gg",
+      "flags": {},
+      "_key": "!tables.results!SkcgjETudOZ1v52p.rWpsrmzynZCCP1gg"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "text": "Pipe and Tobacco",
+      "documentId": "Gr10zyYyGwAkrwnV",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/pipe-and-tobacco.png",
+      "_id": "VoaZTtuT3w0By1p7",
+      "flags": {},
+      "_key": "!tables.results!SkcgjETudOZ1v52p.VoaZTtuT3w0By1p7"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "text": "Placard",
+      "documentId": "jQGw8o4fY8swlmfM",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/placard.png",
+      "_id": "Z0sbDaHtnOwtgVjZ",
+      "flags": {},
+      "_key": "!tables.results!SkcgjETudOZ1v52p.Z0sbDaHtnOwtgVjZ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "Storm Lantern",
+      "documentId": "WTDH1NSk1ufd5vx9",
+      "img": "icons/sundries/lights/lantern-iron-yellow.webp",
+      "_id": "GILOiYwSghNMzjEM",
+      "flags": {},
+      "_key": "!tables.results!SkcgjETudOZ1v52p.GILOiYwSghNMzjEM"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "text": "Tent",
+      "documentId": "MF43A52UBH8SHOnd",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/tent.png",
+      "_id": "rJBdFuw6Zh7GS6qB",
+      "flags": {},
+      "_key": "!tables.results!SkcgjETudOZ1v52p.rJBdFuw6Zh7GS6qB"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

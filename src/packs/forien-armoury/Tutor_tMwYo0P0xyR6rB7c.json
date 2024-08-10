@@ -97,7 +97,53 @@
     }
   },
   "effects": [
-    "C4aFnulJN1sYHfi3"
+    {
+      "transfer": false,
+      "name": "Tutor",
+      "_id": "C4aFnulJN1sYHfi3",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": false
+        },
+        "wfrp4e": {
+          "effectTrigger": "opposedDefender",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": true,
+          "script": "let attackerSize = args.attacker.sizeNum;\nlet mySize = args.actor.sizeNum\n\nif (attackerSize > mySize) {\n  let sizeDiff = (attackerSize - mySize) * 2;\n  args.AP.value += sizeDiff;\n\n\n  let name = game.i18n.localize('Forien.Armoury.Runebound.Tutor.Name');\n  let effect = game.i18n.format('Forien.Armoury.Runebound.Tutor.Effect', {num: sizeDiff});\n  args.extraMessages.push(`<strong>${name}</strong> ${effect}`);\n}\n\n"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/spells/runebound-tutor.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!tMwYo0P0xyR6rB7c.C4aFnulJN1sYHfi3"
+    }
   ],
   "folder": "7apgHuyWjP5G3i5r",
   "flags": {
@@ -106,10 +152,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "coreVersion": "12.327",
     "createdTime": 1688999622218,
     "modifiedTime": 1689019275517,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "tMwYo0P0xyR6rB7c",
   "sort": 700000,

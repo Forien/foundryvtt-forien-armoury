@@ -5,31 +5,406 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "f9gUpWQvXmiPUJR7",
-    "tmzPnNlu3eSbstrf",
-    "RlVGvxa2cKNqReq2",
-    "P3HwqKxfmlbYNR5Z",
-    "3uVKXpwc4bC8rMyY",
-    "2hcpWEvwW1Ch6lUw",
-    "Q8Bu5HQ1GAruKaSu",
-    "w6cyN3m1HVBBjjdO",
-    "1ZuEsUcp34ZXED5O",
-    "fXNp0bZNwSgIoEti",
-    "lwaJP0Fh62hIcy0A",
-    "GP2MJWECm9zJUUDo",
-    "9tdjbWjx1E75Ngvj",
-    "elGeNopxPqONid8b",
-    "EYWuxqmx7CJh2NR0",
-    "LqSfqr1RWABPlz3g",
-    "Tns2vevxq2MDg9qp",
-    "lhhshqYAFWVLINu7",
-    "iCoE957lANxaUeaB",
-    "TxmHv20xIx3pBR4v",
-    "6twmlaSCsnBYQtjr",
-    "qa8RiBZqEW8dwk04",
-    "lR2y7VyhPMqkyTCN",
-    "zvB637PMTE20x3bY",
-    "mn30qigU7MUxinqJ"
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Axe",
+      "documentId": "FaPOAjXnBXWLjQBl",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/axe.png",
+      "_id": "f9gUpWQvXmiPUJR7",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.f9gUpWQvXmiPUJR7"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-archives1.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Bearded Axe",
+      "documentId": "kPmmaj7qzM3O6pY8",
+      "img": "modules/wfrp4e-archives1/assets/icons/bearded-axe.png",
+      "_id": "tmzPnNlu3eSbstrf",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.tmzPnNlu3eSbstrf"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Boat Hook",
+      "documentId": "erQvZYGF2HQB2QEB",
+      "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/boat-hook.png",
+      "_id": "RlVGvxa2cKNqReq2",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.RlVGvxa2cKNqReq2"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Club",
+      "documentId": "XvvHQ8amxyhTaORs",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/club.png",
+      "_id": "P3HwqKxfmlbYNR5Z",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.P3HwqKxfmlbYNR5Z"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "text": "Dagger",
+      "documentId": "UlL4mHSgBW3nYh2a",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/dagger.png",
+      "_id": "3uVKXpwc4bC8rMyY",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.3uVKXpwc4bC8rMyY"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-archives1.items",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "text": "Eonir Spear",
+      "documentId": "LIzUGidgb1mkXcZB",
+      "img": "modules/wfrp4e-archives1/assets/icons/eonir-spear.png",
+      "_id": "2hcpWEvwW1Ch6lUw",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.2hcpWEvwW1Ch6lUw"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "text": "Grain Flail",
+      "documentId": "29BZiQUmNboB1Ebn",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/grain-flail.png",
+      "_id": "Q8Bu5HQ1GAruKaSu",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.Q8Bu5HQ1GAruKaSu"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "text": "Great Axe",
+      "documentId": "jAy9klfNkrQuL1Ru",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/great-axe.png",
+      "_id": "w6cyN3m1HVBBjjdO",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.w6cyN3m1HVBBjjdO"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "text": "Halberd",
+      "documentId": "jxTsO0vrf53pCxCb",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/halberd.png",
+      "_id": "1ZuEsUcp34ZXED5O",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.1ZuEsUcp34ZXED5O"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "text": "Hand Weapon",
+      "documentId": "1zaqojk0Oq1m8vYv",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/hand-weapon.png",
+      "_id": "fXNp0bZNwSgIoEti",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.fXNp0bZNwSgIoEti"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-archives1.items",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "text": "Iron Skillet",
+      "documentId": "aJpSeHl6kNp1DD1y",
+      "img": "modules/wfrp4e-archives1/assets/icons/iron-skillet.png",
+      "_id": "lwaJP0Fh62hIcy0A",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.lwaJP0Fh62hIcy0A"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "Knife",
+      "documentId": "orISaVdapDMJsCJI",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/knife.png",
+      "_id": "GP2MJWECm9zJUUDo",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.GP2MJWECm9zJUUDo"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "text": "Knuckledusters",
+      "documentId": "HYJSv2QxaS3c3Jvb",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/knuckledusters.png",
+      "_id": "9tdjbWjx1E75Ngvj",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.9tdjbWjx1E75Ngvj"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "text": "Mace",
+      "documentId": "WEaLo54C3fOeRomT",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/mace.png",
+      "_id": "elGeNopxPqONid8b",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.elGeNopxPqONid8b"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-archives1.items",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "text": "Nan's Cleaver",
+      "documentId": "UOVmOd9TgMvquysD",
+      "img": "modules/wfrp4e-archives1/assets/icons/nans-cleaver.png",
+      "_id": "EYWuxqmx7CJh2NR0",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.EYWuxqmx7CJh2NR0"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "text": "Pick",
+      "documentId": "EDYwxeZKY90zq2Nx",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/pick.png",
+      "_id": "LqSfqr1RWABPlz3g",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.LqSfqr1RWABPlz3g"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "text": "Quarterstaff",
+      "documentId": "Dk3jOsooVXua0GSi",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/quarterstaff.png",
+      "_id": "Tns2vevxq2MDg9qp",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.Tns2vevxq2MDg9qp"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "text": "Shield",
+      "documentId": "8nJ9R8tbhW42VGhr",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/shield.png",
+      "_id": "lhhshqYAFWVLINu7",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.lhhshqYAFWVLINu7"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "text": "Shield (Buckler)",
+      "documentId": "J9sVeK9nbQLFyUMU",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/shield-buckler.png",
+      "_id": "iCoE957lANxaUeaB",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.iCoE957lANxaUeaB"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "text": "Shield (Large)",
+      "documentId": "CYkA9Ax6BN7eiTvf",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/shield-large.png",
+      "_id": "TxmHv20xIx3pBR4v",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.TxmHv20xIx3pBR4v"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 1,
+      "range": [
+        21,
+        21
+      ],
+      "drawn": false,
+      "text": "Short Spear",
+      "documentId": "W1b784w4bBVwtHZS",
+      "img": "icons/weapons/polearms/spear-flared-steel.webp",
+      "_id": "6twmlaSCsnBYQtjr",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.6twmlaSCsnBYQtjr"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 1,
+      "range": [
+        22,
+        22
+      ],
+      "drawn": false,
+      "text": "Spear",
+      "documentId": "3uppxJFq3SQFpT2q",
+      "img": "icons/weapons/polearms/spear-flared-green.webp",
+      "_id": "qa8RiBZqEW8dwk04",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.qa8RiBZqEW8dwk04"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 1,
+      "range": [
+        23,
+        23
+      ],
+      "drawn": false,
+      "text": "Spear (2h)",
+      "documentId": "FR6vIPKu7cQ4Mkr8",
+      "img": "icons/weapons/polearms/spear-flared-blue.webp",
+      "_id": "lR2y7VyhPMqkyTCN",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.lR2y7VyhPMqkyTCN"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        24,
+        24
+      ],
+      "drawn": false,
+      "text": "Sword",
+      "documentId": "erX8o1o0IcXHTX2r",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/sword1.png",
+      "_id": "zvB637PMTE20x3bY",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.zvB637PMTE20x3bY"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "text": "Warhammer",
+      "documentId": "9chPZw59vJ4dKjaC",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/warhammer.png",
+      "_id": "mn30qigU7MUxinqJ",
+      "flags": {},
+      "_key": "!tables.results!6aDY4jgGEXSuDSy3.mn30qigU7MUxinqJ"
+    }
   ],
   "replacement": true,
   "displayRoll": true,
@@ -47,10 +422,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690161497072,
     "modifiedTime": 1690161569233,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d25",
   "_key": "!tables!6aDY4jgGEXSuDSy3"

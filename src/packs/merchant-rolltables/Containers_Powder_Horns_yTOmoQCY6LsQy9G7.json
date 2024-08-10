@@ -5,9 +5,54 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "vLV2HSJ00LoFi9RQ",
-    "Bp7MdUXu3ssTBIrb",
-    "PYsJr2BbuN3iXpyd"
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 12,
+      "range": [
+        1,
+        12
+      ],
+      "drawn": false,
+      "text": "Big Powder Horn",
+      "documentId": "m0JzXLIjaskvNi5v",
+      "img": "icons/containers/ammunition/powder-horn-worn.webp",
+      "_id": "vLV2HSJ00LoFi9RQ",
+      "flags": {},
+      "_key": "!tables.results!yTOmoQCY6LsQy9G7.vLV2HSJ00LoFi9RQ"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 10,
+      "range": [
+        13,
+        22
+      ],
+      "drawn": false,
+      "text": "Fast Powder Horn",
+      "documentId": "ZP2D38WdvD5iVd0F",
+      "img": "icons/containers/ammunition/powder-horn-simple.webp",
+      "_id": "Bp7MdUXu3ssTBIrb",
+      "flags": {},
+      "_key": "!tables.results!yTOmoQCY6LsQy9G7.Bp7MdUXu3ssTBIrb"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 30,
+      "range": [
+        23,
+        52
+      ],
+      "drawn": false,
+      "text": "Powder Horn",
+      "documentId": "749BhVdd0kr83pf6",
+      "img": "icons/containers/ammunition/powder-horn-leather.webp",
+      "_id": "PYsJr2BbuN3iXpyd",
+      "flags": {},
+      "_key": "!tables.results!yTOmoQCY6LsQy9G7.PYsJr2BbuN3iXpyd"
+    }
   ],
   "replacement": true,
   "displayRoll": true,
@@ -25,10 +70,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690167377107,
     "modifiedTime": 1690167395339,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d52",
   "_key": "!tables!yTOmoQCY6LsQy9G7"

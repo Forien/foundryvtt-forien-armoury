@@ -43,12 +43,331 @@
     }
   },
   "effects": [
-    "l6AezFcrnNAcCjKr",
-    "SBMlLbppIX7dmd6w",
-    "WeMashmFF98qFDWz",
-    "vdjKgwgSunHodOXL",
-    "ClcXYs9FZyW5UPXS",
-    "6uC3DN8LXwTrH1v3"
+    {
+      "name": "Buboes",
+      "flags": {
+        "wfrp4e": {
+          "symptom": true,
+          "applicationData": {
+            "type": "document"
+          },
+          "scriptData": [
+            {
+              "trigger": "dialog",
+              "label": "@effect.name",
+              "script": "args.fields.modifier -= 10",
+              "options": {
+                "dialog": {
+                  "hideScript": "return ![\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
+                  "activateScript": "return [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "_id": "l6AezFcrnNAcCjKr",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": true,
+      "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
+      "_key": "!items.effects!h4XCqO6phthpJ78V.l6AezFcrnNAcCjKr"
+    },
+    {
+      "name": "Fever",
+      "flags": {
+        "wfrp4e": {
+          "symptom": true,
+          "applicationData": {
+            "type": "document"
+          },
+          "scriptData": [
+            {
+              "trigger": "dialog",
+              "label": "@effect.name",
+              "script": "args.fields.modifier -= 10",
+              "options": {
+                "dialog": {
+                  "hideScript": "return ![\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
+                  "activateScript": "return [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "_id": "SBMlLbppIX7dmd6w",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": true,
+      "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
+      "_key": "!items.effects!h4XCqO6phthpJ78V.SBMlLbppIX7dmd6w"
+    },
+    {
+      "name": "Convulsions",
+      "flags": {
+        "wfrp4e": {
+          "symptom": true,
+          "applicationData": {
+            "type": "document"
+          },
+          "scriptData": [
+            {
+              "trigger": "dialog",
+              "label": "@effect.name",
+              "script": "\n                            let modifier = 0\n                            if (this.effect.name.includes(\"Moderate\"))\n                                modifier = -20\n                            else\n                                modifier = -10\n                            args.fields.modifier += modifier\n                            ",
+              "options": {
+                "dialog": {
+                  "hideScript": "return ![\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
+                  "activateScript": "return [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "_id": "WeMashmFF98qFDWz",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": true,
+      "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
+      "_key": "!items.effects!h4XCqO6phthpJ78V.WeMashmFF98qFDWz"
+    },
+    {
+      "name": "Pox",
+      "flags": {
+        "wfrp4e": {
+          "symptom": true,
+          "applicationData": {
+            "type": "document"
+          },
+          "scriptData": [
+            {
+              "trigger": "dialog",
+              "label": "@effect.name",
+              "script": "args.fields.modifier -= 10",
+              "options": {
+                "dialog": {
+                  "hideScript": "return ![\"fel\"].includes(args.characteristic)",
+                  "activateScript": "return [\"fel\"].includes(args.characteristic)"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "_id": "vdjKgwgSunHodOXL",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": true,
+      "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
+      "_key": "!items.effects!h4XCqO6phthpJ78V.vdjKgwgSunHodOXL"
+    },
+    {
+      "name": "Taint",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "symptom": true,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor"
+          },
+          "scriptData": [
+            {
+              "label": "Taint",
+              "trigger": "manual",
+              "script": "\n                const difficulty = \"challenging\";\n                \n                const setupData = await args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {\n                  context: {failure: game.i18n.format(\"Forien.Armoury.Symptoms.Taint.Failure\", {character: args.actor.name})},\n                  absolute: {difficulty},\n                  appendTitle: \" – \" + game.i18n.localize(\"Forien.Armoury.Symptoms.Taint.Name\"),\n                })\n                \n                const test = await args.actor.basicTest(setupData);\n                \n                if (test.result.outcome === \"failure\") {\n                  const newCorruption = args.actor.system.status.corruption.value + 1;\n                  await args.actor.update({\"system.status.corruption.value\": newCorruption});\n                }\n              "
+            }
+          ]
+        }
+      },
+      "_id": "ClcXYs9FZyW5UPXS",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
+      "_key": "!items.effects!h4XCqO6phthpJ78V.ClcXYs9FZyW5UPXS"
+    },
+    {
+      "name": "Blight (Severe)",
+      "flags": {
+        "wfrp4e": {
+          "symptom": true,
+          "applicationData": {
+            "type": "document"
+          },
+          "scriptData": [
+            {
+              "trigger": "manual",
+              "label": "@effect.name",
+              "script": "\n                            let difficulty = \"\"\n                            if (this.effect.name.includes(\"Moderate\"))\n                                difficulty = \"easy\"\n                            else if (this.effect.name.includes(\"Severe\"))\n                                difficulty = \"average\"\n                            else\n                                difficulty = \"veasy\"\n        \n                            let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {context : {failure : this.actor.name + \" dies from Blight\"}, fields: {difficulty}, appendTitle : \" - Blight\"})\n                            await test.roll();\n                            if (test.failed)\n                            {\n                                this.actor.addCondition(\"dead\");\n                            }\n                            "
+            }
+          ]
+        }
+      },
+      "_id": "6uC3DN8LXwTrH1v3",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": true,
+      "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
+      "_key": "!items.effects!h4XCqO6phthpJ78V.6uC3DN8LXwTrH1v3"
+    }
   ],
   "folder": "CnjDdyOSP29fHa3S",
   "ownership": {
@@ -67,10 +386,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1702258209456,
     "modifiedTime": 1714493618890,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "h4XCqO6phthpJ78V",
   "sort": 400000,

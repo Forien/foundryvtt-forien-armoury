@@ -60,17 +60,872 @@
     }
   },
   "effects": [
-    "PGqEL1cQF5dl1Kbt",
-    "XfY9ipOCmyT8VuXs",
-    "Q4qXVW6NyTAmLvtX",
-    "8AnVxYN0k0Uk9thi",
-    "Nf76EDZmdi8EDlrf",
-    "t4E0PQiWUJOdDD8I",
-    "8ncYF3091SCrrrJz",
-    "xdklDXVTgiTm1RSc",
-    "a1onZaHqnDpRLc4a",
-    "nE9oKHSB8JwHessd",
-    "XM6R0dCmOz74iesB"
+    {
+      "transfer": true,
+      "name": "Rune of Fate (Temporary)",
+      "_id": "PGqEL1cQF5dl1Kbt",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Negates the first attack that would reduce Wounds to 0.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Fate (Temporary)",
+              "trigger": "takeDamage",
+              "script": "let wounds = args.actor.status.wounds.value;\nlet woundLoss = args.totalWoundLoss;\nlet woundsAfter = wounds - woundLoss;\n\nif (woundsAfter < 0) {\n  args.totalWoundLoss = 0;\n  let msg = `<strong>${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.name')}:</strong> ${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.effect')}`\n  args.extraMessages.push(msg);\n\n  this.effect.update({disabled: true});\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "preTakeDamage",
+            "preventDuplicateEffects": false,
+            "script": "let wounds = args.actor.status.wounds.value;\nlet woundLoss = args.totalWoundLoss;\nlet woundsAfter= wounds - woundLoss;\n\nif (woundsAfter < 0) {\n  args.totalWoundLoss = 0;\n  let msg = `<strong>${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.name')}:</strong> ${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.effect')}`\n  args.extraMessages.push(msg);\n\n  this.effect.update({disabled: true});\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.vdHxUWCzrQwwkl5F"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!VZyMhFCFlkPZ47J8.PGqEL1cQF5dl1Kbt"
+    },
+    {
+      "transfer": true,
+      "name": "Rune of the Furnace (Permanent)",
+      "_id": "XfY9ipOCmyT8VuXs",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Character bearing an item inscribed with this Rune is immune to fire damage of any kind. Additionally, Ablaze Conditions are immediately removed after they are gained.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true
+          },
+          "scriptData": [
+            {
+              "label": "Rune of the Furnace (Permanent)",
+              "trigger": "update",
+              "script": "let ablaze = this.actor.hasCondition(\"ablaze\");\n\nif (ablaze) {\n  let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.effect');\n\n  ablaze.delete();\n  ui.notifications?.notify(`<strong>${name}</strong>  ${effect}`);\n}"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "update",
+            "preventDuplicateEffects": false,
+            "script": "let ablaze = this.actor.hasCondition(\"ablaze\");\n\nif (ablaze) {\n  let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.effect');\n\n  ablaze.delete();\n  ui.notifications?.notify(`<strong>${name}</strong>  ${effect}`);\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.ABXyOPDXVrfGVDv1"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!VZyMhFCFlkPZ47J8.XfY9ipOCmyT8VuXs"
+    },
+    {
+      "transfer": true,
+      "name": "Rune of the Furnace (Temporary)",
+      "_id": "Q4qXVW6NyTAmLvtX",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Character bearing an item inscribed with this Rune is immune to fire damage of any kind. Additionally, Ablaze Conditions are immediately removed after they are gained. Lasts 1 minute.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of the Furnace (Temporary)",
+              "trigger": "update",
+              "script": "let ablaze = this.actor.hasCondition(\"ablaze\");\n\nif (ablaze) {\n  let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.effect');\n\n  ablaze.delete();\n  ui.notifications?.notify(`<strong>${name}</strong>  ${effect}`);\n}"
+            },
+            {
+              "label": "Activate Rune of the Furnace",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "update",
+            "preventDuplicateEffects": false,
+            "script": "let ablaze = this.actor.hasCondition(\"ablaze\");\n\nif (ablaze) {\n  let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.effect');\n\n  ablaze.delete();\n  ui.notifications?.notify(`<strong>${name}</strong>  ${effect}`);\n}"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.z14tQJTUvGkWLp9C"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!VZyMhFCFlkPZ47J8.Q4qXVW6NyTAmLvtX"
+    },
+    {
+      "transfer": true,
+      "name": "Rune of Luck (Permanent)",
+      "_id": "8AnVxYN0k0Uk9thi",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Wielder of an accessory Engraved with this Rune gains a Luck Talent.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "reduceQuantity": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Luck (Permanent)",
+              "trigger": "equipToggle",
+              "script": "if (args.equipped) {\n  let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.u0CFf3xwiyidD9T5\")\n  this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n} else {\n  this.effect.deleteCreatedItems();\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "addItems",
+            "preventDuplicateEffects": false,
+            "script": "fromUuid(\"Compendium.wfrp4e-core.items.Item.u0CFf3xwiyidD9T5\").then(item => Item.create(item.toObject(), {fromEffect : this.effect.id, parent : this.actor}))"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.4FNqO1L1hfgnhisU"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!VZyMhFCFlkPZ47J8.8AnVxYN0k0Uk9thi"
+    },
+    {
+      "transfer": true,
+      "name": "Rune of Luck (Temporary)",
+      "_id": "Nf76EDZmdi8EDlrf",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Can be activated only once. When activated, counts as if the owner used a Fortune Point.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "reduceQuantity": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Luck (Temporary)",
+              "trigger": "manual",
+              "script": "let fortuneJournal = `@UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.pa22HaRw1OBBQaDg#spending-fortune]{Spending Fortune}`;\nlet name = game.i18n.localize('Forien.Armoury.Runes.RuneOfLuckTemporary.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfLuckTemporary.effectActivated');\nlet checkPrompt = game.i18n.format('Forien.Armoury.Runes.RuneOfLuckTemporary.checkPrompt', {journal: fortuneJournal});\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n    <p>${checkPrompt}</p>\n`\n})\n\nthis.effect.update({disabled: true});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "invoke",
+            "preventDuplicateEffects": false,
+            "script": "let fortuneJournal = `@UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.pa22HaRw1OBBQaDg#spending-fortune]{Spending Fortune}`;\nlet name = game.i18n.localize('Forien.Armoury.Runes.RuneOfLuckTemporary.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfLuckTemporary.effectActivated');\nlet checkPrompt = game.i18n.format('Forien.Armoury.Runes.RuneOfLuckTemporary.checkPrompt', {journal: fortuneJournal});\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n    <p>${checkPrompt}</p>\n`\n})\n\nthis.effect.update({disabled: true});"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.7zY7AKHRLaTAGyNE"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!VZyMhFCFlkPZ47J8.Nf76EDZmdi8EDlrf"
+    },
+    {
+      "transfer": true,
+      "name": "Rune of Spellbreaking (Temporary)",
+      "_id": "t4E0PQiWUJOdDD8I",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Activate this Rune to immediately end any persistent spell within 12 yards. Additionally, if Runesmith is holding this item, he can instead attempt to Dispel any incoming spell and gains +20 modifier to that attempt. Activating this rune takes an Action.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "reduceQuantity": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Spellbreaking (Temporary)",
+              "trigger": "manual",
+              "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "invoke",
+            "preventDuplicateEffects": false,
+            "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.XgocVKbsL3tTQp97"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!VZyMhFCFlkPZ47J8.t4E0PQiWUJOdDD8I"
+    },
+    {
+      "transfer": true,
+      "name": "Rune of Spelleating (Temporary)",
+      "_id": "8ncYF3091SCrrrJz",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Activate this Rune to immediately end any persistent spell within 12 yards. Additionally, if Runesmith is holding this item, he can instead attempt to Dispel any incoming spell and gains +20 modifier to that attempt. If you succeed, the opposing caster can’t use that spell again within the next 24 hours. Activating this rune takes an Action.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "reduceQuantity": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Spelleating (Temporary)",
+              "trigger": "manual",
+              "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpelleating.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpelleating.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "invoke",
+            "preventDuplicateEffects": false,
+            "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpelleating.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpelleating.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.vyrlzGAdppxyjydw"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!VZyMhFCFlkPZ47J8.8ncYF3091SCrrrJz"
+    },
+    {
+      "transfer": true,
+      "name": "Rune of Warding (Permanent)",
+      "_id": "xdklDXVTgiTm1RSc",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Wielder of an accessory Engraved with this Rune gains a Magic Resistance Talent.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "reduceQuantity": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Warding (Permanent)",
+              "trigger": "equipToggle",
+              "script": "if (args.equipped) {\n  let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.eowbsW6oHGSNJmxV\")\n  this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n} else {\n  this.effect.deleteCreatedItems();\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "addItems",
+            "preventDuplicateEffects": false,
+            "script": "fromUuid(\"Compendium.wfrp4e-core.items.Item.eowbsW6oHGSNJmxV\").then(item => Item.create(item.toObject(), {fromEffect : this.effect.id, parent : this.actor}))"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.5pzeDFMgBWK5FMbs"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!VZyMhFCFlkPZ47J8.xdklDXVTgiTm1RSc"
+    },
+    {
+      "transfer": true,
+      "name": "Rune of Warding (Temporary)",
+      "_id": "a1onZaHqnDpRLc4a",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Wielder of an accessory Engraved with this Rune gains a Magic Resistance Talent. Lasts 1 minute.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "reduceQuantity": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Warding (Temporary)",
+              "trigger": "equipToggle",
+              "script": "if (args.equipped) {\n  let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.eowbsW6oHGSNJmxV\")\n  this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n} else {\n  this.effect.deleteCreatedItems();\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Activate Rune of Warding",
+              "string": "",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nawait this.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});\nawait this.item.system.toggleEquip();\nawait this.item.system.toggleEquip();"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "invoke",
+            "preventDuplicateEffects": false,
+            "script": "fromUuid(\"Compendium.wfrp4e-core.items.Item.eowbsW6oHGSNJmxV\").then(item => Item.create(item.toObject(), {\n  fromEffect: this.effect.id,\n  parent: this.actor\n}))\n\nthis.effect.update({\n  disabled: false,\n  duration: {\n    seconds: 60,\n    duration: 60,\n    type: 'seconds'\n  },\n  flags: {\n    wfrp4e: {\n      effectTrigger: '',\n      script: ''\n    }\n  }\n});"
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.M5BSkkepbE4SCrzk"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!VZyMhFCFlkPZ47J8.a1onZaHqnDpRLc4a"
+    },
+    {
+      "transfer": true,
+      "name": "Rune of Page (Permanent)",
+      "_id": "nE9oKHSB8JwHessd",
+      "changes": [
+        {
+          "key": "system.details.move.value",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "<p>Wielder of an accessory Engraved with this Rune gains +1 Movement.</p>",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "reduceQuantity": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true,
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Rune of Page (Permanent)",
+              "trigger": ""
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "",
+            "preventDuplicateEffects": false,
+            "script": ""
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.i0GTHQefhwTQ2LEL"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!VZyMhFCFlkPZ47J8.nE9oKHSB8JwHessd"
+    },
+    {
+      "transfer": true,
+      "name": "Rune of Page (Temporary)",
+      "_id": "XM6R0dCmOz74iesB",
+      "changes": [
+        {
+          "key": "system.details.move.value",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Wielder of an accessory Engraved with this Rune gains +1 Movement. Lasts 1 minute.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "reduceQuantity": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true
+          },
+          "scriptData": [
+            {
+              "label": "Activate Rune of Page",
+              "trigger": "manual",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              },
+              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nawait this.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "",
+            "preventDuplicateEffects": false,
+            "script": ""
+          }
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.jwtzbHAmtHpQJ6fL"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!VZyMhFCFlkPZ47J8.XM6R0dCmOz74iesB"
+    }
   ],
   "folder": "3OEI9PiGaa4rGQHy",
   "flags": {
@@ -79,10 +934,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1688413119645,
     "modifiedTime": 1706287163882,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "VZyMhFCFlkPZ47J8",
   "sort": 50000,

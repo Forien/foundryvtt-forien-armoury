@@ -38,7 +38,76 @@
     }
   },
   "effects": [
-    "YAlTF1hzDotOfnDo"
+    {
+      "name": "Fortified Mind",
+      "icon": "modules/forien-armoury/icons/talents/fortified_mind.webp",
+      "_id": "YAlTF1hzDotOfnDo",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": true,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "avoidTest": {
+              "value": "none",
+              "opposed": false,
+              "prevention": true,
+              "reversed": false,
+              "manual": false,
+              "script": "",
+              "difficulty": "",
+              "characteristic": "",
+              "skill": ""
+            },
+            "keep": false,
+            "radius": null,
+            "areaType": "sustained",
+            "renderAura": true,
+            "targetedAura": false,
+            "testIndependent": false,
+            "preApplyScript": "",
+            "equipTransfer": false,
+            "enableConditionScript": "",
+            "filter": "",
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "@item.system.tests.value",
+              "script": "args.fields.successBonus++;",
+              "trigger": "dialog",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!ngi2RUI37DyUTe0W.YAlTF1hzDotOfnDo"
+    }
   ],
   "sort": 1050000,
   "ownership": {

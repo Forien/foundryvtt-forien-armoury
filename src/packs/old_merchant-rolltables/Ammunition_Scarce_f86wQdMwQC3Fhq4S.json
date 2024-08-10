@@ -5,16 +5,166 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "w6Gj1XFownTRr400",
-    "30JC6xPT53J3IpPA",
-    "DFxweGg6K721Rj76",
-    "QKJAvqZDpUx5IG0C",
-    "ZxPvym5eqZO4D9Nh",
-    "rPSXL143QbHCDWqG",
-    "u4WTc6PeseJ0qAhZ",
-    "TMpSIR1rc7tExfY3",
-    "sjaoRIBWWDozvGTX",
-    "S1D1fMLdfyWKMwNk"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Ball and Powder",
+      "documentId": "HRowgW9PxG7ap7JP",
+      "img": "modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png",
+      "_id": "w6Gj1XFownTRr400",
+      "flags": {},
+      "_key": "!tables.results!f86wQdMwQC3Fhq4S.w6Gj1XFownTRr400"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Barbed Arrow",
+      "documentId": "aR4Yg3dEL5FdEW0q",
+      "img": "modules/wfrp4e-core/icons/equipment/ammunition/arrow.png",
+      "_id": "30JC6xPT53J3IpPA",
+      "flags": {},
+      "_key": "!tables.results!f86wQdMwQC3Fhq4S.30JC6xPT53J3IpPA"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Barbed Bolt",
+      "documentId": "U9l2QD8tOLvPTf9B",
+      "img": "icons/weapons/ammunition/arrow-broadhead.webp",
+      "_id": "DFxweGg6K721Rj76",
+      "flags": {},
+      "_key": "!tables.results!f86wQdMwQC3Fhq4S.DFxweGg6K721Rj76"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Bodkin Arrow",
+      "documentId": "T2V8bJAbtwYlvOPT",
+      "img": "modules/wfrp4e-core/icons/equipment/ammunition/arrow.png",
+      "_id": "QKJAvqZDpUx5IG0C",
+      "flags": {},
+      "_key": "!tables.results!f86wQdMwQC3Fhq4S.QKJAvqZDpUx5IG0C"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "text": "Bodkin Bolt",
+      "documentId": "jCZpu8nn4FrKhMD0",
+      "img": "icons/weapons/ammunition/arrow-broadhead-green.webp",
+      "_id": "ZxPvym5eqZO4D9Nh",
+      "flags": {},
+      "_key": "!tables.results!f86wQdMwQC3Fhq4S.ZxPvym5eqZO4D9Nh"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "text": "Grapple",
+      "documentId": "0Qfj9Swv75b9bCUH",
+      "img": "modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/grappling-hook.png",
+      "_id": "rPSXL143QbHCDWqG",
+      "flags": {},
+      "_key": "!tables.results!f86wQdMwQC3Fhq4S.rPSXL143QbHCDWqG"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "text": "Incendiary",
+      "documentId": "gCRiirLG9h9yxKzp",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/incendiary.png",
+      "_id": "u4WTc6PeseJ0qAhZ",
+      "flags": {},
+      "_key": "!tables.results!f86wQdMwQC3Fhq4S.u4WTc6PeseJ0qAhZ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "text": "Large Bullet and Powder",
+      "documentId": "lN4K2kCeInZf6wIL",
+      "img": "modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png",
+      "_id": "TMpSIR1rc7tExfY3",
+      "flags": {},
+      "_key": "!tables.results!f86wQdMwQC3Fhq4S.TMpSIR1rc7tExfY3"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "text": "Paper Cartridge",
+      "documentId": "WVAWy4XCobfFdSeR",
+      "img": "modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png",
+      "_id": "sjaoRIBWWDozvGTX",
+      "flags": {},
+      "_key": "!tables.results!f86wQdMwQC3Fhq4S.sjaoRIBWWDozvGTX"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "text": "Improved Bullet and Powder",
+      "documentId": "RN5mc97zk1Bd7jRx",
+      "img": "icons/weapons/ammunition/shot-round-lead.webp",
+      "_id": "S1D1fMLdfyWKMwNk",
+      "flags": {},
+      "_key": "!tables.results!f86wQdMwQC3Fhq4S.S1D1fMLdfyWKMwNk"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

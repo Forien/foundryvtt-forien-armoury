@@ -5,15 +5,150 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "3wUqwdwDzBW1rsWF",
-    "2ibVMptZYdfcty7Z",
-    "PSU2zWsHV2SOcDYE",
-    "BQQO5cvkfQo6XCi8",
-    "v96TPeoKaJu6Y5Ii",
-    "oeIqn1rb0GJMAkmm",
-    "jIz9OeOl2dA4RFWr",
-    "fDAOpgBjM4e4mgtz",
-    "8Xr8d8rPh506TDaE"
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Ale, pint",
+      "documentId": "N8HJlumE3hOgpPC2",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/ale-pint.png",
+      "_id": "3wUqwdwDzBW1rsWF",
+      "flags": {},
+      "_key": "!tables.results!nCH0abB7hFoSzoY1.3wUqwdwDzBW1rsWF"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Meal, inn",
+      "documentId": "USL6G7P9pbdWHodY",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/meal-inn.png",
+      "_id": "2ibVMptZYdfcty7Z",
+      "flags": {},
+      "_key": "!tables.results!nCH0abB7hFoSzoY1.2ibVMptZYdfcty7Z"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Spirits, pint",
+      "documentId": "lgYfVzNVZzKNoWd2",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/spirits-pint.png",
+      "_id": "PSU2zWsHV2SOcDYE",
+      "flags": {},
+      "_key": "!tables.results!nCH0abB7hFoSzoY1.PSU2zWsHV2SOcDYE"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Wine &amp; Spirits, drink",
+      "documentId": "6x4YAR4iYsA5tjnC",
+      "img": "modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/wine-and-spirits.png",
+      "_id": "BQQO5cvkfQo6XCi8",
+      "flags": {},
+      "_key": "!tables.results!nCH0abB7hFoSzoY1.BQQO5cvkfQo6XCi8"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "text": "Room, common",
+      "documentId": "LDV4ztk5d0wrBmUW",
+      "img": "icons/environment/settlement/house-city.webp",
+      "_id": "v96TPeoKaJu6Y5Ii",
+      "flags": {},
+      "_key": "!tables.results!nCH0abB7hFoSzoY1.v96TPeoKaJu6Y5Ii"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "text": "Room, private double",
+      "documentId": "sfMetQLVzPHHMbxz",
+      "img": "icons/environment/settlement/house-city.webp",
+      "_id": "oeIqn1rb0GJMAkmm",
+      "flags": {},
+      "_key": "!tables.results!nCH0abB7hFoSzoY1.oeIqn1rb0GJMAkmm"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "text": "Room, private single",
+      "documentId": "XTWmBEUtIAWeALWI",
+      "img": "icons/environment/settlement/house-city.webp",
+      "_id": "jIz9OeOl2dA4RFWr",
+      "flags": {},
+      "_key": "!tables.results!nCH0abB7hFoSzoY1.jIz9OeOl2dA4RFWr"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "text": "Warm Bath",
+      "documentId": "R0u96ITp9oIllh2D",
+      "img": "icons/environment/settlement/ldoge.webp",
+      "_id": "fDAOpgBjM4e4mgtz",
+      "flags": {},
+      "_key": "!tables.results!nCH0abB7hFoSzoY1.fDAOpgBjM4e4mgtz"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "text": "Stables",
+      "documentId": "9YDQFP3fcKPRbJCB",
+      "img": "icons/environment/settlement/house-city.webp",
+      "_id": "8Xr8d8rPh506TDaE",
+      "flags": {},
+      "_key": "!tables.results!nCH0abB7hFoSzoY1.8Xr8d8rPh506TDaE"
+    }
   ],
   "replacement": true,
   "displayRoll": true,
@@ -31,10 +166,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.0",
-    "coreVersion": "11.306",
+    "coreVersion": "12.327",
     "createdTime": 1690165000906,
     "modifiedTime": 1690204680587,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d9",
   "_key": "!tables!nCH0abB7hFoSzoY1"

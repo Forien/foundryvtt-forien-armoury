@@ -62,7 +62,54 @@
     }
   },
   "effects": [
-    "FpSiaPDvgSspxHGv"
+    {
+      "transfer": true,
+      "name": "Spectacles",
+      "_id": "FpSiaPDvgSspxHGv",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "prePrepareData",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.actor.characteristics.i.value < 40)\n  args.actor.characteristics.i.modifier += 3; ",
+          "reduceQuantity": false
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/tools/scribal/spectacles-glasses.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!1jBWWFFhyGAN4r2R.FpSiaPDvgSspxHGv"
+    }
   ],
   "sort": 100000,
   "ownership": {
@@ -73,10 +120,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1701953803618,
     "modifiedTime": 1702041740425,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_key": "!items!1jBWWFFhyGAN4r2R"
 }

@@ -5,9 +5,54 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "7aYeyLPpGXxVCdsK",
-    "GOuLGYdevQbaqCfe",
-    "sfNVVWv9p9lT9L5p"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 15,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Foil",
+      "documentId": "SQakHYxBYiPbHi3i",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/foil.png",
+      "_id": "7aYeyLPpGXxVCdsK",
+      "flags": {},
+      "_key": "!tables.results!4CBORA68YhnqaTC1.7aYeyLPpGXxVCdsK"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 15,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Rapier",
+      "documentId": "nGlyGodgPB9Pkbmf",
+      "img": "modules/wfrp4e-up-in-arms/assets/icons/rapier.png",
+      "_id": "GOuLGYdevQbaqCfe",
+      "flags": {},
+      "_key": "!tables.results!4CBORA68YhnqaTC1.GOuLGYdevQbaqCfe"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-up-in-arms.items",
+      "weight": 15,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Smallsword",
+      "documentId": "9rAN3doTsoqG0Vih",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/foil.png",
+      "_id": "sfNVVWv9p9lT9L5p",
+      "flags": {},
+      "_key": "!tables.results!4CBORA68YhnqaTC1.sfNVVWv9p9lT9L5p"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

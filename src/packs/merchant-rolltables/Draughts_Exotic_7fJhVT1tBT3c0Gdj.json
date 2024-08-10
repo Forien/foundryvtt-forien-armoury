@@ -5,13 +5,118 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "91fJ3sYVhxg9A0bb",
-    "vM9qLylE6qEl4EDS",
-    "zJbsvfqIom6v0c10",
-    "tXN5EgoTqhKB9pnj",
-    "C10nhP3UMqi9iTFS",
-    "6DmnaWSRtxjam6fd",
-    "yHSoNIDefgpGylnY"
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Faxtoryll",
+      "documentId": "nRfcszo6wF2sVFDn",
+      "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/faxtoryll.png",
+      "_id": "91fJ3sYVhxg9A0bb",
+      "flags": {},
+      "_key": "!tables.results!7fJhVT1tBT3c0Gdj.91fJ3sYVhxg9A0bb"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Black Lotus",
+      "documentId": "qfd01sggD9xbCuJY",
+      "img": "modules/wfrp4e-core/icons/equipment/drugs_and_poisons/black-lotus.png",
+      "_id": "vM9qLylE6qEl4EDS",
+      "flags": {},
+      "_key": "!tables.results!7fJhVT1tBT3c0Gdj.vM9qLylE6qEl4EDS"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Heartkill",
+      "documentId": "JbSjlgUdzsl5ok95",
+      "img": "modules/wfrp4e-core/icons/equipment/drugs_and_poisons/heartkill.png",
+      "_id": "zJbsvfqIom6v0c10",
+      "flags": {},
+      "_key": "!tables.results!7fJhVT1tBT3c0Gdj.zJbsvfqIom6v0c10"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-zoo.items",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Last Gasp",
+      "documentId": "rFhI2J0ycexkgpEu",
+      "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-draught.png",
+      "_id": "tXN5EgoTqhKB9pnj",
+      "flags": {},
+      "_key": "!tables.results!7fJhVT1tBT3c0Gdj.tXN5EgoTqhKB9pnj"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "text": "Mad Cap Mushrooms",
+      "documentId": "CihEl1pzvTiMQswA",
+      "img": "modules/wfrp4e-core/icons/equipment/drugs_and_poisons/mad-cap-mushrooms.png",
+      "_id": "C10nhP3UMqi9iTFS",
+      "flags": {},
+      "_key": "!tables.results!7fJhVT1tBT3c0Gdj.C10nhP3UMqi9iTFS"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-zoo.items",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "text": "Two-Headed Tincture",
+      "documentId": "FgibnxjugsSRIMc0",
+      "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-draught.png",
+      "_id": "6DmnaWSRtxjam6fd",
+      "flags": {},
+      "_key": "!tables.results!7fJhVT1tBT3c0Gdj.6DmnaWSRtxjam6fd"
+    },
+    {
+      "type": "pack",
+      "documentCollection": "wfrp4e-zoo.items",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "text": "Wyvern's Kiss",
+      "documentId": "vaUlFe0AIWBXSi0z",
+      "img": "modules/wfrp4e-core/icons/equipment/drugs_and_poisons/ranalds-delight.png",
+      "_id": "yHSoNIDefgpGylnY",
+      "flags": {},
+      "_key": "!tables.results!7fJhVT1tBT3c0Gdj.yHSoNIDefgpGylnY"
+    }
   ],
   "replacement": true,
   "displayRoll": true,
@@ -29,10 +134,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690165790932,
     "modifiedTime": 1690165829173,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d7",
   "_key": "!tables!7fJhVT1tBT3c0Gdj"

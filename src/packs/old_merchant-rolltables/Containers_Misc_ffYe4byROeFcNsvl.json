@@ -5,12 +5,102 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "BopKUZXi9FX4qQiw",
-    "kCeL9Yr9iTQLTVa4",
-    "ReTbvbuiMm0zlTpt",
-    "lLVKFRur0e9qTnRU",
-    "C4kRse8gvHaiq8GK",
-    "o2gupvSn9aoX04wD"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Waterskin",
+      "documentId": "hG90GkelSekqH7i8",
+      "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/waterskin.png",
+      "_id": "BopKUZXi9FX4qQiw",
+      "flags": {},
+      "_key": "!tables.results!ffYe4byROeFcNsvl.BopKUZXi9FX4qQiw"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Scroll Case",
+      "documentId": "sgJL9NtVEZZvgkys",
+      "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/scroll-case.png",
+      "_id": "kCeL9Yr9iTQLTVa4",
+      "flags": {},
+      "_key": "!tables.results!ffYe4byROeFcNsvl.kCeL9Yr9iTQLTVa4"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Saddlebags",
+      "documentId": "LKGrjbTZgEh3GUMF",
+      "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/saddlebags.png",
+      "_id": "ReTbvbuiMm0zlTpt",
+      "flags": {},
+      "_key": "!tables.results!ffYe4byROeFcNsvl.ReTbvbuiMm0zlTpt"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Pouch",
+      "documentId": "mCvZAj5F6hfUZhzR",
+      "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/pouch.png",
+      "_id": "lLVKFRur0e9qTnRU",
+      "flags": {},
+      "_key": "!tables.results!ffYe4byROeFcNsvl.lLVKFRur0e9qTnRU"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "text": "Jug",
+      "documentId": "vbNHaU50jr9T2dCQ",
+      "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/jug.png",
+      "_id": "C4kRse8gvHaiq8GK",
+      "flags": {},
+      "_key": "!tables.results!ffYe4byROeFcNsvl.C4kRse8gvHaiq8GK"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "text": "Flask",
+      "documentId": "Hrs3p9z8NqyYEtRz",
+      "img": "modules/wfrp4e-core/icons/equipment/packs_and_containers/flask.png",
+      "_id": "o2gupvSn9aoX04wD",
+      "flags": {},
+      "_key": "!tables.results!ffYe4byROeFcNsvl.o2gupvSn9aoX04wD"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

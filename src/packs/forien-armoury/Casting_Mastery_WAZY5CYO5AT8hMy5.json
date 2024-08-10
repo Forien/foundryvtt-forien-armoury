@@ -42,7 +42,67 @@
     }
   },
   "effects": [
-    "kpg6tadsVNoK2M1j"
+    {
+      "transfer": true,
+      "name": "Casting Mastery",
+      "_id": "kpg6tadsVNoK2M1j",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false
+          },
+          "scriptData": [
+            {
+              "label": "Casting Mastery",
+              "trigger": "rollCastTest",
+              "script": "/**\n * @author Forien\n * @link https://foundryvtt.com/community/forien\n */\n\nconst testData = args.test.data;\nconst result = testData.result;\nconst overcastData = result.overcast;\n\nconst wpb = args.test.actor.system.characteristics.wp.bonus;\nconst SL = Number(wpb);\nconst CN = Number(result.itemData.system.cn.value);\nconst memorized = !!result.itemData.system.memorized.value;\nconst overcasts = Math.max(SL - (memorized ? CN : CN * 2), 0);\nconst canOvercast = overcasts > 0;\n\n\nresult.SL = `+${SL}`;\nresult.outcome = \"success\";\nresult.castOutcome = \"success\";\nresult.description = \"Casting Succeeded\";\nresult.overcasts = overcasts;\novercastData.available = overcasts;\novercastData.originalSL = SL;\novercastData.total = overcasts;\novercastData.enabled = canOvercast;\n\nfor (let overcastType in overcastData.usage) {\n  if (overcastData.usage[overcastType]) {\n    overcastData.usage[overcastType].count = 0;\n    overcastData.usage[overcastType].current = overcastData.usage[overcastType].initial;\n\n    if (overcastType === \"other\") {\n      overcastData.usage[overcastType].available = overcastData.available >= 2\n    } else if(overcastType === \"target\" && overcastData.usage.target.AoE) {\n      overcastData.usage[overcastType].available = overcastData.available >= game.wfrp4e.config.overCastTable.AoE[0].cost;\n    } else {\n      overcastData.usage[overcastType].available = overcastData.available >= game.wfrp4e.config.overCastTable[overcastType][0].cost;\n    }\n  }\n}"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "rollCastTest",
+            "preventDuplicateEffects": false,
+            "script": "/**\n * @author Forien\n * @link https://foundryvtt.com/community/forien\n */\n\nconst testData = args.test.data;\nconst result = testData.result;\nconst overcastData = result.overcast;\n\nconst wpb = args.test.actor.system.characteristics.wp.bonus;\nconst SL = Number(wpb);\nconst CN = Number(result.itemData.system.cn.value);\nconst memorized = !!result.itemData.system.memorized.value;\nconst overcasts = Math.max(SL - (memorized ? CN : CN * 2), 0);\nconst canOvercast = overcasts > 0;\n\n\nresult.SL = `+${SL}`;\nresult.outcome = \"success\";\nresult.castOutcome = \"success\";\nresult.description = \"Casting Succeeded\";\nresult.overcasts = overcasts;\novercastData.available = overcasts;\novercastData.originalSL = SL;\novercastData.total = overcasts;\novercastData.enabled = canOvercast;\n\nfor (let overcastType in overcastData.usage) {\n  if (overcastData.usage[overcastType]) {\n    overcastData.usage[overcastType].count = 0;\n    overcastData.usage[overcastType].current = overcastData.usage[overcastType].initial;\n\n    if (overcastType === \"other\") {\n      overcastData.usage[overcastType].available = overcastData.available >= 2\n    } else if(overcastType === \"target\" && overcastData.usage.target.AoE) {\n      overcastData.usage[overcastType].available = overcastData.available >= game.wfrp4e.config.overCastTable.AoE[0].cost;\n    } else {\n      overcastData.usage[overcastType].available = overcastData.available >= game.wfrp4e.config.overCastTable[overcastType][0].cost;\n    }\n  }\n}"
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/magic/symbols/runes-triangle-orange-purple.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!WAZY5CYO5AT8hMy5.kpg6tadsVNoK2M1j"
+    }
   ],
   "folder": "PQAanEQoiIOxQp1r",
   "ownership": {
@@ -61,10 +121,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1704563206482,
     "modifiedTime": 1705180064071,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "sort": 0,
   "_key": "!items!WAZY5CYO5AT8hMy5"

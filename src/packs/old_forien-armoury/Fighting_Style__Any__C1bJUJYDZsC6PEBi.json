@@ -36,7 +36,68 @@
     }
   },
   "effects": [
-    "4sXKiXRCpmHA8bmt"
+    {
+      "icon": "icons/skills/melee/strike-axe-blood-red.webp",
+      "transfer": true,
+      "name": "Fighting Style (Any)",
+      "_id": "4sXKiXRCpmHA8bmt",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "addItems",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.replaceWithStyle(args, this)",
+          "scriptData": [
+            {
+              "label": "Fighting Style (Any)",
+              "trigger": "addItems",
+              "script": "return await game.modules.get(\"forien-armoury\")?.api.helpers.styles.replaceWithStyle(args, this);",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false,
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!C1bJUJYDZsC6PEBi.4sXKiXRCpmHA8bmt"
+    }
   ],
   "folder": "c6bIK3vGnIqNXscz",
   "ownership": {

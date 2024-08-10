@@ -5,13 +5,118 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "tAWjJqaFWmfXViwB",
-    "QerIHrgedUKyMvKK",
-    "qgv1lF3grmniJ5os",
-    "Tnpq4GC3RRyslcSF",
-    "2fDPp1CBCxG9jgrO",
-    "u1AOHpYiTF8kdiM6",
-    "8HBx9CYrbGZpeIqo"
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 8,
+      "range": [
+        1,
+        8
+      ],
+      "drawn": false,
+      "text": "Breastplate",
+      "documentId": "hWZ6H1jZ9jmte6yE",
+      "img": "icons/equipment/chest/breastplate-gorget-steel.webp",
+      "_id": "tAWjJqaFWmfXViwB",
+      "flags": {},
+      "_key": "!tables.results!bcfWOzoAXLS0r4OE.tAWjJqaFWmfXViwB"
+    },
+    {
+      "type": 2,
+      "documentCollection": "forien-armoury.forien-armoury",
+      "weight": 6,
+      "range": [
+        9,
+        14
+      ],
+      "drawn": false,
+      "text": "Cuirass",
+      "documentId": "VW2Sk5JPUrz7SLPH",
+      "img": "icons/equipment/chest/breastplate-collared-steel-grey.webp",
+      "_id": "QerIHrgedUKyMvKK",
+      "flags": {},
+      "_key": "!tables.results!bcfWOzoAXLS0r4OE.QerIHrgedUKyMvKK"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 7,
+      "range": [
+        15,
+        21
+      ],
+      "drawn": false,
+      "text": "Plate Bracers",
+      "documentId": "oW7wSkl4JMb5sBH8",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/plate-bracers.png",
+      "_id": "qgv1lF3grmniJ5os",
+      "flags": {},
+      "_key": "!tables.results!bcfWOzoAXLS0r4OE.qgv1lF3grmniJ5os"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 8,
+      "range": [
+        22,
+        29
+      ],
+      "drawn": false,
+      "text": "Plate Helm",
+      "documentId": "e9WmLbD7AuXSeWp0",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/plate-helm.png",
+      "_id": "Tnpq4GC3RRyslcSF",
+      "flags": {},
+      "_key": "!tables.results!bcfWOzoAXLS0r4OE.Tnpq4GC3RRyslcSF"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 7,
+      "range": [
+        30,
+        36
+      ],
+      "drawn": false,
+      "text": "Plate Leggings",
+      "documentId": "bY6M9XxbqmFmqpA8",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/plate-leggings.png",
+      "_id": "2fDPp1CBCxG9jgrO",
+      "flags": {},
+      "_key": "!tables.results!bcfWOzoAXLS0r4OE.2fDPp1CBCxG9jgrO"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 10,
+      "range": [
+        37,
+        46
+      ],
+      "drawn": false,
+      "text": "Plate Open Helm",
+      "documentId": "TvUKzvXjc2VChuTT",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/plate-open-helm.png",
+      "_id": "u1AOHpYiTF8kdiM6",
+      "flags": {},
+      "_key": "!tables.results!bcfWOzoAXLS0r4OE.u1AOHpYiTF8kdiM6"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 10,
+      "range": [
+        47,
+        56
+      ],
+      "drawn": false,
+      "text": "Boiled Leather Breastplate",
+      "documentId": "tIG1TGcmU2i4rgFh",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/boiled-leather-breastplate.png",
+      "_id": "8HBx9CYrbGZpeIqo",
+      "flags": {},
+      "_key": "!tables.results!bcfWOzoAXLS0r4OE.8HBx9CYrbGZpeIqo"
+    }
   ],
   "replacement": true,
   "displayRoll": true,

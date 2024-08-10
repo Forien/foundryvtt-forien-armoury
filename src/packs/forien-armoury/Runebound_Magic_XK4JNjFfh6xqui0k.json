@@ -37,7 +37,89 @@
     }
   },
   "effects": [
-    "pOZuWgd2BdjU3nq6"
+    {
+      "name": "Runebound Magic",
+      "_id": "pOZuWgd2BdjU3nq6",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": true,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "avoidTest": {
+              "value": "none",
+              "opposed": false,
+              "prevention": true,
+              "reversed": false,
+              "manual": false,
+              "script": "",
+              "difficulty": "",
+              "characteristic": "",
+              "skill": ""
+            },
+            "keep": false,
+            "radius": null,
+            "areaType": "sustained",
+            "renderAura": true,
+            "targetedAura": false,
+            "testIndependent": false,
+            "preApplyScript": "",
+            "equipTransfer": false,
+            "enableConditionScript": "",
+            "filter": "",
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "@item.system.tests.value",
+              "script": "args.fields.successBonus++;",
+              "trigger": "dialog",
+              "options": {
+                "dialog": {
+                  "hideScript": "return args.type != \"channelling\" && !args.skill?.name.includes(game.i18n.localize(\"NAME.Channelling\"))",
+                  "activateScript": "return args.type == \"channelling\" || args.skill?.name.includes(game.i18n.localize(\"NAME.Channelling\"))",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runebound-magic.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!XK4JNjFfh6xqui0k.pOZuWgd2BdjU3nq6"
+    }
   ],
   "flags": {
     "core": {}
@@ -45,10 +127,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.2",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1688252626857,
     "modifiedTime": 1714322706187,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "XK4JNjFfh6xqui0k",
   "sort": 1100000,

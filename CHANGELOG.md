@@ -1,6 +1,31 @@
 # Changelog
 
+## v3.X.X
+
+### v3.0.0
+* Verified for Foundry v12 and set it as minimum version
+* Fixed Slashing label error
+* Fixed Poisonous applying on SL lower than rating instead higher than rating
+* Changed deprecated calls `roll({async: false})` to `evaluateSync()` in Arrow Reclamation
+* Fixed Magical Endurance not being retracted for directly casting spells if cost for using scrolls was set to 0
+* Fixed Dialog Title in `Make Extended Lockpick Test` macro not being localized
+  * This change does not require re-importing the macro 
+* Fixed `Generate Ingredient for Spell` macro, and moved it to `Macros` class for better support in the future
+  * This change requires re-importing the macro from Compendium
+* Removed deprecated macros from Compendium
+
+
 ## v2.X.X
+
+### v2.1.2
+* Fixed the AP check for the Slashing weapon quality
+
+### v2.1.1
+* `Award XP` macro now offers checkboxes to deselect characters and/or companions from getting XP
+* Added support for rerolling Combat Fatigue Tests
+* Fixed input for Combat Fatigue not rendering without explicit ownership (affects mostly GMs)
+* Arrows should no longer be duplicated in case of rerolling ranged tests
+* "Fixed" the improved Gunpowder reducing the reload by 2 due to Foundry bug by changing script trigger 
 
 ### v2.1.0
 * Fixed notification not showing when Actor can't use scroll due to quantity or language

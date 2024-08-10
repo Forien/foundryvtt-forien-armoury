@@ -3,7 +3,99 @@
   "type": "ammunition",
   "img": "icons/weapons/ammunition/shot-round-lead.webp",
   "effects": [
-    "Gg2l8jDxth0VEqRg"
+    {
+      "transfer": true,
+      "name": "Improved Bullet and Powder",
+      "_id": "Gg2l8jDxth0VEqRg",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Improved Bullet and Powder (misfire)",
+              "trigger": "rollWeaponTest",
+              "script": "let isFumble = \"Fumble\" === args.test.isFumble;\nlet isMisfire = isFumble && args.test.result.roll % 2 === 0;\n\nif (isMisfire) {\n  args.test.data.result.other.push(\"<p>You can make a <strong>Challenging (+0) <em>Ranged (Blackpowder or Engineering) Test</em></strong> to ignore the effects of misfire!</p>\");\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            },
+            {
+              "label": "Improved Bullet and Powder (reload)",
+              "script": "args.item.system.flaws.value.forEach(flaw => {if (flaw.name == \"reload\" && flaw.value > 1) flaw.value -= 1});",
+              "trigger": "prepareOwned",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "rollWeaponTest",
+            "preventDuplicateEffects": false,
+            "script": "let isFumble = \"Fumble\" === args.test.isFumble;\nlet isMisfire = isFumble && args.test.result.roll % 2 === 0\nlet thisAmmo = args.test.weapon.ammo?._id === this.item.id \n\nif (isMisfire && thisAmmo) {\n  args.test.data.result.other.push(\"<p>You can make a <strong>Challenging (+0) <em>Ranged (Blackpowder or Engineering) Test</em></strong> to ignore the effects of misfire!</p>\");\n}"
+          }
+        },
+        "core": {
+          "sourceId": "Actor.HjEaOj3YUvtsOxve.Item.4R2oFrqfH31huKDS.ActiveEffect.vb5OW5hKoVzbuFpT"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/weapons/ammunition/shot-round-lead.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!RN5mc97zk1Bd7jRx.Gg2l8jDxth0VEqRg"
+    }
   ],
   "flags": {
     "_sheetTab": "description",
@@ -93,11 +185,13 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.1.3",
-    "coreVersion": "11.315",
+    "systemVersion": "7.2.0",
+    "coreVersion": "12.327",
     "createdTime": 1663627495392,
-    "modifiedTime": 1714396978897,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "modifiedTime": 1717789374696,
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "folder": "aJNQgYBJruO0TNOW",
   "_id": "RN5mc97zk1Bd7jRx",

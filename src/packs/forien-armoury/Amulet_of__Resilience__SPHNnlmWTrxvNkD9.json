@@ -62,7 +62,53 @@
     }
   },
   "effects": [
-    "bWkSgjBVcFO2d73J"
+    {
+      "transfer": true,
+      "name": "Amulet of „Resilience“",
+      "_id": "bWkSgjBVcFO2d73J",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "prePrepareData",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.actor.characteristics.int.value < 40)\n  args.actor.characteristics.t.modifier += 3; "
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/equipment/neck/amulet-carved-stone-spiral.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!SPHNnlmWTrxvNkD9.bWkSgjBVcFO2d73J"
+    }
   ],
   "ownership": {
     "default": 0,
@@ -74,10 +120,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1701953582024,
     "modifiedTime": 1702041771476,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "sort": 200000,
   "_key": "!items!SPHNnlmWTrxvNkD9"

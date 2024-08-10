@@ -5,8 +5,38 @@
   "img": "systems/wfrp4e/ui/buttons/d10.webp",
   "description": "",
   "results": [
-    "hXBkugLbHyuv64PV",
-    "rlw6EVfrqQQgu9zG"
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Book, Law",
+      "documentId": "o4FSm7YgmfNV4Qgq",
+      "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-law.png",
+      "_id": "hXBkugLbHyuv64PV",
+      "flags": {},
+      "_key": "!tables.results!6K91R8eci6zxdHAQ.hXBkugLbHyuv64PV"
+    },
+    {
+      "type": 2,
+      "documentCollection": "wfrp4e-core.items",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Book, Medicine",
+      "documentId": "aQIxzS4uOcIe9oxd",
+      "img": "modules/wfrp4e-core/icons/equipment/book_documents/book-medicine.png",
+      "_id": "rlw6EVfrqQQgu9zG",
+      "flags": {},
+      "_key": "!tables.results!6K91R8eci6zxdHAQ.rlw6EVfrqQQgu9zG"
+    }
   ],
   "replacement": true,
   "displayRoll": true,
