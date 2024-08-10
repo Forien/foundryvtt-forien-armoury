@@ -145,7 +145,11 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
     }
 
     if (!preCreateData.system?.encumbrance?.value) {
-      foundry.utils.setProperty(preCreateData, 'system.encumbrance.value', Utility.getSetting(settings.scrolls.defaultEncumbrance));
+      foundry.utils.setProperty(preCreateData, 'system.encumbrance.value', Utility.getSetting(settings.grimoires.defaultEncumbrance));
+    }
+
+    if (!preCreateData.system?.availability?.value) {
+      foundry.utils.setProperty(preCreateData, 'system.availability.value', Utility.getSetting(settings.grimoires.defaultAvailability));
     }
 
     return preCreateData;
