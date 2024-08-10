@@ -164,7 +164,7 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
   async expandData(htmlOptions) {
     let data = await super.expandData(htmlOptions);
 
-    data.properties.push(game.i18n.format("Forien.Armoury.Grimoires.WrittenIn", {language: this.language}));
+    data.properties.push(game.i18n.format("Forien.Armoury.Grimoires.WrittenIn", {language: this.language}).capitalize());
 
     let lores = new Set();
 
@@ -296,7 +296,8 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
     }
 
     const and = game.i18n.localize('Forien.Armoury.Grimoires.And');
-    const summary = game.i18n.format('Forien.Armoury.Grimoires.GrimoireSummary', {list: loresSummary.join(` ${and} `)})
+    const written = game.i18n.format("Forien.Armoury.Grimoires.WrittenIn", {language: this.language});
+    const summary = game.i18n.format('Forien.Armoury.Grimoires.GrimoireSummary', {written, list: loresSummary.join(` ${and} `)})
     const description = `<p>${summary}</p> ${spells}`;
 
     await this.parent.update({'system.description.value': description});

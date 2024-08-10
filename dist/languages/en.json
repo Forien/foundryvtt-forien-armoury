@@ -279,10 +279,10 @@
         "DropHere": "Drop Spells here to add them to the Grimoire",
         "RemoveSpells": "Remove all Spells from Grimoire",
         "GenerateDescription": "Generate Grimoire's description",
-        "WrittenIn": "Written in {language}",
+        "WrittenIn": "written in {language}",
         "ReadWriteTalent": "Read/Write",
         "ArcaneMagicTalent": "Arcane Magic ({lore})",
-        "GrimoireSummary": "This Grimoire contains {list}.",
+        "GrimoireSummary": "This Grimoire {written} contains {list}.",
         "LoreSummary": "{num} spells from <strong>{lore}</strong>",
         "And": "and"
       },
