@@ -99,6 +99,7 @@ export default class GrimoireSheet extends ItemSheetWfrp4e {
 
     html.on("click", ".spell img", this.#onSpellClick.bind(this))
     html.on("click", ".spells-remove", this.#onSpellsRemoveClick.bind(this))
+    html.on("click", ".generate-description", this.#onGenerateDescriptionClick.bind(this))
     html.on("change", ".spell-name input", this.#onSpellLabelChange.bind(this))
   }
 
@@ -118,6 +119,13 @@ export default class GrimoireSheet extends ItemSheetWfrp4e {
    */
   #onSpellsRemoveClick(event) {
     this.item.update({"system.spells": []});
+  }
+
+  /**
+   * Generates Grimoire's description
+   */
+  #onGenerateDescriptionClick(event) {
+    this.item.system.generateDescription();
   }
 
   /**

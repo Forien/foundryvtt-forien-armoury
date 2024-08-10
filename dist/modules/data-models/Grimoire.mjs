@@ -223,6 +223,8 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
 
   async removeSpells() {
     const actor = this.parent.actor;
+    if (!actor) return;
+
     let spells = actor.itemTypes.spell.filter(s =>
       s.flags[constants.moduleId]?.[flags.grimoires.source] === this.parent.id &&
       s.system.memorized.value === false
@@ -268,6 +270,38 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
     return this.parent.actor?.itemTypes.talent.some(t => t.name === talent) || false;
   }
 
+  async generateDescription() {
+    const lores = new Map();
+
+    if (this.hideSpells) return;
+
+    for (let spell of await this.loadSpells()) {
+      const lore = game.wfrp4e.config.magicLores[spell.system?.lore?.value] ?? null;
+      const loreLabel = game.i18n.format("Forien.Armoury.Scrolls.LoreOf", {lore});
+
+      if (lores.has(lore)) {
+        lores.get(lore).spells.push(spell.link);
+      } else {
+        lores.set(lore, {label: loreLabel, spells: [spell.link]});
+      }
+    }
+
+    let loresSummary = [];
+    let spells = '';
+    for (let [key, lore] of lores) {
+      const summary = game.i18n.format('Forien.Armoury.Grimoires.LoreSummary', {num: lore.spells.length, lore: lore.label});
+      loresSummary.push(summary);
+
+      spells += `<ul><li>${lore.spells.join('</li><li>')}</li></ul><br>`;
+    }
+
+    const and = game.i18n.localize('Forien.Armoury.Grimoires.And');
+    const summary = game.i18n.format('Forien.Armoury.Grimoires.GrimoireSummary', {list: loresSummary.join(` ${and} `)})
+    const description = `<p>${summary}</p> ${spells}`;
+
+    await this.parent.update({'system.description.value': description});
+  }
+
   /**
    * @returns {boolean}
    */
@@ -279,6 +313,8 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
    * @returns {boolean}
    */
   get hideSpells() {
+    if (!this.parent.actor) return false;
+
     if (Utility.getSetting(settings.grimoires.hideSpellsWithoutLanguage))
       return !this.languageSkill;
 

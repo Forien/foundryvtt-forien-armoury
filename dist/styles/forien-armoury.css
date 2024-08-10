@@ -101,7 +101,7 @@
 .forien-armoury.app.window-app.sheet.scroll-sheet, .forien-armoury.app.window-app.sheet.grimoire-sheet {
   min-width: 550px;
 }
-.forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell-container .spell-refresh, .forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell-container .spells-remove, .forien-armoury.app.window-app.sheet.grimoire-sheet .window-content .tab.details .form-group.spell-container .spell-refresh, .forien-armoury.app.window-app.sheet.grimoire-sheet .window-content .tab.details .form-group.spell-container .spells-remove {
+.forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell-container .spell-refresh, .forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell-container .spells-remove, .forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell-container .generate-description, .forien-armoury.app.window-app.sheet.grimoire-sheet .window-content .tab.details .form-group.spell-container .spell-refresh, .forien-armoury.app.window-app.sheet.grimoire-sheet .window-content .tab.details .form-group.spell-container .spells-remove, .forien-armoury.app.window-app.sheet.grimoire-sheet .window-content .tab.details .form-group.spell-container .generate-description {
   font-size: var(--font-size-12);
 }
 .forien-armoury.app.window-app.sheet.scroll-sheet .window-content .tab.details .form-group.spell-container .spell, .forien-armoury.app.window-app.sheet.grimoire-sheet .window-content .tab.details .form-group.spell-container .spell {
