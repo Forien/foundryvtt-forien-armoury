@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!WiECkYvbqPun3mV3.p6tRIZl9U9MpJgR8"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -54,10 +54,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690164445453,
     "modifiedTime": 1690164463587,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d60",
   "_key": "!tables!WiECkYvbqPun3mV3"

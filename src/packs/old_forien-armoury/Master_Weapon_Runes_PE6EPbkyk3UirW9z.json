@@ -120,7 +120,6 @@
   },
   "effects": [
     {
-      "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "transfer": true,
       "name": "Master Rune of Alaric the Mad (Permanent)",
       "_id": "lUbwP70wDI5Th7bP",
@@ -185,11 +184,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.lUbwP70wDI5Th7bP"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "transfer": true,
       "name": "Master Rune of Alaric the Mad (Temporary)",
       "_id": "HZ3VSvyhJl2agkXl",
@@ -271,11 +283,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.HZ3VSvyhJl2agkXl"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "transfer": true,
       "name": "Master Rune of Flight (Permanent)",
       "_id": "M8I0wBGhZeJ0Wcvn",
@@ -365,11 +390,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.M8I0wBGhZeJ0Wcvn"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "transfer": true,
       "name": "Master Rune of Flight (Temporary)",
       "_id": "CSUOejTRe8PkIrfM",
@@ -476,11 +514,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.CSUOejTRe8PkIrfM"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "transfer": true,
       "name": "Master Rune of Skalf Blackhammer (Permanent)",
       "_id": "5yxJtpmUVIulDZii",
@@ -546,11 +597,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.5yxJtpmUVIulDZii"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "transfer": true,
       "name": "Master Rune of Skalf Blackhammer (Temporary)",
       "_id": "jzLtBtcxxelz9f0S",
@@ -633,11 +697,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.jzLtBtcxxelz9f0S"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "transfer": true,
       "name": "Master Rune of Snorri Spangelhelm (Permanent)",
       "_id": "cXR49Z9BWlC5nxt5",
@@ -693,11 +770,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.cXR49Z9BWlC5nxt5"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "transfer": true,
       "name": "Master Rune of Snorri Spangelhelm (Temporary)",
       "_id": "DTHpg1fqn2nkELA5",
@@ -766,11 +856,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.DTHpg1fqn2nkELA5"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "transfer": true,
       "name": "Master Rune of Swiftness (Permanent)",
       "_id": "vu7lLIvI7wWd4eDB",
@@ -836,11 +939,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.vu7lLIvI7wWd4eDB"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "transfer": true,
       "name": "Master Rune of Swiftness (Temporary)",
       "_id": "k69UJgbOOQONyHyX",
@@ -923,11 +1039,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.k69UJgbOOQONyHyX"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "transfer": true,
       "name": "Master Rune of Breaking (Permanent)",
       "_id": "EqLoSwFFzlWbrQFD",
@@ -990,11 +1119,24 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.4tJdRSQGa8WTbn6Z"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.EqLoSwFFzlWbrQFD"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "transfer": true,
       "name": "Master Rune of Breaking (Temporary)",
       "_id": "iuF9Ql6VWt9LU1pH",
@@ -1073,7 +1215,21 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.PE6EPbkyk3UirW9z.ActiveEffect.Q2KUdPD85kOKK4Y9"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.iuF9Ql6VWt9LU1pH"
     }
   ],
@@ -1086,10 +1242,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.2",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1688747984973,
     "modifiedTime": 1714213697262,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_key": "!items!PE6EPbkyk3UirW9z"
 }

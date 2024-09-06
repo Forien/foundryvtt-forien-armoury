@@ -4,54 +4,36 @@
   "img": "modules/forien-armoury/icons/spells/runebound-claustra.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>You can immediately lock any mundane (non-magical) lock, padlock or any other similar mechanism. You don't need a key to do that.</p><p>Additionally, mechanisms you locked using this Spell are considered magically locked for the duration of the Spell, but the original key will still work. </p><p>Moreover, during the Spell's duration you can open the lock without a key, but doing so immediately ends the Spell.</p><p>When Spell's duration ends, lock remains locked but is no longer considered magical or magically locked.</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "lore": {
-      "type": "String",
-      "label": "Lore",
       "value": "runebound",
       "effectString": ""
     },
     "range": {
-      "type": "String",
-      "label": "Range",
       "value": "Touch",
       "vortex": false
     },
     "target": {
-      "type": "String",
-      "label": "Target",
       "value": "1",
       "aoe": false
     },
     "duration": {
-      "type": "String",
-      "label": "Duration",
       "value": "Willpower Bonus hours",
       "extendable": false
     },
     "damage": {
-      "type": "String",
-      "label": "Damage",
       "dice": "",
       "value": ""
     },
     "cn": {
-      "type": "Number",
-      "label": "Casting Number",
       "value": 0,
       "SL": 0
     },
     "magicMissile": {
-      "type": "Boolean",
-      "label": "Magic Missile",
       "value": false
     },
     "ritual": {
@@ -60,8 +42,6 @@
       "xp": 0
     },
     "memorized": {
-      "type": "Boolean",
-      "label": "Memorized",
       "value": true
     },
     "skill": {
@@ -69,8 +49,6 @@
     },
     "ingredients": [],
     "currentIng": {
-      "type": "Number",
-      "label": "Ingredient",
       "value": ""
     },
     "wind": {
@@ -103,11 +81,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1688999622218,
-    "modifiedTime": 1689019271335,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

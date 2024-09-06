@@ -37,7 +37,6 @@
   },
   "effects": [
     {
-      "icon": "icons/skills/melee/strike-axe-blood-red.webp",
       "transfer": true,
       "name": "Fighting Master (Style)",
       "_id": "yDP26Ih3EkVk4JB8",
@@ -92,7 +91,21 @@
           }
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/skills/melee/strike-axe-blood-red.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!45vQxqVDSgCAJoLw.yDP26Ih3EkVk4JB8"
     }
   ],
@@ -107,10 +120,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1702057628149,
     "modifiedTime": 1714394690898,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "45vQxqVDSgCAJoLw",
   "sort": 50000,

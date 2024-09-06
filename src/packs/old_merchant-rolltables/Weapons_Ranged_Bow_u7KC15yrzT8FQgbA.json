@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!u7KC15yrzT8FQgbA.INOlAHAc4x0MSRRA"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!u7KC15yrzT8FQgbA.wJcCWdCa3OS5InnO"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 30,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!u7KC15yrzT8FQgbA.mWlw6rzdG5MYA8LW"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!u7KC15yrzT8FQgbA.YDqF3pr43CZxjGEs"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 15,
       "range": [
@@ -102,10 +102,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690163291237,
     "modifiedTime": 1690163359042,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d106",
   "_key": "!tables!u7KC15yrzT8FQgbA"

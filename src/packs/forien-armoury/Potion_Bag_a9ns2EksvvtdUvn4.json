@@ -9,74 +9,52 @@
   },
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>Specially crafted sling bag made from mixture of boiled and soft leather.</p><p>It contains multiple small compartments, each big enough to hold a single flask. Allows for easier and organized storage of potions, ingredients and other medical articles.</p><h5>Special Rules</h5><ul><li><p><em>Counts as ‘worn’ when slung over your shoulder.</em></p></li><li><p>Can only hold <em>drugs, potions, poultices, poisons, flasks, ingredients and bandages</em>.</p></li><li><p>When worn, any item inside can be <em>accessed with a @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#free-actions]{Free Action}</em>.</p></li></ul><p></p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 2
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "1",
-      "ss": "4",
-      "bp": "0"
+      "gc": 1,
+      "ss": 4,
+      "bp": 0
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "rare"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
-    },
-    "worn": {
-      "type": "Boolean",
-      "label": "Worn",
-      "value": false
+      "value": ""
     },
     "wearable": {
-      "type": "Boolean",
-      "label": "Wearable",
       "value": true
     },
     "carries": {
-      "type": "Number",
-      "label": "Carries",
       "value": 2
     },
     "countEnc": {
-      "type": "Boolean",
-      "label": "Count Enc",
       "value": true
     },
-    "source": {
-      "type": "String",
-      "label": "Source"
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    },
+    "equipped": {
+      "value": false
     }
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1663627495291,
-    "modifiedTime": 1689341793166,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

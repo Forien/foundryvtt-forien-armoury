@@ -61,7 +61,6 @@
   },
   "effects": [
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "transfer": true,
       "name": "Rune of Fate (Temporary)",
       "_id": "PGqEL1cQF5dl1Kbt",
@@ -122,11 +121,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.PGqEL1cQF5dl1Kbt"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
       "transfer": true,
       "name": "Rune of the Furnace (Permanent)",
       "_id": "XfY9ipOCmyT8VuXs",
@@ -176,11 +188,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.XfY9ipOCmyT8VuXs"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "transfer": true,
       "name": "Rune of the Furnace (Temporary)",
       "_id": "Q4qXVW6NyTAmLvtX",
@@ -251,11 +276,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.Q4qXVW6NyTAmLvtX"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
       "transfer": true,
       "name": "Rune of Luck (Permanent)",
       "_id": "8AnVxYN0k0Uk9thi",
@@ -318,11 +356,24 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.4FNqO1L1hfgnhisU"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.8AnVxYN0k0Uk9thi"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "transfer": true,
       "name": "Rune of Luck (Temporary)",
       "_id": "Nf76EDZmdi8EDlrf",
@@ -385,11 +436,24 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.7zY7AKHRLaTAGyNE"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.Nf76EDZmdi8EDlrf"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "transfer": true,
       "name": "Rune of Spellbreaking (Temporary)",
       "_id": "t4E0PQiWUJOdDD8I",
@@ -441,11 +505,24 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.XgocVKbsL3tTQp97"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.t4E0PQiWUJOdDD8I"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "transfer": true,
       "name": "Rune of Spelleating (Temporary)",
       "_id": "8ncYF3091SCrrrJz",
@@ -497,11 +574,24 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.vyrlzGAdppxyjydw"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.8ncYF3091SCrrrJz"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
       "transfer": true,
       "name": "Rune of Warding (Permanent)",
       "_id": "xdklDXVTgiTm1RSc",
@@ -564,11 +654,24 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.5pzeDFMgBWK5FMbs"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.xdklDXVTgiTm1RSc"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "transfer": true,
       "name": "Rune of Warding (Temporary)",
       "_id": "a1onZaHqnDpRLc4a",
@@ -648,11 +751,24 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.M5BSkkepbE4SCrzk"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.a1onZaHqnDpRLc4a"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
       "transfer": true,
       "name": "Rune of Page (Permanent)",
       "_id": "nE9oKHSB8JwHessd",
@@ -710,11 +826,24 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.i0GTHQefhwTQ2LEL"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.nE9oKHSB8JwHessd"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "transfer": true,
       "name": "Rune of Page (Temporary)",
       "_id": "XM6R0dCmOz74iesB",
@@ -780,7 +909,21 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.VZyMhFCFlkPZ47J8.ActiveEffect.jwtzbHAmtHpQJ6fL"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.XM6R0dCmOz74iesB"
     }
   ],
@@ -791,10 +934,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1688413119645,
     "modifiedTime": 1706287163882,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "VZyMhFCFlkPZ47J8",
   "sort": 50000,

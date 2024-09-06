@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 5,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!LFnB1p0YSclCwpf4.UBKpYUSNnEZzO4PY"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 6,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!LFnB1p0YSclCwpf4.IozCNf6SnuSWxHRX"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 5,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!LFnB1p0YSclCwpf4.QGJvmEncQDnmcM3X"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 5,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!LFnB1p0YSclCwpf4.lDaQc9ZHDjl7tVsZ"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives2.items",
       "weight": 2,
       "range": [
@@ -86,7 +86,7 @@
       "_key": "!tables.results!LFnB1p0YSclCwpf4.JpI7izkTEaB49udF"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives2.items",
       "weight": 3,
       "range": [
@@ -102,7 +102,7 @@
       "_key": "!tables.results!LFnB1p0YSclCwpf4.i5ipVxU6S56xCUXW"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives2.items",
       "weight": 2,
       "range": [
@@ -134,10 +134,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690161312625,
     "modifiedTime": 1690161816211,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d28",
   "_key": "!tables!LFnB1p0YSclCwpf4"

@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 10,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.MsWJtHiUp9khGFDf"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 10,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.niNPAj1rIogk8KjR"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 8,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.zN580r4xyNcCNAF0"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 10,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.oPKU9an6GcayVqNw"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 10,
       "range": [
@@ -86,7 +86,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.VvsX0gCKRfIl7ijl"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 10,
       "range": [
@@ -102,7 +102,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.8LlinGzxJ0brx0SY"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 5,
       "range": [
@@ -118,7 +118,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.TW3wd165Wolg1Cs0"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 10,
       "range": [
@@ -134,7 +134,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.RXKkyhlXjqNnxwlF"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 10,
       "range": [
@@ -150,7 +150,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.0ppg1mkWEhvJRLOg"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 5,
       "range": [
@@ -166,7 +166,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.DtxGQ5nCWyxHgy0c"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 8,
       "range": [
@@ -182,7 +182,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.2gXzNyMfHBsFz4ja"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 10,
       "range": [
@@ -198,7 +198,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.j3NbAkzuKPqJLxjt"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 3,
       "range": [
@@ -214,7 +214,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.sT4wW1tFJUuNf38Z"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 8,
       "range": [
@@ -230,7 +230,7 @@
       "_key": "!tables.results!fMXHQvh485Pd62Q2.CpJNLdwhKaX0dDjB"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 5,
       "range": [
@@ -262,10 +262,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690166342189,
     "modifiedTime": 1690166664660,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d122",
   "_key": "!tables!fMXHQvh485Pd62Q2"

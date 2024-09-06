@@ -4,54 +4,36 @@
   "img": "modules/forien-armoury/icons/spells/runebound-pulso.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>When used against any kind of a creature, the target must oppose this Spell with a <strong>Strength Test</strong>, or be pushed away by the twice final SL yards.</p><p>If Spell crits, Target additionally gains a @Condition[Prone]{Prone} Condition.</p><p>This Spell <strong>deals no damage </strong>against living beings.</p><hr><p>When used against inanimate objects, it pushes them away (distance to be determined by GM based on size and mass of the object).</p><p>Can be also used against doors and walls. In this case, it's treated as <strong>Magic Missile with a +1d10 damage.</strong></p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "lore": {
-      "type": "String",
-      "label": "Lore",
       "value": "runebound",
       "effectString": ""
     },
     "range": {
-      "type": "String",
-      "label": "Range",
       "value": "Willpower Bonus yards",
       "vortex": false
     },
     "target": {
-      "type": "String",
-      "label": "Target",
       "value": "1",
       "aoe": false
     },
     "duration": {
-      "type": "String",
-      "label": "Duration",
       "value": "",
       "extendable": false
     },
     "damage": {
-      "type": "String",
-      "label": "Damage",
       "dice": "1d10",
       "value": "0"
     },
     "cn": {
-      "type": "Number",
-      "label": "Casting Number",
       "value": 0,
       "SL": 0
     },
     "magicMissile": {
-      "type": "Boolean",
-      "label": "Magic Missile",
       "value": true
     },
     "ritual": {
@@ -60,8 +42,6 @@
       "xp": 0
     },
     "memorized": {
-      "type": "Boolean",
-      "label": "Memorized",
       "value": true
     },
     "skill": {
@@ -69,8 +49,6 @@
     },
     "ingredients": [],
     "currentIng": {
-      "type": "Number",
-      "label": "Ingredient",
       "value": ""
     },
     "wind": {
@@ -103,11 +81,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1688999622218,
-    "modifiedTime": 1689019273550,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

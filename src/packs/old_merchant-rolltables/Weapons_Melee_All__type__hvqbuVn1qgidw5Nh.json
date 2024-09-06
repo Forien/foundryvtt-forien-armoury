@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 5,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!hvqbuVn1qgidw5Nh.2wO8MFvpa8Zm7nls"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 4,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!hvqbuVn1qgidw5Nh.xwSUcj98mIjfIdVm"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 2,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!hvqbuVn1qgidw5Nh.IpZV0QjBH3FRqVqh"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 2,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!hvqbuVn1qgidw5Nh.WshxAnNualKJoAgf"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 3,
       "range": [
@@ -86,7 +86,7 @@
       "_key": "!tables.results!hvqbuVn1qgidw5Nh.oIEQo1yDTaHCPOQo"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 4,
       "range": [
@@ -102,7 +102,7 @@
       "_key": "!tables.results!hvqbuVn1qgidw5Nh.igPWuSgpbN4yBnRJ"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 4,
       "range": [
@@ -118,7 +118,7 @@
       "_key": "!tables.results!hvqbuVn1qgidw5Nh.X1uGyCOdYZ1BTTbJ"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 3,
       "range": [
@@ -150,10 +150,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690162552033,
     "modifiedTime": 1690162596554,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d27",
   "_key": "!tables!hvqbuVn1qgidw5Nh"

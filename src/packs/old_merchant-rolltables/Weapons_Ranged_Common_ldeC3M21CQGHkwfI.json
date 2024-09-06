@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!ldeC3M21CQGHkwfI.n8IGKk8JWIzJUP8i"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!ldeC3M21CQGHkwfI.X0ESwYGeEB8rxxXk"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!ldeC3M21CQGHkwfI.0ZdOEkLaPRidFUgV"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 1,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!ldeC3M21CQGHkwfI.YktPwq6aWkCj1KFy"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -86,7 +86,7 @@
       "_key": "!tables.results!ldeC3M21CQGHkwfI.H2rT5ocqhPbRprZG"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -102,7 +102,7 @@
       "_key": "!tables.results!ldeC3M21CQGHkwfI.pECufu5Gjaev0MAg"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -118,7 +118,7 @@
       "_key": "!tables.results!ldeC3M21CQGHkwfI.ZhFUnzotN0hBB9xk"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -134,7 +134,7 @@
       "_key": "!tables.results!ldeC3M21CQGHkwfI.43s14See8Qthxavd"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -150,7 +150,7 @@
       "_key": "!tables.results!ldeC3M21CQGHkwfI.EJae5AyaWaKZXg8s"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -182,10 +182,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690162908051,
     "modifiedTime": 1690163001371,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d10",
   "_key": "!tables!ldeC3M21CQGHkwfI"

@@ -4,59 +4,46 @@
   "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 0
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "0",
-      "ss": "0",
-      "bp": "0"
+      "gc": 0,
+      "ss": 0,
+      "bp": 0
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "None"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "trappingType": {
-      "type": "String",
-      "label": "Trapping Type",
       "value": "clothingAccessories"
     },
-    "worn": false,
     "spellIngredient": {
-      "type": "String",
       "value": ""
     },
     "qualities": {
-      "label": "Qualities",
       "value": []
     },
     "flaws": {
-      "label": "Flaws",
       "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    },
+    "equipped": {
+      "value": false
     }
   },
   "effects": [
@@ -82,63 +69,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "area",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "custom",
-              "opposed": false,
-              "prevention": true,
-              "reversed": false,
-              "manual": false,
-              "difficulty": "challenging",
-              "characteristic": "wp",
-              "skill": ""
-            },
-            "prompt": false,
-            "areaType": "instantaneous",
-            "keep": false,
-            "radius": "24",
-            "targetedAura": false,
-            "filter": "",
-            "enableConditionScript": ""
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Dismay (Permanent)",
-              "trigger": "manual",
-              "script": "let name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfDismay.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfDismay.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n    <a class=\"place-area-effect\" data-uuid=${this.effect.uuid}>\n        <i class=\"fa-solid fa-ruler-combined\"></i> ${game.i18n.localize(\"CHAT.Place\")} ${name}\n    </a>\n`\n})",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Master Rune of Dismay Effect",
-              "string": "",
-              "trigger": "immediate",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "await this.actor.addCondition(\"stunned\");\nawait this.actor.deleteEmbeddedDocuments(\"ActiveEffect\", [this.effect._id]);"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "invoke",
@@ -171,7 +101,83 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "area",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "custom",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false,
+            "difficulty": "challenging",
+            "characteristic": "wp",
+            "skill": ""
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "enableConditionScript": "",
+          "filter": "",
+          "prompt": false,
+          "area": {
+            "radius": "24",
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "instantaneous"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Dismay (Permanent)",
+            "trigger": "manual",
+            "script": "let name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfDismay.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfDismay.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n    <a class=\"place-area-effect\" data-uuid=${this.effect.uuid}>\n        <i class=\"fa-solid fa-ruler-combined\"></i> ${game.i18n.localize(\"CHAT.Place\")} ${name}\n    </a>\n`\n})",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Master Rune of Dismay Effect",
+            "trigger": "immediate",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "await this.actor.addCondition(\"stunned\");\nawait this.actor.deleteEmbeddedDocuments(\"ActiveEffect\", [this.effect._id]);",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "area": "Scene.fhmGwqSDm8fZjWaX.MeasuredTemplate.V18H7F6ng0KlfDdi",
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!BUv7dGYQSklq6UXj.E5ijDLz2sc6n65Y1"
     },
@@ -197,33 +203,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Dismay (Temporary)",
-              "trigger": "manual",
-              "script": "let template = {\n  \"t\": \"circle\",\n  \"distance\": 24,\n  \"direction\": 0,\n  \"angle\": 0,\n  \"width\": null,\n  \"borderColor\": \"#000000\",\n  \"fillColor\": \"#aa3333\",\n  \"hidden\": false,\n  \"flags\": {}\n};\n\nlet token;\nif (this.actor.isToken) token = this.actor.token\nelse token = this.actor.getActiveTokens()[0]?.document\n\nlet offset = game.scenes.active.grid.size / 2;\n\nlet position = {\n  x: token.x + offset,\n  y: token.y + offset\n}\n\ngame.scenes.viewed.createEmbeddedDocuments('MeasuredTemplate', [{...template, ...position}]);\nlet name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfDismay.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfDismay.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "invoke",
@@ -251,7 +230,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Dismay (Temporary)",
+            "trigger": "manual",
+            "script": "let template = {\n  \"t\": \"circle\",\n  \"distance\": 24,\n  \"direction\": 0,\n  \"angle\": 0,\n  \"width\": null,\n  \"borderColor\": \"#000000\",\n  \"fillColor\": \"#aa3333\",\n  \"hidden\": false,\n  \"flags\": {}\n};\n\nlet token;\nif (this.actor.isToken) token = this.actor.token\nelse token = this.actor.getActiveTokens()[0]?.document\n\nlet offset = game.scenes.active.grid.size / 2;\n\nlet position = {\n  x: token.x + offset,\n  y: token.y + offset\n}\n\ngame.scenes.viewed.createEmbeddedDocuments('MeasuredTemplate', [{...template, ...position}]);\nlet name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfDismay.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfDismay.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!BUv7dGYQSklq6UXj.UT5zwRpeN5kB4bYe"
     },
@@ -277,50 +312,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "target",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "testIndependent": false,
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Apply Master Rune of Balance",
-              "trigger": "manual",
-              "script": "let target = Array.from(game.user.targets)[0]?.document;\nlet targetActor = target?.actor;\nlet token;\n\nif (this.actor.isToken) token = this.actor.token\nelse token = this.actor.getActiveTokens()[0]?.document\n\nif (!targetActor)\n  return ui.notifications.notify(game.i18n.format('Forien.Armoury.Runes.MustSelectATarget', {rune: this.effect.name}), 'warning')\n\nlet distance = canvas.grid.measureDistances([{\n  ray: new Ray({x: token.x, y: token.y}, {\n    x: target.x,\n    y: target.y\n  })\n}], {gridSpaces: true})[0]\n\nif (distance > 48)\n  return ui.notifications.notify(game.i18n.format('Forien.Armoury.Runes.TargetNotInRange', {\n    rune: this.effect.name,\n    range: 48\n  }), 'warning')\n\nlet effectOf = game.i18n.localize('Forien.Armoury.Runes.EffectOf');\nlet effectDuration = Number(this.actor.system.characteristics.wp.bonus) * 6;\n\nlet effectCopy = this.effect.toObject();\neffectCopy._id = undefined;\neffectCopy.origin = this.actor.uuid;\neffectCopy.name = `${effectOf} ${effectCopy.name}`\neffectCopy.flags.wfrp4e.scriptData[0].trigger = \"\";\neffectCopy.flags.wfrp4e.scriptData[1].trigger = \"dialog\";\neffectCopy.duration.seconds = effectDuration;\n\ntargetActor.createEmbeddedDocuments(\"ActiveEffect\", [effectCopy])\ngame.user.updateTokenTargets([]);",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Effect of Master Rune of Balance",
-              "script": "args.prefillModifiers.modifier -= 20",
-              "trigger": "",
-              "options": {
-                "dialog": {
-                  "hideScript": "return args.type !== \"cast\" && args.type !== \"channelling\" && args.type !== \"skill\";",
-                  "activateScript": "return args.type == \"cast\" || args.type == \"channelling\";",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "invoke",
@@ -348,7 +339,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "target",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Apply Master Rune of Balance",
+            "trigger": "manual",
+            "script": "let target = Array.from(game.user.targets)[0]?.document;\nlet targetActor = target?.actor;\nlet token;\n\nif (this.actor.isToken) token = this.actor.token\nelse token = this.actor.getActiveTokens()[0]?.document\n\nif (!targetActor)\n  return ui.notifications.notify(game.i18n.format('Forien.Armoury.Runes.MustSelectATarget', {rune: this.effect.name}), 'warning')\n\nlet distance = canvas.grid.measureDistances([{\n  ray: new Ray({x: token.x, y: token.y}, {\n    x: target.x,\n    y: target.y\n  })\n}], {gridSpaces: true})[0]\n\nif (distance > 48)\n  return ui.notifications.notify(game.i18n.format('Forien.Armoury.Runes.TargetNotInRange', {\n    rune: this.effect.name,\n    range: 48\n  }), 'warning')\n\nlet effectOf = game.i18n.localize('Forien.Armoury.Runes.EffectOf');\nlet effectDuration = Number(this.actor.system.characteristics.wp.bonus) * 6;\n\nlet effectCopy = this.effect.toObject();\neffectCopy._id = undefined;\neffectCopy.origin = this.actor.uuid;\neffectCopy.name = `${effectOf} ${effectCopy.name}`\neffectCopy.flags.wfrp4e.scriptData[0].trigger = \"\";\neffectCopy.flags.wfrp4e.scriptData[1].trigger = \"dialog\";\neffectCopy.duration.seconds = effectDuration;\n\ntargetActor.createEmbeddedDocuments(\"ActiveEffect\", [effectCopy])\ngame.user.updateTokenTargets([]);",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Effect of Master Rune of Balance",
+            "script": "args.prefillModifiers.modifier -= 20",
+            "trigger": "",
+            "options": {
+              "hideScript": "return args.type !== \"cast\" && args.type !== \"channelling\" && args.type !== \"skill\";",
+              "activateScript": "return args.type == \"cast\" || args.type == \"channelling\";",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!BUv7dGYQSklq6UXj.C3eNkUVxyrKXcU7S"
     },
@@ -374,50 +434,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "target",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "testIndependent": false,
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Apply Master Rune of Balance",
-              "trigger": "manual",
-              "script": "let target = Array.from(game.user.targets)[0]?.document;\nlet targetActor = target?.actor;\nlet token;\n\nif (this.actor.isToken) token = this.actor.token\nelse token = this.actor.getActiveTokens()[0]?.document\n\nif (!targetActor)\n  return ui.notifications.notify(game.i18n.format('Forien.Armoury.Runes.MustSelectATarget', {rune: this.effect.name}), 'warning')\n\nlet distance = canvas.grid.measureDistances([{\n  ray: new Ray({x: token.x, y: token.y}, {\n    x: target.x,\n    y: target.y\n  })\n}], {gridSpaces: true})[0]\n\nif (distance > 48)\n  return ui.notifications.notify(game.i18n.format('Forien.Armoury.Runes.TargetNotInRange', {\n    rune: this.effect.name,\n    range: 48\n  }), 'warning')\n\nlet effectOf = game.i18n.localize('Forien.Armoury.Runes.EffectOf');\nlet effectDuration = Number(this.actor.system.characteristics.wp.bonus) * 6;\n\nlet effectCopy = this.effect.toObject();\neffectCopy._id = undefined;\neffectCopy.origin = this.actor.uuid;\neffectCopy.name = `${effectOf} ${effectCopy.name}`\neffectCopy.flags.wfrp4e.scriptData[0].trigger = \"\";\neffectCopy.flags.wfrp4e.scriptData[1].trigger = \"dialog\";\neffectCopy.duration.seconds = effectDuration;\n\nawait targetActor.createEmbeddedDocuments(\"ActiveEffect\", [effectCopy])\nawait game.user.updateTokenTargets([]);\nthis.effect.update({disabled: true});",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Effect of Master Rune of Balance",
-              "script": "args.prefillModifiers.modifier -= 20",
-              "trigger": "",
-              "options": {
-                "dialog": {
-                  "hideScript": "return args.type !== \"cast\" && args.type !== \"channelling\" && args.type !== \"skill\";",
-                  "activateScript": "return args.type == \"cast\" || args.type == \"channelling\";",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "invoke",
@@ -445,7 +461,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "target",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Apply Master Rune of Balance",
+            "trigger": "manual",
+            "script": "let target = Array.from(game.user.targets)[0]?.document;\nlet targetActor = target?.actor;\nlet token;\n\nif (this.actor.isToken) token = this.actor.token\nelse token = this.actor.getActiveTokens()[0]?.document\n\nif (!targetActor)\n  return ui.notifications.notify(game.i18n.format('Forien.Armoury.Runes.MustSelectATarget', {rune: this.effect.name}), 'warning')\n\nlet distance = canvas.grid.measureDistances([{\n  ray: new Ray({x: token.x, y: token.y}, {\n    x: target.x,\n    y: target.y\n  })\n}], {gridSpaces: true})[0]\n\nif (distance > 48)\n  return ui.notifications.notify(game.i18n.format('Forien.Armoury.Runes.TargetNotInRange', {\n    rune: this.effect.name,\n    range: 48\n  }), 'warning')\n\nlet effectOf = game.i18n.localize('Forien.Armoury.Runes.EffectOf');\nlet effectDuration = Number(this.actor.system.characteristics.wp.bonus) * 6;\n\nlet effectCopy = this.effect.toObject();\neffectCopy._id = undefined;\neffectCopy.origin = this.actor.uuid;\neffectCopy.name = `${effectOf} ${effectCopy.name}`\neffectCopy.flags.wfrp4e.scriptData[0].trigger = \"\";\neffectCopy.flags.wfrp4e.scriptData[1].trigger = \"dialog\";\neffectCopy.duration.seconds = effectDuration;\n\nawait targetActor.createEmbeddedDocuments(\"ActiveEffect\", [effectCopy])\nawait game.user.updateTokenTargets([]);\nthis.effect.update({disabled: true});",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Effect of Master Rune of Balance",
+            "script": "args.prefillModifiers.modifier -= 20",
+            "trigger": "",
+            "options": {
+              "hideScript": "return args.type !== \"cast\" && args.type !== \"channelling\" && args.type !== \"skill\";",
+              "activateScript": "return args.type == \"cast\" || args.type == \"channelling\";",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!BUv7dGYQSklq6UXj.zsRNQSKvIQZkrvX2"
     },
@@ -471,29 +556,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Spite (Permanent)",
-              "trigger": "computeTakeDamageModifiers",
-              "script": "let name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSpite.name');\n\nargs.modifiers.other.push({key: \"master-rune-of-spite\", label: name, value: -2})",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "preTakeDamage",
@@ -521,7 +583,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Spite (Permanent)",
+            "trigger": "computeTakeDamageModifiers",
+            "script": "let name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSpite.name');\n\nargs.modifiers.other.push({key: \"master-rune-of-spite\", label: name, value: -2})",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!BUv7dGYQSklq6UXj.SKGGULM3j5IMYR2J"
     },
@@ -547,50 +665,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "testIndependent": false,
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Spite (Temporary)",
-              "trigger": "computeTakeDamageModifiers",
-              "script": "let name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSpite.name');\n\nargs.modifiers.other.push({key: \"master-rune-of-spite\", label: name, value: -2})",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Master Rune of Spite",
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "preTakeDamage",
@@ -618,7 +692,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Spite (Temporary)",
+            "trigger": "computeTakeDamageModifiers",
+            "script": "let name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSpite.name');\n\nargs.modifiers.other.push({key: \"master-rune-of-spite\", label: name, value: -2})",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Master Rune of Spite",
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!BUv7dGYQSklq6UXj.750hJXREU6MtrSDi"
     }
@@ -628,11 +771,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.1.2",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1688413119645,
-    "modifiedTime": 1714251971885,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

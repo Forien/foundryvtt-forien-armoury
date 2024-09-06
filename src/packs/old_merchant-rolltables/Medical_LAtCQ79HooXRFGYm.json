@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!LAtCQ79HooXRFGYm.6gG0P85YJUkBPAFQ"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 15,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!LAtCQ79HooXRFGYm.LhwdHvaGi4aa15z2"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!LAtCQ79HooXRFGYm.U2aCSwFRbdUcNQnx"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!LAtCQ79HooXRFGYm.G8anrEVbU76a8IWV"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 15,
       "range": [
@@ -86,7 +86,7 @@
       "_key": "!tables.results!LAtCQ79HooXRFGYm.zCjGSvxNuOsLgtnS"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -102,7 +102,7 @@
       "_key": "!tables.results!LAtCQ79HooXRFGYm.KtYCCMFkRjbQnjpA"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -118,7 +118,7 @@
       "_key": "!tables.results!LAtCQ79HooXRFGYm.y0Ya1NjFbfNOHzH3"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 15,
       "range": [
@@ -150,10 +150,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690166597735,
     "modifiedTime": 1690166892634,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d166",
   "_key": "!tables!LAtCQ79HooXRFGYm"

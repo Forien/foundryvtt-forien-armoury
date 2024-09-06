@@ -45,7 +45,6 @@
   "effects": [
     {
       "name": "Buboes",
-      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
       "flags": {
         "wfrp4e": {
           "symptom": true,
@@ -83,11 +82,25 @@
       "origin": null,
       "transfer": true,
       "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
       "_key": "!items.effects!h4XCqO6phthpJ78V.l6AezFcrnNAcCjKr"
     },
     {
       "name": "Fever",
-      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
       "flags": {
         "wfrp4e": {
           "symptom": true,
@@ -125,11 +138,25 @@
       "origin": null,
       "transfer": true,
       "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
       "_key": "!items.effects!h4XCqO6phthpJ78V.SBMlLbppIX7dmd6w"
     },
     {
       "name": "Convulsions",
-      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
       "flags": {
         "wfrp4e": {
           "symptom": true,
@@ -167,11 +194,25 @@
       "origin": null,
       "transfer": true,
       "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
       "_key": "!items.effects!h4XCqO6phthpJ78V.WeMashmFF98qFDWz"
     },
     {
       "name": "Pox",
-      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
       "flags": {
         "wfrp4e": {
           "symptom": true,
@@ -209,11 +250,25 @@
       "origin": null,
       "transfer": true,
       "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
       "_key": "!items.effects!h4XCqO6phthpJ78V.vdjKgwgSunHodOXL"
     },
     {
       "name": "Taint",
-      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
       "transfer": true,
       "flags": {
         "wfrp4e": {
@@ -246,11 +301,25 @@
       "description": "",
       "origin": null,
       "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
       "_key": "!items.effects!h4XCqO6phthpJ78V.ClcXYs9FZyW5UPXS"
     },
     {
       "name": "Blight (Severe)",
-      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
       "flags": {
         "wfrp4e": {
           "symptom": true,
@@ -282,6 +351,21 @@
       "origin": null,
       "transfer": true,
       "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
       "_key": "!items.effects!h4XCqO6phthpJ78V.6uC3DN8LXwTrH1v3"
     }
   ],
@@ -302,10 +386,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1702258209456,
     "modifiedTime": 1714493618890,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "h4XCqO6phthpJ78V",
   "sort": 400000,

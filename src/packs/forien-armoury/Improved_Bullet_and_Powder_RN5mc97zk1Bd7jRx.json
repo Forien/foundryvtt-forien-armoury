@@ -24,50 +24,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "testIndependent": false,
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Improved Bullet and Powder (misfire)",
-              "trigger": "rollWeaponTest",
-              "script": "let isFumble = \"Fumble\" === args.test.isFumble;\nlet isMisfire = isFumble && args.test.result.roll % 2 === 0;\n\nif (isMisfire) {\n  args.test.data.result.other.push(\"<p>You can make a <strong>Challenging (+0) <em>Ranged (Blackpowder or Engineering) Test</em></strong> to ignore the effects of misfire!</p>\");\n}",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Improved Bullet and Powder (reload)",
-              "script": "args.item.system.flaws.value.forEach(flaw => {if (flaw.name == \"reload\" && flaw.value > 1) flaw.value -= 1});",
-              "trigger": "prepareOwned",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "actor",
             "effectTrigger": "rollWeaponTest",
@@ -92,7 +48,76 @@
       },
       "img": "icons/weapons/ammunition/shot-round-lead.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Improved Bullet and Powder (misfire)",
+            "trigger": "rollWeaponTest",
+            "script": "let isFumble = \"Fumble\" === args.test.isFumble;\nlet isMisfire = isFumble && args.test.result.roll % 2 === 0;\n\nif (isMisfire) {\n  args.test.data.result.other.push(\"<p>You can make a <strong>Challenging (+0) <em>Ranged (Blackpowder or Engineering) Test</em></strong> to ignore the effects of misfire!</p>\");\n}",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Improved Bullet and Powder (reload)",
+            "script": "args.item.system.flaws.value.forEach(flaw => {if (flaw.name == \"reload\" && flaw.value > 1) flaw.value -= 1});",
+            "trigger": "prepareOwned",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!RN5mc97zk1Bd7jRx.Gg2l8jDxth0VEqRg"
     }
@@ -103,62 +128,38 @@
   },
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>Standard Bullet with Improved Blackpowder.</p><p>Improved Blackpowder provides various benefits. @UUID[JournalEntry.4spGTAnh7qc2JDqY.JournalEntryPage.TwuMMg4t9QPf89rT#alchemical-products]{Read more}.</p><ul><li><p>Reduces reload time.</p></li><li><p>Makes it possible to ignore effects of a Misfire.</p></li></ul>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 12
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 0.12
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "0",
-      "ss": "6",
-      "bp": "6",
-      "value": ""
+      "gc": 0,
+      "ss": 6,
+      "bp": 6
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "scarce"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": "GiM4Fg2Q8YQ7I0nP"
+      "value": ""
     },
     "ammunitionType": {
-      "type": "String",
-      "label": "Ammunition Type",
       "value": "BPandEng"
     },
     "range": {
-      "type": "String",
-      "label": "Range",
       "value": "As weapon"
     },
     "damage": {
-      "type": "String",
-      "label": "Damage",
-      "dice": "",
       "value": "+1"
     },
     "qualities": {
-      "type": "String",
-      "label": "Qualities",
       "value": [
         {
           "name": "impale"
@@ -169,27 +170,23 @@
       ]
     },
     "flaws": {
-      "type": "String",
-      "label": "Flaws",
       "value": []
     },
     "special": {
-      "type": "String",
-      "label": "Special",
       "value": ""
     },
-    "source": {
-      "type": "String",
-      "label": "Source"
+    "damageToItem": {
+      "value": null,
+      "shield": null
     }
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.2.0",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1663627495392,
-    "modifiedTime": 1717789374696,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

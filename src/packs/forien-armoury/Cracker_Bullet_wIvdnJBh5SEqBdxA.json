@@ -6,61 +6,38 @@
   "img": "icons/weapons/ammunition/shot-round-brown.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>Bullet for use with sling, that upon impact cracks with tiny explosion sending fragments in every direction.</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 0.08
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "0",
-      "ss": "0",
-      "bp": "6"
+      "gc": 0,
+      "ss": 0,
+      "bp": 6
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "rare"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "ammunitionType": {
-      "type": "String",
-      "label": "Ammunition Type",
       "value": "sling"
     },
     "range": {
-      "type": "String",
-      "label": "Range",
       "value": "-20"
     },
     "damage": {
-      "type": "String",
-      "label": "Damage",
-      "dice": "",
       "value": ""
     },
     "qualities": {
-      "type": "String",
-      "label": "Qualities",
       "value": [
         {
           "name": "blast",
@@ -73,8 +50,6 @@
       ]
     },
     "flaws": {
-      "type": "String",
-      "label": "Flaws",
       "value": [
         {
           "name": "dangerous",
@@ -91,9 +66,11 @@
       ]
     },
     "special": {
-      "type": "String",
-      "label": "Special",
       "value": ""
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
     }
   },
   "effects": [],
@@ -105,11 +82,11 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1701617490745,
-    "modifiedTime": 1701640057941,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

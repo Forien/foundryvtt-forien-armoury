@@ -98,7 +98,6 @@
   },
   "effects": [
     {
-      "icon": "modules/forien-armoury/icons/spells/runebound-fax.webp",
       "transfer": false,
       "name": "Fax",
       "_id": "3OwDI0feSMOUM1gl",
@@ -128,7 +127,21 @@
           "script": "if (args.opposedTest.attackerTest.result.critical)\n   args.actor.addCondition(\"ablaze\")"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/spells/runebound-fax.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!cCJMjFE3vIDZ71xo.3OwDI0feSMOUM1gl"
     }
   ],
@@ -139,10 +152,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "coreVersion": "12.327",
     "createdTime": 1688999622218,
     "modifiedTime": 1689019272039,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "cCJMjFE3vIDZ71xo",
   "sort": 200000,

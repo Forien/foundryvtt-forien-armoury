@@ -47,7 +47,6 @@
   "effects": [
     {
       "name": "Purblind (Severe)",
-      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
       "transfer": false,
       "flags": {
         "wfrp4e": {
@@ -87,11 +86,25 @@
       "description": "",
       "origin": null,
       "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
       "_key": "!items.effects!r2OI99qUvtFWN8t0.OeEtvo9pi76j4bYY"
     },
     {
       "name": "Fever",
-      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
       "flags": {
         "wfrp4e": {
           "symptom": true,
@@ -129,11 +142,25 @@
       "origin": null,
       "transfer": true,
       "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
       "_key": "!items.effects!r2OI99qUvtFWN8t0.4DpxgIjeJN6LRSxi"
     },
     {
       "name": "Lingering (Easy)",
-      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
       "flags": {
         "wfrp4e": {
           "symptom": true,
@@ -183,6 +210,21 @@
       "origin": null,
       "transfer": true,
       "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
       "_key": "!items.effects!r2OI99qUvtFWN8t0.4mhSSevliSMwDV23"
     }
   ],
@@ -203,10 +245,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1703953425560,
     "modifiedTime": 1714493639022,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "sort": 0,
   "_key": "!items!r2OI99qUvtFWN8t0"

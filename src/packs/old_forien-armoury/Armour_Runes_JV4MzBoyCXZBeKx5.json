@@ -94,7 +94,6 @@
   },
   "effects": [
     {
-      "icon": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
       "transfer": true,
       "name": "Rune of Fortitude (Permanent)",
       "_id": "F0tIXCY3XR8s5ZeP",
@@ -155,11 +154,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.F0tIXCY3XR8s5ZeP"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
       "transfer": true,
       "name": "Rune of Fortitude (Temporary)",
       "_id": "GL8n0xJUBInNUQGQ",
@@ -230,11 +242,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.GL8n0xJUBInNUQGQ"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
       "transfer": true,
       "name": "Rune of Iron (Permanent)",
       "_id": "YSKa6PFb3aEKSM0G",
@@ -295,11 +320,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.YSKa6PFb3aEKSM0G"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
       "transfer": true,
       "name": "Rune of Iron (Temporary)",
       "_id": "DmEsQ7dmTnNxRLqI",
@@ -381,11 +419,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.DmEsQ7dmTnNxRLqI"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
       "transfer": true,
       "name": "Rune of Resistance (Permanent)",
       "_id": "CeQg9ShwKv19ppE3",
@@ -450,11 +501,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.CeQg9ShwKv19ppE3"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
       "transfer": true,
       "name": "Rune of Resistance (Temporary)",
       "_id": "Z8nAAgVmieVaCU2z",
@@ -536,11 +600,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.Z8nAAgVmieVaCU2z"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
       "transfer": true,
       "name": "Rune of Shielding (Permanent)",
       "_id": "RtdOyqqG5nWdUjqj",
@@ -594,11 +671,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.RtdOyqqG5nWdUjqj"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
       "transfer": true,
       "name": "Rune of Shielding (Temporary)",
       "_id": "b5zXQwnBxWOXXJNU",
@@ -680,11 +770,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.b5zXQwnBxWOXXJNU"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
       "transfer": true,
       "name": "Rune of Stone (Permanent)",
       "_id": "hp8rGLfCnkU3xCOj",
@@ -750,11 +853,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.hp8rGLfCnkU3xCOj"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
       "transfer": true,
       "name": "Rune of Stone (Temporary)",
       "_id": "H89P8MR1zmaOcTzL",
@@ -837,7 +953,21 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.H89P8MR1zmaOcTzL"
     }
   ],
@@ -848,10 +978,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1688943320462,
     "modifiedTime": 1704814042135,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "JV4MzBoyCXZBeKx5",
   "sort": 0,

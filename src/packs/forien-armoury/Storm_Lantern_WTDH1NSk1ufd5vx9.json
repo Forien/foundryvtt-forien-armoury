@@ -30,12 +30,14 @@
       "statuses": [],
       "flags": {
         "wfrp4e": {
-          "effectTrigger": "",
-          "effectApplication": "actor",
           "hide": false,
-          "preventDuplicateEffects": false,
-          "script": "",
-          "reduceQuantity": false
+          "reduceQuantity": false,
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "",
+            "preventDuplicateEffects": false,
+            "script": ""
+          }
         }
       },
       "tint": "#ffffff",
@@ -51,7 +53,49 @@
       },
       "img": "icons/sundries/lights/lantern-iron-yellow.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!WTDH1NSk1ufd5vx9.e6sHmAsXMVEY2bfb"
     },
@@ -82,10 +126,12 @@
       "statuses": [],
       "flags": {
         "wfrp4e": {
-          "effectTrigger": "",
-          "effectApplication": "actor",
           "hide": false,
-          "preventDuplicateEffects": false
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "",
+            "preventDuplicateEffects": false
+          }
         }
       },
       "tint": "#ffffff",
@@ -101,7 +147,49 @@
       },
       "img": "icons/sundries/lights/lantern-iron-yellow.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!WTDH1NSk1ufd5vx9.Bocay7NF6UUCshrJ"
     }
@@ -112,72 +200,55 @@
   },
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>A @UUID[Compendium.wfrp4e-core.items.Item.9pJenZDZD2lV75vq]{Storm Lantern} prepared with ATL compatible Effects</p><p>Requires @UUID[Compendium.wfrp4e-core.items.Item.Bal23aLiOmnht42h]{Lamp Oil}.</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 1
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "1",
-      "ss": "0",
-      "bp": "0"
+      "gc": 1,
+      "ss": 0,
+      "bp": 0
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "scarce"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "trappingType": {
-      "type": "String",
-      "label": "Trapping Type",
       "value": "misc"
     },
-    "worn": false,
     "spellIngredient": {
-      "type": "String",
       "value": ""
     },
     "qualities": {
-      "label": "Qualities",
       "value": []
     },
     "flaws": {
-      "label": "Flaws",
       "value": []
     },
-    "source": {
-      "type": "String",
-      "label": "Source"
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    },
+    "equipped": {
+      "value": false
     }
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.6.0",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1663627495177,
-    "modifiedTime": 1690135335327,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

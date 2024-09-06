@@ -4,21 +4,15 @@
   "img": "icons/skills/ranged/target-bullseye-arrow-blue.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>Add this trait to a creature, npc or a player character.</p><p>New Point Blank Range will automatically be changed to 4 units, instead of 10%</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "rollable": {
       "value": false,
       "damage": false,
       "skill": "",
-      "label": "Rollable",
-      "type": "Boolean",
       "rollCharacteristic": "",
       "bonusCharacteristic": "",
       "dice": "",
@@ -27,18 +21,16 @@
       "attackType": "melee"
     },
     "specification": {
-      "value": "",
-      "type": "String",
-      "label": "Specification"
+      "value": ""
     },
     "qualities": {
-      "label": "Qualities",
       "value": []
     },
     "flaws": {
-      "label": "Flaws",
       "value": []
-    }
+    },
+    "category": "standard",
+    "disabled": false
   },
   "effects": [
     {
@@ -61,13 +53,15 @@
       "statuses": [],
       "flags": {
         "wfrp4e": {
-          "effectTrigger": "prepareItem",
-          "effectApplication": "actor",
           "hide": true,
-          "preventDuplicateEffects": true,
-          "script": "if (args.item.range && args.item.range.bands && args.item.range.bands[\"Point Blank\"].range[1] > 4) {\n    args.item.range.bands[\"Point Blank\"].range[0] = 0;\n    args.item.range.bands[\"Point Blank\"].range[1] = 4;\n    args.item.range.bands[\"Short Range\"].range[0] = 5;\n}",
           "promptItem": false,
-          "extra": ""
+          "extra": "",
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "prepareItem",
+            "preventDuplicateEffects": true,
+            "script": "if (args.item.range && args.item.range.bands && args.item.range.bands[\"Point Blank\"].range[1] > 4) {\n    args.item.range.bands[\"Point Blank\"].range[0] = 0;\n    args.item.range.bands[\"Point Blank\"].range[1] = 4;\n    args.item.range.bands[\"Short Range\"].range[0] = 5;\n}"
+          }
         },
         "core": {
           "sourceId": "Item.ZshuHu0ioO2AFySF.ActiveEffect.tHeYwr4I92TA9Lxj"
@@ -86,7 +80,60 @@
       },
       "img": "icons/skills/ranged/target-bullseye-arrow-blue.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Point Blank Rule",
+            "trigger": "prepareItem",
+            "script": "if (args.item.range && args.item.range.bands && args.item.range.bands[\"Point Blank\"].range[1] > 4) {\n    args.item.range.bands[\"Point Blank\"].range[0] = 0;\n    args.item.range.bands[\"Point Blank\"].range[1] = 4;\n    args.item.range.bands[\"Short Range\"].range[0] = 5;\n}",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!95teaIzjZcIDHTFn.ZlHnZCI0AmLI2TKF"
     }
@@ -97,11 +144,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1688313896332,
-    "modifiedTime": 1702856365054,
-    "lastModifiedBy": "XoHsMevsFtsW7WqO",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

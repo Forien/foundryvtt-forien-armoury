@@ -63,7 +63,6 @@
   },
   "effects": [
     {
-      "icon": "icons/containers/ammunition/powder-horn-simple.webp",
       "transfer": true,
       "name": "Fast Powder Horn",
       "_id": "tx66Pz4KS0N20Fl3",
@@ -120,7 +119,21 @@
           "sourceId": "Actor.HjEaOj3YUvtsOxve.Item.bcEoFFohTk2QdiNe.ActiveEffect.i0hmJna55MvtPd9j"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/containers/ammunition/powder-horn-simple.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!ZP2D38WdvD5iVd0F.tx66Pz4KS0N20Fl3"
     }
   ],
@@ -131,10 +144,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1687475455907,
     "modifiedTime": 1714495325590,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "ZP2D38WdvD5iVd0F",
   "sort": 800000,

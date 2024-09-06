@@ -5,72 +5,49 @@
   "img": "icons/skills/trades/smithing-anvil-brown.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 10
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 0
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "0",
-      "ss": "0",
-      "bp": "0"
+      "gc": 0,
+      "ss": 0,
+      "bp": 0
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "None"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "ammunitionType": {
-      "type": "String",
-      "label": "Ammunition Type",
       "value": ""
     },
     "range": {
-      "type": "String",
-      "label": "Range",
       "value": ""
     },
     "damage": {
-      "type": "String",
-      "label": "Damage",
-      "dice": "",
       "value": ""
     },
     "qualities": {
-      "type": "String",
-      "label": "Qualities",
       "value": []
     },
     "flaws": {
-      "type": "String",
-      "label": "Flaws",
       "value": []
     },
     "special": {
-      "type": "String",
-      "label": "Special",
       "value": ""
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
     }
   },
   "effects": [],
@@ -92,11 +69,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.6.0",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1690204180313,
-    "modifiedTime": 1690508549124,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

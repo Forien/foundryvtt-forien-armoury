@@ -61,7 +61,6 @@
   },
   "effects": [
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "transfer": true,
       "name": "Master Rune of Dismay (Permanent)",
       "_id": "E5ijDLz2sc6n65Y1",
@@ -159,11 +158,24 @@
           "isPassive": true
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!BUv7dGYQSklq6UXj.E5ijDLz2sc6n65Y1"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "transfer": true,
       "name": "Master Rune of Dismay (Temporary)",
       "_id": "UT5zwRpeN5kB4bYe",
@@ -226,11 +238,24 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.BUv7dGYQSklq6UXj.ActiveEffect.Ch4a85kEBNmLgBP6"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!BUv7dGYQSklq6UXj.UT5zwRpeN5kB4bYe"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "transfer": true,
       "name": "Master Rune of Balance (Permanent)",
       "_id": "C3eNkUVxyrKXcU7S",
@@ -310,11 +335,24 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.BUv7dGYQSklq6UXj.ActiveEffect.2yJmMuInI1M4GLAu"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!BUv7dGYQSklq6UXj.C3eNkUVxyrKXcU7S"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "transfer": true,
       "name": "Master Rune of Balance (Temporary)",
       "_id": "zsRNQSKvIQZkrvX2",
@@ -394,11 +432,24 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.BUv7dGYQSklq6UXj.ActiveEffect.2yJmMuInI1M4GLAu"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!BUv7dGYQSklq6UXj.zsRNQSKvIQZkrvX2"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "transfer": true,
       "name": "Master Rune of Spite (Permanent)",
       "_id": "SKGGULM3j5IMYR2J",
@@ -457,11 +508,24 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.BUv7dGYQSklq6UXj.ActiveEffect.46bUOQI2kouAYPOq"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!BUv7dGYQSklq6UXj.SKGGULM3j5IMYR2J"
     },
     {
-      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "transfer": true,
       "name": "Master Rune of Spite (Temporary)",
       "_id": "750hJXREU6MtrSDi",
@@ -541,7 +605,21 @@
           "sourceId": "Compendium.world.foriens-armoury-backup.Item.BUv7dGYQSklq6UXj.ActiveEffect.mPh0Rs0DGLDw0brH"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!BUv7dGYQSklq6UXj.750hJXREU6MtrSDi"
     }
   ],
@@ -551,10 +629,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.2",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1688413119645,
     "modifiedTime": 1714251971885,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "folder": "3OEI9PiGaa4rGQHy",
   "_id": "BUv7dGYQSklq6UXj",

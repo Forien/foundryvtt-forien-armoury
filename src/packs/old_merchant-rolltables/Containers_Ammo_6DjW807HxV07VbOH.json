@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 5,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!6DjW807HxV07VbOH.3QFHhC2ztglDga3S"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 3,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!6DjW807HxV07VbOH.KSB53LmmFZIHYfYz"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 3,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!6DjW807HxV07VbOH.xzbzz6IPfMLJTBpt"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 15,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!6DjW807HxV07VbOH.iLlRRJsSmMkgyB4U"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 10,
       "range": [
@@ -86,7 +86,7 @@
       "_key": "!tables.results!6DjW807HxV07VbOH.fmYqoEyA9qK76S4x"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 15,
       "range": [
@@ -102,7 +102,7 @@
       "_key": "!tables.results!6DjW807HxV07VbOH.V5IgpaTXIXRWY4vQ"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 10,
       "range": [
@@ -134,10 +134,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.0",
-    "coreVersion": "11.306",
+    "coreVersion": "12.327",
     "createdTime": 1690164609746,
     "modifiedTime": 1690201616445,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d61",
   "_key": "!tables!6DjW807HxV07VbOH"

@@ -30,10 +30,7 @@
       "statuses": [],
       "flags": {
         "wfrp4e": {
-          "effectTrigger": "",
-          "effectApplication": "equipped",
           "hide": false,
-          "preventDuplicateEffects": false,
           "effectData": {
             "description": "",
             "modifier": null,
@@ -41,7 +38,12 @@
             "successBonus": null,
             "difficultyStep": null
           },
-          "script": ""
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "",
+            "preventDuplicateEffects": false,
+            "script": ""
+          }
         }
       },
       "tint": "#ffffff",
@@ -57,7 +59,49 @@
       },
       "img": "icons/equipment/finger/ring-ball-purple.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!X4RpXktd9IFzcbg6.Xrbn8InoEwKHgbn5"
     }
@@ -68,72 +112,55 @@
   },
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>Magical ring imbued with magic that allows the wearer to see through invisibility and perceive magic as if they had Second Sight.</p><p>Gives +10 to Second Sight tests</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 0
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "5",
-      "ss": "0",
-      "bp": "0"
+      "gc": 5,
+      "ss": 0,
+      "bp": 0
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "rare"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "trappingType": {
-      "type": "String",
-      "label": "Trapping Type",
       "value": "clothingAccessories"
     },
-    "worn": false,
     "spellIngredient": {
-      "type": "String",
       "value": ""
     },
     "qualities": {
-      "label": "Qualities",
       "value": []
     },
     "flaws": {
-      "label": "Flaws",
       "value": []
     },
-    "source": {
-      "type": "String",
-      "label": "Source"
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    },
+    "equipped": {
+      "value": false
     }
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1663627495178,
-    "modifiedTime": 1702041724670,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },
