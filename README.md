@@ -13,10 +13,18 @@ This module is a collection of custom trappings and features for Warhammer Fanta
 Forien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded
 
 
+### Notable changes in v3.1.0
+* Updated for Active Effects using Data Models (with [Warhammer Library](https://foundryvtt.com/packages/warhammer-lib)) and verified for WFRP4e 8.0.1
+* Created `Grimoire` type for Items.
+  * This is new item type in the system, which allows to transfer spells from Grimoires without need to add spells themselves to an Actor.
+  * It allows GMs to create items that award spells when held (or equipped, configurable) and take the spells away when grimoire is lost (or unequipped)
+  * Memorized spells are not removed
+  * Additional options to limit spells based on known language, lores, ability to Read/Write etc.
+* You can read full changelog [here](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
+
 ### Notable changes in v3.0.0
 * Verified for Foundry v12 and set it as minimum version due to lack of backwards compatibility
 * Fixed Item Properties, macros and some other issues
-* You can read full changelog [here](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
 
 ### Notable changes in v2.1.0
 * Added following GM only Macros:
@@ -42,26 +50,6 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
 * Added setting to allow automatic falling unconscious of characters from 0 wounds in CRB ruleset (thanks to silent_mark)
 * Added 3 new Diseases and 3 new Symptoms to _„RassilonMonk's Cauldron of Nurgle“_
 * Several other changes to both content and codebase, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
-
-### Notable changes in v1.4.0
-* Added new career: `Monster Hunter`
-  * This career utilizes one of three unique **Fighting Styles** and focuses on tracking down and fighting monstrous beasts
-* Added 9 new Talents
-  * `Fighting Style (Any)` and `Fighting Master (Style)` along with variant for every of the three styles.
-  * `Fortified Mind`, a Talent designed to work with the `Casting Fatigue` feature
-* Introducing _„RassilonMonk's Cauldron of Nurgle“_, a bundle of symptoms and diseases to use during your games in perilous Old World
-  * Added 5 new **Diseases**: Gonorrhoea, Meniere's disease, Nurgle's Rot, Ragpicker's Disease, The Spews
-  * Added 4 new **Symptoms**: Vertigo, Scarring, Rashes and Taint
-* Created am Automatic Disease Progression, which will progress diseases' duration and incubation automatically
-  * This requires some time tracking module (like `Simple Calendar`) to actually modify the `World Time` setting.
-* Added `Casting Fatigue` feature, proposed and designed by VividOblivion.
-* Added new journal: `Forien's Lore`
-  * Describing **Hunters' Guild** and **Runebounds**
-* Added accessory: `Amulet of „Resilience“`
-* Added trait: `Drunk`
-* Created Settings App, which allows to display settings in more visually appealing and intuitive way
-* Several other changes to both content and codebase, [read more](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
-
 
 ## Installation
 

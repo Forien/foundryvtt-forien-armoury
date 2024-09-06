@@ -2,6 +2,14 @@
 
 ## v3.X.X
 
+### v3.1.0
+* Updated for Active Effects using Data Models (with [Warhammer Library](https://foundryvtt.com/packages/warhammer-lib)) and verified for WFRP4e 8.0.1
+* Created `Grimoire` type for Items.
+  * This is new item type in the system, which allows to transfer spells from Grimoires without need to add spells themselves to an Actor.
+  * It allows GMs to create items that award spells when held (or equipped, configurable) and take the spells away when grimoire is lost (or unequipped)
+  * Memorized spells are not removed
+  * Additional options to limit spells based on known language, lores, ability to Read/Write etc.
+
 ### v3.0.0
 * Verified for Foundry v12 and set it as minimum version
 * Fixed Slashing label error

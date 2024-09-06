@@ -19,7 +19,7 @@
   ],
   "compatibility": {
     "minimum": "12",
-    "verified": "12.327"
+    "verified": "12.331"
   },
   "relationships": {
     "systems": [
@@ -27,7 +27,7 @@
         "id": "wfrp4e",
         "type": "system",
         "compatibility": {
-          "minimum": "7.2.1"
+          "minimum": "8.0.0"
         }
       }
     ],
