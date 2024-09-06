@@ -22,7 +22,7 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
       name: new fields.StringField(),
       uuid: new fields.StringField(),
     }));
-    schema.language = new fields.StringField({blank: true, nullable: true, initial: "Reikspiel"});
+    schema.language = new fields.StringField({blank: true, nullable: true, initial: "Magick"});
     schema.twohanded = new fields.SchemaField({
       value: new fields.BooleanField({initial: false})
     });
