@@ -19,6 +19,9 @@ import ScrollSheet from "./apps/ScrollSheet.mjs";
 import ScrollModel from "./data-models/Scroll.mjs";
 import Scrolls from "./features/Scrolls.mjs";
 import Macros from "./features/Macros.js";
+import GrimoireModel from "./data-models/Grimoire.mjs";
+import GrimoireSheet from "./apps/GrimoireSheet.mjs";
+import Grimoires from "./features/Grimoires.mjs";
 
 export default class ForienArmoury {
   /**
@@ -30,6 +33,7 @@ export default class ForienArmoury {
     CheckCareers,
     CombatFatigue,
     Diseases,
+    Grimoires,
     Integrations,
     ItemProperties,
     ItemRepair,
@@ -136,12 +140,18 @@ export default class ForienArmoury {
   #registerDataModels() {
     Object.assign(CONFIG.Item.dataModels, {
       [dataTypes.scroll]: ScrollModel,
+      [dataTypes.grimoire]: GrimoireModel,
     });
     Object.assign(CONFIG.Item.typeLabels, {
       [dataTypes.scroll]: "Forien.Armoury.Scrolls.MagicScroll",
+      [dataTypes.grimoire]: "Forien.Armoury.Grimoires.Grimoire",
     });
     DocumentSheetConfig.registerSheet(Item, constants.moduleId, ScrollSheet, {
       types: [dataTypes.scroll],
+      makeDefault: true
+    });
+    DocumentSheetConfig.registerSheet(Item, constants.moduleId, GrimoireSheet, {
+      types: [dataTypes.grimoire],
       makeDefault: true
     });
   }

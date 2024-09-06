@@ -37,7 +37,6 @@
   },
   "effects": [
     {
-      "icon": "modules/forien-armoury/icons/talents/style_survival.webp",
       "transfer": true,
       "name": "Shrewd Disengage",
       "_id": "9C9EtP4IR2c7iNIn",
@@ -89,11 +88,24 @@
           "sourceId": "Actor.OEKABPctmJnUDtfA.Item.HDzgBnjZHyi7Gdh8.ActiveEffect.JF1Zwh2g10mJhfDM"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_survival.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!CUWdlx3IhkmTPL57.9C9EtP4IR2c7iNIn"
     },
     {
-      "icon": "modules/forien-armoury/icons/talents/style_survival.webp",
       "transfer": true,
       "name": "Shrewd Evadecraft",
       "_id": "MkV7vILBvDcELJuf",
@@ -172,11 +184,24 @@
           "sourceId": "Actor.OEKABPctmJnUDtfA.Item.HDzgBnjZHyi7Gdh8.ActiveEffect.GZtQY6CGge6lXPOE"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_survival.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!CUWdlx3IhkmTPL57.MkV7vILBvDcELJuf"
     },
     {
-      "icon": "modules/forien-armoury/icons/talents/style_survival.webp",
       "transfer": true,
       "name": "Shrewd Trickery",
       "_id": "wvkuKKoN1QbHNOxg",
@@ -228,11 +253,24 @@
           "sourceId": "Actor.OEKABPctmJnUDtfA.Item.HDzgBnjZHyi7Gdh8.ActiveEffect.Lqz79qx7ll5t5Mtn"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_survival.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!CUWdlx3IhkmTPL57.wvkuKKoN1QbHNOxg"
     },
     {
-      "icon": "modules/forien-armoury/icons/talents/style_survival.webp",
       "transfer": true,
       "name": "Lucky Evadecraft",
       "_id": "eDmoETbCwpItkgpj",
@@ -284,7 +322,21 @@
           "sourceId": "Actor.OEKABPctmJnUDtfA.Item.HDzgBnjZHyi7Gdh8.ActiveEffect.ICOkLnA6NThAZGGi"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_survival.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!CUWdlx3IhkmTPL57.eDmoETbCwpItkgpj"
     }
   ],
@@ -302,10 +354,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1702057628149,
     "modifiedTime": 1714394661309,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "CUWdlx3IhkmTPL57",
   "sort": 1000000,

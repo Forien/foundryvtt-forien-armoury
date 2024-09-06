@@ -6,59 +6,46 @@
   "img": "icons/equipment/neck/amulet-carved-stone-spiral.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>Through the power of placebo, increases the Toughness of a wearer.</p><p>Doesn't work on intelligent people as they easily realize this is a simple piece of wood.</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 0.1
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "0",
-      "ss": "0",
-      "bp": "10"
+      "gc": 0,
+      "ss": 0,
+      "bp": 10
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "common"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "trappingType": {
-      "type": "String",
-      "label": "Trapping Type",
       "value": "clothingAccessories"
     },
-    "worn": false,
     "spellIngredient": {
-      "type": "String",
       "value": ""
     },
     "qualities": {
-      "label": "Qualities",
       "value": []
     },
     "flaws": {
-      "label": "Flaws",
       "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    },
+    "equipped": {
+      "value": false
     }
   },
   "effects": [
@@ -85,11 +72,13 @@
           "isPassive": true
         },
         "wfrp4e": {
-          "effectTrigger": "prePrepareData",
-          "effectApplication": "equipped",
           "hide": false,
-          "preventDuplicateEffects": false,
-          "script": "if (args.actor.characteristics.int.value < 40)\n  args.actor.characteristics.t.modifier += 3; "
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "prePrepareData",
+            "preventDuplicateEffects": false,
+            "script": "if (args.actor.characteristics.int.value < 40)\n  args.actor.characteristics.t.modifier += 3; "
+          }
         }
       },
       "tint": "#ffffff",
@@ -105,7 +94,60 @@
       },
       "img": "icons/equipment/neck/amulet-carved-stone-spiral.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Amulet of „Resilience“",
+            "trigger": "prePrepareData",
+            "script": "if (args.actor.characteristics.int.value < 40)\n  args.actor.characteristics.t.modifier += 3;",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!SPHNnlmWTrxvNkD9.bWkSgjBVcFO2d73J"
     }
@@ -119,11 +161,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1701953582024,
-    "modifiedTime": 1702041771476,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

@@ -93,8 +93,8 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
   activateListeners(html) {
     super.activateListeners(html);
 
-    html.on("click", ".scroll-spell", this.#onScrollSpellClick.bind(this))
-    html.on("click", ".spell .spell-refresh", this.#onSpellRefreshClick.bind(this))
+    html.on("click", ".spell", this.#onScrollSpellClick.bind(this))
+    html.on("click", ".spell-container .spell-refresh", this.#onSpellRefreshClick.bind(this))
   }
 
   /**
@@ -103,7 +103,7 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
    * @param {MouseEvent} event
    */
   #onScrollSpellClick(event) {
-    const uuid = event.currentTarget.closest('.spell').dataset.uuid;
+    const uuid = event.currentTarget.closest('.spell-container').dataset.uuid;
 
     fromUuid(uuid).then(item => item?.sheet.render(true));
   }
@@ -114,7 +114,7 @@ export default class ScrollSheet extends ItemSheetWfrp4e {
    * @param {MouseEvent} event
    */
   #onSpellRefreshClick(event) {
-    const uuid = event.currentTarget.closest('.spell').dataset.uuid;
+    const uuid = event.currentTarget.closest('.spell-container').dataset.uuid;
 
     fromUuid(uuid).then(() => this.render(true));
   }

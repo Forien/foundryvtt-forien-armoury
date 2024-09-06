@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.f9gUpWQvXmiPUJR7"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives1.items",
       "weight": 1,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.tmzPnNlu3eSbstrf"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.RlVGvxa2cKNqReq2"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.P3HwqKxfmlbYNR5Z"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -86,7 +86,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.3uVKXpwc4bC8rMyY"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives1.items",
       "weight": 1,
       "range": [
@@ -102,7 +102,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.2hcpWEvwW1Ch6lUw"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -118,7 +118,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.Q8Bu5HQ1GAruKaSu"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -134,7 +134,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.w6cyN3m1HVBBjjdO"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -150,7 +150,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.1ZuEsUcp34ZXED5O"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -166,7 +166,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.fXNp0bZNwSgIoEti"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives1.items",
       "weight": 1,
       "range": [
@@ -182,7 +182,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.lwaJP0Fh62hIcy0A"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -198,7 +198,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.GP2MJWECm9zJUUDo"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -214,7 +214,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.9tdjbWjx1E75Ngvj"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -230,7 +230,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.elGeNopxPqONid8b"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives1.items",
       "weight": 1,
       "range": [
@@ -246,7 +246,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.EYWuxqmx7CJh2NR0"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -262,7 +262,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.LqSfqr1RWABPlz3g"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -278,7 +278,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.Tns2vevxq2MDg9qp"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -294,7 +294,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.lhhshqYAFWVLINu7"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -310,7 +310,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.iCoE957lANxaUeaB"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -326,7 +326,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.TxmHv20xIx3pBR4v"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 1,
       "range": [
@@ -342,7 +342,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.6twmlaSCsnBYQtjr"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 1,
       "range": [
@@ -358,7 +358,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.qa8RiBZqEW8dwk04"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 1,
       "range": [
@@ -374,7 +374,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.lR2y7VyhPMqkyTCN"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -390,7 +390,7 @@
       "_key": "!tables.results!6aDY4jgGEXSuDSy3.zvB637PMTE20x3bY"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -422,10 +422,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690161497072,
     "modifiedTime": 1690161569233,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d25",
   "_key": "!tables!6aDY4jgGEXSuDSy3"

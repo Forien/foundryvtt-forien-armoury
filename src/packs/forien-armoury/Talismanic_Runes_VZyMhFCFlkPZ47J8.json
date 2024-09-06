@@ -4,59 +4,46 @@
   "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 0
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "0",
-      "ss": "0",
-      "bp": "0"
+      "gc": 0,
+      "ss": 0,
+      "bp": 0
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "None"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "trappingType": {
-      "type": "String",
-      "label": "Trapping Type",
       "value": "clothingAccessories"
     },
-    "worn": false,
     "spellIngredient": {
-      "type": "String",
       "value": ""
     },
     "qualities": {
-      "label": "Qualities",
       "value": []
     },
     "flaws": {
-      "label": "Flaws",
       "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    },
+    "equipped": {
+      "value": false
     }
   },
   "effects": [
@@ -81,29 +68,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Fate (Temporary)",
-              "trigger": "takeDamage",
-              "script": "let wounds = args.actor.status.wounds.value;\nlet woundLoss = args.totalWoundLoss;\nlet woundsAfter = wounds - woundLoss;\n\nif (woundsAfter < 0) {\n  args.totalWoundLoss = 0;\n  let msg = `<strong>${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.name')}:</strong> ${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.effect')}`\n  args.extraMessages.push(msg);\n\n  this.effect.update({disabled: true});\n}",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "preTakeDamage",
@@ -134,7 +98,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Fate (Temporary)",
+            "trigger": "takeDamage",
+            "script": "let wounds = args.actor.status.wounds.value;\nlet woundLoss = args.totalWoundLoss;\nlet woundsAfter = wounds - woundLoss;\n\nif (woundsAfter < 0) {\n  args.totalWoundLoss = 0;\n  let msg = `<strong>${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.name')}:</strong> ${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.effect')}`\n  args.extraMessages.push(msg);\n\n  this.effect.update({disabled: true});\n}",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.PGqEL1cQF5dl1Kbt"
     },
@@ -159,18 +179,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true
-          },
-          "scriptData": [
-            {
-              "label": "Rune of the Furnace (Permanent)",
-              "trigger": "update",
-              "script": "let ablaze = this.actor.hasCondition(\"ablaze\");\n\nif (ablaze) {\n  let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.effect');\n\n  ablaze.delete();\n  ui.notifications?.notify(`<strong>${name}</strong>  ${effect}`);\n}"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "update",
@@ -201,7 +209,60 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of the Furnace (Permanent)",
+            "trigger": "update",
+            "script": "let ablaze = this.actor.hasCondition(\"ablaze\");\n\nif (ablaze) {\n  let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.effect');\n\n  ablaze.delete();\n  ui.notifications?.notify(`<strong>${name}</strong>  ${effect}`);\n}",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.XfY9ipOCmyT8VuXs"
     },
@@ -226,39 +287,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of the Furnace (Temporary)",
-              "trigger": "update",
-              "script": "let ablaze = this.actor.hasCondition(\"ablaze\");\n\nif (ablaze) {\n  let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.effect');\n\n  ablaze.delete();\n  ui.notifications?.notify(`<strong>${name}</strong>  ${effect}`);\n}"
-            },
-            {
-              "label": "Activate Rune of the Furnace",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "update",
@@ -289,7 +317,73 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of the Furnace (Temporary)",
+            "trigger": "update",
+            "script": "let ablaze = this.actor.hasCondition(\"ablaze\");\n\nif (ablaze) {\n  let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfTheFurnace.effect');\n\n  ablaze.delete();\n  ui.notifications?.notify(`<strong>${name}</strong>  ${effect}`);\n}",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Rune of the Furnace",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.Q4qXVW6NyTAmLvtX"
     },
@@ -315,33 +409,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Luck (Permanent)",
-              "trigger": "equipToggle",
-              "script": "if (args.equipped) {\n  let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.u0CFf3xwiyidD9T5\")\n  this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n} else {\n  this.effect.deleteCreatedItems();\n}",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "addItems",
@@ -369,7 +436,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Luck (Permanent)",
+            "trigger": "equipToggle",
+            "script": "if (args.equipped) {\n  let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.u0CFf3xwiyidD9T5\")\n  this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n} else {\n  this.effect.deleteCreatedItems();\n}",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.8AnVxYN0k0Uk9thi"
     },
@@ -395,33 +518,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Luck (Temporary)",
-              "trigger": "manual",
-              "script": "let fortuneJournal = `@UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.pa22HaRw1OBBQaDg#spending-fortune]{Spending Fortune}`;\nlet name = game.i18n.localize('Forien.Armoury.Runes.RuneOfLuckTemporary.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfLuckTemporary.effectActivated');\nlet checkPrompt = game.i18n.format('Forien.Armoury.Runes.RuneOfLuckTemporary.checkPrompt', {journal: fortuneJournal});\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n    <p>${checkPrompt}</p>\n`\n})\n\nthis.effect.update({disabled: true});",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "invoke",
@@ -449,7 +545,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Luck (Temporary)",
+            "trigger": "manual",
+            "script": "let fortuneJournal = `@UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.pa22HaRw1OBBQaDg#spending-fortune]{Spending Fortune}`;\nlet name = game.i18n.localize('Forien.Armoury.Runes.RuneOfLuckTemporary.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfLuckTemporary.effectActivated');\nlet checkPrompt = game.i18n.format('Forien.Armoury.Runes.RuneOfLuckTemporary.checkPrompt', {journal: fortuneJournal});\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n    <p>${checkPrompt}</p>\n`\n})\n\nthis.effect.update({disabled: true});",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.Nf76EDZmdi8EDlrf"
     },
@@ -475,22 +627,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Spellbreaking (Temporary)",
-              "trigger": "manual",
-              "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "invoke",
@@ -518,7 +654,60 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Spellbreaking (Temporary)",
+            "trigger": "manual",
+            "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpellbreaking.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.t4E0PQiWUJOdDD8I"
     },
@@ -544,22 +733,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Spelleating (Temporary)",
-              "trigger": "manual",
-              "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpelleating.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpelleating.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "invoke",
@@ -587,7 +760,60 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Spelleating (Temporary)",
+            "trigger": "manual",
+            "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpelleating.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpelleating.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: this.actor.speaker,\n  content: `\n    <h2>${name}</h2>\n    <p>${effect}</p>\n`\n})\n\nthis.effect.update({disabled: true});",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.8ncYF3091SCrrrJz"
     },
@@ -613,33 +839,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Warding (Permanent)",
-              "trigger": "equipToggle",
-              "script": "if (args.equipped) {\n  let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.eowbsW6oHGSNJmxV\")\n  this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n} else {\n  this.effect.deleteCreatedItems();\n}",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "addItems",
@@ -667,7 +866,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Warding (Permanent)",
+            "trigger": "equipToggle",
+            "script": "if (args.equipped) {\n  let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.eowbsW6oHGSNJmxV\")\n  this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n} else {\n  this.effect.deleteCreatedItems();\n}",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.xdklDXVTgiTm1RSc"
     },
@@ -693,50 +948,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Warding (Temporary)",
-              "trigger": "equipToggle",
-              "script": "if (args.equipped) {\n  let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.eowbsW6oHGSNJmxV\")\n  this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n} else {\n  this.effect.deleteCreatedItems();\n}",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Rune of Warding",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nawait this.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});\nawait this.item.system.toggleEquip();\nawait this.item.system.toggleEquip();"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "invoke",
@@ -764,7 +975,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Warding (Temporary)",
+            "trigger": "equipToggle",
+            "script": "if (args.equipped) {\n  let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.eowbsW6oHGSNJmxV\")\n  this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n} else {\n  this.effect.deleteCreatedItems();\n}",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Rune of Warding",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nawait this.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});\nawait this.item.system.toggleEquip();\nawait this.item.system.toggleEquip();",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.a1onZaHqnDpRLc4a"
     },
@@ -797,21 +1077,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Page (Permanent)",
-              "trigger": ""
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "",
@@ -839,7 +1104,59 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Page (Permanent)",
+            "trigger": "",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.nE9oKHSB8JwHessd"
     },
@@ -872,29 +1189,6 @@
         "wfrp4e": {
           "hide": false,
           "reduceQuantity": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true
-          },
-          "scriptData": [
-            {
-              "label": "Activate Rune of Page",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nawait this.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "",
@@ -922,7 +1216,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Activate Rune of Page",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nawait this.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!VZyMhFCFlkPZ47J8.XM6R0dCmOz74iesB"
     }
@@ -933,11 +1283,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1688413119645,
-    "modifiedTime": 1706287163882,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

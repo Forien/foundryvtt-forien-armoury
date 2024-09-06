@@ -4,109 +4,74 @@
   "img": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 0
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "0",
-      "ss": "0",
-      "bp": "0"
+      "gc": 0,
+      "ss": 0,
+      "bp": 0
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "None"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "damageToItem": {
-      "type": "Number",
       "value": 0,
       "shield": 0
     },
     "damage": {
-      "type": "String",
-      "label": "Damage",
-      "dice": "",
       "value": ""
     },
     "reach": {
-      "type": "String",
-      "label": "Reach",
       "value": ""
     },
     "range": {
-      "type": "String",
-      "label": "Range",
       "value": ""
     },
     "skill": {
-      "type": "String",
-      "label": "Skill Override",
       "value": ""
     },
     "modeOverride": {
-      "type": "String",
-      "label": "Mode Override",
       "value": ""
     },
     "twohanded": {
-      "type": "Boolean",
-      "label": "Two-Handed",
       "value": false
     },
     "ammunitionGroup": {
-      "type": "String",
-      "label": "Ammunition Group",
       "value": ""
     },
     "currentAmmo": {
-      "value": 0,
-      "type": "Number"
+      "value": "0"
     },
     "consumesAmmo": {
       "value": true
     },
     "weaponGroup": {
-      "type": "String",
-      "label": "Weapon Group",
       "value": "basic"
     },
     "qualities": {
-      "label": "Qualities",
       "value": []
     },
     "flaws": {
-      "label": "Flaws",
       "value": []
     },
     "special": {
-      "type": "String",
-      "label": "Special",
       "value": ""
     },
-    "equipped": false,
+    "equipped": {
+      "value": false
+    },
     "loaded": {
       "value": false,
       "repeater": false,
@@ -138,33 +103,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Cleaving (Permanent)",
-              "trigger": "calculateOpposedDamage",
-              "script": "\n  args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);\n",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "calculateOpposedDamage",
@@ -195,7 +133,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Cleaving (Permanent)",
+            "trigger": "calculateOpposedDamage",
+            "script": "args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.HkqliWSrOQ0WzAaG"
     },
@@ -220,50 +214,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Cleaving (Temporary)",
-              "trigger": "calculateOpposedDamage",
-              "script": "\n  args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);\n",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Rune of Cleaving",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "calculateOpposedDamage",
@@ -294,7 +244,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Cleaving (Temporary)",
+            "trigger": "calculateOpposedDamage",
+            "script": "args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Rune of Cleaving",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.deumnKB7HuHPMdze"
     },
@@ -319,67 +338,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Fire (Permanent)",
-              "trigger": "",
-              "script": "\n  if (args.opposedTest.attackerTest.result.critical) {\n    args.actor.addCondition(\"ablaze\");\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.effect');\n    args.extraMessages.push(`<strong>${rune}:</strong> ${effect}.`);\n  }\n",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Burst Into Flames",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const torch = {\n  \"key\": \"ATL.preset\",\n  \"value\": \"torch\",\n  \"mode\": 2\n}\nconst scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"applyDamage\";\nscriptData[1].trigger = \"\";\nscriptData[2].trigger = \"manual\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, changes: [torch]});"
-            },
-            {
-              "label": "Extinguish Flames",
-              "string": "",
-              "trigger": "",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nscriptData[1].trigger = \"manual\";\nscriptData[2].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, changes: []});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "applyDamage",
@@ -419,7 +377,89 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Fire (Permanent)",
+            "trigger": "",
+            "script": "if (args.opposedTest.attackerTest.result.critical) {\n    args.actor.addCondition(\"ablaze\");\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.effect');\n    args.extraMessages.push(`<strong>${rune}:</strong> ${effect}.`);\n  }",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Burst Into Flames",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const torch = {\n  \"key\": \"ATL.preset\",\n  \"value\": \"torch\",\n  \"mode\": 2\n}\nconst scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"applyDamage\";\nscriptData[1].trigger = \"\";\nscriptData[2].trigger = \"manual\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, changes: [torch]});",
+            "async": false
+          },
+          {
+            "label": "Extinguish Flames",
+            "trigger": "",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nscriptData[1].trigger = \"manual\";\nscriptData[2].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, changes: []});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.XrzOAAS9dN2JB8y4"
     },
@@ -451,50 +491,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Fire (Permanent)",
-              "trigger": "",
-              "script": "  if (args.opposedTest.attackerTest.result.critical) {\n    args.actor.addCondition(\"ablaze\");\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.effect');\n    args.extraMessages.push(`<strong>${rune}:</strong> ${effect}.`);\n  }\n",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Burst Into Flames",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const torch = {\n  \"key\": \"ATL.preset\",\n  \"value\": \"torch\",\n  \"mode\": 2\n}\nconst scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"applyDamage\";\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, changes: [torch], disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "applyDamage",
@@ -534,7 +530,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Fire (Permanent)",
+            "trigger": "",
+            "script": "if (args.opposedTest.attackerTest.result.critical) {\n    args.actor.addCondition(\"ablaze\");\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.effect');\n    args.extraMessages.push(`<strong>${rune}:</strong> ${effect}.`);\n  }",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Burst Into Flames",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const torch = {\n  \"key\": \"ATL.preset\",\n  \"value\": \"torch\",\n  \"mode\": 2\n}\nconst scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"applyDamage\";\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, changes: [torch], disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.h9LHxQ9y5zbcSTgh"
     },
@@ -559,33 +624,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Fury (Permanent)",
-              "trigger": "calculateOpposedDamage",
-              "script": "  if (args.opposedTest.result.winner === \"attacker\") {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.effect');\n    let text = `<strong>${rune}:</strong> ${effect}`;\n    args.opposedTest.result.other.push(text);\n  }\n\n",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "actor",
             "effectTrigger": "calculateOpposedDamage",
@@ -616,7 +654,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Fury (Permanent)",
+            "trigger": "calculateOpposedDamage",
+            "script": "if (args.opposedTest.result.winner === \"attacker\") {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.effect');\n    let text = `<strong>${rune}:</strong> ${effect}`;\n    args.opposedTest.result.other.push(text);\n  }",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.3HODlHv6H7X7QXZ4"
     },
@@ -641,50 +735,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Fury (Temporary)",
-              "trigger": "calculateOpposedDamage",
-              "script": "\n  if (args.opposedTest.result.winner === \"attacker\") {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.effect');\n    let text = `<strong>${rune}:</strong> ${effect}`;\n    args.opposedTest.result.other.push(text);\n  }\n\n",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Rune of Fury",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "actor",
             "effectTrigger": "calculateOpposedDamage",
@@ -715,7 +765,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Fury (Temporary)",
+            "trigger": "calculateOpposedDamage",
+            "script": "if (args.opposedTest.result.winner === \"attacker\") {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.effect');\n    let text = `<strong>${rune}:</strong> ${effect}`;\n    args.opposedTest.result.other.push(text);\n  }",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Rune of Fury",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.hqFyWkzhcK62O1mF"
     },
@@ -740,33 +859,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Grudges (Permanent)",
-              "trigger": "getInitiativeFormula",
-              "script": "let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.effect');\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: args.actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "getInitiativeFormula",
@@ -797,7 +889,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Grudges (Permanent)",
+            "trigger": "getInitiativeFormula",
+            "script": "let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.effect');\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: args.actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.zdfVNEBuJOtZj3eD"
     },
@@ -822,51 +970,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "End Grudge",
-              "string": "",
-              "trigger": "endCombat",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "this.effect.update({disabled: true});"
-            },
-            {
-              "label": "Activate Rune of Grudges",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.effect');\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: args.actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});\n\nconst scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "invoke",
@@ -899,7 +1002,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "End Grudge",
+            "trigger": "endCombat",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "this.effect.update({disabled: true});",
+            "async": false
+          },
+          {
+            "label": "Activate Rune of Grudges",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.effect');\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: args.actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});\n\nconst scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.HkhW3S46adt16XRl"
     },
@@ -924,33 +1096,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Might (Permanent)",
-              "trigger": "calculateOpposedDamage",
-              "script": "if (args.opposedTest.defenderTest.actor.characteristics.t.bonus >= 5) {\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.effect');\n  args.damage += args.opposedTest.attackerTest.actor.characteristics.s.bonus;\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n}",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "calculateOpposedDamage",
@@ -981,7 +1126,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Might (Permanent)",
+            "trigger": "calculateOpposedDamage",
+            "script": "if (args.opposedTest.defenderTest.actor.characteristics.t.bonus >= 5) {\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.effect');\n  args.damage += args.opposedTest.attackerTest.actor.characteristics.s.bonus;\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n}",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.hgrgZkQkmdomyWzn"
     },
@@ -1006,50 +1207,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Might (Temporary)",
-              "trigger": "calculateOpposedDamage",
-              "script": "if (args.opposedTest.defenderTest.actor.characteristics.t.bonus >= 5) {\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.effect');\n  args.damage += args.opposedTest.attackerTest.actor.characteristics.s.bonus;\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n}",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Rune of Might",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "calculateOpposedDamage",
@@ -1080,7 +1237,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Might (Temporary)",
+            "trigger": "calculateOpposedDamage",
+            "script": "if (args.opposedTest.defenderTest.actor.characteristics.t.bonus >= 5) {\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.effect');\n  args.damage += args.opposedTest.attackerTest.actor.characteristics.s.bonus;\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n}",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Rune of Might",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.AWQffFw3oaIRUcHE"
     },
@@ -1105,18 +1331,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Speed (Permanent)",
-              "trigger": "getInitiativeFormula",
-              "script": "args.initiative += ` + 1d10`;\nlet rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "getInitiativeFormula",
@@ -1147,7 +1361,60 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Speed (Permanent)",
+            "trigger": "getInitiativeFormula",
+            "script": "args.initiative += ` + 1d10`;\nlet rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.FeIf1JvIJaEygpIE"
     },
@@ -1172,50 +1439,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Speed (Temporary)",
-              "trigger": "",
-              "script": "args.initiative += ` + 1d10`;\nlet rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: args.actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});\n\nthis.effect.update({disabled: true});",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Rune of Speed",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"getInitiativeFormula\";\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "invoke",
@@ -1246,7 +1469,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Speed (Temporary)",
+            "trigger": "",
+            "script": "args.initiative += ` + 1d10`;\nlet rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: args.actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});\n\nthis.effect.update({disabled: true});",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Rune of Speed",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"getInitiativeFormula\";\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.1l6tZyHZlRcXMHY2"
     },
@@ -1278,16 +1570,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "",
@@ -1318,7 +1600,49 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.GXkTf497Sx57dm4E"
     },
@@ -1350,33 +1674,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Activate Rune of Striking",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "",
@@ -1407,7 +1704,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Activate Rune of Striking",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.LatjnddeP3qXuyaJ"
     },
@@ -1433,33 +1786,6 @@
         "wfrp4e": {
           "hide": false,
           "promptItem": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Durability (Permanent)",
-              "trigger": "prepareOwned",
-              "script": "args.item.system.qualities.value.push({name: \"unbreakable\", value: null});",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "actor",
             "effectTrigger": "prepareItem",
@@ -1490,7 +1816,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Durability (Permanent)",
+            "trigger": "prepareOwned",
+            "script": "args.item.system.qualities.value.push({name: \"unbreakable\", value: null});",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.yrLzSiK49ZXk8EZe"
     },
@@ -1516,50 +1898,6 @@
         "wfrp4e": {
           "hide": false,
           "promptItem": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Durability (Temporary)",
-              "trigger": "prepareOwned",
-              "script": "args.item.system.qualities.value.push({name: \"unbreakable\", value: null});",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Rune of Durability",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "actor",
             "effectTrigger": "prepareItem",
@@ -1590,7 +1928,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Durability (Temporary)",
+            "trigger": "prepareOwned",
+            "script": "args.item.system.qualities.value.push({name: \"unbreakable\", value: null});",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Rune of Durability",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.kPattlvXHNAq6Lt3"
     },
@@ -1615,84 +2022,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false,
-            "testIndependent": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Fire (Permanent)",
-              "trigger": "",
-              "script": "this.item.system.qualities.value.push({name: 'impact', value: null});",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Surge with power",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"prepareData\";\nscriptData[1].trigger = \"\";\nscriptData[2].trigger = \"manual\";\nscriptData[3].trigger = \"rollWeaponTest\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData});"
-            },
-            {
-              "label": "Dissipate power",
-              "string": "",
-              "trigger": "",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nscriptData[1].trigger = \"manual\";\nscriptData[2].trigger = \"\";\nscriptData[3].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData});"
-            },
-            {
-              "label": "Fracture",
-              "script": "if (args.test.data.context.reroll) return;\n\nthis.item.system.damageItem(2)\n\nconsole.log(\"FRACTURE\", args)",
-              "trigger": "",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "applyDamage",
@@ -1732,7 +2061,102 @@
       },
       "img": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Fire (Permanent)",
+            "trigger": "",
+            "script": "this.item.system.qualities.value.push({name: 'impact', value: null});",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Surge with power",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"prepareData\";\nscriptData[1].trigger = \"\";\nscriptData[2].trigger = \"manual\";\nscriptData[3].trigger = \"rollWeaponTest\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData});",
+            "async": false
+          },
+          {
+            "label": "Dissipate power",
+            "trigger": "",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nscriptData[1].trigger = \"manual\";\nscriptData[2].trigger = \"\";\nscriptData[3].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData});",
+            "async": false
+          },
+          {
+            "label": "Fracture",
+            "script": "if (args.test.data.context.reroll) return;\n\nthis.item.system.damageItem(2)\n\nconsole.log(\"FRACTURE\", args)",
+            "trigger": "",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!a0HD1sx7SS4ZCw5A.A0rKsSVqtmv6WGaE"
     }
@@ -1743,11 +2167,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.1.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1688413089948,
-    "modifiedTime": 1714398269474,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

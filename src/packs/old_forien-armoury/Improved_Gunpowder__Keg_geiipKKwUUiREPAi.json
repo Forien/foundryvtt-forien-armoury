@@ -4,7 +4,6 @@
   "img": "icons/containers/barrels/barrel-apple-steel-orange.webp",
   "effects": [
     {
-      "icon": "icons/containers/ammunition/shot-barrel.webp",
       "transfer": true,
       "name": "Improved Blackpowder",
       "_id": "dC3eReunVavk5MiS",
@@ -80,7 +79,21 @@
           "sourceId": "Actor.HjEaOj3YUvtsOxve.Item.4R2oFrqfH31huKDS.ActiveEffect.vb5OW5hKoVzbuFpT"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/containers/ammunition/shot-barrel.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!geiipKKwUUiREPAi.dC3eReunVavk5MiS"
     }
   ],
@@ -152,10 +165,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.2.0",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1663627495296,
     "modifiedTime": 1717789386366,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "folder": "EMM7NeZE1NBThlpp",
   "_id": "geiipKKwUUiREPAi",

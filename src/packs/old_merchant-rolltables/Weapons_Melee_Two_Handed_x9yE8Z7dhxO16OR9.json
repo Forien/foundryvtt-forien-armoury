@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 15,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!x9yE8Z7dhxO16OR9.c5T5iUTunVNoEEfO"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!x9yE8Z7dhxO16OR9.K9vbG2UDQn8yze9J"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 30,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!x9yE8Z7dhxO16OR9.nvFiLJmXaMbTZJds"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 30,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!x9yE8Z7dhxO16OR9.rvO0lbWzvGl0qQw2"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 15,
       "range": [
@@ -86,7 +86,7 @@
       "_key": "!tables.results!x9yE8Z7dhxO16OR9.14JDxmQ3lPUk3E25"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -102,7 +102,7 @@
       "_key": "!tables.results!x9yE8Z7dhxO16OR9.YO2u9cm2zEsEWNMS"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives1.items",
       "weight": 30,
       "range": [
@@ -118,7 +118,7 @@
       "_key": "!tables.results!x9yE8Z7dhxO16OR9.OgcBWTvgSlwy6IxB"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 15,
       "range": [
@@ -150,10 +150,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690162463579,
     "modifiedTime": 1690162526549,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d137",
   "_key": "!tables!x9yE8Z7dhxO16OR9"

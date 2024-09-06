@@ -10,10 +10,13 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.5.9",
-    "coreVersion": "11.304",
+    "coreVersion": "12.331",
     "createdTime": null,
-    "modifiedTime": 1688254333601,
-    "lastModifiedBy": "aDepqlKkeOa13DWo"
+    "modifiedTime": 1725649107108,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
+  "description": "",
   "_key": "!folders!ALm6rINfMUWhLplE"
 }

@@ -6,7 +6,8 @@ const constants = {
 };
 
 const dataTypes = {
-  scroll: `${constants.moduleId}.scroll`
+  scroll: `${constants.moduleId}.scroll`,
+  grimoire: `${constants.moduleId}.grimoire`
 }
 
 const flags = {
@@ -20,6 +21,9 @@ const flags = {
   },
   effects: {
     target: 'target'
+  },
+  grimoires: {
+    source: 'sourceGrimoire'
   },
   integrations: {
     itemPiles: {
@@ -70,6 +74,15 @@ const settings = {
   },
   diseases: {
     autoProgress: 'diseases.automateProgression'
+  },
+  grimoires: {
+    requireEquipped: 'grimoires.requireEquipped',
+    transferWithoutLore: 'grimoires.transferWithoutLore',
+    requireReadWrite: 'grimoires.requireReadWrite',
+    hideSpellsWithoutLanguage: 'grimoires.hideSpellsWithoutLanguage',
+    ownCategory: 'grimoires.ownCategory',
+    defaultEncumbrance: 'grimoires.defaultEncumbrance',
+    defaultAvailability: 'grimoires.defaultAvailability'
   },
   initialized: 'module.initialized',
   integrations: {
@@ -129,6 +142,15 @@ const defaults = {
   },
   diseases: {
     autoProgress: false
+  },
+  grimoires: {
+    requireEquipped: true,
+    transferWithoutLore: false,
+    requireReadWrite: true,
+    hideSpellsWithoutLanguage: true,
+    ownCategory: true,
+    defaultEncumbrance: 1,
+    defaultAvailability: "exotic",
   },
   magicalEndurance: {
     enabled: false,

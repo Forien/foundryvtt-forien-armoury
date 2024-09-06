@@ -4,7 +4,6 @@
   "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
   "effects": [
     {
-      "icon": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
       "transfer": true,
       "name": "Ring of Smell",
       "_id": "OatfSvcfIfB17oRt",
@@ -37,7 +36,21 @@
           "preventDuplicateEffects": false
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!o9ZQVkJgmfYrm8Lw.OatfSvcfIfB17oRt"
     }
   ],
@@ -109,10 +122,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1663627495178,
     "modifiedTime": 1702041724670,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "folder": "4yqmjrkdpjUayWXP",
   "_id": "o9ZQVkJgmfYrm8Lw",

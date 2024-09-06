@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 15,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!b2Gc1oLA2NSrhR20.cHWItANYlUWuPnO3"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 15,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!b2Gc1oLA2NSrhR20.g6W2jNYi5MjqMPa9"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives1.items",
       "weight": 30,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!b2Gc1oLA2NSrhR20.gPkF4OEBcKd0Mr1z"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 30,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!b2Gc1oLA2NSrhR20.tce6vpN0QV7FXzIO"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 5,
       "range": [
@@ -86,7 +86,7 @@
       "_key": "!tables.results!b2Gc1oLA2NSrhR20.ovBsu9CWd638W7nb"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 15,
       "range": [
@@ -102,7 +102,7 @@
       "_key": "!tables.results!b2Gc1oLA2NSrhR20.GUQheLvpkLNtFvY5"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 5,
       "range": [
@@ -118,7 +118,7 @@
       "_key": "!tables.results!b2Gc1oLA2NSrhR20.3cI58yNacp3yvSh8"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 15,
       "range": [
@@ -134,7 +134,7 @@
       "_key": "!tables.results!b2Gc1oLA2NSrhR20.CHv5dydE9UWtgi14"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 30,
       "range": [
@@ -150,7 +150,7 @@
       "_key": "!tables.results!b2Gc1oLA2NSrhR20.HxCbbrd8G3y4RHtl"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 30,
       "range": [
@@ -166,7 +166,7 @@
       "_key": "!tables.results!b2Gc1oLA2NSrhR20.k6pofFxp2aVbqBJ1"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 30,
       "range": [
@@ -182,7 +182,7 @@
       "_key": "!tables.results!b2Gc1oLA2NSrhR20.EyQaaqjlkwNnQWBY"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 30,
       "range": [
@@ -214,10 +214,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690162345566,
     "modifiedTime": 1690162451681,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d250",
   "_key": "!tables!b2Gc1oLA2NSrhR20"

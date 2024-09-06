@@ -189,7 +189,7 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
 
     let itemProperties = this.OriginalQualities.concat(this.OriginalFlaws)
     for (let prop of itemProperties)
-      data.properties.push("<a class ='item-property'>" + prop + "</a>")
+      data.properties.push("<a class='item-property'>" + prop + "</a>")
 
     data.properties = data.properties.filter(p => !!p);
 

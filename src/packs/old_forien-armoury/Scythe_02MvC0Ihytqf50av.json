@@ -141,10 +141,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.0.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1710405788512,
     "modifiedTime": 1710427930790,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_key": "!items!02MvC0Ihytqf50av"
 }

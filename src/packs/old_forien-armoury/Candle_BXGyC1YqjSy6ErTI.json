@@ -4,7 +4,6 @@
   "img": "icons/sundries/lights/candle-unlit-grey.webp",
   "effects": [
     {
-      "icon": "icons/sundries/lights/candle-unlit-grey.webp",
       "transfer": true,
       "name": "Candle",
       "_id": "zUn7o4oGRBwnlmoX",
@@ -12,7 +11,8 @@
         {
           "key": "ATL.preset",
           "mode": 2,
-          "value": "candle"
+          "value": "candle",
+          "priority": null
         }
       ],
       "disabled": false,
@@ -36,7 +36,21 @@
           "preventDuplicateEffects": false
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/sundries/lights/candle-unlit-grey.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!BXGyC1YqjSy6ErTI.zUn7o4oGRBwnlmoX"
     }
   ],
@@ -108,10 +122,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.0",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1663627495285,
     "modifiedTime": 1690135287194,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "folder": "ALm6rINfMUWhLplE",
   "_id": "BXGyC1YqjSy6ErTI",

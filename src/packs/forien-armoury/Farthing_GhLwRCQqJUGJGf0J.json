@@ -6,39 +6,32 @@
   "img": "icons/commodities/currency/coin-inset-one-wood.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 0.005
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "coinValue": {
-      "label": "Value (in d)",
-      "type": "Number",
       "value": 0.25
     },
     "price": {
-      "gc": "",
-      "ss": "",
-      "bp": ""
+      "gc": 0,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {},
+    "damageToItem": {
+      "value": null,
+      "shield": null
     }
   },
   "effects": [],
@@ -50,11 +43,11 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1688480096053,
-    "modifiedTime": 1688480507483,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

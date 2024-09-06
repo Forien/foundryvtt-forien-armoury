@@ -10,10 +10,13 @@
   "_stats": {
     "systemId": null,
     "systemVersion": null,
-    "coreVersion": null,
+    "coreVersion": "12.331",
     "createdTime": null,
-    "modifiedTime": null,
-    "lastModifiedBy": null
+    "modifiedTime": 1725649107108,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
+  "description": "",
   "_key": "!folders!T3Shw97R3ln1UkQq"
 }

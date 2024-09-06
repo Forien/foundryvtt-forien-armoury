@@ -4,43 +4,30 @@
   "img": "modules/wfrp4e-core/icons/diseases/disease.png",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>The marshes of the Old World are rife with diseases, the most common of which is \"The Spews\". This disease results in the body generating loathsome fluids that fill the stomach and lungs of of the victim. Eventually the body rejects the fluids in fits of coughing and vomiting. Treatment requires a clean environment, plenty of rest and warm fluids, and some herbal remedies can also assist in the recovery. This disease is contracted through being bitten by any of the numerous blood sucking insects or creatures in the marshes such as ticks, leeches or mosquitos.</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "contraction": {
-      "label": "Contraction",
-      "value": "Failing an Average (+20) Endurance Test when bitten by an infected insect or leech. ",
-      "type": "String"
+      "value": "Failing an Average (+20) Endurance Test when bitten by an infected insect or leech."
     },
     "incubation": {
-      "label": "Incubation",
       "value": "1d10",
-      "unit": "hours",
-      "type": "String"
+      "unit": "hours"
     },
     "duration": {
-      "label": "Duration",
       "value": "1d10",
-      "type": "String",
       "unit": "days",
       "active": false
     },
     "symptoms": {
-      "label": "Symptoms",
-      "value": "Malaise, Nausea, Coughs and Sneezes",
-      "type": "String"
+      "value": "Malaise, Nausea, Coughs and Sneezes"
     },
     "permanent": {
-      "label": "Permanent",
-      "value": "",
-      "type": "String"
-    }
+      "value": ""
+    },
+    "diagnosed": false
   },
   "effects": [
     {
@@ -48,16 +35,9 @@
       "flags": {
         "wfrp4e": {
           "symptom": true,
-          "applicationData": {
-            "type": "document"
-          },
-          "scriptData": [
-            {
-              "trigger": "update",
-              "label": "@effect.name",
-              "script": "\n                            let fatigued = this.actor.hasCondition(\"fatigued\")\n                            if (!fatigued)\n                            {\n                                this.actor.addCondition(\"fatigued\")\n                                ui.notifications.notify(\"Fatigued added to \" + this.actor.name + \" which cannot be removed until the Malaise symptom is gone.\")\n                            }"
-            }
-          ]
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {}
         }
       },
       "_id": "38yaAkRFUFx30PNt",
@@ -88,7 +68,60 @@
       },
       "img": "modules/wfrp4e-core/icons/diseases/disease.png",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "trigger": "update",
+            "label": "@effect.name",
+            "script": "let fatigued = this.actor.hasCondition(\"fatigued\")\n                            if (!fatigued)\n                            {\n                                this.actor.addCondition(\"fatigued\")\n                                ui.notifications.notify(\"Fatigued added to \" + this.actor.name + \" which cannot be removed until the Malaise symptom is gone.\")\n                            }",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "tint": "#ffffff",
       "sort": 0,
       "_key": "!items.effects!cj4SrShYSdmWMEmE.38yaAkRFUFx30PNt"
@@ -98,16 +131,9 @@
       "flags": {
         "wfrp4e": {
           "symptom": true,
-          "applicationData": {
-            "type": "document"
-          },
-          "scriptData": [
-            {
-              "trigger": "rollTest",
-              "label": "@effect.name",
-              "script": "                 \n                            if (args.test.failed)\n                            {\n                                let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"];\n                                if (applicableCharacteristics.includes(args.preData.characteristic))\n                                {\n                                    this.actor.addCondition(\"stunned\");\n                                }\n                            }"
-            }
-          ]
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {}
         }
       },
       "_id": "e2OWweRhcldFRKHV",
@@ -138,7 +164,60 @@
       },
       "img": "modules/wfrp4e-core/icons/diseases/disease.png",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "trigger": "rollTest",
+            "label": "@effect.name",
+            "script": "if (args.test.failed)\n                            {\n                                let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"];\n                                if (applicableCharacteristics.includes(args.preData.characteristic))\n                                {\n                                    this.actor.addCondition(\"stunned\");\n                                }\n                            }",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "tint": "#ffffff",
       "sort": 0,
       "_key": "!items.effects!cj4SrShYSdmWMEmE.e2OWweRhcldFRKHV"
@@ -160,11 +239,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.1.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1702667075123,
-    "modifiedTime": 1714493648468,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

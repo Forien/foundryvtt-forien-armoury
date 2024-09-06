@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 30,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.wM8Hxms7nQ3DRHsL"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 30,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.baNXGQXXXdr0UJWF"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives1.items",
       "weight": 30,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.OruFu8i2BtESUbEm"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 30,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.jMj86MF8YWJsEDJA"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 30,
       "range": [
@@ -86,7 +86,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.sq2NocVtxrhyAZnJ"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives1.items",
       "weight": 15,
       "range": [
@@ -102,7 +102,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.H2hf8Ysk0THXRygE"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives1.items",
       "weight": 15,
       "range": [
@@ -118,7 +118,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.JFAgAh48aYoVFQ9w"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -134,7 +134,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.M6FjPIv03mYxImey"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives1.items",
       "weight": 30,
       "range": [
@@ -150,7 +150,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.lloktRKjZM176BWb"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 30,
       "range": [
@@ -166,7 +166,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.C3QyI072u0UwB9He"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 30,
       "range": [
@@ -182,7 +182,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.69z3Jxpn6CJjvBEG"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 15,
       "range": [
@@ -198,7 +198,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.eEf2hDFnscTfE21S"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives1.items",
       "weight": 30,
       "range": [
@@ -214,7 +214,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.mUNAs0NzOJoRIz3A"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 5,
       "range": [
@@ -230,7 +230,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.eVRCHjZo3TsJs4Hv"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 15,
       "range": [
@@ -246,7 +246,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.l76Sabu8G0sA8x5M"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -262,7 +262,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.sLr6exrdHS03DeKe"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -278,7 +278,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.B6VSh37c5brjoIZl"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 30,
       "range": [
@@ -294,7 +294,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.98VwnPPboS6afERa"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 30,
       "range": [
@@ -310,7 +310,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.421pUokY4LKnh3CN"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 15,
       "range": [
@@ -326,7 +326,7 @@
       "_key": "!tables.results!NbQj13peakFFZ7y7.LL1Rf5lnJwvUAjUj"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives2.items",
       "weight": 15,
       "range": [
@@ -358,10 +358,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690161893780,
     "modifiedTime": 1690162082513,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d515",
   "_key": "!tables!NbQj13peakFFZ7y7"

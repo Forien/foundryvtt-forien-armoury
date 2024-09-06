@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!j2rN0bLGn7OJ2YKN.6WLIoaYakQIuYUmT"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!j2rN0bLGn7OJ2YKN.4gTJJ2n9MbeCLV6q"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -54,7 +54,7 @@
       "_key": "!tables.results!j2rN0bLGn7OJ2YKN.2Wx4XMjitFsSTwid"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -70,7 +70,7 @@
       "_key": "!tables.results!j2rN0bLGn7OJ2YKN.7KUzwzeKPklGnCCL"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -86,7 +86,7 @@
       "_key": "!tables.results!j2rN0bLGn7OJ2YKN.ogcbqpCLB4K0GzaG"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -102,7 +102,7 @@
       "_key": "!tables.results!j2rN0bLGn7OJ2YKN.bCN564JpR19SnUQJ"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -118,7 +118,7 @@
       "_key": "!tables.results!j2rN0bLGn7OJ2YKN.T0czX5ih0IOQZLbL"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -134,7 +134,7 @@
       "_key": "!tables.results!j2rN0bLGn7OJ2YKN.eBRT4pWbqcFHr4gt"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 1,
       "range": [
@@ -150,7 +150,7 @@
       "_key": "!tables.results!j2rN0bLGn7OJ2YKN.KcrqABzFr7hvA78j"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-up-in-arms.items",
       "weight": 1,
       "range": [
@@ -166,7 +166,7 @@
       "_key": "!tables.results!j2rN0bLGn7OJ2YKN.slzPDiU5SPWuO0Wc"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-core.items",
       "weight": 1,
       "range": [
@@ -182,7 +182,7 @@
       "_key": "!tables.results!j2rN0bLGn7OJ2YKN.uiNC7USJUIbcA4bc"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "wfrp4e-archives1.items",
       "weight": 1,
       "range": [
@@ -214,10 +214,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690163859654,
     "modifiedTime": 1690164122731,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d12",
   "_key": "!tables!j2rN0bLGn7OJ2YKN"

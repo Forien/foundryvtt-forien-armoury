@@ -14,6 +14,9 @@
         {{#if tabs.scrolls}}
             <a class="item" data-tab="scrolls">{{localize "Forien.Armoury.Settings.Tabs.Scrolls"}}</a>
         {{/if}}
+        {{#if tabs.grimoires}}
+            <a class="item" data-tab="grimoires">{{localize "Forien.Armoury.Settings.Tabs.Grimoires"}}</a>
+        {{/if}}
         {{#if tabs.integrations}}
             <a class="item" data-tab="integrations">{{localize "Forien.Armoury.Settings.Tabs.Integrations"}}</a>
         {{/if}}
@@ -34,6 +37,9 @@
         </div>
         <div class="tab" data-tab="scrolls">
             {{> forien-armoury.settings.tab settings=tabs.scrolls}}
+        </div>
+        <div class="tab" data-tab="grimoires">
+            {{> forien-armoury.settings.tab settings=tabs.grimoires}}
         </div>
         <div class="tab" data-tab="integrations">
             {{> forien-armoury.settings.tab settings=tabs.integrations}}

@@ -37,7 +37,6 @@
   },
   "effects": [
     {
-      "icon": "modules/forien-armoury/icons/talents/master_style_survival.webp",
       "transfer": false,
       "name": "Evadecraft Mastery",
       "_id": "iasvWzRk5XRmgkcY",
@@ -100,12 +99,25 @@
           "sourceId": "Actor.OEKABPctmJnUDtfA.Item.7TAvxBNl3pup6Liu.ActiveEffect.IBVt5pncxcMrI4mb"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/master_style_survival.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!MCQGW6z3fWNdR5hO.iasvWzRk5XRmgkcY"
     },
     {
       "name": "Learned Moves",
-      "icon": "modules/forien-armoury/icons/talents/style_survival_master.webp",
       "_id": "5yWIbdsjLwwhAZnm",
       "changes": [],
       "disabled": false,
@@ -173,7 +185,21 @@
           "sourceId": "Actor.OEKABPctmJnUDtfA.Item.7TAvxBNl3pup6Liu.ActiveEffect.WSWQdKGuySfWO36g"
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_survival_master.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!MCQGW6z3fWNdR5hO.5yWIbdsjLwwhAZnm"
     }
   ],
@@ -191,10 +217,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1702057628149,
     "modifiedTime": 1714395296820,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "MCQGW6z3fWNdR5hO",
   "sort": 800000,

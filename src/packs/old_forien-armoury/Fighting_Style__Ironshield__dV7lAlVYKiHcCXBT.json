@@ -37,7 +37,6 @@
   },
   "effects": [
     {
-      "icon": "modules/forien-armoury/icons/talents/style_defensive.webp",
       "transfer": true,
       "name": "Add Melee Parry",
       "_id": "ggtWbptc9QNtSuMi",
@@ -102,11 +101,24 @@
           }
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_defensive.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!dV7lAlVYKiHcCXBT.ggtWbptc9QNtSuMi"
     },
     {
-      "icon": "modules/forien-armoury/icons/talents/style_defensive.webp",
       "transfer": true,
       "name": "Ironshield Ward",
       "_id": "uvQPByonJ8u5osiL",
@@ -172,11 +184,24 @@
           }
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_defensive.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!dV7lAlVYKiHcCXBT.uvQPByonJ8u5osiL"
     },
     {
-      "icon": "modules/forien-armoury/icons/talents/style_defensive.webp",
       "transfer": true,
       "name": "Ironshield Riposte",
       "_id": "mMc6i3cW4qZEKugK",
@@ -225,11 +250,24 @@
           }
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_defensive.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!dV7lAlVYKiHcCXBT.mMc6i3cW4qZEKugK"
     },
     {
-      "icon": "modules/forien-armoury/icons/talents/style_defensive.webp",
       "transfer": false,
       "name": "Bracing",
       "_id": "ZTvdWXgPsTVE1HZ0",
@@ -303,11 +341,24 @@
           ]
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_defensive.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!dV7lAlVYKiHcCXBT.ZTvdWXgPsTVE1HZ0"
     },
     {
-      "icon": "modules/forien-armoury/icons/talents/style_defensive.webp",
       "transfer": false,
       "name": "Brace!",
       "_id": "QQc5Uz0Z9OW643GB",
@@ -356,7 +407,21 @@
           }
         }
       },
-      "tint": null,
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/forien-armoury/icons/talents/style_defensive.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
       "_key": "!items.effects!dV7lAlVYKiHcCXBT.QQc5Uz0Z9OW643GB"
     }
   ],
@@ -375,10 +440,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.2",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1702057628149,
     "modifiedTime": 1714322706187,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "dV7lAlVYKiHcCXBT",
   "sort": 300000,

@@ -152,8 +152,8 @@
   ],
   "documentTypes": {
     "Item": {
-      "scroll": {
-      }
+      "scroll": {},
+      "grimoire": {}
     }
   },
   "flags": {

@@ -4,61 +4,43 @@
   "img": "icons/containers/ammunition/powder-horn-leather.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>Can hold enough gunpowder to fire 12 shots (0.12 enc each).</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 2
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "0",
-      "ss": "8",
-      "bp": "0"
+      "gc": 0,
+      "ss": 8,
+      "bp": 0
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "common"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
-    },
-    "worn": {
-      "type": "Boolean",
-      "label": "Worn",
-      "value": false
+      "value": ""
     },
     "wearable": {
-      "type": "Boolean",
-      "label": "Wearable",
       "value": true
     },
     "carries": {
-      "type": "Number",
-      "label": "Carries",
       "value": 1.44
     },
     "countEnc": {
-      "type": "Boolean",
-      "label": "Count Enc",
       "value": true
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    },
+    "equipped": {
+      "value": false
     }
   },
   "effects": [],
@@ -67,11 +49,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1687475455907,
-    "modifiedTime": 1701587190803,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

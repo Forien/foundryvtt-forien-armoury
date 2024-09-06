@@ -46,7 +46,6 @@
   "effects": [
     {
       "name": "Malaise",
-      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
       "flags": {
         "wfrp4e": {
           "symptom": true,
@@ -78,11 +77,25 @@
       "origin": null,
       "transfer": true,
       "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
       "_key": "!items.effects!CHrsWEDlvlnTle9q.1j7zkal0bx53sLn5"
     },
     {
       "name": "Dementia",
-      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
       "transfer": true,
       "flags": {
         "wfrp4e": {
@@ -115,6 +128,21 @@
       "description": "",
       "origin": null,
       "statuses": [],
+      "_stats": {
+        "coreVersion": "12.327",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
       "_key": "!items.effects!CHrsWEDlvlnTle9q.zYLsRoB6DfW7irDy"
     }
   ],
@@ -135,10 +163,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "7.1.3",
-    "coreVersion": "11.315",
+    "coreVersion": "12.327",
     "createdTime": 1704832670849,
     "modifiedTime": 1714493603034,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf"
+    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "_id": "CHrsWEDlvlnTle9q",
   "sort": 100000,

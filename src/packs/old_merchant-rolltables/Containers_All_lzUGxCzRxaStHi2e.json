@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 2,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!lzUGxCzRxaStHi2e.v6BrbBwk98TDyVBz"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 3,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!lzUGxCzRxaStHi2e.mjQxajYglYAH6PXM"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.merchant-rolltables",
       "weight": 3,
       "range": [
@@ -70,10 +70,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690164711229,
     "modifiedTime": 1690164725258,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d8",
   "_key": "!tables!lzUGxCzRxaStHi2e"

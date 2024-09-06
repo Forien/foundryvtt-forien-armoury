@@ -6,97 +6,63 @@
   "img": "icons/weapons/thrown/dynamite-red.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>Throwable contraption filled with alchemical mixture (magnesium and improved blackpowder) that on detonation produces cloud of blinding light.</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 0
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "0",
-      "ss": "12",
-      "bp": "0"
+      "gc": 0,
+      "ss": 12,
+      "bp": 0
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "exotic"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "damageToItem": {
-      "type": "Number",
       "value": 0,
       "shield": 0
     },
     "damage": {
-      "type": "String",
-      "label": "Damage",
-      "dice": "",
       "value": "0"
     },
     "reach": {
-      "type": "String",
-      "label": "Reach",
       "value": ""
     },
     "range": {
-      "type": "String",
-      "label": "Range",
       "value": "SBx2"
     },
     "skill": {
-      "type": "String",
-      "label": "Skill Override",
       "value": ""
     },
     "modeOverride": {
-      "type": "String",
-      "label": "Mode Override",
       "value": "ranged"
     },
     "twohanded": {
-      "type": "Boolean",
-      "label": "Two-Handed",
       "value": false
     },
     "ammunitionGroup": {
-      "type": "String",
-      "label": "Ammunition Group",
       "value": "none"
     },
     "currentAmmo": {
-      "value": 0,
-      "type": "Number"
+      "value": "0"
     },
     "consumesAmmo": {
       "value": true
     },
     "weaponGroup": {
-      "type": "String",
-      "label": "Weapon Group",
       "value": "throwing"
     },
     "qualities": {
-      "label": "Qualities",
       "value": [
         {
           "name": "blast",
@@ -109,7 +75,6 @@
       ]
     },
     "flaws": {
-      "label": "Flaws",
       "value": [
         {
           "name": "dangerous",
@@ -126,11 +91,11 @@
       ]
     },
     "special": {
-      "type": "String",
-      "label": "Special",
       "value": ""
     },
-    "equipped": false,
+    "equipped": {
+      "value": false
+    },
     "loaded": {
       "value": false,
       "repeater": false,
@@ -149,11 +114,11 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1701628225344,
-    "modifiedTime": 1701639952068,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

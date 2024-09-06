@@ -5,43 +5,30 @@
   "img": "icons/skills/trades/smithing-anvil-horseshoe.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.MJssx3cDKIqZVdXq#dwarven-runes]{Dwarven Runes}</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "advanced": {
-      "value": "adv",
-      "type": "String"
+      "value": "adv"
     },
     "grouped": {
-      "value": "noSpec",
-      "type": "String"
+      "value": "noSpec"
     },
     "characteristic": {
-      "type": "String",
-      "label": "Characteristic",
       "value": "wp"
     },
     "advances": {
-      "type": "Number",
-      "label": "Advances",
       "value": 0,
       "costModifier": 0,
       "force": false
     },
     "modifier": {
-      "type": "Number",
-      "label": "Advances",
       "value": 0
     },
     "total": {
-      "type": "Number",
-      "label": "Total"
+      "value": null
     }
   },
   "effects": [],
@@ -50,11 +37,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1688388408866,
-    "modifiedTime": 1689007933174,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

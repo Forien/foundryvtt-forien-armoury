@@ -6,7 +6,7 @@
   "description": "",
   "results": [
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 12,
       "range": [
@@ -22,7 +22,7 @@
       "_key": "!tables.results!yTOmoQCY6LsQy9G7.vLV2HSJ00LoFi9RQ"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 10,
       "range": [
@@ -38,7 +38,7 @@
       "_key": "!tables.results!yTOmoQCY6LsQy9G7.Bp7MdUXu3ssTBIrb"
     },
     {
-      "type": 2,
+      "type": "pack",
       "documentCollection": "forien-armoury.forien-armoury",
       "weight": 30,
       "range": [
@@ -70,10 +70,12 @@
   "_stats": {
     "systemId": "wfrp4e",
     "systemVersion": "6.6.1",
-    "coreVersion": "11.305",
+    "coreVersion": "12.327",
     "createdTime": 1690167377107,
     "modifiedTime": 1690167395339,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "compendiumSource": null,
+    "duplicateSource": null
   },
   "formula": "1d52",
   "_key": "!tables!yTOmoQCY6LsQy9G7"
