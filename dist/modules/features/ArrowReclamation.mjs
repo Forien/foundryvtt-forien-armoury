@@ -308,7 +308,7 @@ export default class ArrowReclamation extends ForienBaseModule {
   }
 
   /**
-   * @param {ActorWfrp4e} actor
+   * @param {ActorWFRP4e} actor
    * @param {ItemWfrp4e} ammo
    * @param {User} user
    * @param {number} quantity

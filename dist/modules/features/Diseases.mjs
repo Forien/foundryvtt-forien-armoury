@@ -320,7 +320,7 @@ export default class Diseases extends ForienBaseModule {
   /**
    * Registers new listener with the WorldTimeObserver for Actors that have diseases
    *
-   * @param {ActorWfrp4e} actor
+   * @param {ActorWFRP4e} actor
    */
   async #registerActorDiseaseListener(actor) {
     let diseases = actor.itemTypes.disease;
@@ -343,7 +343,7 @@ export default class Diseases extends ForienBaseModule {
     if (disease.type !== 'disease') return;
     let actor = disease.actor;
 
-    if (!(actor instanceof ActorWfrp4e)) return;
+    if (!(actor instanceof ActorWFRP4e)) return;
 
     await this.#registerDiseaseListener(actor, disease);
     debug('[Diseases] Registered a listener for newly created disease', {actor, disease, listeners: this.#listeners})
@@ -352,7 +352,7 @@ export default class Diseases extends ForienBaseModule {
   /**
    * Actually handle registering the listener for a specific disease
    *
-   * @param {ActorWfrp4e} actor
+   * @param {ActorWFRP4e} actor
    * @param {ItemWfrp4e} disease
    *
    * @return {Promise<void>}
@@ -377,7 +377,7 @@ export default class Diseases extends ForienBaseModule {
   /**
    * Register listener to the WorldTimeObserver
    *
-   * @param {ActorWfrp4e} actor
+   * @param {ActorWFRP4e} actor
    * @param {ItemWfrp4e} disease
    * @param {string} type
    * @param {number} unitSeconds
@@ -396,7 +396,7 @@ export default class Diseases extends ForienBaseModule {
   /**
    * Roll disease value for duration or incubation.
    *
-   * @param {ActorWfrp4e} actor
+   * @param {ActorWFRP4e} actor
    * @param {ItemWfrp4e} disease
    * @param {string} type
    *
@@ -521,10 +521,10 @@ export default class Diseases extends ForienBaseModule {
   }
 
   /**
-   * Just a better and properly working version of `ActorWfrp4e.decrementDisease()`.
+   * Just a better and properly working version of `ActorWFRP4e.decrementDisease()`.
    * @todo Remove this after fixing the methods in WFRP4e.
    *
-   * @param {ActorWfrp4e} actor
+   * @param {ActorWFRP4e} actor
    * @param {ItemWfrp4e} disease
    * @param {string} type
    *

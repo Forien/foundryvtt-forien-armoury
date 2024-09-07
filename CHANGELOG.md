@@ -2,6 +2,10 @@
 
 ## v3.X.X
 
+### v3.1.1
+* Fixed multiple macros and features being broken due to renaming of Actor class from `ActorWfrp4e` to `ActorWFRP4e`
+* Fixed Combat Fatigue not being handled due to API changes (scripts being moved from `game.wfrp4e.combat.scripts` to `CombatHelpers`)
+
 ### v3.1.0
 * Updated for Active Effects using Data Models (with [Warhammer Library](https://foundryvtt.com/packages/warhammer-lib)) and verified for WFRP4e 8.0.1
 * Created `Grimoire` type for Items.

@@ -58,10 +58,10 @@ export default class ItemProperties extends ForienBaseModule {
    * @param {{
    *   AP: {},
    *   abort: boolean,
-   *   actor: ActorWfrp4e,
+   *   actor: ActorWFRP4e,
    *   applyAP: boolean,
    *   applyTB: boolean,
-   *   attacker: ActorWfrp4e,
+   *   attacker: ActorWFRP4e,
    *   damageType: number,
    *   extraMessages: string[],
    *   modifiers: {
@@ -107,7 +107,7 @@ export default class ItemProperties extends ForienBaseModule {
    * Checks if weapon used by attacker has Blinding Quality
    *
    * @param {OpposedTest} opposedTest Opposed Test of the attack
-   * @param {ActorWfrp4e} actor Actor receiving the damage
+   * @param {ActorWFRP4e} actor Actor receiving the damage
    * @param {string[]} extraMessages Array containing additional messages that appear on the Chat Card
    */
   #checkForBlinding(opposedTest, actor, extraMessages) {
@@ -123,7 +123,7 @@ export default class ItemProperties extends ForienBaseModule {
    * Checks if weapon used by attacker has Incendiary Quality
    *
    * @param {OpposedTest} opposedTest Opposed Test of the attack
-   * @param {ActorWfrp4e} actor Actor receiving the damage
+   * @param {ActorWFRP4e} actor Actor receiving the damage
    * @param {string[]} extraMessages Array containing additional messages that appear on the Chat Card
    */
   #checkForIncendiary(opposedTest, actor, extraMessages) {
@@ -145,7 +145,7 @@ export default class ItemProperties extends ForienBaseModule {
    * Checks if weapon used by attacker has Poisonous Quality
    *
    * @param {OpposedTest} opposedTest Opposed Test of the attack
-   * @param {ActorWfrp4e} actor Actor receiving the damage
+   * @param {ActorWFRP4e} actor Actor receiving the damage
    * @param {string[]} extraMessages Array containing additional messages that appear on the Chat Card
    */
   #checkForPoisonous(opposedTest, actor, extraMessages) {
@@ -166,7 +166,7 @@ export default class ItemProperties extends ForienBaseModule {
    * @param {OpposedTest} opposedTest Opposed Test of the attack
    * @param {{}} AP abstract object containing information about Armour Points
    * @param {{}} modifiers abstract object containing information about damage modifiers
-   * @param {ActorWfrp4e} actor Actor receiving the damage
+   * @param {ActorWFRP4e} actor Actor receiving the damage
    * @param {string[]} extraMessages Array containing additional messages that appear on the Chat Card
    */
   #checkForSlashing(opposedTest, AP, modifiers, actor, extraMessages) {

@@ -13,7 +13,7 @@ export default class CombatFatigue extends ForienBaseModule {
   }
 
   #setupEndTurnScript() {
-    game.wfrp4e.combat.scripts.endTurn.push(this.#processCombatTurn.bind(this));
+    CombatHelpers.endTurn.push(this.#processCombatTurn.bind(this));
   }
 
   /**
@@ -98,13 +98,16 @@ export default class CombatFatigue extends ForienBaseModule {
    * Processes Combat's turn in order to apply Combat Fatigue rules, if enabled.
    *
    * @param {Combat} combat
-   * @param {Combatant} previousCombatant
+   * @param {{}} _update
+   * @param {{}} _options
+   * @param {string} _user
    *
    * @return {Promise<void>}
    */
-  async #processCombatTurn(combat, previousCombatant) {
+  async #processCombatTurn(combat, _update, _options, _user) {
     if (Utility.getSetting(settings.combatFatigue.enable) === false) return debug('[CombatFatigue] Combat Fatigue is not enabled');
 
+    const previousCombatant = combat.combatants.get(combat.previous.combatantId);
     const actor = previousCombatant?.actor;
 
     if (!actor) return;
@@ -130,7 +133,7 @@ export default class CombatFatigue extends ForienBaseModule {
    * @return {Promise<void>}
    */
   async #processCombatFatigue(previousCombatant) {
-    /** @type {ActorWfrp4e} */
+    /** @type {ActorWFRP4e} */
     const actor = previousCombatant.actor;
     let roundsBeforeTest = this.#getRoundsBeforeTest(previousCombatant, actor);
     roundsBeforeTest--;
@@ -164,7 +167,7 @@ export default class CombatFatigue extends ForienBaseModule {
    */
   async #processCombatPassOut(previousCombatant) {
     if (Utility.getSetting(settings.combatFatigue.enableCorePassOut) === false) return;
-      /** @type {ActorWfrp4e} */
+      /** @type {ActorWFRP4e} */
     const actor = previousCombatant.actor;
     if (actor.status.wounds.value !== 0) return;
 
@@ -182,7 +185,7 @@ export default class CombatFatigue extends ForienBaseModule {
   /**
    * Calls user to perform the Endurance/Toughness Dramatic Test in order to stave off the Fatigue
    *
-   * @param {ActorWfrp4e} actor
+   * @param {ActorWFRP4e} actor
    *
    * @return {Promise<{SL: *, outcome: *}>}
    */
@@ -220,7 +223,7 @@ export default class CombatFatigue extends ForienBaseModule {
    * Number of rounds is stored in Combatant's flag, if it's not present, the Toughness Bonus is returned.
    *
    * @param {Combatant} currentCombatant
-   * @param {ActorWfrp4e} actor
+   * @param {ActorWFRP4e} actor
    *
    * @return {number}
    */
@@ -238,7 +241,7 @@ export default class CombatFatigue extends ForienBaseModule {
    * Number of Rounds is stored in Combatant's flag, if it's not present, the Toughness Bonus is returned.
    *
    * @param {Combatant} currentCombatant
-   * @param {ActorWfrp4e} actor
+   * @param {ActorWFRP4e} actor
    *
    * @returns {number}
    */

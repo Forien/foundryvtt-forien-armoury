@@ -59,7 +59,7 @@ export default class TemporaryRunes extends ForienBaseModule {
     let actor = effect.parent;
     let itemUuid = effect.origin;
     /**
-     * @type {ActorWfrp4e|null}
+     * @type {ActorWFRP4e|null}
      */
     await actor.deleteEmbeddedDocuments("ActiveEffect", [effect._id]);
     debug('[TemporaryRunes] Deleted ActiveEffect from Actor', {actor, effect});
@@ -94,7 +94,7 @@ export default class TemporaryRunes extends ForienBaseModule {
    * Process receiving Damage from destroyed Rune, depending on Item's type
    *
    * @param {ItemWfrp4e} item
-   * @param {ActorWfrp4e} actor
+   * @param {ActorWFRP4e} actor
    *
    * @returns {Promise<string>}
    */
@@ -113,7 +113,7 @@ export default class TemporaryRunes extends ForienBaseModule {
    * Process receiving Damage from destroyed Rune on a Weapon
    *
    * @param {ItemWfrp4e} item
-   * @param {ActorWfrp4e} actor
+   * @param {ActorWFRP4e} actor
    *
    * @returns {Promise<string>}
    */
@@ -145,7 +145,7 @@ export default class TemporaryRunes extends ForienBaseModule {
    * Process receiving Damage from destroyed Rune on an Armour
    *
    * @param {ItemWfrp4e} item
-   * @param {ActorWfrp4e} actor
+   * @param {ActorWFRP4e} actor
    *
    * @returns {Promise<string>}
    */
@@ -188,7 +188,7 @@ export default class TemporaryRunes extends ForienBaseModule {
    * Process receiving Damage from destroyed Rune on a Trapping
    *
    * @param {ItemWfrp4e} item
-   * @param {ActorWfrp4e} actor
+   * @param {ActorWFRP4e} actor
    *
    * @returns {Promise<string>}
    */

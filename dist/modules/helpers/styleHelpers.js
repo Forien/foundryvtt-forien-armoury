@@ -16,8 +16,8 @@ import {debug} from "../utility/Debug.mjs";
  * * Effect Type:           Add Items
  * * Effect Application:    Actor
  *
- * @param {{actor: ActorWfrp4e}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e}} args
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  *
  * @return {Promise<boolean>}
  */
@@ -64,8 +64,8 @@ async function replaceWithStyle(args, self) {
  * * Effect Type:           Add Items
  * * Effect Application:    Actor
  *
- * @param {{actor: ActorWfrp4e}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e}} args
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  *
  * @return {Promise<boolean>}
  */
@@ -117,7 +117,7 @@ async function getCompendiumTalentsByFlag(flag) {
  * Adds a Talent to Actor and replaces it in career
  *
  * @param {string} id
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  * @return {Promise<ItemWfrp4e|null>}
  */
 async function addTalentToActorAndCareer(id, self) {
@@ -146,8 +146,8 @@ async function addTalentToActorAndCareer(id, self) {
  * * Effect Type:           Manually Invoked
  * * Effect Application:    Actor
  *
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} args
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function steelstormAssault(args, self) {
   const advantageCost = 2;
@@ -180,7 +180,7 @@ function steelstormAssault(args, self) {
  * @param {number} requiredAdvances
  * @param {number} advantage
  * @param {number} advantageCost
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  *
  * @returns {boolean}
  */
@@ -207,7 +207,7 @@ function canUseSteelstormAssault(advances, requiredAdvances, advantage, advantag
  * * Effect Application:    Actor
  *
  * @param {{item: ItemWfrp4e}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function steelstormHandling(args, self) {
   const weapon = args.item;
@@ -248,8 +248,8 @@ function steelstormHandling(args, self) {
  * * Effect Type:           Manually Invoked
  * * Effect Application:    Actor
  *
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} args
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function goAllIn(args, self) {
   const weapon = findActorsMainWeapon(self.actor);
@@ -289,7 +289,7 @@ function goAllIn(args, self) {
  * * Effect Application:    Actor
  *
  * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: ItemWfrp4e, options: {}}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function goingAllIn(args, self) {
   if (args.type === 'weapon' && args.item?.type === 'weapon') {
@@ -318,7 +318,7 @@ function goingAllIn(args, self) {
  * * Effect Application:    Actor
  *
  * @param {{item: ItemWfrp4e}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function goingAllInMastery(args, self) {
   const weapon = args.item;
@@ -361,7 +361,7 @@ function goingAllInMastery(args, self) {
  * * Effect Application:    Actor
  *
  * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: ItemWfrp4e, options: {}}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function targetIsGoingAllIn(args, self) {
   const target = args.data.targets[0]?.name ?? 'undefined';
@@ -383,8 +383,8 @@ function targetIsGoingAllIn(args, self) {
 
 /**
  *
- * @param {{actor: ActorWfrp4e}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e}} args
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 async function addMeleeParryCurrent(args, self) {
   const career = args.actor?.currentCareer;
@@ -396,7 +396,7 @@ async function addMeleeParryCurrent(args, self) {
 /**
  *
  * @param {{item: ItemWfrp4e, context: string}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 async function addMeleeParryFuture(args, self) {
   if (args.context !== 'update') return;
@@ -416,7 +416,7 @@ async function addMeleeParryFuture(args, self) {
  * * Effect Application:    Actor
  *
  * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: ItemWfrp4e, options: {}}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function bracing(args, self) {
   if (self.actor.isOpposing && args.type === 'weapon' && args.item?.type === 'weapon') {
@@ -439,7 +439,7 @@ function bracing(args, self) {
 /**
  *
  * @param {Combat} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e, script: WFRP4eScript}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e, script: WFRP4eScript}} self
  */
 function bracingReminder(args, self) {
   const bracingName = game.i18n.localize('Forien.Armoury.Effects.Ironshield.Bracing.Name');
@@ -459,8 +459,8 @@ function bracingReminder(args, self) {
  * * Effect Type:           Manually Invoked
  * * Effect Application:    Actor
  *
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} args
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function brace(args, self) {
   const weapon = findActorsMainWeapon(self.actor);
@@ -493,7 +493,7 @@ function brace(args, self) {
  * * Effect Application:    Actor
  *
  * @param {{item: ItemWfrp4e}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function ironshieldWard(args, self) {
   const weapon = args.item;
@@ -531,7 +531,7 @@ function ironshieldWard(args, self) {
  * * Effect Application:    Actor
  *
  * @param {{opposedTest: OpposedTest, attackerTest: WeaponTest, defenderTest:WeaponTest}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function ironshieldRiposte(args, self) {
   const advances = checkAdvances(args.defenderTest.weapon);
@@ -601,8 +601,8 @@ async function addMeleeParryToCareer(career) {
  * * Effect Type:           Manually Invoked
  * * Effect Application:    Actor
  *
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} args
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function shrewdTrickery(args, self) {
   const weapon = findActorsMainWeapon(self.actor);
@@ -631,7 +631,7 @@ function shrewdTrickery(args, self) {
  * * Effect Application:    Actor
  *
  * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: ItemWfrp4e, options: {}}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function shrewdEvadecraft(args, self) {
   if (!self.actor.isOpposing) return;
@@ -664,7 +664,7 @@ function shrewdEvadecraft(args, self) {
  * * Effect Application:    Actor
  *
  * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: ItemWfrp4e, options: {}}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  *
  * @returns {boolean}
  */
@@ -692,7 +692,7 @@ function canShrewdEvadecraft(args, self) {
  * Retrieves data used by Shrewd Evadecraft Scripts
  *
  * @param {{attackerTest: WeaponTest, defenderTest: WeaponTest, opposedTest: OpposedTest}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  *
  * @returns {{advances: number, isRangedAttack: boolean, shieldRating: number, required: number}}
  */
@@ -714,7 +714,7 @@ function getShrewdEvadecraftData(args, self) {
  * * Effect Application:    Actor
  *
  * @param {{attackerTest: WeaponTest, defenderTest: WeaponTest, opposedTest: OpposedTest}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function luckyEvadecraft(args, self) {
   const advances = checkAdvances(args.defenderTest.weapon);
@@ -749,8 +749,8 @@ function luckyEvadecraft(args, self) {
  * * Effect Type:           Manually Invoked
  * * Effect Application:    Actor
  *
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} args
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function shrewdDisengage(args, self) {
   ChatMessage.create({
@@ -768,8 +768,8 @@ function shrewdDisengage(args, self) {
  * * Effect Type:           Manually Invoked
  * * Effect Application:    Actor
  *
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} args
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 async function invokeEvadecraftMastery(args, self) {
   const targetToken = game.user.targets.first()?.document;
@@ -809,7 +809,7 @@ async function invokeEvadecraftMastery(args, self) {
  * * Effect Application:    Actor
  *
  * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: ItemWfrp4e, options: {}}} args
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  */
 function learnedMoves(args, self) {
   const {target, attacker, opponent, effectTargetId, dodgeName} = getLearnedMovesData(self);
@@ -856,7 +856,7 @@ function getLearnedMovesData(self) {
 /**
  * Returns the Mastery talent owned by the Actor, or null if no Mastery is learned.
  *
- * @param {ActorWfrp4e} actor
+ * @param {ActorWFRP4e} actor
  * @return {ItemWfrp4e|null}
  */
 function hasMastery(actor) {
@@ -865,7 +865,7 @@ function hasMastery(actor) {
 
 /**
  *
- * @param {ActorWfrp4e} actor
+ * @param {ActorWFRP4e} actor
  * @param {string} flag
  * @param {string} value
  *
@@ -889,7 +889,7 @@ function checkAdvances(weapon) {
 /**
  * Finds equipped weapon that is not offhand and returns it.
  *
- * @param {ActorWfrp4e} actor
+ * @param {ActorWFRP4e} actor
  * @return {ItemWfrp4e|null}
  */
 function findActorsMainWeapon(actor) {
@@ -899,7 +899,7 @@ function findActorsMainWeapon(actor) {
 /**
  * Generates warning to user about not enough advances to use the perk
  *
- * @param {{actor: ActorWfrp4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
+ * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWfrp4e}} self
  * @param {number} advances
  * @param {number} required
  */
@@ -926,7 +926,7 @@ function warnNotEnoughAdvantage(self, advantageCost, advantage) {
 /**
  * Expose all relevant functions to the API
  *
- * @type {{bracing: bracing, ironshieldWard: ironshieldWard, ironshieldRiposte: ironshieldRiposte, shrewdTrickery: shrewdTrickery, canUseLearnedMoves: ((function(*, *): (boolean))|*), steelstormHandling: steelstormHandling, shrewdEvadecraft: shrewdEvadecraft, goingAllIn: goingAllIn, replaceWithStyle: (function({actor: game.wfrp4e.entities.ActorWfrp4e}, {actor: game.wfrp4e.entities.ActorWfrp4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}): Promise<boolean>), invokeEvadecraftMastery: ((function({actor: game.wfrp4e.entities.ActorWfrp4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}, {actor: game.wfrp4e.entities.ActorWfrp4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}): Promise<false|undefined>)|*), goingAllInMastery: goingAllInMastery, brace: brace, steelstormAssault: steelstormAssault, addMeleeParryCurrent: ((function({actor: game.wfrp4e.entities.ActorWfrp4e}, {actor: game.wfrp4e.entities.ActorWfrp4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}): Promise<void>)|*), goAllIn: goAllIn, replaceWithMastery: (function({actor: game.wfrp4e.entities.ActorWfrp4e}, {actor: game.wfrp4e.entities.ActorWfrp4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}): Promise<boolean>), targetIsGoingAllIn: targetIsGoingAllIn, bracingReminder: bracingReminder, learnedMoves: learnedMoves, canShrewdEvadecraft: ((function({prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: game.wfrp4e.entities.ItemWfrp4e, options: {}}, {actor: game.wfrp4e.entities.ActorWfrp4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}): boolean)|*), luckyEvadecraft: luckyEvadecraft, shrewdDisengage: shrewdDisengage, addMeleeParryFuture: ((function({item: game.wfrp4e.entities.ItemWfrp4e, context: string}, {actor: game.wfrp4e.entities.ActorWfrp4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}): Promise<void>)|*)}}
+ * @type {{bracing: bracing, ironshieldWard: ironshieldWard, ironshieldRiposte: ironshieldRiposte, shrewdTrickery: shrewdTrickery, canUseLearnedMoves: ((function(*, *): (boolean))|*), steelstormHandling: steelstormHandling, shrewdEvadecraft: shrewdEvadecraft, goingAllIn: goingAllIn, replaceWithStyle: (function({actor: game.wfrp4e.entities.ActorWFRP4e}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}): Promise<boolean>), invokeEvadecraftMastery: ((function({actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}): Promise<false|undefined>)|*), goingAllInMastery: goingAllInMastery, brace: brace, steelstormAssault: steelstormAssault, addMeleeParryCurrent: ((function({actor: game.wfrp4e.entities.ActorWFRP4e}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}): Promise<void>)|*), goAllIn: goAllIn, replaceWithMastery: (function({actor: game.wfrp4e.entities.ActorWFRP4e}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}): Promise<boolean>), targetIsGoingAllIn: targetIsGoingAllIn, bracingReminder: bracingReminder, learnedMoves: learnedMoves, canShrewdEvadecraft: ((function({prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: game.wfrp4e.entities.ItemWfrp4e, options: {}}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}): boolean)|*), luckyEvadecraft: luckyEvadecraft, shrewdDisengage: shrewdDisengage, addMeleeParryFuture: ((function({item: game.wfrp4e.entities.ItemWfrp4e, context: string}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWfrp4e}): Promise<void>)|*)}}
  */
 export const styleHelpers = {
   replaceWithStyle: replaceWithStyle,

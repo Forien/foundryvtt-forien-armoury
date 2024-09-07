@@ -204,7 +204,7 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
    */
   async prepareScrollTest(options = {}) {
     /**
-     * @type {ActorWfrp4e}
+     * @type {ActorWFRP4e}
      */
     const actor = this.parent.actor;
     if (!actor) return null;

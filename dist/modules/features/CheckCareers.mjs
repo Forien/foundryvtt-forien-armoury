@@ -35,14 +35,14 @@ export default class CheckCareers extends ForienBaseModule {
   checkMyCareer() {
     debug(`[CheckCareers] Checking my character's career`, {character: game.user.character});
 
-    if (game.user.character instanceof ActorWfrp4e)
+    if (game.user.character instanceof ActorWFRP4e)
       this.checkCareer(game.user.character);
   }
 
   /**
    * Performs Career Check for all provided actors
    *
-   * @param {ActorWfrp4e[]} actors Actors for whom to perform career checks
+   * @param {ActorWFRP4e[]} actors Actors for whom to perform career checks
    */
   checkCareers(actors = []) {
     actors.forEach(actor => this.checkCareer(actor))
@@ -51,10 +51,10 @@ export default class CheckCareers extends ForienBaseModule {
   /**
    * Checks career completion progress for provided Character and output results to Chat
    *
-   * @param {ActorWfrp4e} character Character to perform a Career Check for
+   * @param {ActorWFRP4e} character Character to perform a Career Check for
    */
   checkCareer(character) {
-    if (!(character instanceof ActorWfrp4e) || character.type !== 'character') return;
+    if (!(character instanceof ActorWFRP4e) || character.type !== 'character') return;
     let currentCareer = character.currentCareer;
     if (!currentCareer) return;
     let careerLevel = currentCareer.level.value;
@@ -110,7 +110,7 @@ export default class CheckCareers extends ForienBaseModule {
   /**
    * Returns an array containing id of every owner of a character (if GM) or every GM (if Player)
    *
-   * @param {ActorWfrp4e} character
+   * @param {ActorWFRP4e} character
    * @return {*[]}
    */
   #getOwners(character) {
@@ -130,7 +130,7 @@ export default class CheckCareers extends ForienBaseModule {
   /**
    * Checks Actor for every Skill specified in the career and counts how many have required number of advances
    *
-   * @param {ActorWfrp4e} character
+   * @param {ActorWFRP4e} character
    * @param {ItemWfrp4e} currentCareer
    * @param {number} requiredAdvances
    * @return {{hasPotential: boolean, potentialCount: number, done: number, potential: string}}
@@ -159,7 +159,7 @@ export default class CheckCareers extends ForienBaseModule {
   /**
    * Checks Actor for every Talent specified in the career and counts how many have been purchased
    *
-   * @param {ActorWfrp4e} character
+   * @param {ActorWFRP4e} character
    * @param {ItemWfrp4e} currentCareer
    * @return {{hasPotential: boolean, potentialCount: number, done: number, potential: string}}
    */
@@ -185,7 +185,7 @@ export default class CheckCareers extends ForienBaseModule {
   /**
    * Checks Actor for every Characteristic specified in the career and counts how many have required number of advances
    *
-   * @param {ActorWfrp4e} character
+   * @param {ActorWFRP4e} character
    * @param {ItemWfrp4e} currentCareer
    * @param {number} requiredAdvances
    * @return {{total: number, done: number}}

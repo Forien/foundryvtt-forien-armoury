@@ -326,7 +326,7 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
   }
 
   /**
-   * @returns {ActorWfrp4e|null}
+   * @returns {ActorWFRP4e|null}
    */
   get reader() {
     return this.parent.actor || game.user.character || canvas.tokens.controlled[0]?.actor || null;

@@ -347,7 +347,7 @@ export default class ItemRepair extends ForienBaseModule {
     subtype = null,
     user = null
   } = {}) {
-    if (!actor || !(actor instanceof ActorWfrp4e)) {
+    if (!actor || !(actor instanceof ActorWFRP4e)) {
       return Utility.notify(game.i18n.localize('Forien.Armoury.ItemRepair.NoActorSelected'), {type: 'warning'});
     }
 

@@ -205,7 +205,7 @@ export default class Macros extends ForienBaseModule {
 
     const actorsFolders = actorsFolderIds.map(id => game.folders.get(id)).filter(f => f);
     const actors = actorsFolders.reduce((actors, folder) => {
-      let content = folder?.contents?.filter(c => c instanceof ActorWfrp4e && c.type === "character") ?? [];
+      let content = folder?.contents?.filter(c => c instanceof ActorWFRP4e && c.type === "character") ?? [];
       actors.push(...content);
       return actors;
     }, []);
@@ -351,8 +351,8 @@ export default class Macros extends ForienBaseModule {
 
     const characterFolder = game.folders.get(characterFolderId);
     const companionFolder = game.folders.get(companionFolderId);
-    const characters = characterFolder?.contents.filter(c => c instanceof ActorWfrp4e && c.type === 'character') ?? [];
-    const companions = companionFolder?.contents.filter(c => c instanceof ActorWfrp4e && c.type === 'character') ?? [];
+    const characters = characterFolder?.contents.filter(c => c instanceof ActorWFRP4e && c.type === 'character') ?? [];
+    const companions = companionFolder?.contents.filter(c => c instanceof ActorWFRP4e && c.type === 'character') ?? [];
 
     console.log({characterFolder,
       companionFolder,
