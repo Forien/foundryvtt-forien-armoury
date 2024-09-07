@@ -214,6 +214,7 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
         data.name = spell.name;
 
       foundry.utils.setProperty(data, `flags.${constants.moduleId}.${flags.grimoires.source}`, this.parent.id);
+      foundry.utils.setProperty(data, `flags.core.sourceId`, spell.uuid);
 
       items.push(data);
     }
