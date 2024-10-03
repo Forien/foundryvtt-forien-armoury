@@ -10,14 +10,14 @@ export default class Grimoires extends ForienBaseModule {
    */
   bindHooks() {
     Hooks.on("wfrp4e:constructInventory", this.#onWfrp4eConstructInventory.bind(this));
-    Hooks.on("renderActorSheetWfrp4eCharacter", this.#onRenderActorSheet.bind(this));
-    Hooks.on("renderActorSheetWfrp4eNPC", this.#onRenderActorSheet.bind(this));
+    Hooks.on("renderActorSheetWFRP4eCharacter", this.#onRenderActorSheet.bind(this));
+    Hooks.on("renderActorSheetWFRP4eNPC", this.#onRenderActorSheet.bind(this));
   }
 
   /**
    * Add Scrolls to appropriate Inventory categories
    *
-   * @param {ActorSheetWfrp4e} sheet
+   * @param {ActorSheetWFRP4e} sheet
    * @param {{}} categories
    * @param {{}} collapsed
    */
@@ -43,7 +43,7 @@ export default class Grimoires extends ForienBaseModule {
   /**
    * Registers Grimoire-specific Event Listeners
    *
-   * @param {ActorSheetWfrp4e} sheet
+   * @param {ActorSheetWFRP4e} sheet
    * @param {jQuery} html
    * @param {{}} _options
    *

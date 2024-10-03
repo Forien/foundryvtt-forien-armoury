@@ -75,6 +75,7 @@ export default class ScrollTest extends WomCastTest {
   #mapEffects(e) {
     let effect = foundry.utils.duplicate(e);
     effect.uuid = `${this.scroll.system.spellUuid}.ActiveEffect.${effect._id}`;
+    effect.actor = this.data.actor;
 
     return effect;
   }

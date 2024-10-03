@@ -191,6 +191,100 @@
   align-items: center;
 }
 
+.app.window-app .forien-armoury.magical-endurance-header .label {
+  font-family: CaslonAntique, serif;
+  font-weight: 700;
+  font-size: var(--font-size-16);
+  color: rgba(70, 67, 49, 0.768627451);
+  border: 1px solid rgba(115, 105, 83, 0.6509803922);
+}
+.app.window-app .forien-armoury.magical-endurance-header .label.value {
+  color: #222;
+}
+.app.window-app .forien-armoury.magical-endurance-header .input {
+  border: 1px solid rgba(115, 105, 83, 0.6509803922);
+  border-left: none;
+  border-right: none;
+}
+.app.window-app .forien-armoury.magical-endurance-header .input input {
+  font-family: CaslonAntique, serif;
+  font-weight: 500;
+  font-size: var(--font-size-16);
+  color: #111;
+}
+
+.forien-armoury.magical-endurance-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 6px;
+  height: 25px;
+}
+.forien-armoury.magical-endurance-header .magical-endurance-box {
+  display: flex;
+  flex-direction: row;
+  margin-right: 6px;
+  flex: 4;
+}
+.forien-armoury.magical-endurance-header .magical-endurance-box:last-of-type {
+  margin-right: 0;
+}
+.forien-armoury.magical-endurance-header .magical-endurance-box .label {
+  text-align: center;
+  border: 1px solid var(--list-header-border);
+  margin: 0;
+  height: inherit;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3215686275) inset;
+  padding: 3px 0 0;
+  width: 70px;
+  flex: 3;
+}
+.forien-armoury.magical-endurance-header .magical-endurance-box .label:not(.value):not(.divide) {
+  background-color: var(--list-header);
+}
+.forien-armoury.magical-endurance-header .magical-endurance-box .label.unit {
+  flex: 1;
+}
+.forien-armoury.magical-endurance-header .magical-endurance-box .label.divide {
+  box-shadow: none;
+  border-left: none;
+  border-right: none;
+  flex: 0;
+}
+.forien-armoury.magical-endurance-header .magical-endurance-box .label.value {
+  box-shadow: none;
+  border-left: none;
+  flex: 1;
+  font-weight: 500;
+}
+.forien-armoury.magical-endurance-header .magical-endurance-box .input {
+  text-align: center;
+  border: 1px solid var(--list-header-border);
+  border-left: none;
+  border-right: none;
+  margin: 0;
+  padding: 0;
+  height: inherit;
+  flex: 1;
+}
+.forien-armoury.magical-endurance-header .magical-endurance-box .input input {
+  text-align: center;
+  margin: 0;
+  padding: 3px 0 0 0;
+  height: 23px;
+  width: 100%;
+  background: none;
+  display: inline-block;
+}
+
+.wfrp4e.sheet.application .rollable:hover > img:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "&nbsp;";
+  background-image: url("/systems/wfrp4e/ui/buttons/d10.webp");
+}
+
 .forien-armoury {
   /**
    * Select Item Dialog
@@ -306,74 +400,6 @@
 .forien-armoury.select-item input:checked + label {
   font-weight: bold;
   box-shadow: 0 0 20px 0 #b79756, inset 0 0 20px 0 #b79756;
-}
-.forien-armoury.magical-endurance-header {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 6px;
-  height: 25px;
-}
-.forien-armoury.magical-endurance-header .magical-endurance-box {
-  display: flex;
-  flex-direction: row;
-  margin-right: 6px;
-  flex: 4;
-}
-.forien-armoury.magical-endurance-header .magical-endurance-box:last-of-type {
-  margin-right: 0;
-}
-.forien-armoury.magical-endurance-header .magical-endurance-box .label {
-  font-family: CaslonAntique, serif;
-  font-weight: 700;
-  font-size: var(--font-size-16);
-  color: rgba(70, 67, 49, 0.768627451);
-  text-align: center;
-  border: 1px solid rgba(115, 105, 83, 0.6509803922);
-  margin: 0;
-  height: inherit;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3215686275) inset;
-  padding: 3px 0 0;
-  width: 70px;
-  flex: 3;
-}
-.forien-armoury.magical-endurance-header .magical-endurance-box .label.unit {
-  flex: 1;
-}
-.forien-armoury.magical-endurance-header .magical-endurance-box .label.divide {
-  box-shadow: none;
-  border-left: none;
-  border-right: none;
-  flex: 0;
-}
-.forien-armoury.magical-endurance-header .magical-endurance-box .label.value {
-  box-shadow: none;
-  border-left: none;
-  flex: 1;
-  color: #222;
-  font-weight: 500;
-}
-.forien-armoury.magical-endurance-header .magical-endurance-box .input {
-  text-align: center;
-  border: 1px solid rgba(115, 105, 83, 0.6509803922);
-  border-left: none;
-  border-right: none;
-  margin: 0;
-  padding: 0;
-  height: inherit;
-  flex: 1;
-}
-.forien-armoury.magical-endurance-header .magical-endurance-box .input input {
-  text-align: center;
-  margin: 0;
-  padding: 3px 0 0 0;
-  height: 23px;
-  width: 100%;
-  background: none;
-  font-family: CaslonAntique, serif;
-  font-weight: 500;
-  font-size: var(--font-size-16);
-  display: inline-block;
-  color: #111;
 }
 
 .app.window-app.sheet.wfrp4e.actor .tab.inventory .inventory-list.scrolls .scroll-spell-link, .app.window-app.sheet.wfrp4e.actor .tab.inventory .inventory-list.scrolls .grimoire-spell-link, .app.window-app.sheet.wfrp4e.actor .tab.inventory .inventory-list .scroll-spell-link, .app.window-app.sheet.wfrp4e.actor .tab.inventory .inventory-list .grimoire-spell-link, .app.window-app.sheet.wfrp4e.actor .tab.magic .inventory-list.scrolls .scroll-spell-link, .app.window-app.sheet.wfrp4e.actor .tab.magic .inventory-list.scrolls .grimoire-spell-link, .app.window-app.sheet.wfrp4e.actor .tab.magic .inventory-list .scroll-spell-link, .app.window-app.sheet.wfrp4e.actor .tab.magic .inventory-list .grimoire-spell-link {

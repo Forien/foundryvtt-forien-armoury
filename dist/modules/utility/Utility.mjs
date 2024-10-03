@@ -109,4 +109,16 @@ export default class Utility {
   static getSetting(setting) {
     return game.settings.get(constants.moduleId, setting);
   }
+
+  /**
+   * Converts a string representing a HTML containing a single top level node to ChildNode.
+   *
+   * @param {string} string
+   * @returns {ChildNode}
+   */
+  static stringToHTMLElement(string) {
+    const element = document.createElement('template');
+    element.innerHTML = string.trim();
+    return element.content.firstChild;
+  }
 }

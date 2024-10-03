@@ -38,7 +38,7 @@ export default class ScrollDialog extends CastDialog {
     data.scripts = data.scripts.concat(data.spell?.getScripts("dialog"), data.skill?.getScripts("dialog") || [])
 
     return new Promise(resolve => {
-      new this(fields, data, resolve, options).render(true);
+      new this(data, fields, options, resolve).render(true);
     });
   }
 
@@ -48,8 +48,8 @@ export default class ScrollDialog extends CastDialog {
    * @returns {{}}
    * @protected
    */
-  _constructTestData() {
-    let data = super._constructTestData();
+  _getSubmissionData() {
+    let data = super._getSubmissionData();
 
     data.item = this.data.spell;
     data.scroll = this.data.scroll;

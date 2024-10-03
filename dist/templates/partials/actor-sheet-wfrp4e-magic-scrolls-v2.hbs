@@ -1,0 +1,33 @@
+<div class="sheet-list scrolls">
+    <div class="list-header row-content">
+        <div class="list-name">
+            {{localize "Forien.Armoury.Scrolls.Scrolls"}}
+        </div>
+        <div class="list-controls">
+            <a class="list-control" data-action="createItem" data-type="forien-armoury.scroll">
+                <i class="fas fa-plus"></i>
+            </a>
+        </div>
+    </div>
+    <div class="list-content">
+        {{#each scrolls as |item i|}}
+            <div class="list-row item" data-uuid="{{item.uuid}}" data-id="{{item.id}}">
+                <div class="row-content">
+                    <div class="list-name rollable">
+                        <img src="{{item.img}}" class="scroll-spell-cast">
+                        <a class="label" data-action="toggleSummary">{{item.name}}</a>
+                    </div>
+
+                    <div class="list-controls">
+                        <a class="list-control context-menu"><i class="fa-regular fa-ellipsis-vertical"></i></a>
+                    </div>
+                </div>
+
+                {{> sheetButtons document=this}}
+                <div class="dropdown-content collapsed">
+
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

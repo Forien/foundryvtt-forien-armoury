@@ -2,8 +2,10 @@
 
 ## v3.X.X
 
-### v3.1.2 ?
+### v3.2.0
 * Fixed Grimoires not applying SourceId flag correctly, resulting in duplicating spells in very specific conditions
+* Fixed spelling in Hooks registration after they have been renamed
+* Added support for Character Sheet v2 introduced in WFRP4e 8.1.0 for Magical Endurance and Scrolls.
 
 ### v3.1.1
 * Fixed multiple macros and features being broken due to renaming of Actor class from `ActorWfrp4e` to `ActorWFRP4e`

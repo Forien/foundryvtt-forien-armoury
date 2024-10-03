@@ -1,7 +1,17 @@
 @import "mixins/square";
 @import "partials/settings-app";
 @import "partials/custom-item-sheets";
+@import "partials/magical-endurance";
 
+
+.wfrp4e.sheet.application .rollable:hover > img:after {
+  display: block;
+  position: absolute;
+  top:0;
+  left:0;
+  content: "&nbsp;";
+  background-image: url("/systems/wfrp4e/ui/buttons/d10.webp");
+}
 
 .forien-armoury {
   .forien-armoury-hr {
@@ -155,82 +165,6 @@
   }
 
 
-  &.magical-endurance-header {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 6px;
-    height: 25px;
-
-    .magical-endurance-box {
-      display: flex;
-      flex-direction: row;
-      margin-right: 6px;
-      flex: 4;
-
-      &:last-of-type {
-        margin-right: 0;
-      }
-
-      .label {
-        font-family: CaslonAntique, serif;
-        font-weight: 700;
-        font-size: var(--font-size-16);
-        color: #464331c4;
-        text-align: center;
-        border: 1px solid #736953a6;
-        margin: 0;
-        height: inherit;
-        box-shadow: 0 0 10px #00000052 inset;
-        padding: 3px 0 0;
-        width: 70px;
-        flex: 3;
-
-        &.unit {
-          flex: 1;
-        }
-
-        &.divide {
-          box-shadow: none;
-          border-left: none;
-          border-right: none;
-          flex: 0;
-        }
-
-        &.value {
-          box-shadow: none;
-          border-left: none;
-          flex: 1;
-          color: #222;
-          font-weight: 500;
-        }
-      }
-
-      .input {
-        text-align: center;
-        border: 1px solid #736953a6;
-        border-left: none;
-        border-right: none;
-        margin: 0;
-        padding: 0;
-        height: inherit;
-        flex: 1;
-
-        input {
-          text-align: center;
-          margin: 0;
-          padding: 3px 0 0 0;
-          height: 23px;
-          width: 100%;
-          background: none;
-          font-family: CaslonAntique, serif;
-          font-weight: 500;
-          font-size: var(--font-size-16);
-          display: inline-block;
-          color: #111;
-        }
-      }
-    }
-  }
 }
 
 .app.window-app.sheet.wfrp4e.actor {

@@ -1,27 +1,28 @@
 import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 import Utility from "../utility/Utility.mjs";
-import ScrollDialog from "../apps/ScrollDialog.mjs";
 import ScrollTest from "../tests/ScrollTest.mjs";
 import {dataTypes, settings} from "../constants.mjs";
 
 export default class Scrolls extends ForienBaseModule {
   templates = {
     magicScrolls: 'partials/actor-sheet-wfrp4e-magic-scrolls.hbs',
+    magicScrollsV2: 'partials/actor-sheet-wfrp4e-magic-scrolls-v2.hbs',
   }
 
   /**
    * @inheritDoc
    */
   bindHooks() {
-    Hooks.on("renderActorSheetWfrp4eCharacter", this.#onRenderActorSheet.bind(this));
-    Hooks.on("renderActorSheetWfrp4eNPC", this.#onRenderActorSheet.bind(this));
+    Hooks.on("renderActorSheetWFRP4eCharacter", this.#onRenderActorSheet.bind(this));
+    Hooks.on("renderActorSheetWFRP4eNPC", this.#onRenderActorSheet.bind(this));
+    Hooks.on("renderActorSheetWFRP4eCharacterV2", this.#onRenderActorSheetV2.bind(this));
     Hooks.on("wfrp4e:constructInventory", this.#onWfrp4eConstructInventory.bind(this));
   }
 
   /**
    * Add Scrolls to appropriate Inventory categories
    *
-   * @param {ActorSheetWfrp4e} sheet
+   * @param {ActorSheetWFRP4e} sheet
    * @param {{}} categories
    * @param {{}} collapsed
    */
@@ -44,7 +45,7 @@ export default class Scrolls extends ForienBaseModule {
   /**
    * Adds scrolls to Magic tab and registers Scroll-specific Event Listeners
    *
-   * @param {ActorSheetWfrp4e} sheet
+   * @param {ActorSheetWFRP4e} sheet
    * @param {jQuery} html
    * @param {{}} _options
    *
@@ -71,9 +72,55 @@ export default class Scrolls extends ForienBaseModule {
   }
 
   /**
+   * Adds scrolls to Magic tab and registers Scroll-specific Event Listeners
+   *
+   * @param {ActorSheetWFRP4e} sheet
+   * @param {HTMLElement} html
+   * @param {{}} _options
+   *
+   * @returns {Promise<void>}
+   */
+  async #onRenderActorSheetV2(sheet, html, _options) {
+    const actor = sheet.actor;
+    const scrolls = actor.itemTypes[dataTypes.scroll];
+
+    const content = await renderTemplate(Utility.getTemplate(this.templates.magicScrollsV2), {
+      scrolls,
+      isOwner: sheet.document.isOwner,
+      dataType: dataTypes.scroll
+    });
+
+    const tabMagic = html.querySelector('.tab[data-tab="magic"]');
+    tabMagic.append(Utility.stringToHTMLElement(content));
+
+    tabMagic.querySelectorAll(".scrolls .scroll-spell-link").forEach(element => {
+      element.addEventListener("click", (event) => this.#onScrollSpellLinkClick(event))
+    });
+    tabMagic.querySelectorAll(".scrolls .scroll-spell-cast").forEach(element => {
+      element.addEventListener("click", (event) => this.#onScrollSpellCastClick(sheet, event))
+    });
+
+    tabMagic.querySelectorAll(".scrolls .rollable").forEach(element => {
+      element.addEventListener("mouseenter", ev => {
+        let img = ev.target.matches("img") ? ev.target : ev.target.querySelector("img");
+        if (img) {
+          this._icon = img.src;
+          img.src = "systems/wfrp4e/ui/buttons/d10.webp";
+        }
+      })
+      element.addEventListener("mouseleave", ev => {
+        let img = ev.target.matches("img") ? ev.target : ev.target.querySelector("img");
+        if (img) {
+          img.src = this._icon;
+        }
+      })
+    });
+  }
+
+  /**
    * When scroll is clicked to be used (for example by clicking on "Use Scroll" button), prepare the Test.
    *
-   * @param {ActorSheetWfrp4e} sheet
+   * @param {ActorSheetWFRP4e} sheet
    * @param {MouseEvent} event
    *
    * @returns {Promise<ScrollTest|false>}
@@ -90,7 +137,7 @@ export default class Scrolls extends ForienBaseModule {
   /**
    * When Scroll is clicked directly on Magic tab, unveil the Item Summary (on right click) or use the scroll
    *
-   * @param {ActorSheetWfrp4e} sheet
+   * @param {ActorSheetWFRP4e} sheet
    * @param {MouseEvent} event
    *
    * @returns {Promise<ScrollTest|void|false>}

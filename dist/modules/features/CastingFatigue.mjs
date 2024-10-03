@@ -19,8 +19,10 @@ export default class CastingFatigue extends ForienBaseModule {
   bindHooks() {
     Hooks.on("wfrp4e:rollChannelTest", this.#processRollChannelTest.bind(this));
     Hooks.on("wfrp4e:rollCastTest", this.#processRollCastTest.bind(this));
-    Hooks.on("renderActorSheetWfrp4eCharacter", this.#onRenderActorSheet.bind(this));
-    Hooks.on("renderActorSheetWfrp4eNPC", this.#onRenderActorSheet.bind(this));
+    Hooks.on("renderActorSheetWFRP4eCharacter", this.#onRenderActorSheet.bind(this));
+    Hooks.on("renderActorSheetWFRP4eNPC", this.#onRenderActorSheet.bind(this));
+    Hooks.on("renderActorSheetWFRP4eCharacterV2", this.#onRenderActorV2Sheet.bind(this));
+    // Hooks.on("renderActorSheetWFRP4eNPCV2", this.#onRenderActorV2Sheet.bind(this));
     Hooks.on("ready", this.#registerAutoRegenListeners.bind(this));
   }
 
@@ -55,7 +57,7 @@ export default class CastingFatigue extends ForienBaseModule {
 
   /**
    *
-   * @param {ActorSheetWfrp4e} sheet
+   * @param {ActorSheetWFRP4e} sheet
    * @param {jQuery} html
    * @param {{}} _options
    */
@@ -70,6 +72,27 @@ export default class CastingFatigue extends ForienBaseModule {
       tabMagic.prepend(content);
 
       html.find('#magical-endurance-value').change((ev) => this.#onMagicalEnduranceValueChange(ev, actor));
+    });
+  }
+
+  /**
+   *
+   * @param {ActorSheetWFRP4e} sheet
+   * @param {HTMLElement} html
+   * @param {{}} _options
+   */
+  #onRenderActorV2Sheet(sheet, html, _options) {
+    if (!this.magicalEnduranceEnabled) return;
+
+    const tabMagic = html.querySelector('.tab[data-tab="magic"]');
+    const actor = sheet.actor;
+    const magicalEndurance = this.getMagicalEnduranceData(actor);
+
+    renderTemplate(Utility.getTemplate(this.templates.magicalEndurance), magicalEndurance).then(content => {
+      const child = Utility.stringToHTMLElement(content)
+      tabMagic.prepend(child);
+
+      html.querySelector('#magical-endurance-value').addEventListener("change", (ev) => this.#onMagicalEnduranceValueChange(ev, actor));
     });
   }
 
