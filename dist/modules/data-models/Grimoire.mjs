@@ -137,22 +137,20 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
    * @param user
    * @returns {Promise<{}>}
    */
-  async preCreateData(data, options, user) {
-    const preCreateData = await super.preCreateData(data, options, user);
+  async _preCreate(data, options, user) {
+    await super._preCreate(data, options, user);
 
     if (!data.img || data.img === "icons/svg/item-bag.svg" || data.img === "systems/wfrp4e/icons/blank.png") {
-      preCreateData.img = "icons/sundries/books/book-worn-brown-grey.webp";
+      this.parent.updateSource({"img": "icons/sundries/books/book-worn-brown-grey.webp"});
     }
 
-    if (!preCreateData.system?.encumbrance?.value) {
-      foundry.utils.setProperty(preCreateData, 'system.encumbrance.value', Utility.getSetting(settings.grimoires.defaultEncumbrance));
+    if (!data.system?.encumbrance?.value) {
+      this.updateSource({"encumbrance.value": Utility.getSetting(settings.grimoires.defaultEncumbrance)});
     }
 
-    if (!preCreateData.system?.availability?.value) {
-      foundry.utils.setProperty(preCreateData, 'system.availability.value', Utility.getSetting(settings.grimoires.defaultAvailability));
+    if (!data.system?.availability?.value) {
+      this.updateSource({"availability.value": Utility.getSetting(settings.grimoires.defaultAvailability)});
     }
-
-    return preCreateData;
   }
 
   /**
@@ -246,14 +244,14 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
     }
   }
 
-  async createChecks(data, options, user) {
+  async _onCreate(data, options, user) {
     if (Utility.getSetting(settings.grimoires.requireEquipped)) return;
     if (user !== game.user.id) return;
 
     await this.applySpells();
   }
 
-  async deleteChecks(options, user) {
+  async _onDelete(options, user) {
     if (user !== game.user.id) return;
 
     await this.removeSpells();

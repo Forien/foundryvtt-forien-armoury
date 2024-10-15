@@ -82,28 +82,26 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
    * @param user
    * @returns {Promise<{}>}
    */
-  async preCreateData(data, options, user) {
-    const preCreateData = await super.preCreateData(data, options, user);
+  async _preCreate(data, options, user) {
+    await super._preCreate(data, options, user);
 
     if (!data.img || data.img === "icons/svg/item-bag.svg" || data.img === "systems/wfrp4e/icons/blank.png") {
       const match = data.name.match(/(\(\d+\))/i);
-      preCreateData.img = "icons/sundries/scrolls/scroll-bound-green.webp";
+      this.parent.updateSource({"img": "icons/sundries/scrolls/scroll-bound-green.webp"});
 
       if (match) {
         const number = match[1];
-        preCreateData.name = game.i18n.localize("Forien.Armoury.Scrolls.NewScrollDefaultName") + ` ${number}`;
+        this.parent.updateSource({"name": game.i18n.localize("Forien.Armoury.Scrolls.NewScrollDefaultName") + ` ${number}`});
       }
     }
 
-    if (!preCreateData.system?.encumbrance?.value) {
-      foundry.utils.setProperty(preCreateData, 'system.encumbrance.value', Utility.getSetting(settings.scrolls.defaultEncumbrance));
+    if (!data.system?.encumbrance?.value) {
+      this.updateSource({"encumbrance.value": Utility.getSetting(settings.scrolls.defaultEncumbrance)})
     }
 
-    if (!preCreateData.system?.availability?.value) {
-      foundry.utils.setProperty(preCreateData, 'system.availability.value', Utility.getSetting(settings.scrolls.defaultAvailability));
+    if (!data.system?.availability?.value) {
+      this.updateSource({"availability.value": Utility.getSetting(settings.scrolls.defaultAvailability)})
     }
-
-    return preCreateData;
   }
 
   /**
@@ -113,8 +111,8 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
    * @param options
    * @param user
    */
-  updateChecks(data, options, user) {
-    super.updateChecks(data);
+  _onUpdate(data, options, user) {
+    super._onUpdate(data);
 
     if (data.system?.spellUuid) {
       this.#promptForScrollNameChange(options);

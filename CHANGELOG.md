@@ -2,6 +2,14 @@
 
 ## v3.X.X
 
+### v3.3.0
+* Updated Document Event Listeners (`preCreateData`, `updateChecks`, `createChecks` and `deleteChecks`) to their new equivalents to match current WFRP4e code. This fixes:
+  * Default Encumbrance and Rarity not applying to Grimoires and Scrolls
+  * Scrolls not prompting to update Description
+  * Grimoires not awarding spells when added to Actor (when equipping is not required)
+  * Grimoires not taking spells away when removed from Actor (when equipping is not required)
+
+
 ### v3.2.0
 * Fixed Grimoires not applying SourceId flag correctly, resulting in duplicating spells in very specific conditions
 * Fixed spelling in Hooks registration after they have been renamed
