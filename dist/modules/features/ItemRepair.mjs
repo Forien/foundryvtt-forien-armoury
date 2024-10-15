@@ -89,11 +89,11 @@ export default class ItemRepair extends ForienBaseModule {
 
     if (repaired) {
       if (paid) {
-        let money = MarketWfrp4e.payCommand(data.price, item.actor, {suppressMessage: true});
+        let money = game.wfrp4e.market.payCommand(data.price, item.actor, {suppressMessage: true});
         if (!money)
           return;
 
-        WFRP_Audio.PlayContextAudio({item: {"type": "money"}, action: "lose"});
+        game.wfrp4e.audio.PlayContextAudio({item: {"type": "money"}, action: "lose"});
         await item.actor.updateEmbeddedDocuments("Item", money);
       }
       Utility.notify(game.i18n.format('Forien.Armoury.ItemRepair.Repaired', {name: item.name, repaired: data.repair}));

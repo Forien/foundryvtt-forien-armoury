@@ -11,6 +11,7 @@
         "IngredientFor": "Ingredient for",
         "AvailableSpells": "Available spells",
         "NotAGM": "You must be a GM to use this macro!",
+        "GenerateScrollLoading": "Loading Spells to generate a Magic Scroll…",
 
         "Cant": {
           "UseWomChannelling": "To use Cants, WoM Channelling rules must be enabled in Settings!",

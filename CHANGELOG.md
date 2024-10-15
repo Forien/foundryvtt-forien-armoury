@@ -8,6 +8,7 @@
   * Scrolls not prompting to update Description
   * Grimoires not awarding spells when added to Actor (when equipping is not required)
   * Grimoires not taking spells away when removed from Actor (when equipping is not required)
+* Updated references to some WFRP4e classes. This fixes `Item Repair` and `Generate Random Scroll` Macros.
 
 
 ### v3.2.0

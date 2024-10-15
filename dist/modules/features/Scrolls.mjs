@@ -191,7 +191,7 @@ export default class Scrolls extends ForienBaseModule {
     const maxCNResult = (await cnTable.roll()).results[0];
     const maxCN = Number(maxCNResult?.text) || 0;
 
-    const spells = await game.wfrp4e.utility.findAll("spell");
+    const spells = await warhammer.utility.findAllItems("spell", game.i18n.localize("Forien.Armoury.Macros.GenerateScrollLoading"));
     const validSpells = [];
 
     for (const spell of spells) {

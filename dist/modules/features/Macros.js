@@ -594,7 +594,7 @@ grid-template-areas: 'headerCharacters headerCompanions'
       const bp = ingredientData.system.price.bp * quantity;
 
       if (autoPay) {
-        const moneyPaid = MarketWfrp4e.payCommand(`${ss}ss${bp}bp`, actor);
+        const moneyPaid = game.wfrp4e.market.payCommand(`${ss}ss${bp}bp`, actor);
 
         if (moneyPaid) {
           await actor.updateEmbeddedDocuments("Item", moneyPaid);
