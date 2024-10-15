@@ -4,54 +4,36 @@
   "img": "modules/forien-armoury/icons/spells/runebound-fax.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>You generate flames from your hand of varying intensity. If you want it can be as light as a candle, but you can also furl the flames at your enemies.</p><p>When used as an attack, this Spell is considered a Magic Missile of damage <strong>0 + 1d4</strong>, range of <strong>Willpower Bonus yards</strong> and hits all targets within the <strong>Willpower Bonus yards</strong> zone.</p><p>Critical hits with this spell generate an @Condition[Ablaze]{Ablaze} Condition on the Target.</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "lore": {
-      "type": "String",
-      "label": "Lore",
       "value": "runebound",
       "effectString": ""
     },
     "range": {
-      "type": "String",
-      "label": "Range",
       "value": "Willpower Bonus yards",
       "vortex": false
     },
     "target": {
-      "type": "String",
-      "label": "Target",
       "value": "Willpower Bonus yds",
       "aoe": true
     },
     "duration": {
-      "type": "String",
-      "label": "Duration",
       "value": "",
       "extendable": false
     },
     "damage": {
-      "type": "String",
-      "label": "Damage",
       "dice": "1d4",
       "value": "0"
     },
     "cn": {
-      "type": "Number",
-      "label": "Casting Number",
       "value": 0,
       "SL": 0
     },
     "magicMissile": {
-      "type": "Boolean",
-      "label": "Magic Missile",
       "value": true
     },
     "ritual": {
@@ -60,8 +42,6 @@
       "xp": 0
     },
     "memorized": {
-      "type": "Boolean",
-      "label": "Memorized",
       "value": true
     },
     "skill": {
@@ -69,8 +49,6 @@
     },
     "ingredients": [],
     "currentIng": {
-      "type": "Number",
-      "label": "Ingredient",
       "value": ""
     },
     "wind": {
@@ -120,11 +98,13 @@
           "isPassive": false
         },
         "wfrp4e": {
-          "effectTrigger": "applyDamage",
-          "effectApplication": "damage",
           "hide": false,
-          "preventDuplicateEffects": false,
-          "script": "if (args.opposedTest.attackerTest.result.critical)\n   args.actor.addCondition(\"ablaze\")"
+          "_legacyData": {
+            "effectApplication": "damage",
+            "effectTrigger": "applyDamage",
+            "preventDuplicateEffects": false,
+            "script": "if (args.opposedTest.attackerTest.result.critical)\n   args.actor.addCondition(\"ablaze\")"
+          }
         }
       },
       "tint": "#ffffff",
@@ -140,7 +120,60 @@
       },
       "img": "modules/forien-armoury/icons/spells/runebound-fax.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Fax",
+            "trigger": "applyDamage",
+            "script": "if (args.opposedTest.attackerTest.result.critical)\n   args.actor.addCondition(\"ablaze\")",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!cCJMjFE3vIDZ71xo.3OwDI0feSMOUM1gl"
     }
@@ -151,11 +184,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1688999622218,
-    "modifiedTime": 1689019272039,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

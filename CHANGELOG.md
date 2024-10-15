@@ -3,6 +3,8 @@
 ## v3.X.X
 
 ### v3.3.0
+* Added GM and Player Macros for toggling `Engaged` status
+* Added `Explorer's Backpack`, which allows attaching a Bedroll and a Lantern
 * Updated Document Event Listeners (`preCreateData`, `updateChecks`, `createChecks` and `deleteChecks`) to their new equivalents to match current WFRP4e code. This fixes:
   * Default Encumbrance and Rarity not applying to Grimoires and Scrolls
   * Scrolls not prompting to update Description

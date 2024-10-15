@@ -6,109 +6,74 @@
   "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 0
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "0",
-      "ss": "0",
-      "bp": "0"
+      "gc": 0,
+      "ss": 0,
+      "bp": 0
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "None"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "damageToItem": {
-      "type": "Number",
       "value": 0,
       "shield": 0
     },
     "damage": {
-      "type": "String",
-      "label": "Damage",
-      "dice": "",
       "value": ""
     },
     "reach": {
-      "type": "String",
-      "label": "Reach",
       "value": ""
     },
     "range": {
-      "type": "String",
-      "label": "Range",
       "value": ""
     },
     "skill": {
-      "type": "String",
-      "label": "Skill Override",
       "value": ""
     },
     "modeOverride": {
-      "type": "String",
-      "label": "Mode Override",
       "value": ""
     },
     "twohanded": {
-      "type": "Boolean",
-      "label": "Two-Handed",
       "value": false
     },
     "ammunitionGroup": {
-      "type": "String",
-      "label": "Ammunition Group",
       "value": ""
     },
     "currentAmmo": {
-      "value": 0,
-      "type": "Number"
+      "value": "0"
     },
     "consumesAmmo": {
       "value": true
     },
     "weaponGroup": {
-      "type": "String",
-      "label": "Weapon Group",
       "value": "basic"
     },
     "qualities": {
-      "label": "Qualities",
       "value": []
     },
     "flaws": {
-      "label": "Flaws",
       "value": []
     },
     "special": {
-      "type": "String",
-      "label": "Special",
       "value": ""
     },
-    "equipped": false,
+    "equipped": {
+      "value": false
+    },
     "loaded": {
       "value": false,
       "repeater": false,
@@ -140,33 +105,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Alaric the Mad (Permanent)",
-              "trigger": "preApplyDamage",
-              "script": "args.applyAP = false;",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "preApplyDamage",
@@ -197,7 +135,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Alaric the Mad (Permanent)",
+            "trigger": "preApplyDamage",
+            "script": "args.applyAP = false;",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.lUbwP70wDI5Th7bP"
     },
@@ -222,50 +216,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Alaric the Mad (Temporary)",
-              "trigger": "preApplyDamage",
-              "script": "args.applyAP = false;\n",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Master Rune of Alaric the Mad",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "preApplyDamage",
@@ -296,7 +246,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Alaric the Mad (Temporary)",
+            "trigger": "preApplyDamage",
+            "script": "args.applyAP = false;",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Master Rune of Alaric the Mad",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.HZ3VSvyhJl2agkXl"
     },
@@ -329,50 +348,6 @@
         "wfrp4e": {
           "hide": false,
           "promptItem": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Flight (Permanent)",
-              "trigger": "prepareOwned",
-              "script": "args.item.system.range.value = \"24\";\nargs.item.system.modeOverride.value = \"ranged\";\nargs.item.system.skill.value = \"Ranged (Throwing)\";\nargs.item.system.consumesAmmo.value = false;\n",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Toggle Master Rune of Flight",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "this.effect.update({disabled: !this.effect.disabled});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "prepareItem",
@@ -403,7 +378,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Flight (Permanent)",
+            "trigger": "prepareOwned",
+            "script": "args.item.system.range.value = \"24\";\nargs.item.system.modeOverride.value = \"ranged\";\nargs.item.system.skill.value = \"Ranged (Throwing)\";\nargs.item.system.consumesAmmo.value = false;",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Toggle Master Rune of Flight",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "this.effect.update({disabled: !this.effect.disabled});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.M8I0wBGhZeJ0Wcvn"
     },
@@ -436,67 +480,6 @@
         "wfrp4e": {
           "hide": false,
           "promptItem": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Flight (Temporary)",
-              "trigger": "prepareOwned",
-              "script": "args.item.system.range.value = \"24\";\nargs.item.system.modeOverride.value = \"ranged\";\nargs.item.system.skill.value = \"Ranged (Throwing)\";\nargs.item.system.consumesAmmo.value = false;\n",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Master Rune of Flight",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            },
-            {
-              "label": "Disable Master Rune of Flight",
-              "string": "",
-              "trigger": "rollWeaponTest",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "this.effect.update({disabled: true});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "prepareItem",
@@ -527,7 +510,89 @@
       },
       "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Flight (Temporary)",
+            "trigger": "prepareOwned",
+            "script": "args.item.system.range.value = \"24\";\nargs.item.system.modeOverride.value = \"ranged\";\nargs.item.system.skill.value = \"Ranged (Throwing)\";\nargs.item.system.consumesAmmo.value = false;",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Master Rune of Flight",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          },
+          {
+            "label": "Disable Master Rune of Flight",
+            "trigger": "rollWeaponTest",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "this.effect.update({disabled: true});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.CSUOejTRe8PkIrfM"
     },
@@ -553,33 +618,6 @@
         "wfrp4e": {
           "hide": false,
           "promptItem": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Skalf Blackhammer (Permanent)",
-              "trigger": "prepareOwned",
-              "script": "let regex = /\\d{1,3}/gm;\nlet damage = Number(regex.exec(args.item.system.damage.value)[0] || 0);\nargs.item.system.qualities.value.push({name: \"impact\"});\nargs.item.system.damage.value = args.item.system.damage.value.replace(damage, damage + 3);",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "prepareItem",
@@ -610,7 +648,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Skalf Blackhammer (Permanent)",
+            "trigger": "prepareOwned",
+            "script": "let regex = /\\d{1,3}/gm;\nlet damage = Number(regex.exec(args.item.system.damage.value)[0] || 0);\nargs.item.system.qualities.value.push({name: \"impact\"});\nargs.item.system.damage.value = args.item.system.damage.value.replace(damage, damage + 3);",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.5yxJtpmUVIulDZii"
     },
@@ -636,50 +730,6 @@
         "wfrp4e": {
           "hide": false,
           "promptItem": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Skalf Blackhammer (Temporary)",
-              "trigger": "prepareOwned",
-              "script": "let regex = /\\d{1,3}/gm;\nlet damage = Number(regex.exec(args.item.system.damage.value)[0] || 0);\nargs.item.system.qualities.value.push({name: \"impact\"});\nargs.item.system.damage.value = args.item.system.damage.value.replace(damage, damage + 3);",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Master Rune of Skalf Blackhammer",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "prepareItem",
@@ -710,7 +760,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Skalf Blackhammer (Temporary)",
+            "trigger": "prepareOwned",
+            "script": "let regex = /\\d{1,3}/gm;\nlet damage = Number(regex.exec(args.item.system.damage.value)[0] || 0);\nargs.item.system.qualities.value.push({name: \"impact\"});\nargs.item.system.damage.value = args.item.system.damage.value.replace(damage, damage + 3);",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Master Rune of Skalf Blackhammer",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.jzLtBtcxxelz9f0S"
     },
@@ -743,16 +862,6 @@
         "wfrp4e": {
           "hide": false,
           "promptItem": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "",
@@ -783,7 +892,49 @@
       },
       "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.cXR49Z9BWlC5nxt5"
     },
@@ -816,29 +967,6 @@
         "wfrp4e": {
           "hide": false,
           "promptItem": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true
-          },
-          "scriptData": [
-            {
-              "label": "Activate Master Rune of Snorri Spangelhelm",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "",
@@ -869,7 +997,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Activate Master Rune of Snorri Spangelhelm",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[0].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.DTHpg1fqn2nkELA5"
     },
@@ -895,33 +1079,6 @@
         "wfrp4e": {
           "hide": false,
           "promptItem": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Swiftness (Permanent)",
-              "trigger": "prepareOwned",
-              "script": "args.item.system.qualities.value.push({name: \"fast\"});",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "prepareItem",
@@ -952,7 +1109,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Swiftness (Permanent)",
+            "trigger": "prepareOwned",
+            "script": "args.item.system.qualities.value.push({name: \"fast\"});",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.vu7lLIvI7wWd4eDB"
     },
@@ -978,50 +1191,6 @@
         "wfrp4e": {
           "hide": false,
           "promptItem": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Swiftness (Temporary)",
-              "trigger": "prepareOwned",
-              "script": "args.item.system.qualities.value.push({name: \"fast\"});",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Master Rune of Swiftness",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "prepareItem",
@@ -1052,7 +1221,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Swiftness (Temporary)",
+            "trigger": "prepareOwned",
+            "script": "args.item.system.qualities.value.push({name: \"fast\"});",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Master Rune of Swiftness",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.k69UJgbOOQONyHyX"
     },
@@ -1077,34 +1315,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "testIndependent": false,
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Breaking (Permanent)",
-              "trigger": "opposedDefender",
-              "script": "if (args.opposedTest.result.winner === \"defender\") {\n    let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.effect');\n    let rune = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.name');\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n}",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "opposedDefender",
@@ -1132,7 +1342,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Breaking (Permanent)",
+            "trigger": "opposedDefender",
+            "script": "if (args.opposedTest.result.winner === \"defender\") {\n    let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.effect');\n    let rune = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.name');\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n}",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.EqLoSwFFzlWbrQFD"
     },
@@ -1157,50 +1423,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "testIndependent": false,
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Master Rune of Breaking (Temporary)",
-              "script": "if (args.opposedTest.result.winner === \"defender\") {\n    let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.effect');\n    let rune = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.name');\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n}",
-              "trigger": "opposedDefender",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Master Rune of Breaking",
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "invoke",
@@ -1228,7 +1450,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/master-weapon-rune.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Master Rune of Breaking (Temporary)",
+            "script": "if (args.opposedTest.result.winner === \"defender\") {\n    let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.effect');\n    let rune = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfBreaking.name');\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n}",
+            "trigger": "opposedDefender",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Master Rune of Breaking",
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!PE6EPbkyk3UirW9z.iuF9Ql6VWt9LU1pH"
     }
@@ -1241,11 +1532,11 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.1.2",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1688747984973,
-    "modifiedTime": 1714213697262,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

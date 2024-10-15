@@ -4,75 +4,45 @@
   "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 0
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "0",
-      "ss": "0",
-      "bp": "0"
+      "gc": 0,
+      "ss": 0,
+      "bp": 0
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "None"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "damageToItem": {
-      "type": "Number",
       "value": 0,
       "shield": 0
     },
-    "worn": {
-      "type": "Boolean",
-      "label": "Worn",
-      "value": false
-    },
     "armorType": {
-      "type": "String",
-      "label": "Armour Type",
       "value": "softLeather"
     },
     "penalty": {
-      "type": "String",
-      "label": "Penalty",
       "value": ""
     },
     "qualities": {
-      "type": "String",
-      "label": "Qualities",
       "value": []
     },
     "flaws": {
-      "type": "String",
-      "label": "Flaws",
       "value": []
     },
     "special": {
-      "type": "String",
-      "label": "Special",
       "value": ""
     },
     "AP": {
@@ -90,6 +60,9 @@
       "lLeg": 0,
       "rLeg": 0,
       "body": 0
+    },
+    "equipped": {
+      "value": false
     }
   },
   "effects": [
@@ -114,29 +87,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Fortitude (Permanent)",
-              "trigger": "woundCalc",
-              "script": "args.wounds += 4",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "woundCalc",
@@ -167,7 +117,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Fortitude (Permanent)",
+            "trigger": "woundCalc",
+            "script": "args.wounds += 4",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.F0tIXCY3XR8s5ZeP"
     },
@@ -192,39 +198,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Fortitude (Temporary)",
-              "trigger": "woundCalc",
-              "script": "args.wounds += 4"
-            },
-            {
-              "label": "Activate Rune of Fortitude",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "woundCalc",
@@ -255,7 +228,73 @@
       },
       "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Fortitude (Temporary)",
+            "trigger": "woundCalc",
+            "script": "args.wounds += 4",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Rune of Fortitude",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.GL8n0xJUBInNUQGQ"
     },
@@ -280,29 +319,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Iron (Permanent)",
-              "trigger": "preTakeDamage",
-              "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.effect');\n\nargs.totalWoundLoss -= 1;\nargs.opposedTest.result.other.push(`<strong>${name}:</strong> ${effect}`);",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "preTakeDamage",
@@ -333,7 +349,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Iron (Permanent)",
+            "trigger": "preTakeDamage",
+            "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.effect');\n\nargs.totalWoundLoss -= 1;\nargs.opposedTest.result.other.push(`<strong>${name}:</strong> ${effect}`);",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.YSKa6PFb3aEKSM0G"
     },
@@ -358,50 +430,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Iron (Temporary)",
-              "trigger": "preTakeDamage",
-              "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.effect');\n\nargs.totalWoundLoss -= 1;\nargs.opposedTest.result.other.push(`<strong>${name}:</strong> ${effect}`);",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Rune of Iron",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "preTakeDamage",
@@ -432,7 +460,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Iron (Temporary)",
+            "trigger": "preTakeDamage",
+            "script": "let name = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.effect');\n\nargs.totalWoundLoss -= 1;\nargs.opposedTest.result.other.push(`<strong>${name}:</strong> ${effect}`);",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Rune of Iron",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.DmEsQ7dmTnNxRLqI"
     },
@@ -457,33 +554,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Resistance (Permanent)",
-              "trigger": "takeDamage",
-              "script": "if (args.applyAP && args.applyTB) return;\n\nconst modifier = Number(-(args.totalWoundLoss * 5));\nconst options = {fields: {modifier: modifier}, data: {other: ['hi!']}};\nlet test = await this.actor.setupCharacteristic(\"t\", options)\n\nawait test.roll();\n\nif (test.data.result.outcome === \"success\")\n  args.totalWoundLoss = 0;\n\nlet name = game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.effect');\n\ntest.data.result.other.push(`<strong>${name}:</strong> ${effect}`);\nawait test.renderRollCard();\n",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "opposedDefender",
@@ -514,7 +584,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Resistance (Permanent)",
+            "trigger": "takeDamage",
+            "script": "if (args.applyAP && args.applyTB) return;\n\nconst modifier = Number(-(args.totalWoundLoss * 5));\nconst options = {fields: {modifier: modifier}, data: {other: ['hi!']}};\nlet test = await this.actor.setupCharacteristic(\"t\", options)\n\nawait test.roll();\n\nif (test.data.result.outcome === \"success\")\n  args.totalWoundLoss = 0;\n\nlet name = game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.effect');\n\ntest.data.result.other.push(`<strong>${name}:</strong> ${effect}`);\nawait test.renderRollCard();",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.CeQg9ShwKv19ppE3"
     },
@@ -539,50 +665,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Resistance (Temporary)",
-              "trigger": "takeDamage",
-              "script": "if (args.applyAP && args.applyTB) return;\n\nconst modifier = Number(-(args.totalWoundLoss * 5));\nconst options = {fields: {modifier: modifier}, data: {other: ['hi!']}};\nlet test = await this.actor.setupCharacteristic(\"t\", options)\n\nawait test.roll();\n\nif (test.data.result.outcome === \"success\")\n  args.totalWoundLoss = 0;\n\nlet name = game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.effect');\n\ntest.data.result.other.push(`<strong>${name}:</strong> ${effect}`);\nawait test.renderRollCard();\n",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Rune of Resistance",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "opposedDefender",
@@ -613,7 +695,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Resistance (Temporary)",
+            "trigger": "takeDamage",
+            "script": "if (args.applyAP && args.applyTB) return;\n\nconst modifier = Number(-(args.totalWoundLoss * 5));\nconst options = {fields: {modifier: modifier}, data: {other: ['hi!']}};\nlet test = await this.actor.setupCharacteristic(\"t\", options)\n\nawait test.roll();\n\nif (test.data.result.outcome === \"success\")\n  args.totalWoundLoss = 0;\n\nlet name = game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.effect');\n\ntest.data.result.other.push(`<strong>${name}:</strong> ${effect}`);\nawait test.renderRollCard();",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Rune of Resistance",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.Z8nAAgVmieVaCU2z"
     },
@@ -637,29 +788,30 @@
       "statuses": [],
       "flags": {
         "wfrp4e": {
-          "effectTrigger": "targetPrefillDialog",
-          "effectApplication": "equipped",
           "hide": false,
-          "preventDuplicateEffects": false,
-          "script": "if (args.item?.isRanged) {\n  args.prefillModifiers.modifier -= 20;\n}",
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": true
+          },
           "scriptData": [
             {
               "label": "Rune of Shielding (Permanent)",
               "trigger": "dialog",
               "options": {
                 "dialog": {
-                  "targeter": true,
-                  "hideScript": "",
-                  "activateScript": "return args.options.weapon?.isRanged",
-                  "submissionScript": ""
-                },
-                "immediate": {
-                  "deleteEffect": false
+                  "targeter": true
                 }
               },
-              "script": "args.prefillModifiers.modifier -= 20;"
+              "script": "if (args.item?.isRanged) {\n  args.prefillModifiers.modifier -= 20;\n}"
             }
-          ]
+          ],
+          "_legacyData": {
+            "effectApplication": "equipped",
+            "effectTrigger": "targetPrefillDialog",
+            "preventDuplicateEffects": false,
+            "script": "if (args.item?.isRanged) {\n  args.prefillModifiers.modifier -= 20;\n}"
+          }
         },
         "forien-armoury": {
           "isTemporary": false
@@ -684,7 +836,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Shielding (Permanent)",
+            "trigger": "dialog",
+            "options": {
+              "targeter": true,
+              "hideScript": "",
+              "activateScript": "return args.options.weapon?.isRanged",
+              "submissionScript": "",
+              "deleteEffect": false
+            },
+            "script": "args.prefillModifiers.modifier -= 20;",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.RtdOyqqG5nWdUjqj"
     },
@@ -709,50 +917,6 @@
       "flags": {
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": true,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Shielding (Temporary)",
-              "trigger": "dialog",
-              "options": {
-                "dialog": {
-                  "targeter": true,
-                  "hideScript": "",
-                  "activateScript": "return args.options.weapon?.isRanged",
-                  "submissionScript": ""
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "args.prefillModifiers.modifier -= 20;"
-            },
-            {
-              "label": "Activate Rune of Shielding",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "targetPrefillDialog",
@@ -783,7 +947,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": true,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Shielding (Temporary)",
+            "trigger": "dialog",
+            "options": {
+              "targeter": true,
+              "hideScript": "",
+              "activateScript": "return args.options.weapon?.isRanged",
+              "submissionScript": "",
+              "deleteEffect": false
+            },
+            "script": "args.prefillModifiers.modifier -= 20;",
+            "async": false
+          },
+          {
+            "label": "Activate Rune of Shielding",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.b5zXQwnBxWOXXJNU"
     },
@@ -809,33 +1042,6 @@
         "wfrp4e": {
           "hide": false,
           "promptItem": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Stone (Permanent)",
-              "trigger": "prepareOwned",
-              "script": "let ap = args.item.system.AP;\n\nfor (let loc in ap) {\n  let location = args.item.system.AP[loc];\n  if (location > 0)\n  args.item.system.AP[loc] += 1;\n};",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "prepareItem",
@@ -866,7 +1072,63 @@
       },
       "img": "modules/forien-armoury/icons/runes/armour-rune-permanent.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Stone (Permanent)",
+            "trigger": "prepareOwned",
+            "script": "let ap = args.item.system.AP;\n\nfor (let loc in ap) {\n  let location = args.item.system.AP[loc];\n  if (location > 0)\n  args.item.system.AP[loc] += 1;\n};",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.hp8rGLfCnkU3xCOj"
     },
@@ -892,50 +1154,6 @@
         "wfrp4e": {
           "hide": false,
           "promptItem": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Item",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Rune of Stone (Temporary)",
-              "trigger": "prepareOwned",
-              "script": "let ap = args.item.system.AP;\n\nfor (let loc in ap) {\n  let location = args.item.system.AP[loc];\n  if (location > 0)\n  args.item.system.AP[loc] += 1;\n};",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "Activate Rune of Stone",
-              "string": "",
-              "trigger": "manual",
-              "options": {
-                "dialog": {
-                  "hideScript": "",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              },
-              "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "equipped",
             "effectTrigger": "prepareItem",
@@ -966,7 +1184,76 @@
       },
       "img": "modules/forien-armoury/icons/runes/armour-rune-temporary.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Item",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Rune of Stone (Temporary)",
+            "trigger": "prepareOwned",
+            "script": "let ap = args.item.system.AP;\n\nfor (let loc in ap) {\n  let location = args.item.system.AP[loc];\n  if (location > 0)\n  args.item.system.AP[loc] += 1;\n};",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "Activate Rune of Stone",
+            "trigger": "manual",
+            "options": {
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "script": "const scriptData = this.effect.flags.wfrp4e.scriptData;\nscriptData[1].trigger = \"\";\nthis.effect.update({\"flags.wfrp4e.scriptData\": scriptData, disabled: false});",
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!JV4MzBoyCXZBeKx5.H89P8MR1zmaOcTzL"
     }
@@ -977,11 +1264,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1688943320462,
-    "modifiedTime": 1704814042135,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

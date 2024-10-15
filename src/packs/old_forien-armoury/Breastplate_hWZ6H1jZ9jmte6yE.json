@@ -6,65 +6,39 @@
   "img": "icons/equipment/chest/breastplate-gorget-steel.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>Breastplate is a type of plate armour that covers only front portion of torso.</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 2
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "5",
-      "ss": "0",
-      "bp": "0"
+      "gc": 5,
+      "ss": 0,
+      "bp": 0
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "scarce"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "damageToItem": {
-      "type": "Number",
       "value": 0,
       "shield": 0
     },
-    "worn": {
-      "type": "Boolean",
-      "label": "Worn",
-      "value": false
-    },
     "armorType": {
-      "type": "String",
-      "label": "Armour Type",
       "value": "plate"
     },
     "penalty": {
-      "type": "String",
-      "label": "Penalty",
       "value": ""
     },
     "qualities": {
-      "type": "String",
-      "label": "Qualities",
       "value": [
         {
           "name": "impenetrable",
@@ -73,8 +47,6 @@
       ]
     },
     "flaws": {
-      "type": "String",
-      "label": "Flaws",
       "value": [
         {
           "name": "partial",
@@ -83,8 +55,6 @@
       ]
     },
     "special": {
-      "type": "String",
-      "label": "Special",
       "value": ""
     },
     "AP": {
@@ -102,6 +72,9 @@
       "lLeg": 0,
       "rLeg": 0,
       "body": 0
+    },
+    "equipped": {
+      "value": false
     }
   },
   "effects": [],
@@ -113,11 +86,11 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1687445149875,
-    "modifiedTime": 1688516213545,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

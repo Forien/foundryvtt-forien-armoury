@@ -6,21 +6,15 @@
   "img": "icons/magic/unholy/strike-body-life-soul-green.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>This character is repulsive, for whatever reason. They may be drenched in sewage, not bathed in few months, or be avoided by others for literally any other reason.</p><p>Their Fellowship is halved.</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "rollable": {
       "value": false,
       "damage": false,
       "skill": "",
-      "label": "Rollable",
-      "type": "Boolean",
       "rollCharacteristic": "",
       "bonusCharacteristic": "",
       "dice": "",
@@ -29,18 +23,16 @@
       "attackType": "melee"
     },
     "specification": {
-      "value": "",
-      "type": "String",
-      "label": "Specification"
+      "value": ""
     },
     "qualities": {
-      "label": "Qualities",
       "value": []
     },
     "flaws": {
-      "label": "Flaws",
       "value": []
-    }
+    },
+    "category": "standard",
+    "disabled": false
   },
   "effects": [
     {
@@ -66,11 +58,13 @@
           "isPassive": true
         },
         "wfrp4e": {
-          "effectTrigger": "prepareData",
-          "effectApplication": "actor",
           "hide": false,
-          "preventDuplicateEffects": false,
-          "script": "args.actor.system.characteristics.fel.value = Math.floor(args.actor.system.characteristics.fel.value / 2);"
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "prepareData",
+            "preventDuplicateEffects": false,
+            "script": "args.actor.system.characteristics.fel.value = Math.floor(args.actor.system.characteristics.fel.value / 2);"
+          }
         }
       },
       "tint": "#ffffff",
@@ -86,7 +80,60 @@
       },
       "img": "icons/magic/unholy/strike-body-life-soul-green.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Repulsive",
+            "trigger": "prepareData",
+            "script": "args.actor.system.characteristics.fel.value = Math.floor(args.actor.system.characteristics.fel.value / 2);",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!NRVJQWYBfbZsPM4s.ZW9h1JGyrnEGPzQW"
     }
@@ -99,11 +146,11 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1701640184018,
-    "modifiedTime": 1702856365054,
-    "lastModifiedBy": "XoHsMevsFtsW7WqO",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

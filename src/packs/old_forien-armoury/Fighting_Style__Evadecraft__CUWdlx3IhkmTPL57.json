@@ -4,34 +4,22 @@
   "img": "modules/forien-armoury/icons/talents/style_survival.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>Adherents of the Shrewd Evadecraft fighting style thrive on adaptive survival. Masters of trickery, nimble dodging, and keen observation, they keep themselves alive by outsmarting foes and deftly navigating the ebb and flow of battle. In the chaotic symphony of combat, they are the agile orchestrators, learning and countering their adversaries' moves with a calculated finesse.</p><ul><li><p>Once per Encounter you may safely <strong>Disengage</strong> without spending Advantage</p></li></ul><p>You also receive following perks, depending on Advances in Melee or Ranged Skill used with currently equipped weapon:</p><ul><li><p><strong>5+</strong> – <em>Shrewd Evadecraft</em> — You may use your weapon to oppose Ranged Attacks with –20 modifier.</p></li><li><p><strong>10+</strong> – <em>Lucky Evadecraft</em> — Whenever an enemy is about to critically hit you, you may spend a Fortune point to force the enemy to reroll</p></li><li><p><strong>15+</strong> – <em>Shrewd Trickery</em> — You gain +10 modifier to <strong>Trick </strong>ability. Winning by 4 SL or more gives 2 Advantage instead of 1.</p><ul><li><p>If you play without Group Advantage ruleset, you may <em>still</em> use the Trick ability as described by Group Advantage rules within the \"Up in Arms\" rulebook</p></li></ul></li></ul>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "max": {
-      "type": "String",
-      "label": "Max Advances",
       "value": "1"
     },
     "advances": {
-      "type": "Number",
-      "label": "Advances",
       "value": 1,
       "force": false
     },
     "career": {
-      "value": "",
-      "type": "String",
-      "label": "Career"
+      "value": ""
     },
     "tests": {
-      "type": "String",
-      "label": "Tests",
       "value": "Dodge Tests when fighting larger enemies, or when outnumbered"
     }
   },
@@ -60,23 +48,6 @@
         },
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "testIndependent": false,
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Shrewd Disengage",
-              "trigger": "manual",
-              "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.shrewdDisengage(args, this);"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "actor",
             "effectTrigger": "invoke",
@@ -101,7 +72,60 @@
       },
       "img": "modules/forien-armoury/icons/talents/style_survival.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Shrewd Disengage",
+            "trigger": "manual",
+            "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.shrewdDisengage(args, this);",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!CUWdlx3IhkmTPL57.9C9EtP4IR2c7iNIn"
     },
@@ -129,50 +153,6 @@
         },
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "testIndependent": false,
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Opposing Ranged Attacks with Melee Weapon",
-              "trigger": "dialog",
-              "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.shrewdEvadecraft(args, this);",
-              "options": {
-                "dialog": {
-                  "activateScript": "return true",
-                  "hideScript": "return game.modules.get(\"forien-armoury\")?.api.helpers.styles.canShrewdEvadecraft(args, this);",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            },
-            {
-              "label": "@item.system.tests.value",
-              "script": "args.fields.successBonus++;",
-              "trigger": "dialog",
-              "options": {
-                "dialog": {
-                  "hideScript": "return !args.options.dodge",
-                  "activateScript": "",
-                  "submissionScript": "",
-                  "targeter": false
-                },
-                "immediate": {
-                  "deleteEffect": false
-                }
-              }
-            }
-          ],
           "_legacyData": {
             "effectApplication": "actor",
             "effectTrigger": "prefillDialog",
@@ -197,7 +177,76 @@
       },
       "img": "modules/forien-armoury/icons/talents/style_survival.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Opposing Ranged Attacks with Melee Weapon",
+            "trigger": "dialog",
+            "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.shrewdEvadecraft(args, this);",
+            "options": {
+              "activateScript": "return true",
+              "hideScript": "return game.modules.get(\"forien-armoury\")?.api.helpers.styles.canShrewdEvadecraft(args, this);",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "label": "@item.system.tests.value",
+            "script": "args.fields.successBonus++;",
+            "trigger": "dialog",
+            "options": {
+              "hideScript": "return !args.options.dodge",
+              "activateScript": "",
+              "submissionScript": "",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!CUWdlx3IhkmTPL57.MkV7vILBvDcELJuf"
     },
@@ -225,23 +274,6 @@
         },
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "testIndependent": false,
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Shrewd Trickery",
-              "trigger": "manual",
-              "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.shrewdTrickery(args, this);"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "actor",
             "effectTrigger": "invoke",
@@ -266,7 +298,60 @@
       },
       "img": "modules/forien-armoury/icons/talents/style_survival.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Shrewd Trickery",
+            "trigger": "manual",
+            "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.shrewdTrickery(args, this);",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!CUWdlx3IhkmTPL57.wvkuKKoN1QbHNOxg"
     },
@@ -294,23 +379,6 @@
         },
         "wfrp4e": {
           "hide": false,
-          "applicationData": {
-            "type": "document",
-            "documentType": "Actor",
-            "equipTransfer": false,
-            "avoidTest": {
-              "value": "none"
-            },
-            "testIndependent": false,
-            "prompt": false
-          },
-          "scriptData": [
-            {
-              "label": "Lucky Evadecraft",
-              "trigger": "preOpposedDefender",
-              "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.luckyEvadecraft(args, this);"
-            }
-          ],
           "_legacyData": {
             "effectApplication": "actor",
             "effectTrigger": "preOpposedDefender",
@@ -335,7 +403,60 @@
       },
       "img": "modules/forien-armoury/icons/talents/style_survival.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Lucky Evadecraft",
+            "trigger": "preOpposedDefender",
+            "script": "game.modules.get(\"forien-armoury\")?.api.helpers.styles.luckyEvadecraft(args, this);",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!CUWdlx3IhkmTPL57.eDmoETbCwpItkgpj"
     }
@@ -353,11 +474,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.1.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1702057628149,
-    "modifiedTime": 1714394661309,
-    "lastModifiedBy": "rTgnwDbJCJYDenyf",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

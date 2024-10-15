@@ -5,37 +5,25 @@
   "img": "modules/forien-armoury/icons/careers/runesmith-3.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.e0UGR1lJQjdA68Er]{Runesmith}</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "careergroup": {
-      "type": "String",
-      "label": "Career Group",
       "value": "Runesmith"
     },
     "class": {
-      "type": "String",
-      "label": "Class",
       "value": "Academics"
     },
     "current": {
-      "type": "Boolean",
       "value": false
     },
     "complete": {
-      "type": "Boolean",
       "value": false
     },
     "level": {
-      "type": "String",
-      "label": "Career Level",
-      "value": "3"
+      "value": 3
     },
     "status": {
       "tier": "g",
@@ -91,11 +79,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.5.9",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1688388710193,
-    "modifiedTime": 1689017857574,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

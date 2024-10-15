@@ -12,104 +12,66 @@
   },
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>Old bow, most likely passed down the generations. It's no longer as accurate and reliable as it once was, but is still potent enough.</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": ""
     },
     "quantity": {
-      "type": "Number",
-      "label": "Quantity",
       "value": 1
     },
     "encumbrance": {
-      "type": "Number",
-      "label": "Encumbrance",
       "value": 2
     },
     "price": {
-      "type": "String",
-      "label": "Price",
-      "gc": "1",
-      "ss": "0",
-      "bp": "0"
+      "gc": 1,
+      "ss": 0,
+      "bp": 0
     },
     "availability": {
-      "type": "String",
-      "label": "Availability",
       "value": "common"
     },
     "location": {
-      "type": "Number",
-      "label": "Location",
-      "value": 0
+      "value": ""
     },
     "damageToItem": {
-      "type": "Number",
       "value": 0,
       "shield": 0
     },
     "damage": {
-      "type": "String",
-      "label": "Damage",
-      "dice": "",
-      "value": "SB+3",
-      "meleeValue": "",
-      "rangedValue": "SB+3"
+      "value": "SB+3"
     },
     "reach": {
-      "type": "String",
-      "label": "Reach",
       "value": ""
     },
     "range": {
-      "type": "String",
-      "label": "Range",
       "value": "50"
     },
     "skill": {
-      "type": "String",
-      "label": "Skill Override",
       "value": ""
     },
     "modeOverride": {
-      "type": "String",
-      "label": "Mode Override",
       "value": ""
     },
     "twohanded": {
-      "type": "Boolean",
-      "label": "Two-Handed",
       "value": true
     },
     "ammunitionGroup": {
-      "type": "String",
-      "label": "Ammunition Group",
       "value": "bow"
     },
     "currentAmmo": {
-      "value": 0,
-      "type": "Number"
+      "value": "0"
     },
     "consumesAmmo": {
       "value": true
     },
     "weaponGroup": {
-      "type": "String",
-      "label": "Weapon Group",
       "value": "bow"
     },
     "qualities": {
-      "label": "Qualities",
-      "value": [],
-      "type": "String"
+      "value": []
     },
     "flaws": {
-      "label": "Flaws",
       "value": [
         {
           "name": "imprecise",
@@ -119,15 +81,14 @@
           "name": "unreliable",
           "value": null
         }
-      ],
-      "type": "String"
+      ]
     },
     "special": {
-      "type": "String",
-      "label": "Special",
       "value": ""
     },
-    "equipped": false,
+    "equipped": {
+      "value": false
+    },
     "loaded": {
       "value": false,
       "repeater": false,
@@ -135,19 +96,15 @@
     },
     "offhand": {
       "value": false
-    },
-    "source": {
-      "type": "String",
-      "label": "Source"
     }
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "6.6.1",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1663627495286,
-    "modifiedTime": 1690162942143,
-    "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },

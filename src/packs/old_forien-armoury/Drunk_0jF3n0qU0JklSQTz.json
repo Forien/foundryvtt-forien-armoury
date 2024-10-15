@@ -4,21 +4,15 @@
   "img": "icons/magic/acid/dissolve-vomit-green-brown.webp",
   "system": {
     "description": {
-      "type": "String",
-      "label": "Description",
       "value": "<p>A fast and convenient way to apply the Characteristics modifiers that come from failed @UUID[JournalEntry.6zOdTLv3YeYeJ4hR.JournalEntryPage.38Ux3mEWYuQ4heIT]{Consume Alcohol} Test</p>"
     },
     "gmdescription": {
-      "type": "String",
-      "label": "Description",
       "value": "<blockquote class=\"foundry-note\"><p>To apply the modifiers, you can drag the entire <strong>Trait</strong> to the Actor, or just move the \"Drunk\" effect from the <strong>Effects</strong> tab.</p></blockquote>"
     },
     "rollable": {
       "value": false,
       "damage": false,
       "skill": "",
-      "label": "Rollable",
-      "type": "Boolean",
       "rollCharacteristic": "",
       "bonusCharacteristic": "",
       "dice": "",
@@ -27,18 +21,16 @@
       "attackType": "melee"
     },
     "specification": {
-      "value": "",
-      "type": "String",
-      "label": "Specification"
+      "value": ""
     },
     "qualities": {
-      "label": "Qualities",
       "value": []
     },
     "flaws": {
-      "label": "Flaws",
       "value": []
-    }
+    },
+    "category": "standard",
+    "disabled": false
   },
   "effects": [
     {
@@ -64,11 +56,13 @@
           "isPassive": true
         },
         "wfrp4e": {
-          "effectTrigger": "prePrepareData",
-          "effectApplication": "actor",
           "hide": false,
-          "preventDuplicateEffects": false,
-          "script": "args.actor.characteristics.ws.modifier -= 10;\nargs.actor.characteristics.bs.modifier -= 10;\nargs.actor.characteristics.ag.modifier -= 10;\nargs.actor.characteristics.dex.modifier -= 10;\nargs.actor.characteristics.int.modifier -= 10;"
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "prePrepareData",
+            "preventDuplicateEffects": false,
+            "script": "args.actor.characteristics.ws.modifier -= 10;\nargs.actor.characteristics.bs.modifier -= 10;\nargs.actor.characteristics.ag.modifier -= 10;\nargs.actor.characteristics.dex.modifier -= 10;\nargs.actor.characteristics.int.modifier -= 10;"
+          }
         }
       },
       "tint": "#ffffff",
@@ -84,7 +78,60 @@
       },
       "img": "icons/magic/acid/dissolve-vomit-green-brown.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {},
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": true
+            },
+            "duration": "sustained"
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "label": "Drunk",
+            "trigger": "prePrepareData",
+            "script": "args.actor.characteristics.ws.modifier -= 10;\nargs.actor.characteristics.bs.modifier -= 10;\nargs.actor.characteristics.ag.modifier -= 10;\nargs.actor.characteristics.dex.modifier -= 10;\nargs.actor.characteristics.int.modifier -= 10;",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        }
+      },
       "sort": 0,
       "_key": "!items.effects!0jF3n0qU0JklSQTz.x5R1aQSLJa0HpL77"
     }
@@ -105,11 +152,11 @@
   },
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
     "createdTime": 1702579795492,
-    "modifiedTime": 1702856829867,
-    "lastModifiedBy": "XoHsMevsFtsW7WqO",
+    "modifiedTime": 1725649107156,
+    "lastModifiedBy": "fFoy1XcWdYw2CdYl",
     "compendiumSource": null,
     "duplicateSource": null
   },
