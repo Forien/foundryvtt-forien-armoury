@@ -12,6 +12,12 @@ This module is a collection of custom trappings and features for Warhammer Fanta
 
 Forien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded
 
+### Notable changes in v3.2, v3.3 and v3.4
+* Added Automatic Injury Progression feature
+* Added GM and Player Macros for toggling `Engaged` status
+* Added `Explorer's Backpack`, which allows attaching a Bedroll and a Lantern
+* Added support for Character Sheet v2
+* You can read full changelog [here](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
 
 ### Notable changes in v3.1.0
 * Updated for Active Effects using Data Models (with [Warhammer Library](https://foundryvtt.com/packages/warhammer-lib)) and verified for WFRP4e 8.0.1
@@ -74,11 +80,13 @@ This Module adds some QoL and automation features, including mechanics that:
 * Allow for automatic removal of **Temporary Runes** when they get disabled (preferably by `Times Up` Module). 
   * Optionally allows for damaging an Item when Rune is removed (disabled by default).
 * **Magic Scrolls**, completely new, independent Item type that allows characters to cast spells from scrolls without needing to know the Spell
+* **Grimoire**, new, independent Item type that allows characters to get access to spells by equipping Grimoires
 * **Arrow Reclamation**, allowing players to recover some of the ammunition (arrows, bolts or sling bullets) after an encounter. Defaults to even rolls. Disabled by default.
 * **Combat Fatigue**, using optional _„Getting Tired“_ ruleset.
 * **Casting Fatigue**, providing soft limit to amount of spells that can be cast in short amount of time.
 * **Automated Disease Progression**, allowing for `incubation` and `duration` of diseases to countdown automatically.
-* Additionally this module contains quite a bit of utility or quality of life macros. You can find full list [down below](#Macros), but here are few:
+* **Automated Injury Progression**, allowing for `duration` of injuries to countdown automatically.
+* Additionally, this module contains quite a bit of utility or quality of life macros. You can find full list [down below](#Macros), but here are few:
   * **Generate Random Scroll** (Macro), improved WoM macro that now creates usable Magic Scroll
   * **Check Careers** (Macro), allows players to quickly check their progress through current Career and how far are they from completing it.
   * **Item Repair** (Macro), allow players to easily repair their equipment for free or for price, using Macro and clean, readable auto-updating Chat Card
@@ -151,17 +159,19 @@ Module contains single Compendium Pack containing two Journals:
 ### Macros
 Module contains a single Compendium Pack containing 10 Macros:
 
-* GM Macro to quickly set Infighting on target Tokens
+* GM Macro to quickly set Infighting on controlled or targeted Tokens
 * 3 GM Macros to quickly set selected tokens' dispositions
 * GM Macro to quickly generate a random, fully usable Magic Scroll
 * GM Macro to generate a table where they can quickly check basic status of PCs
 * GM Macro to easily award XP to party based on folders, including half XP for companions
+* GM Macro to quickly toggle Engaged on controlled or targeted Tokens
 * Player Macro to check their Career progression
 * 2 Player Macros to check for their Damaged Equipment
 * Player Macro to generate specific Ingredient for, and based on a specific Spell
 * Player Macro to roll for advanced Skill with limited SL result
 * Player Macro to quickly and easily create an Extended Lockpicking Test
 * Player Macro to implement "Cants" (Cantrips) from AotE3, requires setup.
+* Player Macro to quickly toggle Engaged status on their own Actor.
 * General Macro to quickly open a WFRP4e Item Browser
 * General Macro to quickly open the Forien's Armoury Settings
 

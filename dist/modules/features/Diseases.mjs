@@ -487,8 +487,8 @@ export default class Diseases extends ForienBaseModule {
 
     await this.#saveLastProgress(disease, time);
 
-    // await actor.decrementDisease(disease);
-    let newType = await this.#decrementDisease(actor, disease, type);
+    let newDisease = await disease.system.decrement();
+    let newType = newDisease?.system.duration.active ? 'duration' : 'incubation';
 
     if (newType !== type) {
       this.#removeListener(uuid);

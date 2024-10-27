@@ -22,6 +22,7 @@ import Macros from "./features/Macros.js";
 import GrimoireModel from "./data-models/Grimoire.mjs";
 import GrimoireSheet from "./apps/GrimoireSheet.mjs";
 import Grimoires from "./features/Grimoires.mjs";
+import Injuries from "./features/Injuries.mjs";
 
 export default class ForienArmoury {
   /**
@@ -35,6 +36,7 @@ export default class ForienArmoury {
     Diseases,
     Grimoires,
     Integrations,
+    Injuries,
     ItemProperties,
     ItemRepair,
     Macros,

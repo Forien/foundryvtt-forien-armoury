@@ -2,6 +2,10 @@
 
 ## v3.X.X
 
+### v3.4.0
+* Added Automatic Injury Progression feature
+* Updated Automatic Disease Progression feature to use system's functions for decrementation instead of custom ones
+
 ### v3.3.0
 * Added GM and Player Macros for toggling `Engaged` status
 * Added `Explorer's Backpack`, which allows attaching a Bedroll and a Lantern

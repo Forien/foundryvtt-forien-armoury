@@ -36,7 +36,25 @@ function registerSettings() {
     onChange: (value) => {
       if (value && game.time.worldTime === 0) {
         Utility.notify(game.i18n.localize("Forien.Armoury.Settings.Diseases.AutoProgressNoWorldTime"), {type: 'warning', permanent: true});
-        game.settings.set(constants.moduleId, settings.magicalEndurance.autoRegen, false);
+        game.settings.set(constants.moduleId, settings.diseases.autoProgress, false);
+      } else if (game.time.worldTime !== 0) {
+        SettingsConfig.reloadConfirm({world: true})
+      }
+    }
+  });
+
+  // Should injury progress automatically with passage of time?
+  game.settings.register(constants.moduleId, settings.injuries.autoProgress, {
+    name: 'Forien.Armoury.Settings.Injuries.AutoProgress',
+    hint: 'Forien.Armoury.Settings.Injuries.AutoProgressHint',
+    scope: 'world',
+    config: false,
+    default: defaults.injuries.autoProgress,
+    type: Boolean,
+    onChange: (value) => {
+      if (value && game.time.worldTime === 0) {
+        Utility.notify(game.i18n.localize("Forien.Armoury.Settings.Injuries.AutoProgressNoWorldTime"), {type: 'warning', permanent: true});
+        game.settings.set(constants.moduleId, settings.injuries.autoProgress, false);
       } else if (game.time.worldTime !== 0) {
         SettingsConfig.reloadConfirm({world: true})
       }

@@ -471,6 +471,12 @@
           "AutoProgressNoWorldTime": "WorldTime hasn't been set. Please activate and configure a time tracking module (for example, Simple Calendar) before enabling Automated Disease Progression."
         },
 
+        "Injuries": {
+          "AutoProgress": "Automated Injury Progression",
+          "AutoProgressHint": "If checked, module will progress Actors' injuries automatically (Requires a time tracking module. <a href=\"https://foundryvtt.com/packages/foundryvtt-simple-calendar\" target=\"_blank\"><b>Simple Calendar</b></a> is recommended).",
+          "AutoProgressNoWorldTime": "WorldTime hasn't been set. Please activate and configure a time tracking module (for example, Simple Calendar) before enabling Automated Injury Progression."
+        },
+
         "ArrowReclamation": {
           "Enable": "Enable ammo reclamation",
           "EnableHint": "Enable ammo reclamation upon range weapon test roll. When used during an encounter some projectiles will be returned after encounter ends.",
