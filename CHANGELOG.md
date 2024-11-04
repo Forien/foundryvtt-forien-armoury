@@ -5,6 +5,8 @@
 ### v3.4.0
 * Added Automatic Injury Progression feature
 * Updated Automatic Disease Progression feature to use system's functions for decrementation instead of custom ones
+* Restored Merchants Compendium
+* Minor fix to script in `Explorer's Backpack`. It will no longer throw console errors when bedroll or lantern is not found.  
 
 ### v3.3.0
 * Added GM and Player Macros for toggling `Engaged` status
