@@ -167,6 +167,18 @@ export default class ItemRepair extends ForienBaseModule {
     return Number(item.properties.qualities.durable?.value || 0);
   }
 
+  #getArmourItems(actor) {
+    return actor.items.filter(i => i.system.isArmour);
+  }
+
+  #getWeaponItems(actor) {
+    return actor.items.filter(i => i.system.isWeapon);
+  }
+
+  #getTrappingItems(actor) {
+    return actor.items.filter(i => i.system.isTrapping);
+  }
+
   /**
    * @param {ItemWfrp4e} item
    * @param {boolean} paid
@@ -370,11 +382,11 @@ export default class ItemRepair extends ForienBaseModule {
     }
 
     if (!type || type.includes('armour'))
-      templateData.armour = this.processArmour(actor.itemTypes.armour, {paid, subtype});
+      templateData.armour = this.processArmour(this.#getArmourItems(actor), {paid, subtype});
     if (!type || type.includes('weapons'))
-      templateData.weapons = this.processWeapons(actor.itemTypes.weapon, {paid, subtype});
+      templateData.weapons = this.processWeapons(this.#getWeaponItems(actor), {paid, subtype});
     if (!type || type.includes('trappings'))
-      templateData.trappings = this.processTrappings(actor.itemTypes.trapping, {paid, subtype});
+      templateData.trappings = this.processTrappings(this.#getTrappingItems(actor), {paid, subtype});
 
     if (templateData.armour.length === 0 && templateData.weapons.length === 0 && templateData.trappings.length === 0)
       templateData.empty = true;
