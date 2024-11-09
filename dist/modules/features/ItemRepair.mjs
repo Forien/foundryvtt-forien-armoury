@@ -162,7 +162,7 @@ export default class ItemRepair extends ForienBaseModule {
     let regex = /\d{1,3}/gm;
 
     if (item.type === 'weapon')
-      return Number(regex.exec(item.damage.value)[0] || 0) + Number(item.properties.qualities.durable?.value || 0);
+      return Number(regex.exec(item.damage.value)?.[0] || 0) + Number(item.properties.qualities.durable?.value || 0);
 
     return Number(item.properties.qualities.durable?.value || 0);
   }
