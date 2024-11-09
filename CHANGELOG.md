@@ -4,7 +4,7 @@
 
 ### v3.4.1
 * Fix Item Repair macros throwing an error when Weapons have no integer Damage value – for example `SB` or blank ([#51](https://github.com/Forien/foundryvtt-forien-armoury/issues/51))
-* Add support for Armour Items from `Archives of the Empire Vol. III`
+* Add support for Armour Items from `Archives of the Empire Vol. III` for Item Repair macros
 
 ### v3.4.0
 * Added Automatic Injury Progression feature
