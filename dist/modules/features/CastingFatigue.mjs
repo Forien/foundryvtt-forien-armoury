@@ -4,7 +4,6 @@ import Utility from "../utility/Utility.mjs";
 import MagicEnduranceDataModel from "../data-models/MagicEnduranceDataModel.js";
 import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 import ScrollTest from "../tests/ScrollTest.mjs";
-import FatigueChannellingDialog from "./FatigueChannellingDialog.mjs";
 
 export default class CastingFatigue extends ForienBaseModule {
   #observer;
@@ -24,7 +23,6 @@ export default class CastingFatigue extends ForienBaseModule {
     Hooks.on("renderActorSheetWFRP4eCharacterV2", this.#onRenderActorV2Sheet.bind(this));
     // Hooks.on("renderActorSheetWFRP4eNPCV2", this.#onRenderActorV2Sheet.bind(this));
     Hooks.on("ready", this.#registerAutoRegenListeners.bind(this));
-    Hooks.on("ready", this.#replaceRollChannelTest.bind(this));
   }
 
   /**
@@ -54,21 +52,6 @@ export default class CastingFatigue extends ForienBaseModule {
    */
   get magicalEnduranceEnabled() {
     return Utility.getSetting(settings.magicalEndurance.enabled);
-  }
-
-  #replaceRollChannelTest() {
-    ActorWFRP4e.prototype.setupChannell = async function(spell, options = {}) {
-
-      let dialogData = {
-        fields : options.fields || {},
-        data : {
-          spell,
-          hitLoc : false
-        },    
-        options : options || {}
-      }
-      return this._setupTest(dialogData, FatigueChannellingDialog)
-    }
   }
 
   /**
