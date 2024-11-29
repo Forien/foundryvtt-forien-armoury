@@ -4,6 +4,7 @@ import Utility from "../utility/Utility.mjs";
 import MagicEnduranceDataModel from "../data-models/MagicEnduranceDataModel.js";
 import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 import ScrollTest from "../tests/ScrollTest.mjs";
+import FatigueChannellingDialog from "./FatigueChannellingDialog.mjs";
 
 export default class CastingFatigue extends ForienBaseModule {
   #observer;
@@ -17,13 +18,13 @@ export default class CastingFatigue extends ForienBaseModule {
    * @inheritDoc
    */
   bindHooks() {
-    Hooks.on("wfrp4e:rollChannelTest", this.#processRollChannelTest.bind(this));
     Hooks.on("wfrp4e:rollCastTest", this.#processRollCastTest.bind(this));
     Hooks.on("renderActorSheetWFRP4eCharacter", this.#onRenderActorSheet.bind(this));
     Hooks.on("renderActorSheetWFRP4eNPC", this.#onRenderActorSheet.bind(this));
     Hooks.on("renderActorSheetWFRP4eCharacterV2", this.#onRenderActorV2Sheet.bind(this));
     // Hooks.on("renderActorSheetWFRP4eNPCV2", this.#onRenderActorV2Sheet.bind(this));
     Hooks.on("ready", this.#registerAutoRegenListeners.bind(this));
+    Hooks.on("ready", this.#replaceRollChannelTest.bind(this));
   }
 
   /**
@@ -53,6 +54,21 @@ export default class CastingFatigue extends ForienBaseModule {
    */
   get magicalEnduranceEnabled() {
     return Utility.getSetting(settings.magicalEndurance.enabled);
+  }
+
+  #replaceRollChannelTest() {
+    ActorWFRP4e.prototype.setupChannell = async function(spell, options = {}) {
+
+      let dialogData = {
+        fields : options.fields || {},
+        data : {
+          spell,
+          hitLoc : false
+        },    
+        options : options || {}
+      }
+      return this._setupTest(dialogData, FatigueChannellingDialog)
+    }
   }
 
   /**
@@ -132,14 +148,14 @@ export default class CastingFatigue extends ForienBaseModule {
    * @param {TestWFRP} test
    * @param {{}} options
    */
-  #processRollChannelTest(test, options) {
+  async processRollChannelTest(test, options) {
     if (!this.magicalEnduranceEnabled) return;
     debug('[CastingFatigue] Channeling Test Rolled', {test, options, enabled: this.magicalEnduranceEnabled});
 
     if (!(test.actor instanceof ActorWFRP4e && test.actor.isOwner))
       return;
 
-    this.spendMagicalEndurance(test.actor, this.costOfChanneling);
+    await this.spendMagicalEndurance(test.actor, this.costOfChanneling);
   }
 
   /**
