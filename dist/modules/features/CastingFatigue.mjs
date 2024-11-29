@@ -87,12 +87,14 @@ export default class CastingFatigue extends ForienBaseModule {
     const actor = sheet.actor;
     const magicalEndurance = this.getMagicalEnduranceData(actor);
 
-    renderTemplate(Utility.getTemplate(this.templates.magicalEndurance), magicalEndurance).then(content => {
-      const child = Utility.stringToHTMLElement(content)
-      tabMagic.prepend(child);
+    if (tabMagic) {
+      renderTemplate(Utility.getTemplate(this.templates.magicalEndurance), magicalEndurance).then(content => {
+        const child = Utility.stringToHTMLElement(content)
+        tabMagic.prepend(child);
 
-      html.querySelector('#magical-endurance-value').addEventListener("change", (ev) => this.#onMagicalEnduranceValueChange(ev, actor));
-    });
+        html.querySelector('#magical-endurance-value').addEventListener("change", (ev) => this.#onMagicalEnduranceValueChange(ev, actor));
+      });
+    }
   }
 
   /**
