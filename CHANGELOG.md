@@ -2,6 +2,9 @@
 
 ## v3.X.X
 
+### v3.4.2
+* Fix Check Career macro for WFPR4e 8.3.0
+
 ### v3.4.1
 * Fix Item Repair macros throwing an error when Weapons have no integer Damage value – for example `SB` or blank ([#51](https://github.com/Forien/foundryvtt-forien-armoury/issues/51))
 * Add support for Armour Items from `Archives of the Empire Vol. III` for Item Repair macros

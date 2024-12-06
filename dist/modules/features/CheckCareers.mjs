@@ -194,12 +194,25 @@ export default class CheckCareers extends ForienBaseModule {
     let done = 0;
     let total = 0;
 
-    currentCareer.characteristics.forEach(ch => {
-      let advances = character.characteristics[ch].advances;
-      if (advances >= requiredAdvances)
-        done++;
-      total++;
-    });
+    // wfrp4e 8.3.0 changed Data Model for Career and characteristics are now object of all characteristics as boolean flags
+    // instead of array of only selected characteristics
+    if (foundry.utils.isNewerVersion(game.system.version, "8.2.999")) {
+      for (const characteristic in currentCareer.characteristics) {
+        if (!currentCareer.characteristics[characteristic]) continue;
+
+        const advances = character.characteristics[characteristic].advances;
+        if (advances >= requiredAdvances)
+          done++;
+        total++;
+      }
+    } else {
+      currentCareer.characteristics.forEach(ch => {
+        const advances = character.characteristics[ch].advances;
+        if (advances >= requiredAdvances)
+          done++;
+        total++;
+      });
+    }
 
     return {done, total};
   }
