@@ -23,6 +23,8 @@ import GrimoireModel from "./data-models/Grimoire.mjs";
 import GrimoireSheet from "./apps/GrimoireSheet.mjs";
 import Grimoires from "./features/Grimoires.mjs";
 import Injuries from "./features/Injuries.mjs";
+import FatigueChannellingDialog from "./features/FatigueChannellingDialog.mjs";
+import FatigueChannelTest from "./features/FatigueChannellTest.mjs";
 
 export default class ForienArmoury {
   /**
@@ -223,6 +225,20 @@ export default class ForienArmoury {
 
       foundry.utils.mergeObject(game.wfrp4e.config, config)
     })
+
+    game.wfrp4e.rolls.FatigueChannelTest = FatigueChannelTest;
+    ActorWFRP4e.prototype.setupChannell = async function(spell, options = {}) {
+
+      let dialogData = {
+        fields : options.fields || {},
+        data : {
+          spell,
+          hitLoc : false
+        },    
+        options : options || {}
+      }
+      return this._setupTest(dialogData, FatigueChannellingDialog)
+    }
 
     Utility.notify("WFRP4e patched.", {consoleOnly: true});
   }

@@ -17,7 +17,6 @@ export default class CastingFatigue extends ForienBaseModule {
    * @inheritDoc
    */
   bindHooks() {
-    Hooks.on("wfrp4e:rollChannelTest", this.#processRollChannelTest.bind(this));
     Hooks.on("wfrp4e:rollCastTest", this.#processRollCastTest.bind(this));
     Hooks.on("renderActorSheetWFRP4eCharacter", this.#onRenderActorSheet.bind(this));
     Hooks.on("renderActorSheetWFRP4eNPC", this.#onRenderActorSheet.bind(this));
@@ -88,12 +87,14 @@ export default class CastingFatigue extends ForienBaseModule {
     const actor = sheet.actor;
     const magicalEndurance = this.getMagicalEnduranceData(actor);
 
-    renderTemplate(Utility.getTemplate(this.templates.magicalEndurance), magicalEndurance).then(content => {
-      const child = Utility.stringToHTMLElement(content)
-      tabMagic.prepend(child);
+    if (tabMagic) {
+      renderTemplate(Utility.getTemplate(this.templates.magicalEndurance), magicalEndurance).then(content => {
+        const child = Utility.stringToHTMLElement(content)
+        tabMagic.prepend(child);
 
-      html.querySelector('#magical-endurance-value').addEventListener("change", (ev) => this.#onMagicalEnduranceValueChange(ev, actor));
-    });
+        html.querySelector('#magical-endurance-value').addEventListener("change", (ev) => this.#onMagicalEnduranceValueChange(ev, actor));
+      });
+    }
   }
 
   /**
@@ -132,14 +133,14 @@ export default class CastingFatigue extends ForienBaseModule {
    * @param {TestWFRP} test
    * @param {{}} options
    */
-  #processRollChannelTest(test, options) {
+  async processRollChannelTest(test, options) {
     if (!this.magicalEnduranceEnabled) return;
     debug('[CastingFatigue] Channeling Test Rolled', {test, options, enabled: this.magicalEnduranceEnabled});
 
     if (!(test.actor instanceof ActorWFRP4e && test.actor.isOwner))
       return;
 
-    this.spendMagicalEndurance(test.actor, this.costOfChanneling);
+    await this.spendMagicalEndurance(test.actor, this.costOfChanneling);
   }
 
   /**
@@ -151,7 +152,12 @@ export default class CastingFatigue extends ForienBaseModule {
     if (test instanceof ScrollTest)
       return Utility.getSetting(settings.scrolls.magicalEndurance);
 
-    return parseInt(this.useBaseCN ? test.spell?.cn.value : (test.spell?.cn.value - test.spell?.cn.SL));
+    if (test.spell.system.ritual?.value) {
+      return 1;
+    }
+    else {
+      return parseInt(this.useBaseCN ? test.spell?.cn.value : (test.spell?.cn.value - test.spell?.cn.SL));
+    }
   }
 
   /**

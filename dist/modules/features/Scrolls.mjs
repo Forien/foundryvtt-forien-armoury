@@ -91,6 +91,7 @@ export default class Scrolls extends ForienBaseModule {
     });
 
     const tabMagic = html.querySelector('.tab[data-tab="magic"]');
+    if (!tabMagic) return;
     tabMagic.append(Utility.stringToHTMLElement(content));
 
     tabMagic.querySelectorAll(".scrolls .scroll-spell-link").forEach(element => {
