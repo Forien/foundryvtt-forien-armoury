@@ -52,7 +52,7 @@ export default class ForienBaseModule {
   initialConfig() {}
 
   /**
-   * Returns object that will be merged into `game.wfrp4e.config`
+   * Returns object that will be merged into `game.wfrp4e.config` on `init`
    *
    * @return {{}}
    */

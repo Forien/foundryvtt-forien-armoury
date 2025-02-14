@@ -112,6 +112,9 @@ const settings = {
     useBaseCN: 'magicalEndurance.useBaseCN',
     autoRegen: 'magicalEndurance.automateRegen'
   },
+  properties: {
+    enabled: 'properties.enabled'
+  },
   runes: {
     enableDamage: 'runes.damageEnable'
   },
@@ -168,6 +171,9 @@ const defaults = {
     useBaseCN: true,
     maxME: settings.magicalEndurance.maxME_TBtimesWPB,
     autoRegen: false
+  },
+  properties: {
+    enabled: true
   },
   runes: {
     enableDamage: false

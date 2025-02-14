@@ -61,6 +61,19 @@ function registerSettings() {
     }
   });
 
+  // Enable additional item properties?
+  game.settings.register(constants.moduleId, settings.properties.enabled, {
+    name: 'Forien.Armoury.Settings.Properties.Enabled',
+    hint: 'Forien.Armoury.Settings.Properties.EnabledHint',
+    scope: 'world',
+    config: false,
+    default: defaults.properties.enabled,
+    type: Boolean,
+    onChange: () => {
+      SettingsConfig.reloadConfirm({world: true})
+    }
+  });
+
   //#region Casting Fatigue
 
   // Add enable/disable setting for Casting Fatigue feature

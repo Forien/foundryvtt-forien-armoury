@@ -1,5 +1,7 @@
 import {debug} from "../utility/Debug.mjs";
 import ForienBaseModule from "../utility/ForienBaseModule.mjs";
+import Utility from "../utility/Utility.mjs";
+import {settings} from "../constants.mjs";
 
 export default class ItemProperties extends ForienBaseModule {
   /**
@@ -16,6 +18,8 @@ export default class ItemProperties extends ForienBaseModule {
    */
   applyWfrp4eConfig() {
     const config = {};
+
+    if (!Utility.getSetting(settings.properties.enabled)) return config;
 
     config.weaponQualities = {
       slashing: 'Forien.Armoury.Arrows.Properties.Slashing.Label',

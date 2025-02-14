@@ -68,8 +68,8 @@ export default class ForienArmoury {
     this.#initializeModules();
     this.#bindHooks();
     this.#preloadTemplates();
-    this.#hackWFRP4e();
     this.#registerSettings();
+    this.#hackWFRP4e();
 
     Utility.notify("Module initialized!", {consoleOnly: true});
   }
@@ -223,8 +223,6 @@ export default class ForienArmoury {
 
       foundry.utils.mergeObject(game.wfrp4e.config, config)
     })
-
-    Utility.notify("WFRP4e patched.", {consoleOnly: true});
   }
 
   /**
