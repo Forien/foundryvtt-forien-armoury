@@ -126,11 +126,26 @@ export default class SettingsApp extends FormApplication {
       main: {
         always: [
           settings.runes.enableDamage,
-          settings.diseases.autoProgress,
-          settings.injuries.autoProgress,
           settings.properties.enabled,
           Debug.setting,
         ]
+      },
+
+      actor: {
+        always: [
+          settings.diseases.autoProgress,
+          settings.injuries.autoProgress,
+          settings.actor.rollToken
+        ],
+        enable: {
+          when: settings.actor.rollToken,
+          settings: [
+            settings.actor.rollMode,
+            settings.actor.rollMoney,
+            settings.actor.defaultMoney,
+            settings.actor.moneyMode,
+          ]
+        }
       },
 
       arrow: {

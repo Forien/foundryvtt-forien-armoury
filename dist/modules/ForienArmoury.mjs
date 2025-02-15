@@ -23,6 +23,7 @@ import GrimoireModel from "./data-models/Grimoire.mjs";
 import GrimoireSheet from "./apps/GrimoireSheet.mjs";
 import Grimoires from "./features/Grimoires.mjs";
 import Injuries from "./features/Injuries.mjs";
+import Tokens from "./features/Tokens.mjs";
 
 export default class ForienArmoury {
   /**
@@ -43,6 +44,7 @@ export default class ForienArmoury {
     Scrolls,
     Species,
     TemporaryRunes,
+    Tokens,
     WorldTimeObserver,
   ]
 

@@ -54,6 +54,12 @@
         }
       },
 
+      "Actors": {
+        "InputMoneyFormula": "Input roll formula for random money (in bronze pennies)",
+        "ShouldRollTokenTitle": "Randomize {name}?",
+        "ShouldRollTokenContent": "Randomize Characteristics, Skills and Talents for {name} based on their {species} species?"
+      },
+
       "CombatFatigue": {
         "CombatFatigueTest": " — Combat Fatigue",
         "CombatFatigueTestFailure": "Fatigued! Next Test will be taken after TB Turns.",
@@ -452,12 +458,29 @@
 
         "Tabs": {
           "Main": "Miscellaneous",
+          "Actor": "Actors",
           "ArrowReclamation": "Arrow Reclamation",
           "CombatFatigue": "Combat Fatigue",
           "CastingFatigue": "Casting Fatigue",
           "Scrolls": "Scrolls",
           "Grimoires": "Grimoires",
           "Integrations": "Integrations"
+        },
+
+        "Actor": {
+          "Enable":  "Randomize Tokens upon creation?",
+          "EnableHint": "When enabled, module will randomize Token's Characteristics, as well as species Skills and Talents. <br/><b>Only works with unlinked Tokens.</b>",
+          "Mode":  "Roll Mode",
+          "ModeHint": "Choose whether the randomization should happen always, or if GM should be asked for each Token",
+          "RollMoney":  "Randomize Token money",
+          "RollMoneyHint": "When enabled, module will randomize Token's starting money. Useful when using modules like <a href=\"https://foundryvtt.com/packages/item-piles\" target=\"_blank\"><b>Item Piles</b></a>.",
+          "DefaultMoney":  "Default Money Formula",
+          "DefaultMoneyHint": "Default Roll Formula used to generate random amount of money (in Brass Pennies).",
+          "MoneyMode":  "Money Mode",
+          "MoneyModeHint": "Choose whether money should be always rolled using default value, or if GM should be asked first.",
+          "Always": "Always automate",
+          "AskNPC": "Ask only for NPC",
+          "Ask": "Ask every time"
         },
 
         "Runes": {
@@ -600,6 +623,11 @@
           "SetCurrenciesHint": "When checked, this module will set Item Pile's currencies to use all of custom coins provided with Forien's Armoury. However, it is not suggested to use all 10 coins together as default.",
           "RolltablesImport": "Re-Import RollTables",
           "RolltablesImportHint": "When checked, system will reimport all Merchant RollTables for Item Piles integration. WARNING: this will purge all contents of \"Merchant Rolltables\" folder!"
+        },
+
+        "Properties": {
+          "Enabled": "Add custom Properties",
+          "EnabledHint": "Should the Armoury add additional properties, like Incendiary, Blinding, Poisonous etc.?"
         },
 
         "Promo": {

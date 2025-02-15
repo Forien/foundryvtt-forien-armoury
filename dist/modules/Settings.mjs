@@ -25,6 +25,22 @@ function registerSettings() {
     type: Boolean
   });
 
+  // Enable additional item properties?
+  game.settings.register(constants.moduleId, settings.properties.enabled, {
+    name: 'Forien.Armoury.Settings.Properties.Enabled',
+    hint: 'Forien.Armoury.Settings.Properties.EnabledHint',
+    scope: 'world',
+    config: false,
+    default: defaults.properties.enabled,
+    type: Boolean,
+    onChange: () => {
+      SettingsConfig.reloadConfirm({world: true})
+    }
+  });
+
+  //#region Actor
+
+
   // Should disease progress automatically with passage of time?
   game.settings.register(constants.moduleId, settings.diseases.autoProgress, {
     name: 'Forien.Armoury.Settings.Diseases.AutoProgress',
@@ -61,18 +77,67 @@ function registerSettings() {
     }
   });
 
-  // Enable additional item properties?
-  game.settings.register(constants.moduleId, settings.properties.enabled, {
-    name: 'Forien.Armoury.Settings.Properties.Enabled',
-    hint: 'Forien.Armoury.Settings.Properties.EnabledHint',
+  //
+  game.settings.register(constants.moduleId, settings.actor.rollToken, {
+    name: 'Forien.Armoury.Settings.Actor.Enable',
+    hint: 'Forien.Armoury.Settings.Actor.EnableHint',
     scope: 'world',
     config: false,
-    default: defaults.properties.enabled,
-    type: Boolean,
-    onChange: () => {
-      SettingsConfig.reloadConfirm({world: true})
+    default: defaults.actor.rollToken,
+    type: Boolean
+  });
+
+  //
+  game.settings.register(constants.moduleId, settings.actor.rollMode, {
+    name: 'Forien.Armoury.Settings.Actor.Mode',
+    hint: 'Forien.Armoury.Settings.Actor.ModeHint',
+    scope: 'world',
+    config: false,
+    default: defaults.actor.rollMode,
+    type: String,
+    choices: {
+      [settings.actor.choices.always]: 'Forien.Armoury.Settings.Actor.Always',
+      [settings.actor.choices.ask]: 'Forien.Armoury.Settings.Actor.Ask',
+      [settings.actor.choices.askNPC]: 'Forien.Armoury.Settings.Actor.AskNPC',
     }
   });
+
+  //
+  game.settings.register(constants.moduleId, settings.actor.rollMoney, {
+    name: 'Forien.Armoury.Settings.Actor.RollMoney',
+    hint: 'Forien.Armoury.Settings.Actor.RollMoneyHint',
+    scope: 'world',
+    config: false,
+    default: defaults.actor.rollMoney,
+    type: Boolean
+  });
+
+  //
+  game.settings.register(constants.moduleId, settings.actor.defaultMoney, {
+    name: 'Forien.Armoury.Settings.Actor.DefaultMoney',
+    hint: 'Forien.Armoury.Settings.Actor.DefaultMoneyHint',
+    scope: 'world',
+    config: false,
+    default: defaults.actor.defaultMoney,
+    type: String
+  });
+
+  //
+  game.settings.register(constants.moduleId, settings.actor.moneyMode, {
+    name: 'Forien.Armoury.Settings.Actor.MoneyMode',
+    hint: 'Forien.Armoury.Settings.Actor.MoneyModeHint',
+    scope: 'world',
+    config: false,
+    default: defaults.actor.moneyMode,
+    type: String,
+    choices: {
+      [settings.actor.choices.always]: 'Forien.Armoury.Settings.Actor.Always',
+      [settings.actor.choices.ask]: 'Forien.Armoury.Settings.Actor.Ask',
+      [settings.actor.choices.askNPC]: 'Forien.Armoury.Settings.Actor.AskNPC',
+    }
+  });
+
+  //#endregion
 
   //#region Casting Fatigue
 

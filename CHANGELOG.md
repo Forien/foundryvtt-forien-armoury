@@ -1,6 +1,16 @@
 # Changelog
 
 ## v3.X.X
+### v3.5.0
+* Added new Career path: Martial Artist
+* Added 24 Templates spread across 6 archetypes: Archer, Assassin, Guard, Knight, Merchant and Soldier
+* Added 10 variations of existing armour Items (like gambesons) supporting the **Archives of the Empire Vol. III** armour system
+* Added Kettle Hat armour for both CRB armour system and **Archives of the Empire Vol. III** armour system
+* Added option to automatically randomize Characteristics, Skills and Talents on created unlinked Tokens based on species (simulate C/S/T clicks)
+* Added option to add random amount of money to unlinked Tokens upon creation.
+* Added option to hide custom properties from dialog when editing Qualities and Flaws of an Item
+* Moved settings for Automated Disease/Injury Progression into new Actors tab
+* Fixed Injuries listeners not being registered on non-english localization
 
 ### v3.4.2
 * Fix Check Career macro for WFPR4e 8.3.0

@@ -4,20 +4,26 @@
 }
 #forien-armoury-settings-app form .tabs {
   font-family: CaslonAntique, serif;
-  height: 30px;
+  height: 60px;
+  flex-wrap: wrap;
+  gap: 0;
+  flex-direction: row;
+  overflow: hidden;
 }
 #forien-armoury-settings-app form .tabs .item {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
   align-self: end;
-  height: 75%;
-  width: 100%;
-  margin: 0 -5px;
+  height: 50px;
   background-color: #352516;
   border-radius: 10px 10px 0 0;
   border: 1px solid #110a04;
   flex: fit-content;
+  align-items: flex-start;
+  width: auto; /* Allow the width to adjust based on content */
+  min-width: 100px; /* Set a minimum width for each tab */
+  margin: 0 -5px -30px -5px;
+  flex: 1 1 auto; /* Allow tabs to grow and shrink */
 }
 #forien-armoury-settings-app form .tabs .item:first-of-type {
   margin-left: 0;

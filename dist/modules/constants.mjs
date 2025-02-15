@@ -51,6 +51,18 @@ const flags = {
 }
 
 const settings = {
+  actor: {
+    rollToken: 'actor.rollOnTokenCreation',
+    rollMoney: 'actor.rollMoney',
+    defaultMoney: 'actor.defaultMoney',
+    moneyMode: 'actor.moneyMode',
+    rollMode: 'actor.rollMode',
+    choices: {
+      always: 'always',
+      ask: 'ask',
+      askNPC: 'askNPC',
+    }
+  },
   app: `${constants.moduleId}-settings-app`,
   arrowReclamation: {
     enable: 'arrowReclamation.Enable',
@@ -136,6 +148,13 @@ const settings = {
 }
 
 const defaults = {
+  actor: {
+    rollToken: false,
+    rollMoney: false,
+    defaultMoney: '4d12',
+    moneyMode: settings.actor.choices.askNPC,
+    rollMode: settings.actor.choices.askNPC
+  },
   arrowReclamation: {
     enable: false,
     enableArrows: true,
