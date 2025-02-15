@@ -1,0 +1,106 @@
+{
+  "folder": "iCXbf8jyuCchKTt2",
+  "name": "Breastplate",
+  "type": "wfrp4e-archives3.armour",
+  "_id": "hNZMEJO8XsycUo7a",
+  "img": "icons/equipment/chest/breastplate-gorget-steel.webp",
+  "system": {
+    "description": {
+      "value": "<p>Breastplate is a type of plate armour that covers only front portion of torso.</p>"
+    },
+    "gmdescription": {
+      "value": ""
+    },
+    "quantity": {
+      "value": 1
+    },
+    "encumbrance": {
+      "value": 2
+    },
+    "price": {
+      "gc": 5,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "value": "scarce"
+    },
+    "location": {
+      "value": ""
+    },
+    "damageToItem": {
+      "value": 0,
+      "shield": 0
+    },
+    "armorType": {
+      "value": "plate"
+    },
+    "penalty": {
+      "value": ""
+    },
+    "qualities": {
+      "value": [
+        {
+          "name": "impenetrable",
+          "value": null
+        },
+        {
+          "name": "overcoat",
+          "value": null
+        }
+      ]
+    },
+    "flaws": {
+      "value": [
+        {
+          "name": "partial",
+          "value": null
+        }
+      ]
+    },
+    "special": {
+      "value": ""
+    },
+    "AP": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 3
+    },
+    "APdamage": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "equipped": {
+      "value": false
+    },
+    "fit": {
+      "value": "undefined"
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3,
+    "EhobGNCUoyo9jPH1": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1739607148861,
+    "modifiedTime": 1739607245768,
+    "lastModifiedBy": "EhobGNCUoyo9jPH1"
+  },
+  "sort": 100000,
+  "_key": "!items!hNZMEJO8XsycUo7a"
+}

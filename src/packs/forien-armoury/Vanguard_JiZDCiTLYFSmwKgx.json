@@ -1,0 +1,294 @@
+{
+  "folder": "Drz7yzY8wwrIbFp3",
+  "name": "Vanguard",
+  "type": "template",
+  "img": "modules/forien-armoury/icons/templates/soldier4.webp",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.9KFyUXLQiP1bb05c#soldier]{Soldier}</p>"
+    },
+    "gmdescription": {
+      "value": ""
+    },
+    "alterName": {
+      "pre": "",
+      "post": "Vanguard"
+    },
+    "characteristics": {
+      "ws": 20,
+      "bs": null,
+      "s": 15,
+      "t": 20,
+      "i": null,
+      "ag": 15,
+      "dex": null,
+      "int": null,
+      "wp": 20,
+      "fel": 15
+    },
+    "skills": {
+      "list": [
+        {
+          "name": "Melee (Basic)",
+          "advances": 20,
+          "group": 1,
+          "specialisations": null
+        },
+        {
+          "name": "Melee (Polearm)",
+          "advances": 20,
+          "group": 1,
+          "specialisations": null
+        },
+        {
+          "name": "Cool",
+          "advances": 20,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Athletics",
+          "advances": 20,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Endurance",
+          "advances": 20,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Language (Battle Tongue)",
+          "advances": 20,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Leadership",
+          "advances": 20,
+          "group": null,
+          "specialisations": null
+        }
+      ]
+    },
+    "talents": {
+      "list": [
+        {
+          "name": "Drilled",
+          "advances": 2,
+          "group": null
+        },
+        {
+          "name": "Unshakable",
+          "advances": null,
+          "group": null
+        },
+        {
+          "name": "Resolute",
+          "advances": null,
+          "group": null
+        }
+      ]
+    },
+    "lores": {
+      "list": []
+    },
+    "traits": {
+      "list": []
+    },
+    "trappings": {
+      "structure": {
+        "type": "and",
+        "id": "root",
+        "options": [
+          {
+            "id": "fTvH2V9sqeHM5WXZ",
+            "type": "or",
+            "options": [
+              {
+                "id": "x5l8iuBdfCxUlRtd",
+                "type": "and",
+                "options": [
+                  {
+                    "id": "ZUHWlgwZ0Ywi4Xwg",
+                    "type": "option"
+                  },
+                  {
+                    "id": "SwlYW1CvcfyPm87b",
+                    "type": "option"
+                  }
+                ]
+              },
+              {
+                "id": "Czm79DMr5TqPo5cE",
+                "type": "option"
+              }
+            ]
+          },
+          {
+            "id": "X7tI9WapIkBgLWxA",
+            "type": "option"
+          },
+          {
+            "id": "0Jd9a3pjl2VaooZI",
+            "type": "option"
+          },
+          {
+            "id": "O8mmd6pPUJXQTiGw",
+            "type": "option"
+          },
+          {
+            "id": "WzQ3HpvOfbgSza0Y",
+            "type": "option"
+          },
+          {
+            "id": "L9VQBfWVT9NmdHtI",
+            "type": "option"
+          },
+          {
+            "id": "B3eYMt4pHZy7VJbd",
+            "type": "option"
+          },
+          {
+            "id": "CQET55LvlHUEz8IM",
+            "type": "option"
+          },
+          {
+            "id": "hBn1f6It8JAB1Me7",
+            "type": "option"
+          }
+        ]
+      },
+      "options": [
+        {
+          "type": "item",
+          "id": "ZUHWlgwZ0Ywi4Xwg",
+          "name": "Hand Weapon",
+          "documentId": "1zaqojk0Oq1m8vYv",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "SwlYW1CvcfyPm87b",
+          "name": "Shield",
+          "documentId": "8nJ9R8tbhW42VGhr",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "filter",
+          "id": "Czm79DMr5TqPo5cE",
+          "name": "Polearm weapon",
+          "diff": {},
+          "filters": [
+            {
+              "path": "type",
+              "operation": "=",
+              "value": "weapon"
+            },
+            {
+              "path": "system.weaponGroup.value",
+              "operation": "=",
+              "value": "polearm"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "id": "X7tI9WapIkBgLWxA",
+          "name": "Gambeson Coat",
+          "documentId": "BPcUiIKFMXSobKqC",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "0Jd9a3pjl2VaooZI",
+          "name": "Gambeson Coif",
+          "documentId": "iiYBwR0TRnrBefgp",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "O8mmd6pPUJXQTiGw",
+          "name": "Mail Coat",
+          "documentId": "i76oPVM2eFEs5IBh",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "WzQ3HpvOfbgSza0Y",
+          "name": "Mail Coif",
+          "documentId": "4xV16ttsxCa311vl",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "L9VQBfWVT9NmdHtI",
+          "name": "Cuirass",
+          "documentId": "VW2Sk5JPUrz7SLPH",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "B3eYMt4pHZy7VJbd",
+          "name": "Plate Bracers",
+          "documentId": "oW7wSkl4JMb5sBH8",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "CQET55LvlHUEz8IM",
+          "name": "Plate Helm",
+          "documentId": "e9WmLbD7AuXSeWp0",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "name": "Plate Leggings",
+          "id": "hBn1f6It8JAB1Me7",
+          "idType": "id",
+          "documentId": "bY6M9XxbqmFmqpA8",
+          "diff": {},
+          "filters": []
+        }
+      ]
+    }
+  },
+  "effects": [],
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "EhobGNCUoyo9jPH1": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": "Item.HcJuCjR2cq61W798",
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1739608493201,
+    "modifiedTime": 1739617776916,
+    "lastModifiedBy": "EhobGNCUoyo9jPH1"
+  },
+  "_id": "JiZDCiTLYFSmwKgx",
+  "_key": "!items!JiZDCiTLYFSmwKgx"
+}

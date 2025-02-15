@@ -1,0 +1,323 @@
+{
+  "folder": "Xjwkp64lDb9wrjD1",
+  "name": "Assassin",
+  "type": "template",
+  "img": "modules/forien-armoury/icons/templates/assassin4.webp",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.9KFyUXLQiP1bb05c#assassin]{Assassin}</p>"
+    },
+    "gmdescription": {
+      "value": ""
+    },
+    "alterName": {
+      "pre": "",
+      "post": "Assassin"
+    },
+    "characteristics": {
+      "ws": 20,
+      "bs": 15,
+      "s": null,
+      "t": null,
+      "i": 10,
+      "ag": 15,
+      "dex": 15,
+      "int": null,
+      "wp": null,
+      "fel": null
+    },
+    "skills": {
+      "list": [
+        {
+          "name": "Melee",
+          "advances": 20,
+          "group": null,
+          "specialisations": 1
+        },
+        {
+          "name": "Gossip",
+          "advances": 20,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Athletics",
+          "advances": 20,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Dodge",
+          "advances": 15,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Stealth",
+          "advances": 20,
+          "group": null,
+          "specialisations": 1
+        },
+        {
+          "name": "Ranged (Bow)",
+          "advances": 20,
+          "group": 1,
+          "specialisations": 0
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "advances": 20,
+          "group": 1,
+          "specialisations": 0
+        },
+        {
+          "name": "Perception",
+          "advances": 15,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Ranged (Throwing)",
+          "advances": 20,
+          "group": null,
+          "specialisations": null
+        }
+      ]
+    },
+    "talents": {
+      "list": [
+        {
+          "name": "In-fighter",
+          "advances": null,
+          "group": null
+        },
+        {
+          "name": "Careful Strike",
+          "advances": null,
+          "group": null
+        },
+        {
+          "name": "Strike to Injure",
+          "advances": null,
+          "group": 1
+        },
+        {
+          "name": "Accurate Shot",
+          "advances": null,
+          "group": 1
+        }
+      ]
+    },
+    "lores": {
+      "list": []
+    },
+    "traits": {
+      "list": [
+        {
+          "uuid": "Compendium.wfrp4e-core.items.Item.gFkRm9wS65qe18Xv",
+          "id": "gFkRm9wS65qe18Xv",
+          "name": "Venom",
+          "diff": {}
+        }
+      ]
+    },
+    "trappings": {
+      "structure": {
+        "type": "and",
+        "id": "root",
+        "options": [
+          {
+            "id": "MntvtZMWhpjVphN4",
+            "type": "option"
+          },
+          {
+            "id": "rckL1HEArrDYFYFr",
+            "type": "option"
+          },
+          {
+            "id": "0W4oGsSnNStyujM9",
+            "type": "option"
+          },
+          {
+            "id": "dqsnzmcwY9bwLxaV",
+            "type": "or",
+            "options": [
+              {
+                "id": "Jw43qX8PBXjCSvEI",
+                "type": "and",
+                "options": [
+                  {
+                    "id": "sAakncfn06djQlgu",
+                    "type": "option"
+                  },
+                  {
+                    "id": "9CAj0g3SXOmcCydJ",
+                    "type": "option"
+                  }
+                ]
+              },
+              {
+                "id": "m98qBdtc3AIVtbqA",
+                "type": "and",
+                "options": [
+                  {
+                    "id": "KORYUg7cLyU7xOuO",
+                    "type": "option"
+                  },
+                  {
+                    "id": "x6P48ZmeleQeyW9Y",
+                    "type": "option"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "Pc8jrGBhRdMXnDBz",
+            "type": "option"
+          },
+          {
+            "id": "Y7KOmOfPjXtVaUuT",
+            "type": "option"
+          },
+          {
+            "id": "9FxvbnUJFh5gQei7",
+            "type": "option"
+          },
+          {
+            "id": "NdKH92DL8oOFbwrM",
+            "type": "option"
+          }
+        ]
+      },
+      "options": [
+        {
+          "type": "item",
+          "id": "MntvtZMWhpjVphN4",
+          "name": "Dagger",
+          "documentId": "UlL4mHSgBW3nYh2a",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "rckL1HEArrDYFYFr",
+          "name": "Rope, 10 yards",
+          "documentId": "horFAtaDz0EbuY3R",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "sAakncfn06djQlgu",
+          "name": "Shortbow",
+          "documentId": "CRNrEnLXTGXVT1UW",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "KORYUg7cLyU7xOuO",
+          "name": "Crossbow Pistol",
+          "documentId": "M71CyisSXU0I7V1S",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "9CAj0g3SXOmcCydJ",
+          "name": "Barbed Arrow",
+          "documentId": "aR4Yg3dEL5FdEW0q",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "x6P48ZmeleQeyW9Y",
+          "name": "Barbed Bolt",
+          "documentId": "U9l2QD8tOLvPTf9B",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "0W4oGsSnNStyujM9",
+          "name": "Throwing Knife",
+          "documentId": "bwyUJua7I9hNg9WS",
+          "diff": {
+            "name": "Throwing Knife",
+            "flags": {},
+            "system": {
+              "quantity": {
+                "value": 6
+              }
+            }
+          },
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "Pc8jrGBhRdMXnDBz",
+          "name": "Gambeson Coat",
+          "documentId": "BPcUiIKFMXSobKqC",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "Y7KOmOfPjXtVaUuT",
+          "name": "Gambeson Coif",
+          "documentId": "iiYBwR0TRnrBefgp",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "9FxvbnUJFh5gQei7",
+          "name": "Boiled Leather Breastplate",
+          "documentId": "tIG1TGcmU2i4rgFh",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "name": "Hunter's Quiver",
+          "id": "NdKH92DL8oOFbwrM",
+          "idType": "id",
+          "documentId": "gg1pfuy1Tk8hPoVl",
+          "diff": {},
+          "filters": []
+        }
+      ]
+    }
+  },
+  "effects": [],
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "EhobGNCUoyo9jPH1": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": "Item.sJ1n9jMiHPk57qfJ",
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1739603554977,
+    "modifiedTime": 1739617492557,
+    "lastModifiedBy": "EhobGNCUoyo9jPH1"
+  },
+  "_id": "C0Xqn5TaXlmolrA8",
+  "_key": "!items!C0Xqn5TaXlmolrA8"
+}

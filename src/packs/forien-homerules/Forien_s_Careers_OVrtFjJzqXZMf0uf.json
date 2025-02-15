@@ -107,15 +107,52 @@
       "_stats": {
         "systemId": "wfrp4e",
         "systemVersion": "7.0.3",
-        "coreVersion": "12.327",
+        "coreVersion": "12.331",
         "createdTime": 1688246313039,
-        "modifiedTime": 1702397400967,
-        "lastModifiedBy": "ZJyAmf2sKocHG1ud",
+        "modifiedTime": 1733581929831,
+        "lastModifiedBy": "EhobGNCUoyo9jPH1",
         "compendiumSource": null,
         "duplicateSource": null
       },
       "_id": "A8Es3aCGIbGOfuUR",
       "_key": "!journal.pages!OVrtFjJzqXZMf0uf.A8Es3aCGIbGOfuUR"
+    },
+    {
+      "name": "Martial Artist",
+      "text": {
+        "content": "<blockquote><p> \"I’ve seen one of those bald fellows take down three armed brigands with naught but his hands and feet. Impressive, sure, but I’ll stick to steel. Discipline doesn’t stop a crossbow bolt.\"</p><p style=\"text-align:right\"><em>— Richolf Segelmann, mercenary</em></p><p>\"They’re no warriors. Not proper ones, anyway. They dance, they flip, they twist — like performers. But when their hands crush your throat and you can’t breathe? You realize it’s no act.\"</p><p style=\"text-align:right\"><em>— Figlio, Tilean gladiator</em></p><p>\"Bah! Punching and kicking like it’s a tavern brawl? A real fighter carries a weapon… something with heft! Still, I’ll give ‘em this: their focus is as solid as Gromril, even if they don’t have the sense to wear it.\"</p><p style=\"text-align:right\"><span style=\"font-family:CaslonPro\"><em>— Kazran, Dwarven </em></span><em>Slayer</em></p></blockquote><p><em>A sharpened mind and a disciplined body are more powerful than any blade.</em></p><p>Among the countless warriors in the Old World, few possess the rigorous training, unshakable discipline, and focused precision of the Martial Artist. Hailing from distant Cathay, the remote monasteries of the Border Princes, or even hidden sects scattered across the Empire, Martial Artists are masters of unarmed combat and physical perfection. They dedicate their lives to mastering the harmony of mind, body, and spirit, transforming themselves into living weapons capable of striking down foes with speed and power unmatched by mundane fighters.</p><p>Martial Artists rely on discipline and inner focus, training tirelessly to perfect their techniques. Many serve as wandering ascetics, protecting the weak and battling monstrous threats wherever they travel. Others live reclusive lives, honing their craft in isolation or serving a mentor, monastery, or secretive order. Their unique combat abilities and mystique make them revered by some and feared by others, often leading to a life of both opportunity and isolation.</p><p>A Martial Artist's path is not for the faint of heart. Without the protection of armor or reliance on weapons, they put their faith in their skills, agility, and precise strikes to outwit and overcome their enemies. While their teachings may be alien to the uninitiated, their discipline and resolve are respected across all cultures.</p><p>[image goes here] </p><p><strong>Species: </strong>Human, Dwarf, Halfling, Elf</p><p><strong>Class: </strong>Warriors</p><h3 style=\"text-align:center\" class=\"no-toc\">Martial Artist Advance Scheme</h3><table style=\"height:34px\" border=\"1\"><tbody><tr style=\"height:17px\"><td style=\"height:17px;width:60px;text-align:center\"><p>WS</p></td><td style=\"height:17px;width:60px;text-align:center\"><p>BS</p></td><td style=\"height:17px;width:60px;text-align:center\"><p>S</p></td><td style=\"height:17px;width:61px;text-align:center\"><p>T</p></td><td style=\"height:17px;width:61px;text-align:center\"><p>I</p></td><td style=\"height:17px;width:61px;text-align:center\"><p>Agi</p></td><td style=\"height:17px;width:61px;text-align:center\"><p>Dex</p></td><td style=\"height:17px;width:61px;text-align:center\"><p>Int</p></td><td style=\"height:17px;width:61px;text-align:center\"><p>WP</p></td><td style=\"height:17px;width:61px;text-align:center\"><p>Fel</p></td></tr><tr style=\"height:17px\"><td style=\"height:17px;width:60px;text-align:center\"><p>✠</p></td><td style=\"height:17px;width:60px;text-align:center\"><p></p></td><td style=\"height:17px;width:60px;text-align:center\"><p>♛</p></td><td style=\"height:17px;width:61px;text-align:center\"><p>♜</p></td><td style=\"height:17px;width:61px;text-align:center\"><p>✠</p></td><td style=\"height:17px;width:61px;text-align:center\"><p>✠</p></td><td style=\"height:17px;width:61px;text-align:center\"><p></p></td><td style=\"height:17px;width:61px;text-align:center\"><p></p></td><td style=\"height:17px;width:61px;text-align:center\"><p>♟</p></td><td style=\"height:17px;width:61px;text-align:center\"><p></p></td></tr></tbody></table><h3>✠. @UUID[Compendium.forien-armoury.forien-armoury.Item.00martialartist1]{Martial Trainee}</h3><p><strong>Status</strong>: Brass 2<br /><strong>Skills</strong>: @UUID[Compendium.wfrp4e-core.items.Item.LGHozP5gmQ8cuDQV]{Athletics}, @UUID[Compendium.wfrp4e-core.items.Item.pxNjTxsp1Kp0SmQe]{Cool}, @UUID[Compendium.wfrp4e-core.items.Item.1jCxbFAUuFuAPLJl]{Dodge}, @UUID[Compendium.wfrp4e-core.items.Item.CcNJsS4jSwB6Ug1J]{Endurance}, @UUID[Compendium.wfrp4e-core.items.Item.cYtU0ORRFCOpQLWz]{Intuition}, <em>@UUID[Compendium.wfrp4e-core.items.Item.jLyoyqwmBVPjRjhM]{Melee (Brawling)}</em>, @UUID[Compendium.wfrp4e-core.items.Item.vQtJqX0qb0bbpVDg]{Perform (Acrobatics)}, @UUID[Compendium.wfrp4e-core.items.Item.Fs06sr7y9JKpVQmB]{Perception}, @UUID[Compendium.wfrp4e-core.items.Item.McTtmZu3Ac8Lh48W]{Stealth (Any)}, @UUID[Compendium.wfrp4e-core.items.Item.6l2JkMfD3mNxqiep]{Secret Signs (Martial Artists)}<br /><strong>Talents</strong>: @UUID[Compendium.wfrp4e-core.items.Item.TaYriYcJkFuIdBKp]{Contortionist}, @UUID[Compendium.wfrp4e-core.items.Item.VscjNv6RzHFb9CQp]{Enclosed Fighter}, @UUID[Compendium.wfrp4e-core.items.Item.tX9R9rSYm2YyEnOK]{In-fighter}, @UUID[Compendium.wfrp4e-core.items.Item.UaDGF5MBFBwPq5YU]{Iron Jaw}<br /><strong>Trappings</strong>: Martial clothing, bandages<br /><br /></p><h3>♟. @UUID[Compendium.forien-armoury.forien-armoury.Item.00martialartist2]{Martial Artist}</h3><p><strong>Status</strong>: Brass 5<br /><strong>Skills</strong>: @UUID[Compendium.wfrp4e-core.items.Item.sRuMlaPU5xdIrwhd]{Climb}, @UUID[Compendium.wfrp4e-core.items.Item.R2ytluHiEFF2KQ5e]{Consume Alcohol}, @UUID[Compendium.wfrp4e-core.items.Item.I0yPc4PH5erWJLmu]{Intimidate}, @UUID[Compendium.wfrp4e-core.items.Item.os4NKy5Oy6sRt1eh]{Outdoor Survival}, @UUID[Compendium.wfrp4e-core.items.Item.HXZaV1CJhmTvcAz4]{Heal}, @UUID[Compendium.wfrp4e-core.items.Item.RLQHm1s4IuY9RSr2]{Gossip}<br /><strong>Talents</strong>: @UUID[Compendium.wfrp4e-core.items.Item.HpGjzrSR4tdogJtl]{Step Aside}, @UUID[Compendium.forien-armoury.forien-armoury.Item.00000deadlyfists]{Deadly Fists}, @UUID[Compendium.wfrp4e-core.items.Item.IFKWu98qmWpaSfUi]{Ambidextrous}, @UUID[Compendium.wfrp4e-core.items.Item.URwIDtInCsxOoGqM]{Dual Wielder}<br /><strong>Trappings</strong>: <br /><br /></p><h3>♜. @UUID[Compendium.forien-armoury.forien-armoury.Item.00martialartist3]{Martial Master}</h3><p><strong>Status</strong>: Silver 2<br /><strong>Skills</strong>: @UUID[Compendium.wfrp4e-core.items.Item.2LDCVJQWkTFszMok]{Lore (Anatomy)}, @UUID[Compendium.wfrp4e-core.items.Item.1dVlA24UQGuWCiPT]{Perform (Fight)}, @UUID[Compendium.wfrp4e-core.items.Item.zZUX7wO4rOo8k9F0]{Navigation}, @UUID[Compendium.wfrp4e-core.items.Item.AaXk4bfDRTPeeYjn]{Art (Writing)}<br /><strong>Talents</strong>: @UUID[Compendium.wfrp4e-core.items.Item.0LdHytqyNmg2pcAX]{Combat Aware}, @UUID[Compendium.wfrp4e-core.items.Item.NDetl9BhAQBVnHKf]{Combat Master}, @UUID[Compendium.wfrp4e-core.items.Item.tXKX29QZBdHmyMc7]{Combat Reflexes}, @UUID[Compendium.forien-armoury.forien-armoury.Item.0000000ironfists]{Iron Fists}<br /><strong>Trappings</strong>: <br /><br /></p><h3>♛. @UUID[Compendium.forien-armoury.forien-armoury.Item.00martialartist4]{Living Legend}</h3><p><strong>Status</strong>: Silver 5<br /><strong>Skills</strong>: @UUID[Compendium.wfrp4e-core.items.Item.4mJoPBw4drm1kv2D]{Melee (Any)}, @UUID[Compendium.wfrp4e-core.items.Item.NSnpJQiky8JcMnme]{Ranged (Throwing)}<br /><strong>Talents</strong>: @UUID[Compendium.wfrp4e-core.items.Item.9sMAf0xmehjEmUao]{Fast Hands}, @UUID[Compendium.wfrp4e-core.items.Item.BlHVzfs0Ow6IYEDw]{Furious Assault}, @UUID[Compendium.wfrp4e-core.items.Item.4AqSkJnFPqNuTkos]{Reaction Strike}, @UUID[Compendium.wfrp4e-core.items.Item.jt0DmVK9IiF6Sd2h]{Strike to Stun}<br /><strong>Trappings</strong>: <br /><br /></p>",
+        "format": 1
+      },
+      "_id": "000martialartist",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "sort": 300000,
+      "ownership": {
+        "default": -1,
+        "EhobGNCUoyo9jPH1": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "JournalEntry.rKcDg37lXEl8WGvN.JournalEntryPage.000martialartist",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.3.2",
+        "createdTime": 1733575814210,
+        "modifiedTime": 1733588633906,
+        "lastModifiedBy": "EhobGNCUoyo9jPH1"
+      },
+      "_key": "!journal.pages!OVrtFjJzqXZMf0uf.000martialartist"
     }
   ],
   "flags": {

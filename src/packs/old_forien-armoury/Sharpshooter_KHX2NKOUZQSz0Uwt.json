@@ -1,0 +1,333 @@
+{
+  "folder": "vpf9CBQGtUUcleYT",
+  "name": "Sharpshooter",
+  "type": "template",
+  "img": "modules/forien-armoury/icons/templates/archer4.webp",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.9KFyUXLQiP1bb05c#archer]{Archer}</p>"
+    },
+    "gmdescription": {
+      "value": ""
+    },
+    "alterName": {
+      "pre": "",
+      "post": "Sharpshooter"
+    },
+    "characteristics": {
+      "ws": null,
+      "bs": 15,
+      "s": 15,
+      "t": 10,
+      "i": 15,
+      "ag": 15,
+      "dex": null,
+      "int": null,
+      "wp": null,
+      "fel": null
+    },
+    "skills": {
+      "list": [
+        {
+          "name": "Ranged (Bow)",
+          "advances": 15,
+          "group": 1,
+          "specialisations": null
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "advances": 15,
+          "group": 1,
+          "specialisations": null
+        },
+        {
+          "name": "Ranged (Blackpowder)",
+          "advances": 15,
+          "group": 1,
+          "specialisations": null
+        },
+        {
+          "name": "Melee (Basic)",
+          "advances": 15,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Perception",
+          "advances": 15,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Stealth (Rural)",
+          "advances": 15,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Athletics",
+          "advances": 15,
+          "group": 2,
+          "specialisations": null
+        },
+        {
+          "name": "Dodge",
+          "advances": 15,
+          "group": 2,
+          "specialisations": null
+        },
+        {
+          "name": "Outdoor Survival",
+          "advances": 15,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Track",
+          "advances": 15,
+          "group": null,
+          "specialisations": null
+        }
+      ]
+    },
+    "talents": {
+      "list": [
+        {
+          "name": "Accurate Shot",
+          "advances": 2,
+          "group": null
+        },
+        {
+          "name": "Sharpshooter",
+          "advances": null,
+          "group": 1
+        },
+        {
+          "name": "Sure Shot",
+          "advances": null,
+          "group": null
+        },
+        {
+          "name": "Rapid Reload",
+          "advances": null,
+          "group": 1
+        }
+      ]
+    },
+    "lores": {
+      "list": []
+    },
+    "traits": {
+      "list": []
+    },
+    "trappings": {
+      "structure": {
+        "type": "and",
+        "id": "root",
+        "options": [
+          {
+            "id": "xfPxE0kSHWLNNSAn",
+            "type": "or",
+            "options": [
+              {
+                "id": "qhcsrguSarZkoPKt",
+                "type": "and",
+                "options": [
+                  {
+                    "id": "dKMgwAr3SgtEXhti",
+                    "type": "option"
+                  },
+                  {
+                    "id": "NyprY7xUdzLLuBqH",
+                    "type": "option"
+                  },
+                  {
+                    "id": "CGRSavFpNG2uUDWk",
+                    "type": "option"
+                  }
+                ]
+              },
+              {
+                "id": "ijrBdOeQfYNoLMDR",
+                "type": "and",
+                "options": [
+                  {
+                    "id": "CXXlVQdJazdaCzwB",
+                    "type": "option"
+                  },
+                  {
+                    "id": "rFcBPZ66IQa0B2qT",
+                    "type": "option"
+                  },
+                  {
+                    "id": "gWKkvMk6rPMxGmgL",
+                    "type": "option"
+                  }
+                ]
+              },
+              {
+                "id": "nW1gc74iKyxipiMr",
+                "type": "and",
+                "options": [
+                  {
+                    "id": "1zQrItE2i43HeBSW",
+                    "type": "option"
+                  },
+                  {
+                    "id": "0M7GlOmlsNcO4ird",
+                    "type": "option"
+                  },
+                  {
+                    "id": "Q1i431j0DfEKIMn9",
+                    "type": "option"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "EW9bqkozMH9Y1UaJ",
+            "type": "option"
+          },
+          {
+            "id": "CPmbJmgsKcq9Qtea",
+            "type": "option"
+          },
+          {
+            "id": "16M2INv1Evt3DVQ1",
+            "type": "option"
+          }
+        ]
+      },
+      "options": [
+        {
+          "type": "item",
+          "id": "dKMgwAr3SgtEXhti",
+          "name": "Longbow",
+          "documentId": "RHkj94yUJp620xr1",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "CXXlVQdJazdaCzwB",
+          "name": "Hochland Long Rifle",
+          "documentId": "PFUozVSLLO2MLjA1",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "1zQrItE2i43HeBSW",
+          "name": "Heavy Crossbow",
+          "documentId": "K34pxV6XsxhoZRiQ",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "Q1i431j0DfEKIMn9",
+          "name": "Archer's Quiver",
+          "documentId": "ZfHEQs76E08LeAU7",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "gWKkvMk6rPMxGmgL",
+          "name": "Powder Horn",
+          "documentId": "749BhVdd0kr83pf6",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "NyprY7xUdzLLuBqH",
+          "name": "Bodkin Arrow",
+          "documentId": "T2V8bJAbtwYlvOPT",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "0M7GlOmlsNcO4ird",
+          "name": "Bodkin Bolt",
+          "documentId": "jCZpu8nn4FrKhMD0",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "rFcBPZ66IQa0B2qT",
+          "name": "Precision Shot and Powder",
+          "documentId": "VlzGxkiCI1q4aa5c",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "EW9bqkozMH9Y1UaJ",
+          "name": "Long Gambeson",
+          "documentId": "X1OPgLRUhnJhjufW",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "CPmbJmgsKcq9Qtea",
+          "name": "Gambeson Coif",
+          "documentId": "iiYBwR0TRnrBefgp",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "16M2INv1Evt3DVQ1",
+          "name": "Chainmail Shirt",
+          "documentId": "4CfroiOYsxacqe2M",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "name": "Archer's Quiver",
+          "id": "CGRSavFpNG2uUDWk",
+          "idType": "id",
+          "documentId": "ZfHEQs76E08LeAU7",
+          "diff": {},
+          "filters": []
+        }
+      ]
+    }
+  },
+  "effects": [],
+  "sort": 500000,
+  "ownership": {
+    "default": 0,
+    "EhobGNCUoyo9jPH1": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": "Item.AvqslLKPfPx46c8O",
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1739604634867,
+    "modifiedTime": 1739617470187,
+    "lastModifiedBy": "EhobGNCUoyo9jPH1"
+  },
+  "_id": "KHX2NKOUZQSz0Uwt",
+  "_key": "!items!KHX2NKOUZQSz0Uwt"
+}

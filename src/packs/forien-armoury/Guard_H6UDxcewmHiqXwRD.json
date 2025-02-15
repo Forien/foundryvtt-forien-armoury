@@ -1,0 +1,22 @@
+{
+  "name": "Guard",
+  "sorting": "m",
+  "folder": "NsEE0dtFQiVPEHhn",
+  "type": "Item",
+  "_id": "H6UDxcewmHiqXwRD",
+  "description": "",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": null,
+    "modifiedTime": 1739602449711,
+    "lastModifiedBy": "EhobGNCUoyo9jPH1"
+  },
+  "_key": "!folders!H6UDxcewmHiqXwRD"
+}
