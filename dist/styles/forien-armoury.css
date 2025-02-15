@@ -40,7 +40,7 @@
 }
 #forien-armoury-settings-app form .content {
   width: 100%;
-  height: calc(100% - 25px - 30px - 5px);
+  height: calc(100% - 25px - 60px - 10px);
   font-family: CaslonPro, serif;
   background-color: rgba(26, 16, 7, 0.75);
   border: 1px solid #110a04;

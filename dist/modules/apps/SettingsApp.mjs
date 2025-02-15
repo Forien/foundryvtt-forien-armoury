@@ -28,7 +28,7 @@ export default class SettingsApp extends FormApplication {
     options.id = settings.app;
     options.template = Utility.getTemplate(this.partials.app)
     options.width = 600;
-    options.height = 650;
+    options.height = 670;
     options.minimizable = true;
     options.resizable = false;
     options.tabs = [{navSelector: ".tabs", contentSelector: ".content", initial: "main"}]

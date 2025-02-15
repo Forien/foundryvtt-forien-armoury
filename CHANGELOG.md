@@ -1,6 +1,9 @@
 # Changelog
 
 ## v3.X.X
+### v3.5.1
+* Fixed hidden `Submit` button due to insufficient Settings App height
+
 ### v3.5.0
 * Added new Career path: Martial Artist
 * Added 24 Templates spread across 6 archetypes: Archer, Assassin, Guard, Knight, Merchant and Soldier
