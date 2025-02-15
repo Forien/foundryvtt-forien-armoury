@@ -12,25 +12,26 @@ This module is a collection of custom trappings and features for Warhammer Fanta
 
 Forien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded
 
-### Notable changes in v3.2, v3.3 and v3.4
+### Notable changes in v3.5
+* Added new Career path: Martial Artist
+* Added 24 Templates spread across 6 archetypes: Archer, Assassin, Guard, Knight, Merchant and Soldier
+* Added 10 variations of existing armour Items (like gambesons) supporting the **Archives of the Empire Vol. III** armour system
+* Added option to automatically randomize Characteristics, Skills and Talents on created unlinked Tokens based on species (simulate C/S/T clicks)
+* Added option to add random amount of money to unlinked Tokens upon creation.
+* You can read full changelog [here](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
+
+### Notable changes in v3.0 through v3.4
 * Added Automatic Injury Progression feature
 * Added GM and Player Macros for toggling `Engaged` status
 * Added `Explorer's Backpack`, which allows attaching a Bedroll and a Lantern
 * Added support for Character Sheet v2
-* You can read full changelog [here](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
-
-### Notable changes in v3.1.0
-* Updated for Active Effects using Data Models (with [Warhammer Library](https://foundryvtt.com/packages/warhammer-lib)) and verified for WFRP4e 8.0.1
 * Created `Grimoire` type for Items.
   * This is new item type in the system, which allows to transfer spells from Grimoires without need to add spells themselves to an Actor.
   * It allows GMs to create items that award spells when held (or equipped, configurable) and take the spells away when grimoire is lost (or unequipped)
   * Memorized spells are not removed
   * Additional options to limit spells based on known language, lores, ability to Read/Write etc.
-* You can read full changelog [here](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
-
-### Notable changes in v3.0.0
 * Verified for Foundry v12 and set it as minimum version due to lack of backwards compatibility
-* Fixed Item Properties, macros and some other issues
+* You can read full changelog [here](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
 
 ### Notable changes in v2.1.0
 * Added following GM only Macros:
@@ -39,7 +40,6 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
 * Added following GM & Player Macros:
   * Use Cantrip — allows using "Cants" using rules from `Archives of the Empire Vol.III`. Require duplication and setup
   * Make Extended Lockpick Test — allows both GMs and Players to create Extended Lockpick Tests for their characters to attempt. Configuration available
-
 
 ### Notable changes in v2.0.0
 * Updated all of module's Active Effect to work or take advantage of WFRP4e's [Effect Refactor Update](https://github.com/moo-man/WFRP4e-FoundryVTT/releases/tag/7.1.0)
@@ -86,6 +86,7 @@ This Module adds some QoL and automation features, including mechanics that:
 * **Casting Fatigue**, providing soft limit to amount of spells that can be cast in short amount of time.
 * **Automated Disease Progression**, allowing for `incubation` and `duration` of diseases to countdown automatically.
 * **Automated Injury Progression**, allowing for `duration` of injuries to countdown automatically.
+* **Token Creation Randomization**, automating the Characteristics, Skills, Talents and Money randomization whenever an unlinked Token is placed on the Scene.
 * Additionally, this module contains quite a bit of utility or quality of life macros. You can find full list [down below](#Macros), but here are few:
   * **Generate Random Scroll** (Macro), improved WoM macro that now creates usable Magic Scroll
   * **Check Careers** (Macro), allows players to quickly check their progress through current Career and how far are they from completing it.
@@ -96,7 +97,8 @@ This Module adds some QoL and automation features, including mechanics that:
 ### Items
 Module contains single Compendium pack containing over 150 (Item and Active Effect) entries.
 
-* Added 12 new **Careers** across 3 new Career Paths
+* Added 16 new **Careers** across 4 new Career Paths
+  * Martial Artist
   * Monster Hunter
   * Runebound Ranger
   * Runesmith
@@ -105,13 +107,15 @@ Module contains single Compendium pack containing over 150 (Item and Active Effe
   * 15 Petty Spells of Silliness
   * 7 Runebound Runic Spells
 * Added 1 new **Skill** (Runecraft)
-* Added 11 new **Talents** (Dawi Runes, Runebound Magic, Fortifiend Mind, 3x Fighting Styles and 3x Fighting Masters)
+* Added 13 new **Talents** (Dawi Runes, Runebound Magic, Fortifiend Mind, 3x Fighting Styles and 3x Fighting Masters)
+* Added 24 Templates across 6 archetypes (Archer, Assassin, Guard, Knight, Merchant and Soldier)
 * Added 4 new **Traits** (Drunk, Point Blank Rule, Repulsive, Casting Mastery)
-* Added 11 new and rebalanced **Armour** items:
+* Added 12 new and rebalanced **Armour** items:
   * Added Gambesons as an alternative to Leather armour
   * Rebalanced Leather armour (is more expensive than Gambesons, but Durable)
   * Added Cuirass (plate torso armour)
   * Added Breastplate (covers front only)
+  * Kettle Hat
 * Added 9 new **Ammunition** types:
   * Barbed Bolt, Bodkin Bolt, Sharp Stick (Bolt)
   * Fire Arrows, Poisoned Arrows, Winged Arrows
