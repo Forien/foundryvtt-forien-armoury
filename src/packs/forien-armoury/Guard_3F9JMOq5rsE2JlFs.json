@@ -1,0 +1,172 @@
+{
+  "name": "Guard",
+  "type": "template",
+  "img": "modules/forien-armoury/icons/templates/guard2.webp",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.9KFyUXLQiP1bb05c#guard]{Guard}</p>"
+    },
+    "gmdescription": {
+      "value": ""
+    },
+    "alterName": {
+      "pre": "",
+      "post": "Guard"
+    },
+    "characteristics": {
+      "ws": 5,
+      "bs": null,
+      "s": 5,
+      "t": 5,
+      "i": null,
+      "ag": 5,
+      "dex": null,
+      "int": null,
+      "wp": null,
+      "fel": null
+    },
+    "skills": {
+      "list": [
+        {
+          "name": "Perception",
+          "advances": 10,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Melee (Polearm)",
+          "advances": 10,
+          "group": 1,
+          "specialisations": null
+        },
+        {
+          "name": "Melee (Basic)",
+          "advances": 10,
+          "group": 1,
+          "specialisations": null
+        },
+        {
+          "name": "Consume Alcohol",
+          "advances": 10,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Gossip",
+          "advances": 10,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Athletics",
+          "advances": 10,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Cool",
+          "advances": 10,
+          "group": null,
+          "specialisations": null
+        }
+      ]
+    },
+    "talents": {
+      "list": []
+    },
+    "lores": {
+      "list": []
+    },
+    "traits": {
+      "list": []
+    },
+    "trappings": {
+      "structure": {
+        "type": "and",
+        "id": "root",
+        "options": [
+          {
+            "id": "OlhG3oRRLETwTHfl",
+            "type": "option"
+          },
+          {
+            "id": "agAXn9NqiquxWtDD",
+            "type": "option"
+          },
+          {
+            "id": "cb3s7kgrJBS12Abl",
+            "type": "or",
+            "options": [
+              {
+                "id": "pMtPocMZsrOGT4xi",
+                "type": "option"
+              },
+              {
+                "id": "OX5PS0MgBZc2fs8r",
+                "type": "option"
+              }
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "type": "item",
+          "id": "OlhG3oRRLETwTHfl",
+          "name": "Long Gambeson",
+          "documentId": "X1OPgLRUhnJhjufW",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "agAXn9NqiquxWtDD",
+          "name": "Gambeson Coif",
+          "documentId": "iiYBwR0TRnrBefgp",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "OX5PS0MgBZc2fs8r",
+          "name": "Hand Weapon",
+          "documentId": "1zaqojk0Oq1m8vYv",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "name": "Halberd",
+          "id": "pMtPocMZsrOGT4xi",
+          "idType": "id",
+          "documentId": "jxTsO0vrf53pCxCb",
+          "diff": {},
+          "filters": []
+        }
+      ]
+    }
+  },
+  "effects": [],
+  "folder": "H6UDxcewmHiqXwRD",
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "EhobGNCUoyo9jPH1": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": "Item.hhTZZw544PnFrUgh",
+    "duplicateSource": "Item.hhTZZw544PnFrUgh",
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1739602443942,
+    "modifiedTime": 1739617505326,
+    "lastModifiedBy": "EhobGNCUoyo9jPH1"
+  },
+  "_id": "3F9JMOq5rsE2JlFs",
+  "_key": "!items!3F9JMOq5rsE2JlFs"
+}

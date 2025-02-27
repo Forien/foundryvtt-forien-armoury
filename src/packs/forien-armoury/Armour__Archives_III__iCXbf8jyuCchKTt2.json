@@ -1,0 +1,22 @@
+{
+  "name": "Armour (Archives III)",
+  "sorting": "a",
+  "folder": "YORP103HITjrXJC1",
+  "type": "Item",
+  "_id": "iCXbf8jyuCchKTt2",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!iCXbf8jyuCchKTt2"
+}

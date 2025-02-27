@@ -1,0 +1,22 @@
+{
+  "name": "Archer",
+  "sorting": "m",
+  "folder": "NsEE0dtFQiVPEHhn",
+  "type": "Item",
+  "_id": "vpf9CBQGtUUcleYT",
+  "description": "",
+  "sort": 300000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": null,
+    "modifiedTime": 1739604634919,
+    "lastModifiedBy": "EhobGNCUoyo9jPH1"
+  },
+  "_key": "!folders!vpf9CBQGtUUcleYT"
+}

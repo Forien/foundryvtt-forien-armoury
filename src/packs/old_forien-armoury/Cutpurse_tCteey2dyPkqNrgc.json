@@ -1,0 +1,141 @@
+{
+  "folder": "Xjwkp64lDb9wrjD1",
+  "name": "Cutpurse",
+  "type": "template",
+  "_id": "tCteey2dyPkqNrgc",
+  "img": "modules/forien-armoury/icons/templates/assassin1.webp",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.9KFyUXLQiP1bb05c#assassin]{Assassin}</p>"
+    },
+    "gmdescription": {
+      "value": ""
+    },
+    "alterName": {
+      "pre": "",
+      "post": "Cutpurse"
+    },
+    "characteristics": {
+      "ws": 5,
+      "bs": null,
+      "s": null,
+      "t": null,
+      "i": null,
+      "ag": 5,
+      "dex": 5,
+      "int": null,
+      "wp": null,
+      "fel": null
+    },
+    "skills": {
+      "list": [
+        {
+          "name": "Melee",
+          "advances": 5,
+          "group": null,
+          "specialisations": 1
+        },
+        {
+          "name": "Gossip",
+          "advances": 5,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Athletics",
+          "advances": 5,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Dodge",
+          "advances": 5,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Stealth",
+          "advances": 5,
+          "group": null,
+          "specialisations": 1
+        }
+      ]
+    },
+    "talents": {
+      "list": [
+        {
+          "name": "In-fighter",
+          "advances": null,
+          "group": null
+        }
+      ]
+    },
+    "lores": {
+      "list": []
+    },
+    "traits": {
+      "list": [
+        {
+          "uuid": "Compendium.wfrp4e-core.items.Item.gFkRm9wS65qe18Xv",
+          "id": "gFkRm9wS65qe18Xv",
+          "name": "Venom",
+          "diff": {}
+        }
+      ]
+    },
+    "trappings": {
+      "structure": {
+        "type": "and",
+        "id": "root",
+        "options": [
+          {
+            "id": "fHquNXBB1NUMMgaD",
+            "type": "option"
+          },
+          {
+            "id": "CMDeSvMz2DWFUj4J",
+            "type": "option"
+          }
+        ]
+      },
+      "options": [
+        {
+          "type": "item",
+          "id": "fHquNXBB1NUMMgaD",
+          "name": "Dagger",
+          "documentId": "UlL4mHSgBW3nYh2a",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "CMDeSvMz2DWFUj4J",
+          "name": "Rope, 10 yards",
+          "documentId": "horFAtaDz0EbuY3R",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        }
+      ]
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EhobGNCUoyo9jPH1": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1739603554977,
+    "modifiedTime": 1739617483789,
+    "lastModifiedBy": "EhobGNCUoyo9jPH1"
+  },
+  "_key": "!items!tCteey2dyPkqNrgc"
+}

@@ -1,0 +1,244 @@
+{
+  "folder": "Drz7yzY8wwrIbFp3",
+  "name": "Man-at-Arms",
+  "type": "template",
+  "img": "modules/forien-armoury/icons/templates/soldier2.webp",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.9KFyUXLQiP1bb05c#soldier]{Soldier}</p>"
+    },
+    "gmdescription": {
+      "value": ""
+    },
+    "alterName": {
+      "pre": "",
+      "post": "Man-at-Arms"
+    },
+    "characteristics": {
+      "ws": 10,
+      "bs": null,
+      "s": 5,
+      "t": 10,
+      "i": null,
+      "ag": 5,
+      "dex": null,
+      "int": null,
+      "wp": 10,
+      "fel": null
+    },
+    "skills": {
+      "list": [
+        {
+          "name": "Melee (Basic)",
+          "advances": 10,
+          "group": 1,
+          "specialisations": null
+        },
+        {
+          "name": "Melee (Polearm)",
+          "advances": 10,
+          "group": 1,
+          "specialisations": null
+        },
+        {
+          "name": "Cool",
+          "advances": 10,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Athletics",
+          "advances": 10,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Endurance",
+          "advances": 10,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Language (Battle Tongue)",
+          "advances": 10,
+          "group": null,
+          "specialisations": null
+        }
+      ]
+    },
+    "talents": {
+      "list": [
+        {
+          "name": "Drilled",
+          "advances": 1,
+          "group": null
+        },
+        {
+          "name": "Unshakable",
+          "advances": null,
+          "group": null
+        }
+      ]
+    },
+    "lores": {
+      "list": []
+    },
+    "traits": {
+      "list": []
+    },
+    "trappings": {
+      "structure": {
+        "type": "and",
+        "id": "root",
+        "options": [
+          {
+            "id": "9r1emL9JIXxokA1t",
+            "type": "or",
+            "options": [
+              {
+                "id": "fTvH2V9sqeHM5WXZ",
+                "type": "and",
+                "options": [
+                  {
+                    "id": "ZUHWlgwZ0Ywi4Xwg",
+                    "type": "option"
+                  },
+                  {
+                    "id": "SwlYW1CvcfyPm87b",
+                    "type": "option"
+                  }
+                ]
+              },
+              {
+                "id": "Czm79DMr5TqPo5cE",
+                "type": "option"
+              }
+            ]
+          },
+          {
+            "id": "92EFtgryfiqlM8ZV",
+            "type": "option"
+          },
+          {
+            "id": "vIt2IoxFdmrvOGKY",
+            "type": "option"
+          },
+          {
+            "id": "b41ssfeJcaXqU5Bf",
+            "type": "option"
+          },
+          {
+            "id": "6D7XEby4OEDPYWs8",
+            "type": "option"
+          },
+          {
+            "id": "2MKqoIfeMgVx1H9F",
+            "type": "option"
+          }
+        ]
+      },
+      "options": [
+        {
+          "type": "item",
+          "id": "ZUHWlgwZ0Ywi4Xwg",
+          "name": "Hand Weapon",
+          "documentId": "1zaqojk0Oq1m8vYv",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "SwlYW1CvcfyPm87b",
+          "name": "Shield",
+          "documentId": "8nJ9R8tbhW42VGhr",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "filter",
+          "id": "Czm79DMr5TqPo5cE",
+          "name": "Polearm weapon",
+          "diff": {},
+          "filters": [
+            {
+              "path": "type",
+              "operation": "=",
+              "value": "weapon"
+            },
+            {
+              "path": "system.weaponGroup.value",
+              "operation": "=",
+              "value": "polearm"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "id": "92EFtgryfiqlM8ZV",
+          "name": "Gambeson Coif",
+          "documentId": "iiYBwR0TRnrBefgp",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "vIt2IoxFdmrvOGKY",
+          "name": "Kettle hat",
+          "documentId": "VcHpA4iwCeBe8nau",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "b41ssfeJcaXqU5Bf",
+          "name": "Breastplate",
+          "documentId": "hWZ6H1jZ9jmte6yE",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "id": "6D7XEby4OEDPYWs8",
+          "name": "Mail Coat",
+          "documentId": "i76oPVM2eFEs5IBh",
+          "diff": {},
+          "idType": "id",
+          "filters": []
+        },
+        {
+          "type": "item",
+          "name": "Gambeson Coat",
+          "id": "2MKqoIfeMgVx1H9F",
+          "idType": "id",
+          "documentId": "BPcUiIKFMXSobKqC",
+          "diff": {},
+          "filters": []
+        }
+      ]
+    }
+  },
+  "effects": [],
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "EhobGNCUoyo9jPH1": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": "Item.4obm9XFkZ3yHy2jU",
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1739608493201,
+    "modifiedTime": 1739617566043,
+    "lastModifiedBy": "EhobGNCUoyo9jPH1"
+  },
+  "_id": "uRFo2YrZDfjeUeXi",
+  "_key": "!items!uRFo2YrZDfjeUeXi"
+}

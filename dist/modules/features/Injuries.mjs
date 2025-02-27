@@ -75,7 +75,7 @@ export default class Injuries extends ForienBaseModule {
   async #registerInjuryListener(actor, injury) {
     if (injury.system.duration.permanent) return;
 
-    let unitSeconds = this.#getUnitSeconds('days');
+    let unitSeconds = this.#getUnitSeconds(game.i18n.localize("Days"));
     if (unitSeconds === false) return;
 
     if (isNaN(injury.system.duration.value))

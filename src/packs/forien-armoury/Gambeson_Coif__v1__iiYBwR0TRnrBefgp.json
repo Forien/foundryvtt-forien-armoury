@@ -1,0 +1,120 @@
+{
+  "name": "Gambeson Coif (v1)",
+  "type": "armour",
+  "img": "modules/forien-armoury/icons/gambeson-coif.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>A gambeson coif is a padded defensive cap, worn as armor separately, or combined with mail or plate helmet. Gambesons are produced with a sewing technique called quilting. They are usually constructed of linen or wool; the stuffing varied, and could be for example scrap cloth or horse hair.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 6,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": false
+    },
+    "armorType": {
+      "type": "String",
+      "label": "Armour Type",
+      "value": "softLeather"
+    },
+    "penalty": {
+      "type": "String",
+      "label": "Penalty",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "AP": {
+      "head": 1,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "APdamage": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "equipped": {
+      "value": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "8.0.1",
+    "coreVersion": "12.331",
+    "createdTime": 1687445510215,
+    "modifiedTime": 1739615701598,
+    "lastModifiedBy": "EhobGNCUoyo9jPH1",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "folder": "OknGSWx8ZsQcVSTB",
+  "_id": "iiYBwR0TRnrBefgp",
+  "sort": 900000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!iiYBwR0TRnrBefgp"
+}

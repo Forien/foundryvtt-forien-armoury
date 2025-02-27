@@ -28,7 +28,7 @@ export default class SettingsApp extends FormApplication {
     options.id = settings.app;
     options.template = Utility.getTemplate(this.partials.app)
     options.width = 600;
-    options.height = 650;
+    options.height = 670;
     options.minimizable = true;
     options.resizable = false;
     options.tabs = [{navSelector: ".tabs", contentSelector: ".content", initial: "main"}]
@@ -126,10 +126,26 @@ export default class SettingsApp extends FormApplication {
       main: {
         always: [
           settings.runes.enableDamage,
-          settings.diseases.autoProgress,
-          settings.injuries.autoProgress,
+          settings.properties.enabled,
           Debug.setting,
         ]
+      },
+
+      actor: {
+        always: [
+          settings.diseases.autoProgress,
+          settings.injuries.autoProgress,
+          settings.actor.rollToken
+        ],
+        enable: {
+          when: settings.actor.rollToken,
+          settings: [
+            settings.actor.rollMode,
+            settings.actor.rollMoney,
+            settings.actor.defaultMoney,
+            settings.actor.moneyMode,
+          ]
+        }
       },
 
       arrow: {

@@ -1,0 +1,94 @@
+{
+  "folder": "RCM7UPl2OIo8LpQY",
+  "name": "Haggler",
+  "type": "template",
+  "_id": "YSL2WhbPw8o7qrpg",
+  "img": "modules/forien-armoury/icons/templates/merchant1.webp",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.9KFyUXLQiP1bb05c#merchant]{Merchant}</p>"
+    },
+    "gmdescription": {
+      "value": ""
+    },
+    "alterName": {
+      "pre": "",
+      "post": "Haggler"
+    },
+    "characteristics": {
+      "ws": null,
+      "bs": null,
+      "s": null,
+      "t": null,
+      "i": 5,
+      "ag": null,
+      "dex": null,
+      "int": null,
+      "wp": 5,
+      "fel": 5
+    },
+    "skills": {
+      "list": [
+        {
+          "name": "Perception",
+          "advances": 5,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Gossip",
+          "advances": 5,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Consume Alcohol",
+          "advances": 5,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Haggle",
+          "advances": 5,
+          "group": null,
+          "specialisations": null
+        }
+      ]
+    },
+    "talents": {
+      "list": []
+    },
+    "lores": {
+      "list": []
+    },
+    "traits": {
+      "list": []
+    },
+    "trappings": {
+      "structure": {
+        "type": "or",
+        "id": "root",
+        "options": []
+      },
+      "options": []
+    }
+  },
+  "effects": [],
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "EhobGNCUoyo9jPH1": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1739605903292,
+    "modifiedTime": 1739617544816,
+    "lastModifiedBy": "EhobGNCUoyo9jPH1"
+  },
+  "_key": "!items!YSL2WhbPw8o7qrpg"
+}

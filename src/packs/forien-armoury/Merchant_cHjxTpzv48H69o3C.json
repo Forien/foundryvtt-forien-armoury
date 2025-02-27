@@ -1,0 +1,129 @@
+{
+  "folder": "RCM7UPl2OIo8LpQY",
+  "name": "Merchant",
+  "type": "template",
+  "img": "modules/forien-armoury/icons/templates/merchant3.webp",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.9KFyUXLQiP1bb05c#merchant]{Merchant}</p>"
+    },
+    "gmdescription": {
+      "value": ""
+    },
+    "alterName": {
+      "pre": "",
+      "post": "Merchant"
+    },
+    "characteristics": {
+      "ws": null,
+      "bs": null,
+      "s": null,
+      "t": null,
+      "i": 15,
+      "ag": 10,
+      "dex": null,
+      "int": 10,
+      "wp": 15,
+      "fel": 15
+    },
+    "skills": {
+      "list": [
+        {
+          "name": "Perception",
+          "advances": 15,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Gossip",
+          "advances": 15,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Consume Alcohol",
+          "advances": 15,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Haggle",
+          "advances": 15,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Athletics",
+          "advances": 15,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Intuition",
+          "advances": 15,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Evaluate",
+          "advances": 10,
+          "group": null,
+          "specialisations": null
+        },
+        {
+          "name": "Cool",
+          "advances": 10,
+          "group": null,
+          "specialisations": null
+        }
+      ]
+    },
+    "talents": {
+      "list": [
+        {
+          "name": "Dealmaker",
+          "advances": null,
+          "group": null
+        },
+        {
+          "name": "Nose for Trouble",
+          "advances": null,
+          "group": null
+        }
+      ]
+    },
+    "lores": {
+      "list": []
+    },
+    "traits": {
+      "list": []
+    },
+    "trappings": {
+      "structure": {
+        "type": "or",
+        "id": "root",
+        "options": []
+      },
+      "options": []
+    }
+  },
+  "effects": [],
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "EhobGNCUoyo9jPH1": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": "Item.cHjxTpzv48H69o3C",
+    "duplicateSource": "Item.zhxhyPoAfEEyn2Bw",
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1739605903292,
+    "modifiedTime": 1739617551627,
+    "lastModifiedBy": "EhobGNCUoyo9jPH1"
+  },
+  "_id": "cHjxTpzv48H69o3C",
+  "_key": "!items!cHjxTpzv48H69o3C"
+}

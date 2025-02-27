@@ -1,6 +1,10 @@
 <form>
     <nav class="tabs">
         <a class="item" data-tab="main">{{localize "Forien.Armoury.Settings.Tabs.Main"}}</a>
+        {{#if tabs.actor}}
+            <a class="item" data-tab="actor">{{localize
+                    "Forien.Armoury.Settings.Tabs.Actor"}}</a>
+        {{/if}}
         {{#if tabs.arrow}}
             <a class="item" data-tab="arrow-reclamation">{{localize
                     "Forien.Armoury.Settings.Tabs.ArrowReclamation"}}</a>
@@ -25,6 +29,9 @@
     <div class="content">
         <div class="tab" data-tab="main">
             {{> forien-armoury.settings.tab settings=tabs.main promo=true}}
+        </div>
+        <div class="tab" data-tab="actor">
+            {{> forien-armoury.settings.tab settings=tabs.actor}}
         </div>
         <div class="tab" data-tab="arrow-reclamation">
             {{> forien-armoury.settings.tab settings=tabs.arrow}}

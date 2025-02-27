@@ -23,6 +23,7 @@ import GrimoireModel from "./data-models/Grimoire.mjs";
 import GrimoireSheet from "./apps/GrimoireSheet.mjs";
 import Grimoires from "./features/Grimoires.mjs";
 import Injuries from "./features/Injuries.mjs";
+import Tokens from "./features/Tokens.mjs";
 import FatigueChannellingDialog from "./features/FatigueChannellingDialog.mjs";
 import FatigueChannelTest from "./features/FatigueChannellTest.mjs";
 
@@ -45,6 +46,7 @@ export default class ForienArmoury {
     Scrolls,
     Species,
     TemporaryRunes,
+    Tokens,
     WorldTimeObserver,
   ]
 
@@ -70,8 +72,8 @@ export default class ForienArmoury {
     this.#initializeModules();
     this.#bindHooks();
     this.#preloadTemplates();
-    this.#hackWFRP4e();
     this.#registerSettings();
+    this.#hackWFRP4e();
 
     Utility.notify("Module initialized!", {consoleOnly: true});
   }
