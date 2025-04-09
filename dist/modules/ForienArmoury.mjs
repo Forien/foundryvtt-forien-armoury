@@ -229,6 +229,7 @@ export default class ForienArmoury {
     })
 
     game.wfrp4e.rolls.FatigueChannelTest = FatigueChannelTest;
+    window.FatigueChannellingDialog = FatigueChannellingDialog;
     ActorWFRP4e.prototype.setupChannell = async function(spell, options = {}) {
 
       let dialogData = {
