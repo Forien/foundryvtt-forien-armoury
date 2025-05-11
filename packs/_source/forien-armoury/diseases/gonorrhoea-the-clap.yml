@@ -1,0 +1,295 @@
+name: Gonorrhoea (The Clap)
+type: disease
+_id: A5Ehm29WuOXCFP4O
+img: modules/wfrp4e-core/icons/diseases/disease.png
+system:
+  description:
+    value: >-
+      <p>One of the most common infections in the Empire. Gonorrhea, also known
+      as "The Clap" or "The Drip" is a sexually transmitted infection, also
+      called a sexually transmitted disease, caused by bacteria. Sexually
+      transmitted diseases are infections spread mainly by contact with genitals
+      or bodily fluids. Also called STDs, STIs or venereal disease, sexually
+      transmitted infections are caused by bacteria, viruses or parasites.
+      Symptoms vary between the sexes but can include pain or rashes in the
+      area, unusual discharges, and pain or burning sensation when urinating.
+      This disease is fairly rampant amongst the brothels and taverns of the Old
+      World.</p><p>Treatment include some herbal remedies but tend to cost in
+      the region of 1/-. Magical remedies may also cure the disease.</p>
+  gmdescription:
+    value: ''
+  contraction:
+    value: >-
+      Failing an Average (+20) Endurance Test after sexual contact with an
+      infected person.
+  incubation:
+    value: 1d10
+    unit: days
+  duration:
+    value: 3d20*10
+    unit: days
+    active: false
+  symptoms:
+    value: Lingering (Challenging), Malaise, Rashes
+  permanent:
+    value: ''
+  diagnosed: false
+effects:
+  - name: Lingering (Challenging)
+    flags:
+      wfrp4e:
+        symptom: true
+        _legacyData: {}
+    _id: FvD7eIncyCvvt1EF
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    transfer: true
+    statuses: []
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/wfrp4e-core/icons/diseases/disease.png
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+          script: ''
+          difficulty: ''
+          characteristic: ''
+          skill: ''
+        testIndependent: false
+        preApplyScript: ''
+        equipTransfer: false
+        selfOnly: false
+        enableConditionScript: ''
+        filter: ''
+        prompt: false
+        area:
+          radius: null
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData: []
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    tint: '#ffffff'
+    sort: 0
+    _key: '!items.effects!A5Ehm29WuOXCFP4O.FvD7eIncyCvvt1EF'
+  - name: Malaise
+    flags:
+      wfrp4e:
+        symptom: true
+        applicationData: {}
+        scriptData: []
+        _legacyData: {}
+    _id: aRgwL0dia9D9wDMq
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    transfer: true
+    statuses: []
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/wfrp4e-core/icons/diseases/disease.png
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: false
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - trigger: update
+          label: '@effect.name'
+          script: |-
+            let fatigued = this.actor.hasCondition("fatigued")
+                                        if (!fatigued)
+                                        {
+                                            this.actor.addCondition("fatigued")
+                                            ui.notifications.notify("Fatigued added to " + this.actor.name + " which cannot be removed until the Malaise symptom is gone.")
+                                        }
+          options:
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    tint: '#ffffff'
+    sort: 0
+    _key: '!items.effects!A5Ehm29WuOXCFP4O.aRgwL0dia9D9wDMq'
+  - name: Rashes
+    transfer: true
+    flags:
+      wfrp4e:
+        symptom: true
+        applicationData: {}
+        scriptData: []
+        _legacyData: {}
+    _id: ET3hxPktTZMQiP14
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    statuses: []
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/wfrp4e-core/icons/diseases/disease.png
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: false
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Scarring
+          trigger: prePrepareData
+          script: |-
+            args.actor.system.characteristics.fel.modifier -= 5;
+                            args.actor.system.characteristics.dex.modifier -= 5;
+          options:
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    tint: '#ffffff'
+    sort: 0
+    _key: '!items.effects!A5Ehm29WuOXCFP4O.ET3hxPktTZMQiP14'
+folder: CnjDdyOSP29fHa3S
+ownership:
+  default: 0
+flags:
+  exportSource:
+    world: wfrp-test-world
+    system: wfrp4e
+    coreVersion: '11.315'
+    systemVersion: 7.0.3
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1702257094378
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+sort: 500000
+_key: '!items!A5Ehm29WuOXCFP4O'
+

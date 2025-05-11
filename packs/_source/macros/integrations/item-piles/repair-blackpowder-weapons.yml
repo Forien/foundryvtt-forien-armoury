@@ -1,0 +1,32 @@
+name: Repair Blackpowder Weapons
+type: script
+scope: global
+author: ZJyAmf2sKocHG1ud
+img: icons/skills/trades/smithing-smelter-tongs.webp
+command: |-
+  const api = game.modules.get("forien-armoury")?.api.itemRepair;
+
+  if (api && scope.buyer && scope.userId) {
+    api.checkInventoryForDamage(scope.buyer, {
+      paid: true,
+      type: "weapons",
+      subtype: "blackpowder,engineering,explosives",
+      user: scope.userId
+    });
+  }
+folder: PrF8OmDhD6LXHdz1
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.0
+  coreVersion: '12.327'
+  createdTime: 1690506986386
+  modifiedTime: 1690870318656
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: IDjpnfRmka1ABhTe
+sort: 0
+_key: '!macros!IDjpnfRmka1ABhTe'
+

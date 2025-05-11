@@ -1,0 +1,22 @@
+name: Set Token Friendly
+type: script
+scope: global
+author: aDepqlKkeOa13DWo
+img: icons/skills/social/diplomacy-handshake-yellow.webp
+command: "async function setToken(token, disp)\n{\n\tawait token.document.update({disposition: disp});\n\ttoken.refresh(true);\n}\n\ncanvas.tokens.controlled.forEach(tkn => setToken(tkn, 1));"
+folder: rJKAafA2UXxZbP3p
+sort: 300000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.5.9
+  coreVersion: '12.327'
+  createdTime: 1687706457494
+  modifiedTime: 1689019628612
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: Os0KUwlf9cIuNNWe
+_key: '!macros!Os0KUwlf9cIuNNWe'
+

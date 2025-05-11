@@ -1,0 +1,91 @@
+folder: OIXKjAS72VZJ0m0z
+name: Weapons Ranged Engineering
+_id: Wxwpo7lb3JXXmn8V
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    text: Cane Pistol
+    documentId: KctE2XqiliGL054j
+    img: modules/wfrp4e-up-in-arms/assets/icons/pistol.png
+    _id: 05u5e2iY0icHcI4S
+    flags: {}
+    _key: '!tables.results!Wxwpo7lb3JXXmn8V.05u5e2iY0icHcI4S'
+  - type: pack
+    documentCollection: wfrp4e-archives1.items
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    text: Drakefire Pistol
+    documentId: XurSURwIt8pnoOlJ
+    img: modules/wfrp4e-archives1/assets/icons/drakefire-pistol.png
+    _id: OfRJZqGFzvDBaYuM
+    flags: {}
+    _key: '!tables.results!Wxwpo7lb3JXXmn8V.OfRJZqGFzvDBaYuM'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 5
+    range:
+      - 3
+      - 7
+    drawn: false
+    text: Pepperbox
+    documentId: s0mBvaAbe6PLUPZb
+    img: systems/wfrp4e/icons/blank.png
+    _id: 9N3b49rHtnfdjWdF
+    flags: {}
+    _key: '!tables.results!Wxwpo7lb3JXXmn8V.9N3b49rHtnfdjWdF'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 5
+    range:
+      - 8
+      - 12
+    drawn: false
+    text: Repeater Handgun
+    documentId: vwvprQOKH9Rtti4b
+    img: modules/wfrp4e-up-in-arms/assets/icons/repeater-handgun.png
+    _id: 16jhnaMJ6pvpPBXL
+    flags: {}
+    _key: '!tables.results!Wxwpo7lb3JXXmn8V.16jhnaMJ6pvpPBXL'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 5
+    range:
+      - 13
+      - 17
+    drawn: false
+    text: Repeater Pistol
+    documentId: Neriv2FSubZWLTTq
+    img: modules/wfrp4e-up-in-arms/assets/icons/repeater-pistol.png
+    _id: iMlCiKbn4lKftUI9
+    flags: {}
+    _key: '!tables.results!Wxwpo7lb3JXXmn8V.iMlCiKbn4lKftUI9'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690163506847
+  modifiedTime: 1690163541196
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d17
+_key: '!tables!Wxwpo7lb3JXXmn8V'
+

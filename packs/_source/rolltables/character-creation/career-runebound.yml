@@ -1,0 +1,39 @@
+name: Career - Runebound
+img: systems/wfrp4e/ui/buttons/d10.webp
+results:
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 100
+    range:
+      - 1
+      - 100
+    drawn: false
+    text: Runebound Neophyte
+    documentId: lJgKS7d86MaVVyK2
+    img: modules/forien-armoury/icons/careers/runebound-ranger-1.webp
+    _id: SCMOXcTOPia2WYsj
+    flags: {}
+    _key: '!tables.results!Mj72jAZUKwqXVM31.SCMOXcTOPia2WYsj'
+formula: 1d100
+replacement: true
+displayRoll: true
+flags:
+  wfrp4e:
+    key: career
+    column: runebound
+description: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 7.1.3
+  coreVersion: '12.327'
+  createdTime: 1657737418930
+  modifiedTime: 1714495577324
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+folder: j1vqMtlcpWWz1G9T
+ownership:
+  default: 0
+_id: Mj72jAZUKwqXVM31
+sort: 100000
+_key: '!tables!Mj72jAZUKwqXVM31'
+

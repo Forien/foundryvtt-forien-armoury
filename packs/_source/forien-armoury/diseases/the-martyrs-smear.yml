@@ -1,0 +1,316 @@
+name: The Martyr's Smear
+type: disease
+_id: r2OI99qUvtFWN8t0
+img: modules/wfrp4e-core/icons/diseases/disease.png
+system:
+  description:
+    value: >-
+      <p>The Martyrs smear is a terrible affliction that attacks the eyes of the
+      subject and causes painful swelling and lesions around the eyes.
+      Eventually the suffering individual’s eyes will start to leak blood which,
+      if left, will flow down their face in rivulets. This disease tends to
+      spread more easily in remote areas of the Empire, or in fanatical
+      religious communities where it is often misconstrued as a stigmata or
+      “sign” from their gods. In these circumstances ignorant folk tend to
+      willingly expose themselves to the host.  If there is any god behind it,
+      one suspects the Fly Lord’s corrupting machinations have a hand in it’s
+      spread.</p>
+  gmdescription:
+    value: ''
+  contraction:
+    value: >-
+      Failing a Difficult (-10) Endurance Test when you encounter the weeping
+      fluids of an infected individual.
+  incubation:
+    value: 1d8
+    unit: days
+  duration:
+    value: 4d10
+    unit: days
+    active: false
+  symptoms:
+    value: Purblind (Severe), Fever, Lingering (Easy)
+  permanent:
+    value: ''
+  diagnosed: false
+effects:
+  - name: Purblind (Severe)
+    transfer: false
+    flags:
+      wfrp4e:
+        symptom: true
+        applicationData: {}
+        scriptData: []
+        _legacyData: {}
+    _id: OeEtvo9pi76j4bYY
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    statuses: []
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/wfrp4e-core/icons/diseases/disease.png
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: false
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Sight-based Tests from Purblind
+          trigger: dialog
+          script: |-
+            let modifier = -10;
+                            if (this.effect.name.includes("Moderate"))
+                              modifier = -20;
+                            else if (this.effect.name.includes("Severe"))
+                              modifier = -30;
+                            
+                            args.fields.modifier += modifier;
+          options:
+            activateScript: return true;
+            hideScript: >-
+              let applicableSkills = ["NAME.Art",  "NAME.Dodge",  "NAME.Drive", 
+              "NAME.Evaluate",  "NAME.Melee",  "NAME.Navigation", 
+              "NAME.Perception",  "NAME.PickLock",  "NAME.Ranged", 
+              "NAME.Research",  "NAME.Ride",  "NAME.Row",  "NAME.Sail", 
+              "NAME.SecretSigns",  "NAME.SetTrap",  "NAME.Stealth", 
+              "NAME.Track"];
+                                  applicableSkills = applicableSkills.map(s => game.i18n.localize(s));
+                                  let applicableCharacteristics = ["ws", "bs", "ag", "dex"];
+                                  
+                                  return !(
+                                    (args.type === "weapon") ||
+                                    (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) ||
+                                    (args.type === "skill" && applicableSkills.includes(args.item.name))
+                                  )
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    tint: '#ffffff'
+    sort: 0
+    _key: '!items.effects!r2OI99qUvtFWN8t0.OeEtvo9pi76j4bYY'
+  - name: Fever
+    flags:
+      wfrp4e:
+        symptom: true
+        applicationData: {}
+        scriptData: []
+        _legacyData: {}
+    _id: 4DpxgIjeJN6LRSxi
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    transfer: true
+    statuses: []
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/wfrp4e-core/icons/diseases/disease.png
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: false
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - trigger: dialog
+          label: '@effect.name'
+          script: args.fields.modifier -= 10
+          options:
+            hideScript: >-
+              return !["ws", "bs", "s", "fel", "ag", "t",
+              "dex"].includes(args.characteristic)
+            activateScript: >-
+              return ["ws", "bs", "s", "fel", "ag", "t",
+              "dex"].includes(args.characteristic)
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    tint: '#ffffff'
+    sort: 0
+    _key: '!items.effects!r2OI99qUvtFWN8t0.4DpxgIjeJN6LRSxi'
+  - name: Lingering (Easy)
+    flags:
+      wfrp4e:
+        symptom: true
+        _legacyData: {}
+    _id: 4mhSSevliSMwDV23
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    transfer: true
+    statuses: []
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/wfrp4e-core/icons/diseases/disease.png
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+          script: ''
+          difficulty: ''
+          characteristic: ''
+          skill: ''
+        testIndependent: false
+        preApplyScript: ''
+        equipTransfer: false
+        selfOnly: false
+        enableConditionScript: ''
+        filter: ''
+        prompt: false
+        area:
+          radius: null
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData: []
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    tint: '#ffffff'
+    sort: 0
+    _key: '!items.effects!r2OI99qUvtFWN8t0.4mhSSevliSMwDV23'
+folder: CnjDdyOSP29fHa3S
+ownership:
+  default: 0
+flags:
+  exportSource:
+    world: for-sigmar
+    system: wfrp4e
+    coreVersion: '11.315'
+    systemVersion: 7.0.3
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1703953425560
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+sort: 0
+_key: '!items!r2OI99qUvtFWN8t0'
+

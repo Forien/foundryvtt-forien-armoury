@@ -1,0 +1,32 @@
+name: Repair Soft Armour
+type: script
+scope: global
+author: ZJyAmf2sKocHG1ud
+img: icons/skills/trades/textiles-knitting-yarn-red.webp
+command: |-
+  const api = game.modules.get("forien-armoury")?.api.itemRepair;
+
+  if (api && scope.buyer && scope.userId) {
+    api.checkInventoryForDamage(scope.buyer, {
+      paid: true,
+      type: "armour",
+      subtype: "softLeather",
+      user: scope.userId
+    });
+  }
+folder: PrF8OmDhD6LXHdz1
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.0
+  coreVersion: '12.327'
+  createdTime: 1690506986386
+  modifiedTime: 1690870672942
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: uIYZoqoZNuHp6zA2
+sort: 300000
+_key: '!macros!uIYZoqoZNuHp6zA2'
+

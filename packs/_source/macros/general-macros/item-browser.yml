@@ -1,0 +1,22 @@
+name: Item Browser
+type: script
+scope: global
+_id: 1WqROT91wAnInAph
+author: aDepqlKkeOa13DWo
+img: icons/containers/boxes/crates-wooden-stacked.webp
+command: new BrowserWfrp4e().render(true);
+folder: zpJMEpyBPqZm5EbR
+sort: 100000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 7.0.3
+  coreVersion: '12.327'
+  createdTime: 1687439884759
+  modifiedTime: 1702856165264
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_key: '!macros!1WqROT91wAnInAph'
+

@@ -1,0 +1,93 @@
+name: Pickaxe
+type: weapon
+img: icons/weapons/axes/pickaxe-gray.webp
+system:
+  description:
+    value: >-
+      <p>Pickaxe with a pick on one end and an axe – or more precisely a chisel
+      – on the other. </p><p>Mainly used as a rock-breaking tool, can be also
+      used to break some skulls.</p>
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 3
+  price:
+    gc: 1
+    ss: 0
+    bp: 0
+  availability:
+    value: scarce
+  location:
+    value: ''
+  damageToItem:
+    value: 0
+    shield: 0
+  damage:
+    value: +SB+4
+  reach:
+    value: average
+  range:
+    value: ''
+  skill:
+    value: ''
+  modeOverride:
+    value: ''
+  twohanded:
+    value: false
+  ammunitionGroup:
+    value: ''
+  currentAmmo:
+    value: '0'
+  consumesAmmo:
+    value: true
+  weaponGroup:
+    value: twohanded
+  qualities:
+    value:
+      - name: damaging
+        value: null
+      - name: hack
+        value: null
+        group: 1
+        active: true
+      - name: penetrating
+        value: null
+        group: 1
+  flaws:
+    value:
+      - name: tiring
+        value: null
+      - name: unbalanced
+        value: null
+  special:
+    value: ''
+  equipped:
+    value: false
+  loaded:
+    value: false
+    repeater: false
+    amt: 0
+  offhand:
+    value: false
+effects: []
+flags:
+  wfrp4e-up-in-arms:
+    initialization-folder: Weapons
+    sort: 1637500
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1669779879073
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+folder: UrA89QPP0urkYvZk
+_id: ws5f2yvbXpHZSPob
+sort: 300000
+ownership:
+  default: 0
+_key: '!items!ws5f2yvbXpHZSPob'
+

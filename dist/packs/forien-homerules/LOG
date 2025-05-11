@@ -1,5 +1,0 @@
-2025/02/15-12:15:55.458 bedc Delete type=3 #1
-2025/02/15-12:15:55.463 9104 Level-0 table #5: started
-2025/02/15-12:15:55.467 9104 Level-0 table #5: 77745 bytes OK
-2025/02/15-12:15:55.470 9104 Delete type=0 #3
-2025/02/15-12:15:55.470 9104 Manual compaction at level-0 from '!journal!Gkp2fY7NEJJ3FlGe' @ 72057594037927935 : 1 .. '!journal.pages!u2f4n9KXYBmBvZw3.yUxjlmhdYrxvCmm6' @ 0 : 0; will stop at (end)

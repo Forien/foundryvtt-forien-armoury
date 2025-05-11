@@ -1,0 +1,65 @@
+folder: Y1kRDKj14dTLeSyo
+name: Clothing All
+_id: KpefCK4r7TgYfO1w
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 30
+    range:
+      - 1
+      - 30
+    drawn: false
+    text: Clothing Common
+    documentId: DkyB96EbXiOEGTk0
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: o9eql90mXTDr29HH
+    flags: {}
+    _key: '!tables.results!KpefCK4r7TgYfO1w.o9eql90mXTDr29HH'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 5
+    range:
+      - 31
+      - 35
+    drawn: false
+    text: Clothing Rare
+    documentId: oKh5ri3b16tcW47T
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: jjtAQNu7D0RA1xUu
+    flags: {}
+    _key: '!tables.results!KpefCK4r7TgYfO1w.jjtAQNu7D0RA1xUu'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 15
+    range:
+      - 36
+      - 50
+    drawn: false
+    text: Clothing Scarce
+    documentId: EqPLOrxIR3quFvzT
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: VBNwECzCggrxXzcC
+    flags: {}
+    _key: '!tables.results!KpefCK4r7TgYfO1w.VBNwECzCggrxXzcC'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690164944998
+  modifiedTime: 1690164954736
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d50
+_key: '!tables!KpefCK4r7TgYfO1w'
+

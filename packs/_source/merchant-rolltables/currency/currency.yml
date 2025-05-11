@@ -1,0 +1,65 @@
+folder: RjPxRnikvGBBin3h
+name: Currency
+_id: ZAIWwl9tQDUh6V2n
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    text: Gold Crown
+    documentId: Ggx0bRaCuq8MbF0g
+    img: modules/wfrp4e-core/icons/currency/goldcrown.png
+    _id: Oev4XRact8jzssyM
+    flags: {}
+    _key: '!tables.results!ZAIWwl9tQDUh6V2n.Oev4XRact8jzssyM'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    text: Silver Shilling
+    documentId: KB8HgDz56dh2w7w1
+    img: modules/wfrp4e-core/icons/currency/silvershilling.png
+    _id: ufhkyfR78jhlxuyD
+    flags: {}
+    _key: '!tables.results!ZAIWwl9tQDUh6V2n.ufhkyfR78jhlxuyD'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    text: Brass Penny
+    documentId: 0MYOJFx3vkYA95B4
+    img: modules/wfrp4e-core/icons/currency/brasspenny.png
+    _id: 0u30BKAWnne9q4Pv
+    flags: {}
+    _key: '!tables.results!ZAIWwl9tQDUh6V2n.0u30BKAWnne9q4Pv'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.0
+  coreVersion: '12.327'
+  createdTime: 1690202486521
+  modifiedTime: 1690202525161
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d3
+_key: '!tables!ZAIWwl9tQDUh6V2n'
+

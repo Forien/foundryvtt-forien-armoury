@@ -1,0 +1,65 @@
+folder: VHKLqMoEnxqUOJc0
+name: Composite – Gunner
+_id: 0W1JaAs6o47vUfLL
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 7
+    range:
+      - 1
+      - 7
+    drawn: false
+    text: Ammunition Blackpowder and Engineering
+    documentId: YUwVdxuWAWiLp0CZ
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: PzFFa1m5wf5xw7Nt
+    flags: {}
+    _key: '!tables.results!0W1JaAs6o47vUfLL.PzFFa1m5wf5xw7Nt'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 3
+    range:
+      - 8
+      - 10
+    drawn: false
+    text: Weapons Ranged Blackpowder
+    documentId: ktmExxHw7gpyGtEK
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: 1TWXEuS8D24sn53t
+    flags: {}
+    _key: '!tables.results!0W1JaAs6o47vUfLL.1TWXEuS8D24sn53t'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 2
+    range:
+      - 11
+      - 12
+    drawn: false
+    text: Containers Powder Horns
+    documentId: yTOmoQCY6LsQy9G7
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: jBRuYThHUrFKbCZD
+    flags: {}
+    _key: '!tables.results!0W1JaAs6o47vUfLL.jBRuYThHUrFKbCZD'
+replacement: true
+displayRoll: true
+sort: 200000
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690167175681
+  modifiedTime: 1690167441832
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d12
+_key: '!tables!0W1JaAs6o47vUfLL'
+

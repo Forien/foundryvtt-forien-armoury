@@ -1,0 +1,89 @@
+folder: UrA89QPP0urkYvZk
+name: Scythe
+type: weapon
+_id: 02MvC0Ihytqf50av
+img: systems/wfrp4e/icons/blank.png
+system:
+  description:
+    value: >-
+      <p>Specially made polearm that resembles its civilian counterpart, but is
+      specifically made for combat.</p><p>Most commonly seen used by Morr's
+      @UUID[Compendium.wfrp4e-core.journals.JournalEntry.wczCPcuHT4VQDLpL.JournalEntryPage.iYVpqJ6bz8fokdmf]{warrior
+      priests},
+      @UUID[Compendium.wfrp4e-wom.journals.JournalEntry.hFQtvGpxh0D8Xfcl.JournalEntryPage.i7trRLZo2Pp05UnQ]{spiriters}
+      and necromancers.</p><p>It's a long shaft with a perpendicularly mounted
+      curved blade. Unlike farmer's scythe, the blade is not angled and there is
+      no additional handle on the shaft, as this weapon is designed to cut
+      enemies' heads, not grass.</p>
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 3
+  price:
+    gc: 2
+    ss: 0
+    bp: 0
+  availability:
+    value: rare
+  location:
+    value: ''
+  damageToItem:
+    value: null
+    shield: null
+  damage:
+    value: SB+4
+  reach:
+    value: long
+  range:
+    value: ''
+  skill:
+    value: ''
+  modeOverride:
+    value: ''
+  twohanded:
+    value: true
+  ammunitionGroup:
+    value: ''
+  currentAmmo:
+    value: ''
+  consumesAmmo:
+    value: false
+  weaponGroup:
+    value: polearm
+  qualities:
+    value:
+      - name: damaging
+        value: null
+      - name: slash
+        value: 2
+  flaws:
+    value:
+      - name: unbalanced
+        value: null
+  special:
+    value: ''
+  equipped:
+    value: false
+  loaded:
+    value: false
+    repeater: false
+    amt: 0
+  offhand:
+    value: false
+effects: []
+sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1710405788512
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_key: '!items!02MvC0Ihytqf50av'
+

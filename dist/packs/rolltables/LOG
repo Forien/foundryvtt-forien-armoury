@@ -1,5 +1,0 @@
-2025/02/15-12:15:56.010 3f44 Delete type=3 #1
-2025/02/15-12:15:56.014 ac90 Level-0 table #5: started
-2025/02/15-12:15:56.017 ac90 Level-0 table #5: 3519 bytes OK
-2025/02/15-12:15:56.021 ac90 Delete type=0 #3
-2025/02/15-12:15:56.021 ac90 Manual compaction at level-0 from '!folders!j1vqMtlcpWWz1G9T' @ 72057594037927935 : 1 .. '!tables.results!nQs1th3rDIr2vnuz.xrvae4O85psQkIrv' @ 0 : 0; will stop at (end)

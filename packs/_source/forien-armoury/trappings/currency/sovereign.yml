@@ -1,0 +1,41 @@
+folder: 1DPQSHNhtS8vuqCw
+name: Sovereign
+type: money
+img: icons/commodities/currency/coin-embossed-ruby-gold.webp
+system:
+  description:
+    value: ''
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 0.005
+  location:
+    value: ''
+  coinValue:
+    value: 960
+  price:
+    gc: 0
+    ss: 0
+    bp: 0
+  availability: {}
+  damageToItem:
+    value: null
+    shield: null
+effects: []
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1688480096053
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: 9XkcGUQUQX6uCrxz
+sort: 650000
+ownership:
+  default: 0
+_key: '!items!9XkcGUQUQX6uCrxz'
+

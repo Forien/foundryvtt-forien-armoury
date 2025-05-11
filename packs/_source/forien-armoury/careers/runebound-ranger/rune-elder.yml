@@ -1,0 +1,80 @@
+folder: ACZwDoSnT2eWvGBp
+name: Rune Elder
+type: career
+img: modules/forien-armoury/icons/careers/runebound-ranger-4.webp
+system:
+  description:
+    value: >-
+      <p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.lV438LtXZvxHkmmK]{Runebound
+      Ranger}</p>
+  gmdescription:
+    value: ''
+  careergroup:
+    value: Runebound Ranger
+  class:
+    value: Monster Hunters
+  current:
+    value: false
+  complete:
+    value: false
+  level:
+    value: 4
+  status:
+    tier: g
+    standing: 1
+  characteristics:
+    - t
+    - ws
+    - ag
+    - wp
+    - i
+    - int
+  skills:
+    - Animal Care
+    - Athletics
+    - Channelling
+    - Dodge
+    - Endurance
+    - Lore (Beasts)
+    - Melee (Basic)
+    - Melee (Polearm)
+    - Perception
+    - Set Trap
+    - Cool
+    - Heal
+    - Intuition
+    - Melee (Two-Handed)
+    - Outdoor Survival
+    - Trade (Apothecary)
+    - Intimidate
+    - Melee (any)
+    - Ranged (any)
+    - Track
+    - Charm Animal
+    - Ranged (any)
+  talents:
+    - Beat Blade or Feint
+    - Furious Assault
+    - Reaction Strike
+    - Reversal
+  trappings:
+    - True-Silvered Sword
+    - Runebound Elder Uniform and Insignia
+  incomeSkill:
+    - 6
+effects: []
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1688251075008
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: ugz6JE1V0qfnQXXK
+sort: 500000
+ownership:
+  default: 0
+_key: '!items!ugz6JE1V0qfnQXXK'
+

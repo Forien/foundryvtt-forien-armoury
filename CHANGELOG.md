@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.X.X
+### v4.0.0
+* Refactored project's structure, introduced rollup
+* Verified for v13.342
+* Moved SettingsApp, GrimoireSheet and ScrollSheet to ApplicationV2
+* Replaced jQuery calls and event listeners with native JavaScript 
+
+
 ## v3.X.X
 ### v3.5.1
 * Fixed hidden `Submit` button due to insufficient Settings App height

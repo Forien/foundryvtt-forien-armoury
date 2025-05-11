@@ -1,0 +1,104 @@
+folder: 1s3VG4H3m9vYvDhz
+name: Armour Rare
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 5
+    range:
+      - 1
+      - 5
+    drawn: false
+    text: Plate Bracers
+    documentId: oW7wSkl4JMb5sBH8
+    img: modules/wfrp4e-core/icons/equipment/armour/plate-bracers.png
+    _id: rysEVeroj8LBscS2
+    flags: {}
+    _key: '!tables.results!oRK9BbljpQOB4zgt.rysEVeroj8LBscS2'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 5
+    range:
+      - 6
+      - 10
+    drawn: false
+    text: Plate Helm
+    documentId: e9WmLbD7AuXSeWp0
+    img: modules/wfrp4e-core/icons/equipment/armour/plate-helm.png
+    _id: 16J7ZuzogJWI65OR
+    flags: {}
+    _key: '!tables.results!oRK9BbljpQOB4zgt.16J7ZuzogJWI65OR'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 5
+    range:
+      - 11
+      - 15
+    drawn: false
+    text: Plate Leggings
+    documentId: bY6M9XxbqmFmqpA8
+    img: modules/wfrp4e-core/icons/equipment/armour/plate-leggings.png
+    _id: 5D1jigyAwO31hKVu
+    flags: {}
+    _key: '!tables.results!oRK9BbljpQOB4zgt.5D1jigyAwO31hKVu'
+  - type: pack
+    documentCollection: wfrp4e-archives2.items
+    weight: 5
+    range:
+      - 16
+      - 20
+    drawn: false
+    text: Quietened Mail Chausses
+    documentId: Cya63L5XXQQgphhR
+    img: modules/wfrp4e-core/icons/equipment/armour/mail-chausses.png
+    _id: LeuLBs9HQtyKjOSn
+    flags: {}
+    _key: '!tables.results!oRK9BbljpQOB4zgt.LeuLBs9HQtyKjOSn'
+  - type: pack
+    documentCollection: wfrp4e-archives2.items
+    weight: 5
+    range:
+      - 21
+      - 25
+    drawn: false
+    text: Quietened Mail Coat
+    documentId: BDbQ70J9MM8mdxxo
+    img: modules/wfrp4e-core/icons/equipment/armour/mail-coat.png
+    _id: SmZWDAjDvZq0vWRY
+    flags: {}
+    _key: '!tables.results!oRK9BbljpQOB4zgt.SmZWDAjDvZq0vWRY'
+  - type: pack
+    documentCollection: wfrp4e-archives2.items
+    weight: 5
+    range:
+      - 26
+      - 30
+    drawn: false
+    text: Quietened Mail Coif
+    documentId: 3dQNE54s7ojwwqWG
+    img: modules/wfrp4e-core/icons/equipment/armour/mail-coif.png
+    _id: 9bXFScYMZW1oIes1
+    flags: {}
+    _key: '!tables.results!oRK9BbljpQOB4zgt.9bXFScYMZW1oIes1'
+replacement: true
+displayRoll: true
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690160446787
+  modifiedTime: 1690161833768
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d30
+_id: oRK9BbljpQOB4zgt
+sort: 300000
+ownership:
+  default: 0
+_key: '!tables!oRK9BbljpQOB4zgt'
+

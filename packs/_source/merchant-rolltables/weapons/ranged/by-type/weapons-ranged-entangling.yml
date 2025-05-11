@@ -1,0 +1,65 @@
+folder: OIXKjAS72VZJ0m0z
+name: Weapons Ranged Entangling
+_id: d6aAZua7r7FBa2WW
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-zoo.items
+    weight: 5
+    range:
+      - 1
+      - 5
+    drawn: false
+    text: Net
+    documentId: 2yJbfJDQs9cEaT86
+    img: modules/wfrp4e-core/icons/equipment/weapons/net.png
+    _id: ZtvACwvyiiyEVyMN
+    flags: {}
+    _key: '!tables.results!d6aAZua7r7FBa2WW.ZtvACwvyiiyEVyMN'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 30
+    range:
+      - 6
+      - 35
+    drawn: false
+    text: Lasso
+    documentId: k0JKY8ck2QUx5mKS
+    img: modules/wfrp4e-core/icons/equipment/weapons/lasso.png
+    _id: hOItLSpcEWAETtuA
+    flags: {}
+    _key: '!tables.results!d6aAZua7r7FBa2WW.hOItLSpcEWAETtuA'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 30
+    range:
+      - 36
+      - 65
+    drawn: false
+    text: Whip
+    documentId: xiOYNJcfqPselfwT
+    img: modules/wfrp4e-core/icons/equipment/weapons/whip.png
+    _id: qkAthv9Gw8SX0DiT
+    flags: {}
+    _key: '!tables.results!d6aAZua7r7FBa2WW.qkAthv9Gw8SX0DiT'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690163404227
+  modifiedTime: 1690163484721
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d65
+_key: '!tables!d6aAZua7r7FBa2WW'
+

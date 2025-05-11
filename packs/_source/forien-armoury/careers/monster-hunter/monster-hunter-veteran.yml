@@ -1,0 +1,77 @@
+folder: 3hR05PJN5Gtv1I97
+name: Monster Hunter Veteran
+type: career
+img: modules/forien-armoury/icons/careers/monster-hunter-3.webp
+system:
+  description:
+    value: >-
+      <p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.A8Es3aCGIbGOfuUR]{Monster
+      Hunter}</p>
+  gmdescription:
+    value: ''
+  careergroup:
+    value: Monster Hunter
+  class:
+    value: Monster Hunters
+  current:
+    value: false
+  complete:
+    value: false
+  level:
+    value: 3
+  status:
+    tier: s
+    standing: 4
+  characteristics:
+    - ws
+    - s
+    - ag
+    - i
+    - t
+  skills:
+    - Athletics
+    - Dodge
+    - Endurance
+    - Gossip
+    - Lore (Beasts)
+    - Melee (Basic)
+    - Perception
+    - Ranged (Crossbow)
+    - Set Trap
+    - Track
+    - Consume Alcohol
+    - Cool
+    - Language (Battle)
+    - Melee (Two-Handed)
+    - Outdoor Survival
+    - Secret Signs (Scout)
+    - Intimidate
+    - Intuition
+    - Melee (Any)
+    - Navigation
+  talents:
+    - Combat Aware
+    - Fighting Master (Style)
+    - Seasoned Traveller
+    - Sturdy
+  trappings:
+    - High Quality Weapon
+    - Scar
+  incomeSkill:
+    - 5
+effects: []
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1688251075008
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+ownership:
+  default: 0
+_id: LU5khvOfdIJBNZSZ
+sort: 300000
+_key: '!items!LU5khvOfdIJBNZSZ'
+

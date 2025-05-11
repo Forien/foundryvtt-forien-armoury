@@ -1,0 +1,105 @@
+folder: Y1kRDKj14dTLeSyo
+name: Clothing Scarce
+_id: EqPLOrxIR3quFvzT
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    text: Costume
+    documentId: B5q8PZn43BMkvpdz
+    img: modules/wfrp4e-core/icons/equipment/clothing_and_accessories/costume.png
+    _id: 2jIzPhVpAzWqcjU3
+    flags: {}
+    _key: '!tables.results!EqPLOrxIR3quFvzT.2jIzPhVpAzWqcjU3'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    text: Courtly Garb
+    documentId: 7hRfHr1ZCUigByms
+    img: >-
+      modules/wfrp4e-core/icons/equipment/clothing_and_accessories/courtly-garb.png
+    _id: xkqo99HSN9YNM2Y2
+    flags: {}
+    _key: '!tables.results!EqPLOrxIR3quFvzT.xkqo99HSN9YNM2Y2'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    text: Pins
+    documentId: HXUQCiVOii3sNKGe
+    img: modules/wfrp4e-core/icons/equipment/clothing_and_accessories/pins.png
+    _id: ARh4GaEuonpHfJX0
+    flags: {}
+    _key: '!tables.results!EqPLOrxIR3quFvzT.ARh4GaEuonpHfJX0'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    text: Sealskin
+    documentId: gdCHAYJjNXcjdxsX
+    img: systems/wfrp4e/icons/blank.png
+    _id: CRE5hWOyBEqWUfSF
+    flags: {}
+    _key: '!tables.results!EqPLOrxIR3quFvzT.CRE5hWOyBEqWUfSF'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    text: Silk Underwear
+    documentId: Ox4yptGb9pIxBxk5
+    img: systems/wfrp4e/icons/blank.png
+    _id: OiTFTf2YLUyGgbwq
+    flags: {}
+    _key: '!tables.results!EqPLOrxIR3quFvzT.OiTFTf2YLUyGgbwq'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    text: Uniform
+    documentId: CB6cxxqy5vXcV6gf
+    img: modules/wfrp4e-core/icons/equipment/clothing_and_accessories/uniform.png
+    _id: OUbkLhKbgQ8NlK2e
+    flags: {}
+    _key: '!tables.results!EqPLOrxIR3quFvzT.OUbkLhKbgQ8NlK2e'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690164810869
+  modifiedTime: 1690164830788
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d6
+_key: '!tables!EqPLOrxIR3quFvzT'
+

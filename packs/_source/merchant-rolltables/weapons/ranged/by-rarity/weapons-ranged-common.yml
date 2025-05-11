@@ -1,0 +1,156 @@
+folder: pKEh2I51xgzWgJK5
+name: Weapons Ranged Common
+_id: ldeC3M21CQGHkwfI
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    text: Bow
+    documentId: U94l3IDj3xfIc78i
+    img: modules/wfrp4e-core/icons/equipment/weapons/bow.png
+    _id: n8IGKk8JWIzJUP8i
+    flags: {}
+    _key: '!tables.results!ldeC3M21CQGHkwfI.n8IGKk8JWIzJUP8i'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    text: Crossbow
+    documentId: ksRqHiMVpIL07Ij1
+    img: modules/wfrp4e-core/icons/equipment/weapons/crossbow.png
+    _id: X0ESwYGeEB8rxxXk
+    flags: {}
+    _key: '!tables.results!ldeC3M21CQGHkwfI.X0ESwYGeEB8rxxXk'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    text: Lasso
+    documentId: k0JKY8ck2QUx5mKS
+    img: modules/wfrp4e-core/icons/equipment/weapons/lasso.png
+    _id: 0ZdOEkLaPRidFUgV
+    flags: {}
+    _key: '!tables.results!ldeC3M21CQGHkwfI.0ZdOEkLaPRidFUgV'
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    text: Old Bow
+    documentId: s3AUYnM2Vl6Y656l
+    img: icons/weapons/bows/shortbow-white.webp
+    _id: YktPwq6aWkCj1KFy
+    flags: {}
+    _key: '!tables.results!ldeC3M21CQGHkwfI.YktPwq6aWkCj1KFy'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    text: Shortbow
+    documentId: CRNrEnLXTGXVT1UW
+    img: modules/wfrp4e-core/icons/equipment/weapons/shortbow.png
+    _id: H2rT5ocqhPbRprZG
+    flags: {}
+    _key: '!tables.results!ldeC3M21CQGHkwfI.H2rT5ocqhPbRprZG'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    text: Sling
+    documentId: 7Bpc5I8Arucy3w4q
+    img: modules/wfrp4e-core/icons/equipment/weapons/sling.png
+    _id: pECufu5Gjaev0MAg
+    flags: {}
+    _key: '!tables.results!ldeC3M21CQGHkwfI.pECufu5Gjaev0MAg'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: false
+    text: Staff Sling
+    documentId: KSwMbO8dqISoGuIo
+    img: modules/wfrp4e-core/icons/equipment/weapons/staff-sling.png
+    _id: ZhFUnzotN0hBB9xk
+    flags: {}
+    _key: '!tables.results!ldeC3M21CQGHkwfI.ZhFUnzotN0hBB9xk'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: false
+    text: Throwing Axe
+    documentId: Xjwk84KnOKDaiZs1
+    img: modules/wfrp4e-core/icons/equipment/weapons/throwing-axe.png
+    _id: 43s14See8Qthxavd
+    flags: {}
+    _key: '!tables.results!ldeC3M21CQGHkwfI.43s14See8Qthxavd'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: false
+    text: Throwing Knife
+    documentId: bwyUJua7I9hNg9WS
+    img: modules/wfrp4e-core/icons/equipment/weapons/throwing-knife.png
+    _id: EJae5AyaWaKZXg8s
+    flags: {}
+    _key: '!tables.results!ldeC3M21CQGHkwfI.EJae5AyaWaKZXg8s'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: false
+    text: Whip
+    documentId: xiOYNJcfqPselfwT
+    img: modules/wfrp4e-core/icons/equipment/weapons/whip.png
+    _id: x6iP4og3ATZeGium
+    flags: {}
+    _key: '!tables.results!ldeC3M21CQGHkwfI.x6iP4og3ATZeGium'
+replacement: true
+displayRoll: true
+sort: 100000
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690162908051
+  modifiedTime: 1690163001371
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d10
+_key: '!tables!ldeC3M21CQGHkwfI'
+

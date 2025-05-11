@@ -1,0 +1,52 @@
+folder: KMmVMr0I2vRhAP6i
+name: Ammunition Rare
+_id: OTB4IeQNtPfhT2Qb
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    text: Bomb
+    documentId: A9QGISjhQq3w9uhK
+    img: modules/wfrp4e-core/icons/equipment/weapons/bomb.png
+    _id: Sk8pmTludip7f4wZ
+    flags: {}
+    _key: '!tables.results!OTB4IeQNtPfhT2Qb.Sk8pmTludip7f4wZ'
+  - type: pack
+    documentCollection: wfrp4e-archives1.items
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    text: Drakefire Shot
+    documentId: gxiMS94QBeyURKfJ
+    img: modules/wfrp4e-archives1/assets/icons/drakefire-shot.png
+    _id: OPVCKlg4VYp7DON6
+    flags: {}
+    _key: '!tables.results!OTB4IeQNtPfhT2Qb.OPVCKlg4VYp7DON6'
+replacement: true
+displayRoll: true
+sort: 150000
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690164048988
+  modifiedTime: 1690164124722
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d2
+_key: '!tables!OTB4IeQNtPfhT2Qb'
+

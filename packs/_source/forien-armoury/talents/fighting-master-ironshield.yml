@@ -1,0 +1,44 @@
+name: Fighting Master (Ironshield)
+type: talent
+img: modules/forien-armoury/icons/talents/style_defensive_master.webp
+system:
+  description:
+    value: >-
+      <p>Can only be learned by characters knowing
+      @UUID[Compendium.forien-armoury.forien-armoury.Item.dV7lAlVYKiHcCXBT]{Fighting
+      Style (Ironshield)}.</p><ul><li><p>During riposte you may choose one of
+      the following additional effects:</p><ul><li><p>Cause 1
+      @Condition[Bleeding] Condition,</p></li><li><p>Perform
+      @UUID[Compendium.wfrp4e-core.items.Item.jt0DmVK9IiF6Sd2h]{Strike to Stun}
+      with your shield, as if you had the Talent,</p></li><li><p>Give –10
+      modifier to defend against the riposte.</p></li></ul></li></ul>
+  gmdescription:
+    value: ''
+  max:
+    value: '1'
+  advances:
+    value: 1
+    force: false
+  career:
+    value: ''
+  tests:
+    value: ''
+effects: []
+folder: c6bIK3vGnIqNXscz
+ownership:
+  default: 0
+flags:
+  forien-armoury:
+    fighting-master: true
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1702057628149
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: uL8T7Gy9rRq74HIN
+sort: 900000
+_key: '!items!uL8T7Gy9rRq74HIN'
+

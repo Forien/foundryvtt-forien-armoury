@@ -1,0 +1,134 @@
+@use "../mixins";
+
+.forien-armoury {
+  &.application {
+    &.scroll-sheet, &.grimoire-sheet {
+      min-width: 550px;
+
+      .window-content {
+        .tab {
+          &[data-tab="details"] {
+            .form-group {
+              &.spell-container {
+                .spell-refresh, .spells-remove, .generate-description {
+                  font-size: var(--font-size-12);
+                }
+
+                .spell {
+                  display: flex;
+                  gap: 5px;
+
+                  img {
+                    @include mixins.square(60px);
+                  }
+
+                  .spell-details {
+                    padding: 3px 0 0 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .spell-name {
+                      color: var(--color-cool);;
+                      font-family: CaslonAntique, serif;
+                      font-size: var(--font-size-18);
+                      font-weight: bold;
+                      margin-top: -5px;
+                    }
+
+                    .tags {
+                      display: flex;
+                      flex-wrap: wrap;
+                      flex-direction: row;
+                      gap: 2px 3px;
+                      align-content: center;
+                    }
+
+                    .tag {
+                      //float: left;
+                      color: var(--color-grey2);
+                      margin: 0;
+                      padding: 0 2px;
+                      font-size: var(--font-size-12);
+                      font-family: Signika, sans-serif;
+                      line-height: 16px;
+                      border: 1px solid #999;
+                      border-radius: 3px;
+                      background: rgba(0, 0, 0, 0.05);
+                    }
+                  }
+
+                }
+
+                .spells {
+                  .spell {
+                    img {
+                      @include mixins.square(25px);
+                    }
+
+                    .spell-details {
+                      flex-direction: row;
+                      justify-content: space-between;
+                      align-content: center;
+                      flex: 1 0;
+
+
+                      .spell-name {
+                        display: flex;
+                        align-items: center;
+                        flex: 1 1 fit-content;
+
+                        input {
+                          background: none;
+                          border: none;
+                          box-shadow: none;
+                          color: #000;
+                          font-family: CaslonAntique, serif;
+                          font-size: var(--font-size-18);
+                          font-weight: bold;
+                        }
+                      }
+
+                      .tags {
+                        flex-direction: row-reverse;
+                      }
+                    }
+
+                    &:nth-of-type(even) {
+                      background: rgba(0, 0, 0, 0.075);
+                    }
+                  }
+
+                  &.blurred {
+                    .spell {
+                      img {
+                        @include mixins.blur(5px);
+                      }
+                      .spell-details{
+                        @include mixins.blur(5px);
+                      }
+                    }
+                  }
+                }
+
+                .spell-drop-zone {
+                  margin: 2px;
+                  height: 80px;
+                  width: 100%;
+                  background: rgba(0, 0, 0, 0.25);
+                  border: 2px dotted rgba(0, 0, 0, 0.35);
+                  border-radius: 8px;
+                  font-family: CaslonAntique, serif;
+                  font-size: var(--font-size-18);
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

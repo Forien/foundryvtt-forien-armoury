@@ -1,0 +1,81 @@
+name: Tickle Tornado
+type: spell
+img: modules/wfrp4e-core/icons/spells/petty.png
+system:
+  description:
+    value: >-
+      <p>Summons a small tornado. Powerful enough to tickle exposed skin.
+      </p><p><strong>Lore:</strong> None</p><p></p>
+  gmdescription:
+    value: ''
+  lore:
+    value: petty
+    effectString: ''
+  range:
+    value: Willpower yards
+    vortex: false
+  target:
+    value: 3 yards
+    aoe: true
+  duration:
+    value: Willpower Bonus minutes
+    extendable: false
+  damage:
+    dice: ''
+    value: ''
+  cn:
+    value: 0
+    SL: 0
+  magicMissile:
+    value: false
+  ritual:
+    value: false
+    type: ''
+    xp: 0
+  memorized:
+    value: false
+  skill:
+    value: ''
+  ingredients: []
+  currentIng:
+    value: '0'
+  wind:
+    value: ''
+  overcast:
+    enabled: false
+    label: ''
+    valuePerOvercast:
+      type: ''
+      value: 1
+      SL: false
+      characteristic: ''
+      bonus: false
+    initial:
+      type: ''
+      value: 1
+      SL: false
+      characteristic: ''
+      bonus: false
+effects: []
+folder: JF9Y4Ik1pMiNEDbg
+ownership:
+  default: 0
+flags:
+  _sheetTab: description
+  exportSource:
+    world: wfrp4e
+    system: wfrp4e
+    coreVersion: '11.315'
+    systemVersion: 7.0.3
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1663652872079
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: FiatrdapWMM16kxy
+sort: 0
+_key: '!items!FiatrdapWMM16kxy'
+

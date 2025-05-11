@@ -1,0 +1,78 @@
+folder: VHKLqMoEnxqUOJc0
+name: Composite – Bowyer
+_id: UpPcwYRZPIoPnZiN
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 8
+    range:
+      - 1
+      - 8
+    drawn: false
+    text: Ammunition Bow
+    documentId: SPHK7kTHbQfB0AOE
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: q7DRYF7fHq5zPuTg
+    flags: {}
+    _key: '!tables.results!UpPcwYRZPIoPnZiN.q7DRYF7fHq5zPuTg'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 4
+    range:
+      - 9
+      - 12
+    drawn: false
+    text: Weapons Ranged Bow
+    documentId: u7KC15yrzT8FQgbA
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: yoCDIFrzFRtKTJU3
+    flags: {}
+    _key: '!tables.results!UpPcwYRZPIoPnZiN.yoCDIFrzFRtKTJU3'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 2
+    range:
+      - 13
+      - 14
+    drawn: false
+    text: Bow String
+    documentId: RKjHcjn71lPT06Rj
+    img: systems/wfrp4e/icons/blank.png
+    _id: mhLr3Dy18L8ypP1r
+    flags: {}
+    _key: '!tables.results!UpPcwYRZPIoPnZiN.mhLr3Dy18L8ypP1r'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 2
+    range:
+      - 15
+      - 16
+    drawn: false
+    text: Containers Arrows and Bolts
+    documentId: xH15xfRhQlyZRXjY
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: BIDw2aXZdaASifTU
+    flags: {}
+    _key: '!tables.results!UpPcwYRZPIoPnZiN.BIDw2aXZdaASifTU'
+replacement: true
+displayRoll: true
+sort: 400000
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690167055800
+  modifiedTime: 1690167410745
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d16
+_key: '!tables!UpPcwYRZPIoPnZiN'
+

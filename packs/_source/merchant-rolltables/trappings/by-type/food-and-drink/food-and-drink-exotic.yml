@@ -1,0 +1,40 @@
+folder: vUXBvutCfP5bBtmP
+name: Food and Drink Exotic
+_id: u4wfmPOh5HeiB3H2
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    text: Bugman’s XXXXXX Ale, pint
+    documentId: KzJkoB12jpidtngo
+    img: >-
+      modules/wfrp4e-core/icons/equipment/food_drink_and_lodging/bugmans-xxxxxx-ale-pint.png
+    _id: ui3zRgTStgyBVkuW
+    flags: {}
+    _key: '!tables.results!u4wfmPOh5HeiB3H2.ui3zRgTStgyBVkuW'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690165065633
+  modifiedTime: 1690165071413
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: ''
+_key: '!tables!u4wfmPOh5HeiB3H2'
+

@@ -1,0 +1,184 @@
+name: Tutor
+type: spell
+img: modules/forien-armoury/icons/spells/runebound-tutor.webp
+system:
+  description:
+    value: >-
+      <p>This Spell shrouds the Target in a protective barrier that helps to
+      negate the size differences.</p><p>Whenever a Target of this Spell gets
+      attacked by a bigger enemy, the Target <strong>gains 2 AP for every step
+      of size difference</strong> between them and the Attacker.</p>
+  gmdescription:
+    value: ''
+  lore:
+    value: runebound
+    effectString: ''
+  range:
+    value: Touch
+    vortex: false
+  target:
+    value: '1'
+    aoe: false
+  duration:
+    value: Willpower seconds
+    extendable: false
+  damage:
+    dice: ''
+    value: ''
+  cn:
+    value: 0
+    SL: 0
+  magicMissile:
+    value: false
+  ritual:
+    value: false
+    type: ''
+    xp: 0
+  memorized:
+    value: true
+  skill:
+    value: Channelling
+  ingredients: []
+  currentIng:
+    value: ''
+  wind:
+    value: Channelling
+  overcast:
+    enabled: false
+    label: ''
+    valuePerOvercast:
+      type: value
+      value: 1
+      SL: false
+      characteristic: ''
+      bonus: false
+      additional: ''
+    initial:
+      type: value
+      value: 1
+      SL: false
+      characteristic: ''
+      bonus: false
+effects:
+  - transfer: false
+    name: Tutor
+    _id: C4aFnulJN1sYHfi3
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    statuses: []
+    flags:
+      times-up:
+        isPassive: false
+      wfrp4e:
+        hide: false
+        _legacyData:
+          effectApplication: apply
+          effectTrigger: opposedDefender
+          preventDuplicateEffects: true
+          script: |+
+            let attackerSize = args.attacker.sizeNum;
+            let mySize = args.actor.sizeNum
+
+            if (attackerSize > mySize) {
+              let sizeDiff = (attackerSize - mySize) * 2;
+              args.AP.value += sizeDiff;
+
+
+              let name = game.i18n.localize('Forien.Armoury.Runebound.Tutor.Name');
+              let effect = game.i18n.format('Forien.Armoury.Runebound.Tutor.Effect', {num: sizeDiff});
+              args.extraMessages.push(`<strong>${name}</strong> ${effect}`);
+            }
+
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/spells/runebound-tutor.webp
+    type: base
+    system:
+      transferData:
+        type: target
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: false
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Tutor
+          trigger: opposedDefender
+          script: |-
+            let attackerSize = args.attacker.sizeNum;
+            let mySize = args.actor.sizeNum
+
+            if (attackerSize > mySize) {
+              let sizeDiff = (attackerSize - mySize) * 2;
+              args.AP.value += sizeDiff;
+
+
+              let name = game.i18n.localize('Forien.Armoury.Runebound.Tutor.Name');
+              let effect = game.i18n.format('Forien.Armoury.Runebound.Tutor.Effect', {num: sizeDiff});
+              args.extraMessages.push(`<strong>${name}</strong> ${effect}`);
+            }
+          options:
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!tMwYo0P0xyR6rB7c.C4aFnulJN1sYHfi3'
+folder: 7apgHuyWjP5G3i5r
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1688999622218
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: tMwYo0P0xyR6rB7c
+sort: 700000
+ownership:
+  default: 0
+_key: '!items!tMwYo0P0xyR6rB7c'
+
