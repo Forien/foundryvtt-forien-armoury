@@ -28,7 +28,7 @@ export default class Tokens extends ForienBaseModule {
    * @return {Promise<void>}
    */
   async #onCreateToken(token, _options, _userId) {
-    if (!game.user.isGM) return;
+    if (!game.user.isGM || game.user !== game.users.activeGM) return;
     if (!Utility.getSetting(settings.actor.rollToken)) return;
     if (!this.#allowedTypes.includes(token.actor?.type)) return;
     if (token.actorLink) return;

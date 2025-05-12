@@ -20,7 +20,7 @@ export default class Injuries extends ForienBaseModule {
    * On load, loop through all Actors and attempt to register listeners
    */
   async #registerActorInjuryListeners() {
-    if (!game.user.isGM) return;
+    if (!game.user.isGM || game.user !== game.users.activeGM) return;
     if (!Utility.getSetting(settings.injuries.autoProgress)) return;
 
     this.#observer = game.modules.get(constants.moduleId).api.modules.get('worldTimeObserver');
@@ -53,7 +53,7 @@ export default class Injuries extends ForienBaseModule {
    * @return {Promise<void>}
    */
   async #registerCreatedInjuryListener(injury) {
-    if (!game.user.isGM) return;
+    if (!game.user.isGM || game.user !== game.users.activeGM) return;
     if (!Utility.getSetting(settings.injuries.autoProgress)) return;
     if (injury.type !== 'injury') return;
     let actor = injury.actor;

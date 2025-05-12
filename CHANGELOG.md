@@ -5,6 +5,9 @@
 
 ### v4.0.1-beta
 * Fixed using Magic Scrolls
+* Restrict GM actions to the active GM user
+  * This will prevent the module attempting to call some actions for multiple  users at once in the rare case when
+    someone has multiple GM users online at the same time. 
 
 ### v4.0.0-beta
 * Refactored project's structure, introduced rollup

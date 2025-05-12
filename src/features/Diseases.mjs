@@ -305,7 +305,7 @@ export default class Diseases extends ForienBaseModule {
    * On load, loop through all Actors and attempt to register listeners
    */
   async #registerActorDiseaseListeners() {
-    if (!game.user.isGM) return;
+    if (!game.user.isGM || game.user !== game.users.activeGM) return;
     if (!Utility.getSetting(settings.diseases.autoProgress)) return;
 
     this.#observer = game.modules.get(constants.moduleId).api.modules.get('worldTimeObserver');
@@ -338,7 +338,7 @@ export default class Diseases extends ForienBaseModule {
    * @return {Promise<void>}
    */
   async #registerCreatedDiseaseListener(disease) {
-    if (!game.user.isGM) return;
+    if (!game.user.isGM || game.user !== game.users.activeGM) return;
     if (!Utility.getSetting(settings.diseases.autoProgress)) return;
     if (disease.type !== 'disease') return;
     let actor = disease.actor;

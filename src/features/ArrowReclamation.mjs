@@ -293,7 +293,7 @@ export default class ArrowReclamation extends ForienBaseModule {
    * @param {Combat} combat
    */
   processEndOfCombat(combat) {
-    if (!game.user.isGM) return;
+    if (!game.user.isGM || game.user !== game.users.activeGM) return;
 
     let ammoReplenish = combat.getFlag(constants.moduleId, flags.ammoReplenish);
 
