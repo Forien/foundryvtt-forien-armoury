@@ -6,6 +6,7 @@
 ### v4.0.2
 * Fixed Magical Endurance CSS
 * Updated Foundry API calls with namespaces to remove warnings
+* Fixed inputs for Combat Fatigue and Pass Out not appearing in the Combat Tracker
 
 ### v4.0.1-beta
 * Fixed using Magic Scrolls

@@ -21,39 +21,54 @@ export default class CombatFatigue extends ForienBaseModule {
    * and Rounds Before Pass Out.
    *
    * @param {CombatTracker} app
-   * @param {jQuery} html
-   * @param {{}} _options
+   * @param {HTMLElement} html
+   * @param {{}} context
+   * @param {{}} options
    *
    * @returns {Promise<void>}
    */
-  async #renderRoundsBeforeTest(app, html, _options) {
+  async #renderRoundsBeforeTest(app, html, context, options) {
     if (Utility.getSetting(settings.combatFatigue.enable) === false) return;
 
     if (game.combat) {
       const combatants = game.combat.combatants.filter(combatant => combatant.actor.isOwner);
 
       for (let combatant of combatants) {
-        let $controls = html.find(`.combatant[data-combatant-id="${combatant.id}"] .token-effects`);
-        const control = `<a class="combatant-control" role="textbox" data-control="combatFatigue">
-                          <input data-tooltip="${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueToolTip")}" type="text" name="flags.forien-armoury.roundsBeforeTest" value="${this.#getRoundsBeforeTest(combatant, combatant.actor)}">
-                        </a>`;
-        $controls.before(control);
-        $controls.prev().children('input').change(combatant.id, function (event) {
-          let target = game.combat.combatants.find(x => x.id === event.data);
-          target.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, this.value);
+        const controls = html.querySelector(`.combatant[data-combatant-id="${combatant.id}"] .combatant-controls`);
+        const tokenEffects = controls.querySelector(`.token-effects`);
+        controls.classList.add('has-fatigue');
+
+        const combatFatigueControl = Utility.stringToHTMLElement(
+          `<a class="combatant-control inline-control" data-control="combatFatigue">
+                   <input data-tooltip="${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueToolTip")}" 
+                          type="text" 
+                          value="${this.#getRoundsBeforeTest(combatant, combatant.actor)}">
+                 </a>`,
+        );
+        controls.insertBefore(combatFatigueControl, tokenEffects);
+        combatFatigueControl.addEventListener("change", event => {
+          event.stopPropagation();
+          console.log("change", event, combatant, combatant.id);
+          const target = game.combat.combatants.find(x => x.id === combatant.id);
+          target.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, event.target.value);
         });
 
         if (Utility.getSetting(settings.combatFatigue.enableCorePassOut) === false)
           continue;
 
         if (combatant.actor.status.wounds.value === 0) {
-          const passOutControl = `<a class="combatant-control" role="textbox" data-control="combatPassOut">
-                                  <input data-tooltip="${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatPassOutToollTip")}" type="text" name="flags.forien-armoury.roundsBeforePassOut" value="${this.#getRoundsBeforePassOut(combatant, combatant.actor)}">
-                                  </a>`
-          $controls.before(passOutControl);
-          $controls.prev().children('input').change(combatant.id, function (event) {
-            let target = game.combat.combatants.find(x => x.id === event.data);
-            target.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforePassOut, this.value);
+          const passOutControl = Utility.stringToHTMLElement(
+            `<a class="combatant-control inline-control" data-control="combatPassOut">
+                     <input data-tooltip="${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatPassOutToollTip")}"
+                            type="text" 
+                            value="${this.#getRoundsBeforePassOut(combatant, combatant.actor)}">
+                   </a>`
+          );
+          controls.insertBefore(passOutControl, tokenEffects);
+          passOutControl.addEventListener("change", event => {
+            event.stopPropagation();
+            const target = game.combat.combatants.find(x => x.id === combatant.id);
+            target.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforePassOut, event.target.value);
           });
         }
       }

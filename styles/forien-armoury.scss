@@ -2,16 +2,7 @@
 @use "partials/settings-app" as *;
 @use "partials/custom-item-sheets" as *;
 @use "partials/magical-endurance" as *;
-
-
-.wfrp4e.sheet.application .rollable:hover > img:after {
-  display: block;
-  position: absolute;
-  top:0;
-  left:0;
-  content: "&nbsp;";
-  background-image: url("/systems/wfrp4e/ui/buttons/d10.webp");
-}
+@use "partials/combat-tracker" as *;
 
 .forien-armoury {
   .forien-armoury-hr {
