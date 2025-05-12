@@ -1,14 +1,24 @@
 # Changelog
 
+
 ## v4.X.X
+
 ### v4.0.0
 * Refactored project's structure, introduced rollup
-* Verified for v13.342
+    - Changed how compendium data is stored, from `.json` to `.yml`.
+    - Database files are built on release and shipped into zip without being directly commited in repository
+    - Moved source files from `dist` to `src`
+    - Moved sass stylesheets from `src/styles` to `styles`
+    - Moved static files from `dist` and `src` to `static`
+    - The entire codebase is now compiled into a single `forien-armoury.mjs` file, which should lower amount of files 
+      browsers need to load, and also help narrowing down if an error comes from this module
+* Verified for v13.342, set minimum compatibility at v13
 * Moved SettingsApp, GrimoireSheet and ScrollSheet to ApplicationV2
-* Replaced jQuery calls and event listeners with native JavaScript 
+* Replaced jQuery calls and event listeners with native JavaScript
 
 
 ## v3.X.X
+
 ### v3.5.1
 * Fixed hidden `Submit` button due to insufficient Settings App height
 
@@ -119,6 +129,7 @@
 * Added 3 more Diseases: Jakob Kreutzfeld Disease, The Martyr's Smear and The Wither (thanks to RassilonMonk)
 * Added 3 new Symptoms: Purblind, Wasting and Dementia (thanks to RassilonMonk)
 * Added 15 new Petty Spells
+
 
 ## v1.X.X
 
@@ -231,7 +242,9 @@
   * For best effects, I suggest using [Times Up](https://foundryvtt.com/packages/times-up) by Tim Posney
 * Added new type of Magic for Runebound Rangers
 
+
 ## v0.X.X
+
 ### v0.2.X
 
 #### v0.2.13
