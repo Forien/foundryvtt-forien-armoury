@@ -97,7 +97,7 @@ export default class CheckCareers extends ForienBaseModule {
       conclusionPotential
     }
 
-    renderTemplate(Utility.getTemplate(this.templates.checkCareer), templateData).then(content => {
+    foundry.applications.handlebars.renderTemplate(Utility.getTemplate(this.templates.checkCareer), templateData).then(content => {
       ChatMessage.create({
         speaker: ChatMessage.getSpeakerActor(character),
         user: game.user._id,

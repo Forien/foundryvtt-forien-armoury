@@ -94,7 +94,7 @@ export default class Utility {
       if (templates[key] === undefined) delete templates[key];
     }
 
-    loadTemplates(templates).then(() => {
+    foundry.applications.handlebars.loadTemplates(templates).then(() => {
       Utility.notify("Templates preloaded.", {consoleOnly: true})
     });
   }

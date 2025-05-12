@@ -150,11 +150,11 @@ export default class ForienArmoury {
       [dataTypes.scroll]: "Forien.Armoury.Scrolls.MagicScroll",
       [dataTypes.grimoire]: "Forien.Armoury.Grimoires.Grimoire",
     });
-    DocumentSheetConfig.registerSheet(Item, constants.moduleId, ScrollSheet, {
+    foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, constants.moduleId, ScrollSheet, {
       types: [dataTypes.scroll],
       makeDefault: true
     });
-    DocumentSheetConfig.registerSheet(Item, constants.moduleId, GrimoireSheet, {
+    foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, constants.moduleId, GrimoireSheet, {
       types: [dataTypes.grimoire],
       makeDefault: true
     });

@@ -26,7 +26,7 @@ async function replaceWithStyle(args, self) {
 
   await Dialog.wait({
     title: game.i18n.localize("Forien.Armoury.Effects.SelectTalent"),
-    content: await renderTemplate(Utility.getTemplate('select-item.hbs'), {styleTalents}),
+    content: await foundry.applications.handlebars.renderTemplate(Utility.getTemplate('select-item.hbs'), {styleTalents}),
     default: "ok",
     buttons: {
       cancel: {

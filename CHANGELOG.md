@@ -3,6 +3,10 @@
 
 ## v4.X.X
 
+### v4.0.2
+* Fixed Magical Endurance CSS
+* Updated Foundry API calls with namespaces to remove warnings
+
 ### v4.0.1-beta
 * Fixed using Magic Scrolls
 * Restrict GM actions to the active GM user

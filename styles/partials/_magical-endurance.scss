@@ -1,42 +1,35 @@
-// App v1 compatibility
-.app.window-app {
-  .forien-armoury {
-    &.magical-endurance-header {
-      .label {
-        font-family: CaslonAntique, serif;
-        font-weight: 700;
-        font-size: var(--font-size-16);
-        color: #464331c4;
-        border: 1px solid #736953a6;
-
-
-        &.value {
-          color: #222;
-        }
-      }
-
-      .input {
-        border: 1px solid #736953a6;
-        border-left: none;
-        border-right: none;
-
-        input {
-          font-family: CaslonAntique, serif;
-          font-weight: 500;
-          font-size: var(--font-size-16);
-          color: #111;
-        }
-      }
-    }
-  }
-}
-
 .forien-armoury {
   &.magical-endurance-header {
     display: flex;
     flex-direction: row;
     margin-bottom: 6px;
     height: 25px;
+
+
+    .label {
+      font-family: CaslonAntique, serif;
+      font-weight: 700;
+      font-size: var(--font-size-16);
+      color: var(--color-grey2);
+      //border: 1px solid #736953a6;
+
+      &.value {
+        color: var(--color-grey2);
+      }
+    }
+
+    .input {
+      //border: 1px solid #736953a6;
+      border-left: none;
+      border-right: none;
+
+      input {
+        font-family: CaslonAntique, serif;
+        font-weight: 500;
+        font-size: var(--font-size-16);
+        color: #111;
+      }
+    }
 
     .magical-endurance-box {
       display: flex;

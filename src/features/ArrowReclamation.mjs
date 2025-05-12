@@ -330,7 +330,7 @@ export default class ArrowReclamation extends ForienBaseModule {
     if (templateData.ammo.img.includes("/blank.png"))
       templateData.ammo.img = null;
 
-    renderTemplate(Utility.getTemplate(this.templates.ammoRecovery), templateData).then(html => {
+    foundry.applications.handlebars.renderTemplate(Utility.getTemplate(this.templates.ammoRecovery), templateData).then(html => {
       let chatData = {
         user: user,
         speaker: {alias: actor.name, actor: actor._id},

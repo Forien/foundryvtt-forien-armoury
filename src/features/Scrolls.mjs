@@ -56,7 +56,7 @@ export default class Scrolls extends ForienBaseModule {
     const tabMagic = html.querySelector('.tab[data-tab="magic"]');
     if (!tabMagic) return;
 
-    const content = await renderTemplate(Utility.getTemplate(this.templates.magicScrollsV2), {
+    const content = await foundry.applications.handlebars.renderTemplate(Utility.getTemplate(this.templates.magicScrollsV2), {
       scrolls,
       isOwner: sheet.document.isOwner,
       dataType: dataTypes.scroll

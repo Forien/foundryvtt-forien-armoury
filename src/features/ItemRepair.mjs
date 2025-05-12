@@ -394,7 +394,7 @@ export default class ItemRepair extends ForienBaseModule {
       templateData.empty = true;
 
     debug('[ItemRepair] Template Data ready', templateData);
-    let html = await renderTemplate(Utility.getTemplate(this.templates.chatMessage), templateData);
+    let html = await foundry.applications.handlebars.renderTemplate(Utility.getTemplate(this.templates.chatMessage), templateData);
 
     if (!chatMessageId) {
       let chatData = {

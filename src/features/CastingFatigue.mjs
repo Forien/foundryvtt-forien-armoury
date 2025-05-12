@@ -68,7 +68,7 @@ export default class CastingFatigue extends ForienBaseModule {
     const actor = sheet.actor;
     const magicalEndurance = this.getMagicalEnduranceData(actor);
 
-    renderTemplate(Utility.getTemplate(this.templates.magicalEndurance), magicalEndurance).then(content => {
+    foundry.applications.handlebars.renderTemplate(Utility.getTemplate(this.templates.magicalEndurance), magicalEndurance).then(content => {
       const child = Utility.stringToHTMLElement(content)
       tabMagic.prepend(child);
 
