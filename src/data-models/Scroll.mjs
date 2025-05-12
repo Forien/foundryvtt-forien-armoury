@@ -1,3 +1,4 @@
+import ScrollTest   from "tests/ScrollTest";
 import Utility      from "../utility/Utility.mjs";
 import {settings}   from "../constants.mjs";
 import ScrollDialog from "../apps/ScrollDialog.mjs";
@@ -241,7 +242,6 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
         difficulty
       }),
       data: {
-        scroll: this.parent,
         spell,
         hitLoc: !!spell.system.damage.value,
         skill: skill
@@ -249,7 +249,8 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
       options: options || {}
     }
 
-    const test = await actor._setupTest(dialogData, ScrollDialog)
+    const test = await actor._setupTest(ScrollDialog, ScrollTest, {spell, scroll: this.parent}, dialogData, false)
+
     return await test.roll();
   }
 }

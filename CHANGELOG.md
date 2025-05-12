@@ -3,7 +3,10 @@
 
 ## v4.X.X
 
-### v4.0.0
+### v4.0.1-beta
+* Fixed using Magic Scrolls
+
+### v4.0.0-beta
 * Refactored project's structure, introduced rollup
     - Changed how compendium data is stored, from `.json` to `.yml`.
     - Database files are built on release and shipped into zip without being directly commited in repository

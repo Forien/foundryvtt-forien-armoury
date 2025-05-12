@@ -1,14 +1,14 @@
-import Utility    from "../utility/Utility.mjs";
 import {settings} from "../constants.mjs";
+import Utility    from "../utility/Utility.mjs";
 
 /**
  * @extends WomCastTest
  */
 export default class ScrollTest extends WomCastTest {
   constructor(data, actor) {
-    super(data, actor)
+    super(data, actor);
     if (!data)
-      return
+      return;
 
     this.data.preData.scroll = data.scroll;
     this.data.context.isScroll = true;
@@ -31,7 +31,9 @@ export default class ScrollTest extends WomCastTest {
     if (allowOvercasting === settings.scrolls.always)
       return true;
 
-    return this.data.preData.scroll.system.isMagick;
+    const scroll = this.data.preData.scroll;
+
+    return scroll.system.isMagick;
   }
 
   /**
@@ -86,7 +88,7 @@ export default class ScrollTest extends WomCastTest {
   async postTest() {
     super.postTest();
 
-    if (this.result.outcome === 'success')
+    if (this.result.outcome === "success")
       await this.result.scroll.system.reduceQuantity();
   }
 }

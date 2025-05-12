@@ -1,6 +1,5 @@
 import ScrollTest from "../tests/ScrollTest.mjs";
 import Utility    from "../utility/Utility.mjs";
-import {debug}    from "../utility/Debug.mjs";
 
 
 export default class ScrollDialog extends CastDialog {
@@ -19,6 +18,16 @@ export default class ScrollDialog extends CastDialog {
     return options;
   }
 
+
+  static async setupData(items, actor, context = {}, options = {}) {
+    const dialogData = await super.setupData(items.spell, actor, context, options);
+
+    const data = dialogData.data;
+    data.scroll = items.scroll;
+
+    return dialogData;
+  }
+
   /**
    * @inheritDoc
    *
@@ -35,7 +44,7 @@ export default class ScrollDialog extends CastDialog {
     data.skill = data.skill ?? data.spell.skillToUse;
     data.characteristic = data.skill?.system?.characteristic?.key || "int";
 
-    data.scripts = data.scripts.concat(data.spell?.getScripts("dialog"), data.skill?.getScripts("dialog") || [])
+    data.scripts = data.scripts.concat(data.spell?.getScripts("dialog"), data.skill?.getScripts("dialog") || []);
 
     return new Promise(resolve => {
       new this(data, fields, options, resolve).render(true);
