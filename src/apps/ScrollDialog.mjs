@@ -3,8 +3,8 @@ import Utility    from "../utility/Utility.mjs";
 
 
 export default class ScrollDialog extends CastDialog {
-
   testClass = ScrollTest;
+
   chatTemplate = Utility.getTemplate("chat-rolls/scroll-card.hbs");
 
   /**
@@ -15,6 +15,7 @@ export default class ScrollDialog extends CastDialog {
   static get defaultOptions() {
     const options = super.defaultOptions;
     options.classes = options.classes.concat(["spell-roll-dialog"]);
+
     return options;
   }
 

@@ -38,7 +38,7 @@ function registerSettings() {
     },
   });
 
-  //#region Actor
+  // #region Actor
 
 
   // Should disease progress automatically with passage of time?
@@ -49,7 +49,7 @@ function registerSettings() {
     config: false,
     default: defaults.diseases.autoProgress,
     type: Boolean,
-    onChange: (value) => {
+    onChange: value => {
       if (value && game.time.worldTime === 0) {
         Utility.notify(
           game.i18n.localize("Forien.Armoury.Settings.Diseases.AutoProgressNoWorldTime"),
@@ -70,7 +70,7 @@ function registerSettings() {
     config: false,
     default: defaults.injuries.autoProgress,
     type: Boolean,
-    onChange: (value) => {
+    onChange: value => {
       if (value && game.time.worldTime === 0) {
         Utility.notify(
           game.i18n.localize("Forien.Armoury.Settings.Injuries.AutoProgressNoWorldTime"),
@@ -143,9 +143,9 @@ function registerSettings() {
     },
   });
 
-  //#endregion
+  // #endregion
 
-  //#region Casting Fatigue
+  // #region Casting Fatigue
 
   // Add enable/disable setting for Casting Fatigue feature
   game.settings.register(constants.moduleId, settings.magicalEndurance.enabled, {
@@ -210,7 +210,7 @@ function registerSettings() {
     config: false,
     default: defaults.magicalEndurance.autoRegen,
     type: Boolean,
-    onChange: (value) => {
+    onChange: value => {
       if (value && game.time.worldTime === 0) {
         Utility.notify(
           game.i18n.localize("Forien.Armoury.Settings.CastingFatigue.AutoRegenNoWorldTime"),
@@ -252,9 +252,9 @@ function registerSettings() {
     default: defaults.combatFatigue.enableCorePassOut,
     type: Boolean,
   });
-  //#endregion
+  // #endregion
 
-  //#region Arrow Reclamation
+  // #region Arrow Reclamation
   // Add enable/disable setting for arrow reclamation feature
   game.settings.register(constants.moduleId, settings.arrowReclamation.enable, {
     name: "Forien.Armoury.Settings.ArrowReclamation.Enable",
@@ -322,9 +322,9 @@ function registerSettings() {
     default: defaults.arrowReclamation.percentage,
     type: Number,
   });
-  //#endregion
+  // #endregion
 
-  //#region Scrolls
+  // #region Scrolls
   // Allow Overcasting when casting from Scrolls
   game.settings.register(constants.moduleId, settings.scrolls.allowOvercasting, {
     name: "Forien.Armoury.Settings.Scrolls.AllowOvercasting",
@@ -427,9 +427,9 @@ function registerSettings() {
     choices: game.wfrp4e.config.availability,
     type: String,
   });
-  //#endregion
+  // #endregion
 
-  //#region Grimoires
+  // #region Grimoires
   // Should grimoires only transfer spells when equipped?
   game.settings.register(constants.moduleId, settings.grimoires.requireEquipped, {
     name: "Forien.Armoury.Settings.Grimoires.RequireEquipped",
@@ -500,7 +500,7 @@ function registerSettings() {
     choices: game.wfrp4e.config.availability,
     type: String,
   });
-  //#endregion
+  // #endregion
 
   game.settings.register(constants.moduleId, settings.initialized, {
     scope: "world",

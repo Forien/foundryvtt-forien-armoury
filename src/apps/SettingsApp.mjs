@@ -5,7 +5,6 @@ import Utility               from "../utility/Utility.mjs";
 const {ApplicationV2, HandlebarsApplicationMixin} = foundry.applications.api;
 
 export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV2) {
-
   static #templates = {
     app: "apps/settings/settings.hbs",
     tab: "apps/settings/tab.hbs",
@@ -281,7 +280,7 @@ export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV
     const checkboxes = this.element.querySelectorAll("input[type=\"checkbox\"]");
 
     for (const checkbox of checkboxes) {
-      checkbox.addEventListener("change", (ev) => {
+      checkbox.addEventListener("change", ev => {
         this.toggleActiveClass(ev.target, this.element);
       });
 

@@ -21,7 +21,7 @@ export default class CheckCareers extends ForienBaseModule {
         users = users.filter(u => u.active === true);
       }
       characters = users.map(u => u.character);
-      debug(`[CheckCareers] Checking player characters' careers as GM`, {onlyOnline, characters});
+      debug("[CheckCareers] Checking player characters' careers as GM", {onlyOnline, characters});
 
       this.checkCareers(characters);
     } else {
@@ -33,7 +33,7 @@ export default class CheckCareers extends ForienBaseModule {
    * Permorms Career Check for assigned character only
    */
   checkMyCareer() {
-    debug(`[CheckCareers] Checking my character's career`, {character: game.user.character});
+    debug("[CheckCareers] Checking my character's career", {character: game.user.character});
 
     if (game.user.character instanceof ActorWFRP4e)
       this.checkCareer(game.user.character);
@@ -68,10 +68,10 @@ export default class CheckCareers extends ForienBaseModule {
     const skills = this.#checkSkills(character, currentCareer, requiredAdvances);
     const owners = this.#getOwners(character);
 
-    let conclusion = (characteristics.done >= characteristics.total && skills.done >= 8 && talents.done >= 1);
-    let conclusionPotential = (skills.potentialCount > 0 || talents.potentialCount > 0);
+    let conclusion = characteristics.done >= characteristics.total && skills.done >= 8 && talents.done >= 1;
+    let conclusionPotential = skills.potentialCount > 0 || talents.potentialCount > 0;
 
-    debug(`[CheckCareers] Character's Career checked`, {
+    debug("[CheckCareers] Character's Career checked", {
       character,
       currentCareer,
       requiredAdvances,
@@ -105,7 +105,8 @@ export default class CheckCareers extends ForienBaseModule {
           whisper: owners,
           content: content,
         });
-      });
+      }
+    );
   }
 
   /**
@@ -147,7 +148,6 @@ export default class CheckCareers extends ForienBaseModule {
         done++;
       else if (skill.advances.indicator)
         potentialSkills.push(skill.name);
-
     });
 
     return {

@@ -1,7 +1,6 @@
 import {constants} from "../constants.mjs";
 
 export default class Utility {
-
   /**
    * Provides a single point of entry to handle all Module's notifications in a consistent manner
    *
@@ -119,6 +118,7 @@ export default class Utility {
   static stringToHTMLElement(string) {
     const element = document.createElement("template");
     element.innerHTML = string.trim();
+
     return element.content.firstChild;
   }
 }

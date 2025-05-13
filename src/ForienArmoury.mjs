@@ -97,49 +97,49 @@ export default class ForienArmoury {
    */
   get combatFatigue() {
     return this.modules.get("combatFatigue");
-  };
+  }
 
   /**
    * @return {CastingFatigue}
    */
   get castingFatigue() {
     return this.modules.get("castingFatigue");
-  };
+  }
 
   /**
    * @return {ItemProperties}
    */
   get itemProperties() {
     return this.modules.get("itemProperties");
-  };
+  }
 
   /**
    * @return {ArrowReclamation}
    */
   get arrowReclamation() {
     return this.modules.get("arrowReclamation");
-  };
+  }
 
   /**
    * @return {CheckCareers}
    */
   get checkCareers() {
     return this.modules.get("checkCareers");
-  };
+  }
 
   /**
    * @return {Macros}
    */
   get macros() {
     return this.modules.get("macros");
-  };
+  }
 
   /**
    * @return {Integrations}
    */
   get integrations() {
     return this.modules.get("integrations");
-  };
+  }
 
   #registerDataModels() {
     Object.assign(CONFIG.Item.dataModels, {
@@ -232,14 +232,14 @@ export default class ForienArmoury {
    */
   #registerSettings() {
     registerSettings();
-    this.modules.forEach((module) => {
+    this.modules.forEach(module => {
       module.registerSettings();
     });
     Debug.registerSetting();
   }
 
   #initialConfig() {
-    this.modules.forEach((module) => {
+    this.modules.forEach(module => {
       module.registerSettings();
     });
   }

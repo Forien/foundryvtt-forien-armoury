@@ -11,7 +11,6 @@ const fields = foundry.data.fields;
  * @category - Documents
  */
 export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
-
   /**
    * @inheritDoc
    *
@@ -89,12 +88,12 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
 
     if (!data.img || data.img === "icons/svg/item-bag.svg" || data.img === "systems/wfrp4e/icons/blank.png") {
       const match = data.name.match(/(\(\d+\))/i);
-      this.parent.updateSource({"img": "icons/sundries/scrolls/scroll-bound-green.webp"});
+      this.parent.updateSource({img: "icons/sundries/scrolls/scroll-bound-green.webp"});
 
       if (match) {
         const number = match[1];
         this.parent.updateSource({
-          "name": game.i18n.localize("Forien.Armoury.Scrolls.NewScrollDefaultName") + ` ${number}`,
+          name: game.i18n.localize("Forien.Armoury.Scrolls.NewScrollDefaultName") + ` ${number}`,
         });
       }
     }

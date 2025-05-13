@@ -8,6 +8,7 @@ export default class Tokens extends ForienBaseModule {
     "npc",
     "creature",
   ];
+
   #brassPenniesItemUUID = "Compendium.wfrp4e-core.items.Item.0MYOJFx3vkYA95B4";
 
   /**
@@ -60,8 +61,8 @@ export default class Tokens extends ForienBaseModule {
     let doRoll = true;
 
     if (
-      mode === settings.actor.choices.ask ||
-      (mode === settings.actor.choices.askNPC && token.actor.type === "npc")
+      mode === settings.actor.choices.ask
+      || (mode === settings.actor.choices.askNPC && token.actor.type === "npc")
     ) {
       doRoll = await foundry.applications.api.DialogV2.confirm({
         window: {
@@ -90,8 +91,8 @@ export default class Tokens extends ForienBaseModule {
     let formula = Utility.getSetting(settings.actor.defaultMoney);
 
     if (
-      mode === settings.actor.choices.ask ||
-      (mode === settings.actor.choices.askNPC && token.actor.type === "npc")
+      mode === settings.actor.choices.ask
+      || (mode === settings.actor.choices.askNPC && token.actor.type === "npc")
     ) {
       formula = await ValueDialog.create({
         title: token.name,
@@ -149,7 +150,7 @@ export default class Tokens extends ForienBaseModule {
       const roll = await new Roll(formula).evaluate();
       total = roll.total;
 
-      const moneyItems = ((await WFRP_Utility.allMoneyItems()) || [])
+      const moneyItems = (await WFRP_Utility.allMoneyItems() || [])
                            .map(m => {
                              if (m.system.coinValue.value === 1)
                                m.system.quantity.value = total;
@@ -159,7 +160,8 @@ export default class Tokens extends ForienBaseModule {
                              return m;
                            })
                            .sort(
-                             (a, b) => (a.system.coinValue.value >= b.system.coinValue.value) ? -1 : 1)
+                             (a, b) => ((a.system.coinValue.value >= b.system.coinValue.value) ? -1 : 1)
+                           )
                          || [];
 
       const money = game.wfrp4e.market.consolidateMoney(moneyItems);
@@ -173,5 +175,4 @@ export default class Tokens extends ForienBaseModule {
 
     return total;
   }
-
 }

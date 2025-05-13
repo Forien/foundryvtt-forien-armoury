@@ -51,6 +51,7 @@ export default class WorldTimeObserver extends ForienBaseModule {
         await subscriber.callback.call(this, subscriber.args, eventTime);
       } catch (error) {
         this.unsubscribe(subscriberId);
+
         return Utility.error(
           game.i18n.localize("Forien.Armoury.WorldTimeObserver.CallbackError"),
           {error, data: {subscriber, eventTime, error}},
@@ -112,6 +113,7 @@ export default class WorldTimeObserver extends ForienBaseModule {
         permanent: true,
         data: {observer: this.constructor.name, id, callback, args, every, last, attempts: count},
       });
+
       return false;
     }
 
@@ -187,6 +189,4 @@ export default class WorldTimeObserver extends ForienBaseModule {
 
     return count;
   }
-
-
 }

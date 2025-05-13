@@ -15,7 +15,7 @@ export default class ATL {
       config: false,
       default: false,
       type: Boolean,
-      onChange: async (value) => {
+      onChange: async value => {
         if (value) {
           self.setPresets();
           game.settings.set(constants.moduleId, settings.integrations.atl.resetPresets, false);
@@ -33,69 +33,69 @@ export default class ATL {
   getWFRP4ePresets() {
     return [
       {
-        "name": "candle",
-        "light": {
-          "dim": 6,
-          "bright": 2,
-          "color": "#a2642a",
-          "animation": {
-            "type": "torch",
-            "speed": 5,
-            "intensity": 2,
+        name: "candle",
+        light: {
+          dim: 6,
+          bright: 2,
+          color: "#a2642a",
+          animation: {
+            type: "torch",
+            speed: 5,
+            intensity: 2,
           },
-          "alpha": 0.2,
-          "coloration": 1,
+          alpha: 0.2,
+          coloration: 1,
         },
-        "id": "ATLPresetCandle",
+        id: "ATLPresetCandle",
       },
       {
-        "name": "torch",
-        "light": {
-          "dim": 16,
-          "bright": 6,
-          "color": "#a2642a",
-          "animation": {
-            "type": "flame",
-            "speed": 3,
-            "intensity": 2,
+        name: "torch",
+        light: {
+          dim: 16,
+          bright: 6,
+          color: "#a2642a",
+          animation: {
+            type: "flame",
+            speed: 3,
+            intensity: 2,
           },
-          "alpha": 0.7,
-          "coloration": 1,
+          alpha: 0.7,
+          coloration: 1,
         },
-        "id": "ATLPresetTorch",
+        id: "ATLPresetTorch",
       },
       {
-        "name": "lantern",
-        "light": {
-          "dim": 20,
-          "bright": 10,
-          "color": "#a2642a",
-          "animation": {
-            "type": "torch",
-            "speed": 1,
-            "intensity": 1,
+        name: "lantern",
+        light: {
+          dim: 20,
+          bright: 10,
+          color: "#a2642a",
+          animation: {
+            type: "torch",
+            speed: 1,
+            intensity: 1,
           },
-          "alpha": 0.4,
-          "coloration": 1,
+          alpha: 0.4,
+          coloration: 1,
         },
-        "id": "ATLPresetLantern",
+        id: "ATLPresetLantern",
       },
       {
-        "name": "directedLantern",
-        "light": {
-          "dim": 30,
-          "bright": 15,
-          "color": "#a2642a",
-          "animation": {
-            "type": "torch",
-            "speed": 1,
-            "intensity": 1,
+        name: "directedLantern",
+        light: {
+          dim: 30,
+          bright: 15,
+          color: "#a2642a",
+          animation: {
+            type: "torch",
+            speed: 1,
+            intensity: 1,
           },
-          "alpha": 0.5,
-          "coloration": 1,
-          "angle": 90,
+          alpha: 0.5,
+          coloration: 1,
+          angle: 90,
         },
-        "id": "nOlPYdU1RgRaOaBq",
+        id: "nOlPYdU1RgRaOaBq",
       },
     ];
   }

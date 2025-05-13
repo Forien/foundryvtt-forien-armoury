@@ -67,10 +67,10 @@ export default class Scrolls extends ForienBaseModule {
     tabMagic.append(Utility.stringToHTMLElement(content));
 
     tabMagic.querySelectorAll(".scrolls .scroll-spell-link").forEach(element => {
-      element.addEventListener("click", (event) => this.#onScrollSpellLinkClick(event));
+      element.addEventListener("click", event => this.#onScrollSpellLinkClick(event));
     });
     tabMagic.querySelectorAll(".scrolls .scroll-spell-cast").forEach(element => {
-      element.addEventListener("click", (event) => this.#onScrollSpellCastClick(sheet, event));
+      element.addEventListener("click", event => this.#onScrollSpellCastClick(sheet, event));
     });
 
     tabMagic.querySelectorAll(".scrolls .rollable").forEach(element => {
@@ -138,7 +138,7 @@ export default class Scrolls extends ForienBaseModule {
    * @inheritDoc
    */
   applyWfrp4eConfig() {
-    foundry.utils.mergeObject(game.wfrp4e.rolls, {"ScrollTest": ScrollTest});
+    foundry.utils.mergeObject(game.wfrp4e.rolls, {ScrollTest: ScrollTest});
 
     return {};
   }
@@ -173,8 +173,8 @@ export default class Scrolls extends ForienBaseModule {
     for (const spell of spells) {
       if (spell.system.cn.value > maxCN) continue;
       if (
-        !lores.includes(spell.system.lore.value) &&
-        !(lores.includes("arcane") && spell.system.lore.value === "")
+        !lores.includes(spell.system.lore.value)
+        && !(lores.includes("arcane") && spell.system.lore.value === "")
       ) {
         continue;
       }

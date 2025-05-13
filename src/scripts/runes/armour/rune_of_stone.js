@@ -5,5 +5,5 @@ if (args.item?._id === this.item?.id) {
     let location = args.item.system.AP[loc];
     if (location > 0)
       args.item.system.AP[loc] += 1;
-  };
+  }
 }

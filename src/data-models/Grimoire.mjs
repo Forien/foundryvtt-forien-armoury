@@ -71,7 +71,8 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
 
     if (item.parent !== null)
       throw new WorkshopError(
-        "GrimoireModel.addSpell `item` argument cannot belong to an Actor. Use World Item or Compendium Item");
+        "GrimoireModel.addSpell `item` argument cannot belong to an Actor. Use World Item or Compendium Item"
+      );
 
     const spells = this.spells;
     spells.push({
@@ -144,7 +145,7 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
     await super._preCreate(data, options, user);
 
     if (!data.img || data.img === "icons/svg/item-bag.svg" || data.img === "systems/wfrp4e/icons/blank.png") {
-      this.parent.updateSource({"img": "icons/sundries/books/book-worn-brown-grey.webp"});
+      this.parent.updateSource({img: "icons/sundries/books/book-worn-brown-grey.webp"});
     }
 
     if (!data.system?.encumbrance?.value) {
@@ -208,8 +209,8 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
         continue;
 
       if (
-        !Utility.getSetting(settings.grimoires.transferWithoutLore) &&
-        !this.doesActorKnowLore(item.system?.lore?.value)
+        !Utility.getSetting(settings.grimoires.transferWithoutLore)
+        && !this.doesActorKnowLore(item.system?.lore?.value)
       ) continue;
 
       const data = item.toObject();
@@ -218,7 +219,7 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
         data.name = spell.name;
 
       foundry.utils.setProperty(data, `flags.${constants.moduleId}.${flags.grimoires.source}`, this.parent.id);
-      foundry.utils.setProperty(data, `flags.core.sourceId`, spell.uuid);
+      foundry.utils.setProperty(data, "flags.core.sourceId", spell.uuid);
 
       items.push(data);
     }
@@ -230,10 +231,8 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
     const actor = this.parent.actor;
     if (!actor) return;
 
-    let spells = actor.itemTypes.spell.filter(s =>
-      s.flags[constants.moduleId]?.[flags.grimoires.source] === this.parent.id &&
-      s.system.memorized.value === false,
-    );
+    let spells = actor.itemTypes.spell.filter(s => s.flags[constants.moduleId]?.[flags.grimoires.source] === this.parent.id
+      && s.system.memorized.value === false);
 
     const deletes = spells.map(s => s.id);
     await actor.deleteEmbeddedDocuments("Item", deletes);
@@ -319,7 +318,8 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
    */
   get canActorWrite() {
     return this.reader?.itemTypes.talent.some(t => t.name === game.i18n.localize(
-      "Forien.Armoury.Grimoires.ReadWriteTalent")) || false;
+      "Forien.Armoury.Grimoires.ReadWriteTalent"
+    )) || false;
   }
 
   /**

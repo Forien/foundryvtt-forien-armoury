@@ -5,6 +5,7 @@ import Utility                      from "../utility/Utility.mjs";
 
 export default class Injuries extends ForienBaseModule {
   #observer;
+
   #listeners = new Map();
 
   /**

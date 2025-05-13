@@ -7,6 +7,7 @@ export default class Integrations extends ForienBaseModule {
    * @type {ItemPiles}
    */
   itemPiles;
+
   /**
    * @type {ATL}
    */

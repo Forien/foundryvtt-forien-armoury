@@ -7,6 +7,7 @@ import Utility                      from "../utility/Utility.mjs";
 
 export default class CastingFatigue extends ForienBaseModule {
   #observer;
+
   #listeners = new Map();
 
   templates = {
@@ -77,7 +78,7 @@ export default class CastingFatigue extends ForienBaseModule {
 
       html.querySelector("#magical-endurance-value").addEventListener(
         "change",
-        (ev) => this.#onMagicalEnduranceValueChange(ev, actor),
+        ev => this.#onMagicalEnduranceValueChange(ev, actor),
       );
     });
   }
@@ -241,7 +242,7 @@ export default class CastingFatigue extends ForienBaseModule {
       difficulties.push({difficulty, modifier});
     }
 
-    return difficulties.sort((a, b) => a.modifier < b.modifier ? 1 : -1).map(d => d.difficulty);
+    return difficulties.sort((a, b) => (a.modifier < b.modifier ? 1 : -1)).map(d => d.difficulty);
   }
 
   /**
@@ -294,7 +295,7 @@ export default class CastingFatigue extends ForienBaseModule {
     const data = actor.getFlag(constants.moduleId, flags.magicalEndurance.flag);
     const model = new MagicEnduranceDataModel(data);
 
-    model.virtual = (model.maximum === undefined);
+    model.virtual = model.maximum === undefined;
 
     // always recalculate regen and maximum
     model.maximum = this.getMaxMagicalEndurance(actor);

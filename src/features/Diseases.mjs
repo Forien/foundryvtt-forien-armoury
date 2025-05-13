@@ -5,6 +5,7 @@ import Utility                      from "../utility/Utility.mjs";
 
 export default class Diseases extends ForienBaseModule {
   #observer;
+
   #listeners = new Map();
 
   /**
@@ -31,7 +32,7 @@ export default class Diseases extends ForienBaseModule {
       symptomEffects: {},
     };
 
-    //#region Vertigo
+    // #region Vertigo
     config.symptoms["vertigo"] = game.i18n.localize("Forien.Armoury.Symptoms.Vertigo.Name");
     config.symptomDescriptions["vertigo"] = game.i18n.localize("Forien.Armoury.Symptoms.Vertigo.Description");
     config.symptomTreatment["vertigo"] = game.i18n.localize("Forien.Armoury.Symptoms.Vertigo.Treatment");
@@ -68,9 +69,9 @@ export default class Diseases extends ForienBaseModule {
         },
       },
     };
-    //#endregion
+    // #endregion
 
-    //#region Scarring
+    // #region Scarring
     config.symptoms["scarring"] = game.i18n.localize("Forien.Armoury.Symptoms.Scarring.Name");
     config.symptomDescriptions["scarring"] = game.i18n.localize("Forien.Armoury.Symptoms.Scarring.Description");
     config.symptomTreatment["scarring"] = game.i18n.localize("Forien.Armoury.Symptoms.Scarring.Treatment");
@@ -95,9 +96,9 @@ export default class Diseases extends ForienBaseModule {
         },
       },
     };
-    //#endregion
+    // #endregion
 
-    //#region Rashes
+    // #region Rashes
     config.symptoms["rashes"] = game.i18n.localize("Forien.Armoury.Symptoms.Rashes.Name");
     config.symptomDescriptions["rashes"] = game.i18n.localize("Forien.Armoury.Symptoms.Rashes.Description");
     config.symptomTreatment["rashes"] = game.i18n.localize("Forien.Armoury.Symptoms.Rashes.Treatment");
@@ -125,9 +126,9 @@ export default class Diseases extends ForienBaseModule {
         },
       },
     };
-    //#endregion
+    // #endregion
 
-    //#region Taint
+    // #region Taint
     config.symptoms["taint"] = game.i18n.localize("Forien.Armoury.Symptoms.Taint.Name");
     config.symptomDescriptions["taint"] = game.i18n.localize("Forien.Armoury.Symptoms.Taint.Description");
     config.symptomTreatment["taint"] = game.i18n.localize("Forien.Armoury.Symptoms.Taint.Treatment");
@@ -167,9 +168,9 @@ export default class Diseases extends ForienBaseModule {
         },
       },
     };
-    //#endregion
+    // #endregion
 
-    //#region Purblind
+    // #region Purblind
     config.symptoms["purblind"] = game.i18n.localize("Forien.Armoury.Symptoms.Purblind.Name");
     config.symptomDescriptions["purblind"] = game.i18n.localize("Forien.Armoury.Symptoms.Purblind.Description");
     config.symptomTreatment["purblind"] = game.i18n.localize("Forien.Armoury.Symptoms.Purblind.Treatment");
@@ -219,9 +220,9 @@ export default class Diseases extends ForienBaseModule {
         },
       },
     };
-    //#endregion
+    // #endregion
 
-    //#region Wasting
+    // #region Wasting
     config.symptoms["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.Wasting.Name");
     config.symptomDescriptions["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.Wasting.Description");
     config.symptomTreatment["wasting"] = game.i18n.localize("Forien.Armoury.Symptoms.Wasting.Treatment");
@@ -265,9 +266,9 @@ export default class Diseases extends ForienBaseModule {
         },
       },
     };
-    //#endregion
+    // #endregion
 
-    //#region Dementia
+    // #region Dementia
     config.symptoms["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.Dementia.Name");
     config.symptomDescriptions["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.Dementia.Description");
     config.symptomTreatment["dementia"] = game.i18n.localize("Forien.Armoury.Symptoms.Dementia.Treatment");
@@ -295,7 +296,7 @@ export default class Diseases extends ForienBaseModule {
         },
       },
     };
-    //#endregion
+    // #endregion
 
     return config;
   }

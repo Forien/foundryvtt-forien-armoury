@@ -49,7 +49,7 @@ export default class Grimoires extends ForienBaseModule {
    */
   async #onRenderActorSheet(sheet, html, context, options) {
     if (options.isFirstRender === true) {
-      html.addEventListener("click", (event) => this.#onSpellLinkClick(event));
+      html.addEventListener("click", event => this.#onSpellLinkClick(event));
     }
   }
 

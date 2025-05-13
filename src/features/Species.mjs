@@ -1,7 +1,6 @@
 import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 
 export default class Species extends ForienBaseModule {
-
   applyWfrp4eConfig() {
     let config = {};
 
@@ -28,20 +27,20 @@ export default class Species extends ForienBaseModule {
       speciesRandomTalents: {},
     };
 
-    /**#region Runebound */
+    /** #region Runebound */
 
     config.species["runebound"] = "Runebound";
     config.speciesCharacteristics["runebound"] = {
-      "ws": "2d10+25",
-      "bs": "2d10+25",
-      "s": "2d10+25",
-      "t": "2d10+25",
-      "i": "2d10+25",
-      "ag": "2d10+25",
-      "dex": "2d10+25",
-      "int": "2d10+15",
-      "wp": "2d10+25",
-      "fel": "2d10+15",
+      ws: "2d10+25",
+      bs: "2d10+25",
+      s: "2d10+25",
+      t: "2d10+25",
+      i: "2d10+25",
+      ag: "2d10+25",
+      dex: "2d10+25",
+      int: "2d10+15",
+      wp: "2d10+25",
+      fel: "2d10+15",
     };
     config.speciesSkills["runebound"] = [
       "Animal Care",
@@ -76,7 +75,7 @@ export default class Species extends ForienBaseModule {
       die: "2d10",
     };
 
-    /**#endregion Runebound */
+    /** #endregion Runebound */
 
     return config;
   }
@@ -88,7 +87,7 @@ export default class Species extends ForienBaseModule {
       },
     };
 
-    /**#region Runebound */
+    /** #region Runebound */
 
     config.subspecies.runebound["reiklander"] = {
       name: "Reiklander",
@@ -143,7 +142,7 @@ export default class Species extends ForienBaseModule {
       },
     };
 
-    /**#endregion Runebound */
+    /** #endregion Runebound */
 
     return config;
   }
@@ -151,23 +150,23 @@ export default class Species extends ForienBaseModule {
   #mergeCareerReplacements() {
     game.wfrp4e.utility.mergeCareerReplacements({
       runebound: {
-        "Cavalryman": ["Monster Hunter"],
-        "Engineer": ["Runebound Ranger"],
-        "Guard": ["Monster Hunter"],
+        Cavalryman: ["Monster Hunter"],
+        Engineer: ["Runebound Ranger"],
+        Guard: ["Monster Hunter"],
         "Hedge Witch": ["Runebound Ranger"],
-        "Hunter": ["Runebound Ranger"],
-        "Knight": ["Monster Hunter"],
-        "Mystic": ["Runebound Ranger"],
-        "Nun": ["Runebound Ranger"],
-        "Priest": ["Runebound Ranger"],
-        "Protagonist": ["Monster Hunter"],
+        Hunter: ["Runebound Ranger"],
+        Knight: ["Monster Hunter"],
+        Mystic: ["Runebound Ranger"],
+        Nun: ["Runebound Ranger"],
+        Priest: ["Runebound Ranger"],
+        Protagonist: ["Monster Hunter"],
         "Road Warden": ["Monster Hunter", "Runebound Ranger"],
-        "Scout": ["Runebound Ranger"],
-        "Soldier": ["Monster Hunter", "Runebound Ranger"],
+        Scout: ["Runebound Ranger"],
+        Soldier: ["Monster Hunter", "Runebound Ranger"],
         "Warrior Priest": ["Runebound Ranger"],
-        "Watchman": ["Runebound Ranger"],
-        "Witch": ["Runebound Ranger"],
-        "Wizard": ["Runebound Ranger"],
+        Watchman: ["Runebound Ranger"],
+        Witch: ["Runebound Ranger"],
+        Wizard: ["Runebound Ranger"],
       },
     });
   }

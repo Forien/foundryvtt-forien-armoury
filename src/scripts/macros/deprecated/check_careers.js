@@ -37,9 +37,9 @@ characters.forEach(character => {
   let potentialTalents = [];
   character.itemCategories.talent.forEach(talent => {
     if (currentCareer.talents.includes(talent.name))
-      doneTalents++
+      doneTalents++;
     else if (talent.advances.indicator)
-      potentialTalents.push(talent.name)
+      potentialTalents.push(talent.name);
   });
 
   /* check skills */
@@ -48,10 +48,9 @@ characters.forEach(character => {
   character.itemCategories.skill.forEach(skill => {
     if (skill.advances.value < requiredAdvances) return;
     if (currentCareer.skills.includes(skill.name))
-      doneSkills++
+      doneSkills++;
     else if (skill.advances.indicator)
-      potentialSkills.push(skill.name)
-
+      potentialSkills.push(skill.name);
   });
 
   /* prepare Chat Message */
@@ -66,35 +65,35 @@ characters.forEach(character => {
   }
 
 
-  let potentialSkillsInfo = '';
-  let potentialTalentsInfo = '';
-  let characteristicsComment = '';
-  let skillsComment = '';
-  let talentsComment = '';
-  let conclusion = `You can't complete your career yet.`;
+  let potentialSkillsInfo = "";
+  let potentialTalentsInfo = "";
+  let characteristicsComment = "";
+  let skillsComment = "";
+  let talentsComment = "";
+  let conclusion = "You can't complete your career yet.";
 
 
   if (potentialSkills.length > 0)
-    potentialSkillsInfo = `<p><em>You also have <a class="content-link" data-tooltip="${potentialSkills.toString()}">${potentialSkills.length} other skill(s)</a> that could potentially be part of your career.</em></p>`
+    potentialSkillsInfo = `<p><em>You also have <a class="content-link" data-tooltip="${potentialSkills.toString()}">${potentialSkills.length} other skill(s)</a> that could potentially be part of your career.</em></p>`;
 
   if (potentialTalents.length > 0)
-    potentialTalentsInfo = `<p><em>You also have <a class="content-link" data-tooltip="${potentialTalents.toString()}">${potentialTalents.length} other talent(s)</a> that could potentially be part of your career.</em></p>`
+    potentialTalentsInfo = `<p><em>You also have <a class="content-link" data-tooltip="${potentialTalents.toString()}">${potentialTalents.length} other talent(s)</a> that could potentially be part of your career.</em></p>`;
 
   if (potentialSkills.length > 0 || potentialTalents.length > 0)
-    conclusion += `<br><em>You have "potential" skills and/or talents, talk to your GM. They might count towards your career!</em>`;
+    conclusion += "<br><em>You have \"potential\" skills and/or talents, talk to your GM. They might count towards your career!</em>";
 
   if (doneCharacteristics >= totalCharacteristics)
-    characteristicsComment = '<p>You have <em>enough</em> advances to complete your career!'
+    characteristicsComment = "<p>You have <em>enough</em> advances to complete your career!";
 
   if (doneSkills >= 8)
-    skillsComment = '<p>You have <em>enough</em> advances to complete your career!'
+    skillsComment = "<p>You have <em>enough</em> advances to complete your career!";
 
   if (doneTalents >= 1)
-    talentsComment = '<p>You have <em>enough</em> talents to complete your career!'
+    talentsComment = "<p>You have <em>enough</em> talents to complete your career!";
 
 
   if (doneCharacteristics >= totalCharacteristics && doneSkills >= 8 && doneTalents >= 1)
-    conclusion = `<strong><em>Congratulations! You can complete your current career!</em></strong>`;
+    conclusion = "<strong><em>Congratulations! You can complete your current career!</em></strong>";
 
 
   ChatMessage.create({

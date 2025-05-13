@@ -4,8 +4,6 @@ import ForienBaseModule             from "../utility/ForienBaseModule.mjs";
 import Utility                      from "../utility/Utility.mjs";
 
 export default class CombatFatigue extends ForienBaseModule {
-
-
   bindHooks() {
     Hooks.on("ready", this.#setupEndTurnScript.bind(this));
     Hooks.on("renderCombatTracker", this.#renderRoundsBeforeTest.bind(this));
@@ -35,7 +33,7 @@ export default class CombatFatigue extends ForienBaseModule {
 
       for (let combatant of combatants) {
         const controls = html.querySelector(`.combatant[data-combatant-id="${combatant.id}"] .combatant-controls`);
-        const tokenEffects = controls.querySelector(`.token-effects`);
+        const tokenEffects = controls.querySelector(".token-effects");
         controls.classList.add("has-fatigue");
 
         const combatFatigueControl = Utility.stringToHTMLElement(
@@ -124,7 +122,8 @@ export default class CombatFatigue extends ForienBaseModule {
    */
   async #processCombatTurn(combat, _update, _options, _user) {
     if (Utility.getSetting(settings.combatFatigue.enable) === false) return debug(
-      "[CombatFatigue] Combat Fatigue is not enabled");
+      "[CombatFatigue] Combat Fatigue is not enabled"
+    );
 
     const previousCombatant = combat.combatants.get(combat.previous.combatantId);
     const actor = previousCombatant?.actor;

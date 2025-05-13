@@ -2,7 +2,6 @@ import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 import Utility          from "../utility/Utility.mjs";
 
 export default class Macros extends ForienBaseModule {
-
   /**
    *
    * @param {Macro}   macro
@@ -36,6 +35,7 @@ export default class Macros extends ForienBaseModule {
     const updates = actor.itemTypes.spell.reduce((acc, s) => {
       if (s.system.lore.value === lore)
         acc.push({_id: s._id, "system.cn.SL": s.system.cn.SL - requiredSL});
+
       return acc;
     }, []);
 
@@ -207,10 +207,11 @@ export default class Macros extends ForienBaseModule {
     const actors = actorsFolders.reduce((actors, folder) => {
       let content = folder?.contents?.filter(c => c instanceof ActorWFRP4e && c.type === "character") ?? [];
       actors.push(...content);
+
       return actors;
     }, []);
 
-    actors.sort((a, b) => a.name < b.name ? -1 : 1);
+    actors.sort((a, b) => (a.name < b.name ? -1 : 1));
 
 
     if (actors.length === 0)
@@ -284,15 +285,15 @@ export default class Macros extends ForienBaseModule {
         return "<td colspan=\"2\">-</td>";
 
       points += "<td>";
-      points +=
-        `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.FortunePointsShort")}: </b> ${getFortune(actor)}<br/>`;
+      points
+        += `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.FortunePointsShort")}: </b> ${getFortune(actor)}<br/>`;
       points += `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.FatePointsShort")}: </b> ${getFate(actor)}`;
       points += "</td>";
       points += "<td>";
-      points +=
-        `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ResolvePointsShort")}: </b> ${getResolve(actor)}<br/>`;
-      points +=
-        `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ResiliencePointsShort")}: </b> ${getResilience(actor)}`;
+      points
+        += `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ResolvePointsShort")}: </b> ${getResolve(actor)}<br/>`;
+      points
+        += `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ResiliencePointsShort")}: </b> ${getResilience(actor)}`;
       points += "</td>";
 
       return points;
@@ -305,8 +306,8 @@ export default class Macros extends ForienBaseModule {
       const {current, total} = system.details.experience;
       let experience = "";
 
-      experience +=
-        `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ExperienceLeft")}: </b> ${current}<br/>`;
+      experience
+        += `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ExperienceLeft")}: </b> ${current}<br/>`;
       experience += `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ExperienceTotal")}: </b> ${total}`;
 
       return experience;
@@ -315,7 +316,7 @@ export default class Macros extends ForienBaseModule {
     let content = "";
 
     content += `<h3>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.MessageHeader")}</h3>`;
-    content += `<table class="character-summary">`;
+    content += "<table class=\"character-summary\">";
     content += `<tr>
       <th>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.Name")}</th>
       <th>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.Career")}</th>
@@ -324,14 +325,14 @@ export default class Macros extends ForienBaseModule {
     </tr>`;
 
     for (let actor of actors) {
-      content += `<tr>`;
+      content += "<tr>";
       content += `<td><strong>${getName(actor)}</strong></td>`;
       content += `<td>${getCareer(actor)}</td>`;
       content += getPoints(actor);
       content += `<td>${getExperience(actor)}</td>`;
-      content += `</tr>`;
+      content += "</tr>";
     }
-    content += `</table>`;
+    content += "</table>";
 
     await ChatMessage.create({
       speaker: {},
@@ -411,8 +412,8 @@ export default class Macros extends ForienBaseModule {
       let output = "";
 
       for (const actor of actors) {
-        output +=
-          `<input type="checkbox" id="${actor.id}" name="${type}" value="${actor.id}" style="width: 14px;height: 14px;" checked/>`;
+        output
+          += `<input type="checkbox" id="${actor.id}" name="${type}" value="${actor.id}" style="width: 14px;height: 14px;" checked/>`;
         output += `<label for="${actor.id}">${actor.name}</label><br />`;
       }
 
@@ -440,7 +441,7 @@ export default class Macros extends ForienBaseModule {
       }
 
       if (characters.length === 0 && companions.length === 0)
-        content += `<p>Nobody was awarded any XP</p>`;
+        content += "<p>Nobody was awarded any XP</p>";
 
       await ChatMessage.create({
         speaker: {},
@@ -483,14 +484,15 @@ grid-template-areas: 'headerCharacters headerCompanions'
               <div class="form-group">
                 <label>${game.i18n.localize("Forien.Armoury.Macros.AwardXP.Reason")}</label> 
                 <input type="text" id="reason" value="${reason}" placeholder="${game.i18n.localize(
-        "Forien.Armoury.Macros.AwardXP.Reason").toLowerCase()}" />
+  "Forien.Armoury.Macros.AwardXP.Reason"
+).toLowerCase()}" />
               </div>
           </form>`,
       buttons: {
         yes: {
           icon: "<i class='fas fa-check'></i>",
           label: game.i18n.localize("Forien.Armoury.Macros.AwardXP.Award"),
-          callback: (html) => {
+          callback: html => {
             const xp = Math.round(html.find("#xp-amount").val());
             const reason = html.find("#reason").val();
             if (isNaN(xp))

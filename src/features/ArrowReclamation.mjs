@@ -74,7 +74,7 @@ export default class ArrowReclamation extends ForienBaseModule {
     const unbreakable = ammo.properties.qualities.unbreakable || false;
     if (unbreakable) return {recovered: true, rule: null, percentageTotal: null, percentageTarget: null};
     const percentageTarget = game.settings.get(constants.moduleId, settings.arrowReclamation.percentage);
-    const crit = (roll.isCritical !== undefined || roll.isFumble !== undefined);
+    const crit = roll.isCritical !== undefined || roll.isFumble !== undefined;
     const even = roll.result.roll % 2 === 0;
     const success = roll.result.roll <= roll.result.target;
     let recovered;
@@ -168,7 +168,7 @@ export default class ArrowReclamation extends ForienBaseModule {
 
     const ammoId = weapon.system.currentAmmo.value;
     const actorId = roll.actor._id;
-    let message = ``;
+    let message = "";
     if (recovered === true && (!isReroll || !wasRecovered)) {
       if (game.combat == null) {
         message = messageNow;
@@ -221,7 +221,7 @@ export default class ArrowReclamation extends ForienBaseModule {
     // if ammo object doesn't exist, create one
     if (ammoData === undefined) {
       ammoData = {
-        "_id": ammoId, "user": userId, "quantity": 0,
+        _id: ammoId, user: userId, quantity: 0,
       };
       actorData.push(ammoData);
     }
@@ -309,7 +309,7 @@ export default class ArrowReclamation extends ForienBaseModule {
     for (let actorId in ammoReplenish) {
       if (Array.isArray(ammoReplenish[actorId])) {
         let self = this;
-        ammoReplenish[actorId].forEach(function (ammo) {
+        ammoReplenish[actorId].forEach(function(ammo) {
           self.replenishAmmo(actorId, ammo._id, ammo.quantity, ammo.user, true);
         });
       }
@@ -344,10 +344,11 @@ export default class ArrowReclamation extends ForienBaseModule {
         let chatData = {
           user: user,
           speaker: {alias: actor.name, actor: actor._id},
-          whisper: game.users.filter((u) => u.isGM).map((u) => u._id),
+          whisper: game.users.filter(u => u.isGM).map(u => u._id),
           content: html,
         };
         ChatMessage.create(chatData);
-      });
+      }
+    );
   }
 }

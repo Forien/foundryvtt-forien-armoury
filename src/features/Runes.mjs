@@ -73,7 +73,7 @@ export default class TemporaryRunes extends ForienBaseModule {
     await item.deleteEmbeddedDocuments("ActiveEffect", [itemEffect._id]);
     debug("[TemporaryRunes] Deleted ActiveEffect from Item", {item, itemEffect});
 
-    let itemDamaged = ``;
+    let itemDamaged = "";
     if (game.settings.get(constants.moduleId, settings.runes.enableDamage)) {
       itemDamaged = await this.damageFromRune(item, actor);
       debug("[TemporaryRunes] Item damaged because of dissipated Rune", {actor, item, message: itemDamaged});
@@ -118,7 +118,7 @@ export default class TemporaryRunes extends ForienBaseModule {
    * @returns {Promise<string>}
    */
   async damageWeapon(item, actor) {
-    let itemDamaged = ``;
+    let itemDamaged = "";
 
     let itemData = item.toObject();
     let regex = /\d{1,3}/gm;
@@ -136,7 +136,7 @@ export default class TemporaryRunes extends ForienBaseModule {
       itemDamaged += ` (${game.i18n.localize("Forien.Armoury.Runes.ItsNowImprovisedWeapon")})`;
     }
 
-    itemDamaged += `.`;
+    itemDamaged += ".";
     await actor.updateEmbeddedDocuments("Item", [itemData]);
 
     return itemDamaged;
@@ -151,7 +151,7 @@ export default class TemporaryRunes extends ForienBaseModule {
    * @returns {Promise<string>}
    */
   async damageArmour(item, actor) {
-    let itemDamaged = ``;
+    let itemDamaged = "";
 
     let durable = item.properties.qualities.durable;
     let armourToDamage = item.toObject();
@@ -173,7 +173,7 @@ export default class TemporaryRunes extends ForienBaseModule {
       return `${game.i18n.localize("Forien.Armoury.Runes.ArmourCouldNotBeDamagedMore")}.`;
     }
 
-    let location = locations[Math.floor((Math.random() * locations.length))];
+    let location = locations[Math.floor(Math.random() * locations.length)];
     armourToDamage.system.APdamage[location] =
       Math.min(
         armourToDamage.system.AP[location] + (Number(durable?.value) || 0),
@@ -199,7 +199,7 @@ export default class TemporaryRunes extends ForienBaseModule {
    * @returns {Promise<string>}
    */
   async damageTrapping(item, actor) {
-    let itemDamaged = ``;
+    let itemDamaged = "";
 
     let itemData = item.toObject();
     let maxDamage = Number(item.properties.qualities.durable?.value || 0);
@@ -226,7 +226,7 @@ export default class TemporaryRunes extends ForienBaseModule {
       }
     }
 
-    itemDamaged += `.`;
+    itemDamaged += ".";
     await actor.updateEmbeddedDocuments("Item", [itemData]);
 
     return itemDamaged;

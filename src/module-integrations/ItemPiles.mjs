@@ -16,7 +16,7 @@ export default class ItemPiles {
       config: false,
       default: false,
       type: Boolean,
-      onChange: async (value) => {
+      onChange: async value => {
         if (value) {
           self.setCurrencies();
           game.settings.set(constants.moduleId, settings.integrations.itemPiles.setCurrencies, false);
@@ -37,7 +37,7 @@ export default class ItemPiles {
       config: false,
       default: false,
       type: Boolean,
-      onChange: async (value) => {
+      onChange: async value => {
         if (value) {
           await self.#importRollTables();
           game.settings.set(constants.moduleId, settings.integrations.itemPiles.reimportRolltables, false);
@@ -49,7 +49,7 @@ export default class ItemPiles {
   initialize() {
     let imported = game.settings.get(constants.moduleId, settings.integrations.itemPiles.rolltablesImported);
     if (imported === false) {
-      debug(`Merchant RollTables haven't been imported yet`);
+      debug("Merchant RollTables haven't been imported yet");
       this.#importRollTables();
     }
   }
@@ -70,14 +70,14 @@ export default class ItemPiles {
         abbreviation: "{#}V",
         data: {
           item: {
-            "name": "Sovereign",
-            "type": "money",
-            "img": "icons/commodities/currency/coin-embossed-ruby-gold.webp",
-            "system": {
-              "quantity": {"type": "Number", "label": "Quantity", "value": 1},
-              "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.005},
-              "coinValue": {"label": "Value (in d)", "type": "Number", "value": 960},
-              "source": {"type": "String", "label": "Source"},
+            name: "Sovereign",
+            type: "money",
+            img: "icons/commodities/currency/coin-embossed-ruby-gold.webp",
+            system: {
+              quantity: {type: "Number", label: "Quantity", value: 1},
+              encumbrance: {type: "Number", label: "Encumbrance", value: 0.005},
+              coinValue: {label: "Value (in d)", type: "Number", value: 960},
+              source: {type: "String", label: "Source"},
             },
           },
         },
@@ -91,14 +91,14 @@ export default class ItemPiles {
         abbreviation: "{#}A",
         data: {
           item: {
-            "name": "Angel",
-            "type": "money",
-            "img": "icons/commodities/currency/coin-embossed-star-gold.webp",
-            "system": {
-              "quantity": {"type": "Number", "label": "Quantity", "value": 1},
-              "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.005},
-              "coinValue": {"label": "Value (in d)", "type": "Number", "value": 480},
-              "source": {"type": "String", "label": "Source"},
+            name: "Angel",
+            type: "money",
+            img: "icons/commodities/currency/coin-embossed-star-gold.webp",
+            system: {
+              quantity: {type: "Number", label: "Quantity", value: 1},
+              encumbrance: {type: "Number", label: "Encumbrance", value: 0.005},
+              coinValue: {label: "Value (in d)", type: "Number", value: 480},
+              source: {type: "String", label: "Source"},
             },
           },
         },
@@ -112,14 +112,14 @@ export default class ItemPiles {
         abbreviation: "{#}GC",
         data: {
           item: {
-            "name": "Gold Crown",
-            "type": "money",
-            "img": "icons/commodities/currency/coin-inset-crown-gold.webp",
-            "system": {
-              "quantity": {"type": "Number", "label": "Quantity", "value": 1},
-              "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.005},
-              "coinValue": {"label": "Value (in d)", "type": "Number", "value": 240},
-              "source": {"type": "String", "label": "Source"},
+            name: "Gold Crown",
+            type: "money",
+            img: "icons/commodities/currency/coin-inset-crown-gold.webp",
+            system: {
+              quantity: {type: "Number", label: "Quantity", value: 1},
+              encumbrance: {type: "Number", label: "Encumbrance", value: 0.005},
+              coinValue: {label: "Value (in d)", type: "Number", value: 240},
+              source: {type: "String", label: "Source"},
             },
           },
         },
@@ -133,14 +133,14 @@ export default class ItemPiles {
         abbreviation: "{#}HC",
         data: {
           item: {
-            "name": "Half-a-crown",
-            "type": "money",
-            "img": "icons/commodities/currency/coin-engraved-slot-one-copper.webp",
-            "system": {
-              "quantity": {"type": "Number", "label": "Quantity", "value": 1},
-              "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.005},
-              "coinValue": {"label": "Value (in d)", "type": "Number", "value": 120},
-              "source": {"type": "String", "label": "Source"},
+            name: "Half-a-crown",
+            type: "money",
+            img: "icons/commodities/currency/coin-engraved-slot-one-copper.webp",
+            system: {
+              quantity: {type: "Number", label: "Quantity", value: 1},
+              encumbrance: {type: "Number", label: "Encumbrance", value: 0.005},
+              coinValue: {label: "Value (in d)", type: "Number", value: 120},
+              source: {type: "String", label: "Source"},
             },
           },
         },
@@ -154,14 +154,14 @@ export default class ItemPiles {
         abbreviation: "{#}N",
         data: {
           item: {
-            "name": "Noble",
-            "type": "money",
-            "img": "icons/commodities/currency/coin-inset-compass-silver.webp",
-            "system": {
-              "quantity": {"type": "Number", "label": "Quantity", "value": 1},
-              "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.01},
-              "coinValue": {"label": "Value (in d)", "type": "Number", "value": 80},
-              "source": {"type": "String", "label": "Source"},
+            name: "Noble",
+            type: "money",
+            img: "icons/commodities/currency/coin-inset-compass-silver.webp",
+            system: {
+              quantity: {type: "Number", label: "Quantity", value: 1},
+              encumbrance: {type: "Number", label: "Encumbrance", value: 0.01},
+              coinValue: {label: "Value (in d)", type: "Number", value: 80},
+              source: {type: "String", label: "Source"},
             },
           },
         },
@@ -175,14 +175,14 @@ export default class ItemPiles {
         abbreviation: "{#}SS",
         data: {
           item: {
-            "name": "Silver Shilling",
-            "type": "money",
-            "img": "icons/commodities/currency/coin-engraved-moon-silver.webp",
-            "system": {
-              "quantity": {"type": "Number", "label": "Quantity", "value": 1},
-              "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.01},
-              "coinValue": {"label": "Value (in d)", "type": "Number", "value": 12},
-              "source": {"type": "String", "label": "Source"},
+            name: "Silver Shilling",
+            type: "money",
+            img: "icons/commodities/currency/coin-engraved-moon-silver.webp",
+            system: {
+              quantity: {type: "Number", label: "Quantity", value: 1},
+              encumbrance: {type: "Number", label: "Encumbrance", value: 0.01},
+              coinValue: {label: "Value (in d)", type: "Number", value: 12},
+              source: {type: "String", label: "Source"},
             },
           },
         },
@@ -196,14 +196,14 @@ export default class ItemPiles {
         abbreviation: "{#}TP",
         data: {
           item: {
-            "name": "Tuppence",
-            "type": "money",
-            "img": "icons/commodities/currency/coin-inset-copper-axe.webp",
-            "system": {
-              "quantity": {"type": "Number", "label": "Quantity", "value": 1},
-              "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.01},
-              "coinValue": {"label": "Value (in d)", "type": "Number", "value": 2},
-              "source": {"type": "String", "label": "Source"},
+            name: "Tuppence",
+            type: "money",
+            img: "icons/commodities/currency/coin-inset-copper-axe.webp",
+            system: {
+              quantity: {type: "Number", label: "Quantity", value: 1},
+              encumbrance: {type: "Number", label: "Encumbrance", value: 0.01},
+              coinValue: {label: "Value (in d)", type: "Number", value: 2},
+              source: {type: "String", label: "Source"},
             },
           },
         },
@@ -217,14 +217,14 @@ export default class ItemPiles {
         abbreviation: "{#}BP",
         data: {
           item: {
-            "name": "Brass Penny",
-            "type": "money",
-            "img": "icons/commodities/currency/coin-engraved-waves-copper.webp",
-            "system": {
-              "quantity": {"type": "Number", "label": "Quantity", "value": 1},
-              "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.01},
-              "coinValue": {"label": "Value (in d)", "type": "Number", "value": 1},
-              "source": {"type": "String", "label": "Source"},
+            name: "Brass Penny",
+            type: "money",
+            img: "icons/commodities/currency/coin-engraved-waves-copper.webp",
+            system: {
+              quantity: {type: "Number", label: "Quantity", value: 1},
+              encumbrance: {type: "Number", label: "Encumbrance", value: 0.01},
+              coinValue: {label: "Value (in d)", type: "Number", value: 1},
+              source: {type: "String", label: "Source"},
             },
           },
         },
@@ -290,12 +290,12 @@ export default class ItemPiles {
 
       if (entriesToRemove.length === 0) continue;
 
-      debug(`Entries have been removed due to lacking official content module`, {rollTable, entriesToRemove});
+      debug("Entries have been removed due to lacking official content module", {rollTable, entriesToRemove});
       entriesToRemove.forEach(key => rollTable.results.delete(key));
     }
     await RollTable.updateDocuments(rollTables);
     game.settings.set(constants.moduleId, settings.integrations.itemPiles.rolltablesImported, true);
-    debug(`Merchant RollTables have been imported into folder`, {rollTables, folder});
+    debug("Merchant RollTables have been imported into folder", {rollTables, folder});
 
     return folder.setFlag(constants.moduleId, flags.integrations.itemPiles.isImportFolder, true);
   }

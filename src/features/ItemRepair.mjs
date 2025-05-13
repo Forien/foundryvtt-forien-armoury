@@ -95,7 +95,7 @@ export default class ItemRepair extends ForienBaseModule {
         if (!money)
           return;
 
-        game.wfrp4e.audio.PlayContextAudio({item: {"type": "money"}, action: "lose"});
+        game.wfrp4e.audio.PlayContextAudio({item: {type: "money"}, action: "lose"});
         await item.actor.updateEmbeddedDocuments("Item", money);
       }
       Utility.notify(game.i18n.format("Forien.Armoury.ItemRepair.Repaired", {name: item.name, repaired: data.repair}));
@@ -128,7 +128,7 @@ export default class ItemRepair extends ForienBaseModule {
     if (!paid)
       return game.i18n.localize("Forien.Armoury.ItemRepair.Free");
 
-    let string = ``;
+    let string = "";
     let money = {
       gc: 0,
       ss: 0,
@@ -409,7 +409,7 @@ export default class ItemRepair extends ForienBaseModule {
       let chatData = {
         user: user ?? game.user,
         speaker: {alias: actor.name, actor: actor._id},
-        whisper: game.users.filter((u) => u.isGM).map((u) => u._id),
+        whisper: game.users.filter(u => u.isGM).map(u => u._id),
         content: html,
       };
 

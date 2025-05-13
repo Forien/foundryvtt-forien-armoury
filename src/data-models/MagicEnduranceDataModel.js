@@ -6,18 +6,22 @@ export default class MagicEnduranceDataModel {
    * @type {number}
    */
   #value;
+
   /**
    * @type {number}
    */
   #regenPerHour;
+
   /**
    * @type {number}
    */
   #lastRegen;
+
   /**
    * @type {number}
    */
   #maximum;
+
   #virtual;
 
   constructor(object) {

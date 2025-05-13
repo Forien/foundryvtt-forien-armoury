@@ -140,7 +140,7 @@ async function addTalentToActorAndCareer(id, self) {
   return talent;
 }
 
-//#region Steelstorm
+// #region Steelstorm
 /**
  * Creates Chat Card explaining Steelstorm Assault.
  *
@@ -193,11 +193,13 @@ function steelstormAssault(args, self) {
 function canUseSteelstormAssault(advances, requiredAdvances, advantage, advantageCost, self) {
   if (advances < requiredAdvances) {
     warnNotEnoughAdvances(self, advances, requiredAdvances);
+
     return false;
   }
 
   if (advantage < advantageCost) {
     warnNotEnoughAdvantage(self, advantageCost, advantage);
+
     return false;
   }
 
@@ -396,9 +398,9 @@ function targetIsGoingAllIn(args, self) {
   });
 }
 
-//#endregion Steelstorm
+// #endregion Steelstorm
 
-//#region Ironshield
+// #region Ironshield
 
 /**
  *
@@ -502,9 +504,9 @@ function brace(args, self) {
       user: game.user._id,
       content: `<b>${game.i18n.localize("Forien.Armoury.Effects.Ironshield.Bracing.Name")}</b><br/>
                 ${game.i18n.format(
-        "Forien.Armoury.Effects.Ironshield.Bracing.Description",
-        {character: self.actor.name},
-      )}`,
+    "Forien.Armoury.Effects.Ironshield.Bracing.Description",
+    {character: self.actor.name},
+  )}`,
     });
   } else {
     warnNotEnoughAdvances(self, advances, required);
@@ -607,7 +609,7 @@ async function addMeleeParryToCareer(career) {
   let careerSkills = foundry.utils.deepClone(career.system.skills);
 
   if (!careerSkills.includes(meleeParry) && careerSkills.includes(meleeBasic)) {
-    careerSkills = careerSkills.map(skill => skill === meleeBasic ? meleeParry : skill);
+    careerSkills = careerSkills.map(skill => (skill === meleeBasic ? meleeParry : skill));
     let incomeSkill = career.system.skills[career.system.incomeSkill];
     if (incomeSkill === meleeBasic) incomeSkill = meleeParry;
 
@@ -621,10 +623,10 @@ async function addMeleeParryToCareer(career) {
 }
 
 
-//#endregion Ironshield
+// #endregion Ironshield
 
 
-//#region Evadecraft
+// #region Evadecraft
 /**
  * Creates a Chat Card explaining Shrewd Trickery.
  *
@@ -646,9 +648,9 @@ function shrewdTrickery(args, self) {
       user: game.user._id,
       content: `<b>${game.i18n.localize("Forien.Armoury.Effects.Evadecraft.ShrewdTrickery.Name")}</b><br/>
                 ${game.i18n.format(
-        "Forien.Armoury.Effects.Evadecraft.ShrewdTrickery.Description",
-        {character: self.actor.name},
-      )}`,
+    "Forien.Armoury.Effects.Evadecraft.ShrewdTrickery.Description",
+    {character: self.actor.name},
+  )}`,
     });
   } else {
     warnNotEnoughAdvances(self, advances, required);
@@ -767,9 +769,9 @@ function luckyEvadecraft(args, self) {
   if (isCritical && self.actor.status.fortune.value) {
     const content = `<b>${game.i18n.localize("Forien.Armoury.Effects.Evadecraft.LuckyEvadecraft.Name")}:</b>
                 ${game.i18n.format(
-      "Forien.Armoury.Effects.Evadecraft.LuckyEvadecraft.Description",
-      {character: self.actor.name},
-    )}`;
+    "Forien.Armoury.Effects.Evadecraft.LuckyEvadecraft.Description",
+    {character: self.actor.name},
+  )}`;
     args.opposedTest.data.opposeResult.other.push(content);
   }
 
@@ -800,9 +802,9 @@ function shrewdDisengage(args, self) {
     user: game.user._id,
     content: `<b>${game.i18n.localize("Forien.Armoury.Effects.Evadecraft.Disengage.Name")}</b><br/>
                 ${game.i18n.format(
-      "Forien.Armoury.Effects.Evadecraft.Disengage.Description",
-      {character: self.actor.name},
-    )}`,
+    "Forien.Armoury.Effects.Evadecraft.Disengage.Description",
+    {character: self.actor.name},
+  )}`,
   });
 }
 
@@ -835,7 +837,7 @@ async function invokeEvadecraftMastery(args, self) {
 
   const effect = (await self.actor.createEmbeddedDocuments("ActiveEffect", [learnedMoves]))[0];
   await effect.setFlag(constants.moduleId, flags.effects.target, target.id);
-  await effect.update({"name": `${effect.name} (${targetToken.name})`});
+  await effect.update({name: `${effect.name} (${targetToken.name})`});
 
   const learnedMovesName = game.i18n.localize("Forien.Armoury.Effects.Evadecraft.Mastery.LearnedMoves");
   const learnedMovesDescription = game.i18n.format(
@@ -903,10 +905,11 @@ function getLearnedMovesData(self) {
   const opponent = target ?? attacker ?? false;
   const effectTargetId = self.effect.getFlag(constants.moduleId, flags.effects.target);
   const dodgeName = game.i18n.localize("NAME.Dodge");
+
   return {target, attacker, opponent, effectTargetId, dodgeName};
 }
 
-//#endregion Evadecraft
+// #endregion Evadecraft
 
 
 /**
