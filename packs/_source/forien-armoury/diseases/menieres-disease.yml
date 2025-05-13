@@ -1,0 +1,133 @@
+name: Meniere's disease
+type: disease
+img: modules/wfrp4e-core/icons/diseases/disease.png
+system:
+  description:
+    value: >-
+      <p><strong>Meniere's disease</strong> is an inner ear problem that can
+      cause dizzy spells, also called vertigo, and hearing loss. Most of the
+      time, Meniere's disease affects only one ear. Meniere's disease can happen
+      at any age.</p>
+  gmdescription:
+    value: ''
+  contraction:
+    value: >-
+      Can occur via some viral infections or circumstances affecting ear
+      pressure
+  incubation:
+    value: 1d4
+    unit: days
+  duration:
+    value: permanent
+    unit: ''
+    active: false
+  symptoms:
+    value: Vertigo
+  permanent:
+    value: ''
+  diagnosed: false
+effects:
+  - name: Vertigo
+    transfer: true
+    flags:
+      wfrp4e:
+        symptom: true
+        applicationData: {}
+        scriptData: []
+        _legacyData: {}
+    _id: lzneT3Dzsoa2RVEE
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    statuses: []
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/wfrp4e-core/icons/diseases/disease.png
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: false
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Vertigo
+          trigger: dialog
+          script: args.fields.slBonus -= 2;
+          options:
+            activateScript: return true;
+            hideScript: |-
+              const applicableCharacteristics = ["ag", "int", "dex"];
+                                    
+                                    return args.type !== "weapon" && !applicableCharacteristics.includes(args.data.characteristic);
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    tint: '#ffffff'
+    sort: 0
+    _key: '!items.effects!VHk5u1pWnRaDk5VC.lzneT3Dzsoa2RVEE'
+folder: CnjDdyOSP29fHa3S
+ownership:
+  default: 0
+flags:
+  exportSource:
+    world: wfrp-test-world
+    system: wfrp4e
+    coreVersion: '11.315'
+    systemVersion: 7.0.3
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1701526805476
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: VHk5u1pWnRaDk5VC
+sort: 600000
+_key: '!items!VHk5u1pWnRaDk5VC'
+

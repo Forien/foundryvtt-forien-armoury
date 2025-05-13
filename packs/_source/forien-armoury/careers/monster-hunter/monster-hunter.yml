@@ -1,0 +1,72 @@
+folder: 3hR05PJN5Gtv1I97
+name: Monster Hunter
+type: career
+img: modules/forien-armoury/icons/careers/monster-hunter-2.webp
+system:
+  description:
+    value: >-
+      <p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.OVrtFjJzqXZMf0uf.JournalEntryPage.A8Es3aCGIbGOfuUR]{Monster
+      Hunter}</p>
+  gmdescription:
+    value: ''
+  careergroup:
+    value: Monster Hunter
+  class:
+    value: Monster Hunters
+  current:
+    value: false
+  complete:
+    value: false
+  level:
+    value: 2
+  status:
+    tier: s
+    standing: 2
+  characteristics:
+    - s
+    - t
+    - i
+    - ag
+  skills:
+    - Athletics
+    - Dodge
+    - Endurance
+    - Gossip
+    - Lore (Beasts)
+    - Melee (Basic)
+    - Perception
+    - Ranged (Crossbow)
+    - Set Trap
+    - Track
+    - Consume Alcohol
+    - Cool
+    - Language (Battle)
+    - Melee (Two-Handed)
+    - Outdoor Survival
+    - Secret Signs (Scout)
+  talents:
+    - Fearless (Beasts or Undead or Daemons)
+    - Hardy
+    - Read/Write
+    - Strike Mighty Blow
+  trappings:
+    - Two-Handed Weapon
+    - Book on Monsters
+  incomeSkill:
+    - 5
+effects: []
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1688251075008
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+ownership:
+  default: 0
+_id: YKRNC8gGSfmmJQn5
+sort: 200000
+_key: '!items!YKRNC8gGSfmmJQn5'
+

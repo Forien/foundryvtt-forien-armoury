@@ -1,0 +1,66 @@
+folder: F25hUarBIYKworSm
+name: Draughts Common
+_id: xAmckoe72h6Oz6dM
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    text: Digestive Tonic
+    documentId: aUQDbW33bWqVeY9V
+    img: modules/wfrp4e-core/icons/equipment/herbs_and_draughts/digestive-tonic.png
+    _id: lRBSTUmfa0maLFFG
+    flags: {}
+    _key: '!tables.results!xAmckoe72h6Oz6dM.lRBSTUmfa0maLFFG'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    text: Healing Poultice
+    documentId: s2lBWQFQt6M5Pngb
+    img: >-
+      modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-poultice.png
+    _id: 1YWRiuQd9fQhZeQ3
+    flags: {}
+    _key: '!tables.results!xAmckoe72h6Oz6dM.1YWRiuQd9fQhZeQ3'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    text: Salwort
+    documentId: mUTrC5DA6bF8DDWz
+    img: modules/wfrp4e-core/icons/equipment/herbs_and_draughts/salwort.png
+    _id: w9Z44jBGlXTXObro
+    flags: {}
+    _key: '!tables.results!xAmckoe72h6Oz6dM.w9Z44jBGlXTXObro'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690165691695
+  modifiedTime: 1690165699151
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d3
+_key: '!tables!xAmckoe72h6Oz6dM'
+

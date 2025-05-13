@@ -1,0 +1,2065 @@
+name: Gunsmith
+type: character
+img: icons/skills/trades/smithing-smelter-tongs.webp
+system:
+  characteristics:
+    ws:
+      type: number
+      label: CHAR.WS
+      abrev: CHARAbbrev.WS
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    bs:
+      type: Number
+      label: CHAR.BS
+      abrev: CHARAbbrev.BS
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    s:
+      type: Number
+      label: CHAR.S
+      abrev: CHARAbbrev.S
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    t:
+      type: Number
+      label: CHAR.T
+      abrev: CHARAbbrev.T
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    i:
+      type: Number
+      label: CHAR.I
+      abrev: CHARAbbrev.I
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    ag:
+      type: Number
+      label: CHAR.Ag
+      abrev: CHARAbbrev.Ag
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    dex:
+      type: Number
+      label: CHAR.Dex
+      abrev: CHARAbbrev.Dex
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    int:
+      type: Number
+      label: CHAR.Int
+      abrev: CHARAbbrev.Int
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    wp:
+      type: Number
+      label: CHAR.WP
+      abrev: CHARAbbrev.WP
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    fel:
+      type: Number
+      label: CHAR.Fel
+      abrev: CHARAbbrev.Fel
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+  status:
+    wounds:
+      type: Number
+      label: Wounds
+      abrev: W
+      value: 8
+      max: 8
+    advantage:
+      type: Number
+      label: Advantage
+      value: 0
+      max: 10
+    criticalWounds:
+      type: Number
+      label: Critical Wounds
+      value: 0
+      max: 2
+    sin:
+      type: Number
+      label: Sin
+      value: '0'
+    penalties:
+      type: String
+      label: Penalties
+      value: ''
+    corruption:
+      type: Number
+      label: Corruption
+      value: 0
+    encumbrance:
+      type: Number
+      label: Encumbrance
+      max: 0
+      current: 0
+    mount:
+      id: ''
+      mounted: false
+      isToken: false
+      tokenData:
+        scene: ''
+        token: ''
+    fate:
+      type: Number
+      label: Fate
+      value: 0
+    fortune:
+      type: Number
+      label: Fortune
+      value: 0
+    resilience:
+      type: Number
+      label: Resilience
+      value: 0
+    resolve:
+      type: Number
+      label: Resolve
+      value: 0
+  details:
+    species:
+      type: String
+      label: Species
+      value: ''
+      subspecies: ''
+    gender:
+      type: String
+      label: Gender
+      value: ''
+    biography:
+      type: String
+      label: Biography
+      value: ''
+    gmnotes:
+      type: String
+      label: GM Notes
+      value: ''
+    size:
+      type: String
+      label: Size
+      value: avg
+    move:
+      type: Number
+      label: Movement
+      value: 4
+      walk: 0
+      run: 0
+    god:
+      type: String
+      label: God
+      value: ''
+    status:
+      type: String
+      value: ''
+      standing: ''
+      tier: 0
+      modifier: 0
+    hitLocationTable:
+      value: hitloc
+      type: String
+      label: Hit Location Table
+    experience:
+      type: Number
+      label: Experience
+      total: 0
+      spent: 0
+      log: []
+    personal-ambitions:
+      short-term: ''
+      long-term: ''
+    party-ambitions:
+      name: ''
+      short-term: ''
+      long-term: ''
+    motivation:
+      type: String
+      label: Motivation
+      value: ''
+    class:
+      type: String
+      label: Class
+      value: ''
+    career:
+      type: String
+      label: Career
+      value: ''
+    careerlevel:
+      type: String
+      label: Career Level
+      value: ''
+    age:
+      type: String
+      label: Age
+      value: ''
+    height:
+      type: String
+      label: Height
+      value: ''
+    weight:
+      type: String
+      label: Weight
+      value: ''
+    haircolour:
+      type: String
+      label: Hair Colour
+      value: ''
+    eyecolour:
+      type: String
+      label: Eye Colour
+      value: ''
+    distinguishingmark:
+      type: String
+      label: Distinguishing Mark
+      value: ''
+    starsign:
+      type: String
+      label: Star Sign
+      value: ''
+prototypeToken:
+  name: Innkeeper
+  displayName: 20
+  actorLink: true
+  appendNumber: false
+  prependAdjective: false
+  texture:
+    src: icons/skills/trades/smithing-smelter-tongs.webp
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+    tint: '#ffffff'
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: 0
+  displayBars: 20
+  bar1:
+    attribute: status.wounds
+  bar2:
+    attribute: status.advantage
+  light:
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+    negative: false
+    priority: 0
+  sight:
+    enabled: true
+    range: 0
+    angle: 360
+    visionMode: basic
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+    color: null
+  detectionModes: []
+  flags: {}
+  randomImg: false
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+items:
+  - _id: 0CwV96kTDRF0jUhk
+    name: Entertain
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-fel.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Entertain}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: isSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: fel
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418108
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.0CwV96kTDRF0jUhk'
+  - _id: 1jCxbFAUuFuAPLJl
+    name: Dodge
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-ag.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.dPpyiMhPwVGJnJrv]{Dodge}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: ag
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418115
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.1jCxbFAUuFuAPLJl'
+  - _id: 4IGdIhnwTaZijzg7
+    name: Charm Animal
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-wp.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: details
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.1N6sOXgrqF1KkIh0]{Charm
+          Animal}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: wp
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418132
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.4IGdIhnwTaZijzg7'
+  - _id: 4mJoPBw4drm1kv2D
+    name: Melee
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-ws.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: details
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Melee}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: isSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: ws
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418134
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.4mJoPBw4drm1kv2D'
+  - _id: 7pQo66cESWttzIlb
+    name: Gamble
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-int.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: details
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.JVBD7pcdOPJ4nCjq]{Gamble}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: int
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418143
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.7pQo66cESWttzIlb'
+  - _id: AaXk4bfDRTPeeYjn
+    name: Art
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-dex.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Art}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: isSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: dex
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418155
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.AaXk4bfDRTPeeYjn'
+  - _id: CcNJsS4jSwB6Ug1J
+    name: Endurance
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-t.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: details
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.E9UyI8AMrBqgCX4a]{Endurance}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: t
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418165
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.CcNJsS4jSwB6Ug1J'
+  - _id: Fs06sr7y9JKpVQmB
+    name: Perception
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-i.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6Jhks0zDRpJeN6dW]{Perception}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: i
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418173
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.Fs06sr7y9JKpVQmB'
+  - _id: I0yPc4PH5erWJLmu
+    name: Intimidate
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-s.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mDs8HUZopZAb1fH0]{Intimidate}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: s
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418179
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.I0yPc4PH5erWJLmu'
+  - _id: KL4pCOqma5E7fLG4
+    name: Row
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-s.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: details
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.ACCaGYXdz9yKyxgG]{Row}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: s
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418180
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.KL4pCOqma5E7fLG4'
+  - _id: LGHozP5gmQ8cuDQV
+    name: Athletics
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-ag.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.Ss6Gp732GjscYke0]{Athletics}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: ag
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418181
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.LGHozP5gmQ8cuDQV'
+  - _id: McTtmZu3Ac8Lh48W
+    name: Stealth
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-ag.png
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Stealth}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: isSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: ag
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418184
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.McTtmZu3Ac8Lh48W'
+  - _id: MeXCAQ3wqJzX07X7
+    name: Ride
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-ag.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Ride}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: isSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: ag
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418185
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.MeXCAQ3wqJzX07X7'
+  - _id: R2ytluHiEFF2KQ5e
+    name: Consume Alcohol
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-t.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.38Ux3mEWYuQ4heIT]{Consume
+          Alcohol}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: t
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418192
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.R2ytluHiEFF2KQ5e'
+  - _id: RLQHm1s4IuY9RSr2
+    name: Gossip
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-fel.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.ns3PDbblIFcwqyQi]{Gossip}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: fel
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418193
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.RLQHm1s4IuY9RSr2'
+  - _id: cYtU0ORRFCOpQLWz
+    name: Intuition
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-i.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: details
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.31VEXGfn6houFutI]{Intuition}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: i
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418217
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.cYtU0ORRFCOpQLWz'
+  - _id: d3VZwO4Y5JH5DXdT
+    name: Bribery
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-fel.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: details
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.IwGXgEPOkNVZ0SwI]{Bribery}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: fel
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418218
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.d3VZwO4Y5JH5DXdT'
+  - _id: exLrBrn2mjb6x2Cq
+    name: Charm
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-fel.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.9OommpqxE34iocmg]{Charm}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: fel
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418225
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.exLrBrn2mjb6x2Cq'
+  - _id: iYan4z52v7HYM9u9
+    name: Drive
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-ag.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: details
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.uLPWAFSfT5Vf1zZl]{Drive}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: ag
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418231
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.iYan4z52v7HYM9u9'
+  - _id: oMaJZ5cvCJeOUq9H
+    name: Leadership
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-fel.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.haKq6qZXYj7Bweu4]{Leadership}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: fel
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418238
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.oMaJZ5cvCJeOUq9H'
+  - _id: os4NKy5Oy6sRt1eh
+    name: Outdoor Survival
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-int.png
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.cFqWFER60SjM5Wn3]{Outdoor
+          Survival}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: int
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418241
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.os4NKy5Oy6sRt1eh'
+  - _id: pKLMbmG3Ivt6mzMf
+    name: Haggle
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-fel.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.qSSRHdEK5P7VRmKW]{Haggle}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: fel
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418243
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.pKLMbmG3Ivt6mzMf'
+  - _id: pxNjTxsp1Kp0SmQe
+    name: Cool
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-wp.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.m14pGtefJzDYhgzW]{Cool}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: wp
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418243
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.pxNjTxsp1Kp0SmQe'
+  - _id: sRuMlaPU5xdIrwhd
+    name: Climb
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-s.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: description
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.yOONKSIBrg4FOl20]{Climb}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: s
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418249
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.sRuMlaPU5xdIrwhd'
+  - _id: zZUX7wO4rOo8k9F0
+    name: Navigation
+    type: skill
+    img: modules/wfrp4e-core/icons/skills/basic-skill-i.png
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      _sheetTab: details
+    system:
+      description:
+        type: String
+        label: Description
+        value: >-
+          <p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.rf7gtZko4KJvjFaE]{Navigation}
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      advanced:
+        value: bsc
+        type: String
+      grouped:
+        value: noSpec
+        type: String
+      characteristic:
+        type: String
+        label: Characteristic
+        value: i
+      advances:
+        type: Number
+        label: Advances
+        value: 0
+        costModifier: 0
+        force: false
+      modifier:
+        type: Number
+        label: Advances
+        value: 0
+      total:
+        type: Number
+        label: Total
+      source:
+        type: String
+        label: Source
+    ownership:
+      default: 0
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.1.2
+      coreVersion: '12.331'
+      createdTime: null
+      modifiedTime: 1663569418257
+      lastModifiedBy: forien0000000000
+      compendiumSource: null
+      duplicateSource: null
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.zZUX7wO4rOo8k9F0'
+  - name: Brass Penny
+    type: money
+    img: modules/wfrp4e-core/icons/currency/brasspenny.png
+    effects: []
+    flags:
+      _sheetTab: description
+      core:
+        sourceId: Compendium.wfrp4e-core.items.0MYOJFx3vkYA95B4
+    system:
+      description:
+        type: String
+        label: Description
+        value: <p></p>
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      quantity:
+        type: Number
+        label: Quantity
+        value: 0
+      encumbrance:
+        type: Number
+        label: Encumbrance
+        value: 0.005
+      location:
+        type: Number
+        label: Location
+        value: 0
+      coinValue:
+        label: Value (in d)
+        type: Number
+        value: 1
+      source:
+        type: String
+        label: Source
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.6.0
+      coreVersion: '12.331'
+      createdTime: 1663627495169
+      modifiedTime: 1690205013585
+      lastModifiedBy: forien0000000000
+      compendiumSource: Compendium.wfrp4e-core.items.0MYOJFx3vkYA95B4
+      duplicateSource: null
+    _id: vIi8uQGRVlYiU2a5
+    folder: null
+    sort: 225000
+    ownership:
+      default: 0
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.vIi8uQGRVlYiU2a5'
+  - name: Gold Crown
+    type: money
+    img: modules/wfrp4e-core/icons/currency/goldcrown.png
+    effects: []
+    flags:
+      _sheetTab: description
+      core:
+        sourceId: Compendium.wfrp4e-core.items.Ggx0bRaCuq8MbF0g
+    system:
+      description:
+        type: String
+        label: Description
+        value: <p></p>
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      quantity:
+        type: Number
+        label: Quantity
+        value: 0
+      encumbrance:
+        type: Number
+        label: Encumbrance
+        value: 0.005
+      location:
+        type: Number
+        label: Location
+        value: 0
+      coinValue:
+        label: Value (in d)
+        type: Number
+        value: 240
+      source:
+        type: String
+        label: Source
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.6.0
+      coreVersion: '12.331'
+      createdTime: 1663627495181
+      modifiedTime: 1690203394967
+      lastModifiedBy: forien0000000000
+      compendiumSource: Compendium.wfrp4e-core.items.Ggx0bRaCuq8MbF0g
+      duplicateSource: null
+    _id: 02wc7majbcFiQ5RL
+    folder: null
+    sort: 50000
+    ownership:
+      default: 0
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.02wc7majbcFiQ5RL'
+  - name: Silver Shilling
+    type: money
+    img: modules/wfrp4e-core/icons/currency/silvershilling.png
+    effects: []
+    flags:
+      _sheetTab: description
+      core:
+        sourceId: Compendium.wfrp4e-core.items.KB8HgDz56dh2w7w1
+    system:
+      description:
+        type: String
+        label: Description
+        value: <p></p>
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      quantity:
+        type: Number
+        label: Quantity
+        value: 0
+      encumbrance:
+        type: Number
+        label: Encumbrance
+        value: 0.005
+      location:
+        type: Number
+        label: Location
+        value: 0
+      coinValue:
+        label: Value (in d)
+        type: Number
+        value: 12
+      source:
+        type: String
+        label: Source
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.6.0
+      coreVersion: '12.331'
+      createdTime: 1663627495184
+      modifiedTime: 1690205012217
+      lastModifiedBy: forien0000000000
+      compendiumSource: Compendium.wfrp4e-core.items.KB8HgDz56dh2w7w1
+      duplicateSource: null
+    _id: 6OH8rR0vm24YYGCQ
+    folder: null
+    sort: 150000
+    ownership:
+      default: 0
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.6OH8rR0vm24YYGCQ'
+  - folder: T3Shw97R3ln1UkQq
+    name: Repair Blackpowder Weapons
+    type: ammunition
+    img: icons/skills/trades/smithing-smelter-tongs.webp
+    system:
+      description:
+        type: String
+        label: Description
+        value: ''
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      quantity:
+        type: Number
+        label: Quantity
+        value: 1
+      encumbrance:
+        type: Number
+        label: Encumbrance
+        value: 0
+      price:
+        type: String
+        label: Price
+        gc: '0'
+        ss: '0'
+        bp: '0'
+      availability:
+        type: String
+        label: Availability
+        value: None
+      location:
+        type: Number
+        label: Location
+        value: 0
+      ammunitionType:
+        type: String
+        label: Ammunition Type
+        value: ''
+      range:
+        type: String
+        label: Range
+        value: ''
+      damage:
+        type: String
+        label: Damage
+        dice: ''
+        value: ''
+      qualities:
+        type: String
+        label: Qualities
+        value: []
+      flaws:
+        type: String
+        label: Flaws
+        value: []
+      special:
+        type: String
+        label: Special
+        value: ''
+    effects: []
+    flags:
+      core:
+        sourceId: Compendium.forien-armoury.forien-armoury.Item.nuApQRdiN7EaX1W9
+      item-piles:
+        system:
+          quantityForPrice: 1
+        item:
+          keepZeroQuantity: true
+          isService: true
+          keepOnMerchant: true
+          infiniteQuantity: 'yes'
+          macro: Compendium.forien-armoury.macros.Repair Blackpowder Weapons
+        version: 2.7.6
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.6.0
+      coreVersion: '12.331'
+      createdTime: 1690204180313
+      modifiedTime: 1690508809903
+      lastModifiedBy: forien0000000000
+      compendiumSource: Compendium.forien-armoury.forien-armoury.Item.nuApQRdiN7EaX1W9
+      duplicateSource: null
+    _id: 3CkRhn34U4WgL54P
+    sort: 0
+    ownership:
+      default: 0
+    _key: '!actors.items!vE7hkKLeNjh6AOXJ.3CkRhn34U4WgL54P'
+effects: []
+folder: null
+flags:
+  item-piles:
+    data:
+      enabled: true
+      type: merchant
+      distance: 2
+      deleteWhenEmpty: false
+      displayItemTypes: true
+      infiniteCurrencies: false
+      keepZeroQuantity: true
+      tablesForPopulate:
+        - id: ZAIWwl9tQDUh6V2n
+          addAll: true
+          items:
+            Oev4XRact8jzssyM: 2d3-1
+            ufhkyfR78jhlxuyD: 6d7-6
+            0u30BKAWnne9q4Pv: 12d12
+          timesToRoll: 1d4-1
+          customCategory: ''
+        - id: YUwVdxuWAWiLp0CZ
+          addAll: false
+          items: {}
+          timesToRoll: 10d12
+          customCategory: Ammunition
+        - id: ktmExxHw7gpyGtEK
+          addAll: false
+          items:
+            FkKAms5I8bbDW5zu: 1d4
+            1DPfcEGtX1B0yqAq: 1d4
+            7CqX7dtQMrsmcSG0: 1d4
+            fC1i5q39wwgxAWcr: 1d4
+            z1IW4A735s3uv0Xn: 1d4
+            FgUO4ROW6eQYW6ct: 1d4
+            nXsYV89KNuTVAVJZ: 1d4
+            VoC4bXBo83dQAj5b: 1d4
+            oFOuPHyQOkcTNVnd: 1d4
+            fgstMpl1wZhPSmj9: 1d4
+            AqE4iN6qcjvhwJRj: 1d4
+            hMEjbQWaf5GmTCb2: 1d4
+            fXCFbqc50yMGpH7g: 1d4
+            0SbK2UQFYzEQgJsA: 1d4
+          timesToRoll: 4d3
+          customCategory: Blackpowder
+        - id: Wxwpo7lb3JXXmn8V
+          addAll: false
+          items: {}
+          timesToRoll: 4d2-5
+          customCategory: Engineering
+        - id: 0uz6Av9prMPCWCAQ
+          addAll: false
+          items: {}
+          timesToRoll: 4d3-4
+          customCategory: Explosives
+    version: 2.7.6
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.0
+  coreVersion: '12.331'
+  createdTime: 1690202296286
+  modifiedTime: 1690508866753
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: vE7hkKLeNjh6AOXJ
+sort: 0
+ownership:
+  default: 0
+_key: '!actors!vE7hkKLeNjh6AOXJ'
+

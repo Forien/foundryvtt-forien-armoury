@@ -1,0 +1,78 @@
+folder: pKEh2I51xgzWgJK5
+name: Weapon Ranged all (rarity)
+_id: y5SW5JyTnLMGZ493
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 30
+    range:
+      - 1
+      - 30
+    drawn: false
+    text: Weapons Ranged Common
+    documentId: ldeC3M21CQGHkwfI
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: 8fekTzoksSxiLa9N
+    flags: {}
+    _key: '!tables.results!y5SW5JyTnLMGZ493.8fekTzoksSxiLa9N'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 15
+    range:
+      - 31
+      - 45
+    drawn: false
+    text: Weapons Ranged Scarce
+    documentId: yP8BfDbhsxYobb9t
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: TBaBwvYkP0HOxuR5
+    flags: {}
+    _key: '!tables.results!y5SW5JyTnLMGZ493.TBaBwvYkP0HOxuR5'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 5
+    range:
+      - 46
+      - 50
+    drawn: false
+    text: Weapons Ranged Rare
+    documentId: g9nAK5VCHXFCHhzT
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: fCbTWNQWXGVBh84w
+    flags: {}
+    _key: '!tables.results!y5SW5JyTnLMGZ493.fCbTWNQWXGVBh84w'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 1
+    range:
+      - 51
+      - 51
+    drawn: false
+    text: Weapons Ranged Exotic
+    documentId: Pdyhzp5OM17XSMoK
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: zQiQeTw9No3PFw5F
+    flags: {}
+    _key: '!tables.results!y5SW5JyTnLMGZ493.zQiQeTw9No3PFw5F'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690163268593
+  modifiedTime: 1690163281377
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d51
+_key: '!tables!y5SW5JyTnLMGZ493'
+

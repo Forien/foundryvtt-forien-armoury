@@ -1,0 +1,19 @@
+name: Knight
+sorting: m
+folder: NsEE0dtFQiVPEHhn
+type: Item
+_id: MKczKdAOqz2wlnBh
+description: ''
+sort: 400000
+color: null
+flags: {}
+_stats:
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: wfrp4e
+  systemVersion: 8.4.1
+  createdTime: null
+  modifiedTime: 1739605518609
+  lastModifiedBy: forien0000000000
+_key: '!folders!MKczKdAOqz2wlnBh'
+

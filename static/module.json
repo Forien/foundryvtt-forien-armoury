@@ -1,0 +1,175 @@
+{
+  "id": "forien-armoury",
+  "title": "Forien's Armoury [WFRP4]",
+  "version": "<<autoreplaced>>",
+  "url": "<<autoreplaced>>",
+  "manifest": "<<autoreplaced>>",
+  "download": "<<autoreplaced>>",
+  "readme": "<<autoreplaced>>",
+  "changelog": "<<autoreplaced>>",
+  "bugs": "<<autoreplaced>>",
+  "description": "A collection of custom trappings and features for Warhammer Fantasy Role-Play 4th edition game system for Foundry Virtual Table Top\n\nForien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded.",
+  "authors": [
+    {
+      "name": "Forien",
+      "discord": "forien",
+      "email": "mr.forien@gmail.com",
+      "url": "https://www.patreon.com/foundryworkshop"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13.342"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "wfrp4e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "8.4.0"
+        }
+      }
+    ],
+    "recommends": [
+      {
+        "id": "times-up",
+        "type": "module"
+      },
+      {
+        "id": "foundryvtt-simple-calendar",
+        "type": "module"
+      }
+    ]
+  },
+  "packs": [
+    {
+      "label": "Forien's Armoury",
+      "name": "forien-armoury",
+      "path": "packs/forien-armoury",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
+    },
+    {
+      "label": "Forien's Homerules",
+      "name": "forien-homerules",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e",
+      "path": "packs/forien-homerules"
+    },
+    {
+      "label": "Macros (Forien's Armoury)",
+      "name": "macros",
+      "path": "packs/macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
+    },
+    {
+      "name": "rolltables",
+      "label": "Forien's Rolltables",
+      "path": "packs/rolltables",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
+    },
+    {
+      "name": "merchant-rolltables",
+      "label": "Merchant Rolltables (Forien's Armoury)",
+      "path": "packs/merchant-rolltables",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
+    },
+    {
+      "name": "merchants",
+      "label": "Merchants (Forien's Armoury)",
+      "path": "packs/merchants",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Forien's Armoury",
+      "sorting": "a",
+      "packs": [
+        "forien-armoury",
+        "macros",
+        "forien-homerules",
+        "rolltables"
+      ],
+      "folders": [
+        {
+          "name": "Integrations",
+          "sorting": "a",
+          "packs": [
+            "merchant-rolltables",
+            "merchants"
+          ]
+        }
+      ]
+    }
+  ],
+  "esmodules": [
+    "forien-armoury.mjs"
+  ],
+  "styles": [
+    "styles/forien-armoury.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    },
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "languages/pl.json"
+    }
+  ],
+  "documentTypes": {
+    "Item": {
+      "scroll": {},
+      "grimoire": {}
+    }
+  },
+  "flags": {
+    "hotReload": {
+      "extensions": [
+        "css",
+        "html",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "templates/",
+        "styles/",
+        "languages/"
+      ]
+    }
+  },
+  "socket": true
+}

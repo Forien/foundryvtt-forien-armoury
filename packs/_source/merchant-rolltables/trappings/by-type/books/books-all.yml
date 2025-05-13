@@ -1,0 +1,78 @@
+folder: x9ue032E7NiyZLa6
+name: Books All
+_id: i6gGiqSyqCS4jSan
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 30
+    range:
+      - 1
+      - 1
+    drawn: false
+    text: Books Common
+    documentId: xIZKYwxN5fuhWI4K
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: wtb8hwWwQjGZrlEe
+    flags: {}
+    _key: '!tables.results!i6gGiqSyqCS4jSan.wtb8hwWwQjGZrlEe'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 15
+    range:
+      - 2
+      - 2
+    drawn: false
+    text: Books Scarce
+    documentId: wH3MvT7J3UlRR00y
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: FTLnDOjuSwBS8O2K
+    flags: {}
+    _key: '!tables.results!i6gGiqSyqCS4jSan.FTLnDOjuSwBS8O2K'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 5
+    range:
+      - 3
+      - 3
+    drawn: false
+    text: Books Rare
+    documentId: 6K91R8eci6zxdHAQ
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: 6RAka5RV8DUad1zt
+    flags: {}
+    _key: '!tables.results!i6gGiqSyqCS4jSan.6RAka5RV8DUad1zt'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    text: Books Exotic
+    documentId: 74MBojPftMSOBFiu
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: HaNII6LdqJzfGTpN
+    flags: {}
+    _key: '!tables.results!i6gGiqSyqCS4jSan.HaNII6LdqJzfGTpN'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690165636804
+  modifiedTime: 1690165646638
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: ''
+_key: '!tables!i6gGiqSyqCS4jSan'
+

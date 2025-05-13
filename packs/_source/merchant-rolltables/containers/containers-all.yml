@@ -1,0 +1,65 @@
+folder: 1Dr5AYNUnFcc22OL
+name: Containers All
+_id: lzUGxCzRxaStHi2e
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 2
+    range:
+      - 1
+      - 2
+    drawn: false
+    text: Containers Ammo
+    documentId: 6DjW807HxV07VbOH
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: v6BrbBwk98TDyVBz
+    flags: {}
+    _key: '!tables.results!lzUGxCzRxaStHi2e.v6BrbBwk98TDyVBz'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 3
+    range:
+      - 3
+      - 5
+    drawn: false
+    text: Containers Bags
+    documentId: 9akb7ZJ2HPYaNzuU
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: mjQxajYglYAH6PXM
+    flags: {}
+    _key: '!tables.results!lzUGxCzRxaStHi2e.mjQxajYglYAH6PXM'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 3
+    range:
+      - 6
+      - 8
+    drawn: false
+    text: Containers Misc
+    documentId: ffYe4byROeFcNsvl
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: WhPO5sZQAMa60WAw
+    flags: {}
+    _key: '!tables.results!lzUGxCzRxaStHi2e.WhPO5sZQAMa60WAw'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690164711229
+  modifiedTime: 1690164725258
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d8
+_key: '!tables!lzUGxCzRxaStHi2e'
+

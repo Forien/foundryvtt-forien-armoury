@@ -1,0 +1,75 @@
+name: Kettle hat
+type: wfrp4e-archives3.armour
+_id: a0zoAJMBGWPg7xHa
+img: modules/forien-armoury/icons/kettle-hat.webp
+system:
+  description:
+    value: ''
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 1
+  price:
+    gc: 2
+    ss: 0
+    bp: 0
+  availability:
+    value: common
+  location:
+    value: ''
+  damageToItem:
+    value: null
+    shield: null
+  armorType:
+    value: plate
+  penalty:
+    value: ''
+  qualities:
+    value: []
+  flaws:
+    value:
+      - name: partial
+        value: null
+  special:
+    value: ''
+  AP:
+    head: 2
+    lArm: 0
+    rArm: 0
+    lLeg: 0
+    rLeg: 0
+    body: 0
+  APdamage:
+    head: 0
+    lArm: 0
+    rArm: 0
+    lLeg: 0
+    rLeg: 0
+    body: 0
+  equipped:
+    value: false
+  fit:
+    value: undefined
+effects: []
+folder: iCXbf8jyuCchKTt2
+ownership:
+  default: 0
+flags:
+  exportSource:
+    world: wfrp4e
+    system: wfrp4e
+    coreVersion: '12.331'
+    systemVersion: 8.4.1
+_stats:
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: wfrp4e
+  systemVersion: 8.4.1
+  createdTime: 1739607258321
+  modifiedTime: 1739615214433
+  lastModifiedBy: forien0000000000
+sort: 0
+_key: '!items!a0zoAJMBGWPg7xHa'
+

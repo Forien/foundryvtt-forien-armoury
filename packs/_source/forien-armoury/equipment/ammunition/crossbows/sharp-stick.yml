@@ -1,0 +1,58 @@
+folder: emYQ7gLjejxCTreO
+name: Sharp Stick
+type: ammunition
+_id: 4YiC9X4ChJtRyksH
+img: icons/commodities/wood/fence-post-tan.webp
+system:
+  description:
+    value: ''
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 0.05
+  price:
+    gc: 0
+    ss: 0
+    bp: 0
+  availability:
+    value: common
+  location:
+    value: ''
+  ammunitionType:
+    value: crossbow
+  range:
+    value: Half weapon
+  damage:
+    value: '-2'
+  qualities:
+    value: []
+  flaws:
+    value:
+      - name: dangerous
+        value: null
+      - name: imprecise
+        value: null
+      - name: undamaging
+        value: null
+  special:
+    value: ''
+  damageToItem:
+    value: null
+    shield: null
+effects: []
+sort: 300000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1687446113156
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_key: '!items!4YiC9X4ChJtRyksH'
+

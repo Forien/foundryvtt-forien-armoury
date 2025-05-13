@@ -1,0 +1,17 @@
+name: Integrations
+sorting: a
+folder: null
+type: Macro
+_id: Tn8Q9gNDEfuqtSSl
+sort: 0
+color: null
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.0
+  coreVersion: '11.306'
+  createdTime: 1690507141375
+  modifiedTime: 1690507141375
+  lastModifiedBy: forien0000000000
+_key: '!folders!Tn8Q9gNDEfuqtSSl'
+

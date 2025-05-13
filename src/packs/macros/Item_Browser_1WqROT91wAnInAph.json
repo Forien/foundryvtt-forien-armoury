@@ -1,11 +1,11 @@
 {
-  "name": "Item Browser",
+  "name": "Compendium Browser",
   "type": "script",
   "scope": "global",
   "_id": "1WqROT91wAnInAph",
   "author": "aDepqlKkeOa13DWo",
   "img": "icons/containers/boxes/crates-wooden-stacked.webp",
-  "command": "new BrowserWfrp4e().render(true);",
+  "command": "warhammer.apps.CompendiumBrowser.render(true);",
   "folder": "zpJMEpyBPqZm5EbR",
   "sort": 100000,
   "ownership": {
@@ -15,10 +15,10 @@
   "flags": {},
   "_stats": {
     "systemId": "wfrp4e",
-    "systemVersion": "7.0.3",
-    "coreVersion": "12.327",
+    "systemVersion": "8.5.0",
+    "coreVersion": "12.331",
     "createdTime": 1687439884759,
-    "modifiedTime": 1702856165264,
+    "modifiedTime": 1742834617772,
     "lastModifiedBy": "XoHsMevsFtsW7WqO",
     "compendiumSource": null,
     "duplicateSource": null

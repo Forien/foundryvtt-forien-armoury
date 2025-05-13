@@ -1,0 +1,52 @@
+folder: ZFxCXjlzdPvfK9vU
+name: Ammunition Sling
+_id: WiECkYvbqPun3mV3
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 30
+    range:
+      - 1
+      - 30
+    drawn: false
+    text: Lead Bullet
+    documentId: 4hV1PpYm9Q2pyUNf
+    img: modules/wfrp4e-core/icons/equipment/ammunition/lead-bullet.png
+    _id: p6tRIZl9U9MpJgR8
+    flags: {}
+    _key: '!tables.results!WiECkYvbqPun3mV3.p6tRIZl9U9MpJgR8'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 30
+    range:
+      - 31
+      - 60
+    drawn: false
+    text: Stone Bullet
+    documentId: mik7s6AqS8SMSaJ8
+    img: modules/wfrp4e-core/icons/equipment/ammunition/stone-bullet.png
+    _id: LHx8uKmU7tAS9m7d
+    flags: {}
+    _key: '!tables.results!WiECkYvbqPun3mV3.LHx8uKmU7tAS9m7d'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690164445453
+  modifiedTime: 1690164463587
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d60
+_key: '!tables!WiECkYvbqPun3mV3'
+

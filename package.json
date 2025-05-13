@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "dev": "cross-env MODE=development rollup --config utils/rollup.config.mjs --watch",
+    "build": "npm run build:code && npm run build:db",
+    "build:code": "cross-env MODE=production rollup --config utils/rollup.config.mjs",
+    "build:db": "cross-env MODE=production npm run db:clean && cross-env MODE=production npm run db:pack",
+    "db:clean": "node ./utils/packs.mjs package clean",
+    "db:pack": "node ./utils/packs.mjs package pack",
+    "db:unpack": "node ./utils/packs.mjs package unpack"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.27.1",
+    "@eslint/js": "^9.25.1",
+    "@foundryvtt/foundryvtt-cli": "^1.0.4",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@stylistic/eslint-plugin-js": "^4.2.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "fancy-log": "^2.0.0",
+    "globals": "^16.0.0",
+    "js-yaml": "^4.1.0",
+    "rollup": "^4.34.9",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-includepaths": "^0.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.85.1",
+    "yargs": "^17.7.2"
+  }
+}

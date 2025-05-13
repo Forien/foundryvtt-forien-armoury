@@ -1,0 +1,79 @@
+folder: PrOJN66daLYe6ZJc
+name: Weapons Melee Brawling
+_id: i4RnSWGAnDizNxSU
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 30
+    range:
+      - 1
+      - 30
+    drawn: false
+    text: Boat Hook
+    documentId: erQvZYGF2HQB2QEB
+    img: modules/wfrp4e-core/icons/equipment/tools_and_kits/boat-hook.png
+    _id: sGuAJvsSXXZXikft
+    flags: {}
+    _key: '!tables.results!i4RnSWGAnDizNxSU.sGuAJvsSXXZXikft'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 5
+    range:
+      - 31
+      - 35
+    drawn: false
+    text: Garrote
+    documentId: y5J2E2PKlgJVqzV0
+    img: >-
+      modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/rope-10-yards.png
+    _id: VjZF4D8RYQbc70KS
+    flags: {}
+    _key: '!tables.results!i4RnSWGAnDizNxSU.VjZF4D8RYQbc70KS'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 30
+    range:
+      - 36
+      - 65
+    drawn: false
+    text: Knuckledusters
+    documentId: HYJSv2QxaS3c3Jvb
+    img: modules/wfrp4e-core/icons/equipment/weapons/knuckledusters.png
+    _id: LO5J78t8a9j9awS0
+    flags: {}
+    _key: '!tables.results!i4RnSWGAnDizNxSU.LO5J78t8a9j9awS0'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 15
+    range:
+      - 66
+      - 80
+    drawn: false
+    text: Spiked Gauntlet
+    documentId: juO2goU5t5n0i7Xb
+    img: systems/wfrp4e/icons/blank.png
+    _id: 7cGnSxF3nKUF8toG
+    flags: {}
+    _key: '!tables.results!i4RnSWGAnDizNxSU.7cGnSxF3nKUF8toG'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690162217041
+  modifiedTime: 1690162249754
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d80
+_key: '!tables!i4RnSWGAnDizNxSU'
+

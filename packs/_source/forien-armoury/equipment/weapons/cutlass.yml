@@ -1,0 +1,76 @@
+folder: UrA89QPP0urkYvZk
+name: Cutlass
+type: weapon
+_id: D7vu2rbIaVrwLWOi
+img: icons/weapons/swords/scimitar-guard-gold.webp
+system:
+  description:
+    value: ''
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 1
+  price:
+    gc: 1
+    ss: 0
+    bp: 0
+  availability:
+    value: common
+  location:
+    value: ''
+  damageToItem:
+    value: 0
+    shield: 0
+  damage:
+    value: SB+4
+  reach:
+    value: short
+  range:
+    value: ''
+  skill:
+    value: ''
+  modeOverride:
+    value: ''
+  twohanded:
+    value: false
+  ammunitionGroup:
+    value: ''
+  currentAmmo:
+    value: '0'
+  consumesAmmo:
+    value: true
+  weaponGroup:
+    value: basic
+  qualities:
+    value:
+      - name: slashing
+        value: 1
+  flaws:
+    value: []
+  special:
+    value: ''
+  equipped:
+    value: false
+  loaded:
+    value: false
+    repeater: false
+    amt: 0
+  offhand:
+    value: false
+effects: []
+sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1701625192163
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_key: '!items!D7vu2rbIaVrwLWOi'
+

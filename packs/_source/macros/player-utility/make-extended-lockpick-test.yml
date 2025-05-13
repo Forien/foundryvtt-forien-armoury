@@ -1,0 +1,48 @@
+name: Make Extended Lockpick Test
+type: script
+scope: global
+author: rTgnwDbJCJYDenyf
+img: icons/skills/trades/security-lockpicking-chest-blue.webp
+command: >-
+  // set default values for Extended Test below
+
+  const name = "Extended Pick Lock Test";
+
+  const nameShowSL = false;
+
+  const nameShowDifficulty = true;
+
+  const img = "icons/skills/trades/security-lockpicking-chest-blue.webp";
+
+  const skill = game.i18n.localize("NAME.PickLock");
+
+  const onCompletion = "remove"; // can be one of: "none", "remove", "reset"
+
+  const failureDecreasesSL = true;
+
+  const hideTest = false;
+
+  const hideProgress = true;
+
+
+
+  const macros = game.modules.get("forien-armoury")?.api.macros;
+
+  await macros.lockpickTest(this, {name, nameShowSL, nameShowDifficulty, img,
+  skill, onCompletion, failureDecreasesSL, hideTest, hideProgress});
+folder: K7bIr7HUorfHR7Xh
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 7.1.5
+  coreVersion: '12.327'
+  createdTime: 1715929806552
+  modifiedTime: 1715930163758
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: 7xDw29sVem5hIdkm
+sort: 0
+_key: '!macros!7xDw29sVem5hIdkm'
+

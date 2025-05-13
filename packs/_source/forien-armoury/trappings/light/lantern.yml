@@ -1,0 +1,129 @@
+name: Lantern
+type: trapping
+img: icons/sundries/lights/lantern-iron-lit-yellow.webp
+effects:
+  - transfer: true
+    name: Lantern
+    _id: za7XlKi8UGGfjuDs
+    changes:
+      - key: ATL.preset
+        mode: 2
+        value: lantern
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 14400
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        _legacyData:
+          effectApplication: actor
+          effectTrigger: ''
+          preventDuplicateEffects: false
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/sundries/lights/lantern-iron-lit-yellow.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: false
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData: []
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!wTi7GD0yyAFZdfkc.za7XlKi8UGGfjuDs'
+flags:
+  _sheetTab: description
+system:
+  description:
+    value: >-
+      <p>A @UUID[Compendium.wfrp4e-core.items.Item.mcJi9yqMFRJRkhJs]{Lantern}
+      prepared with ATL compatible Effects</p><p>Requires
+      @UUID[Compendium.wfrp4e-core.items.Item.Bal23aLiOmnht42h]{Lamp Oil}.</p>
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 1
+  price:
+    gc: 0
+    ss: 12
+    bp: 0
+  availability:
+    value: common
+  location:
+    value: ''
+  trappingType:
+    value: misc
+  spellIngredient:
+    value: ''
+  qualities:
+    value: []
+  flaws:
+    value: []
+  damageToItem:
+    value: null
+    shield: null
+  equipped:
+    value: false
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1663627495386
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+folder: ALm6rINfMUWhLplE
+_id: wTi7GD0yyAFZdfkc
+sort: 0
+ownership:
+  default: 0
+_key: '!items!wTi7GD0yyAFZdfkc'
+

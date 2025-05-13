@@ -1,0 +1,87 @@
+folder: UrA89QPP0urkYvZk
+name: Light Bomb
+type: weapon
+_id: gkiR6r3tWAGQUOpf
+img: icons/weapons/thrown/dynamite-red.webp
+system:
+  description:
+    value: >-
+      <p>Throwable contraption filled with alchemical mixture (magnesium and
+      improved blackpowder) that on detonation produces cloud of blinding
+      light.</p>
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 0
+  price:
+    gc: 0
+    ss: 12
+    bp: 0
+  availability:
+    value: exotic
+  location:
+    value: ''
+  damageToItem:
+    value: 0
+    shield: 0
+  damage:
+    value: '0'
+  reach:
+    value: ''
+  range:
+    value: SBx2
+  skill:
+    value: ''
+  modeOverride:
+    value: ranged
+  twohanded:
+    value: false
+  ammunitionGroup:
+    value: none
+  currentAmmo:
+    value: '0'
+  consumesAmmo:
+    value: true
+  weaponGroup:
+    value: throwing
+  qualities:
+    value:
+      - name: blast
+        value: 2
+      - name: blinding
+        value: 3
+  flaws:
+    value:
+      - name: dangerous
+        value: null
+      - name: undamaging
+        value: null
+      - name: unrecoverable
+        value: null
+  special:
+    value: ''
+  equipped:
+    value: false
+  loaded:
+    value: false
+    repeater: false
+    amt: 0
+  offhand:
+    value: false
+effects: []
+sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1701628225344
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_key: '!items!gkiR6r3tWAGQUOpf'
+

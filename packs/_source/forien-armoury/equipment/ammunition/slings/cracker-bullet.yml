@@ -1,0 +1,64 @@
+folder: mNyvsacuWQInPZyO
+name: Cracker Bullet
+type: ammunition
+_id: wIvdnJBh5SEqBdxA
+img: icons/weapons/ammunition/shot-round-brown.webp
+system:
+  description:
+    value: >-
+      <p>Bullet for use with sling, that upon impact cracks with tiny explosion
+      sending fragments in every direction.</p>
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 0.08
+  price:
+    gc: 0
+    ss: 0
+    bp: 6
+  availability:
+    value: rare
+  location:
+    value: ''
+  ammunitionType:
+    value: sling
+  range:
+    value: '-20'
+  damage:
+    value: ''
+  qualities:
+    value:
+      - name: blast
+        value: 2
+      - name: damaging
+        value: null
+  flaws:
+    value:
+      - name: dangerous
+        value: null
+      - name: imprecise
+        value: null
+      - name: unrecoverable
+        value: null
+  special:
+    value: ''
+  damageToItem:
+    value: null
+    shield: null
+effects: []
+sort: 100000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1701617490745
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_key: '!items!wIvdnJBh5SEqBdxA'
+

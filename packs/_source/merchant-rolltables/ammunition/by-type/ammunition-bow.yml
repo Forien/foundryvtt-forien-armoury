@@ -1,0 +1,117 @@
+folder: ZFxCXjlzdPvfK9vU
+name: Ammunition Bow
+_id: SPHK7kTHbQfB0AOE
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 30
+    range:
+      - 1
+      - 30
+    drawn: false
+    text: Arrow
+    documentId: 6GNNpWIGxO9CkTCR
+    img: modules/wfrp4e-core/icons/equipment/ammunition/arrow.png
+    _id: Y9omBi7uDEBWGPnk
+    flags: {}
+    _key: '!tables.results!SPHK7kTHbQfB0AOE.Y9omBi7uDEBWGPnk'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 15
+    range:
+      - 31
+      - 45
+    drawn: false
+    text: Barbed Arrow
+    documentId: aR4Yg3dEL5FdEW0q
+    img: modules/wfrp4e-core/icons/equipment/ammunition/arrow.png
+    _id: zlTSy8r0aRsnsrti
+    flags: {}
+    _key: '!tables.results!SPHK7kTHbQfB0AOE.zlTSy8r0aRsnsrti'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 15
+    range:
+      - 46
+      - 60
+    drawn: false
+    text: Bodkin Arrow
+    documentId: T2V8bJAbtwYlvOPT
+    img: modules/wfrp4e-core/icons/equipment/ammunition/arrow.png
+    _id: JoMKcRzLWd0O6U1f
+    flags: {}
+    _key: '!tables.results!SPHK7kTHbQfB0AOE.JoMKcRzLWd0O6U1f'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 61
+      - 61
+    drawn: false
+    text: Elf Arrow
+    documentId: NQ4OVp1ZfinJ7lQH
+    img: modules/wfrp4e-core/icons/equipment/ammunition/elf-arrow.png
+    _id: qwpOqBPE2PPJVWX0
+    flags: {}
+    _key: '!tables.results!SPHK7kTHbQfB0AOE.qwpOqBPE2PPJVWX0'
+  - type: pack
+    documentCollection: wfrp4e-zoo.items
+    weight: 5
+    range:
+      - 62
+      - 66
+    drawn: false
+    text: Shard Tips
+    documentId: mHcRvoRkzkgUYTyO
+    img: modules/wfrp4e-core/icons/equipment/ammunition/arrow.png
+    _id: IvCLGFs6I4Xz7xXx
+    flags: {}
+    _key: '!tables.results!SPHK7kTHbQfB0AOE.IvCLGFs6I4Xz7xXx'
+  - type: pack
+    documentCollection: wfrp4e-archives1.items
+    weight: 1
+    range:
+      - 67
+      - 67
+    drawn: false
+    text: Starfire Shafts
+    documentId: ws96ig1WPFRecmCn
+    img: modules/wfrp4e-archives1/assets/icons/starfire-shafts.png
+    _id: mmfvve37s5O2DREX
+    flags: {}
+    _key: '!tables.results!SPHK7kTHbQfB0AOE.mmfvve37s5O2DREX'
+  - type: pack
+    documentCollection: wfrp4e-archives1.items
+    weight: 30
+    range:
+      - 68
+      - 97
+    drawn: false
+    text: Swiftshiver Shafts
+    documentId: RXRsdPqnIRQVQ3be
+    img: modules/wfrp4e-archives1/assets/icons/swiftshiver-shafts.png
+    _id: Lfp7rYxeheTW0g3f
+    flags: {}
+    _key: '!tables.results!SPHK7kTHbQfB0AOE.Lfp7rYxeheTW0g3f'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.0
+  coreVersion: '12.327'
+  createdTime: 1690164328637
+  modifiedTime: 1690870502818
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d97
+_key: '!tables!SPHK7kTHbQfB0AOE'
+

@@ -1,0 +1,52 @@
+folder: OIXKjAS72VZJ0m0z
+name: Weapons Ranged Sling
+_id: sVeSgf9FFQlvkf86
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 30
+    range:
+      - 1
+      - 30
+    drawn: false
+    text: Staff Sling
+    documentId: KSwMbO8dqISoGuIo
+    img: modules/wfrp4e-core/icons/equipment/weapons/staff-sling.png
+    _id: 0ftZhRTi8wGkDjjZ
+    flags: {}
+    _key: '!tables.results!sVeSgf9FFQlvkf86.0ftZhRTi8wGkDjjZ'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 30
+    range:
+      - 31
+      - 60
+    drawn: false
+    text: Sling
+    documentId: 7Bpc5I8Arucy3w4q
+    img: modules/wfrp4e-core/icons/equipment/weapons/sling.png
+    _id: LESSJRovABk4PT6B
+    flags: {}
+    _key: '!tables.results!sVeSgf9FFQlvkf86.LESSJRovABk4PT6B'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690163598264
+  modifiedTime: 1690163611873
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d60
+_key: '!tables!sVeSgf9FFQlvkf86'
+

@@ -1,0 +1,87 @@
+name: Kislevian Roulette
+type: spell
+img: modules/wfrp4e-core/icons/spells/petty.png
+system:
+  description:
+    value: >-
+      <p>Mark number of people equal to your Willpower Bonus.</p><p>Last person
+      to squat receives a blow to the head with Damage equal to your Willpower
+      Bonus, that is normally reduced by Toughness Bonus and Armour
+      Points.</p><p>If more than one person do not squat before the spell's
+      duration ends, spell dissipates and does nothing.</p><p>If anyone who
+      squatted stops squatting before spell resolves (someone got hit or
+      duration ends), that person is hit instead.</p><p><strong>Lore:</strong>
+      None</p><p></p>
+  gmdescription:
+    value: ''
+  lore:
+    value: petty
+    effectString: ''
+  range:
+    value: Willpower yards
+    vortex: false
+  target:
+    value: Willpower Bonus
+    aoe: false
+  duration:
+    value: Willpower Bonus minutes
+    extendable: false
+  damage:
+    dice: ''
+    value: ''
+  cn:
+    value: 0
+    SL: 0
+  magicMissile:
+    value: false
+  ritual:
+    value: false
+    type: ''
+    xp: 0
+  memorized:
+    value: false
+  skill:
+    value: ''
+  ingredients: []
+  currentIng:
+    value: '0'
+  wind:
+    value: ''
+  overcast:
+    enabled: false
+    label: ''
+    valuePerOvercast:
+      type: ''
+      value: 1
+      SL: false
+      characteristic: ''
+      bonus: false
+    initial:
+      type: ''
+      value: 1
+      SL: false
+      characteristic: ''
+      bonus: false
+effects: []
+folder: JF9Y4Ik1pMiNEDbg
+ownership:
+  default: 0
+flags:
+  _sheetTab: description
+  exportSource:
+    world: wfrp4e
+    system: wfrp4e
+    coreVersion: '11.315'
+    systemVersion: 7.0.3
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1663652872079
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: mez0IIosOIrxHwNr
+sort: 900000
+_key: '!items!mez0IIosOIrxHwNr'
+

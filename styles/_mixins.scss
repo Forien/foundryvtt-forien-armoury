@@ -1,0 +1,8 @@
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin blur($radius) {
+  filter: blur($radius);
+}

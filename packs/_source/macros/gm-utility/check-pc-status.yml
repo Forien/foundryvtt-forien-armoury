@@ -1,0 +1,28 @@
+name: Check PC Status
+type: script
+scope: global
+author: rTgnwDbJCJYDenyf
+img: icons/magic/holy/meditation-chi-focus-blue.webp
+command: |-
+  // populate array below with IDs of FOLDERS that hold your characters
+  const actorsFolderIds = ["R7s18IlEapZx8tF2"];
+
+
+  const macros = game.modules.get("forien-armoury")?.api.macros;
+  await macros.checkStatuses(this, {actorsFolderIds});
+folder: rJKAafA2UXxZbP3p
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 7.1.5
+  coreVersion: '12.327'
+  createdTime: 1715930931724
+  modifiedTime: 1715931029794
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: TF6lfOLw1wsldjz7
+sort: 0
+_key: '!macros!TF6lfOLw1wsldjz7'
+
