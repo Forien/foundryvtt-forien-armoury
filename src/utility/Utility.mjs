@@ -1,4 +1,4 @@
-import {constants} from '../constants.mjs';
+import {constants} from "../constants.mjs";
 
 export default class Utility {
 
@@ -6,7 +6,7 @@ export default class Utility {
    * Provides a single point of entry to handle all Module's notifications in a consistent manner
    *
    * @param {string} notification                       Text of the notification
-   * @param {'error'|'warning'|'info'|'debug'} type     type of the notification
+   * @param {"error"|"warning"|"info"|"debug"} type     type of the notification
    * @param {boolean} permanent                         should the notification stay until closed?
    * @param {boolean} consoleOnly                       should the notification be suppressed and only shown in console?
    * @param {*} data                                    additional data to output in the console
@@ -14,26 +14,26 @@ export default class Utility {
    *
    * @return {false}
    */
-  static notify(notification, {type = 'info', permanent = false, consoleOnly = false, data = '', trace = false} = {}) {
+  static notify(notification, {type = "info", permanent = false, consoleOnly = false, data = "", trace = false} = {}) {
     // brand colour: '#3e1395' is too dark for dark mode console;
-    const purple = 'purple';
+    const purple = "purple";
     let colour;
 
     switch (type) {
-      case 'error':
-        colour = '#aa2222';
+      case "error":
+        colour = "#aa2222";
         trace = true;
         break;
-      case 'warning':
-        colour = '#aaaa22';
+      case "warning":
+        colour = "#aaaa22";
         trace = true;
         break;
-      case 'debug':
-        colour = '#5555ff';
+      case "debug":
+        colour = "#5555ff";
         break;
-      case 'info':
+      case "info":
       default:
-        colour = '#22aa22';
+        colour = "#22aa22";
     }
 
     if (trace)
@@ -58,7 +58,7 @@ export default class Utility {
    * @return {false}
    */
   static error(notification, {permanent = false, data = {}, error = null} = {}) {
-    Utility.notify(notification, {type: 'error', consoleOnly: false, permanent, data});
+    Utility.notify(notification, {type: "error", consoleOnly: false, permanent, data});
 
     if (error)
       console.error(error);
@@ -74,7 +74,7 @@ export default class Utility {
    * @return {string}
    */
   static getTemplate(template) {
-    if (typeof template !== 'string')
+    if (typeof template !== "string")
       return undefined;
 
     return `modules/${constants.moduleId}/templates/${template}`;
@@ -86,8 +86,8 @@ export default class Utility {
    * @param {{}} templates
    */
   static preloadTemplates(templates = {}) {
-    Utility.notify("Preloading Templates.", {consoleOnly: true})
-    templates = foundry.utils.flattenObject(templates)
+    Utility.notify("Preloading Templates.", {consoleOnly: true});
+    templates = foundry.utils.flattenObject(templates);
 
     for (let [key, template] of Object.entries(templates)) {
       templates[key] = Utility.getTemplate(template);
@@ -95,7 +95,7 @@ export default class Utility {
     }
 
     foundry.applications.handlebars.loadTemplates(templates).then(() => {
-      Utility.notify("Templates preloaded.", {consoleOnly: true})
+      Utility.notify("Templates preloaded.", {consoleOnly: true});
     });
   }
 
@@ -117,7 +117,7 @@ export default class Utility {
    * @returns {ChildNode}
    */
   static stringToHTMLElement(string) {
-    const element = document.createElement('template');
+    const element = document.createElement("template");
     element.innerHTML = string.trim();
     return element.content.firstChild;
   }

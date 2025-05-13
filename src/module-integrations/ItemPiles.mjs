@@ -10,46 +10,44 @@ export default class ItemPiles {
     let self = this;
 
     game.settings.register(constants.moduleId, settings.integrations.itemPiles.setCurrencies, {
-      name: 'Forien.Armoury.Settings.ItemPiles.SetCurrencies',
-      hint: 'Forien.Armoury.Settings.ItemPiles.SetCurrenciesHint',
-      scope: 'world',
+      name: "Forien.Armoury.Settings.ItemPiles.SetCurrencies",
+      hint: "Forien.Armoury.Settings.ItemPiles.SetCurrenciesHint",
+      scope: "world",
       config: false,
       default: false,
       type: Boolean,
-      onChange: async (value) =>
-      {
+      onChange: async (value) => {
         if (value) {
           self.setCurrencies();
           game.settings.set(constants.moduleId, settings.integrations.itemPiles.setCurrencies, false);
         }
-      }
+      },
     });
 
     game.settings.register(constants.moduleId, settings.integrations.itemPiles.rolltablesImported, {
-      scope: 'world',
+      scope: "world",
       default: false,
-      type: Boolean
+      type: Boolean,
     });
 
     game.settings.register(constants.moduleId, settings.integrations.itemPiles.reimportRolltables, {
-      name: 'Forien.Armoury.Settings.ItemPiles.RolltablesImport',
-      hint: 'Forien.Armoury.Settings.ItemPiles.RolltablesImportHint',
-      scope: 'world',
+      name: "Forien.Armoury.Settings.ItemPiles.RolltablesImport",
+      hint: "Forien.Armoury.Settings.ItemPiles.RolltablesImportHint",
+      scope: "world",
       config: false,
       default: false,
       type: Boolean,
-      onChange: async (value) =>
-      {
+      onChange: async (value) => {
         if (value) {
           await self.#importRollTables();
           game.settings.set(constants.moduleId, settings.integrations.itemPiles.reimportRolltables, false);
         }
-      }
+      },
     });
   }
 
   initialize() {
-    let imported = game.settings.get(constants.moduleId, settings.integrations.itemPiles.rolltablesImported)
+    let imported = game.settings.get(constants.moduleId, settings.integrations.itemPiles.rolltablesImported);
     if (imported === false) {
       debug(`Merchant RollTables haven't been imported yet`);
       this.#importRollTables();
@@ -60,7 +58,7 @@ export default class ItemPiles {
    * Set Currencies to prepared by Forien
    */
   setCurrencies() {
-    game.itempiles.API.setCurrencies(this.#getCurrenciesConfig())
+    game.itempiles.API.setCurrencies(this.#getCurrenciesConfig());
   }
 
   #getCurrenciesConfig() {
@@ -79,12 +77,12 @@ export default class ItemPiles {
               "quantity": {"type": "Number", "label": "Quantity", "value": 1},
               "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.005},
               "coinValue": {"label": "Value (in d)", "type": "Number", "value": 960},
-              "source": {"type": "String", "label": "Source"}
-            }
-          }
+              "source": {"type": "String", "label": "Source"},
+            },
+          },
         },
         primary: false,
-        exchangeRate: 960
+        exchangeRate: 960,
       },
       {
         type: "item",
@@ -100,12 +98,12 @@ export default class ItemPiles {
               "quantity": {"type": "Number", "label": "Quantity", "value": 1},
               "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.005},
               "coinValue": {"label": "Value (in d)", "type": "Number", "value": 480},
-              "source": {"type": "String", "label": "Source"}
-            }
-          }
+              "source": {"type": "String", "label": "Source"},
+            },
+          },
         },
         primary: false,
-        exchangeRate: 480
+        exchangeRate: 480,
       },
       {
         type: "item",
@@ -118,15 +116,15 @@ export default class ItemPiles {
             "type": "money",
             "img": "icons/commodities/currency/coin-inset-crown-gold.webp",
             "system": {
-              "quantity": { "type": "Number", "label": "Quantity", "value": 1 },
-              "encumbrance": { "type": "Number", "label": "Encumbrance", "value": 0.005 },
-              "coinValue": { "label": "Value (in d)", "type": "Number", "value": 240 },
-              "source": { "type": "String", "label": "Source" }
-            }
-          }
+              "quantity": {"type": "Number", "label": "Quantity", "value": 1},
+              "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.005},
+              "coinValue": {"label": "Value (in d)", "type": "Number", "value": 240},
+              "source": {"type": "String", "label": "Source"},
+            },
+          },
         },
         primary: false,
-        exchangeRate: 240
+        exchangeRate: 240,
       },
       {
         type: "item",
@@ -139,15 +137,15 @@ export default class ItemPiles {
             "type": "money",
             "img": "icons/commodities/currency/coin-engraved-slot-one-copper.webp",
             "system": {
-              "quantity": { "type": "Number", "label": "Quantity", "value": 1 },
-              "encumbrance": { "type": "Number", "label": "Encumbrance", "value": 0.005 },
-              "coinValue": { "label": "Value (in d)", "type": "Number", "value": 120 },
-              "source": { "type": "String", "label": "Source" }
-            }
-          }
+              "quantity": {"type": "Number", "label": "Quantity", "value": 1},
+              "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.005},
+              "coinValue": {"label": "Value (in d)", "type": "Number", "value": 120},
+              "source": {"type": "String", "label": "Source"},
+            },
+          },
         },
         primary: false,
-        exchangeRate: 120
+        exchangeRate: 120,
       },
       {
         type: "item",
@@ -160,15 +158,15 @@ export default class ItemPiles {
             "type": "money",
             "img": "icons/commodities/currency/coin-inset-compass-silver.webp",
             "system": {
-              "quantity": { "type": "Number", "label": "Quantity", "value": 1 },
-              "encumbrance": { "type": "Number", "label": "Encumbrance", "value": 0.01 },
-              "coinValue": { "label": "Value (in d)", "type": "Number", "value": 80 },
-              "source": { "type": "String", "label": "Source" }
-            }
-          }
+              "quantity": {"type": "Number", "label": "Quantity", "value": 1},
+              "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.01},
+              "coinValue": {"label": "Value (in d)", "type": "Number", "value": 80},
+              "source": {"type": "String", "label": "Source"},
+            },
+          },
         },
         primary: false,
-        exchangeRate: 80
+        exchangeRate: 80,
       },
       {
         type: "item",
@@ -181,15 +179,15 @@ export default class ItemPiles {
             "type": "money",
             "img": "icons/commodities/currency/coin-engraved-moon-silver.webp",
             "system": {
-              "quantity": { "type": "Number", "label": "Quantity", "value": 1 },
-              "encumbrance": { "type": "Number", "label": "Encumbrance", "value": 0.01 },
-              "coinValue": { "label": "Value (in d)", "type": "Number", "value": 12 },
-              "source": { "type": "String", "label": "Source" }
-            }
-          }
+              "quantity": {"type": "Number", "label": "Quantity", "value": 1},
+              "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.01},
+              "coinValue": {"label": "Value (in d)", "type": "Number", "value": 12},
+              "source": {"type": "String", "label": "Source"},
+            },
+          },
         },
         primary: false,
-        exchangeRate: 12
+        exchangeRate: 12,
       },
       {
         type: "item",
@@ -205,12 +203,12 @@ export default class ItemPiles {
               "quantity": {"type": "Number", "label": "Quantity", "value": 1},
               "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.01},
               "coinValue": {"label": "Value (in d)", "type": "Number", "value": 2},
-              "source": {"type": "String", "label": "Source"}
-            }
-          }
+              "source": {"type": "String", "label": "Source"},
+            },
+          },
         },
         primary: false,
-        exchangeRate: 2
+        exchangeRate: 2,
       },
       {
         type: "item",
@@ -223,43 +221,48 @@ export default class ItemPiles {
             "type": "money",
             "img": "icons/commodities/currency/coin-engraved-waves-copper.webp",
             "system": {
-              "quantity": { "type": "Number", "label": "Quantity", "value": 1 },
-              "encumbrance": { "type": "Number", "label": "Encumbrance", "value": 0.01 },
-              "coinValue": { "label": "Value (in d)", "type": "Number", "value": 1 },
-              "source": { "type": "String", "label": "Source" }
-            }
-          }
+              "quantity": {"type": "Number", "label": "Quantity", "value": 1},
+              "encumbrance": {"type": "Number", "label": "Encumbrance", "value": 0.01},
+              "coinValue": {"label": "Value (in d)", "type": "Number", "value": 1},
+              "source": {"type": "String", "label": "Source"},
+            },
+          },
         },
         primary: true,
-        exchangeRate: 1
-      }
-    ]
+        exchangeRate: 1,
+      },
+    ];
   }
 
   async #createFolder() {
-    let folder = game.folders.find(f => f.type === "RollTable" && f.getFlag(constants.moduleId, flags.integrations.itemPiles.isImportFolder));
+    let folder = game.folders.find(f => f.type === "RollTable" && f.getFlag(
+      constants.moduleId,
+      flags.integrations.itemPiles.isImportFolder,
+    ));
     if (folder) {
       let rollTables = folder.contents;
       rollTables = rollTables.concat(folder.getSubfolders(true).reduce((a, f) => a.concat(f.contents), []));
       rollTables = rollTables.map(t => t._id);
       await RollTable.deleteDocuments(rollTables);
 
-      return folder
+      return folder;
     }
 
     return Folder.create({
-      name: 'Merchant Rolltables (Forien\'s Armoury)',
-      type: 'RollTable',
-      color: "#3e1395"
+      name: "Merchant Rolltables (Forien's Armoury)",
+      type: "RollTable",
+      color: "#3e1395",
     });
   }
 
   async #importRollTables() {
-    const coreModule = game.modules.get('wfrp4e-core');
+    const coreModule = game.modules.get("wfrp4e-core");
     const coreModuleActive = coreModule?.active || false;
     if (!coreModuleActive) return;
 
-    const coreCollectionName = isNewerVersion(coreModule.version, '3.999') ? 'wfrp4e-core.items' : 'wfrp4e-core.trappings';
+    const coreCollectionName = isNewerVersion(coreModule.version, "3.999")
+      ? "wfrp4e-core.items"
+      : "wfrp4e-core.trappings";
     const coreCollection = coreModuleActive ? game.packs.get(coreCollectionName) : null;
     const folder = await this.#createFolder();
     const rolltableCompendium = await game.packs.get("forien-armoury.merchant-rolltables");
@@ -274,7 +277,7 @@ export default class ItemPiles {
         let pack = game.packs.get(entry.documentCollection);
         if (pack) continue;
         if (!pack && coreModuleActive) {
-          let coreItem = coreCollection?.index.find(index => index.name === entry.text)
+          let coreItem = coreCollection?.index.find(index => index.name === entry.text);
           if (coreItem) {
             entry.documentCollection = coreCollectionName;
             entry.documentId = coreItem._id;
@@ -282,7 +285,7 @@ export default class ItemPiles {
           }
         }
 
-        entriesToRemove.push(entryKey)
+        entriesToRemove.push(entryKey);
       }
 
       if (entriesToRemove.length === 0) continue;
@@ -294,6 +297,6 @@ export default class ItemPiles {
     game.settings.set(constants.moduleId, settings.integrations.itemPiles.rolltablesImported, true);
     debug(`Merchant RollTables have been imported into folder`, {rollTables, folder});
 
-    return folder.setFlag(constants.moduleId, flags.integrations.itemPiles.isImportFolder, true)
+    return folder.setFlag(constants.moduleId, flags.integrations.itemPiles.isImportFolder, true);
   }
 }

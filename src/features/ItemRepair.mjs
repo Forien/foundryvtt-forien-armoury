@@ -1,18 +1,18 @@
-import Utility            from "../utility/Utility.mjs";
 import {constants, flags} from "../constants.mjs";
 import {debug}            from "../utility/Debug.mjs";
 import ForienBaseModule   from "../utility/ForienBaseModule.mjs";
+import Utility            from "../utility/Utility.mjs";
 
 export default class ItemRepair extends ForienBaseModule {
   templates = {
-    chatMessage: 'repair-chat-message.hbs',
-    repairItemEntry: 'partials/repair-item-entry.hbs',
-    repairItemEntryWeapon: 'partials/repair-item-weapon.hbs',
-    repairItemEntryArmour: 'partials/repair-item-armour.hbs'
-  }
+    chatMessage: "repair-chat-message.hbs",
+    repairItemEntry: "partials/repair-item-entry.hbs",
+    repairItemEntryWeapon: "partials/repair-item-weapon.hbs",
+    repairItemEntryArmour: "partials/repair-item-armour.hbs",
+  };
 
   bindHooks() {
-    Hooks.on('renderChatLog', this.#setChatListeners.bind(this));
+    Hooks.on("renderChatLog", this.#setChatListeners.bind(this));
   }
 
   /**
@@ -32,7 +32,7 @@ export default class ItemRepair extends ForienBaseModule {
   async #repairArmourItem(item, data) {
     let itemData = item.toObject();
 
-    if (data.location === 'all') {
+    if (data.location === "all") {
       for (let loc in itemData.system.APdamage) {
         itemData.system.APdamage[loc] = 0;
       }
@@ -77,14 +77,14 @@ export default class ItemRepair extends ForienBaseModule {
      * @type {ItemWFRP4e|null}
      */
     let item = await fromUuid(data.item);
-    let paid = data.price !== game.i18n.localize('Forien.Armoury.ItemRepair.Free');
+    let paid = data.price !== game.i18n.localize("Forien.Armoury.ItemRepair.Free");
 
     if (!item?.actor?.isOwner)
-      return Utility.notify(game.i18n.localize('Forien.Armoury.ItemRepair.MustControlActor'), {type: "error"})
+      return Utility.notify(game.i18n.localize("Forien.Armoury.ItemRepair.MustControlActor"), {type: "error"});
 
     let repaired;
 
-    if (data.armour && data.armour === 'true')
+    if (data.armour && data.armour === "true")
       repaired = await this.#repairArmourItem(item, data);
     else
       repaired = await this.#repairWeaponItem(item, data);
@@ -98,7 +98,7 @@ export default class ItemRepair extends ForienBaseModule {
         game.wfrp4e.audio.PlayContextAudio({item: {"type": "money"}, action: "lose"});
         await item.actor.updateEmbeddedDocuments("Item", money);
       }
-      Utility.notify(game.i18n.format('Forien.Armoury.ItemRepair.Repaired', {name: item.name, repaired: data.repair}));
+      Utility.notify(game.i18n.format("Forien.Armoury.ItemRepair.Repaired", {name: item.name, repaired: data.repair}));
     }
 
     if (data.msg)
@@ -126,14 +126,14 @@ export default class ItemRepair extends ForienBaseModule {
    */
   #getMoneyStringFromD(amount, paid) {
     if (!paid)
-      return game.i18n.localize('Forien.Armoury.ItemRepair.Free');
+      return game.i18n.localize("Forien.Armoury.ItemRepair.Free");
 
     let string = ``;
     let money = {
       gc: 0,
       ss: 0,
-      bp: 0
-    }
+      bp: 0,
+    };
 
     money.gc = Math.trunc(amount / 240);
     amount = amount % 240;
@@ -163,7 +163,7 @@ export default class ItemRepair extends ForienBaseModule {
   #getMaxDamage(item) {
     let regex = /\d{1,3}/gm;
 
-    if (item.type === 'weapon')
+    if (item.type === "weapon")
       return Number(regex.exec(item.damage.value)?.[0] || 0) + Number(item.properties.qualities.durable?.value || 0);
 
     return Number(item.properties.qualities.durable?.value || 0);
@@ -195,11 +195,12 @@ export default class ItemRepair extends ForienBaseModule {
    * @param {ItemWFRP4e} item Item to check the damage for
    * @param {boolean} paid Whether the service is Free
    *
-   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, type, uuid, repairCost: string, singleRepairCost: string}}
+   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, type, uuid, repairCost: string,
+   *   singleRepairCost: string}}
    */
   checkTrappingDamage(item, paid) {
-    let maxDamage = this.#getMaxDamage(item)
-    let damage = Number(item.damageToItem?.value || 0)
+    let maxDamage = this.#getMaxDamage(item);
+    let damage = Number(item.damageToItem?.value || 0);
     let price = this.#getPriceInD(item);
     let singleRepairCost = this.#getMoneyStringFromD(price * 0.1, paid);
     let repairCost = this.#getMoneyStringFromD(price * 0.1 * damage, paid);
@@ -213,7 +214,7 @@ export default class ItemRepair extends ForienBaseModule {
       damage: damage,
       maxDamage: maxDamage,
       repairCost: repairCost,
-      singleRepairCost: singleRepairCost
+      singleRepairCost: singleRepairCost,
     };
   }
 
@@ -224,7 +225,8 @@ export default class ItemRepair extends ForienBaseModule {
    * @param {ItemWFRP4e} item Armour Item to check the damage for
    * @param {boolean} paid Whether the service is Free
    *
-   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, locations: *[], type, uuid, repairCost: string, singleRepairCost: string}}
+   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, locations: *[], type, uuid, repairCost:
+   *   string, singleRepairCost: string}}
    */
   checkArmourDamage(item, paid) {
     let durable = this.#getMaxDamage(item);
@@ -257,12 +259,12 @@ export default class ItemRepair extends ForienBaseModule {
           ap: AP,
           damage: damage,
           maxDamage: maxDamage,
-          repairCost: localRepairCost
+          repairCost: localRepairCost,
         });
       }
     }
-    let singleRepairCost = this.#getMoneyStringFromD(price, paid)
-    let repairCost = this.#getMoneyStringFromD(repairCostInD, paid)
+    let singleRepairCost = this.#getMoneyStringFromD(price, paid);
+    let repairCost = this.#getMoneyStringFromD(repairCostInD, paid);
 
     return {
       uuid: item.uuid,
@@ -274,7 +276,7 @@ export default class ItemRepair extends ForienBaseModule {
       damage: totalDamage,
       maxDamage: totalMaxDamage,
       repairCost: repairCost,
-      singleRepairCost: singleRepairCost
+      singleRepairCost: singleRepairCost,
     };
   }
 
@@ -286,7 +288,8 @@ export default class ItemRepair extends ForienBaseModule {
    * @param {boolean} paid
    * @param {string|null} subtype
    *
-   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, type, uuid, repairCost: string, singleRepairCost: string}[]}
+   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, type, uuid, repairCost: string,
+   *   singleRepairCost: string}[]}
    */
   processWeapons(items = [], {paid = true, subtype = null} = {}) {
     return this.processTrappings(items, {paid, subtype});
@@ -299,21 +302,23 @@ export default class ItemRepair extends ForienBaseModule {
    * @param {boolean} paid
    * @param {string|null} subtype
    *
-   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, type, uuid, repairCost: string, singleRepairCost: string}[]}
+   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, type, uuid, repairCost: string,
+   *   singleRepairCost: string}[]}
    */
   processTrappings(items = [], {paid = true, subtype = null} = {}) {
     let damagedItems = [];
     items.forEach(item => {
-      if (subtype && (!subtype.includes(item.system.weaponGroup?.value) || subtype.includes(item.system.trappingType?.value)))
+      if (subtype && (!subtype.includes(item.system.weaponGroup?.value)
+                      || subtype.includes(item.system.trappingType?.value)))
         return;
 
       let damagedItem = this.checkTrappingDamage(item, paid);
-      debug('[ItemRepair] Checking item for damage', {item, damagedItem});
+      debug("[ItemRepair] Checking item for damage", {item, damagedItem});
 
       if (damagedItem?.damaged)
         damagedItems.push(damagedItem);
     });
-    debug('[ItemRepair] Checked Items for damage', {damagedItems});
+    debug("[ItemRepair] Checked Items for damage", {damagedItems});
 
     return damagedItems;
   }
@@ -325,7 +330,8 @@ export default class ItemRepair extends ForienBaseModule {
    * @param {boolean} paid
    * @param {string|null} subtype
    *
-   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, locations: *[], type, uuid, repairCost: string, singleRepairCost: string}[]}
+   * @return {{damage: number, img, damaged: boolean, maxDamage: number, name, locations: *[], type, uuid, repairCost:
+   *   string, singleRepairCost: string}[]}
    */
   processArmour(items = [], {paid = true, subtype = null} = {}) {
     let damagedItems = [];
@@ -334,12 +340,12 @@ export default class ItemRepair extends ForienBaseModule {
         return;
 
       let damagedItem = this.checkArmourDamage(item, paid);
-      debug('[ItemRepair] Checking Armour item for damage', {item, damagedItem});
+      debug("[ItemRepair] Checking Armour item for damage", {item, damagedItem});
 
       if (damagedItem?.damaged)
         damagedItems.push(damagedItem);
     });
-    debug('[ItemRepair] Checked Armour for damage', {damagedItems});
+    debug("[ItemRepair] Checked Armour for damage", {damagedItems});
 
     return damagedItems;
   }
@@ -359,13 +365,13 @@ export default class ItemRepair extends ForienBaseModule {
     chatMessageId = null,
     type = null,
     subtype = null,
-    user = null
+    user = null,
   } = {}) {
     if (!actor || !(actor instanceof ActorWFRP4e)) {
-      return Utility.notify(game.i18n.localize('Forien.Armoury.ItemRepair.NoActorSelected'), {type: 'warning'});
+      return Utility.notify(game.i18n.localize("Forien.Armoury.ItemRepair.NoActorSelected"), {type: "warning"});
     }
 
-    debug('[ItemRepair] Checking inventory for damaged items', {actor, paid, chatMessageId, type, subtype, user});
+    debug("[ItemRepair] Checking inventory for damaged items", {actor, paid, chatMessageId, type, subtype, user});
 
     let chatMessage;
     let content;
@@ -374,7 +380,7 @@ export default class ItemRepair extends ForienBaseModule {
       weapons: [],
       trappings: [],
       paid: paid,
-      empty: false
+      empty: false,
     };
 
     if (chatMessageId) {
@@ -383,38 +389,41 @@ export default class ItemRepair extends ForienBaseModule {
       subtype = chatMessage.getFlag(constants.moduleId, flags.itemRepair.subtype);
     }
 
-    if (!type || type.includes('armour'))
+    if (!type || type.includes("armour"))
       templateData.armour = this.processArmour(this.#getArmourItems(actor), {paid, subtype});
-    if (!type || type.includes('weapons'))
+    if (!type || type.includes("weapons"))
       templateData.weapons = this.processWeapons(this.#getWeaponItems(actor), {paid, subtype});
-    if (!type || type.includes('trappings'))
+    if (!type || type.includes("trappings"))
       templateData.trappings = this.processTrappings(this.#getTrappingItems(actor), {paid, subtype});
 
     if (templateData.armour.length === 0 && templateData.weapons.length === 0 && templateData.trappings.length === 0)
       templateData.empty = true;
 
-    debug('[ItemRepair] Template Data ready', templateData);
-    let html = await foundry.applications.handlebars.renderTemplate(Utility.getTemplate(this.templates.chatMessage), templateData);
+    debug("[ItemRepair] Template Data ready", templateData);
+    let html = await foundry.applications.handlebars.renderTemplate(
+      Utility.getTemplate(this.templates.chatMessage),
+      templateData,
+    );
 
     if (!chatMessageId) {
       let chatData = {
         user: user ?? game.user,
         speaker: {alias: actor.name, actor: actor._id},
         whisper: game.users.filter((u) => u.isGM).map((u) => u._id),
-        content: html
+        content: html,
       };
 
-      chatMessage = await ChatMessage.create(chatData)
+      chatMessage = await ChatMessage.create(chatData);
       await chatMessage.setFlag(constants.moduleId, flags.itemRepair.type, type);
       await chatMessage.setFlag(constants.moduleId, flags.itemRepair.subtype, subtype);
       content = chatMessage.content;
-      debug('[ItemRepair] Chat Message created', {chatMessage, content});
+      debug("[ItemRepair] Chat Message created", {chatMessage, content});
     } else {
       content = html;
     }
 
-    content = content.replaceAll('ChatMessageId', chatMessage._id);
+    content = content.replaceAll("ChatMessageId", chatMessage._id);
     await chatMessage.update({content: content});
-    debug('[ItemRepair] Chat Message updated', {chatMessage, content});
+    debug("[ItemRepair] Chat Message updated", {chatMessage, content});
   }
 }

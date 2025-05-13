@@ -32,16 +32,16 @@ export default class Species extends ForienBaseModule {
 
     config.species["runebound"] = "Runebound";
     config.speciesCharacteristics["runebound"] = {
-      "ws":  "2d10+25",
-      "bs":  "2d10+25",
-      "s":   "2d10+25",
-      "t":   "2d10+25",
-      "i":   "2d10+25",
-      "ag":  "2d10+25",
+      "ws": "2d10+25",
+      "bs": "2d10+25",
+      "s": "2d10+25",
+      "t": "2d10+25",
+      "i": "2d10+25",
+      "ag": "2d10+25",
       "dex": "2d10+25",
       "int": "2d10+15",
-      "wp":  "2d10+25",
-      "fel": "2d10+15"
+      "wp": "2d10+25",
+      "fel": "2d10+15",
     };
     config.speciesSkills["runebound"] = [
       "Animal Care",
@@ -55,7 +55,7 @@ export default class Species extends ForienBaseModule {
       "Leadership",
       "Lore (local)",
       "Melee (Basic)",
-      "Ranged (Bow)"
+      "Ranged (Bow)",
     ];
     config.speciesTalents["runebound"] = [
       "Doomed",
@@ -63,7 +63,7 @@ export default class Species extends ForienBaseModule {
       "Savvy, Suave",
     ];
     config.speciesRandomTalents["runebound"] = {
-      'runebound-talents': 4
+      "runebound-talents": 4,
     };
     config.speciesFate["runebound"] = 1;
     config.speciesRes["runebound"] = 2;
@@ -73,7 +73,7 @@ export default class Species extends ForienBaseModule {
     config.speciesHeight["runebound"] = {
       feet: 4,
       inches: 10,
-      die: "2d10"
+      die: "2d10",
     };
 
     /**#endregion Runebound */
@@ -84,13 +84,13 @@ export default class Species extends ForienBaseModule {
   #subspecies() {
     let config = {
       subspecies: {
-        runebound: {}
-      }
-    }
+        runebound: {},
+      },
+    };
 
     /**#region Runebound */
 
-    config.subspecies.runebound['reiklander'] = {
+    config.subspecies.runebound["reiklander"] = {
       name: "Reiklander",
       skills: [
         "Animal Care",
@@ -104,7 +104,7 @@ export default class Species extends ForienBaseModule {
         "Leadership",
         "Lore (Reikland)",
         "Melee (Basic)",
-        "Ranged (Bow)"
+        "Ranged (Bow)",
       ],
       talents: [
         "Doomed",
@@ -113,11 +113,11 @@ export default class Species extends ForienBaseModule {
       ],
       randomTalents: {
         talents: 2,
-        'runebound-talents': 3
-      }
-    }
+        "runebound-talents": 3,
+      },
+    };
 
-    config.subspecies.runebound['orphaned'] = {
+    config.subspecies.runebound["orphaned"] = {
       name: "Orphaned",
       skills: [
         "Animal Care",
@@ -131,17 +131,17 @@ export default class Species extends ForienBaseModule {
         "Melee (Basic)",
         "Melee (Brawling)",
         "Ranged (Sling)",
-        "Stealth (Urban)"
+        "Stealth (Urban)",
       ],
       talents: [
         "Doomed",
         "Flee!, Stone Soup",
-        "Nimble Fingered, random[1][runebound-talents]"
+        "Nimble Fingered, random[1][runebound-talents]",
       ],
       randomTalents: {
-        'runebound-talents': 3
-      }
-    }
+        "runebound-talents": 3,
+      },
+    };
 
     /**#endregion Runebound */
 

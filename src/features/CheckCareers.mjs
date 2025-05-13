@@ -1,11 +1,11 @@
-import Utility          from "../utility/Utility.mjs";
 import {debug}          from "../utility/Debug.mjs";
 import ForienBaseModule from "../utility/ForienBaseModule.mjs";
+import Utility          from "../utility/Utility.mjs";
 
 export default class CheckCareers extends ForienBaseModule {
   templates = {
-    checkCareer: 'check-career.hbs',
-  }
+    checkCareer: "check-career.hbs",
+  };
 
   /**
    * Performs Career Check for player characters (if GM) or for own assigned character (if Player)
@@ -45,7 +45,7 @@ export default class CheckCareers extends ForienBaseModule {
    * @param {ActorWFRP4e[]} actors Actors for whom to perform career checks
    */
   checkCareers(actors = []) {
-    actors.forEach(actor => this.checkCareer(actor))
+    actors.forEach(actor => this.checkCareer(actor));
   }
 
   /**
@@ -54,14 +54,14 @@ export default class CheckCareers extends ForienBaseModule {
    * @param {ActorWFRP4e} character Character to perform a Career Check for
    */
   checkCareer(character) {
-    if (!(character instanceof ActorWFRP4e) || character.type !== 'character') return;
+    if (!(character instanceof ActorWFRP4e) || character.type !== "character") return;
     let currentCareer = character.currentCareer;
     if (!currentCareer) return;
     let careerLevel = currentCareer.level.value;
     let requiredAdvances = careerLevel * 5;
 
     if (currentCareer.complete.value === true)
-      return debug('[CheckCareers] Current Career is marked as finished, skipping', {character, currentCareer});
+      return debug("[CheckCareers] Current Career is marked as finished, skipping", {character, currentCareer});
 
     const characteristics = this.#checkCharacteristics(character, currentCareer, requiredAdvances);
     const talents = this.#checkTalents(character, currentCareer);
@@ -80,7 +80,7 @@ export default class CheckCareers extends ForienBaseModule {
       skills,
       owners,
       conclusion,
-      conclusionPotential
+      conclusionPotential,
     });
 
     const templateData = {
@@ -94,17 +94,18 @@ export default class CheckCareers extends ForienBaseModule {
       skills,
       talents,
       conclusion,
-      conclusionPotential
-    }
+      conclusionPotential,
+    };
 
-    foundry.applications.handlebars.renderTemplate(Utility.getTemplate(this.templates.checkCareer), templateData).then(content => {
-      ChatMessage.create({
-        speaker: ChatMessage.getSpeakerActor(character),
-        user: game.user._id,
-        whisper: owners,
-        content: content
+    foundry.applications.handlebars.renderTemplate(Utility.getTemplate(this.templates.checkCareer), templateData).then(
+      content => {
+        ChatMessage.create({
+          speaker: ChatMessage.getSpeakerActor(character),
+          user: game.user._id,
+          whisper: owners,
+          content: content,
+        });
       });
-    });
   }
 
   /**
@@ -145,7 +146,7 @@ export default class CheckCareers extends ForienBaseModule {
       if (currentCareer.skills.includes(skill.name))
         done++;
       else if (skill.advances.indicator)
-        potentialSkills.push(skill.name)
+        potentialSkills.push(skill.name);
 
     });
 
@@ -153,7 +154,7 @@ export default class CheckCareers extends ForienBaseModule {
       done,
       hasPotential: potentialSkills.length > 0,
       potentialCount: potentialSkills.length,
-      potential: potentialSkills.toString()
+      potential: potentialSkills.toString(),
     };
   }
 
@@ -170,16 +171,16 @@ export default class CheckCareers extends ForienBaseModule {
 
     character.itemTypes.talent.forEach(talent => {
       if (currentCareer.talents.includes(talent.name))
-        done++
+        done++;
       else if (talent.advances.indicator)
-        potentialTalents.push(talent.name)
+        potentialTalents.push(talent.name);
     });
 
     return {
       done,
       hasPotential: potentialTalents.length > 0,
       potentialCount: potentialTalents.length,
-      potential: potentialTalents.toString()
+      potential: potentialTalents.toString(),
     };
   }
 
@@ -195,8 +196,8 @@ export default class CheckCareers extends ForienBaseModule {
     let done = 0;
     let total = 0;
 
-    // wfrp4e 8.3.0 changed Data Model for Career and characteristics are now object of all characteristics as boolean flags
-    // instead of array of only selected characteristics
+    // wfrp4e 8.3.0 changed Data Model for Career and characteristics are now object of all characteristics as boolean
+    // flags instead of array of only selected characteristics
     if (foundry.utils.isNewerVersion(game.system.version, "8.2.999")) {
       for (const characteristic in currentCareer.characteristics) {
         if (!currentCareer.characteristics[characteristic]) continue;

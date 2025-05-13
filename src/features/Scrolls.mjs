@@ -1,13 +1,13 @@
+import {dataTypes, settings} from "../constants.mjs";
+import ScrollTest            from "../tests/ScrollTest.mjs";
 import ForienBaseModule      from "../utility/ForienBaseModule.mjs";
 import Utility               from "../utility/Utility.mjs";
-import ScrollTest            from "../tests/ScrollTest.mjs";
-import {dataTypes, settings} from "../constants.mjs";
 
 export default class Scrolls extends ForienBaseModule {
   templates = {
-    magicScrolls: 'partials/actor-sheet-wfrp4e-magic-scrolls.hbs',
-    magicScrollsV2: 'partials/actor-sheet-wfrp4e-magic-scrolls-v2.hbs',
-  }
+    magicScrolls: "partials/actor-sheet-wfrp4e-magic-scrolls.hbs",
+    magicScrollsV2: "partials/actor-sheet-wfrp4e-magic-scrolls-v2.hbs",
+  };
 
   /**
    * @inheritDoc
@@ -33,8 +33,8 @@ export default class Scrolls extends ForienBaseModule {
         items: scrolls,
         show: true,
         collapsed: collapsed?.scrolls,
-        dataType: dataTypes.scroll
-      }
+        dataType: dataTypes.scroll,
+      };
     } else {
       categories.booksAndDocuments.items.push(...scrolls);
     }
@@ -53,21 +53,24 @@ export default class Scrolls extends ForienBaseModule {
   async #onRenderActorSheetV2(sheet, html, context, options) {
     const actor = sheet.actor;
     const scrolls = actor.itemTypes[dataTypes.scroll];
-    const tabMagic = html.querySelector('.tab[data-tab="magic"]');
+    const tabMagic = html.querySelector(".tab[data-tab=\"magic\"]");
     if (!tabMagic) return;
 
-    const content = await foundry.applications.handlebars.renderTemplate(Utility.getTemplate(this.templates.magicScrollsV2), {
-      scrolls,
-      isOwner: sheet.document.isOwner,
-      dataType: dataTypes.scroll
-    });
+    const content = await foundry.applications.handlebars.renderTemplate(
+      Utility.getTemplate(this.templates.magicScrollsV2),
+      {
+        scrolls,
+        isOwner: sheet.document.isOwner,
+        dataType: dataTypes.scroll,
+      },
+    );
     tabMagic.append(Utility.stringToHTMLElement(content));
 
     tabMagic.querySelectorAll(".scrolls .scroll-spell-link").forEach(element => {
-      element.addEventListener("click", (event) => this.#onScrollSpellLinkClick(event))
+      element.addEventListener("click", (event) => this.#onScrollSpellLinkClick(event));
     });
     tabMagic.querySelectorAll(".scrolls .scroll-spell-cast").forEach(element => {
-      element.addEventListener("click", (event) => this.#onScrollSpellCastClick(sheet, event))
+      element.addEventListener("click", (event) => this.#onScrollSpellCastClick(sheet, event));
     });
 
     tabMagic.querySelectorAll(".scrolls .rollable").forEach(element => {
@@ -77,13 +80,13 @@ export default class Scrolls extends ForienBaseModule {
           this._icon = img.src;
           img.src = "systems/wfrp4e/ui/buttons/d10.webp";
         }
-      })
+      });
       element.addEventListener("mouseleave", ev => {
         let img = ev.target.matches("img") ? ev.target : ev.target.querySelector("img");
         if (img) {
           img.src = this._icon;
         }
-      })
+      });
     });
   }
 
@@ -96,7 +99,7 @@ export default class Scrolls extends ForienBaseModule {
    * @returns {Promise<ScrollTest|false>}
    */
   async #onScrollSpellCastClick(sheet, event) {
-    const id = event.currentTarget.closest('.item').dataset.id;
+    const id = event.currentTarget.closest(".item").dataset.id;
     const scroll = sheet.actor.items.get(id);
 
     if (!scroll) return false;
@@ -135,7 +138,7 @@ export default class Scrolls extends ForienBaseModule {
    * @inheritDoc
    */
   applyWfrp4eConfig() {
-    foundry.utils.mergeObject(game.wfrp4e.rolls, {"ScrollTest": ScrollTest})
+    foundry.utils.mergeObject(game.wfrp4e.rolls, {"ScrollTest": ScrollTest});
 
     return {};
   }
@@ -145,14 +148,14 @@ export default class Scrolls extends ForienBaseModule {
    * @returns {Promise<Application|*>}
    */
   async generateRandomScroll() {
-    const loreTable = game.wfrp4e.tables.findTable('scroll', 'lore');
-    const cnTable = game.wfrp4e.tables.findTable('scroll', 'cn');
+    const loreTable = game.wfrp4e.tables.findTable("scroll", "lore");
+    const cnTable = game.wfrp4e.tables.findTable("scroll", "cn");
 
     const loreResult = (await loreTable.roll()).results[0];
     const match = loreResult?.text.match(/\{([a-zA-Z]+)}/);
 
     if (!match) return;
-    const lore = match[1] ?? '';
+    const lore = match[1] ?? "";
     let lores = [lore.toLowerCase()];
 
     if (lores.includes("chaos magic"))
@@ -161,14 +164,17 @@ export default class Scrolls extends ForienBaseModule {
     const maxCNResult = (await cnTable.roll()).results[0];
     const maxCN = Number(maxCNResult?.text) || 0;
 
-    const spells = await warhammer.utility.findAllItems("spell", game.i18n.localize("Forien.Armoury.Macros.GenerateScrollLoading"));
+    const spells = await warhammer.utility.findAllItems(
+      "spell",
+      game.i18n.localize("Forien.Armoury.Macros.GenerateScrollLoading"),
+    );
     const validSpells = [];
 
     for (const spell of spells) {
       if (spell.system.cn.value > maxCN) continue;
       if (
         !lores.includes(spell.system.lore.value) &&
-        !(lores.includes("arcane") && spell.system.lore.value === '')
+        !(lores.includes("arcane") && spell.system.lore.value === "")
       ) {
         continue;
       }
@@ -180,7 +186,7 @@ export default class Scrolls extends ForienBaseModule {
       return Utility.notify(game.i18n.format("Forien.Armoury.Scrolls.MacroCantFind", {lore, maxCN}));
 
     const selectedSpell = validSpells[Math.floor(CONFIG.Dice.randomUniform() * validSpells.length)];
-    const item = await Item.implementation.create({name: 'Temporary Scroll Name', type: dataTypes.scroll});
+    const item = await Item.implementation.create({name: "Temporary Scroll Name", type: dataTypes.scroll});
     await item.update({"system.spellUuid": selectedSpell.uuid}, {skipAsk: true});
 
     setTimeout(() => item.sheet.render(true), 500);

@@ -1,7 +1,7 @@
-import ForienBaseModule             from "../utility/ForienBaseModule.mjs";
-import Utility                      from "../utility/Utility.mjs";
 import {constants, flags, settings} from "../constants.mjs";
 import {debug}                      from "../utility/Debug.mjs";
+import ForienBaseModule             from "../utility/ForienBaseModule.mjs";
+import Utility                      from "../utility/Utility.mjs";
 
 export default class Diseases extends ForienBaseModule {
   #observer;
@@ -44,7 +44,7 @@ export default class Diseases extends ForienBaseModule {
           symptom: true,
           applicationData: {
             type: "document",
-            documentType: "Actor"
+            documentType: "Actor",
           },
           scriptData: [
             {
@@ -60,13 +60,13 @@ export default class Diseases extends ForienBaseModule {
                       return args.type !== "weapon" && !applicableCharacteristics.includes(args.data.characteristic);
                     `,
                   submissionScript: "",
-                  targeter: false
-                }
-              }
-            }
-          ]
-        }
-      }
+                  targeter: false,
+                },
+              },
+            },
+          ],
+        },
+      },
     };
     //#endregion
 
@@ -83,17 +83,17 @@ export default class Diseases extends ForienBaseModule {
           symptom: true,
           applicationData: {
             type: "document",
-            documentType: "Actor"
+            documentType: "Actor",
           },
           scriptData: [
             {
               label: "Scarring",
               trigger: "prePrepareData",
-              script: "args.actor.system.characteristics.fel.modifier -= 10"
-            }
-          ]
-        }
-      }
+              script: "args.actor.system.characteristics.fel.modifier -= 10",
+            },
+          ],
+        },
+      },
     };
     //#endregion
 
@@ -110,7 +110,7 @@ export default class Diseases extends ForienBaseModule {
           symptom: true,
           applicationData: {
             type: "document",
-            documentType: "Actor"
+            documentType: "Actor",
           },
           scriptData: [
             {
@@ -119,11 +119,11 @@ export default class Diseases extends ForienBaseModule {
               script: `
                 args.actor.system.characteristics.fel.modifier -= 5;
                 args.actor.system.characteristics.dex.modifier -= 5;
-              `
-            }
-          ]
-        }
-      }
+              `,
+            },
+          ],
+        },
+      },
     };
     //#endregion
 
@@ -140,7 +140,7 @@ export default class Diseases extends ForienBaseModule {
           symptom: true,
           applicationData: {
             type: "document",
-            documentType: "Actor"
+            documentType: "Actor",
           },
           scriptData: [
             {
@@ -162,10 +162,10 @@ export default class Diseases extends ForienBaseModule {
                   await args.actor.update({"system.status.corruption.value": newCorruption});
                 }
               `,
-            }
-          ]
-        }
-      }
+            },
+          ],
+        },
+      },
     };
     //#endregion
 
@@ -182,7 +182,7 @@ export default class Diseases extends ForienBaseModule {
           symptom: true,
           applicationData: {
             type: "document",
-            documentType: "Actor"
+            documentType: "Actor",
           },
           scriptData: [
             {
@@ -211,13 +211,13 @@ export default class Diseases extends ForienBaseModule {
                       (args.type === "skill" && applicableSkills.includes(args.item.name))
                     )
                   `,
-                  submissionScript: ""
-                }
-              }
-            }
-          ]
-        }
-      }
+                  submissionScript: "",
+                },
+              },
+            },
+          ],
+        },
+      },
     };
     //#endregion
 
@@ -234,7 +234,7 @@ export default class Diseases extends ForienBaseModule {
           symptom: true,
           applicationData: {
             type: "document",
-            documentType: "Actor"
+            documentType: "Actor",
           },
           scriptData: [
             {
@@ -257,13 +257,13 @@ export default class Diseases extends ForienBaseModule {
 
                     return args.type !== "weapon" && !applicableCharacteristics.includes(args.data.characteristic);
                   `,
-                  submissionScript: ""
-                }
-              }
-            }
-          ]
-        }
-      }
+                  submissionScript: "",
+                },
+              },
+            },
+          ],
+        },
+      },
     };
     //#endregion
 
@@ -280,7 +280,7 @@ export default class Diseases extends ForienBaseModule {
           symptom: true,
           applicationData: {
             type: "document",
-            documentType: "Actor"
+            documentType: "Actor",
           },
           scriptData: [
             {
@@ -289,11 +289,11 @@ export default class Diseases extends ForienBaseModule {
               script: `
                 args.actor.system.characteristics.i.modifier -= 15;
                 args.actor.system.characteristics.int.modifier -= 20;
-              `
-            }
-          ]
-        }
-      }
+              `,
+            },
+          ],
+        },
+      },
     };
     //#endregion
 
@@ -308,13 +308,13 @@ export default class Diseases extends ForienBaseModule {
     if (!game.user.isGM || game.user !== game.users.activeGM) return;
     if (!Utility.getSetting(settings.diseases.autoProgress)) return;
 
-    this.#observer = game.modules.get(constants.moduleId).api.modules.get('worldTimeObserver');
+    this.#observer = game.modules.get(constants.moduleId).api.modules.get("worldTimeObserver");
 
     for (let actor of game.actors.contents) {
       await this.#registerActorDiseaseListener(actor);
     }
 
-    debug('[Diseases] Registered disease listeners', {listeners: this.#listeners})
+    debug("[Diseases] Registered disease listeners", {listeners: this.#listeners});
   }
 
   /**
@@ -340,13 +340,13 @@ export default class Diseases extends ForienBaseModule {
   async #registerCreatedDiseaseListener(disease) {
     if (!game.user.isGM || game.user !== game.users.activeGM) return;
     if (!Utility.getSetting(settings.diseases.autoProgress)) return;
-    if (disease.type !== 'disease') return;
+    if (disease.type !== "disease") return;
     let actor = disease.actor;
 
     if (!(actor instanceof ActorWFRP4e)) return;
 
     await this.#registerDiseaseListener(actor, disease);
-    debug('[Diseases] Registered a listener for newly created disease', {actor, disease, listeners: this.#listeners})
+    debug("[Diseases] Registered a listener for newly created disease", {actor, disease, listeners: this.#listeners});
   }
 
   /**
@@ -358,7 +358,7 @@ export default class Diseases extends ForienBaseModule {
    * @return {Promise<void>}
    */
   async #registerDiseaseListener(actor, disease) {
-    let type = disease.system.duration.active ? 'duration' : 'incubation';
+    let type = disease.system.duration.active ? "duration" : "incubation";
     let unit = disease.system[type].unit;
     let unitSeconds = this.#getUnitSeconds(unit);
     if (unitSeconds === false) return;
@@ -387,7 +387,7 @@ export default class Diseases extends ForienBaseModule {
     let listenerId = this.#observer.subscribe(this.#handleAutoProgressEvent.bind(this), {
       args: {actorId: actor.id, diseaseId: disease.id, type},
       every: unitSeconds,
-      last: lastProgress
+      last: lastProgress,
     });
 
     this.#listeners.set(disease.uuid, listenerId);
@@ -403,12 +403,12 @@ export default class Diseases extends ForienBaseModule {
    * @return {Promise<ItemWFRP4e|false>}
    */
   async #rollDisease(actor, disease, type) {
-    debug('[Diseases] Disease value is NaN, attempting to roll on it', {actor, disease, type});
+    debug("[Diseases] Disease value is NaN, attempting to roll on it", {actor, disease, type});
     disease = disease.toObject();
     try {
       disease.system[type].value = (await new Roll(disease.system[type].value).roll()).total;
 
-      if (type === 'duration')
+      if (type === "duration")
         disease.system.duration.active = true;
     } catch {
       ui.notifications.error(game.i18n.localize("ERROR.ParseDisease"));
@@ -428,7 +428,7 @@ export default class Diseases extends ForienBaseModule {
    * @return {{saved: boolean, lastProgress: number}}
    */
   #getLastProgress(disease) {
-    let lastProgress = disease.getFlag(constants.moduleId, flags.diseases.lastProgress)
+    let lastProgress = disease.getFlag(constants.moduleId, flags.diseases.lastProgress);
     if (lastProgress)
       return {lastProgress, saved: true};
 
@@ -488,7 +488,7 @@ export default class Diseases extends ForienBaseModule {
     await this.#saveLastProgress(disease, time);
 
     let newDisease = await disease.system.decrement();
-    let newType = newDisease?.system.duration.active ? 'duration' : 'incubation';
+    let newType = newDisease?.system.duration.active ? "duration" : "incubation";
 
     if (newType !== type) {
       this.#removeListener(uuid);
@@ -503,7 +503,7 @@ export default class Diseases extends ForienBaseModule {
       this.#subscribeToObserver(actor, disease, newType, unitSeconds, time);
     }
 
-    debug('[Diseases] Handled disease progression event', {actor, disease, type, newType, listeners: this.#listeners})
+    debug("[Diseases] Handled disease progression event", {actor, disease, type, newType, listeners: this.#listeners});
   }
 
   /**
@@ -540,23 +540,27 @@ export default class Diseases extends ForienBaseModule {
       if (disease.system[type].value <= 0) {
         disease.system[type].value = 0;
 
-        if (type === 'incubation') {
+        if (type === "incubation") {
           await actor.activateDisease(disease);
-          newType = 'duration';
+          newType = "duration";
         }
 
-        if (type === 'duration') {
+        if (type === "duration") {
           await actor.finishDisease(disease);
           newType = null;
         }
       }
     } else {
-      let chatData = game.wfrp4e.utility.chatDataSetup(`Attempted to decrement ${disease.name} ${type} but value is non-numeric`, "gmroll", false)
-      chatData.speaker = {alias: actor.name}
-      ChatMessage.create(chatData)
+      let chatData = game.wfrp4e.utility.chatDataSetup(
+        `Attempted to decrement ${disease.name} ${type} but value is non-numeric`,
+        "gmroll",
+        false,
+      );
+      chatData.speaker = {alias: actor.name};
+      ChatMessage.create(chatData);
     }
 
-    await actor.updateEmbeddedDocuments("Item", [disease])
+    await actor.updateEmbeddedDocuments("Item", [disease]);
 
     return newType;
   }

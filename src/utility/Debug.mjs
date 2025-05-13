@@ -2,7 +2,7 @@ import {constants} from "../constants.mjs";
 import Utility     from "./Utility.mjs";
 
 class Debug {
-  static #debugSetting = 'debug';
+  static #debugSetting = "debug";
 
   static get setting() {
     return Debug.#debugSetting;
@@ -12,7 +12,7 @@ class Debug {
    * Prints current module's settings to console for reference
    */
   static logSettings() {
-    Debug.debug('Current game settings:', Debug.summarizeSettings);
+    Debug.debug("Current game settings:", Debug.summarizeSettings);
   }
 
   /**
@@ -21,9 +21,9 @@ class Debug {
    * @param {String} msg   Debug message
    * @param {any} data     Additional data to output next to the message
    */
-  static debug(msg, data = '') {
+  static debug(msg, data = "") {
     if (Debug.enabled)
-      Utility.notify(msg, {type: 'debug', consoleOnly: true, data: data});
+      Utility.notify(msg, {type: "debug", consoleOnly: true, data: data});
   }
 
   /**
@@ -31,12 +31,12 @@ class Debug {
    */
   static registerSetting() {
     game.settings.register(constants.moduleId, Debug.setting, {
-      name: 'Forien.Settings.Debug.Enable',
-      hint: 'Forien.Settings.Debug.EnableHint',
-      scope: 'client',
+      name: "Forien.Settings.Debug.Enable",
+      hint: "Forien.Settings.Debug.EnableHint",
+      scope: "client",
       config: false,
       default: false,
-      type: Boolean
+      type: Boolean,
     });
   }
 
@@ -55,7 +55,7 @@ class Debug {
    * @return {{}}
    */
   static get summarizeSettings() {
-    const moduleSettings = {}
+    const moduleSettings = {};
     for (let [_key, setting] of game.settings.settings.entries()) {
       if (setting.namespace !== constants.moduleId) continue;
 
@@ -73,7 +73,7 @@ class Debug {
  * @param {String} msg   Debug message
  * @param {any} data     Additional data to output next to the message
  */
-function debug(msg, data = '') {
+function debug(msg, data = "") {
   Debug.debug(msg, data);
 }
 

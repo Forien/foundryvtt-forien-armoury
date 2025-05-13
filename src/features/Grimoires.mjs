@@ -1,8 +1,6 @@
+import {dataTypes, settings} from "../constants.mjs";
 import ForienBaseModule      from "../utility/ForienBaseModule.mjs";
 import Utility               from "../utility/Utility.mjs";
-import ScrollDialog          from "../apps/ScrollDialog.mjs";
-import ScrollTest            from "../tests/ScrollTest.mjs";
-import {dataTypes, settings} from "../constants.mjs";
 
 export default class Grimoires extends ForienBaseModule {
   /**
@@ -31,8 +29,8 @@ export default class Grimoires extends ForienBaseModule {
         toggle: true,
         toggleName: game.i18n.localize("Equipped"),
         collapsed: collapsed?.grimoires,
-        dataType: dataTypes.grimoire
-      }
+        dataType: dataTypes.grimoire,
+      };
     } else {
       categories.booksAndDocuments.items.push(...grimoires);
     }

@@ -30,7 +30,7 @@ export default class Macros extends ForienBaseModule {
         lore: lore.capitalize(),
         macro: macro.name,
         SL,
-        requiredSL
+        requiredSL,
       }), {type: "warning"});
 
     const updates = actor.itemTypes.spell.reduce((acc, s) => {
@@ -49,7 +49,7 @@ export default class Macros extends ForienBaseModule {
       content: `<b>${header} – ${macro.name}</b><br>
     <b>${SLCost}</b> ${requiredSL}
     <p>${description}</p>
-    <em>${channelledChanged}</em>`
+    <em>${channelledChanged}</em>`,
     });
 
     return true;
@@ -82,7 +82,7 @@ export default class Macros extends ForienBaseModule {
       failureDecreasesSL = true,
       hideTest = false,
       hideProgress = true,
-    } = {}
+    } = {},
   ) {
     const extendedTestData = {
       name,
@@ -91,31 +91,31 @@ export default class Macros extends ForienBaseModule {
       system: {
         SL: {
           current: 0,
-          target: 1
+          target: 1,
         },
         test: {
-          value: skill
+          value: skill,
         },
         failingDecreases: {
-          value: failureDecreasesSL
+          value: failureDecreasesSL,
         },
         completion: {
-          value: onCompletion
+          value: onCompletion,
         },
         hide: {
           test: hideTest,
-          progress: hideProgress
+          progress: hideProgress,
         },
         difficulty: {
-          value: "challenging"
-        }
-      }
-    }
+          value: "challenging",
+        },
+      },
+    };
 
-    let difficultyOptions = '';
+    let difficultyOptions = "";
     for (let [difficulty, label] of Object.entries(game.wfrp4e.config.difficultyLabels)) {
-      const selected = difficulty === "challenging" ? 'selected' : '';
-      difficultyOptions += `<option value="${difficulty}" ${selected}>${label}</option>`
+      const selected = difficulty === "challenging" ? "selected" : "";
+      difficultyOptions += `<option value="${difficulty}" ${selected}>${label}</option>`;
     }
 
     let content = `
@@ -151,8 +151,8 @@ export default class Macros extends ForienBaseModule {
           return Utility.error(game.i18n.localize("Forien.Armoury.Macros.Lockpick.DifficultyEmpty"));
 
         await this.#createExtendedTest(SL, difficulty, extendedTestData, nameShowSL, nameShowDifficulty);
-      }
-    })
+      },
+    });
   }
 
   /**
@@ -182,7 +182,7 @@ export default class Macros extends ForienBaseModule {
       nameAppends.push(`SL ${SL}`);
 
     if (nameAppends.length)
-      extendedTestData.name += ` (${nameAppends.join(', ')})`
+      extendedTestData.name += ` (${nameAppends.join(", ")})`;
 
     let controlled = canvas.tokens.controlled;
 
@@ -217,14 +217,14 @@ export default class Macros extends ForienBaseModule {
       return Utility.notify(game.i18n.localize("Forien.Armoury.Macros.CheckStatus.NoActorsFound"), {type: "warning"});
 
     function getName(actor) {
-      return actor.name.split(' ')[0];
+      return actor.name.split(" ")[0];
     }
 
     function getCareer({currentCareer}) {
       if (!currentCareer)
-        return '-';
+        return "-";
 
-      let career = '';
+      let career = "";
       career += `${currentCareer.name} (${currentCareer.system.level.value})<br/>`;
       career += `<em>${currentCareer.system.class.value}</em>`;
 
@@ -235,7 +235,7 @@ export default class Macros extends ForienBaseModule {
       const {status} = system;
 
       if (!status?.fortune)
-        return '-';
+        return "-";
 
       let fortune = status.fortune.value;
       let fate = status.fate?.value || 0;
@@ -251,14 +251,14 @@ export default class Macros extends ForienBaseModule {
       if (status?.fate)
         return `${status.fate.value}`;
 
-      return '-';
+      return "-";
     }
 
     function getResolve({system, itemTypes}) {
       const {status} = system;
 
       if (!status?.resolve)
-        return '-';
+        return "-";
 
       let resolve = status.resolve.value;
       let resilience = status.resilience?.value || 0;
@@ -274,41 +274,45 @@ export default class Macros extends ForienBaseModule {
       if (status?.resilience)
         return `${status.resilience.value}`;
 
-      return '-';
+      return "-";
     }
 
     function getPoints(actor) {
-      let points = '';
+      let points = "";
 
       if (!actor.system.status?.fate)
-        return '<td colspan="2">-</td>';
+        return "<td colspan=\"2\">-</td>";
 
-      points += '<td>';
-      points += `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.FortunePointsShort")}: </b> ${getFortune(actor)}<br/>`;
+      points += "<td>";
+      points +=
+        `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.FortunePointsShort")}: </b> ${getFortune(actor)}<br/>`;
       points += `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.FatePointsShort")}: </b> ${getFate(actor)}`;
-      points += '</td>';
-      points += '<td>';
-      points += `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ResolvePointsShort")}: </b> ${getResolve(actor)}<br/>`;
-      points += `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ResiliencePointsShort")}: </b> ${getResilience(actor)}`;
-      points += '</td>';
+      points += "</td>";
+      points += "<td>";
+      points +=
+        `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ResolvePointsShort")}: </b> ${getResolve(actor)}<br/>`;
+      points +=
+        `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ResiliencePointsShort")}: </b> ${getResilience(actor)}`;
+      points += "</td>";
 
       return points;
     }
 
     function getExperience({system}) {
       if (!system.details.experience)
-        return '-';
+        return "-";
 
       const {current, total} = system.details.experience;
-      let experience = '';
+      let experience = "";
 
-      experience += `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ExperienceLeft")}: </b> ${current}<br/>`;
+      experience +=
+        `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ExperienceLeft")}: </b> ${current}<br/>`;
       experience += `<b>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.ExperienceTotal")}: </b> ${total}`;
 
       return experience;
     }
 
-    let content = '';
+    let content = "";
 
     content += `<h3>${game.i18n.localize("Forien.Armoury.Macros.CheckStatus.MessageHeader")}</h3>`;
     content += `<table class="character-summary">`;
@@ -332,8 +336,8 @@ export default class Macros extends ForienBaseModule {
     await ChatMessage.create({
       speaker: {},
       whisper: game.users.filter(u => u.isGM),
-      content
-    })
+      content,
+    });
   }
 
   awardXP(
@@ -343,21 +347,23 @@ export default class Macros extends ForienBaseModule {
       companionFolderId = null,
       showMessage = true,
       messageFlavor = null,
-      messageShowTotalXP = false
-    } = {}
+      messageShowTotalXP = false,
+    } = {},
   ) {
     if (!game.user.isGM)
       return Utility.notify(game.i18n.localize("Forien.Armoury.Macros.NotAGM"), {type: "warning"});
 
     const characterFolder = game.folders.get(characterFolderId);
     const companionFolder = game.folders.get(companionFolderId);
-    const characters = characterFolder?.contents.filter(c => c instanceof ActorWFRP4e && c.type === 'character') ?? [];
-    const companions = companionFolder?.contents.filter(c => c instanceof ActorWFRP4e && c.type === 'character') ?? [];
+    const characters = characterFolder?.contents.filter(c => c instanceof ActorWFRP4e && c.type === "character") ?? [];
+    const companions = companionFolder?.contents.filter(c => c instanceof ActorWFRP4e && c.type === "character") ?? [];
 
-    console.log({characterFolder,
+    console.log({
+      characterFolder,
       companionFolder,
       characters,
-      companions})
+      companions,
+    });
 
     function prepareActorUpdate(actor, amount, reason) {
       const experience = foundry.utils.duplicate(actor.details.experience);
@@ -367,7 +373,7 @@ export default class Macros extends ForienBaseModule {
       return {
         _id: actor._id,
         "system.details.experience": experience,
-      }
+      };
     }
 
     async function updateActors(actors, amount, reason) {
@@ -382,10 +388,10 @@ export default class Macros extends ForienBaseModule {
     }
 
     function makeList(actors, amount = null) {
-      let output = '';
+      let output = "";
 
       actors.forEach(a => {
-        let appendix = '';
+        let appendix = "";
         if (messageShowTotalXP) {
           let xpTotal = a.system.details.experience.total;
           if (amount !== null) {
@@ -396,16 +402,17 @@ export default class Macros extends ForienBaseModule {
           }
         }
         output += `– ${a?.actor?.name || a.name} ${appendix}<br />`;
-      })
+      });
 
       return output;
     }
 
     function makeDialogList(actors, type) {
-      let output = '';
+      let output = "";
 
       for (const actor of actors) {
-        output += `<input type="checkbox" id="${actor.id}" name="${type}" value="${actor.id}" style="width: 14px;height: 14px;" checked/>`;
+        output +=
+          `<input type="checkbox" id="${actor.id}" name="${type}" value="${actor.id}" style="width: 14px;height: 14px;" checked/>`;
         output += `<label for="${actor.id}">${actor.name}</label><br />`;
       }
 
@@ -419,7 +426,7 @@ export default class Macros extends ForienBaseModule {
 
       if (!showMessage) return;
 
-      let content = '';
+      let content = "";
 
       if (characters.length) {
         content += `<p>Player characters have been awarded ${xp} XP for "${reason}"</p>`;
@@ -438,8 +445,8 @@ export default class Macros extends ForienBaseModule {
       await ChatMessage.create({
         speaker: {},
         flavor: messageFlavor,
-        content
-      })
+        content,
+      });
     }
 
     const gridStyle = `display: grid;
@@ -449,11 +456,11 @@ grid-auto-rows: 1fr;
 gap: 5px 5px;
 grid-auto-flow: row;
 grid-template-areas: 'headerCharacters headerCompanions'
-'characters companions';`
+'characters companions';`;
 
-    let characterList = makeDialogList(characters, 'characters');
-    let companionList = makeDialogList(companions, 'companions');
-    let reason = '';
+    let characterList = makeDialogList(characters, "characters");
+    let companionList = makeDialogList(companions, "companions");
+    let reason = "";
 
     let sessionId = game.gmtoolkit?.utility.getSession()?.id;
 
@@ -475,7 +482,8 @@ grid-template-areas: 'headerCharacters headerCompanions'
               </div>
               <div class="form-group">
                 <label>${game.i18n.localize("Forien.Armoury.Macros.AwardXP.Reason")}</label> 
-                <input type="text" id="reason" value="${reason}" placeholder="${game.i18n.localize("Forien.Armoury.Macros.AwardXP.Reason").toLowerCase()}" />
+                <input type="text" id="reason" value="${reason}" placeholder="${game.i18n.localize(
+        "Forien.Armoury.Macros.AwardXP.Reason").toLowerCase()}" />
               </div>
           </form>`,
       buttons: {
@@ -497,14 +505,14 @@ grid-template-areas: 'headerCharacters headerCompanions'
             html.find("[name='companions']:checked").each((i, e) => companions.push(game.actors.get(e.value)));
 
             return awardXP(xp, reason, characters, companions);
-          }
+          },
         },
         no: {
           icon: "<i class='fas fa-times'></i>",
-          label: game.i18n.localize("Cancel")
-        }
+          label: game.i18n.localize("Cancel"),
+        },
       },
-      default: "yes"
+      default: "yes",
     }).render(true);
   }
 
@@ -514,7 +522,7 @@ grid-template-areas: 'headerCharacters headerCompanions'
       addToActor = false,
       autoPay = false,
       quantity = 1,
-    } = {}
+    } = {},
   ) {
     const {actor} = this.#getScope();
 
@@ -522,16 +530,16 @@ grid-template-areas: 'headerCharacters headerCompanions'
       return Utility.notify(game.i18n.localize("Forien.Armoury.Macros.MustControlActor"), {type: "warning"});
 
     const allowedLores = [
-      'fire',
-      'heavens',
-      'metal',
-      'beasts',
-      'life',
-      'light',
-      'death',
-      'shadow',
-      'hedgecraft',
-      'witchcraft'
+      "fire",
+      "heavens",
+      "metal",
+      "beasts",
+      "life",
+      "light",
+      "death",
+      "shadow",
+      "hedgecraft",
+      "witchcraft",
     ];
 
     const compendium = game.packs.get("forien-armoury.forien-armoury");
@@ -546,11 +554,11 @@ grid-template-areas: 'headerCharacters headerCompanions'
       death: "VuO1EDySwVbmtdcH",
       shadow: "rsQryOWSCufQnNAC",
       hedgecraft: "gEnMIQ1x4ETY1gCB",
-      witchcraft: "relq8BaanmuOaPEP"
-    }
+      witchcraft: "relq8BaanmuOaPEP",
+    };
 
     if (!actor)
-      return ui.notifications.notify(game.i18n.localize('Forien.Armoury.Macros.MustControlActor'), 'warning')
+      return ui.notifications.notify(game.i18n.localize("Forien.Armoury.Macros.MustControlActor"), "warning");
 
     const spells = actor.itemTypes.spell;
     let options = "";
@@ -559,7 +567,7 @@ grid-template-areas: 'headerCharacters headerCompanions'
       if (allowedLores.includes(spell.lore.value)) {
         options += `<option value="${spell.uuid}">${spell.name} (CN: ${spell.cn.value})</option>`;
       }
-    })
+    });
 
     /**
      * @param {ItemWFRP4e} spell
@@ -570,14 +578,14 @@ grid-template-areas: 'headerCharacters headerCompanions'
       const baseIngredient = await compendium.getDocument(loreIngredients[lore]);
 
       const ingredientData = baseIngredient.toObject();
-      const ingredientFor = game.i18n.localize('Forien.Armoury.Macros.IngredientFor');
+      const ingredientFor = game.i18n.localize("Forien.Armoury.Macros.IngredientFor");
       ingredientData.name = `${ingredientFor} ${spell.name}`;
 
       switch (lore.toLowerCase()) {
-        case 'hedgecraft':
+        case "hedgecraft":
           ingredientData.system.price.bp = 5;
           break;
-        case 'witchcraft':
+        case "witchcraft":
           ingredientData.system.price.bp = spell.cn.value;
           break;
         default:
@@ -586,7 +594,7 @@ grid-template-areas: 'headerCharacters headerCompanions'
       ingredientData.system.spellIngredient.value = spell._id;
 
       if (!addToActor) {
-        return Item.implementation.create(ingredientData, {renderSheet : true});
+        return Item.implementation.create(ingredientData, {renderSheet: true});
       }
 
       ingredientData.system.quantity.value = quantity;
@@ -604,10 +612,10 @@ grid-template-areas: 'headerCharacters headerCompanions'
     }
 
     new Dialog({
-      title: game.i18n.localize('Forien.Armoury.Macros.SelectSpell'),
+      title: game.i18n.localize("Forien.Armoury.Macros.SelectSpell"),
       content: `<form>
               <div class="form-group">
-                <label>${game.i18n.localize('Forien.Armoury.Macros.AvailableSpells')}</label> 
+                <label>${game.i18n.localize("Forien.Armoury.Macros.AvailableSpells")}</label> 
 				<select name="spell-id" id="spell-id">
 				   ${options}
 				</select>
@@ -616,20 +624,20 @@ grid-template-areas: 'headerCharacters headerCompanions'
       buttons: {
         yes: {
           icon: "<i class='fas fa-check'></i>",
-          label: game.i18n.localize('Forien.Armoury.Macros.Generate'),
+          label: game.i18n.localize("Forien.Armoury.Macros.Generate"),
           callback: async html => {
-            let spellUuid = html.find("#spell-id").val()
+            let spellUuid = html.find("#spell-id").val();
             let spell = await fromUuid(spellUuid);
 
             return await createIngredient(spell);
-          }
+          },
         },
         no: {
           icon: "<i class='fas fa-times'></i>",
-          label: game.i18n.localize('Forien.Armoury.Macros.Cancel')
-        }
+          label: game.i18n.localize("Forien.Armoury.Macros.Cancel"),
+        },
       },
-      default: "yes"
+      default: "yes",
     }).render(true);
   }
 

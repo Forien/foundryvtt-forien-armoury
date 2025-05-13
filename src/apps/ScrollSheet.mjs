@@ -7,16 +7,20 @@ import Utility     from "../utility/Utility.mjs";
  */
 export default class ScrollSheet extends BaseWFRP4eItemSheet {
   static DEFAULT_OPTIONS = {
-    classes: ['forien-armoury', 'scroll-sheet'],
-  }
+    classes: ["forien-armoury", "scroll-sheet"],
+  };
 
   static PARTS = {
-    header : {scrollable: [""], template : 'systems/wfrp4e/templates/sheets/item/item-header.hbs', classes: ["sheet-header"] },
-    tabs: { scrollable: [""], template: 'systems/wfrp4e/templates/sheets/item/item-tabs.hbs' },
-    description: { scrollable: [""], template: 'systems/wfrp4e/templates/sheets/item/tabs/item-description.hbs' },
-    details: { scrollable: [""], template: `modules/${constants.moduleId}/templates/apps/scroll/details.hbs` },
-    effects: { scrollable: [""], template: 'systems/wfrp4e/templates/sheets/item/tabs/item-effects.hbs' },
-  }
+    header: {
+      scrollable: [""],
+      template: "systems/wfrp4e/templates/sheets/item/item-header.hbs",
+      classes: ["sheet-header"],
+    },
+    tabs: {scrollable: [""], template: "systems/wfrp4e/templates/sheets/item/item-tabs.hbs"},
+    description: {scrollable: [""], template: "systems/wfrp4e/templates/sheets/item/tabs/item-description.hbs"},
+    details: {scrollable: [""], template: `modules/${constants.moduleId}/templates/apps/scroll/details.hbs`},
+    effects: {scrollable: [""], template: "systems/wfrp4e/templates/sheets/item/tabs/item-effects.hbs"},
+  };
 
   /**
    * @inheritDoc
@@ -51,7 +55,10 @@ export default class ScrollSheet extends BaseWFRP4eItemSheet {
     let item = await Item.implementation.fromDropData(data);
 
     if (!item)
-      return Utility.notify(game.i18n.localize("Forien.Armoury.Scrolls.ItemNotFound"), {type: "error", data: {data, event}, trace: true});
+      return Utility.notify(
+        game.i18n.localize("Forien.Armoury.Scrolls.ItemNotFound"),
+        {type: "error", data: {data, event}, trace: true},
+      );
 
     // If dragged a Spell from Actor, retrieve the original World/Compendium Spell
     if (item.parent instanceof Actor) {
@@ -79,8 +86,14 @@ export default class ScrollSheet extends BaseWFRP4eItemSheet {
   async _onRender(context, options) {
     await super._onRender(context, options);
 
-    this.element.querySelectorAll(".spell").forEach(e => e.addEventListener("click", this.#onScrollSpellClick.bind(this)));
-    this.element.querySelectorAll(".spell-container .spell-refresh").forEach(e => e.addEventListener("click", this.#onSpellRefreshClick.bind(this)));
+    this.element.querySelectorAll(".spell").forEach(e => e.addEventListener(
+      "click",
+      this.#onScrollSpellClick.bind(this),
+    ));
+    this.element.querySelectorAll(".spell-container .spell-refresh").forEach(e => e.addEventListener(
+      "click",
+      this.#onSpellRefreshClick.bind(this),
+    ));
   }
 
   /**
@@ -89,7 +102,7 @@ export default class ScrollSheet extends BaseWFRP4eItemSheet {
    * @param {MouseEvent} event
    */
   #onScrollSpellClick(event) {
-    const uuid = event.currentTarget.closest('.spell-container').dataset.uuid;
+    const uuid = event.currentTarget.closest(".spell-container").dataset.uuid;
 
     fromUuid(uuid).then(item => item?.sheet.render(true));
   }
@@ -100,7 +113,7 @@ export default class ScrollSheet extends BaseWFRP4eItemSheet {
    * @param {MouseEvent} event
    */
   #onSpellRefreshClick(event) {
-    const uuid = event.currentTarget.closest('.spell-container').dataset.uuid;
+    const uuid = event.currentTarget.closest(".spell-container").dataset.uuid;
 
     fromUuid(uuid).then(() => this.render(true));
   }

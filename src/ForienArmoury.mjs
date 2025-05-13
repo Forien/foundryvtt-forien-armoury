@@ -1,29 +1,29 @@
+import GrimoireSheet                    from "./apps/GrimoireSheet.mjs";
+import ScrollSheet                      from "./apps/ScrollSheet.mjs";
+import SettingsApp                      from "./apps/SettingsApp.mjs";
+import {constants, dataTypes, settings} from "./constants.mjs";
+import GrimoireModel                    from "./data-models/Grimoire.mjs";
+import ScrollModel                      from "./data-models/Scroll.mjs";
 import ArrowReclamation                 from "./features/ArrowReclamation.mjs";
 import CastingFatigue                   from "./features/CastingFatigue.mjs";
 import CheckCareers                     from "./features/CheckCareers.mjs";
 import CombatFatigue                    from "./features/CombatFatigue.mjs";
 import Diseases                         from "./features/Diseases.mjs";
-import Integrations                     from "./Integrations.mjs";
-import ItemProperties                   from "./features/ItemProperties.mjs";
-import ItemRepair                       from "./features/ItemRepair.mjs";
-import SettingsApp                      from "./apps/SettingsApp.mjs";
-import Species                          from "./features/Species.mjs";
-import TemporaryRunes                   from "./features/Runes.mjs";
-import Utility                          from "./utility/Utility.mjs";
-import WorldTimeObserver                from "./utility/WorldTimeObserver.mjs";
-import {Debug}                          from "./utility/Debug.mjs";
-import {constants, dataTypes, settings} from "./constants.mjs";
-import {styleHelpers}                   from "./helpers/styleHelpers.js";
-import {registerSettings}               from "./Settings.mjs";
-import ScrollSheet                      from "./apps/ScrollSheet.mjs";
-import ScrollModel                      from "./data-models/Scroll.mjs";
-import Scrolls                          from "./features/Scrolls.mjs";
-import Macros                           from "./features/Macros.js";
-import GrimoireModel                    from "./data-models/Grimoire.mjs";
-import GrimoireSheet                    from "./apps/GrimoireSheet.mjs";
 import Grimoires                        from "./features/Grimoires.mjs";
 import Injuries                         from "./features/Injuries.mjs";
+import ItemProperties                   from "./features/ItemProperties.mjs";
+import ItemRepair                       from "./features/ItemRepair.mjs";
+import Macros                           from "./features/Macros.js";
+import TemporaryRunes                   from "./features/Runes.mjs";
+import Scrolls                          from "./features/Scrolls.mjs";
+import Species                          from "./features/Species.mjs";
 import Tokens                           from "./features/Tokens.mjs";
+import {styleHelpers}                   from "./helpers/styleHelpers.js";
+import Integrations                     from "./Integrations.mjs";
+import {registerSettings}               from "./Settings.mjs";
+import {Debug}                          from "./utility/Debug.mjs";
+import Utility                          from "./utility/Utility.mjs";
+import WorldTimeObserver                from "./utility/WorldTimeObserver.mjs";
 
 export default class ForienArmoury {
   /**
@@ -46,7 +46,7 @@ export default class ForienArmoury {
     TemporaryRunes,
     Tokens,
     WorldTimeObserver,
-  ]
+  ];
 
   /**
    * Actually initialized modules
@@ -81,7 +81,7 @@ export default class ForienArmoury {
    * @return {TemporaryRunes}
    */
   get runes() {
-    return this.modules.get('temporaryRunes');
+    return this.modules.get("temporaryRunes");
   }
 
   /**
@@ -89,56 +89,56 @@ export default class ForienArmoury {
    * @return {ItemRepair}
    */
   get itemRepair() {
-    return this.modules.get('itemRepair');
+    return this.modules.get("itemRepair");
   }
 
   /**
    * @return {CombatFatigue}
    */
   get combatFatigue() {
-    return this.modules.get('combatFatigue');
+    return this.modules.get("combatFatigue");
   };
 
   /**
    * @return {CastingFatigue}
    */
   get castingFatigue() {
-    return this.modules.get('castingFatigue');
+    return this.modules.get("castingFatigue");
   };
 
   /**
    * @return {ItemProperties}
    */
   get itemProperties() {
-    return this.modules.get('itemProperties');
+    return this.modules.get("itemProperties");
   };
 
   /**
    * @return {ArrowReclamation}
    */
   get arrowReclamation() {
-    return this.modules.get('arrowReclamation');
+    return this.modules.get("arrowReclamation");
   };
 
   /**
    * @return {CheckCareers}
    */
   get checkCareers() {
-    return this.modules.get('checkCareers');
+    return this.modules.get("checkCareers");
   };
 
   /**
    * @return {Macros}
    */
   get macros() {
-    return this.modules.get('macros');
+    return this.modules.get("macros");
   };
 
   /**
    * @return {Integrations}
    */
   get integrations() {
-    return this.modules.get('integrations');
+    return this.modules.get("integrations");
   };
 
   #registerDataModels() {
@@ -152,11 +152,11 @@ export default class ForienArmoury {
     });
     foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, constants.moduleId, ScrollSheet, {
       types: [dataTypes.scroll],
-      makeDefault: true
+      makeDefault: true,
     });
     foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, constants.moduleId, GrimoireSheet, {
       types: [dataTypes.grimoire],
-      makeDefault: true
+      makeDefault: true,
     });
   }
 
@@ -170,7 +170,7 @@ export default class ForienArmoury {
     }
 
     this.helpers = {
-      styles: styleHelpers
+      styles: styleHelpers,
     };
   }
 
@@ -178,14 +178,14 @@ export default class ForienArmoury {
    * Binds hooks
    */
   #bindHooks() {
-    Hooks.once('ready', () => {
+    Hooks.once("ready", () => {
       if (game.modules.get("socketlib")?.active) {
         this.#socket = socketlib.registerModule(constants.moduleId);
-        this.modules.get('arrowReclamation').registerSockets(this.#socket);
+        this.modules.get("arrowReclamation").registerSockets(this.#socket);
       }
 
       if (Utility.getSetting(settings.initialized) === false) {
-        this.#initialConfig()
+        this.#initialConfig();
       }
     });
 
@@ -200,13 +200,13 @@ export default class ForienArmoury {
   #preloadTemplates() {
     const templates = {
       [constants.moduleId]: {
-        settings: SettingsApp.partials
-      }
+        settings: SettingsApp.partials,
+      },
     };
 
     this.modules.forEach((module, name) => {
       templates[constants.moduleId][name] = module.getTemplates();
-    })
+    });
 
 
     Utility.preloadTemplates(templates);
@@ -218,13 +218,13 @@ export default class ForienArmoury {
    * For example, adding a Runebound lore so Runebound Spells can be searched via Item Browser
    */
   #hackWFRP4e() {
-    game.wfrp4e.config.magicLores.runebound = 'Forien.Armoury.Runebound.LoreName';
+    game.wfrp4e.config.magicLores.runebound = "Forien.Armoury.Runebound.LoreName";
 
     this.modules.forEach((module, _name) => {
       let config = module.applyWfrp4eConfig();
 
-      foundry.utils.mergeObject(game.wfrp4e.config, config)
-    })
+      foundry.utils.mergeObject(game.wfrp4e.config, config);
+    });
   }
 
   /**
@@ -234,14 +234,14 @@ export default class ForienArmoury {
     registerSettings();
     this.modules.forEach((module) => {
       module.registerSettings();
-    })
+    });
     Debug.registerSetting();
   }
 
   #initialConfig() {
     this.modules.forEach((module) => {
       module.registerSettings();
-    })
+    });
   }
 
   /**
@@ -249,6 +249,6 @@ export default class ForienArmoury {
    * @return {string}
    */
   version() {
-    return '1.2.0';
+    return "1.2.0";
   }
 }

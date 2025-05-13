@@ -1,14 +1,14 @@
-import ForienBaseModule from "../utility/ForienBaseModule.mjs";
-import Utility          from "../utility/Utility.mjs";
 import {settings}       from "../constants.mjs";
 import {debug}          from "../utility/Debug.mjs";
+import ForienBaseModule from "../utility/ForienBaseModule.mjs";
+import Utility          from "../utility/Utility.mjs";
 
 export default class Tokens extends ForienBaseModule {
   #allowedTypes = [
-    'npc',
-    'creature'
+    "npc",
+    "creature",
   ];
-  #brassPenniesItemUUID = 'Compendium.wfrp4e-core.items.Item.0MYOJFx3vkYA95B4';
+  #brassPenniesItemUUID = "Compendium.wfrp4e-core.items.Item.0MYOJFx3vkYA95B4";
 
   /**
    * @inheritDoc
@@ -46,7 +46,7 @@ export default class Tokens extends ForienBaseModule {
       money = await this.#rollMoney(token, formula);
     }
 
-    debug('[Tokens] Performed rolls on Token Creation.', {token, formula, money, rollMode, moneyMode});
+    debug("[Tokens] Performed rolls on Token Creation.", {token, formula, money, rollMode, moneyMode});
   }
 
   /**
@@ -66,14 +66,14 @@ export default class Tokens extends ForienBaseModule {
       doRoll = await foundry.applications.api.DialogV2.confirm({
         window: {
           title: game.i18n.format("Forien.Armoury.Actors.ShouldRollTokenTitle", {
-            name: token.name
-          })
+            name: token.name,
+          }),
         },
         content: game.i18n.format("Forien.Armoury.Actors.ShouldRollTokenContent", {
           name: token.name,
-          species: token.actor.system.details.species.value
-        })
-      })
+          species: token.actor.system.details.species.value,
+        }),
+      });
     }
 
     return doRoll;
@@ -95,7 +95,7 @@ export default class Tokens extends ForienBaseModule {
     ) {
       formula = await ValueDialog.create({
         title: token.name,
-        content: game.i18n.localize("Forien.Armoury.Actors.InputMoneyFormula")
+        content: game.i18n.localize("Forien.Armoury.Actors.InputMoneyFormula"),
       }, formula);
     }
 
@@ -119,9 +119,9 @@ export default class Tokens extends ForienBaseModule {
       await advancement.advanceSpeciesTalents();
     } catch (error) {
       Utility.notify(`Could not advance species Skills and/or Talents for ${token.name}.`, {
-        type: 'warning',
-        data: {token, actor: token.actor}
-      })
+        type: "warning",
+        data: {token, actor: token.actor},
+      });
     }
   }
 
@@ -138,7 +138,10 @@ export default class Tokens extends ForienBaseModule {
     let total;
 
     if (!bpData)
-      return Utility.notify(`Could not find Brass Pennies under "${this.#brassPenniesItemUUID}" UUID. Please contact Forien or submit a bug report on Forien's Armoury GitHub.`, {type: "error"});
+      return Utility.notify(
+        `Could not find Brass Pennies under "${this.#brassPenniesItemUUID}" UUID. Please contact Forien or submit a bug report on Forien's Armoury GitHub.`,
+        {type: "error"},
+      );
 
     const actor = token.actor;
 
@@ -147,24 +150,24 @@ export default class Tokens extends ForienBaseModule {
       total = roll.total;
 
       const moneyItems = ((await WFRP_Utility.allMoneyItems()) || [])
-          .map(m => {
-            if (m.system.coinValue.value === 1)
-              m.system.quantity.value = total;
-            else
-              m.system.quantity.value = 0;
+                           .map(m => {
+                             if (m.system.coinValue.value === 1)
+                               m.system.quantity.value = total;
+                             else
+                               m.system.quantity.value = 0;
 
-            return m;
-          })
-          .sort(
-            (a, b) => (a.system.coinValue.value >= b.system.coinValue.value) ? -1 : 1)
-        || [];
+                             return m;
+                           })
+                           .sort(
+                             (a, b) => (a.system.coinValue.value >= b.system.coinValue.value) ? -1 : 1)
+                         || [];
 
       const money = game.wfrp4e.market.consolidateMoney(moneyItems);
-      await actor.createEmbeddedDocuments("Item", money)
+      await actor.createEmbeddedDocuments("Item", money);
     } catch {
       Utility.notify(`Could not roll "${formula}" money for ${token.name}.`, {
         type: "error",
-        data: {formula, token, actor, bpData}
+        data: {formula, token, actor, bpData},
       });
     }
 

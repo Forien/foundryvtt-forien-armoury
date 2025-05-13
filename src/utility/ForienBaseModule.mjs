@@ -14,7 +14,7 @@ export default class ForienBaseModule {
    * @return {string}
    */
   get #camelName() {
-    return this.constructor.name[0].toLowerCase() + this.constructor.name.slice(1)
+    return this.constructor.name[0].toLowerCase() + this.constructor.name.slice(1);
   }
 
   /**

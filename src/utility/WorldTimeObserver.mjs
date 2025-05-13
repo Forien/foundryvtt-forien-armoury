@@ -1,7 +1,7 @@
-import {debug}          from "./Debug.mjs";
 import {constants}      from "../constants.mjs";
-import Utility          from "./Utility.mjs";
+import {debug}          from "./Debug.mjs";
 import ForienBaseModule from "./ForienBaseModule.mjs";
+import Utility          from "./Utility.mjs";
 
 export default class WorldTimeObserver extends ForienBaseModule {
   /**
@@ -13,7 +13,7 @@ export default class WorldTimeObserver extends ForienBaseModule {
    *
    */
   bindHooks() {
-    Hooks.on('updateWorldTime', this.#onWorldTimeUpdate.bind(this));
+    Hooks.on("updateWorldTime", this.#onWorldTimeUpdate.bind(this));
   }
 
   /**
@@ -48,17 +48,23 @@ export default class WorldTimeObserver extends ForienBaseModule {
     for (let i = 0; i < passedUnits; i++) {
       let eventTime = subscriber.last + (passedUnits * subscriber.every);
       try {
-        await subscriber.callback.call(this, subscriber.args, eventTime)
+        await subscriber.callback.call(this, subscriber.args, eventTime);
       } catch (error) {
         this.unsubscribe(subscriberId);
-        return Utility.error(game.i18n.localize("Forien.Armoury.WorldTimeObserver.CallbackError"), {error, data: {subscriber, eventTime, error}});
+        return Utility.error(
+          game.i18n.localize("Forien.Armoury.WorldTimeObserver.CallbackError"),
+          {error, data: {subscriber, eventTime, error}},
+        );
       }
     }
 
     // set `last` to last time the event should happen, not necessarily current time.
     // e.g.: `last`:100, `time`:115, `every`:10. New `last` should be set to 110 to trigger at 120, not 125.
     const newLast = time - (passedTime % subscriber.every);
-    debug('[WorldTimeObserver] Handled events for a subscriber', {time, subscriber, passedTime, passedUnits, last: subscriber.last, newLast});
+    debug(
+      "[WorldTimeObserver] Handled events for a subscriber",
+      {time, subscriber, passedTime, passedUnits, last: subscriber.last, newLast},
+    );
     subscriber.last = time;
   }
 
@@ -74,16 +80,22 @@ export default class WorldTimeObserver extends ForienBaseModule {
    */
   subscribe(callback, {args = {}, every = 60, last = 0} = {}) {
     if (!(callback instanceof Function))
-      return Utility.notify(game.i18n.localize("Forien.Armoury.WorldTimeObserver.NotAFunction"), {type: 'error'});
+      return Utility.notify(game.i18n.localize("Forien.Armoury.WorldTimeObserver.NotAFunction"), {type: "error"});
 
     if (!Number.isInteger(every) || every <= 0)
-      return Utility.notify(game.i18n.format("Forien.Armoury.WorldTimeObserver.NotAnInteger", {arg: 'every'}), {type: 'error'});
+      return Utility.notify(
+        game.i18n.format("Forien.Armoury.WorldTimeObserver.NotAnInteger", {arg: "every"}),
+        {type: "error"},
+      );
 
     if (!Number.isInteger(last) || last < 0)
-      return Utility.notify(game.i18n.format("Forien.Armoury.WorldTimeObserver.NotAnInteger", {arg: 'last'}), {type: 'error'});
+      return Utility.notify(
+        game.i18n.format("Forien.Armoury.WorldTimeObserver.NotAnInteger", {arg: "last"}),
+        {type: "error"},
+      );
 
     if (!(args instanceof Object))
-      return Utility.notify(game.i18n.localize("Forien.Armoury.WorldTimeObserver.NotAnObject"), {type: 'error'});
+      return Utility.notify(game.i18n.localize("Forien.Armoury.WorldTimeObserver.NotAnObject"), {type: "error"});
 
     let id;
     let count = 0;
@@ -96,10 +108,10 @@ export default class WorldTimeObserver extends ForienBaseModule {
     // how is it possible? Shouldn't. But I'm not gonna risk it.
     if (count === constants.loopLimit) {
       Utility.notify(game.i18n.localize("Forien.Armoury.WorldTimeObserver.LoopError"), {
-        type: 'error',
+        type: "error",
         permanent: true,
-        data: {observer: this.constructor.name, id, callback, args, every, last, attempts: count}
-      })
+        data: {observer: this.constructor.name, id, callback, args, every, last, attempts: count},
+      });
       return false;
     }
 
@@ -107,18 +119,18 @@ export default class WorldTimeObserver extends ForienBaseModule {
       callback,
       args,
       every,
-      last
-    })
+      last,
+    });
 
-    debug('[WorldTimeObserver] Subscribed new listener', {
+    debug("[WorldTimeObserver] Subscribed new listener", {
       observer: this.constructor.name,
       id,
       callback,
       args,
       every,
       last,
-      attempts: count
-    })
+      attempts: count,
+    });
 
     return id;
   }
@@ -132,7 +144,10 @@ export default class WorldTimeObserver extends ForienBaseModule {
    */
   unsubscribe(id) {
     const success = this.#subscribers.delete(id);
-    debug('[WorldTimeObserver] Unsubscribed listener with the specified id', {observer: this.constructor.name, id, success})
+    debug(
+      "[WorldTimeObserver] Unsubscribed listener with the specified id",
+      {observer: this.constructor.name, id, success},
+    );
 
     return success;
   }
@@ -151,8 +166,11 @@ export default class WorldTimeObserver extends ForienBaseModule {
         map.delete(key);
         count++;
       }
-    })
-    debug('[WorldTimeObserver] Unsubscribed all listeners with the specified callback', {observer: this.constructor.name, callback, count})
+    });
+    debug(
+      "[WorldTimeObserver] Unsubscribed all listeners with the specified callback",
+      {observer: this.constructor.name, callback, count},
+    );
 
     return count;
   }
@@ -165,7 +183,7 @@ export default class WorldTimeObserver extends ForienBaseModule {
   unsubscribeAll() {
     const count = this.#subscribers.size;
     this.#subscribers.clear();
-    debug('[WorldTimeObserver] Unsubscribed all listeners', {observer: this.constructor.name, count})
+    debug("[WorldTimeObserver] Unsubscribed all listeners", {observer: this.constructor.name, count});
 
     return count;
   }

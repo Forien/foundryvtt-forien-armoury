@@ -1,5 +1,5 @@
-import ItemPiles        from "./module-integrations/ItemPiles.mjs";
 import ATL              from "./module-integrations/ATL.mjs";
+import ItemPiles        from "./module-integrations/ItemPiles.mjs";
 import ForienBaseModule from "./utility/ForienBaseModule.mjs";
 
 export default class Integrations extends ForienBaseModule {

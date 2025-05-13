@@ -1,7 +1,7 @@
-import ForienBaseModule             from "../utility/ForienBaseModule.mjs";
-import Utility                      from "../utility/Utility.mjs";
 import {constants, flags, settings} from "../constants.mjs";
 import {debug}                      from "../utility/Debug.mjs";
+import ForienBaseModule             from "../utility/ForienBaseModule.mjs";
+import Utility                      from "../utility/Utility.mjs";
 
 export default class Injuries extends ForienBaseModule {
   #observer;
@@ -23,13 +23,13 @@ export default class Injuries extends ForienBaseModule {
     if (!game.user.isGM || game.user !== game.users.activeGM) return;
     if (!Utility.getSetting(settings.injuries.autoProgress)) return;
 
-    this.#observer = game.modules.get(constants.moduleId).api.modules.get('worldTimeObserver');
+    this.#observer = game.modules.get(constants.moduleId).api.modules.get("worldTimeObserver");
 
     for (let actor of game.actors.contents) {
       await this.#registerActorInjuryListener(actor);
     }
 
-    debug('[Injuries] Registered injury listeners', {listeners: this.#listeners})
+    debug("[Injuries] Registered injury listeners", {listeners: this.#listeners});
   }
 
   /**
@@ -55,13 +55,13 @@ export default class Injuries extends ForienBaseModule {
   async #registerCreatedInjuryListener(injury) {
     if (!game.user.isGM || game.user !== game.users.activeGM) return;
     if (!Utility.getSetting(settings.injuries.autoProgress)) return;
-    if (injury.type !== 'injury') return;
+    if (injury.type !== "injury") return;
     let actor = injury.actor;
 
     if (!(actor instanceof ActorWFRP4e)) return;
 
     await this.#registerInjuryListener(actor, injury);
-    debug('[Injuries] Registered a listener for newly created injury', {actor, injury, listeners: this.#listeners})
+    debug("[Injuries] Registered a listener for newly created injury", {actor, injury, listeners: this.#listeners});
   }
 
   /**
@@ -101,7 +101,7 @@ export default class Injuries extends ForienBaseModule {
     let listenerId = this.#observer.subscribe(this.#handleAutoProgressEvent.bind(this), {
       args: {actorId: actor.id, injuryId: injury.id},
       every: unitSeconds,
-      last: lastProgress
+      last: lastProgress,
     });
 
     this.#listeners.set(injury.uuid, listenerId);
@@ -116,7 +116,7 @@ export default class Injuries extends ForienBaseModule {
    * @return {Promise<ItemWFRP4e|false>}
    */
   async #rollInjury(actor, injury) {
-    debug('[Injuries] Injury value is NaN, attempting to roll on it', {actor, injury});
+    debug("[Injuries] Injury value is NaN, attempting to roll on it", {actor, injury});
 
     injury.system.start();
   }
@@ -130,7 +130,7 @@ export default class Injuries extends ForienBaseModule {
    * @return {{saved: boolean, lastProgress: number}}
    */
   #getLastProgress(injury) {
-    let lastProgress = injury.getFlag(constants.moduleId, flags.injuries.lastProgress)
+    let lastProgress = injury.getFlag(constants.moduleId, flags.injuries.lastProgress);
     if (lastProgress)
       return {lastProgress, saved: true};
 
@@ -190,7 +190,7 @@ export default class Injuries extends ForienBaseModule {
     await this.#saveLastProgress(injury, time);
     await injury.system.decrement();
 
-    debug('[Injuries] Handled injury progression event', {actor, injury, listeners: this.#listeners})
+    debug("[Injuries] Handled injury progression event", {actor, injury, listeners: this.#listeners});
   }
 
   /**

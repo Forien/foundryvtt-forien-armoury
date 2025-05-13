@@ -1,6 +1,6 @@
-import Utility                      from "../utility/Utility.mjs";
 import {constants, flags, settings} from "../constants.mjs";
 import WorkshopError                from "../utility/Error.mjs";
+import Utility                      from "../utility/Utility.mjs";
 
 const fields = foundry.data.fields;
 
@@ -25,7 +25,7 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
     }));
     schema.language = new fields.StringField({blank: true, nullable: true, initial: "Magick"});
     schema.twohanded = new fields.SchemaField({
-      value: new fields.BooleanField({initial: false})
+      value: new fields.BooleanField({initial: false}),
     });
 
     return schema;
@@ -45,7 +45,7 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
   async loadSpells() {
     const spells = [];
     for (let spell of this.spells) {
-      const spellItem = await fromUuid(spell.uuid)
+      const spellItem = await fromUuid(spell.uuid);
       if (!spellItem || spellItem.type !== "spell") continue;
 
       spellItem.grimoireCN = spellItem.system.cn.value * 2;
@@ -70,12 +70,13 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
       throw new WorkshopError("GrimoireModel.addSpell `item` argument must be an Item implementing SpellModel");
 
     if (item.parent !== null)
-      throw new WorkshopError("GrimoireModel.addSpell `item` argument cannot belong to an Actor. Use World Item or Compendium Item");
+      throw new WorkshopError(
+        "GrimoireModel.addSpell `item` argument cannot belong to an Actor. Use World Item or Compendium Item");
 
     const spells = this.spells;
     spells.push({
       label: item.name,
-      uuid: item.uuid
+      uuid: item.uuid,
     });
 
     return this.parent.update({"system.spells": spells});
@@ -119,7 +120,8 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
    * @returns {ItemWFRP4e|undefined}
    */
   get languageSkill() {
-    return this.reader?.itemTypes.skill.find(skill => skill.name.toLowerCase() === this.languageSkillName.toLowerCase());
+    return this.reader?.itemTypes.skill.find(skill => skill.name.toLowerCase()
+                                                      === this.languageSkillName.toLowerCase());
   }
 
   /**
@@ -163,7 +165,10 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
   async expandData(htmlOptions) {
     let data = await super.expandData(htmlOptions);
 
-    data.properties.push(game.i18n.format("Forien.Armoury.Grimoires.WrittenIn", {language: this.language}).capitalize());
+    data.properties.push(game.i18n.format(
+      "Forien.Armoury.Grimoires.WrittenIn",
+      {language: this.language},
+    ).capitalize());
 
     let lores = new Set();
 
@@ -227,7 +232,7 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
 
     let spells = actor.itemTypes.spell.filter(s =>
       s.flags[constants.moduleId]?.[flags.grimoires.source] === this.parent.id &&
-      s.system.memorized.value === false
+      s.system.memorized.value === false,
     );
 
     const deletes = spells.map(s => s.id);
@@ -287,33 +292,34 @@ export default class GrimoireModel extends PropertiesMixin(EquippableItemModel) 
     }
 
     let loresSummary = [];
-    let spells = '';
+    let spells = "";
     for (let [key, lore] of lores) {
-      const summary = game.i18n.format('Forien.Armoury.Grimoires.LoreSummary', {
+      const summary = game.i18n.format("Forien.Armoury.Grimoires.LoreSummary", {
         num: lore.spells.length,
-        lore: lore.label
+        lore: lore.label,
       });
       loresSummary.push(summary);
 
-      spells += `<ul><li>${lore.spells.join('</li><li>')}</li></ul><br>`;
+      spells += `<ul><li>${lore.spells.join("</li><li>")}</li></ul><br>`;
     }
 
-    const and = game.i18n.localize('Forien.Armoury.Grimoires.And');
+    const and = game.i18n.localize("Forien.Armoury.Grimoires.And");
     const written = game.i18n.format("Forien.Armoury.Grimoires.WrittenIn", {language: this.language});
-    const summary = game.i18n.format('Forien.Armoury.Grimoires.GrimoireSummary', {
+    const summary = game.i18n.format("Forien.Armoury.Grimoires.GrimoireSummary", {
       written,
-      list: loresSummary.join(` ${and} `)
-    })
+      list: loresSummary.join(` ${and} `),
+    });
     const description = `<p>${summary}</p> ${spells}`;
 
-    await this.parent.update({'system.description.value': description});
+    await this.parent.update({"system.description.value": description});
   }
 
   /**
    * @returns {boolean}
    */
   get canActorWrite() {
-    return this.reader?.itemTypes.talent.some(t => t.name === game.i18n.localize("Forien.Armoury.Grimoires.ReadWriteTalent")) || false;
+    return this.reader?.itemTypes.talent.some(t => t.name === game.i18n.localize(
+      "Forien.Armoury.Grimoires.ReadWriteTalent")) || false;
   }
 
   /**

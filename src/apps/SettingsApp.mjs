@@ -1,44 +1,44 @@
-import {constants, settings}      from "../constants.mjs";
-import Utility                    from "../utility/Utility.mjs";
-import {Debug}                    from "../utility/Debug.mjs";
+import {constants, settings} from "../constants.mjs";
+import {Debug}               from "../utility/Debug.mjs";
+import Utility               from "../utility/Utility.mjs";
 
-const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
+const {ApplicationV2, HandlebarsApplicationMixin} = foundry.applications.api;
 
 export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static #templates = {
-    app: 'apps/settings/settings.hbs',
-    tab: 'apps/settings/tab.hbs',
-    promo: 'apps/settings/promo.hbs',
-    setting: 'apps/settings/setting.hbs'
-  }
+    app: "apps/settings/settings.hbs",
+    tab: "apps/settings/tab.hbs",
+    promo: "apps/settings/promo.hbs",
+    setting: "apps/settings/setting.hbs",
+  };
 
   static DEFAULT_OPTIONS = {
-    tag : "form",
+    tag: "form",
     form: {
       handler: this._updateObject,
       submitOnChange: false,
-      closeOnSubmit: true
+      closeOnSubmit: true,
     },
     id: settings.app,
     classes: ["armoury-settings", "forien-armoury", "standard-form"],
     window: {
-      resizable : false,
-      title : `${constants.moduleLabel}`,
+      resizable: false,
+      title: `${constants.moduleLabel}`,
     },
-    position : {
+    position: {
       width: 600,
       height: 670,
     },
-    actions : {
-      addFilter : this._onAddFilter
-    }
+    actions: {
+      addFilter: this._onAddFilter,
+    },
   };
 
   static PARTS = {
     content: {template: Utility.getTemplate(SettingsApp.partials.app)},
-    footer: {template: "templates/generic/form-footer.hbs"}
-  }
+    footer: {template: "templates/generic/form-footer.hbs"},
+  };
 
   static TABS = {
     primary: {
@@ -50,9 +50,9 @@ export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV
         {id: "scrolls"},
         {id: "grimoires"},
         {id: "integrations"},
-      ]
-    }
-  }
+      ],
+    },
+  };
 
   /**
    * Returns key->path pairs for Handlebar partials
@@ -162,14 +162,14 @@ export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV
           settings.runes.enableDamage,
           settings.properties.enabled,
           Debug.setting,
-        ]
+        ],
       },
 
       actor: {
         always: [
           settings.diseases.autoProgress,
           settings.injuries.autoProgress,
-          settings.actor.rollToken
+          settings.actor.rollToken,
         ],
         enable: {
           when: settings.actor.rollToken,
@@ -178,8 +178,8 @@ export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV
             settings.actor.rollMoney,
             settings.actor.defaultMoney,
             settings.actor.moneyMode,
-          ]
-        }
+          ],
+        },
       },
 
       arrow: {
@@ -194,8 +194,8 @@ export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV
             settings.arrowReclamation.enableBullets,
             settings.arrowReclamation.rule,
             settings.arrowReclamation.percentage,
-          ]
-        }
+          ],
+        },
       },
 
       combatFatigue: {
@@ -206,14 +206,14 @@ export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV
           when: settings.combatFatigue.enable,
           settings: [
             settings.combatFatigue.enableNPC,
-            settings.combatFatigue.enableCorePassOut
-          ]
-        }
+            settings.combatFatigue.enableCorePassOut,
+          ],
+        },
       },
 
       castingFatigue: {
         always: [
-          settings.magicalEndurance.enabled
+          settings.magicalEndurance.enabled,
         ],
         enable: {
           when: settings.magicalEndurance.enabled,
@@ -223,8 +223,8 @@ export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV
             settings.magicalEndurance.negativeMEPerStep,
             settings.magicalEndurance.useBaseCN,
             settings.magicalEndurance.autoRegen,
-          ]
-        }
+          ],
+        },
       },
 
       scrolls: {
@@ -238,7 +238,7 @@ export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV
           settings.scrolls.replaceDescription,
           settings.scrolls.defaultEncumbrance,
           settings.scrolls.defaultAvailability,
-        ]
+        ],
       },
 
       grimoires: {
@@ -250,7 +250,7 @@ export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV
           settings.grimoires.ownCategory,
           settings.grimoires.defaultEncumbrance,
           settings.grimoires.defaultAvailability,
-        ]
+        ],
       },
 
       integrations: {
@@ -262,9 +262,9 @@ export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV
             settings.integrations.itemPiles.setCurrencies,
             settings.integrations.itemPiles.reimportRolltables,
           ],
-        ]
-      }
-    }
+        ],
+      },
+    };
   }
 
   _configureRenderOptions(options) {
@@ -278,7 +278,7 @@ export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV
   async _onRender(context, options) {
     super._onRender(context, options);
 
-    const checkboxes = this.element.querySelectorAll('input[type="checkbox"]');
+    const checkboxes = this.element.querySelectorAll("input[type=\"checkbox\"]");
 
     for (const checkbox of checkboxes) {
       checkbox.addEventListener("change", (ev) => {
@@ -298,13 +298,13 @@ export default class SettingsApp extends HandlebarsApplicationMixin(ApplicationV
   toggleActiveClass(element, html) {
     let name = element.name;
     let div = html.querySelector(`[data-show-when="${name}"]`);
-    div?.classList.toggle('active', element.checked);
+    div?.classList.toggle("active", element.checked);
   }
 
   /**
    * @inheritDoc
    */
-  static async _updateObject(event, form, formData, options={}) {
+  static async _updateObject(event, form, formData, options = {}) {
     for (let setting in formData.object)
       await game.settings.set(constants.moduleId, setting, formData.object[setting]);
   }

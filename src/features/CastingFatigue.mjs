@@ -1,17 +1,17 @@
-import {debug}                      from "../utility/Debug.mjs";
 import {constants, flags, settings} from "../constants.mjs";
-import Utility                      from "../utility/Utility.mjs";
 import MagicEnduranceDataModel      from "../data-models/MagicEnduranceDataModel.js";
-import ForienBaseModule             from "../utility/ForienBaseModule.mjs";
 import ScrollTest                   from "../tests/ScrollTest.mjs";
+import {debug}                      from "../utility/Debug.mjs";
+import ForienBaseModule             from "../utility/ForienBaseModule.mjs";
+import Utility                      from "../utility/Utility.mjs";
 
 export default class CastingFatigue extends ForienBaseModule {
   #observer;
   #listeners = new Map();
 
   templates = {
-    magicalEndurance: 'partials/actor-sheet-wfrp4e-magical-endurance.hbs',
-  }
+    magicalEndurance: "partials/actor-sheet-wfrp4e-magical-endurance.hbs",
+  };
 
   /**
    * @inheritDoc
@@ -62,17 +62,23 @@ export default class CastingFatigue extends ForienBaseModule {
   #onRenderActorV2Sheet(sheet, html, context, options) {
     if (!this.magicalEnduranceEnabled) return;
 
-    const tabMagic = html.querySelector('.tab[data-tab="magic"]');
+    const tabMagic = html.querySelector(".tab[data-tab=\"magic\"]");
     if (!tabMagic) return;
 
     const actor = sheet.actor;
     const magicalEndurance = this.getMagicalEnduranceData(actor);
 
-    foundry.applications.handlebars.renderTemplate(Utility.getTemplate(this.templates.magicalEndurance), magicalEndurance).then(content => {
-      const child = Utility.stringToHTMLElement(content)
+    foundry.applications.handlebars.renderTemplate(
+      Utility.getTemplate(this.templates.magicalEndurance),
+      magicalEndurance,
+    ).then(content => {
+      const child = Utility.stringToHTMLElement(content);
       tabMagic.prepend(child);
 
-      html.querySelector('#magical-endurance-value').addEventListener("change", (ev) => this.#onMagicalEnduranceValueChange(ev, actor));
+      html.querySelector("#magical-endurance-value").addEventListener(
+        "change",
+        (ev) => this.#onMagicalEnduranceValueChange(ev, actor),
+      );
     });
   }
 
@@ -97,7 +103,7 @@ export default class CastingFatigue extends ForienBaseModule {
   #processRollCastTest(test, options) {
     if (!this.magicalEnduranceEnabled) return;
 
-    debug('[CastingFatigue] Casting Test Rolled', {test, options, enabled: this.magicalEnduranceEnabled});
+    debug("[CastingFatigue] Casting Test Rolled", {test, options, enabled: this.magicalEnduranceEnabled});
 
     if (!(test.actor instanceof ActorWFRP4e && test.actor.isOwner))
       return;
@@ -114,7 +120,7 @@ export default class CastingFatigue extends ForienBaseModule {
    */
   #processRollChannelTest(test, options) {
     if (!this.magicalEnduranceEnabled) return;
-    debug('[CastingFatigue] Channeling Test Rolled', {test, options, enabled: this.magicalEnduranceEnabled});
+    debug("[CastingFatigue] Channeling Test Rolled", {test, options, enabled: this.magicalEnduranceEnabled});
 
     if (!(test.actor instanceof ActorWFRP4e && test.actor.isOwner))
       return;
@@ -175,10 +181,10 @@ export default class CastingFatigue extends ForienBaseModule {
     const test = await this.#performEnduranceTest(actor, difficulty);
     const outcome = test.outcome;
 
-    if (outcome === 'failure')
-      await actor.addCondition('fatigued');
+    if (outcome === "failure")
+      await actor.addCondition("fatigued");
 
-    debug('[CastingFatigue] Magical Endurance dropped below 0', {magicalEndurance, steps, difficulty, test, outcome});
+    debug("[CastingFatigue] Magical Endurance dropped below 0", {magicalEndurance, steps, difficulty, test, outcome});
 
     return test;
   }
@@ -199,8 +205,8 @@ export default class CastingFatigue extends ForienBaseModule {
     const test = await actor.setupSkill(enduranceSkill, {
       context: {failure, success},
       absolute: {difficulty},
-      appendTitle: appendTitle
-    })
+      appendTitle: appendTitle,
+    });
 
     await test.roll();
 
@@ -335,7 +341,7 @@ export default class CastingFatigue extends ForienBaseModule {
   #registerAutoRegenListeners() {
     if (!Utility.getSetting(settings.magicalEndurance.autoRegen)) return;
 
-    this.#observer = game.modules.get(constants.moduleId).api.modules.get('worldTimeObserver');
+    this.#observer = game.modules.get(constants.moduleId).api.modules.get("worldTimeObserver");
 
     for (let actor of game.actors.contents) {
       if (!actor.isOwner) continue;
@@ -361,7 +367,7 @@ export default class CastingFatigue extends ForienBaseModule {
     let eventId = this.#observer.subscribe(this.#handleAutoRegenEvent.bind(this), {
       args: {id: actor.id},
       every: 3600,
-      last: lastRegen ?? data.lastRegen
+      last: lastRegen ?? data.lastRegen,
     });
 
     this.#listeners.set(actor.id, eventId);
@@ -390,7 +396,10 @@ export default class CastingFatigue extends ForienBaseModule {
     data.lastRegen = time;
     await this.saveMagicalEnduranceData(actor, data);
 
-    debug('[CastingFatigue] Handled Automated Regeneration event', {actor, magicalEndurance: data, listeners: this.#listeners})
+    debug(
+      "[CastingFatigue] Handled Automated Regeneration event",
+      {actor, magicalEndurance: data, listeners: this.#listeners},
+    );
   }
 
   /**

@@ -1,7 +1,7 @@
 import ScrollTest   from "tests/ScrollTest";
-import Utility      from "../utility/Utility.mjs";
-import {settings}   from "../constants.mjs";
 import ScrollDialog from "../apps/ScrollDialog.mjs";
+import {settings}   from "../constants.mjs";
+import Utility      from "../utility/Utility.mjs";
 
 const fields = foundry.data.fields;
 
@@ -63,7 +63,8 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
    * @returns {ItemWFRP4e|undefined}
    */
   get languageSkill() {
-    return this.parent.actor?.itemTypes.skill.find(skill => skill.name.toLowerCase() === this.languageSkillName.toLowerCase());
+    return this.parent.actor?.itemTypes.skill.find(skill => skill.name.toLowerCase()
+                                                            === this.languageSkillName.toLowerCase());
   }
 
   /**
@@ -92,16 +93,18 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
 
       if (match) {
         const number = match[1];
-        this.parent.updateSource({"name": game.i18n.localize("Forien.Armoury.Scrolls.NewScrollDefaultName") + ` ${number}`});
+        this.parent.updateSource({
+          "name": game.i18n.localize("Forien.Armoury.Scrolls.NewScrollDefaultName") + ` ${number}`,
+        });
       }
     }
 
     if (!data.system?.encumbrance?.value) {
-      this.updateSource({"encumbrance.value": Utility.getSetting(settings.scrolls.defaultEncumbrance)})
+      this.updateSource({"encumbrance.value": Utility.getSetting(settings.scrolls.defaultEncumbrance)});
     }
 
     if (!data.system?.availability?.value) {
-      this.updateSource({"availability.value": Utility.getSetting(settings.scrolls.defaultAvailability)})
+      this.updateSource({"availability.value": Utility.getSetting(settings.scrolls.defaultAvailability)});
     }
   }
 
@@ -145,8 +148,8 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
 
     if (!options.skipAsk && setting === settings.scrolls.ask) {
       agreed = await Dialog.confirm({
-        title: 'Forien.Armoury.Scrolls.ChangeScrollNameTitle',
-        content
+        title: "Forien.Armoury.Scrolls.ChangeScrollNameTitle",
+        content,
       });
     }
 
@@ -186,9 +189,9 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
       data.other.push(`<a class="scroll-spell-cast">${buttonLabel}</a>`);
     }
 
-    let itemProperties = this.OriginalQualities.concat(this.OriginalFlaws)
+    let itemProperties = this.OriginalQualities.concat(this.OriginalFlaws);
     for (let prop of itemProperties)
-      data.properties.push("<a class='item-property'>" + prop + "</a>")
+      data.properties.push("<a class='item-property'>" + prop + "</a>");
 
     data.properties = data.properties.filter(p => !!p);
 
@@ -213,9 +216,9 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
         game.i18n.format("Forien.Armoury.Scrolls.ActorCanNotUse", {
           actor: actor.name,
           scroll: this.parent.name,
-          language: this.language
+          language: this.language,
         }),
-        {type: "warning"}
+        {type: "warning"},
       );
 
       return null;
@@ -239,17 +242,17 @@ export default class ScrollModel extends PropertiesMixin(PhysicalItemModel) {
 
     const dialogData = {
       fields: foundry.utils.mergeObject(options.fields || {}, {
-        difficulty
+        difficulty,
       }),
       data: {
         spell,
         hitLoc: !!spell.system.damage.value,
-        skill: skill
+        skill: skill,
       },
-      options: options || {}
-    }
+      options: options || {},
+    };
 
-    const test = await actor._setupTest(ScrollDialog, ScrollTest, {spell, scroll: this.parent}, dialogData, false)
+    const test = await actor._setupTest(ScrollDialog, ScrollTest, {spell, scroll: this.parent}, dialogData, false);
 
     return await test.roll();
   }

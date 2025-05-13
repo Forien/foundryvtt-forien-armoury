@@ -5,8 +5,8 @@
  * #######################################################
  */
 import {constants, flags} from "../constants.mjs";
-import Utility            from "../utility/Utility.mjs";
 import {debug}            from "../utility/Debug.mjs";
+import Utility            from "../utility/Utility.mjs";
 
 /**
  * Replaces itself with one of Fightin Style Talents of the player's choosing.
@@ -26,30 +26,33 @@ async function replaceWithStyle(args, self) {
 
   await Dialog.wait({
     title: game.i18n.localize("Forien.Armoury.Effects.SelectTalent"),
-    content: await foundry.applications.handlebars.renderTemplate(Utility.getTemplate('select-item.hbs'), {styleTalents}),
+    content: await foundry.applications.handlebars.renderTemplate(
+      Utility.getTemplate("select-item.hbs"),
+      {styleTalents},
+    ),
     default: "ok",
     buttons: {
       cancel: {
         label: game.i18n.localize("Cancel"),
-        icon: '<i class="fas fa-undo"></i>'
+        icon: "<i class=\"fas fa-undo\"></i>",
       },
       ok: {
         label: game.i18n.localize("Forien.Armoury.Effects.AddTalent"),
-        icon: '<i class="fas fa-check"></i>',
+        icon: "<i class=\"fas fa-check\"></i>",
         callback: async html => {
-          const id = html.find('input[name=talent]:checked').data('id');
+          const id = html.find("input[name=talent]:checked").data("id");
           const talent = await addTalentToActorAndCareer(id, self);
-          debug('[styleHelpers] "Fighting Style (Any)" has been replaced with: ', {
+          debug("[styleHelpers] \"Fighting Style (Any)\" has been replaced with: ", {
             talent,
             compendiumId: id,
             styleTalents,
             effectArgs: args,
-            effectThis: self
+            effectThis: self,
           });
-        }
-      }
-    }
-  })
+        },
+      },
+    },
+  });
 
   await self.actor.deleteEmbeddedDocuments("Item", [self.effect.item._id]);
 
@@ -79,12 +82,12 @@ async function replaceWithMastery(args, self) {
   const talent = await addTalentToActorAndCareer(id, self);
 
   await self.actor.deleteEmbeddedDocuments("Item", [self.effect.item._id]);
-  debug('[styleHelpers] "Fighting Master (Style)" has been replaced with: ', {
+  debug("[styleHelpers] \"Fighting Master (Style)\" has been replaced with: ", {
     talent,
     compendiumId: id,
     masteryTalents,
     effectArgs: args,
-    effectThis: self
+    effectThis: self,
   });
 
   return false;
@@ -108,9 +111,9 @@ function getCompendiumPath() {
 async function getCompendiumTalentsByFlag(flag) {
   const packPath = getCompendiumPath();
   const pack = game.packs.get(packPath);
-  const index = await pack.getIndex({fields: ['type', 'flags']});
+  const index = await pack.getIndex({fields: ["type", "flags"]});
 
-  return index.filter(i => i.type === 'talent' && i.flags[constants.moduleId]?.[flag]);
+  return index.filter(i => i.type === "talent" && i.flags[constants.moduleId]?.[flag]);
 }
 
 /**
@@ -163,12 +166,15 @@ function steelstormAssault(args, self) {
 
     ChatMessage.create({
       user: game.user._id,
-      content: `<b>${game.i18n.localize('Forien.Armoury.Effects.Steelstorm.Assault.Name')}</b><br/>
-              ${game.i18n.format('Forien.Armoury.Effects.Steelstorm.Assault.Description', {character: actor.name})}`
-    })
+      content: `<b>${game.i18n.localize("Forien.Armoury.Effects.Steelstorm.Assault.Name")}</b><br/>
+              ${game.i18n.format("Forien.Armoury.Effects.Steelstorm.Assault.Description", {character: actor.name})}`,
+    });
   }
 
-  debug('[styleHelpers] "Steelstorm Assault" has been invoked.', {weapon, advances, required, effectArgs: args, effectThis: self});
+  debug(
+    "[styleHelpers] \"Steelstorm Assault\" has been invoked.",
+    {weapon, advances, required, effectArgs: args, effectThis: self},
+  );
 }
 
 /**
@@ -195,7 +201,7 @@ function canUseSteelstormAssault(advances, requiredAdvances, advantage, advantag
     return false;
   }
 
-  return true
+  return true;
 }
 
 /**
@@ -212,7 +218,7 @@ function canUseSteelstormAssault(advances, requiredAdvances, advantage, advantag
 function steelstormHandling(args, self) {
   const weapon = args.item;
 
-  if (weapon.type === 'weapon' && weapon.equipped && weapon.isMelee) {
+  if (weapon.type === "weapon" && weapon.equipped && weapon.isMelee) {
     const advances = checkAdvances(weapon);
     const required = 5;
 
@@ -220,22 +226,22 @@ function steelstormHandling(args, self) {
       const qualities = weapon.system.qualities.value;
       const flaws = weapon.system.flaws.value;
 
-      if (flaws.find(f => f.name === 'slow')) {
-        weapon.system.flaws.value = flaws.filter(f => f.name !== 'slow')
-      } else if (weapon.twohanded.value === false && !qualities.find(f => f.name === 'fast')) {
+      if (flaws.find(f => f.name === "slow")) {
+        weapon.system.flaws.value = flaws.filter(f => f.name !== "slow");
+      } else if (weapon.twohanded.value === false && !qualities.find(f => f.name === "fast")) {
         qualities.push({
-          name: 'fast',
-          value: null
-        })
+          name: "fast",
+          value: null,
+        });
       }
     }
 
-    debug('[styleHelpers] "Steelstorm Handling" checked equipped melee weapon during Item Preparation.', {
+    debug("[styleHelpers] \"Steelstorm Handling\" checked equipped melee weapon during Item Preparation.", {
       weapon,
       advances,
       required,
       effectArgs: args,
-      effectThis: self
+      effectThis: self,
     });
   }
 }
@@ -262,22 +268,30 @@ function goAllIn(args, self) {
 
     goingAllIn.disabled = false;
 
-    const allInName = game.i18n.localize('Forien.Armoury.Effects.Steelstorm.AllIn.Name');
-    const allInDescription = game.i18n.format('Forien.Armoury.Effects.Steelstorm.AllIn.Description', {character: self.actor.name});
-    const allInDescriptionMastery = masteryTalent ? game.i18n.localize('Forien.Armoury.Effects.Steelstorm.AllIn.Mastery') : '';
+    const allInName = game.i18n.localize("Forien.Armoury.Effects.Steelstorm.AllIn.Name");
+    const allInDescription = game.i18n.format(
+      "Forien.Armoury.Effects.Steelstorm.AllIn.Description",
+      {character: self.actor.name},
+    );
+    const allInDescriptionMastery = masteryTalent
+      ? game.i18n.localize("Forien.Armoury.Effects.Steelstorm.AllIn.Mastery")
+      : "";
 
     self.actor.createEmbeddedDocuments("ActiveEffect", [goingAllIn]);
     ChatMessage.create({
       user: game.user._id,
       content: `<b>${allInName}</b><br/>
                 ${allInDescription}<br/>
-                ${allInDescriptionMastery}`
-    })
+                ${allInDescriptionMastery}`,
+    });
   } else {
     warnNotEnoughAdvances(self, advances, required);
   }
 
-  debug('[styleHelpers] "Go All In" has been invoked.', {weapon, advances, required, effectArgs: args, effectThis: self});
+  debug(
+    "[styleHelpers] \"Go All In\" has been invoked.",
+    {weapon, advances, required, effectArgs: args, effectThis: self},
+  );
 }
 
 /**
@@ -288,23 +302,24 @@ function goAllIn(args, self) {
  * * Effect Type:           Dialog
  * * Effect Application:    Actor
  *
- * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: ItemWFRP4e, options: {}}} args
+ * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type:
+ *   string, item: ItemWFRP4e, options: {}}} args
  * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWFRP4e}} self
  */
 function goingAllIn(args, self) {
-  if (args.type === 'weapon' && args.item?.type === 'weapon') {
+  if (args.type === "weapon" && args.item?.type === "weapon") {
     const advances = checkAdvances(args.item);
     const required = 10;
 
     if (advances >= required)
       args.prefillModifiers.modifier += 20;
 
-    debug('[styleHelpers] "Going All In" is active on Prefill Dialog.', {
+    debug("[styleHelpers] \"Going All In\" is active on Prefill Dialog.", {
       weapon: args.item,
       advances,
       required,
       effectArgs: args,
-      effectThis: self
+      effectThis: self,
     });
   }
 }
@@ -323,30 +338,30 @@ function goingAllIn(args, self) {
 function goingAllInMastery(args, self) {
   const weapon = args.item;
 
-  if (weapon.type === 'weapon' && weapon.equipped && weapon.isMelee) {
+  if (weapon.type === "weapon" && weapon.equipped && weapon.isMelee) {
     const advances = checkAdvances(weapon);
     const required = 10;
 
     if (hasMastery(self.actor) && advances >= required) {
       const qualities = weapon.system.qualities.value;
-      const damaging = qualities.find(f => f.name === 'damaging');
+      const damaging = qualities.find(f => f.name === "damaging");
 
       if (!damaging) {
         qualities.push({
-          name: 'damaging',
-          value: null
-        })
+          name: "damaging",
+          value: null,
+        });
       } else {
-        damaging.name = 'impact';
+        damaging.name = "impact";
       }
     }
 
-    debug('[styleHelpers] "Going All In (Mastery)" is active on Prefill Dialog.', {
+    debug("[styleHelpers] \"Going All In (Mastery)\" is active on Prefill Dialog.", {
       weapon: args.item,
       advances,
       required,
       effectArgs: args,
-      effectThis: self
+      effectThis: self,
     });
   }
 }
@@ -360,21 +375,25 @@ function goingAllInMastery(args, self) {
  * * Effect Type:           Dialog
  * * Effect Application:    Actor
  *
- * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: ItemWFRP4e, options: {}}} args
+ * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type:
+ *   string, item: ItemWFRP4e, options: {}}} args
  * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWFRP4e}} self
  */
 function targetIsGoingAllIn(args, self) {
-  const target = args.data.targets[0]?.name ?? 'undefined';
-  const unopposedNotice = `<b>${game.i18n.localize('Forien.Armoury.Effects.Steelstorm.AllIn.Name')}:</b> ${game.i18n.format('Forien.Armoury.Effects.Steelstorm.AllIn.Notice', {target})}`
+  const target = args.data.targets[0]?.name ?? "undefined";
+  const unopposedNotice = `<b>${game.i18n.localize("Forien.Armoury.Effects.Steelstorm.AllIn.Name")}:</b> ${game.i18n.format(
+    "Forien.Armoury.Effects.Steelstorm.AllIn.Notice",
+    {target},
+  )}`;
 
   args.data.other.push(unopposedNotice);
 
-  debug('[styleHelpers] "Going All In" is active on Targeter`s Prefill Dialog.', {
+  debug("[styleHelpers] \"Going All In\" is active on Targeter`s Prefill Dialog.", {
     item: args.item,
     target,
     effectArgs: args,
-    effectThis: self
-  })
+    effectThis: self,
+  });
 }
 
 //#endregion Steelstorm
@@ -389,7 +408,7 @@ function targetIsGoingAllIn(args, self) {
 async function addMeleeParryCurrent(args, self) {
   const career = args.actor?.currentCareer;
 
-  debug('[styleHelpers] Checking current career for Ironshield.', {career, effectArgs: args, effectThis: self});
+  debug("[styleHelpers] Checking current career for Ironshield.", {career, effectArgs: args, effectThis: self});
   if (career) await addMeleeParryToCareer(career);
 }
 
@@ -399,11 +418,14 @@ async function addMeleeParryCurrent(args, self) {
  * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWFRP4e}} self
  */
 async function addMeleeParryFuture(args, self) {
-  if (args.context !== 'update') return;
-  if (args.item.type !== 'career') return;
+  if (args.context !== "update") return;
+  if (args.item.type !== "career") return;
   if (args.item.current?.value !== true) return;
 
-  debug('[styleHelpers] Checking current career for Ironshield.', {career: args.item, effectArgs: args, effectThis: self});
+  debug(
+    "[styleHelpers] Checking current career for Ironshield.",
+    {career: args.item, effectArgs: args, effectThis: self},
+  );
   await addMeleeParryToCareer(args.item);
 }
 
@@ -415,23 +437,24 @@ async function addMeleeParryFuture(args, self) {
  * * Effect Type:           Dialog
  * * Effect Application:    Actor
  *
- * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: ItemWFRP4e, options: {}}} args
+ * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type:
+ *   string, item: ItemWFRP4e, options: {}}} args
  * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWFRP4e}} self
  */
 function bracing(args, self) {
-  if (self.actor.isOpposing && args.type === 'weapon' && args.item?.type === 'weapon') {
+  if (self.actor.isOpposing && args.type === "weapon" && args.item?.type === "weapon") {
     const advances = checkAdvances(args.item);
     const required = 10;
 
     if (advances >= required)
       args.prefillModifiers.modifier += 20;
 
-    debug('[styleHelpers] "Bracing" is active on Prefill Dialog.', {
+    debug("[styleHelpers] \"Bracing\" is active on Prefill Dialog.", {
       weapon: args.item,
       advances,
       required,
       effectArgs: args,
-      effectThis: self
+      effectThis: self,
     });
   }
 }
@@ -442,13 +465,16 @@ function bracing(args, self) {
  * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWFRP4e, script: WFRP4eScript}} self
  */
 function bracingReminder(args, self) {
-  const bracingName = game.i18n.localize('Forien.Armoury.Effects.Ironshield.Bracing.Name');
-  const bracingReminder = game.i18n.format('Forien.Armoury.Effects.Ironshield.Bracing.Reminder', {character: self.actor.name});
+  const bracingName = game.i18n.localize("Forien.Armoury.Effects.Ironshield.Bracing.Name");
+  const bracingReminder = game.i18n.format(
+    "Forien.Armoury.Effects.Ironshield.Bracing.Reminder",
+    {character: self.actor.name},
+  );
 
   ChatMessage.create({
     user: game.user._id,
     content: `<b>${bracingName}</b>: ${bracingReminder}`,
-  })
+  });
 }
 
 /**
@@ -474,14 +500,17 @@ function brace(args, self) {
 
     ChatMessage.create({
       user: game.user._id,
-      content: `<b>${game.i18n.localize('Forien.Armoury.Effects.Ironshield.Bracing.Name')}</b><br/>
-                ${game.i18n.format('Forien.Armoury.Effects.Ironshield.Bracing.Description', {character: self.actor.name})}`
-    })
+      content: `<b>${game.i18n.localize("Forien.Armoury.Effects.Ironshield.Bracing.Name")}</b><br/>
+                ${game.i18n.format(
+        "Forien.Armoury.Effects.Ironshield.Bracing.Description",
+        {character: self.actor.name},
+      )}`,
+    });
   } else {
     warnNotEnoughAdvances(self, advances, required);
   }
 
-  debug('[styleHelpers] "Brace!" has been invoked.', {weapon, advances, required, effectArgs: args, effectThis: self});
+  debug("[styleHelpers] \"Brace!\" has been invoked.", {weapon, advances, required, effectArgs: args, effectThis: self});
 }
 
 /**
@@ -498,26 +527,26 @@ function brace(args, self) {
 function ironshieldWard(args, self) {
   const weapon = args.item;
 
-  if (weapon.type === 'weapon' && weapon.equipped && weapon.isMelee) {
+  if (weapon.type === "weapon" && weapon.equipped && weapon.isMelee) {
     const advances = checkAdvances(weapon);
     const required = 5;
 
     if (advances >= required) {
       const qualities = weapon.system.qualities.value;
 
-      if (!qualities.find(f => f.name === 'defensive')) {
+      if (!qualities.find(f => f.name === "defensive")) {
         qualities.push({
-          name: 'defensive',
-          value: null
-        })
+          name: "defensive",
+          value: null,
+        });
       }
     }
-    debug('[styleHelpers] "Ironshield Ward" checked equipped melee weapon during Item Preparation.', {
+    debug("[styleHelpers] \"Ironshield Ward\" checked equipped melee weapon during Item Preparation.", {
       weapon,
       advances,
       required,
       effectArgs: args,
-      effectThis: self
+      effectThis: self,
     });
   }
 }
@@ -538,25 +567,28 @@ function ironshieldRiposte(args, self) {
   const required = 15;
 
   if (advances >= required) {
-    const name = game.i18n.localize('Forien.Armoury.Effects.Ironshield.Riposte.Name');
-    const description = game.i18n.format('Forien.Armoury.Effects.Ironshield.Riposte.Description', {character: self.actor.name});
+    const name = game.i18n.localize("Forien.Armoury.Effects.Ironshield.Riposte.Name");
+    const description = game.i18n.format(
+      "Forien.Armoury.Effects.Ironshield.Riposte.Description",
+      {character: self.actor.name},
+    );
     let content = `<b>${name}:</b> ${description}`;
 
     const masteryTalent = hasMastery(self.actor);
     if (masteryTalent) {
-      const mastery = game.i18n.localize('Forien.Armoury.Effects.Ironshield.Riposte.Mastery');
+      const mastery = game.i18n.localize("Forien.Armoury.Effects.Ironshield.Riposte.Mastery");
       content += `<br/> ${mastery}`;
     }
 
     args.opposedTest.data.opposeResult.other.push(content);
   }
 
-  debug('[styleHelpers] "Ironshield Riposte" is checking Opposed Defender.', {
+  debug("[styleHelpers] \"Ironshield Riposte\" is checking Opposed Defender.", {
     weapon: args.defenderTest.weapon,
     advances,
     required,
     effectArgs: args,
-    effectThis: self
+    effectThis: self,
   });
 }
 
@@ -580,12 +612,12 @@ async function addMeleeParryToCareer(career) {
     if (incomeSkill === meleeBasic) incomeSkill = meleeParry;
 
     await career.update({
-      'system.skills': careerSkills,
-      'system.incomeSkill': [careerSkills.indexOf(incomeSkill)]
+      "system.skills": careerSkills,
+      "system.incomeSkill": [careerSkills.indexOf(incomeSkill)],
     });
   }
 
-  debug('[styleHelpers] "Melee (Basic)" has been replaced with "Melee (Parry).', {career, meleeBasic, meleeParry});
+  debug("[styleHelpers] \"Melee (Basic)\" has been replaced with \"Melee (Parry).", {career, meleeBasic, meleeParry});
 }
 
 
@@ -612,13 +644,19 @@ function shrewdTrickery(args, self) {
   if (advances >= required) {
     ChatMessage.create({
       user: game.user._id,
-      content: `<b>${game.i18n.localize('Forien.Armoury.Effects.Evadecraft.ShrewdTrickery.Name')}</b><br/>
-                ${game.i18n.format('Forien.Armoury.Effects.Evadecraft.ShrewdTrickery.Description', {character: self.actor.name})}`
-    })
+      content: `<b>${game.i18n.localize("Forien.Armoury.Effects.Evadecraft.ShrewdTrickery.Name")}</b><br/>
+                ${game.i18n.format(
+        "Forien.Armoury.Effects.Evadecraft.ShrewdTrickery.Description",
+        {character: self.actor.name},
+      )}`,
+    });
   } else {
     warnNotEnoughAdvances(self, advances, required);
   }
-  debug('[styleHelpers] "Shrewd Trickery" has been invoked.', {weapon, advances, required, effectArgs: args, effectThis: self});
+  debug(
+    "[styleHelpers] \"Shrewd Trickery\" has been invoked.",
+    {weapon, advances, required, effectArgs: args, effectThis: self},
+  );
 }
 
 
@@ -630,7 +668,8 @@ function shrewdTrickery(args, self) {
  * * Effect Type:           Dialog
  * * Effect Application:    Actor
  *
- * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: ItemWFRP4e, options: {}}} args
+ * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type:
+ *   string, item: ItemWFRP4e, options: {}}} args
  * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWFRP4e}} self
  */
 function shrewdEvadecraft(args, self) {
@@ -644,14 +683,14 @@ function shrewdEvadecraft(args, self) {
   if (isRangedAttack && shieldRating < 2)
     args.prefillModifiers.modifier -= 20;
 
-  debug('[styleHelpers] "Shrewd Evadecraft" is active during Prefill Dialog when opposing.', {
+  debug("[styleHelpers] \"Shrewd Evadecraft\" is active during Prefill Dialog when opposing.", {
     weapon: args.item,
     advances,
     required,
     isRangedAttack,
     shieldRating,
     effectArgs: args,
-    effectThis: self
+    effectThis: self,
   });
 }
 
@@ -663,7 +702,8 @@ function shrewdEvadecraft(args, self) {
  * * Effect Type:           Dialog — Hide Script
  * * Effect Application:    Actor
  *
- * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: ItemWFRP4e, options: {}}} args
+ * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type:
+ *   string, item: ItemWFRP4e, options: {}}} args
  * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWFRP4e}} self
  *
  * @returns {boolean}
@@ -677,13 +717,13 @@ function canShrewdEvadecraft(args, self) {
   if (!isRangedAttack) return true;
   if (shieldRating >= 2) return true;
 
-  debug('[styleHelpers] "canShrewdEvadecraft".', {
+  debug("[styleHelpers] \"canShrewdEvadecraft\".", {
     isOpposing: self.actor.isOpposing,
     advances,
     required,
     isRangedAttack,
-    shieldRating
-  })
+    shieldRating,
+  });
 
   return false;
 }
@@ -700,7 +740,7 @@ function getShrewdEvadecraftData(args, self) {
   const advances = checkAdvances(args.item);
   const required = 5;
   const isRangedAttack = self.actor.attacker?.test.weapon.isRanged || false;
-  const shieldRating = args.item?.qualities.value.find(q => q.name === 'shield')?.value || 0;
+  const shieldRating = args.item?.qualities.value.find(q => q.name === "shield")?.value || 0;
 
   return {advances, required, isRangedAttack, shieldRating};
 }
@@ -725,19 +765,22 @@ function luckyEvadecraft(args, self) {
   const isCritical = args.attackerTest.isCritical;
 
   if (isCritical && self.actor.status.fortune.value) {
-    const content = `<b>${game.i18n.localize('Forien.Armoury.Effects.Evadecraft.LuckyEvadecraft.Name')}:</b>
-                ${game.i18n.format('Forien.Armoury.Effects.Evadecraft.LuckyEvadecraft.Description', {character: self.actor.name})}`;
-    args.opposedTest.data.opposeResult.other.push(content)
+    const content = `<b>${game.i18n.localize("Forien.Armoury.Effects.Evadecraft.LuckyEvadecraft.Name")}:</b>
+                ${game.i18n.format(
+      "Forien.Armoury.Effects.Evadecraft.LuckyEvadecraft.Description",
+      {character: self.actor.name},
+    )}`;
+    args.opposedTest.data.opposeResult.other.push(content);
   }
 
-  debug('[styleHelpers] "Lucky Evadecraft" is active during Pre-Opposed Defender.', {
+  debug("[styleHelpers] \"Lucky Evadecraft\" is active during Pre-Opposed Defender.", {
     weapon: args.defenderTest.weapon,
     advances,
     required,
     isCritical,
     fortune: self.actor.status.fortune.value,
     effectArgs: args,
-    effectThis: self
+    effectThis: self,
   });
 }
 
@@ -755,9 +798,12 @@ function luckyEvadecraft(args, self) {
 function shrewdDisengage(args, self) {
   ChatMessage.create({
     user: game.user._id,
-    content: `<b>${game.i18n.localize('Forien.Armoury.Effects.Evadecraft.Disengage.Name')}</b><br/>
-                ${game.i18n.format('Forien.Armoury.Effects.Evadecraft.Disengage.Description', {character: self.actor.name})}`
-  })
+    content: `<b>${game.i18n.localize("Forien.Armoury.Effects.Evadecraft.Disengage.Name")}</b><br/>
+                ${game.i18n.format(
+      "Forien.Armoury.Effects.Evadecraft.Disengage.Description",
+      {character: self.actor.name},
+    )}`,
+  });
 }
 
 /**
@@ -775,29 +821,38 @@ async function invokeEvadecraftMastery(args, self) {
   const targetToken = game.user.targets.first()?.document;
 
   if (!targetToken)
-    return Utility.notify(game.i18n.localize("Forien.Armoury.Effects.Evadecraft.Mastery.NoTarget"), {type: 'warning'})
+    return Utility.notify(game.i18n.localize("Forien.Armoury.Effects.Evadecraft.Mastery.NoTarget"), {type: "warning"});
 
   const target = targetToken?.actor;
 
   if (hasEffectWithFlag(args.actor, flags.effects.target, target.id))
-    return Utility.notify(game.i18n.localize("Forien.Armoury.Effects.Evadecraft.Mastery.AlreadyLearned"), {type: 'warning'})
+    return Utility.notify(
+      game.i18n.localize("Forien.Armoury.Effects.Evadecraft.Mastery.AlreadyLearned"),
+      {type: "warning"},
+    );
 
   const learnedMoves = self.item.effects.getName("Learned Moves");
 
   const effect = (await self.actor.createEmbeddedDocuments("ActiveEffect", [learnedMoves]))[0];
   await effect.setFlag(constants.moduleId, flags.effects.target, target.id);
-  await effect.update({'name': `${effect.name} (${targetToken.name})`})
+  await effect.update({"name": `${effect.name} (${targetToken.name})`});
 
-  const learnedMovesName = game.i18n.localize('Forien.Armoury.Effects.Evadecraft.Mastery.LearnedMoves');
-  const learnedMovesDescription = game.i18n.format('Forien.Armoury.Effects.Evadecraft.Mastery.LearnedMovesDescription', {character: self.actor.name});
+  const learnedMovesName = game.i18n.localize("Forien.Armoury.Effects.Evadecraft.Mastery.LearnedMoves");
+  const learnedMovesDescription = game.i18n.format(
+    "Forien.Armoury.Effects.Evadecraft.Mastery.LearnedMovesDescription",
+    {character: self.actor.name},
+  );
 
   await ChatMessage.create({
     user: game.user._id,
     content: `<b>${learnedMovesName}</b><br/>
-                ${learnedMovesDescription}`
+                ${learnedMovesDescription}`,
   });
 
-  debug('[styleHelpers] "Evadecraft Mastery" has been invoked.', {targetToken, target, effect, effectArgs: args, effectThis: self});
+  debug(
+    "[styleHelpers] \"Evadecraft Mastery\" has been invoked.",
+    {targetToken, target, effect, effectArgs: args, effectThis: self},
+  );
 }
 
 /**
@@ -808,24 +863,25 @@ async function invokeEvadecraftMastery(args, self) {
  * * Effect Type:           Dialog
  * * Effect Application:    Actor
  *
- * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: ItemWFRP4e, options: {}}} args
+ * @param {{prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type:
+ *   string, item: ItemWFRP4e, options: {}}} args
  * @param {{actor: ActorWFRP4e, effect: EffectWfrp4e, item: ItemWFRP4e}} self
  */
 function learnedMoves(args, self) {
   const {target, attacker, opponent, effectTargetId, dodgeName} = getLearnedMovesData(self);
 
   if (opponent && opponent.id === effectTargetId) {
-    if (args.type === 'weapon' || (args.type === 'skill' && args.item.name === dodgeName))
+    if (args.type === "weapon" || (args.type === "skill" && args.item.name === dodgeName))
       args.prefillModifiers.modifier += 10;
   }
 
-  debug('[styleHelpers] "Learned Moves" is active during Prefill Dialog.', {
+  debug("[styleHelpers] \"Learned Moves\" is active during Prefill Dialog.", {
     target,
     attacker,
     opponent,
     effectTargetId,
     effectArgs: args,
-    effectThis: self
+    effectThis: self,
   });
 }
 
@@ -833,7 +889,7 @@ function canUseLearnedMoves(args, self) {
   const {opponent, effectTargetId, dodgeName} = getLearnedMovesData(self);
 
   if (opponent && opponent.id === effectTargetId) {
-    if (args.type === 'weapon' || (args.type === 'skill' && args.item.name === dodgeName))
+    if (args.type === "weapon" || (args.type === "skill" && args.item.name === dodgeName))
       return true;
   }
 
@@ -843,7 +899,7 @@ function canUseLearnedMoves(args, self) {
 
 function getLearnedMovesData(self) {
   const target = game.user.targets.first()?.document.actor || null;
-  const attacker = self.actor.attacker?.test?.actor || null
+  const attacker = self.actor.attacker?.test?.actor || null;
   const opponent = target ?? attacker ?? false;
   const effectTargetId = self.effect.getFlag(constants.moduleId, flags.effects.target);
   const dodgeName = game.i18n.localize("NAME.Dodge");
@@ -907,26 +963,44 @@ function warnNotEnoughAdvances(self, advances, required) {
   const data = {
     effect: self.effect.name,
     advances,
-    required
+    required,
   };
-  const message = game.i18n.format('Forien.Armoury.Effects.NotEnoughAdvances', data);
-  Utility.notify(message, {type: 'warning', data});
+  const message = game.i18n.format("Forien.Armoury.Effects.NotEnoughAdvances", data);
+  Utility.notify(message, {type: "warning", data});
 }
 
 function warnNotEnoughAdvantage(self, advantageCost, advantage) {
   const data = {
     name: self.effect.name,
     need: advantageCost,
-    have: advantage
-  }
-  const message = game.i18n.format('Forien.Armoury.Effects.NotEnoughAdvantage', data);
-  Utility.notify(message, {type: 'warning', data});
+    have: advantage,
+  };
+  const message = game.i18n.format("Forien.Armoury.Effects.NotEnoughAdvantage", data);
+  Utility.notify(message, {type: "warning", data});
 }
 
 /**
  * Expose all relevant functions to the API
  *
- * @type {{bracing: bracing, ironshieldWard: ironshieldWard, ironshieldRiposte: ironshieldRiposte, shrewdTrickery: shrewdTrickery, canUseLearnedMoves: ((function(*, *): (boolean))|*), steelstormHandling: steelstormHandling, shrewdEvadecraft: shrewdEvadecraft, goingAllIn: goingAllIn, replaceWithStyle: (function({actor: game.wfrp4e.entities.ActorWFRP4e}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWFRP4e}): Promise<boolean>), invokeEvadecraftMastery: ((function({actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWFRP4e}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWFRP4e}): Promise<false|undefined>)|*), goingAllInMastery: goingAllInMastery, brace: brace, steelstormAssault: steelstormAssault, addMeleeParryCurrent: ((function({actor: game.wfrp4e.entities.ActorWFRP4e}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWFRP4e}): Promise<void>)|*), goAllIn: goAllIn, replaceWithMastery: (function({actor: game.wfrp4e.entities.ActorWFRP4e}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWFRP4e}): Promise<boolean>), targetIsGoingAllIn: targetIsGoingAllIn, bracingReminder: bracingReminder, learnedMoves: learnedMoves, canShrewdEvadecraft: ((function({prefillModifiers: {modifier: number, difficulty: string, slBonus: number, successBonus: number}, type: string, item: game.wfrp4e.entities.ItemWFRP4e, options: {}}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWFRP4e}): boolean)|*), luckyEvadecraft: luckyEvadecraft, shrewdDisengage: shrewdDisengage, addMeleeParryFuture: ((function({item: game.wfrp4e.entities.ItemWFRP4e, context: string}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWFRP4e}): Promise<void>)|*)}}
+ * @type {{bracing: bracing, ironshieldWard: ironshieldWard, ironshieldRiposte: ironshieldRiposte, shrewdTrickery:
+ *   shrewdTrickery, canUseLearnedMoves: ((function(*, *): (boolean))|*), steelstormHandling: steelstormHandling,
+ *   shrewdEvadecraft: shrewdEvadecraft, goingAllIn: goingAllIn, replaceWithStyle: (function({actor:
+ *   game.wfrp4e.entities.ActorWFRP4e}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item:
+ *   game.wfrp4e.entities.ItemWFRP4e}): Promise<boolean>), invokeEvadecraftMastery: ((function({actor:
+ *   game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWFRP4e}, {actor:
+ *   game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWFRP4e}):
+ *   Promise<false|undefined>)|*), goingAllInMastery: goingAllInMastery, brace: brace, steelstormAssault:
+ *   steelstormAssault, addMeleeParryCurrent: ((function({actor: game.wfrp4e.entities.ActorWFRP4e}, {actor:
+ *   game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWFRP4e}):
+ *   Promise<void>)|*), goAllIn: goAllIn, replaceWithMastery: (function({actor: game.wfrp4e.entities.ActorWFRP4e},
+ *   {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWFRP4e}):
+ *   Promise<boolean>), targetIsGoingAllIn: targetIsGoingAllIn, bracingReminder: bracingReminder, learnedMoves:
+ *   learnedMoves, canShrewdEvadecraft: ((function({prefillModifiers: {modifier: number, difficulty: string, slBonus:
+ *   number, successBonus: number}, type: string, item: game.wfrp4e.entities.ItemWFRP4e, options: {}}, {actor:
+ *   game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e, item: game.wfrp4e.entities.ItemWFRP4e}): boolean)|*),
+ *   luckyEvadecraft: luckyEvadecraft, shrewdDisengage: shrewdDisengage, addMeleeParryFuture: ((function({item:
+ *   game.wfrp4e.entities.ItemWFRP4e, context: string}, {actor: game.wfrp4e.entities.ActorWFRP4e, effect: EffectWfrp4e,
+ *   item: game.wfrp4e.entities.ItemWFRP4e}): Promise<void>)|*)}}
  */
 export const styleHelpers = {
   replaceWithStyle: replaceWithStyle,
@@ -951,5 +1025,5 @@ export const styleHelpers = {
   shrewdDisengage: shrewdDisengage,
   invokeEvadecraftMastery: invokeEvadecraftMastery,
   canUseLearnedMoves: canUseLearnedMoves,
-  learnedMoves: learnedMoves
-}
+  learnedMoves: learnedMoves,
+};

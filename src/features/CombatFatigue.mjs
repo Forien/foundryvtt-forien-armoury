@@ -1,7 +1,7 @@
 import {constants, flags, settings} from "../constants.mjs";
-import Utility                      from "../utility/Utility.mjs";
 import {debug}                      from "../utility/Debug.mjs";
 import ForienBaseModule             from "../utility/ForienBaseModule.mjs";
+import Utility                      from "../utility/Utility.mjs";
 
 export default class CombatFatigue extends ForienBaseModule {
 
@@ -36,7 +36,7 @@ export default class CombatFatigue extends ForienBaseModule {
       for (let combatant of combatants) {
         const controls = html.querySelector(`.combatant[data-combatant-id="${combatant.id}"] .combatant-controls`);
         const tokenEffects = controls.querySelector(`.token-effects`);
-        controls.classList.add('has-fatigue');
+        controls.classList.add("has-fatigue");
 
         const combatFatigueControl = Utility.stringToHTMLElement(
           `<a class="combatant-control inline-control" data-control="combatFatigue">
@@ -62,7 +62,7 @@ export default class CombatFatigue extends ForienBaseModule {
                      <input data-tooltip="${game.i18n.localize("Forien.Armoury.CombatFatigue.CombatPassOutToollTip")}"
                             type="text" 
                             value="${this.#getRoundsBeforePassOut(combatant, combatant.actor)}">
-                   </a>`
+                   </a>`,
           );
           controls.insertBefore(passOutControl, tokenEffects);
           passOutControl.addEventListener("change", event => {
@@ -97,14 +97,17 @@ export default class CombatFatigue extends ForienBaseModule {
 
     let roundsBeforeTest = actor.characteristics.t.bonus;
 
-    if (previousOutcome === 'success' && outcome === 'failure') {
-      await actor.addCondition('fatigued');
-    } else if (previousOutcome === 'failure' && outcome === 'success') {
+    if (previousOutcome === "success" && outcome === "failure") {
+      await actor.addCondition("fatigued");
+    } else if (previousOutcome === "failure" && outcome === "success") {
       roundsBeforeTest += parseInt(SL);
-      await actor.removeCondition('fatigued', 1);
+      await actor.removeCondition("fatigued", 1);
     }
 
-    debug('[CombatFatigue] Combat Fatigue Test Reroll results', {outcome, SL, roundsBeforeTest, previousOutcome, combatant});
+    debug(
+      "[CombatFatigue] Combat Fatigue Test Reroll results",
+      {outcome, SL, roundsBeforeTest, previousOutcome, combatant},
+    );
 
     await combatant?.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, roundsBeforeTest);
   }
@@ -120,7 +123,8 @@ export default class CombatFatigue extends ForienBaseModule {
    * @return {Promise<void>}
    */
   async #processCombatTurn(combat, _update, _options, _user) {
-    if (Utility.getSetting(settings.combatFatigue.enable) === false) return debug('[CombatFatigue] Combat Fatigue is not enabled');
+    if (Utility.getSetting(settings.combatFatigue.enable) === false) return debug(
+      "[CombatFatigue] Combat Fatigue is not enabled");
 
     const previousCombatant = combat.combatants.get(combat.previous.combatantId);
     const actor = previousCombatant?.actor;
@@ -128,13 +132,16 @@ export default class CombatFatigue extends ForienBaseModule {
     if (!actor) return;
 
     if (!actor.isOwner)
-      return debug('[CombatFatigue] You are not an Owner of previous combatant', {previousCombatant, actor});
+      return debug("[CombatFatigue] You are not an Owner of previous combatant", {previousCombatant, actor});
 
     if (game.user.isGM && !Utility.getSetting(settings.combatFatigue.enableNPC))
-      return debug('[CombatFatigue] You are a GM and Combat Fatigue has been disabled for NPCs');
+      return debug("[CombatFatigue] You are a GM and Combat Fatigue has been disabled for NPCs");
 
     if (game.user.isGM && actor.hasPlayerOwner)
-      return debug('[CombatFatigue] You are a GM and previous combatant is Player Owned Actor', {previousCombatant, actor});
+      return debug(
+        "[CombatFatigue] You are a GM and previous combatant is Player Owned Actor",
+        {previousCombatant, actor},
+      );
 
     await this.#processCombatFatigue(previousCombatant);
     await this.#processCombatPassOut(previousCombatant);
@@ -153,24 +160,24 @@ export default class CombatFatigue extends ForienBaseModule {
     let roundsBeforeTest = this.#getRoundsBeforeTest(previousCombatant, actor);
     roundsBeforeTest--;
 
-    debug('[CombatFatigue] Combat Fatigue status', {previousCombatant, actor, roundsBeforeTest});
+    debug("[CombatFatigue] Combat Fatigue status", {previousCombatant, actor, roundsBeforeTest});
 
     if (roundsBeforeTest <= 0) {
-      await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, 0)
+      await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, 0);
       const {outcome, SL} = await this.#performTest(actor);
 
       roundsBeforeTest = actor.characteristics.t.bonus;
 
-      if (outcome === 'failure') {
-        await actor.addCondition('fatigued');
-      } else if (outcome === 'success') {
+      if (outcome === "failure") {
+        await actor.addCondition("fatigued");
+      } else if (outcome === "success") {
         roundsBeforeTest += parseInt(SL);
       }
 
-      debug('[CombatFatigue] Combat Fatigue Test result', {outcome, SL, roundsBeforeTest});
+      debug("[CombatFatigue] Combat Fatigue Test result", {outcome, SL, roundsBeforeTest});
     }
 
-    await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, roundsBeforeTest)
+    await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforeTest, roundsBeforeTest);
   }
 
   /**
@@ -182,18 +189,22 @@ export default class CombatFatigue extends ForienBaseModule {
    */
   async #processCombatPassOut(previousCombatant) {
     if (Utility.getSetting(settings.combatFatigue.enableCorePassOut) === false) return;
-      /** @type {ActorWFRP4e} */
+    /** @type {ActorWFRP4e} */
     const actor = previousCombatant.actor;
     if (actor.status.wounds.value !== 0) return;
 
     let roundsBeforePassOut = this.#getRoundsBeforePassOut(previousCombatant, actor);
     roundsBeforePassOut--;
 
-    if (roundsBeforePassOut <= 0 && !actor.hasCondition('unconscious')) {
+    if (roundsBeforePassOut <= 0 && !actor.hasCondition("unconscious")) {
       await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforePassOut, 0);
-      await actor.addCondition('unconscious');
+      await actor.addCondition("unconscious");
     } else {
-      await previousCombatant.setFlag(constants.moduleId, flags.combatFatigue.roundsBeforePassOut, Math.max(roundsBeforePassOut, 0));
+      await previousCombatant.setFlag(
+        constants.moduleId,
+        flags.combatFatigue.roundsBeforePassOut,
+        Math.max(roundsBeforePassOut, 0),
+      );
     }
   }
 
@@ -205,7 +216,7 @@ export default class CombatFatigue extends ForienBaseModule {
    * @return {Promise<{SL: *, outcome: *}>}
    */
   async #performTest(actor) {
-    const appendTitle = game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueTest")
+    const appendTitle = game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueTest");
     const enduranceName = game.i18n.localize("NAME.Endurance");
     const skill = actor.itemTypes.skill.find(s => s.name === enduranceName);
     let test;
@@ -216,13 +227,13 @@ export default class CombatFatigue extends ForienBaseModule {
       context: {
         failure: game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueTestFailure"),
         success: game.i18n.localize("Forien.Armoury.CombatFatigue.CombatFatigueTestSuccess"),
-      }
+      },
     };
 
     if (skill)
       test = await actor.setupSkill(skill, options);
     else
-      test = await actor.setupCharacteristic('t', options);
+      test = await actor.setupCharacteristic("t", options);
 
     await test.roll();
 
@@ -261,7 +272,8 @@ export default class CombatFatigue extends ForienBaseModule {
    * @returns {number}
    */
   #getRoundsBeforePassOut(currentCombatant, actor) {
-    let roundsBeforePassOut = currentCombatant.getFlag(constants.moduleId, flags.combatFatigue.roundsBeforePassOut) ?? null;
+    let roundsBeforePassOut = currentCombatant.getFlag(constants.moduleId, flags.combatFatigue.roundsBeforePassOut)
+                              ?? null;
     if (roundsBeforePassOut === null)
       roundsBeforePassOut = actor.characteristics.t.bonus;
 

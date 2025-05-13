@@ -1,7 +1,7 @@
+import {settings}       from "../constants.mjs";
 import {debug}          from "../utility/Debug.mjs";
 import ForienBaseModule from "../utility/ForienBaseModule.mjs";
 import Utility          from "../utility/Utility.mjs";
-import {settings}       from "../constants.mjs";
 
 export default class ItemProperties extends ForienBaseModule {
   /**
@@ -22,15 +22,15 @@ export default class ItemProperties extends ForienBaseModule {
     if (!Utility.getSetting(settings.properties.enabled)) return config;
 
     config.weaponQualities = {
-      slashing: 'Forien.Armoury.Arrows.Properties.Slashing.Label',
-      incendiary: 'Forien.Armoury.Arrows.Properties.Incendiary.Label',
-      poisonous: 'Forien.Armoury.Arrows.Properties.Poisonous.Label',
-      blinding: 'Forien.Armoury.Arrows.Properties.Blinding.Label',
-      recoverable: 'Forien.Armoury.Arrows.Properties.Recoverable.Label',
+      slashing: "Forien.Armoury.Arrows.Properties.Slashing.Label",
+      incendiary: "Forien.Armoury.Arrows.Properties.Incendiary.Label",
+      poisonous: "Forien.Armoury.Arrows.Properties.Poisonous.Label",
+      blinding: "Forien.Armoury.Arrows.Properties.Blinding.Label",
+      recoverable: "Forien.Armoury.Arrows.Properties.Recoverable.Label",
     };
 
     config.weaponFlaws = {
-      unrecoverable: 'Forien.Armoury.Arrows.Properties.Unrecoverable.Label',
+      unrecoverable: "Forien.Armoury.Arrows.Properties.Unrecoverable.Label",
     };
 
     config.propertyHasValue = {
@@ -43,22 +43,23 @@ export default class ItemProperties extends ForienBaseModule {
     };
 
     config.qualityDescriptions = {
-      slashing: 'Forien.Armoury.Arrows.Properties.Slashing.Description',
-      incendiary: 'Forien.Armoury.Arrows.Properties.Incendiary.Description',
-      blinding: 'Forien.Armoury.Arrows.Properties.Blinding.Description',
-      poisonous: 'Forien.Armoury.Arrows.Properties.Poisonous.Description',
-      recoverable: 'Forien.Armoury.Arrows.Properties.Recoverable.Description',
+      slashing: "Forien.Armoury.Arrows.Properties.Slashing.Description",
+      incendiary: "Forien.Armoury.Arrows.Properties.Incendiary.Description",
+      blinding: "Forien.Armoury.Arrows.Properties.Blinding.Description",
+      poisonous: "Forien.Armoury.Arrows.Properties.Poisonous.Description",
+      recoverable: "Forien.Armoury.Arrows.Properties.Recoverable.Description",
     };
 
     config.flawDescriptions = {
-      unrecoverable: 'Forien.Armoury.Arrows.Properties.Unrecoverable.Description',
+      unrecoverable: "Forien.Armoury.Arrows.Properties.Unrecoverable.Description",
     };
 
     return config;
   }
 
   /**
-   * Whenever 'wfrp4e:applyDamage' Hook is called, checks for presence of certain weapon properties and applies their effects
+   * Whenever 'wfrp4e:applyDamage' Hook is called, checks for presence of certain weapon properties and applies their
+   * effects
    * @param {{
    *   AP: {},
    *   abort: boolean,
@@ -97,10 +98,10 @@ export default class ItemProperties extends ForienBaseModule {
       AP,
       opposedTest,
       modifiers,
-      extraMessages
+      extraMessages,
     } = args;
 
-    debug('[ItemProperties] onApplyDamage arguments:', args);
+    debug("[ItemProperties] onApplyDamage arguments:", args);
     this.#checkForSlashing(opposedTest, AP, modifiers, actor, extraMessages);
     this.#checkForIncendiary(opposedTest, actor, extraMessages);
     this.#checkForBlinding(opposedTest, actor, extraMessages);
@@ -118,7 +119,7 @@ export default class ItemProperties extends ForienBaseModule {
     const blinding = opposedTest.attackerTest.weapon?.properties.qualities.blinding?.value ?? null;
     if (blinding === null) return;
 
-    debug('[ItemProperties] Blinding property used:', {opposedTest, actor, extraMessages, rating: blinding});
+    debug("[ItemProperties] Blinding property used:", {opposedTest, actor, extraMessages, rating: blinding});
     actor.addCondition("blinded", blinding);
     extraMessages.push(game.i18n.format("Forien.Armoury.Arrows.Properties.Blinding.Message", {rating: blinding}));
   }
@@ -135,13 +136,13 @@ export default class ItemProperties extends ForienBaseModule {
     if (incendiary === null) return;
 
     const die = opposedTest.attackerTest.result.roll % 10;
-    debug('[ItemProperties] Incendiary property used:', {opposedTest, actor, extraMessages, die, rating: incendiary});
+    debug("[ItemProperties] Incendiary property used:", {opposedTest, actor, extraMessages, die, rating: incendiary});
     if (die > incendiary) return;
 
     actor.addCondition("ablaze");
     extraMessages.push(game.i18n.format("Forien.Armoury.Arrows.Properties.Incendiary.Message", {
       die,
-      rating: incendiary
+      rating: incendiary,
     }));
   }
 
@@ -157,7 +158,7 @@ export default class ItemProperties extends ForienBaseModule {
     if (poisonous === null) return;
 
     const sl = parseInt(opposedTest.attackerTest.result.SL);
-    debug('[ItemProperties] Poisonous property used:', {opposedTest, actor, extraMessages, sl, rating: poisonous});
+    debug("[ItemProperties] Poisonous property used:", {opposedTest, actor, extraMessages, sl, rating: poisonous});
     if (sl < poisonous) return;
 
     actor.addCondition("poisoned");
@@ -178,14 +179,17 @@ export default class ItemProperties extends ForienBaseModule {
     if (slashing === null) return;
 
     let apUsed = modifiers.ap.used;
-    debug('[ItemProperties] Slashing property used:', {opposedTest, actor, extraMessages, rating: slashing, ap: apUsed});
+    debug(
+      "[ItemProperties] Slashing property used:",
+      {opposedTest, actor, extraMessages, rating: slashing, ap: apUsed},
+    );
     if (slashing < apUsed) return;
 
-    actor.addCondition('bleeding');
+    actor.addCondition("bleeding");
     extraMessages.push(game.i18n.format("Forien.Armoury.Arrows.Properties.Slashing.Message", {
       location: AP.label,
       ap: apUsed,
-      rating: slashing
+      rating: slashing,
     }));
   }
 }

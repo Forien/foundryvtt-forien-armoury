@@ -1,7 +1,7 @@
-import Utility                      from "../utility/Utility.mjs";
 import {constants, flags, settings} from "../constants.mjs";
 import {debug}                      from "../utility/Debug.mjs";
 import ForienBaseModule             from "../utility/ForienBaseModule.mjs";
+import Utility                      from "../utility/Utility.mjs";
 
 /**
  * ArrowReclamation class is mostly repurposed code from the legacy version of Forien's Armoury module
@@ -11,8 +11,8 @@ import ForienBaseModule             from "../utility/ForienBaseModule.mjs";
  */
 export default class ArrowReclamation extends ForienBaseModule {
   templates = {
-    ammoRecovery: 'ammo-recovery.hbs'
-  }
+    ammoRecovery: "ammo-recovery.hbs",
+  };
 
   bindHooks() {
     Hooks.on("wfrp4e:rollWeaponTest", this.checkRollWeaponTest.bind(this));
@@ -20,8 +20,8 @@ export default class ArrowReclamation extends ForienBaseModule {
   }
 
   registerSocketMethods(socket) {
-    this.socket.register('addArrowToReclaim', this.addAmmoToReplenish);
-    this.socket.register('removeArrowFromReclaim', this.removeArrowFromReclaim);
+    this.socket.register("addArrowToReclaim", this.addAmmoToReplenish);
+    this.socket.register("removeArrowFromReclaim", this.removeArrowFromReclaim);
   }
 
   /**
@@ -45,15 +45,15 @@ export default class ArrowReclamation extends ForienBaseModule {
     if (unrecoverable)
       return null;
 
-    if (weapon.system.ammunitionGroup.value === 'bow') {
+    if (weapon.system.ammunitionGroup.value === "bow") {
       allowed = allowArrows;
-      type = 'Arrow';
-    } else if (weapon.system.ammunitionGroup.value === 'crossbow') {
+      type = "Arrow";
+    } else if (weapon.system.ammunitionGroup.value === "crossbow") {
       allowed = allowBolts;
-      type = 'Bolt';
-    } else if (weapon.system.ammunitionGroup.value === 'sling') {
+      type = "Bolt";
+    } else if (weapon.system.ammunitionGroup.value === "sling") {
       allowed = allowBullets;
-      type = 'Bullet';
+      type = "Bullet";
     }
 
     if (allowed || recoverable)
@@ -94,34 +94,34 @@ export default class ArrowReclamation extends ForienBaseModule {
     const rule = game.settings.get(constants.moduleId, settings.arrowReclamation.rule);
 
     switch (rule) {
-      case 'success':
+      case "success":
         if (sturdy) recovered = even; else recovered = even && success;
         if (frail && recovered) recovered = sturdyRoll;
         break;
-      case 'noCrit':
+      case "noCrit":
         recovered = even && !crit;
         if (sturdy && !recovered) recovered = sturdyRoll;
         if (frail && recovered) recovered = sturdyRoll;
         break;
-      case 'successNoCrit':
+      case "successNoCrit":
         if (sturdy) recovered = even && !crit; else recovered = even && success && !crit;
         if (frail && recovered) recovered = sturdyRoll;
         break;
-      case 'failure':
+      case "failure":
         if (sturdy) recovered = even; else recovered = even && !success;
         if (frail && recovered) recovered = sturdyRoll;
         break;
-      case 'failureNoCrit':
+      case "failureNoCrit":
         if (sturdy) recovered = even && !crit; else recovered = even && !success && !crit;
         if (frail && recovered) recovered = sturdyRoll;
         break;
-      case 'percentage':
+      case "percentage":
         recovered = percentage;
         break;
-      case 'percentageNoCrit':
+      case "percentageNoCrit":
         recovered = percentage && !crit;
         break;
-      case 'default':
+      case "default":
       default:
         recovered = even;
         if (sturdy && !recovered) recovered = sturdyRoll;
@@ -139,7 +139,7 @@ export default class ArrowReclamation extends ForienBaseModule {
   async checkRollWeaponTest(roll, _cardOptions) {
     // if feature not enabled, do nothing
     if (!game.settings.get(constants.moduleId, settings.arrowReclamation.enable))
-      return debug('[ArrowReclamation] Arrow Reclamation is not enabled');
+      return debug("[ArrowReclamation] Arrow Reclamation is not enabled");
 
     const isReroll = roll.context?.reroll || false;
     const wasRecovered = roll.result?.options?.recovered || false;
@@ -153,15 +153,18 @@ export default class ArrowReclamation extends ForienBaseModule {
 
     // if type is not recognized or not allowed, do nothing
     if (type === null)
-      return debug('[ArrowReclamation] Ammunition cannot be recovered', {type, ammo});
+      return debug("[ArrowReclamation] Ammunition cannot be recovered", {type, ammo});
 
     // define chat messages
-    type = game.i18n.localize('Forien.Armoury.Arrows.' + type);
-    let messageNow = game.i18n.format('Forien.Armoury.Arrows.recovered', {type});
-    let messageFuture = game.i18n.format('Forien.Armoury.Arrows.recoveredFuture', {type});
+    type = game.i18n.localize("Forien.Armoury.Arrows." + type);
+    let messageNow = game.i18n.format("Forien.Armoury.Arrows.recovered", {type});
+    let messageFuture = game.i18n.format("Forien.Armoury.Arrows.recoveredFuture", {type});
 
     const {recovered, rule, percentageTotal, percentageTarget} = await this.#isProjectileSaved(roll, ammo);
-    debug('[ArrowReclamation] Ammunition recovery status:', {recovered, rule, roll, percentageTarget, percentageTotal, type, ammo});
+    debug(
+      "[ArrowReclamation] Ammunition recovery status:",
+      {recovered, rule, roll, percentageTarget, percentageTotal, type, ammo},
+    );
 
     const ammoId = weapon.system.currentAmmo.value;
     const actorId = roll.actor._id;
@@ -175,7 +178,7 @@ export default class ArrowReclamation extends ForienBaseModule {
         if (game.user.isGM) {
           this.addAmmoToReplenish(actorId, ammoId, game.user._id);
         } else {
-          this.socket?.executeAsGM('addArrowToReclaim', actorId, ammoId, game.user._id)
+          this.socket?.executeAsGM("addArrowToReclaim", actorId, ammoId, game.user._id);
         }
       }
 
@@ -192,7 +195,7 @@ export default class ArrowReclamation extends ForienBaseModule {
         if (game.user.isGM) {
           this.removeArrowFromReclaim(actorId, ammoId, game.user._id);
         } else {
-          this.socket?.executeAsGM('removeArrowFromReclaim', actorId, ammoId, game.user._id)
+          this.socket?.executeAsGM("removeArrowFromReclaim", actorId, ammoId, game.user._id);
         }
       }
 
@@ -218,7 +221,7 @@ export default class ArrowReclamation extends ForienBaseModule {
     // if ammo object doesn't exist, create one
     if (ammoData === undefined) {
       ammoData = {
-        "_id": ammoId, "user": userId, "quantity": 0
+        "_id": ammoId, "user": userId, "quantity": 0,
       };
       actorData.push(ammoData);
     }
@@ -265,7 +268,10 @@ export default class ArrowReclamation extends ForienBaseModule {
 
       ammoEntity.system.quantity.value += quantity;
       actor.updateEmbeddedDocuments("Item", [{_id: ammoId, "system.quantity.value": ammoEntity.system.quantity.value}]);
-      debug('[ArrowReclamation] Ammunition recovered:', {ammoId, recoveredQuantity: quantity, newQuantity: ammoEntity.system.quantity.value});
+      debug(
+        "[ArrowReclamation] Ammunition recovered:",
+        {ammoId, recoveredQuantity: quantity, newQuantity: ammoEntity.system.quantity.value},
+      );
 
       if (bulk) this.notifyAmmoReturned(actor, ammoEntity, userId, quantity);
     }, timeout);
@@ -284,7 +290,10 @@ export default class ArrowReclamation extends ForienBaseModule {
 
     ammoEntity.system.quantity.value -= quantity;
     actor.updateEmbeddedDocuments("Item", [{_id: ammoId, "system.quantity.value": ammoEntity.system.quantity.value}]);
-    debug('[ArrowReclamation] Ammunition spent:', {ammoId, recoveredQuantity: quantity, newQuantity: ammoEntity.system.quantity.value});
+    debug(
+      "[ArrowReclamation] Ammunition spent:",
+      {ammoId, recoveredQuantity: quantity, newQuantity: ammoEntity.system.quantity.value},
+    );
   }
 
   /**
@@ -321,7 +330,7 @@ export default class ArrowReclamation extends ForienBaseModule {
         img: ammo.img,
         name: ammo.name,
       },
-      quantity: quantity
+      quantity: quantity,
     };
 
     // Don't post any image for the item (which would leave a large gap) if the default image is used
@@ -330,14 +339,15 @@ export default class ArrowReclamation extends ForienBaseModule {
     if (templateData.ammo.img.includes("/blank.png"))
       templateData.ammo.img = null;
 
-    foundry.applications.handlebars.renderTemplate(Utility.getTemplate(this.templates.ammoRecovery), templateData).then(html => {
-      let chatData = {
-        user: user,
-        speaker: {alias: actor.name, actor: actor._id},
-        whisper: game.users.filter((u) => u.isGM).map((u) => u._id),
-        content: html
-      };
-      ChatMessage.create(chatData);
-    });
+    foundry.applications.handlebars.renderTemplate(Utility.getTemplate(this.templates.ammoRecovery), templateData).then(
+      html => {
+        let chatData = {
+          user: user,
+          speaker: {alias: actor.name, actor: actor._id},
+          whisper: game.users.filter((u) => u.isGM).map((u) => u._id),
+          content: html,
+        };
+        ChatMessage.create(chatData);
+      });
   }
 }

@@ -18,7 +18,7 @@ export default class MagicEnduranceDataModel {
    * @type {number}
    */
   #maximum;
-  #virtual
+  #virtual;
 
   constructor(object) {
     Object.assign(this, object);
