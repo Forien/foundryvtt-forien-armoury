@@ -261,12 +261,13 @@ export default class ItemPiles {
     const coreModuleActive = coreModule?.active || false;
     if (!coreModuleActive) return;
 
+    const coreCollectionName = isNewerVersion(coreModule.version, "3.999")
+      ? "wfrp4e-core.items"
+      : "wfrp4e-core.trappings";
+    const coreCollection = coreModuleActive ? game.packs.get(coreCollectionName) : null;
+    const folder = await this.#createFolder();
+
     try {
-      const coreCollectionName = isNewerVersion(coreModule.version, "3.999")
-        ? "wfrp4e-core.items"
-        : "wfrp4e-core.trappings";
-      const coreCollection = coreModuleActive ? game.packs.get(coreCollectionName) : null;
-      const folder = await this.#createFolder();
       const rolltableCompendium = await game.packs.get("forien-armoury.merchant-rolltables");
       const rollTables = await rolltableCompendium.importAll({folderId: folder._id, keepId: true});
 
@@ -287,12 +288,13 @@ export default class ItemPiles {
         entriesToRemove.forEach(key => rollTable.results.delete(key));
       }
       await RollTable.updateDocuments(rollTables);
-      game.settings.set(constants.moduleId, settings.integrations.itemPiles.rolltablesImported, true);
-      debug("Merchant RollTables have been imported into folder", {rollTables, folder});
 
     } catch (error) {
       Utility.error(error, {error});
     }
+
+    game.settings.set(constants.moduleId, settings.integrations.itemPiles.rolltablesImported, true);
+    debug("Merchant RollTables have been imported into folder", {rollTables, folder});
 
     return folder.setFlag(constants.moduleId, flags.integrations.itemPiles.isImportFolder, true);
   }

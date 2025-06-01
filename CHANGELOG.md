@@ -3,6 +3,9 @@
 
 ## v4.X.X
 
+### v4.0.4
+* Further fix to erroneous duplication of imported Merchant RollTables
+
 ### v4.0.3
 * Endurance Test from Casting Fatigue will no longer initiate an Opposed Test
 * Fix erroneous duplication when importing Merchant RollTables for Item Piles integration
