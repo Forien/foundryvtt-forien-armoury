@@ -3,6 +3,10 @@
 
 ## v4.X.X
 
+### v4.0.3
+* Endurance Test from Casting Fatigue will no longer initiate an Opposed Test
+* Fix erroneous duplication when importing Merchant RollTables for Item Piles integration
+
 ### v4.0.2
 * Fixed Magical Endurance CSS
 * Updated Foundry API calls with namespaces to remove warnings

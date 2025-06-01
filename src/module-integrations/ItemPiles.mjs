@@ -1,3 +1,4 @@
+import Utility                      from "utility/Utility";
 import {constants, flags, settings} from "../constants.mjs";
 import {debug}                      from "../utility/Debug.mjs";
 
@@ -260,42 +261,38 @@ export default class ItemPiles {
     const coreModuleActive = coreModule?.active || false;
     if (!coreModuleActive) return;
 
-    const coreCollectionName = isNewerVersion(coreModule.version, "3.999")
-      ? "wfrp4e-core.items"
-      : "wfrp4e-core.trappings";
-    const coreCollection = coreModuleActive ? game.packs.get(coreCollectionName) : null;
-    const folder = await this.#createFolder();
-    const rolltableCompendium = await game.packs.get("forien-armoury.merchant-rolltables");
-    const rollTables = await rolltableCompendium.importAll({folderId: folder._id, keepId: true});
+    try {
+      const coreCollectionName = isNewerVersion(coreModule.version, "3.999")
+        ? "wfrp4e-core.items"
+        : "wfrp4e-core.trappings";
+      const coreCollection = coreModuleActive ? game.packs.get(coreCollectionName) : null;
+      const folder = await this.#createFolder();
+      const rolltableCompendium = await game.packs.get("forien-armoury.merchant-rolltables");
+      const rollTables = await rolltableCompendium.importAll({folderId: folder._id, keepId: true});
 
+      for (let rollTable of rollTables) {
+        let entriesToRemove = [];
 
-    for (let rollTable of rollTables) {
-      let entriesToRemove = [];
+        for (let entry of rollTable.results) {
+          let entryKey = entry._id;
+          let pack = game.packs.get(entry.documentCollection);
+          if (pack) continue;
 
-      for (let entry of rollTable.results) {
-        let entryKey = entry._id;
-        let pack = game.packs.get(entry.documentCollection);
-        if (pack) continue;
-        if (!pack && coreModuleActive) {
-          let coreItem = coreCollection?.index.find(index => index.name === entry.text);
-          if (coreItem) {
-            entry.documentCollection = coreCollectionName;
-            entry.documentId = coreItem._id;
-            continue;
-          }
+          entriesToRemove.push(entryKey);
         }
 
-        entriesToRemove.push(entryKey);
+        if (entriesToRemove.length === 0) continue;
+
+        debug("Entries have been removed due to lacking official content module", {rollTable, entriesToRemove});
+        entriesToRemove.forEach(key => rollTable.results.delete(key));
       }
+      await RollTable.updateDocuments(rollTables);
+      game.settings.set(constants.moduleId, settings.integrations.itemPiles.rolltablesImported, true);
+      debug("Merchant RollTables have been imported into folder", {rollTables, folder});
 
-      if (entriesToRemove.length === 0) continue;
-
-      debug("Entries have been removed due to lacking official content module", {rollTable, entriesToRemove});
-      entriesToRemove.forEach(key => rollTable.results.delete(key));
+    } catch (error) {
+      Utility.error(error, {error});
     }
-    await RollTable.updateDocuments(rollTables);
-    game.settings.set(constants.moduleId, settings.integrations.itemPiles.rolltablesImported, true);
-    debug("Merchant RollTables have been imported into folder", {rollTables, folder});
 
     return folder.setFlag(constants.moduleId, flags.integrations.itemPiles.isImportFolder, true);
   }

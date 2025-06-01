@@ -204,6 +204,7 @@ export default class CastingFatigue extends ForienBaseModule {
     const appendTitle = game.i18n.localize("Forien.Armoury.CastingFatigue.MagicalEnduranceTest");
 
     const test = await actor.setupSkill(enduranceSkill, {
+      skipTargets: true,
       context: {failure, success},
       absolute: {difficulty},
       appendTitle: appendTitle,
