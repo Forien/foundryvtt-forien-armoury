@@ -136,18 +136,11 @@ export default class CombatFatigue extends ForienBaseModule {
     if (game.user.isGM && !Utility.getSetting(settings.combatFatigue.enableNPC))
       return debug("[CombatFatigue] You are a GM and Combat Fatigue has been disabled for NPCs");
 
-<<<<<<< HEAD:dist/modules/features/CombatFatigue.mjs
-    const owner = warhammer.utility.getActiveDocumentOwner(actor);
-    if (owner.id !== game.user.id) {
-        return debug('[CombatFatigue] there is a other Player that owns previous combatant', {previousCombatant, actor});
-    }
-=======
     if (game.user.isGM && actor.hasPlayerOwner)
       return debug(
         "[CombatFatigue] You are a GM and previous combatant is Player Owned Actor",
         {previousCombatant, actor},
       );
->>>>>>> upstream/master:src/features/CombatFatigue.mjs
 
     await this.#processCombatFatigue(previousCombatant);
     await this.#processCombatPassOut(previousCombatant);
