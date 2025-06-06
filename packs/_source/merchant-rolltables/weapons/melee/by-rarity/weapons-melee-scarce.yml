@@ -1,0 +1,260 @@
+folder: qadSv8WiQda0kwDd
+name: Weapons Melee Scarce
+_id: rFxBuxgZ3F0H6GgS
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    text: Ahlspiess
+    documentId: AMxngrqWtoeUGVt4
+    img: modules/wfrp4e-up-in-arms/assets/icons/ahlspiess.png
+    _id: DCbjZfFCbKTOjYkz
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.DCbjZfFCbKTOjYkz'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    text: Ballock Knife
+    documentId: AyhuzfJxwZGIKhsI
+    img: modules/wfrp4e-core/icons/equipment/weapons/main-gauche.png
+    _id: 1VtmEWdCMuJSX9xR
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.1VtmEWdCMuJSX9xR'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    text: Bastard Sword
+    documentId: mqw3beNHRdw7qih5
+    img: modules/wfrp4e-up-in-arms/assets/icons/bastard-sword.png
+    _id: yVZq5s5zfO0u12Mb
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.yVZq5s5zfO0u12Mb'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    text: Bill
+    documentId: TMpP9Zppd14MNPwe
+    img: modules/wfrp4e-up-in-arms/assets/icons/bill.png
+    _id: mbAg37iVy3daEjkh
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.mbAg37iVy3daEjkh'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    text: Cavalry Hammer
+    documentId: wZlAownYMsDtEDEj
+    img: modules/wfrp4e-up-in-arms/assets/icons/warhammer-basic.png
+    _id: xd0RiarTUk7TqkVI
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.xd0RiarTUk7TqkVI'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    text: Demi-Lance
+    documentId: 0qCZUJSuLyReber6
+    img: modules/wfrp4e-up-in-arms/assets/icons/lance.png
+    _id: 3zk6yGcCARRlhyBu
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.3zk6yGcCARRlhyBu'
+  - type: pack
+    documentCollection: wfrp4e-archives1.items
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: false
+    text: Dwarf Hammer
+    documentId: Fs7tl8V78Ie4INPX
+    img: modules/wfrp4e-archives1/assets/icons/dwarf-hammer.png
+    _id: NOIvCO5ntTNLizrc
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.NOIvCO5ntTNLizrc'
+  - type: pack
+    documentCollection: wfrp4e-archives1.items
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: false
+    text: Eonir War Blade
+    documentId: 1DHLlgZEpY5uSVm9
+    img: modules/wfrp4e-archives1/assets/icons/eonir-war-blade.png
+    _id: W0Pc0Wr5f7chAlJ8
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.W0Pc0Wr5f7chAlJ8'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: false
+    text: Flail
+    documentId: Qi8gXIjgUSsNLf1Z
+    img: modules/wfrp4e-up-in-arms/assets/icons/flail.png
+    _id: WQxxND5YzLUrxs7A
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.WQxxND5YzLUrxs7A'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: false
+    text: Foil
+    documentId: SQakHYxBYiPbHi3i
+    img: modules/wfrp4e-core/icons/equipment/weapons/foil.png
+    _id: one0zUGIplHbKA66
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.one0zUGIplHbKA66'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: false
+    text: Great Axe
+    documentId: QnFLWJmz2DN76Dx5
+    img: modules/wfrp4e-core/icons/equipment/weapons/great-axe.png
+    _id: EOzcGUirftwFw6sR
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.EOzcGUirftwFw6sR'
+  - type: pack
+    documentCollection: wfrp4e-archives2.items
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: false
+    text: Ironfist
+    documentId: ry3jgN7jds1ii5ft
+    img: systems/wfrp4e/icons/blank.png
+    _id: 59ly3fELq7gEKMEy
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.59ly3fELq7gEKMEy'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 13
+      - 13
+    drawn: false
+    text: Lance
+    documentId: efk3W6z1CMAA8NrB
+    img: modules/wfrp4e-up-in-arms/assets/icons/lance.png
+    _id: 2oBH1TBCT84qiQZR
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.2oBH1TBCT84qiQZR'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 14
+      - 14
+    drawn: false
+    text: Locked Gauntlet
+    documentId: roA3bgpj0F8pWsL6
+    img: systems/wfrp4e/icons/blank.png
+    _id: 3uoc4DwY4wwnDL1c
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.3uoc4DwY4wwnDL1c'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 15
+      - 15
+    drawn: false
+    text: Military Pick
+    documentId: 9AzTzNF9yVMsGcpC
+    img: modules/wfrp4e-core/icons/equipment/weapons/war-pick.png
+    _id: QymRSZ3tJ42EIAqo
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.QymRSZ3tJ42EIAqo'
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 1
+    range:
+      - 16
+      - 16
+    drawn: false
+    text: Pickaxe
+    documentId: ws5f2yvbXpHZSPob
+    img: icons/weapons/axes/pickaxe-gray.webp
+    _id: b6P4WzBrTcEcESJQ
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.b6P4WzBrTcEcESJQ'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 17
+      - 17
+    drawn: false
+    text: Pollaxe
+    documentId: 7N3TrPYcO9cNNgsd
+    img: modules/wfrp4e-up-in-arms/assets/icons/pollaxe.png
+    _id: U5YKalvVVWVO9JDb
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.U5YKalvVVWVO9JDb'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 18
+      - 18
+    drawn: false
+    text: Rapier
+    documentId: nGlyGodgPB9Pkbmf
+    img: modules/wfrp4e-up-in-arms/assets/icons/rapier.png
+    _id: b0vTFPCFGSs5AJWa
+    flags: {}
+    _key: '!tables.results!rFxBuxgZ3F0H6GgS.b0vTFPCFGSs5AJWa'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690161578458
+  modifiedTime: 1690161632198
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d18
+_key: '!tables!rFxBuxgZ3F0H6GgS'
+

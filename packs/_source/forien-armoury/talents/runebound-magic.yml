@@ -1,0 +1,136 @@
+folder: c6bIK3vGnIqNXscz
+name: Runebound Magic
+type: talent
+img: modules/forien-armoury/icons/runebound-magic.webp
+system:
+  description:
+    value: >-
+      <p>Upon taking this talent you immediately gain access to all Runebound
+      Runes (Spells).</p><p>Using Runes, unlike Arcane Magic, does not require
+      ability to speak aloud incantation, instead it's sone by
+      @UUID[Compendium.wfrp4e-core.items.Item.V8eRx66SxB9Jha0Q]{Channelling}
+      winds of magic through hand signs. To cast a Rune, character needs ability
+      to use at least one hand freely.</p><p>Having
+      @UUID[Compendium.wfrp4e-core.items.Item.tXKX29QZBdHmyMc7]{Combat Reflexes}
+      Talent allows using Runes when using Two-Handed weapons (of any
+      Category).</p><p>For every level of this talent taken, except the first,
+      you can "Memorize" a single Rune. You can use Memorized Runes as a Free
+      Action</p>
+  gmdescription:
+    value: ''
+  max:
+    value: int
+  advances:
+    value: 1
+    force: false
+  career:
+    value: ''
+  tests:
+    value: Channelling
+effects:
+  - name: Runebound Magic
+    _id: pOZuWgd2BdjU3nq6
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    transfer: true
+    statuses: []
+    flags:
+      wfrp4e:
+        applicationData: {}
+        scriptData: []
+        _legacyData: {}
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runebound-magic.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+          script: ''
+          difficulty: ''
+          characteristic: ''
+          skill: ''
+        testIndependent: false
+        preApplyScript: ''
+        equipTransfer: false
+        selfOnly: false
+        enableConditionScript: ''
+        filter: ''
+        prompt: false
+        area:
+          radius: null
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: '@item.system.tests.value'
+          script: args.fields.successBonus++;
+          trigger: dialog
+          options:
+            hideScript: >-
+              return args.type != "channelling" &&
+              !args.skill?.name.includes(game.i18n.localize("NAME.Channelling"))
+            activateScript: >-
+              return args.type == "channelling" ||
+              args.skill?.name.includes(game.i18n.localize("NAME.Channelling"))
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!XK4JNjFfh6xqui0k.pOZuWgd2BdjU3nq6'
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1688252626857
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: XK4JNjFfh6xqui0k
+sort: 1100000
+ownership:
+  default: 0
+_key: '!items!XK4JNjFfh6xqui0k'
+

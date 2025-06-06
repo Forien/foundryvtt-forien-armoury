@@ -1,0 +1,50 @@
+name: Hunter's Quiver
+type: container
+img: icons/containers/ammunition/arrows-quiver-brown-grey.webp
+system:
+  description:
+    value: >-
+      <p>Small practical quiver that can hold up to 12 typical arrows or bolts
+      (0.05 enc each)</p>
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 1
+  price:
+    gc: 0
+    ss: 6
+    bp: 0
+  availability:
+    value: common
+  location:
+    value: ''
+  wearable:
+    value: true
+  carries:
+    value: 0.6
+  countEnc:
+    value: true
+  damageToItem:
+    value: null
+    shield: null
+  equipped:
+    value: false
+effects: []
+folder: bCYA5k9kT55E8eEO
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1687475455907
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: gg1pfuy1Tk8hPoVl
+sort: 900000
+ownership:
+  default: 0
+_key: '!items!gg1pfuy1Tk8hPoVl'
+

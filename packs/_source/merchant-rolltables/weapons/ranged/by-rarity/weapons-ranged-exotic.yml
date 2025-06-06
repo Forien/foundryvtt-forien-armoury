@@ -1,0 +1,182 @@
+folder: pKEh2I51xgzWgJK5
+name: Weapons Ranged Exotic
+_id: Pdyhzp5OM17XSMoK
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    text: Arquebus
+    documentId: HblRPlASKOI73aOE
+    img: modules/wfrp4e-core/icons/equipment/weapons/handgun-fine.png
+    _id: XXadJ4Bllypu8EMc
+    flags: {}
+    _key: '!tables.results!Pdyhzp5OM17XSMoK.XXadJ4Bllypu8EMc'
+  - type: pack
+    documentCollection: wfrp4e-archives1.items
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    text: Blackbriar Javelin
+    documentId: qBqfo35CFyWAAAnX
+    img: modules/wfrp4e-archives1/assets/icons/blackbriar-javelin.png
+    _id: oe6b0cjTJrBsm3rg
+    flags: {}
+    _key: '!tables.results!Pdyhzp5OM17XSMoK.oe6b0cjTJrBsm3rg'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    text: Cane Pistol
+    documentId: KctE2XqiliGL054j
+    img: modules/wfrp4e-up-in-arms/assets/icons/pistol.png
+    _id: NdLky4GVeZ6SqPbj
+    flags: {}
+    _key: '!tables.results!Pdyhzp5OM17XSMoK.NdLky4GVeZ6SqPbj'
+  - type: pack
+    documentCollection: wfrp4e-archives1.items
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    text: Cinderblast Bomb
+    documentId: nyUbN0JaeXNQUbUT
+    img: modules/wfrp4e-archives1/assets/icons/cinderblast-bomb.png
+    _id: oPgHWQnlM3MlZVUw
+    flags: {}
+    _key: '!tables.results!Pdyhzp5OM17XSMoK.oPgHWQnlM3MlZVUw'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    text: Double-barrelled Handgun
+    documentId: Ysoz4nQcEe9Vckv6
+    img: modules/wfrp4e-core/icons/equipment/weapons/handgun.png
+    _id: YdN6KQ4i1pUVytvB
+    flags: {}
+    _key: '!tables.results!Pdyhzp5OM17XSMoK.YdN6KQ4i1pUVytvB'
+  - type: pack
+    documentCollection: wfrp4e-archives1.items
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    text: Drakefire Pistol
+    documentId: XurSURwIt8pnoOlJ
+    img: modules/wfrp4e-archives1/assets/icons/drakefire-pistol.png
+    _id: vUdj0DsEgYiOIkOq
+    flags: {}
+    _key: '!tables.results!Pdyhzp5OM17XSMoK.vUdj0DsEgYiOIkOq'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: false
+    text: Elf Bow
+    documentId: 2mE771fGEEB38OqG
+    img: modules/wfrp4e-core/icons/equipment/weapons/elf-bow.png
+    _id: 2xoI311KmrEUKld5
+    flags: {}
+    _key: '!tables.results!Pdyhzp5OM17XSMoK.2xoI311KmrEUKld5'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: false
+    text: Griffonsfoot Pistol
+    documentId: jVXLYH6RexF1SUnP
+    img: modules/wfrp4e-up-in-arms/assets/icons/griffonsfoot.png
+    _id: b02X1zyHqDjrALER
+    flags: {}
+    _key: '!tables.results!Pdyhzp5OM17XSMoK.b02X1zyHqDjrALER'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: false
+    text: Gun Axe
+    documentId: umOvfObukES6LRvT
+    img: modules/wfrp4e-core/icons/equipment/weapons/great-axe-fine.png
+    _id: xUZSzzMeFbBY28TM
+    flags: {}
+    _key: '!tables.results!Pdyhzp5OM17XSMoK.xUZSzzMeFbBY28TM'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: false
+    text: Gun Halberd
+    documentId: UBqjWR96AHSKilMP
+    img: modules/wfrp4e-core/icons/equipment/weapons/halberd.png
+    _id: gYjyiHNEQJJdIj1J
+    flags: {}
+    _key: '!tables.results!Pdyhzp5OM17XSMoK.gYjyiHNEQJJdIj1J'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: false
+    text: Hochland Long Rifle
+    documentId: PFUozVSLLO2MLjA1
+    img: modules/wfrp4e-up-in-arms/assets/icons/hochland-long-rifle.png
+    _id: RU6ZCBpzCWGUoeWW
+    flags: {}
+    _key: '!tables.results!Pdyhzp5OM17XSMoK.RU6ZCBpzCWGUoeWW'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: false
+    text: Mortar
+    documentId: d2LzU8hNCH97njsK
+    img: systems/wfrp4e/icons/blank.png
+    _id: aLcjix63xmluMSM5
+    flags: {}
+    _key: '!tables.results!Pdyhzp5OM17XSMoK.aLcjix63xmluMSM5'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690163152335
+  modifiedTime: 1690164145737
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d12
+_key: '!tables!Pdyhzp5OM17XSMoK'
+

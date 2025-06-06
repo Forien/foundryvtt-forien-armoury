@@ -1,0 +1,101 @@
+folder: OknGSWx8ZsQcVSTB
+name: Breastplate (v1)
+type: armour
+_id: hWZ6H1jZ9jmte6yE
+img: icons/equipment/chest/breastplate-gorget-steel.webp
+system:
+  description:
+    type: String
+    label: Description
+    value: >-
+      <p>Breastplate is a type of plate armour that covers only front portion of
+      torso.</p>
+  gmdescription:
+    type: String
+    label: Description
+    value: ''
+  quantity:
+    type: Number
+    label: Quantity
+    value: 1
+  encumbrance:
+    type: Number
+    label: Encumbrance
+    value: 2
+  price:
+    type: String
+    label: Price
+    gc: 5
+    ss: 0
+    bp: 0
+  availability:
+    type: String
+    label: Availability
+    value: scarce
+  location:
+    type: Number
+    label: Location
+    value: ''
+  damageToItem:
+    type: Number
+    value: 0
+    shield: 0
+  worn:
+    type: Boolean
+    label: Worn
+    value: false
+  armorType:
+    type: String
+    label: Armour Type
+    value: plate
+  penalty:
+    type: String
+    label: Penalty
+    value: ''
+  qualities:
+    type: String
+    label: Qualities
+    value:
+      - name: impenetrable
+        value: null
+  flaws:
+    type: String
+    label: Flaws
+    value:
+      - name: partial
+        value: null
+  special:
+    type: String
+    label: Special
+    value: ''
+  AP:
+    head: 0
+    lArm: 0
+    rArm: 0
+    lLeg: 0
+    rLeg: 0
+    body: 2
+  APdamage:
+    head: 0
+    lArm: 0
+    rArm: 0
+    lLeg: 0
+    rLeg: 0
+    body: 0
+  equipped:
+    value: false
+effects: []
+sort: 1100000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1687445149875
+  modifiedTime: 1739615685556
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_key: '!items!hWZ6H1jZ9jmte6yE'
+

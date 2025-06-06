@@ -1,5 +1,0 @@
-2025/02/15-12:15:55.738 9f30 Delete type=3 #1
-2025/02/15-12:15:55.742 bea4 Level-0 table #5: started
-2025/02/15-12:15:55.746 bea4 Level-0 table #5: 11414 bytes OK
-2025/02/15-12:15:55.750 bea4 Delete type=0 #3
-2025/02/15-12:15:55.750 bea4 Manual compaction at level-0 from '!folders!K7bIr7HUorfHR7Xh' @ 72057594037927935 : 1 .. '!macros!ynLKA5lklO79GE9P' @ 0 : 0; will stop at (end)

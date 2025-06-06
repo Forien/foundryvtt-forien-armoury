@@ -4,9 +4,9 @@
  */
 
 if (!actor)
-  return ui.notifications.notify(game.i18n.localize('Forien.Armoury.Macros.MustControlActor'), 'warning');
+  return ui.notifications.notify(game.i18n.localize("Forien.Armoury.Macros.MustControlActor"), "warning");
 
-const skills = actor.items.filter(i => i.type === 'skill' && i.system.advanced.value === 'adv');
+const skills = actor.items.filter(i => i.type === "skill" && i.system.advanced.value === "adv");
 
 let options = "";
 
@@ -15,10 +15,10 @@ for (const skill of skills) {
 }
 
 Dialog.wait({
-  title: game.i18n.localize('Forien.Armoury.Macros.SelectSkill'),
+  title: game.i18n.localize("Forien.Armoury.Macros.SelectSkill"),
   content: `<form>
               <div class="form-group">
-                <label>${game.i18n.localize('Forien.Armoury.Macros.AvailableSkills')}</label> 
+                <label>${game.i18n.localize("Forien.Armoury.Macros.AvailableSkills")}</label> 
 				<select name="skill-id" id="skill-id">
 				   ${options}
 				</select>
@@ -27,12 +27,12 @@ Dialog.wait({
   buttons: {
     no: {
       icon: "<i class='fas fa-times'></i>",
-      label: game.i18n.localize('Forien.Armoury.Macros.Cancel')
+      label: game.i18n.localize("Forien.Armoury.Macros.Cancel")
     },
     yes: {
       icon: "<i class='fas fa-check'></i>",
-      label: game.i18n.localize('Forien.Armoury.Macros.Roll'),
-      callback: async (html) => {
+      label: game.i18n.localize("Forien.Armoury.Macros.Roll"),
+      callback: async html => {
         const skillUuid = html.find("#skill-id").val();
         const skill = fromUuidSync(skillUuid);
         const advances = skill.advances.value;
@@ -55,9 +55,9 @@ Dialog.wait({
           test.data.preData.SL = SL < characteristicBonus ? characteristicBonus : SL;
 
         await test.computeResult();
-        await test.renderRollCard()
+        await test.renderRollCard();
       }
     }
   },
   default: "yes"
-})
+});

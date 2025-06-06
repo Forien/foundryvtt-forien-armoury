@@ -1,0 +1,43 @@
+name: Generate Ingredient for Spell
+type: script
+scope: global
+_id: 9W3cMh8pHiAdLl0y
+author: aDepqlKkeOa13DWo
+img: icons/consumables/grains/sack-rice-open-brown.webp
+command: >-
+  // if true, ingredients will be added to Actor immediately, instead of being
+  created in the World
+
+  const addToActor = false; 
+
+
+  // if true and `addToActor` is enabled, then money will be automatically
+  deducted from Actor to pay for the ingredient
+
+  const autoPay = true;
+
+
+  // how many items to add/buy with `addToActor` enabled
+
+  const quantity = 1;
+
+
+
+  const macros = game.modules.get("forien-armoury")?.api.macros;
+
+  await macros.createIngredient(this, {addToActor, autoPay, quantity});
+folder: K7bIr7HUorfHR7Xh
+sort: 400000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 7.0.3
+  coreVersion: '12.327'
+  createdTime: 1687447122457
+  modifiedTime: 1718108059547
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_key: '!macros!9W3cMh8pHiAdLl0y'
+

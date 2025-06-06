@@ -9,47 +9,27 @@ name: Upload Release Asset
 
 jobs:
   build:
+    permissions: write-all
     name: Upload Release Asset
+    if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - name: Setup NodeJS 22
+        uses: actions/setup-node@v3
+        with:
+          node-version: "22"
+
+      - name: Install node modules
+        run: npm install
+
+      - name: Build Project
+        run: npm run build
 
       - name: Extract Version From Tag
         id: get_version
         uses: battila7/get-version-action@v2
-
-      - name: Modify Module Manifest With Release-Specific Values
-        id: sub_manifest_link_version
-        uses: microsoft/variable-substitution@v1
-        with:
-          files: './dist/module.json'
-        env:
-          version: ${{steps.get_version.outputs.version-without-v}}
-          url: https://github.com/${{github.repository}}
-          manifest: https://github.com/${{github.repository}}/releases/latest/download/module.json
-          download: https://github.com/${{github.repository}}/releases/download/${{steps.get_version.outputs.version}}/module.zip
-          readme: https://github.com/${{github.repository}}/blob/${{steps.get_version.outputs.version}}/README.md
-          changelog: https://github.com/${{github.repository}}/blob/${{steps.get_version.outputs.version}}/CHANGELOG.md
-          bugs: https://github.com/${{github.repository}}/issues
-
-      - name: Zip files
-        run: |
-          cp CHANGELOG.md README.md LICENSE dist/
-          cd dist/
-          zip -r module.zip module.json CHANGELOG.md README.md LICENSE icons/ languages/ modules/ packs/ scripts/ styles/ templates/ 
-
-      - name: Update Release with Files
-        id: create_version_release
-        uses: ncipollo/release-action@v1
-        with:
-          allowUpdates: true
-          name: Release ${{steps.get_version.outputs.version}}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './dist/module.json, ./dist/module.zip'
-          tag: ${{ github.ref }}
 
       - name: Get Module ID
         id: moduleID
@@ -72,11 +52,41 @@ jobs:
           path: './dist/module.json'
           prop_path: 'compatibility.verified'
 
+      - name: Modify Module Manifest With Release-Specific Values
+        id: sub_manifest_link_version
+        uses: microsoft/variable-substitution@v1
+        with:
+          files: './dist/module.json'
+        env:
+          version: ${{steps.get_version.outputs.version-without-v}}
+          url: https://github.com/${{github.repository}}
+          manifest: https://github.com/${{github.repository}}/releases/latest/download/module.json
+          download: https://github.com/${{github.repository}}/releases/download/${{steps.get_version.outputs.version}}/${{steps.moduleID.outputs.prop}}.zip
+          readme: https://github.com/${{github.repository}}/blob/${{steps.get_version.outputs.version}}/README.md
+          changelog: https://github.com/${{github.repository}}/blob/${{steps.get_version.outputs.version}}/CHANGELOG.md
+          bugs: https://github.com/${{github.repository}}/issues
+
+      - name: Create ZIP
+        run: |
+          cd dist
+          zip -r ../${{steps.moduleID.outputs.prop}}.zip *
+
+      - name: Create Release
+        id: create_version_release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ github.ref }}
+          name: Release ${{steps.get_version.outputs.version}}
+          artifacts: './dist/module.json, ${{steps.moduleID.outputs.prop}}.zip'
+          allowUpdates: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          generateReleaseNotes: true
+
       - name: Foundry Release API
         uses: fjogeleit/http-request-action@v1
         with:
           url: 'https://api.foundryvtt.com/_api/packages/release_version'
           method: 'POST'
+          preventFailureOnNoResponse: true
           customHeaders: '{"Content-Type": "application/json", "Authorization" : "${{ secrets.FOUNDRY_KEY }}"}'
           data: '{"dry_run": false, "id": "${{steps.moduleID.outputs.prop}}", "release": {"version":  "${{steps.get_version.outputs.version-without-v}}", "manifest": "https://github.com/${{github.repository}}/releases/download/${{steps.get_version.outputs.version}}/module.json", "notes": "https://github.com/${{github.repository}}/blob/${{steps.get_version.outputs.version}}/CHANGELOG.md", "compatibility" : {"minimum": "${{steps.minimum.outputs.prop}}", "verified": "${{steps.verified.outputs.prop}}"}}}'
-

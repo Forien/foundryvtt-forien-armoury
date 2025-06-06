@@ -1,0 +1,83 @@
+name: Old Bow
+type: weapon
+img: icons/weapons/bows/shortbow-white.webp
+effects: []
+flags:
+  _sheetTab: details
+  wfrp4e:
+    optimalRange: normal
+system:
+  description:
+    value: >-
+      <p>Old bow, most likely passed down the generations. It's no longer as
+      accurate and reliable as it once was, but is still potent enough.</p>
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 2
+  price:
+    gc: 1
+    ss: 0
+    bp: 0
+  availability:
+    value: common
+  location:
+    value: ''
+  damageToItem:
+    value: 0
+    shield: 0
+  damage:
+    value: SB+3
+  reach:
+    value: ''
+  range:
+    value: '50'
+  skill:
+    value: ''
+  modeOverride:
+    value: ''
+  twohanded:
+    value: true
+  ammunitionGroup:
+    value: bow
+  currentAmmo:
+    value: '0'
+  consumesAmmo:
+    value: true
+  weaponGroup:
+    value: bow
+  qualities:
+    value: []
+  flaws:
+    value:
+      - name: imprecise
+        value: null
+      - name: unreliable
+        value: null
+  special:
+    value: ''
+  equipped:
+    value: false
+  loaded:
+    value: false
+    repeater: false
+    amt: 0
+  offhand:
+    value: false
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1663627495286
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+folder: UrA89QPP0urkYvZk
+_id: s3AUYnM2Vl6Y656l
+sort: 0
+ownership:
+  default: 0
+_key: '!items!s3AUYnM2Vl6Y656l'
+

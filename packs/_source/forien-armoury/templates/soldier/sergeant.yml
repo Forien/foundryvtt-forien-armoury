@@ -1,0 +1,197 @@
+folder: Drz7yzY8wwrIbFp3
+name: Sergeant
+type: template
+img: modules/forien-armoury/icons/templates/soldier3.webp
+system:
+  description:
+    value: >-
+      <p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.9KFyUXLQiP1bb05c#soldier]{Soldier}</p>
+  gmdescription:
+    value: ''
+  alterName:
+    pre: ''
+    post: Sergeant
+  characteristics:
+    ws: 15
+    bs: null
+    s: 10
+    t: 15
+    i: null
+    ag: 10
+    dex: null
+    int: null
+    wp: 15
+    fel: 10
+  skills:
+    list:
+      - name: Melee (Basic)
+        advances: 15
+        group: 1
+        specialisations: null
+      - name: Melee (Polearm)
+        advances: 15
+        group: 1
+        specialisations: null
+      - name: Cool
+        advances: 15
+        group: null
+        specialisations: null
+      - name: Athletics
+        advances: 15
+        group: null
+        specialisations: null
+      - name: Endurance
+        advances: 15
+        group: null
+        specialisations: null
+      - name: Language (Battle Tongue)
+        advances: 15
+        group: null
+        specialisations: null
+      - name: Leadership
+        advances: 15
+        group: null
+        specialisations: null
+  talents:
+    list:
+      - name: Drilled
+        advances: 2
+        group: null
+      - name: Unshakable
+        advances: null
+        group: null
+  lores:
+    list: []
+  traits:
+    list: []
+  trappings:
+    structure:
+      type: and
+      id: root
+      options:
+        - id: 9r1emL9JIXxokA1t
+          type: or
+          options:
+            - id: fTvH2V9sqeHM5WXZ
+              type: and
+              options:
+                - id: ZUHWlgwZ0Ywi4Xwg
+                  type: option
+                - id: SwlYW1CvcfyPm87b
+                  type: option
+            - id: Czm79DMr5TqPo5cE
+              type: option
+        - id: 92EFtgryfiqlM8ZV
+          type: option
+        - id: 1Bo3AEJJXjCI5n5Z
+          type: option
+        - id: RHbO89KpYOpUTqrW
+          type: option
+        - id: XAwDY8peZSkY8ZgG
+          type: option
+        - id: jcq4Hi6uFssEsdBU
+          type: option
+        - id: SzX25pc7TlrkyyE5
+          type: option
+        - id: 5ZmAqCFcNeKsT6Xk
+          type: option
+        - id: H7I2CwF7bzHaXu42
+          type: option
+    options:
+      - type: item
+        id: ZUHWlgwZ0Ywi4Xwg
+        name: Hand Weapon
+        documentId: 1zaqojk0Oq1m8vYv
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: SwlYW1CvcfyPm87b
+        name: Shield
+        documentId: 8nJ9R8tbhW42VGhr
+        diff: {}
+        idType: id
+        filters: []
+      - type: filter
+        id: Czm79DMr5TqPo5cE
+        name: Polearm weapon
+        diff: {}
+        filters:
+          - path: type
+            operation: '='
+            value: weapon
+          - path: system.weaponGroup.value
+            operation: '='
+            value: polearm
+      - type: item
+        id: 92EFtgryfiqlM8ZV
+        name: Gambeson Coif
+        documentId: iiYBwR0TRnrBefgp
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: 1Bo3AEJJXjCI5n5Z
+        name: Gambeson Coat
+        documentId: BPcUiIKFMXSobKqC
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: RHbO89KpYOpUTqrW
+        name: Mail Coif
+        documentId: 4xV16ttsxCa311vl
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: XAwDY8peZSkY8ZgG
+        name: Mail Coat
+        documentId: i76oPVM2eFEs5IBh
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: jcq4Hi6uFssEsdBU
+        name: Cuirass
+        documentId: VW2Sk5JPUrz7SLPH
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: SzX25pc7TlrkyyE5
+        name: Plate Bracers
+        documentId: oW7wSkl4JMb5sBH8
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: 5ZmAqCFcNeKsT6Xk
+        name: Plate Open Helm
+        documentId: TvUKzvXjc2VChuTT
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        name: Plate Leggings
+        id: H7I2CwF7bzHaXu42
+        idType: id
+        documentId: bY6M9XxbqmFmqpA8
+        diff: {}
+        filters: []
+effects: []
+sort: 275000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  duplicateSource: Item.uRFo2YrZDfjeUeXi
+  coreVersion: '12.331'
+  systemId: wfrp4e
+  systemVersion: 8.4.1
+  createdTime: 1739608493201
+  modifiedTime: 1739617568589
+  lastModifiedBy: forien0000000000
+_id: HcJuCjR2cq61W798
+_key: '!items!HcJuCjR2cq61W798'
+

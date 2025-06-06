@@ -1,0 +1,28 @@
+name: Forien's Armoury Settings
+type: script
+scope: global
+author: XoHsMevsFtsW7WqO
+img: icons/commodities/tech/cog-brass.webp
+command: >-
+  let appClass =
+  game.settings.menus.get("forien-armoury.forien-armoury-settings-app").type;
+
+  let app = new appClass();
+
+  app.render(true);
+folder: zpJMEpyBPqZm5EbR
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 7.0.3
+  coreVersion: '12.327'
+  createdTime: 1702851244391
+  modifiedTime: 1702856891393
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: q6ITACXwRU45kTcR
+sort: 0
+_key: '!macros!q6ITACXwRU45kTcR'
+

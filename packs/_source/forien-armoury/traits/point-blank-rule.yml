@@ -1,0 +1,141 @@
+name: Point Blank Rule
+type: trait
+img: icons/skills/ranged/target-bullseye-arrow-blue.webp
+system:
+  description:
+    value: >-
+      <p>Add this trait to a creature, npc or a player character.</p><p>New
+      Point Blank Range will automatically be changed to 4 units, instead of
+      10%</p>
+  gmdescription:
+    value: ''
+  rollable:
+    value: false
+    damage: false
+    skill: ''
+    rollCharacteristic: ''
+    bonusCharacteristic: ''
+    dice: ''
+    defaultDifficulty: challenging
+    SL: true
+    attackType: melee
+  specification:
+    value: ''
+  qualities:
+    value: []
+  flaws:
+    value: []
+  category: standard
+  disabled: false
+effects:
+  - transfer: true
+    name: Point Blank Rule
+    _id: ZlHnZCI0AmLI2TKF
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: true
+        promptItem: false
+        extra: ''
+        _legacyData:
+          effectApplication: actor
+          effectTrigger: prepareItem
+          preventDuplicateEffects: true
+          script: >-
+            if (args.item.range && args.item.range.bands &&
+            args.item.range.bands["Point Blank"].range[1] > 4) {
+                args.item.range.bands["Point Blank"].range[0] = 0;
+                args.item.range.bands["Point Blank"].range[1] = 4;
+                args.item.range.bands["Short Range"].range[0] = 5;
+            }
+      core:
+        sourceId: Item.ZshuHu0ioO2AFySF.ActiveEffect.tHeYwr4I92TA9Lxj
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/skills/ranged/target-bullseye-arrow-blue.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: false
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Point Blank Rule
+          trigger: prepareItem
+          script: >-
+            if (args.item.range && args.item.range.bands &&
+            args.item.range.bands["Point Blank"].range[1] > 4) {
+                args.item.range.bands["Point Blank"].range[0] = 0;
+                args.item.range.bands["Point Blank"].range[1] = 4;
+                args.item.range.bands["Short Range"].range[0] = 5;
+            }
+          options:
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!95teaIzjZcIDHTFn.ZlHnZCI0AmLI2TKF'
+folder: PQAanEQoiIOxQp1r
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1688313896332
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: 95teaIzjZcIDHTFn
+sort: 200000
+ownership:
+  default: 0
+_key: '!items!95teaIzjZcIDHTFn'
+

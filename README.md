@@ -1,9 +1,8 @@
 # FoundryVTT - Forien's Armoury
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Forien/foundryvtt-forien-armoury?style=for-the-badge) 
-![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2FForien%2Ffoundryvtt-forien-armoury%2Fmaster%2Fdist%2Fmodule.json&label=Foundry%20Min%20Version&query=$.compatibility.minimum&colorB=orange&style=for-the-badge) 
-![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2FForien%2Ffoundryvtt-forien-armoury%2Fmaster%2Fdist%2Fmodule.json&label=Foundry%20Verified&query=$.compatibility.verified&colorB=orange&style=for-the-badge)  
-![License](https://img.shields.io/github/license/Forien/foundryvtt-forien-armoury?style=for-the-badge) ![GitHub Releases](https://img.shields.io/github/downloads/Forien/foundryvtt-forien-armoury/latest/module.zip?style=for-the-badge) 
-![GitHub All Releases](https://img.shields.io/github/downloads/Forien/foundryvtt-forien-armoury/module.zip?style=for-the-badge&label=Downloads+total)  
+![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2FForien%2Ffoundryvtt-forien-armoury%2Fmaster%2Fstatic%2Fmodule.json&label=Foundry%20Min%20Version&query=$.compatibility.minimum&colorB=orange&style=for-the-badge) 
+![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2FForien%2Ffoundryvtt-forien-armoury%2Fmaster%2Fstatic%2Fmodule.json&label=Foundry%20Verified&query=$.compatibility.verified&colorB=orange&style=for-the-badge)  
+![License](https://img.shields.io/github/license/Forien/foundryvtt-forien-armoury?style=for-the-badge) ![GitHub Releases](https://img.shields.io/github/downloads/Forien/foundryvtt-forien-armoury/latest/forien-armoury.zip?style=for-the-badge) 
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white&link=https%3A%2F%2Fdiscord.gg%2FXkTFv8DRDc)](https://discord.gg/XkTFv8DRDc)
 [![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/foundryworkshop)
 [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/forien)
@@ -12,15 +11,17 @@ This module is a collection of custom trappings and features for Warhammer Fanta
 
 Forien's Armoury started as a compendium of my own custom items and houserules and as the time went by, it got expanded
 
-### Notable changes in v3.5
+### Notable changes in v4.0
+* Restructured the entire project, including how databases are built and stored, introducing rollup
+* Fixing bugs and verifying module for Foundry v13 and WFRP4e 9.0
+* You can read full changelog [here](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
+
+### Notable changes in v3.0 through v3.5
 * Added new Career path: Martial Artist
 * Added 24 Templates spread across 6 archetypes: Archer, Assassin, Guard, Knight, Merchant and Soldier
 * Added 10 variations of existing armour Items (like gambesons) supporting the **Archives of the Empire Vol. III** armour system
 * Added option to automatically randomize Characteristics, Skills and Talents on created unlinked Tokens based on species (simulate C/S/T clicks)
 * Added option to add random amount of money to unlinked Tokens upon creation.
-* You can read full changelog [here](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
-
-### Notable changes in v3.0 through v3.4
 * Added Automatic Injury Progression feature
 * Added GM and Player Macros for toggling `Engaged` status
 * Added `Explorer's Backpack`, which allows attaching a Bedroll and a Lantern
@@ -33,15 +34,13 @@ Forien's Armoury started as a compendium of my own custom items and houserules a
 * Verified for Foundry v12 and set it as minimum version due to lack of backwards compatibility
 * You can read full changelog [here](https://github.com/Forien/foundryvtt-forien-armoury/blob/master/CHANGELOG.md)
 
-### Notable changes in v2.1.0
+### Notable changes in v2.0 through v2.1
 * Added following GM only Macros:
   * Character Status summary — lets GM generate a quick table showing basic summary of party composition - careers, fate/resilience points, experience
   * Award XP with Companions — allows GM to award party the XP, based on whether Actors are in specified folders. Companions receive half.
 * Added following GM & Player Macros:
   * Use Cantrip — allows using "Cants" using rules from `Archives of the Empire Vol.III`. Require duplication and setup
   * Make Extended Lockpick Test — allows both GMs and Players to create Extended Lockpick Tests for their characters to attempt. Configuration available
-
-### Notable changes in v2.0.0
 * Updated all of module's Active Effect to work or take advantage of WFRP4e's [Effect Refactor Update](https://github.com/moo-man/WFRP4e-FoundryVTT/releases/tag/7.1.0)
   * Because of that, all Active Effects (such as Runes, some trappings, traits and talents) on existing Actors need to be replaced with new ones from compendium! 
 * Created `Magic Scrolls` type for Items

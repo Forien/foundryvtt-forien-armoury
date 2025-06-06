@@ -1,0 +1,32 @@
+name: Repair Ranged Weapons
+type: script
+scope: global
+author: ZJyAmf2sKocHG1ud
+img: icons/skills/trades/fletching-bowyery-arrow-tan.webp
+command: |-
+  const api = game.modules.get("forien-armoury")?.api.itemRepair;
+
+  if (api && scope.buyer && scope.userId) {
+    api.checkInventoryForDamage(scope.buyer, {
+      paid: true,
+      type: "weapons",
+      subtype: "bow,crossbow,entangling,sling,throwing",
+      user: scope.userId
+    });
+  }
+folder: PrF8OmDhD6LXHdz1
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.0
+  coreVersion: '12.327'
+  createdTime: 1690506986386
+  modifiedTime: 1690870670370
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: if2Jjjj3Ef2cYNAm
+sort: 0
+_key: '!macros!if2Jjjj3Ef2cYNAm'
+

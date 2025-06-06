@@ -1,0 +1,54 @@
+folder: XkMwOHhqQj2fi7n1
+name: Winged Arrows
+type: ammunition
+_id: TJizFChH9KrY9uCg
+img: modules/forien-armoury/icons/ammo/winged_arrow.webp
+system:
+  description:
+    value: ''
+  gmdescription:
+    value: ''
+  quantity:
+    value: 12
+  encumbrance:
+    value: 0.05
+  price:
+    gc: 0
+    ss: 8
+    bp: 0
+  availability:
+    value: scarce
+  location:
+    value: ''
+  ammunitionType:
+    value: bow
+  range:
+    value: As weapon
+  damage:
+    value: ''
+  qualities:
+    value:
+      - name: slashing
+        value: 2
+  flaws:
+    value: []
+  special:
+    value: ''
+  damageToItem:
+    value: null
+    shield: null
+effects: []
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1687445963744
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+sort: 150000
+_key: '!items!TJizFChH9KrY9uCg'
+

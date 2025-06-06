@@ -1,0 +1,138 @@
+folder: 4yqmjrkdpjUayWXP
+name: Amulet of „Protection"
+type: trapping
+_id: R0se0s6gH4XkxFNk
+img: icons/equipment/neck/necklace-simple-carved-wood.webp
+system:
+  description:
+    value: >-
+      <p>Through the power of placebo, increases the Willpower of a
+      wearer.</p><p>Doesn't work on intelligent people as they easily realize
+      this is a simple piece of wood.</p>
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 0.1
+  price:
+    gc: 0
+    ss: 0
+    bp: 10
+  availability:
+    value: common
+  location:
+    value: ''
+  trappingType:
+    value: clothingAccessories
+  spellIngredient:
+    value: ''
+  qualities:
+    value: []
+  flaws:
+    value: []
+  damageToItem:
+    value: null
+    shield: null
+  equipped:
+    value: false
+effects:
+  - transfer: true
+    name: Amulet of „Protection"
+    _id: wT7BjqW14l8pGWYq
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    statuses: []
+    flags:
+      times-up:
+        isPassive: true
+      wfrp4e:
+        hide: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: prePrepareData
+          preventDuplicateEffects: false
+          script: |-
+            if (args.actor.characteristics.int.value < 40)
+              args.actor.characteristics.wp.modifier += 3; 
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/equipment/neck/necklace-simple-carved-wood.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: true
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Amulet of „Protection“
+          trigger: prePrepareData
+          script: |-
+            if (args.actor.characteristics.int.value < 40)
+              args.actor.characteristics.wp.modifier += 3;
+          options:
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!R0se0s6gH4XkxFNk.wT7BjqW14l8pGWYq'
+sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1701953582024
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_key: '!items!R0se0s6gH4XkxFNk'
+

@@ -1,0 +1,126 @@
+name: Ring of Smell
+type: trapping
+img: icons/equipment/finger/ring-band-engraved-scrolls-silver.webp
+effects:
+  - transfer: true
+    name: Ring of Smell
+    _id: OatfSvcfIfB17oRt
+    changes:
+      - key: ATL.detectionModes.senseAll.range
+        mode: 2
+        value: '20'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: ''
+          preventDuplicateEffects: false
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/equipment/finger/ring-band-engraved-scrolls-silver.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: true
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData: []
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!o9ZQVkJgmfYrm8Lw.OatfSvcfIfB17oRt'
+flags:
+  _sheetTab: description
+system:
+  description:
+    value: "<p>\_Silver ring with engravings.</p><p>Imbued with @UUID[Compendium.wfrp4e-wom.journals.JournalEntry.DND7iNuVrCXgTXki]{Ghur}, enhances the wearer's smell, allowing them to sense all nearby entities.</p>"
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 0
+  price:
+    gc: 5
+    ss: 0
+    bp: 0
+  availability:
+    value: rare
+  location:
+    value: ''
+  trappingType:
+    value: clothingAccessories
+  spellIngredient:
+    value: ''
+  qualities:
+    value: []
+  flaws:
+    value: []
+  damageToItem:
+    value: null
+    shield: null
+  equipped:
+    value: false
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1663627495178
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+folder: 4yqmjrkdpjUayWXP
+_id: o9ZQVkJgmfYrm8Lw
+sort: 500000
+ownership:
+  default: 0
+_key: '!items!o9ZQVkJgmfYrm8Lw'
+

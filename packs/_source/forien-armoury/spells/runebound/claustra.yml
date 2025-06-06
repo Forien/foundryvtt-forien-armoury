@@ -1,0 +1,82 @@
+name: Claustra
+type: spell
+img: modules/forien-armoury/icons/spells/runebound-claustra.webp
+system:
+  description:
+    value: >-
+      <p>You can immediately lock any mundane (non-magical) lock, padlock or any
+      other similar mechanism. You don't need a key to do
+      that.</p><p>Additionally, mechanisms you locked using this Spell are
+      considered magically locked for the duration of the Spell, but the
+      original key will still work. </p><p>Moreover, during the Spell's duration
+      you can open the lock without a key, but doing so immediately ends the
+      Spell.</p><p>When Spell's duration ends, lock remains locked but is no
+      longer considered magical or magically locked.</p>
+  gmdescription:
+    value: ''
+  lore:
+    value: runebound
+    effectString: ''
+  range:
+    value: Touch
+    vortex: false
+  target:
+    value: '1'
+    aoe: false
+  duration:
+    value: Willpower Bonus hours
+    extendable: false
+  damage:
+    dice: ''
+    value: ''
+  cn:
+    value: 0
+    SL: 0
+  magicMissile:
+    value: false
+  ritual:
+    value: false
+    type: ''
+    xp: 0
+  memorized:
+    value: true
+  skill:
+    value: Channelling
+  ingredients: []
+  currentIng:
+    value: ''
+  wind:
+    value: Channelling
+  overcast:
+    enabled: false
+    label: ''
+    valuePerOvercast:
+      type: value
+      value: 1
+      SL: false
+      characteristic: ''
+      bonus: false
+      additional: ''
+    initial:
+      type: value
+      value: 1
+      SL: false
+      characteristic: ''
+      bonus: false
+effects: []
+folder: 7apgHuyWjP5G3i5r
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1688999622218
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: r6T7RoK3AYG5ShbF
+sort: 100000
+ownership:
+  default: 0
+_key: '!items!r6T7RoK3AYG5ShbF'
+

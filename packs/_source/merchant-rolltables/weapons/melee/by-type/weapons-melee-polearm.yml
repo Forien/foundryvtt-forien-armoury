@@ -1,0 +1,182 @@
+folder: PrOJN66daLYe6ZJc
+name: Weapons Melee Polearm
+_id: b2Gc1oLA2NSrhR20
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 15
+    range:
+      - 1
+      - 15
+    drawn: false
+    text: Ahlspiess
+    documentId: AMxngrqWtoeUGVt4
+    img: modules/wfrp4e-up-in-arms/assets/icons/ahlspiess.png
+    _id: cHWItANYlUWuPnO3
+    flags: {}
+    _key: '!tables.results!b2Gc1oLA2NSrhR20.cHWItANYlUWuPnO3'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 15
+    range:
+      - 16
+      - 30
+    drawn: false
+    text: Bill
+    documentId: TMpP9Zppd14MNPwe
+    img: modules/wfrp4e-up-in-arms/assets/icons/bill.png
+    _id: g6W2jNYi5MjqMPa9
+    flags: {}
+    _key: '!tables.results!b2Gc1oLA2NSrhR20.g6W2jNYi5MjqMPa9'
+  - type: pack
+    documentCollection: wfrp4e-archives1.items
+    weight: 30
+    range:
+      - 31
+      - 60
+    drawn: false
+    text: Eonir Spear
+    documentId: LIzUGidgb1mkXcZB
+    img: modules/wfrp4e-archives1/assets/icons/eonir-spear.png
+    _id: gPkF4OEBcKd0Mr1z
+    flags: {}
+    _key: '!tables.results!b2Gc1oLA2NSrhR20.gPkF4OEBcKd0Mr1z'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 30
+    range:
+      - 61
+      - 90
+    drawn: false
+    text: Halberd
+    documentId: jxTsO0vrf53pCxCb
+    img: modules/wfrp4e-up-in-arms/assets/icons/halberd.png
+    _id: tce6vpN0QV7FXzIO
+    flags: {}
+    _key: '!tables.results!b2Gc1oLA2NSrhR20.tce6vpN0QV7FXzIO'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 5
+    range:
+      - 91
+      - 95
+    drawn: false
+    text: Mancatcher
+    documentId: VDXhEK2KWgCGt2SV
+    img: modules/wfrp4e-up-in-arms/assets/icons/mancatcher.png
+    _id: ovBsu9CWd638W7nb
+    flags: {}
+    _key: '!tables.results!b2Gc1oLA2NSrhR20.ovBsu9CWd638W7nb'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 15
+    range:
+      - 96
+      - 110
+    drawn: false
+    text: Partizan/Glaive
+    documentId: miQuUfezjlRKNRyp
+    img: modules/wfrp4e-up-in-arms/assets/icons/partizan.png
+    _id: GUQheLvpkLNtFvY5
+    flags: {}
+    _key: '!tables.results!b2Gc1oLA2NSrhR20.GUQheLvpkLNtFvY5'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 5
+    range:
+      - 111
+      - 115
+    drawn: false
+    text: Pike
+    documentId: 5vIukO3mtUXaLy7G
+    img: modules/wfrp4e-up-in-arms/assets/icons/pike.png
+    _id: 3cI58yNacp3yvSh8
+    flags: {}
+    _key: '!tables.results!b2Gc1oLA2NSrhR20.3cI58yNacp3yvSh8'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 15
+    range:
+      - 116
+      - 130
+    drawn: false
+    text: Pollaxe
+    documentId: 7N3TrPYcO9cNNgsd
+    img: modules/wfrp4e-up-in-arms/assets/icons/pollaxe.png
+    _id: CHv5dydE9UWtgi14
+    flags: {}
+    _key: '!tables.results!b2Gc1oLA2NSrhR20.CHv5dydE9UWtgi14'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 30
+    range:
+      - 131
+      - 160
+    drawn: false
+    text: Quarterstaff
+    documentId: Dk3jOsooVXua0GSi
+    img: modules/wfrp4e-up-in-arms/assets/icons/quarterstaff.png
+    _id: HxCbbrd8G3y4RHtl
+    flags: {}
+    _key: '!tables.results!b2Gc1oLA2NSrhR20.HxCbbrd8G3y4RHtl'
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 30
+    range:
+      - 161
+      - 190
+    drawn: false
+    text: Short Spear
+    documentId: W1b784w4bBVwtHZS
+    img: icons/weapons/polearms/spear-flared-steel.webp
+    _id: k6pofFxp2aVbqBJ1
+    flags: {}
+    _key: '!tables.results!b2Gc1oLA2NSrhR20.k6pofFxp2aVbqBJ1'
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 30
+    range:
+      - 191
+      - 220
+    drawn: false
+    text: Spear
+    documentId: 3uppxJFq3SQFpT2q
+    img: icons/weapons/polearms/spear-flared-green.webp
+    _id: EyQaaqjlkwNnQWBY
+    flags: {}
+    _key: '!tables.results!b2Gc1oLA2NSrhR20.EyQaaqjlkwNnQWBY'
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 30
+    range:
+      - 221
+      - 250
+    drawn: false
+    text: Spear (2h)
+    documentId: FR6vIPKu7cQ4Mkr8
+    img: icons/weapons/polearms/spear-flared-blue.webp
+    _id: KOj09zbyg1RGGjUk
+    flags: {}
+    _key: '!tables.results!b2Gc1oLA2NSrhR20.KOj09zbyg1RGGjUk'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690162345566
+  modifiedTime: 1690162451681
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d250
+_key: '!tables!b2Gc1oLA2NSrhR20'
+

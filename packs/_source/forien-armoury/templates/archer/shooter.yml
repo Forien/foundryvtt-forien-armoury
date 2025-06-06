@@ -1,0 +1,203 @@
+folder: vpf9CBQGtUUcleYT
+name: Shooter
+type: template
+img: modules/forien-armoury/icons/templates/archer2.webp
+system:
+  description:
+    value: >-
+      <p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.9KFyUXLQiP1bb05c#archer]{Archer}</p>
+  gmdescription:
+    value: ''
+  alterName:
+    pre: ''
+    post: Shooter
+  characteristics:
+    ws: null
+    bs: 10
+    s: 5
+    t: null
+    i: 10
+    ag: 10
+    dex: null
+    int: null
+    wp: null
+    fel: null
+  skills:
+    list:
+      - name: Ranged (Bow)
+        advances: 10
+        group: 1
+        specialisations: null
+      - name: Ranged (Crossbow)
+        advances: 10
+        group: 1
+        specialisations: null
+      - name: Ranged (Blackpowder)
+        advances: 10
+        group: 1
+        specialisations: null
+      - name: Melee (Basic)
+        advances: 10
+        group: null
+        specialisations: null
+      - name: Perception
+        advances: 10
+        group: null
+        specialisations: null
+      - name: Stealth (Rural)
+        advances: 10
+        group: null
+        specialisations: null
+      - name: Athletics
+        advances: 10
+        group: 2
+        specialisations: null
+      - name: Dodge
+        advances: 10
+        group: 2
+        specialisations: null
+  talents:
+    list:
+      - name: Accurate Shot
+        advances: null
+        group: null
+      - name: Rapid Reload
+        advances: null
+        group: null
+  lores:
+    list: []
+  traits:
+    list: []
+  trappings:
+    structure:
+      type: and
+      id: root
+      options:
+        - id: dIXHHT4zk00KZDat
+          type: or
+          options:
+            - id: GXpeEnhckoVhfL8l
+              type: and
+              options:
+                - id: hr6ml3OGI7HfeygD
+                  type: option
+                - id: IQO4sT0D3VGUtLj3
+                  type: option
+                - id: ZlaoA2LDuc0uB4aw
+                  type: option
+            - id: oNuM0oNhZ3EpmEou
+              type: and
+              options:
+                - id: ujjYpy44iWw8GfKf
+                  type: option
+                - id: fCorxy6hCwAqOiBk
+                  type: option
+                - id: jvVVFGRgnOpgbfmz
+                  type: option
+            - id: mbbXDVTYSa9S7Or9
+              type: and
+              options:
+                - id: XM420zgfE3RqAAuW
+                  type: option
+                - id: QAFNr33SgSsdTdoH
+                  type: option
+                - id: gjcHK7g0cz2smaZq
+                  type: option
+        - id: aMlrkN4vX2P7hj0E
+          type: option
+        - id: HJ2fJLhJKTC5OI2I
+          type: option
+    options:
+      - type: item
+        id: hr6ml3OGI7HfeygD
+        name: Bow
+        documentId: U94l3IDj3xfIc78i
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: ujjYpy44iWw8GfKf
+        name: Handgun
+        documentId: ivuGhpoG9e9fN3Ks
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: XM420zgfE3RqAAuW
+        name: Crossbow
+        documentId: ksRqHiMVpIL07Ij1
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: ZlaoA2LDuc0uB4aw
+        name: Archer's Quiver
+        documentId: ZfHEQs76E08LeAU7
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: jvVVFGRgnOpgbfmz
+        name: Powder Horn
+        documentId: 749BhVdd0kr83pf6
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: IQO4sT0D3VGUtLj3
+        name: Arrow
+        documentId: 6GNNpWIGxO9CkTCR
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: QAFNr33SgSsdTdoH
+        name: Bolt
+        documentId: kFROfGFdExfyJTg9
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: fCorxy6hCwAqOiBk
+        name: Bullet and Powder
+        documentId: Bjewc1ehUeeQTnXs
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: aMlrkN4vX2P7hj0E
+        name: Long Gambeson
+        documentId: X1OPgLRUhnJhjufW
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: HJ2fJLhJKTC5OI2I
+        name: Gambeson Coif
+        documentId: iiYBwR0TRnrBefgp
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        name: Archer's Quiver
+        id: gjcHK7g0cz2smaZq
+        idType: id
+        documentId: ZfHEQs76E08LeAU7
+        diff: {}
+        filters: []
+effects: []
+sort: 225000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  duplicateSource: Item.Zd1y8pWpqv9j2ZRl
+  coreVersion: '12.331'
+  systemId: wfrp4e
+  systemVersion: 8.4.1
+  createdTime: 1739604634867
+  modifiedTime: 1739617462432
+  lastModifiedBy: forien0000000000
+_id: 7b3DJA0s5E6obs1l
+_key: '!items!7b3DJA0s5E6obs1l'
+

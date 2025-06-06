@@ -1,0 +1,1225 @@
+name: Armour Runes
+type: armour
+img: modules/forien-armoury/icons/runes/armour-rune-temporary.webp
+system:
+  description:
+    value: ''
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 0
+  price:
+    gc: 0
+    ss: 0
+    bp: 0
+  availability:
+    value: None
+  location:
+    value: ''
+  damageToItem:
+    value: 0
+    shield: 0
+  armorType:
+    value: softLeather
+  penalty:
+    value: ''
+  qualities:
+    value: []
+  flaws:
+    value: []
+  special:
+    value: ''
+  AP:
+    head: 0
+    lArm: 0
+    rArm: 0
+    lLeg: 0
+    rLeg: 0
+    body: 0
+  APdamage:
+    head: 0
+    lArm: 0
+    rArm: 0
+    lLeg: 0
+    rLeg: 0
+    body: 0
+  equipped:
+    value: false
+effects:
+  - transfer: true
+    name: Rune of Fortitude (Permanent)
+    _id: F0tIXCY3XR8s5ZeP
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: Wearer of an Armour Engraved with this Rune gains +4 Wounds.
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: woundCalc
+          preventDuplicateEffects: false
+          script: args.wounds += 4
+      forien-armoury:
+        isTemporary: false
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.JV4MzBoyCXZBeKx5.ActiveEffect.ReMhmarovfkuJRSY
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/armour-rune-permanent.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: true
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Rune of Fortitude (Permanent)
+          trigger: woundCalc
+          script: args.wounds += 4
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!JV4MzBoyCXZBeKx5.F0tIXCY3XR8s5ZeP'
+  - transfer: true
+    name: Rune of Fortitude (Temporary)
+    _id: GL8n0xJUBInNUQGQ
+    changes: []
+    disabled: true
+    duration:
+      startTime: null
+      seconds: 60
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Wearer of an Armour Engraved with this Rune gains +4 Wounds.</p>
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: woundCalc
+          preventDuplicateEffects: false
+          script: args.wounds += 4
+      forien-armoury:
+        isTemporary: true
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.JV4MzBoyCXZBeKx5.ActiveEffect.C25fFcCoWt7QygAk
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/armour-rune-temporary.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: true
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Rune of Fortitude (Temporary)
+          trigger: woundCalc
+          script: args.wounds += 4
+          options:
+            targeter: false
+            deleteEffect: false
+          async: false
+        - label: Activate Rune of Fortitude
+          trigger: manual
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          script: >-
+            const scriptData = this.effect.flags.wfrp4e.scriptData;
+
+            scriptData[1].trigger = "";
+
+            this.effect.update({"flags.wfrp4e.scriptData": scriptData, disabled:
+            false});
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!JV4MzBoyCXZBeKx5.GL8n0xJUBInNUQGQ'
+  - transfer: true
+    name: Rune of Iron (Permanent)
+    _id: YSKa6PFb3aEKSM0G
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      This Rune reduces damage from incoming attacks by 1. Works even against
+      attacks that normally ignore Armour.
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: preTakeDamage
+          preventDuplicateEffects: false
+          script: >-
+            let name =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.name');
+
+            let effect =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.effect');
+
+
+            args.totalWoundLoss-= 1;
+
+            args.opposedTest.result.other.push(`<strong>${name}:</strong>
+            ${effect}`);
+      forien-armoury:
+        isTemporary: false
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.JV4MzBoyCXZBeKx5.ActiveEffect.5pobiT1OYmTsOt0x
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/armour-rune-permanent.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: true
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Rune of Iron (Permanent)
+          trigger: preTakeDamage
+          script: >-
+            let name =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.name');
+
+            let effect =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.effect');
+
+
+            args.totalWoundLoss -= 1;
+
+            args.opposedTest.result.other.push(`<strong>${name}:</strong>
+            ${effect}`);
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!JV4MzBoyCXZBeKx5.YSKa6PFb3aEKSM0G'
+  - transfer: true
+    name: Rune of Iron (Temporary)
+    _id: DmEsQ7dmTnNxRLqI
+    changes: []
+    disabled: true
+    duration:
+      startTime: null
+      seconds: 60
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>This Rune reduces damage from incoming attacks by 1. Works even against
+      attacks that normally ignore Armour. Lasts 1 minute.</p>
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: preTakeDamage
+          preventDuplicateEffects: false
+          script: >-
+            let name =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.name');
+
+            let effect =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.effect');
+
+
+            args.totalWoundLoss-= 1;
+
+            args.opposedTest.result.other.push(`<strong>${name}:</strong>
+            ${effect}`);
+      forien-armoury:
+        isTemporary: true
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.JV4MzBoyCXZBeKx5.ActiveEffect.5NtPlakn0hIeVnXM
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/armour-rune-temporary.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: true
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Rune of Iron (Temporary)
+          trigger: preTakeDamage
+          script: >-
+            let name =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.name');
+
+            let effect =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfIron.effect');
+
+
+            args.totalWoundLoss -= 1;
+
+            args.opposedTest.result.other.push(`<strong>${name}:</strong>
+            ${effect}`);
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+        - label: Activate Rune of Iron
+          trigger: manual
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          script: >-
+            const scriptData = this.effect.flags.wfrp4e.scriptData;
+
+            scriptData[1].trigger = "";
+
+            this.effect.update({"flags.wfrp4e.scriptData": scriptData, disabled:
+            false});
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!JV4MzBoyCXZBeKx5.DmEsQ7dmTnNxRLqI'
+  - transfer: true
+    name: Rune of Resistance (Permanent)
+    _id: CeQg9ShwKv19ppE3
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>If a character wearing an Armour Engraved with this Rune is about to
+      lose Wounds due to an attack or effect that ignores Toughness Bonus and
+      Armour Points, the character can make a Toughness Test with -5 modifier
+      per Wound to be lost. If succeeded, character loses no Wounds.</p>
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: opposedDefender
+          preventDuplicateEffects: false
+          script: >-
+            let name =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.name');
+
+            let effect =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.effect');
+
+
+            args.opposedTest.result.other.push(`<strong>${name}:</strong>
+            ${effect}`);
+      forien-armoury:
+        isTemporary: false
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.JV4MzBoyCXZBeKx5.ActiveEffect.a5X5l9cK1ixX7T0x
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/armour-rune-permanent.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: true
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Rune of Resistance (Permanent)
+          trigger: takeDamage
+          script: >-
+            if (args.applyAP && args.applyTB) return;
+
+
+            const modifier = Number(-(args.totalWoundLoss * 5));
+
+            const options = {fields: {modifier: modifier}, data: {other:
+            ['hi!']}};
+
+            let test = await this.actor.setupCharacteristic("t", options)
+
+
+            await test.roll();
+
+
+            if (test.data.result.outcome === "success")
+              args.totalWoundLoss = 0;
+
+            let name =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.name');
+
+            let effect =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.effect');
+
+
+            test.data.result.other.push(`<strong>${name}:</strong> ${effect}`);
+
+            await test.renderRollCard();
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!JV4MzBoyCXZBeKx5.CeQg9ShwKv19ppE3'
+  - transfer: true
+    name: Rune of Resistance (Temporary)
+    _id: Z8nAAgVmieVaCU2z
+    changes: []
+    disabled: true
+    duration:
+      startTime: null
+      seconds: 60
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>If a character wearing an Armour Engraved with this Rune is about to
+      lose Wounds due to an attack or effect that ignores Toughness Bonus and
+      Armour Points, the character can make a Toughness Test with -5 modifier
+      per Wound to be lost. If succeeded, character loses no Wounds. Lasts 1
+      minute.</p>
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: opposedDefender
+          preventDuplicateEffects: false
+          script: >-
+            let name =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.name');
+
+            let effect =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.effect');
+
+
+            args.opposedTest.result.other.push(`<strong>${name}:</strong>
+            ${effect}`);
+      forien-armoury:
+        isTemporary: true
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.JV4MzBoyCXZBeKx5.ActiveEffect.JhgWaE6GNfr7MFtc
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/armour-rune-temporary.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: true
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Rune of Resistance (Temporary)
+          trigger: takeDamage
+          script: >-
+            if (args.applyAP && args.applyTB) return;
+
+
+            const modifier = Number(-(args.totalWoundLoss * 5));
+
+            const options = {fields: {modifier: modifier}, data: {other:
+            ['hi!']}};
+
+            let test = await this.actor.setupCharacteristic("t", options)
+
+
+            await test.roll();
+
+
+            if (test.data.result.outcome === "success")
+              args.totalWoundLoss = 0;
+
+            let name =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.name');
+
+            let effect =
+            game.i18n.localize('Forien.Armoury.Runes.RuneOfResistance.effect');
+
+
+            test.data.result.other.push(`<strong>${name}:</strong> ${effect}`);
+
+            await test.renderRollCard();
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+        - label: Activate Rune of Resistance
+          trigger: manual
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          script: >-
+            const scriptData = this.effect.flags.wfrp4e.scriptData;
+
+            scriptData[1].trigger = "";
+
+            this.effect.update({"flags.wfrp4e.scriptData": scriptData, disabled:
+            false});
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!JV4MzBoyCXZBeKx5.Z8nAAgVmieVaCU2z'
+  - transfer: true
+    name: Rune of Shielding (Permanent)
+    _id: RtdOyqqG5nWdUjqj
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      Non-magical ranged weapons used to attack a character wearing an Armour
+      Engraved with this Rune suffer a -20 modifier on Hit Tests.
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        applicationData:
+          type: document
+          documentType: Actor
+          equipTransfer: true
+        scriptData:
+          - label: Rune of Shielding (Permanent)
+            trigger: dialog
+            options:
+              dialog:
+                targeter: true
+            script: |-
+              if (args.item?.isRanged) {
+                args.prefillModifiers.modifier -= 20;
+              }
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: targetPrefillDialog
+          preventDuplicateEffects: false
+          script: |-
+            if (args.item?.isRanged) {
+              args.prefillModifiers.modifier -= 20;
+            }
+      forien-armoury:
+        isTemporary: false
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.JV4MzBoyCXZBeKx5.ActiveEffect.XI5OwnmOJXBofQoL
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/armour-rune-permanent.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: false
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Rune of Shielding (Permanent)
+          trigger: dialog
+          options:
+            targeter: true
+            hideScript: ''
+            activateScript: return args.options.weapon?.isRanged
+            submissionScript: ''
+            deleteEffect: false
+          script: args.prefillModifiers.modifier -= 20;
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!JV4MzBoyCXZBeKx5.RtdOyqqG5nWdUjqj'
+  - transfer: true
+    name: Rune of Shielding (Temporary)
+    _id: b5zXQwnBxWOXXJNU
+    changes: []
+    disabled: true
+    duration:
+      startTime: null
+      seconds: 60
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>Non-magical ranged weapons used to attack a character wearing an Armour
+      Engraved with this Rune suffer a -20 modifier on Hit Tests. Lasts 1
+      minute.</p>
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: targetPrefillDialog
+          preventDuplicateEffects: false
+          script: |-
+            if (args.item?.isRanged) {
+              args.prefillModifiers.modifier -= 20;
+            }
+      forien-armoury:
+        isTemporary: true
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.JV4MzBoyCXZBeKx5.ActiveEffect.BPBGiKpyfWwuP6EN
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/armour-rune-temporary.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: true
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Rune of Shielding (Temporary)
+          trigger: dialog
+          options:
+            targeter: true
+            hideScript: ''
+            activateScript: return args.options.weapon?.isRanged
+            submissionScript: ''
+            deleteEffect: false
+          script: args.prefillModifiers.modifier -= 20;
+          async: false
+        - label: Activate Rune of Shielding
+          trigger: manual
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          script: >-
+            const scriptData = this.effect.flags.wfrp4e.scriptData;
+
+            scriptData[1].trigger = "";
+
+            this.effect.update({"flags.wfrp4e.scriptData": scriptData, disabled:
+            false});
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!JV4MzBoyCXZBeKx5.b5zXQwnBxWOXXJNU'
+  - transfer: true
+    name: Rune of Stone (Permanent)
+    _id: hp8rGLfCnkU3xCOj
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>Armour Engraved with this Rune gains +1 AP on all of its protected
+      locations.</p>
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        promptItem: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: prepareItem
+          preventDuplicateEffects: false
+          script: |-
+            if (args.item?._id === this.item?.id) {
+              let ap = args.item.system.AP;
+
+              for (let loc in ap) {
+                let location = args.item.system.AP[loc];
+                if (location > 0)
+                  args.item.system.AP[loc] += 1;
+              };
+            }
+      forien-armoury:
+        isTemporary: false
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.JV4MzBoyCXZBeKx5.ActiveEffect.5ueEI9o6cfglxK15
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/armour-rune-permanent.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Item
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: false
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Rune of Stone (Permanent)
+          trigger: prepareOwned
+          script: |-
+            let ap = args.item.system.AP;
+
+            for (let loc in ap) {
+              let location = args.item.system.AP[loc];
+              if (location > 0)
+              args.item.system.AP[loc] += 1;
+            };
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!JV4MzBoyCXZBeKx5.hp8rGLfCnkU3xCOj'
+  - transfer: true
+    name: Rune of Stone (Temporary)
+    _id: H89P8MR1zmaOcTzL
+    changes: []
+    disabled: true
+    duration:
+      startTime: null
+      seconds: 60
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>Armour Engraved with this Rune gains +1 AP on all of its protected
+      locations. Lasts 1 minute.</p>
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        promptItem: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: prepareItem
+          preventDuplicateEffects: false
+          script: |-
+            if (args.item?._id === this.item?.id) {
+              let ap = args.item.system.AP;
+
+              for (let loc in ap) {
+                let location = args.item.system.AP[loc];
+                if (location > 0)
+                  args.item.system.AP[loc] += 1;
+              };
+            }
+      forien-armoury:
+        isTemporary: true
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.JV4MzBoyCXZBeKx5.ActiveEffect.rmY3T5ItD4NrVjMr
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/armour-rune-temporary.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Item
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: false
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Rune of Stone (Temporary)
+          trigger: prepareOwned
+          script: |-
+            let ap = args.item.system.AP;
+
+            for (let loc in ap) {
+              let location = args.item.system.AP[loc];
+              if (location > 0)
+              args.item.system.AP[loc] += 1;
+            };
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+        - label: Activate Rune of Stone
+          trigger: manual
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          script: >-
+            const scriptData = this.effect.flags.wfrp4e.scriptData;
+
+            scriptData[1].trigger = "";
+
+            this.effect.update({"flags.wfrp4e.scriptData": scriptData, disabled:
+            false});
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!JV4MzBoyCXZBeKx5.H89P8MR1zmaOcTzL'
+folder: 3OEI9PiGaa4rGQHy
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1688943320462
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: JV4MzBoyCXZBeKx5
+sort: 0
+ownership:
+  default: 0
+_key: '!items!JV4MzBoyCXZBeKx5'
+

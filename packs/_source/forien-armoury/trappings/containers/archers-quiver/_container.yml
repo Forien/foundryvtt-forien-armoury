@@ -1,0 +1,48 @@
+name: Archer's Quiver
+type: container
+img: icons/containers/ammunition/arrows-quiver-black.webp
+system:
+  description:
+    value: <p>Can hold up to 50 typical arrows or bolts (0.05 enc each)</p>
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 2
+  price:
+    gc: 0
+    ss: 14
+    bp: 0
+  availability:
+    value: rare
+  location:
+    value: ''
+  wearable:
+    value: true
+  carries:
+    value: 2.5
+  countEnc:
+    value: true
+  damageToItem:
+    value: null
+    shield: null
+  equipped:
+    value: false
+effects: []
+folder: bCYA5k9kT55E8eEO
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1687475455907
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: ZfHEQs76E08LeAU7
+sort: 700000
+ownership:
+  default: 0
+_key: '!items!ZfHEQs76E08LeAU7'
+

@@ -1,0 +1,65 @@
+folder: 1s3VG4H3m9vYvDhz
+name: Armour All (rarity)
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 30
+    range:
+      - 1
+      - 30
+    drawn: false
+    text: Armour Common
+    documentId: R7GDdlzGIyNxLVv3
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: z1uVg382BJAvi0YT
+    flags: {}
+    _key: '!tables.results!sjC8xI4TBt5XRlPi.z1uVg382BJAvi0YT'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 15
+    range:
+      - 31
+      - 45
+    drawn: false
+    text: Armour Rare
+    documentId: oRK9BbljpQOB4zgt
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: qO0zetPXiH8aVvRm
+    flags: {}
+    _key: '!tables.results!sjC8xI4TBt5XRlPi.qO0zetPXiH8aVvRm'
+  - type: pack
+    documentCollection: forien-armoury.merchant-rolltables
+    weight: 5
+    range:
+      - 46
+      - 50
+    drawn: false
+    text: Armour Scarce
+    documentId: Ss3dpB8pChQEL6rV
+    img: systems/wfrp4e/ui/buttons/d10.webp
+    _id: at75fV24v5lNLgMQ
+    flags: {}
+    _key: '!tables.results!sjC8xI4TBt5XRlPi.at75fV24v5lNLgMQ'
+replacement: true
+displayRoll: true
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690160468379
+  modifiedTime: 1690161848177
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d50
+_id: sjC8xI4TBt5XRlPi
+sort: 100000
+ownership:
+  default: 0
+_key: '!tables!sjC8xI4TBt5XRlPi'
+

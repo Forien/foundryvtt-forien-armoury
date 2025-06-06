@@ -1,0 +1,728 @@
+name: Master Armour Runes
+type: armour
+img: modules/forien-armoury/icons/runes/master-armour-rune.webp
+system:
+  description:
+    value: ''
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 0
+  price:
+    gc: 0
+    ss: 0
+    bp: 0
+  availability:
+    value: None
+  location:
+    value: ''
+  damageToItem:
+    value: 0
+    shield: 0
+  armorType:
+    value: softLeather
+  penalty:
+    value: ''
+  qualities:
+    value: []
+  flaws:
+    value: []
+  special:
+    value: ''
+  AP:
+    head: 0
+    lArm: 0
+    rArm: 0
+    lLeg: 0
+    rLeg: 0
+    body: 0
+  APdamage:
+    head: 0
+    lArm: 0
+    rArm: 0
+    lLeg: 0
+    rLeg: 0
+    body: 0
+  equipped:
+    value: false
+effects:
+  - transfer: true
+    name: Master Rune of Gromril (Permanent)
+    _id: KbYdSxLQTrPcHDfw
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>Armour Engraved with this Rune gains +2 AP on all of its protected
+      locations.</p>
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        promptItem: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: prepareItem
+          preventDuplicateEffects: false
+          script: |-
+            if (args.item?._id === this.item?.id) {
+              let ap = args.item.system.AP;
+
+              for (let loc in ap) {
+                let location = args.item.system.AP[loc];
+                if (location > 0)
+                  args.item.system.AP[loc] += 2;
+              };
+            }
+      forien-armoury:
+        isTemporary: false
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.C0uWiIL7yEzK98IY.ActiveEffect.odRqyNLmZgTXlX4K
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/master-armour-rune.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Item
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: false
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Master Rune of Gromril (Permanent)
+          trigger: prepareOwned
+          script: |-
+            let ap = args.item.system.AP;
+
+            for (let loc in ap) {
+              let location = args.item.system.AP[loc];
+              if (location > 0)
+              args.item.system.AP[loc] += 2;
+            };
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!C0uWiIL7yEzK98IY.KbYdSxLQTrPcHDfw'
+  - transfer: true
+    name: Master Rune of Gromril (Temporary)
+    _id: v2VAsIyRMh5wKYFE
+    changes: []
+    disabled: true
+    duration:
+      startTime: null
+      seconds: 60
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>Armour Engraved with this Rune gains +2 AP on all of its protected
+      locations. Lasts 1 minute</p>
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        promptItem: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: prepareItem
+          preventDuplicateEffects: false
+          script: |-
+            if (args.item?._id === this.item?.id) {
+              let ap = args.item.system.AP;
+
+              for (let loc in ap) {
+                let location = args.item.system.AP[loc];
+                if (location > 0)
+                  args.item.system.AP[loc] += 2;
+              };
+            }
+      forien-armoury:
+        isTemporary: true
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.C0uWiIL7yEzK98IY.ActiveEffect.5QERb91AHPrchAHJ
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/master-armour-rune.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Item
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: false
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Master Rune of Gromril (Temporary)
+          trigger: prepareOwned
+          script: |-
+            let ap = args.item.system.AP;
+
+            for (let loc in ap) {
+              let location = args.item.system.AP[loc];
+              if (location > 0)
+              args.item.system.AP[loc] += 2;
+            };
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+        - label: Activate Master Rune of Gromril
+          trigger: manual
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          script: >-
+            const scriptData = this.effect.flags.wfrp4e.scriptData;
+
+            scriptData[1].trigger = "";
+
+            this.effect.update({"flags.wfrp4e.scriptData": scriptData, disabled:
+            false});
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!C0uWiIL7yEzK98IY.v2VAsIyRMh5wKYFE'
+  - transfer: true
+    name: Master Rune of Adamant (Permanent)
+    _id: ko7AlcF6JAdTeCLK
+    changes:
+      - key: system.characteristics.t.modifier
+        mode: 2
+        value: '10'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Wearer of an Armour Engraved with this Rune gains +10 Toughness.</p>
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        promptItem: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: ''
+          preventDuplicateEffects: false
+          script: ''
+      forien-armoury:
+        isTemporary: false
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.C0uWiIL7yEzK98IY.ActiveEffect.ZHCC3kuLQf3jBX65
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/master-armour-rune.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: true
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData: []
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!C0uWiIL7yEzK98IY.ko7AlcF6JAdTeCLK'
+  - transfer: true
+    name: Master Rune of Adamant (Temporary)
+    _id: Ux3DZDafGePwYkkT
+    changes:
+      - key: system.characteristics.t.modifier
+        mode: 2
+        value: '10'
+        priority: null
+    disabled: true
+    duration:
+      startTime: null
+      seconds: 60
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>Wearer of an Armour Engraved with this Rune gains +10 Toughness. Lasts
+      1 minute.</p>
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        promptItem: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: ''
+          preventDuplicateEffects: false
+          script: ''
+      forien-armoury:
+        isTemporary: true
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.C0uWiIL7yEzK98IY.ActiveEffect.iZ1DZl3WvphhhNaD
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/master-armour-rune.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: true
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Activate Master Rune of Adamant
+          trigger: manual
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          script: >-
+            const scriptData = this.effect.flags.wfrp4e.scriptData;
+
+            scriptData[0].trigger = "";
+
+            this.effect.update({"flags.wfrp4e.scriptData": scriptData, disabled:
+            false});
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!C0uWiIL7yEzK98IY.Ux3DZDafGePwYkkT'
+  - transfer: true
+    name: Master Rune of Steel (Permanent)
+    _id: LdgiHuSEOXpbl5ZF
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      Non-magical weapons used to hit a character wearing an Armour Engraved
+      with this Rune are treated as if they were Undamaging.
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        promptItem: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: opposedDefender
+          preventDuplicateEffects: false
+          script: |-
+            let weapon = args.attackerTest?.weapon
+            if (!weapon && args.attackerTest?.trait)
+              weapon = args.attackerTest.trait
+
+            if (weapon) {
+              let name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSteel.name');
+              let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSteel.effect');
+
+              weapon.system.flaws.value.push({name: "undamaging"});
+              args.opposedTest.result.other.push(`<strong>${name}:</strong> ${effect}`);
+            }
+      forien-armoury:
+        isTemporary: false
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.C0uWiIL7yEzK98IY.ActiveEffect.PNq1jKa4JqJrEw7M
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/master-armour-rune.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: true
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Master Rune of Steel (Permanent)
+          trigger: preTakeDamage
+          script: >-
+            let name =
+            game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSteel.name');
+
+            let effect =
+            game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSteel.effect');
+
+
+            args.weaponProperties.flaws.undamaging = {key: 'undamaging',
+            display: 'Undamaging'};
+
+            args.extraMessages.push(`<strong>${name}:</strong> ${effect}`);
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!C0uWiIL7yEzK98IY.LdgiHuSEOXpbl5ZF'
+  - transfer: true
+    name: Master Rune of Steel (Temporary)
+    _id: rtqCDXscsZMMEbRJ
+    changes: []
+    disabled: true
+    duration:
+      startTime: null
+      seconds: 60
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>Non-magical weapons used to hit a character wearing an Armour Engraved
+      with this Rune are treated as if they were Undamaging. Lasts 1 minute.</p>
+    origin: null
+    statuses: []
+    flags:
+      wfrp4e:
+        hide: false
+        promptItem: false
+        _legacyData:
+          effectApplication: equipped
+          effectTrigger: opposedDefender
+          preventDuplicateEffects: false
+          script: |-
+            let weapon = args.attackerTest?.weapon
+            if (!weapon && args.attackerTest?.trait)
+              weapon = args.attackerTest.trait
+
+            if (weapon) {
+              let name = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSteel.name');
+              let effect = game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSteel.effect');
+
+              weapon.system.flaws.value.push({name: "undamaging"});
+              args.opposedTest.result.other.push(`<strong>${name}:</strong> ${effect}`);
+            }
+      forien-armoury:
+        isTemporary: true
+      core:
+        sourceId: >-
+          Compendium.world.foriens-armoury-backup.Item.C0uWiIL7yEzK98IY.ActiveEffect.ljYFR196YeYV4x7n
+      times-up:
+        isPassive: true
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.327'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: modules/forien-armoury/icons/runes/master-armour-rune.webp
+    type: base
+    system:
+      transferData:
+        type: document
+        originalType: document
+        documentType: Actor
+        avoidTest:
+          value: none
+          opposed: false
+          prevention: true
+          reversed: false
+        testIndependent: false
+        equipTransfer: true
+        selfOnly: false
+        prompt: false
+        area:
+          templateData: {}
+          keep: false
+          aura:
+            transferred: false
+            render: true
+          duration: sustained
+      itemTargetData:
+        ids: []
+        allItems: false
+      scriptData:
+        - label: Master Rune of Steel (Temporary)
+          trigger: preTakeDamage
+          script: >-
+            let name =
+            game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSteel.name');
+
+            let effect =
+            game.i18n.localize('Forien.Armoury.Runes.MasterRuneOfSteel.effect');
+
+
+            args.weaponProperties.flaws.undamaging = {key: 'undamaging',
+            display: 'Undamaging'};
+
+            args.extraMessages.push(`<strong>${name}:</strong> ${effect}`);
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          async: false
+        - label: Activate Master Rune of Steel
+          trigger: manual
+          options:
+            hideScript: ''
+            activateScript: ''
+            submissionScript: ''
+            targeter: false
+            deleteEffect: false
+          script: >-
+            const scriptData = this.effect.flags.wfrp4e.scriptData;
+
+            scriptData[1].trigger = "";
+
+            this.effect.update({"flags.wfrp4e.scriptData": scriptData, disabled:
+            false});
+          async: false
+      zone:
+        type: zone
+        traits: {}
+        skipImmediateOnPlacement: false
+      sourceData:
+        test: {}
+      condition:
+        value: null
+        numbered: false
+    sort: 0
+    _key: '!items.effects!C0uWiIL7yEzK98IY.rtqCDXscsZMMEbRJ'
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1688943320462
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+folder: 3OEI9PiGaa4rGQHy
+_id: C0uWiIL7yEzK98IY
+sort: 25000
+ownership:
+  default: 0
+_key: '!items!C0uWiIL7yEzK98IY'
+

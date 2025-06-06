@@ -1,0 +1,117 @@
+folder: 1Dr5AYNUnFcc22OL
+name: Containers Ammo
+_id: 6DjW807HxV07VbOH
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 5
+    range:
+      - 1
+      - 5
+    drawn: false
+    text: Archer's Quiver
+    documentId: ZfHEQs76E08LeAU7
+    img: icons/containers/ammunition/arrows-quiver-black.webp
+    _id: 3QFHhC2ztglDga3S
+    flags: {}
+    _key: '!tables.results!6DjW807HxV07VbOH.3QFHhC2ztglDga3S'
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 3
+    range:
+      - 6
+      - 8
+    drawn: false
+    text: Big Powder Horn
+    documentId: m0JzXLIjaskvNi5v
+    img: icons/containers/ammunition/powder-horn-worn.webp
+    _id: KSB53LmmFZIHYfYz
+    flags: {}
+    _key: '!tables.results!6DjW807HxV07VbOH.KSB53LmmFZIHYfYz'
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 3
+    range:
+      - 9
+      - 11
+    drawn: false
+    text: Fast Powder Horn
+    documentId: ZP2D38WdvD5iVd0F
+    img: icons/containers/ammunition/powder-horn-simple.webp
+    _id: xzbzz6IPfMLJTBpt
+    flags: {}
+    _key: '!tables.results!6DjW807HxV07VbOH.xzbzz6IPfMLJTBpt'
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 15
+    range:
+      - 12
+      - 26
+    drawn: false
+    text: Hunter's Quiver
+    documentId: gg1pfuy1Tk8hPoVl
+    img: icons/containers/ammunition/arrows-quiver-brown-grey.webp
+    _id: iLlRRJsSmMkgyB4U
+    flags: {}
+    _key: '!tables.results!6DjW807HxV07VbOH.iLlRRJsSmMkgyB4U'
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 10
+    range:
+      - 27
+      - 36
+    drawn: false
+    text: Powder Horn
+    documentId: 749BhVdd0kr83pf6
+    img: icons/containers/ammunition/powder-horn-leather.webp
+    _id: fmYqoEyA9qK76S4x
+    flags: {}
+    _key: '!tables.results!6DjW807HxV07VbOH.fmYqoEyA9qK76S4x'
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 15
+    range:
+      - 37
+      - 51
+    drawn: false
+    text: Shot Pouch
+    documentId: izBtNy0denmW9BpV
+    img: icons/containers/bags/pouch-leather-simple-tan.webp
+    _id: V5IgpaTXIXRWY4vQ
+    flags: {}
+    _key: '!tables.results!6DjW807HxV07VbOH.V5IgpaTXIXRWY4vQ'
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 10
+    range:
+      - 52
+      - 61
+    drawn: false
+    text: Standard Quiver
+    documentId: 3HO7sk5rX9jQ6vYl
+    img: icons/containers/ammunition/arrows-quiver-simple-brown.webp
+    _id: k7jL0PvX3p1CO6Uu
+    flags: {}
+    _key: '!tables.results!6DjW807HxV07VbOH.k7jL0PvX3p1CO6Uu'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.0
+  coreVersion: '12.327'
+  createdTime: 1690164609746
+  modifiedTime: 1690201616445
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d61
+_key: '!tables!6DjW807HxV07VbOH'
+

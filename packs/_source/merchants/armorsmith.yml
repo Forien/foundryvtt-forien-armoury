@@ -1,0 +1,476 @@
+name: Armorsmith
+type: character
+img: icons/skills/trades/smithing-anvil-brown.webp
+system:
+  characteristics:
+    ws:
+      type: number
+      label: CHAR.WS
+      abrev: CHARAbbrev.WS
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    bs:
+      type: Number
+      label: CHAR.BS
+      abrev: CHARAbbrev.BS
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    s:
+      type: Number
+      label: CHAR.S
+      abrev: CHARAbbrev.S
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    t:
+      type: Number
+      label: CHAR.T
+      abrev: CHARAbbrev.T
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    i:
+      type: Number
+      label: CHAR.I
+      abrev: CHARAbbrev.I
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    ag:
+      type: Number
+      label: CHAR.Ag
+      abrev: CHARAbbrev.Ag
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    dex:
+      type: Number
+      label: CHAR.Dex
+      abrev: CHARAbbrev.Dex
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    int:
+      type: Number
+      label: CHAR.Int
+      abrev: CHARAbbrev.Int
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    wp:
+      type: Number
+      label: CHAR.WP
+      abrev: CHARAbbrev.WP
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+    fel:
+      type: Number
+      label: CHAR.Fel
+      abrev: CHARAbbrev.Fel
+      initial: 20
+      modifier: 0
+      advances: 0
+      bonusMod: 0
+      calculationBonusModifier: 0
+  status:
+    wounds:
+      type: Number
+      label: Wounds
+      abrev: W
+      value: 8
+      max: 8
+    advantage:
+      type: Number
+      label: Advantage
+      value: 0
+      max: 10
+    criticalWounds:
+      type: Number
+      label: Critical Wounds
+      value: 0
+      max: 2
+    sin:
+      type: Number
+      label: Sin
+      value: '0'
+    penalties:
+      type: String
+      label: Penalties
+      value: ''
+    corruption:
+      type: Number
+      label: Corruption
+      value: 0
+    encumbrance:
+      type: Number
+      label: Encumbrance
+      max: 0
+      current: 0
+    mount:
+      id: ''
+      mounted: false
+      isToken: false
+      tokenData:
+        scene: ''
+        token: ''
+    fate:
+      type: Number
+      label: Fate
+      value: 0
+    fortune:
+      type: Number
+      label: Fortune
+      value: 0
+    resilience:
+      type: Number
+      label: Resilience
+      value: 0
+    resolve:
+      type: Number
+      label: Resolve
+      value: 0
+  details:
+    species:
+      type: String
+      label: Species
+      value: ''
+      subspecies: ''
+    gender:
+      type: String
+      label: Gender
+      value: ''
+    biography:
+      type: String
+      label: Biography
+      value: ''
+    gmnotes:
+      type: String
+      label: GM Notes
+      value: ''
+    size:
+      type: String
+      label: Size
+      value: avg
+    move:
+      type: Number
+      label: Movement
+      value: 4
+      walk: 0
+      run: 0
+    god:
+      type: String
+      label: God
+      value: ''
+    status:
+      type: String
+      value: ''
+      standing: ''
+      tier: 0
+      modifier: 0
+    hitLocationTable:
+      value: hitloc
+      type: String
+      label: Hit Location Table
+    experience:
+      type: Number
+      label: Experience
+      total: 0
+      spent: 0
+      log: []
+    personal-ambitions:
+      short-term: ''
+      long-term: ''
+    party-ambitions:
+      name: ''
+      short-term: ''
+      long-term: ''
+    motivation:
+      type: String
+      label: Motivation
+      value: ''
+    class:
+      type: String
+      label: Class
+      value: ''
+    career:
+      type: String
+      label: Career
+      value: ''
+    careerlevel:
+      type: String
+      label: Career Level
+      value: ''
+    age:
+      type: String
+      label: Age
+      value: ''
+    height:
+      type: String
+      label: Height
+      value: ''
+    weight:
+      type: String
+      label: Weight
+      value: ''
+    haircolour:
+      type: String
+      label: Hair Colour
+      value: ''
+    eyecolour:
+      type: String
+      label: Eye Colour
+      value: ''
+    distinguishingmark:
+      type: String
+      label: Distinguishing Mark
+      value: ''
+    starsign:
+      type: String
+      label: Star Sign
+      value: ''
+prototypeToken:
+  name: Innkeeper
+  displayName: 20
+  actorLink: true
+  appendNumber: false
+  prependAdjective: false
+  texture:
+    src: icons/skills/trades/smithing-anvil-brown.webp
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+    tint: '#ffffff'
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: 0
+  displayBars: 20
+  bar1:
+    attribute: status.wounds
+  bar2:
+    attribute: status.advantage
+  light:
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+    negative: false
+    priority: 0
+  sight:
+    enabled: true
+    range: 0
+    angle: 360
+    visionMode: basic
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+    color: null
+  detectionModes: []
+  flags: {}
+  randomImg: false
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+items:
+  - folder: T3Shw97R3ln1UkQq
+    name: Repair Metal Armour
+    type: ammunition
+    img: icons/skills/trades/smithing-anvil-brown.webp
+    system:
+      description:
+        type: String
+        label: Description
+        value: ''
+      gmdescription:
+        type: String
+        label: Description
+        value: ''
+      quantity:
+        type: Number
+        label: Quantity
+        value: 1
+      encumbrance:
+        type: Number
+        label: Encumbrance
+        value: 0
+      price:
+        type: String
+        label: Price
+        gc: '0'
+        ss: '0'
+        bp: '0'
+      availability:
+        type: String
+        label: Availability
+        value: None
+      location:
+        type: Number
+        label: Location
+        value: 0
+      ammunitionType:
+        type: String
+        label: Ammunition Type
+        value: ''
+      range:
+        type: String
+        label: Range
+        value: ''
+      damage:
+        type: String
+        label: Damage
+        dice: ''
+        value: ''
+      qualities:
+        type: String
+        label: Qualities
+        value: []
+      flaws:
+        type: String
+        label: Flaws
+        value: []
+      special:
+        type: String
+        label: Special
+        value: ''
+    effects: []
+    flags:
+      core:
+        sourceId: Compendium.forien-armoury.forien-armoury.Item.eZpjU2hTe6YIHTIU
+      item-piles:
+        system:
+          quantityForPrice: 1
+        item:
+          keepZeroQuantity: true
+          isService: true
+          keepOnMerchant: true
+          infiniteQuantity: 'yes'
+          macro: Compendium.forien-armoury.macros.Repair Metal Armour
+        version: 2.7.6
+    _stats:
+      systemId: wfrp4e
+      systemVersion: 6.6.0
+      coreVersion: '12.331'
+      createdTime: 1690204180313
+      modifiedTime: 1690508781481
+      lastModifiedBy: forien0000000000
+      compendiumSource: Compendium.forien-armoury.forien-armoury.Item.eZpjU2hTe6YIHTIU
+      duplicateSource: null
+    _id: 0b8oL9TCYpN7kUtJ
+    sort: 0
+    ownership:
+      default: 0
+    _key: '!actors.items!UkhOQcByzgsoaIKR.0b8oL9TCYpN7kUtJ'
+effects: []
+folder: null
+flags:
+  item-piles:
+    data:
+      enabled: true
+      type: merchant
+      distance: 2
+      deleteWhenEmpty: false
+      displayItemTypes: true
+      infiniteCurrencies: false
+      keepZeroQuantity: true
+      tablesForPopulate:
+        - uuid: RollTable.ZAIWwl9tQDUh6V2n
+          addAll: true
+          items:
+            Oev4XRact8jzssyM: 2d3-1
+            ufhkyfR78jhlxuyD: 6d7-6
+            0u30BKAWnne9q4Pv: 12d12
+          timesToRoll: 1d4-1
+          customCategory: ''
+        - uuid: RollTable.bcfWOzoAXLS0r4OE
+          addAll: true
+          items:
+            tAWjJqaFWmfXViwB: 1d3
+            QerIHrgedUKyMvKK: 1d3-1
+            qgv1lF3grmniJ5os: 2d2-1
+            Tnpq4GC3RRyslcSF: 1d3-1
+            2fDPp1CBCxG9jgrO: 2d2-1
+            u1AOHpYiTF8kdiM6: 2d2-1
+            8HBx9CYrbGZpeIqo: '0'
+          timesToRoll: 1d4-1
+          customCategory: Plate
+        - uuid: RollTable.LFnB1p0YSclCwpf4
+          addAll: true
+          items:
+            UBKpYUSNnEZzO4PY: 1d4-1
+            IozCNf6SnuSWxHRX: 1d3
+            QGJvmEncQDnmcM3X: 1d4-1
+            lDaQc9ZHDjl7tVsZ: 1d4-1
+            JpI7izkTEaB49udF: 2d2-3
+            i5ipVxU6S56xCUXW: 2d2-2
+            pdSRMRYPqgvYFsLQ: 2d2-3
+          timesToRoll: 1d4-1
+          customCategory: Mail
+    version: 2.7.8
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.0
+  coreVersion: '12.331'
+  createdTime: 1690202296286
+  modifiedTime: 1690871411865
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: UkhOQcByzgsoaIKR
+sort: 0
+ownership:
+  default: 0
+_key: '!actors!UkhOQcByzgsoaIKR'
+

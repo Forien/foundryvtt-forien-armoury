@@ -1,0 +1,208 @@
+folder: MKczKdAOqz2wlnBh
+name: Knight
+type: template
+img: modules/forien-armoury/icons/templates/knight2.webp
+system:
+  description:
+    value: >-
+      <p>@UUID[Compendium.forien-armoury.forien-homerules.JournalEntry.u2f4n9KXYBmBvZw3.JournalEntryPage.9KFyUXLQiP1bb05c#knight]{Knight}</p>
+  gmdescription:
+    value: ''
+  alterName:
+    pre: ''
+    post: Knight
+  characteristics:
+    ws: 10
+    bs: null
+    s: 10
+    t: null
+    i: 10
+    ag: null
+    dex: null
+    int: 10
+    wp: null
+    fel: null
+  skills:
+    list:
+      - name: Melee (Cavalry)
+        advances: 5
+        group: null
+        specialisations: null
+      - name: Melee (Basic)
+        advances: 5
+        group: null
+        specialisations: null
+      - name: Ride (Horse)
+        advances: 5
+        group: null
+        specialisations: null
+      - name: Athletics
+        advances: 5
+        group: null
+        specialisations: null
+      - name: Cool
+        advances: 10
+        group: null
+        specialisations: null
+      - name: Endurance
+        advances: 10
+        group: null
+        specialisations: null
+      - name: Language (Battle Tongue)
+        advances: 10
+        group: null
+        specialisations: null
+  talents:
+    list:
+      - name: Roughrider
+        advances: null
+        group: null
+  lores:
+    list: []
+  traits:
+    list: []
+  trappings:
+    structure:
+      type: and
+      id: root
+      options:
+        - id: 51pgGbJwnVwiMbby
+          type: option
+        - id: EIe3GzdqbSNkknBA
+          type: option
+        - id: 88uCq1uzULhnSXCY
+          type: option
+        - id: rwKxTTEP36Z4hTmT
+          type: or
+          options:
+            - id: hPYftx4dyZhrsAo0
+              type: option
+            - id: wphgd6ZQaeE2Gel4
+              type: option
+        - id: HDvBX2MyEcWIbVyJ
+          type: or
+          options:
+            - id: TmoFmwrtNPpMXxSP
+              type: option
+            - id: 5rxQR4YDyYJ95ZVM
+              type: option
+        - id: U6xfXoFxmEjN7MF5
+          type: option
+        - id: Hw7M2aAus6Hn2Fme
+          type: option
+        - id: oJnlww9RT8Y24vru
+          type: option
+        - id: tV4v2uYzke0xCs1j
+          type: option
+        - id: WAUUaWmUqm71zzOi
+          type: option
+        - id: 3y3sw1kcwFMAyqzW
+          type: option
+    options:
+      - type: item
+        id: 51pgGbJwnVwiMbby
+        name: Long Gambeson
+        documentId: X1OPgLRUhnJhjufW
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: EIe3GzdqbSNkknBA
+        name: Gambeson Coif
+        documentId: iiYBwR0TRnrBefgp
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: 88uCq1uzULhnSXCY
+        name: Shield
+        documentId: 8nJ9R8tbhW42VGhr
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: hPYftx4dyZhrsAo0
+        name: Lance
+        documentId: efk3W6z1CMAA8NrB
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: wphgd6ZQaeE2Gel4
+        name: Cavalry Hammer
+        documentId: wZlAownYMsDtEDEj
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: TmoFmwrtNPpMXxSP
+        name: Sabre
+        documentId: TizGrV1DZgCr6zJE
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: 5rxQR4YDyYJ95ZVM
+        name: Hand Weapon
+        documentId: 1zaqojk0Oq1m8vYv
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: U6xfXoFxmEjN7MF5
+        name: Mail Coif
+        documentId: 4xV16ttsxCa311vl
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: Hw7M2aAus6Hn2Fme
+        name: Mail Coat
+        documentId: i76oPVM2eFEs5IBh
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: oJnlww9RT8Y24vru
+        name: Plate Breastplate
+        documentId: oBNXxRFPh1sOT4K2
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: 3y3sw1kcwFMAyqzW
+        name: Plate Leggings
+        documentId: bY6M9XxbqmFmqpA8
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: tV4v2uYzke0xCs1j
+        name: Plate Bracers
+        documentId: oW7wSkl4JMb5sBH8
+        diff: {}
+        idType: id
+        filters: []
+      - type: item
+        id: WAUUaWmUqm71zzOi
+        name: Plate Helm
+        documentId: e9WmLbD7AuXSeWp0
+        diff: {}
+        idType: id
+        filters: []
+effects: []
+sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  duplicateSource: Item.eGTEW8guqEUMejBT
+  coreVersion: '12.331'
+  systemId: wfrp4e
+  systemVersion: 8.4.1
+  createdTime: 1739605518580
+  modifiedTime: 1739617532092
+  lastModifiedBy: forien0000000000
+_id: TUnp6xHmqUnHOsJM
+_key: '!items!TUnp6xHmqUnHOsJM'
+

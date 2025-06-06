@@ -1,0 +1,81 @@
+name: Spear
+type: weapon
+img: icons/weapons/polearms/spear-flared-green.webp
+system:
+  description:
+    value: >-
+      <p>Rebalanced alternative to
+      @UUID[Compendium.wfrp4e-up-in-arms.items.Item.HxOhYpAxqdcyoSje]{Spear}.</p>
+  gmdescription:
+    value: ''
+  quantity:
+    value: 1
+  encumbrance:
+    value: 2
+  price:
+    gc: 0
+    ss: 12
+    bp: 0
+  availability:
+    value: common
+  location:
+    value: ''
+  damageToItem:
+    value: 0
+    shield: 0
+  damage:
+    value: +SB+3
+  reach:
+    value: vLong
+  range:
+    value: ''
+  skill:
+    value: ''
+  modeOverride:
+    value: ''
+  twohanded:
+    value: false
+  ammunitionGroup:
+    value: ''
+  currentAmmo:
+    value: '0'
+  consumesAmmo:
+    value: true
+  weaponGroup:
+    value: polearm
+  qualities:
+    value:
+      - name: impale
+        value: null
+  flaws:
+    value: []
+  special:
+    value: ''
+  equipped:
+    value: false
+  loaded:
+    value: false
+    repeater: false
+    amt: 0
+  offhand:
+    value: false
+effects: []
+flags:
+  wfrp4e-up-in-arms:
+    initialization-folder: Weapons
+    sort: 1500000
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1670305103470
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+folder: UrA89QPP0urkYvZk
+_id: 3uppxJFq3SQFpT2q
+sort: 200000
+ownership:
+  default: 0
+_key: '!items!3uppxJFq3SQFpT2q'
+

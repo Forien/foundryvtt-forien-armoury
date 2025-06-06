@@ -1,0 +1,27 @@
+name: Check Careers! (all)
+type: script
+scope: global
+author: ZJyAmf2sKocHG1ud
+img: icons/skills/trades/academics-merchant-scribe.webp
+command: |-
+  const onlyOnline = false;
+  const api = game.modules.get("forien-armoury")?.api.checkCareers;
+
+  if (game.user.isGM) api.checkPlayersCareers(onlyOnline);
+  else api.checkMyCareer();
+folder: rJKAafA2UXxZbP3p
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.0
+  coreVersion: '12.327'
+  createdTime: 1688083080982
+  modifiedTime: 1690870088763
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: MrggtmSEdMnNgOL2
+sort: 0
+_key: '!macros!MrggtmSEdMnNgOL2'
+

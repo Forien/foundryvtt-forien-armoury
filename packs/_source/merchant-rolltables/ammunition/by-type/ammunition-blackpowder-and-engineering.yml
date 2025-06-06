@@ -1,0 +1,224 @@
+folder: ZFxCXjlzdPvfK9vU
+name: Ammunition Blackpowder and Engineering
+_id: YUwVdxuWAWiLp0CZ
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    text: Aqshy-Infused Powder
+    documentId: KrDAJBXWWh48XxgC
+    img: modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png
+    _id: ENUNXYMsXD6sgDTB
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.ENUNXYMsXD6sgDTB'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 15
+    range:
+      - 2
+      - 16
+    drawn: false
+    text: Ball and Powder
+    documentId: HRowgW9PxG7ap7JP
+    img: modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png
+    _id: kEPqLyfc6rjhUIKN
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.kEPqLyfc6rjhUIKN'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 5
+    range:
+      - 17
+      - 21
+    drawn: false
+    text: Bomb
+    documentId: A9QGISjhQq3w9uhK
+    img: modules/wfrp4e-core/icons/equipment/weapons/bomb.png
+    _id: IHhf6EozyUg2WRfO
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.IHhf6EozyUg2WRfO'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 30
+    range:
+      - 22
+      - 51
+    drawn: false
+    text: Bullet and Powder
+    documentId: Bjewc1ehUeeQTnXs
+    img: modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png
+    _id: SYDPqZEwDWCEmTuM
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.SYDPqZEwDWCEmTuM'
+  - type: pack
+    documentCollection: wfrp4e-archives1.items
+    weight: 5
+    range:
+      - 52
+      - 56
+    drawn: false
+    text: Drakefire Shot
+    documentId: gxiMS94QBeyURKfJ
+    img: modules/wfrp4e-archives1/assets/icons/drakefire-shot.png
+    _id: RHdwFLLIoOX9hjHs
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.RHdwFLLIoOX9hjHs'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 1
+    range:
+      - 57
+      - 57
+    drawn: false
+    text: Grapeshot and Powder
+    documentId: PinFSQuQvxqaobSf
+    img: modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png
+    _id: xFOXOm5aTHsDhKbD
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.xFOXOm5aTHsDhKbD'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 15
+    range:
+      - 58
+      - 72
+    drawn: false
+    text: Grapple
+    documentId: 0Qfj9Swv75b9bCUH
+    img: >-
+      modules/wfrp4e-core/icons/equipment/miscellaneous_trappings/grappling-hook.png
+    _id: O6qQ6OgX5QPx54Bv
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.O6qQ6OgX5QPx54Bv'
+  - type: pack
+    documentCollection: forien-armoury.forien-armoury
+    weight: 15
+    range:
+      - 73
+      - 87
+    drawn: false
+    text: Improved Bullet and Powder
+    documentId: RN5mc97zk1Bd7jRx
+    img: icons/weapons/ammunition/shot-round-lead.webp
+    _id: qcOJEztcekcTphMD
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.qcOJEztcekcTphMD'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 30
+    range:
+      - 88
+      - 117
+    drawn: false
+    text: Improvised Shot and Powder
+    documentId: xvMebzMBlcfjWGEa
+    img: >-
+      modules/wfrp4e-core/icons/equipment/ammunition/improvised-shot-and-powder.png
+    _id: gmHFY7HZnkNZ92Nf
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.gmHFY7HZnkNZ92Nf'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 15
+    range:
+      - 118
+      - 132
+    drawn: false
+    text: Incendiary
+    documentId: gCRiirLG9h9yxKzp
+    img: modules/wfrp4e-core/icons/equipment/weapons/incendiary.png
+    _id: bmiVBzffE731Z2ix
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.bmiVBzffE731Z2ix'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 15
+    range:
+      - 133
+      - 147
+    drawn: false
+    text: Large Bullet and Powder
+    documentId: lN4K2kCeInZf6wIL
+    img: modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png
+    _id: iZePauyx9Vvq1EVJ
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.iZePauyx9Vvq1EVJ'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 15
+    range:
+      - 148
+      - 162
+    drawn: false
+    text: Paper Cartridge
+    documentId: WVAWy4XCobfFdSeR
+    img: modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png
+    _id: ODqIWYtrxJ0OyGJs
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.ODqIWYtrxJ0OyGJs'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 30
+    range:
+      - 163
+      - 192
+    drawn: false
+    text: Precision Shot and Powder
+    documentId: VlzGxkiCI1q4aa5c
+    img: modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png
+    _id: 0OXwHyrrtH57sQOm
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.0OXwHyrrtH57sQOm'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 30
+    range:
+      - 193
+      - 222
+    drawn: false
+    text: Scrap and Powder
+    documentId: 8Zyc8e60wzrC0AAi
+    img: >-
+      modules/wfrp4e-core/icons/equipment/ammunition/improvised-shot-and-powder.png
+    _id: yvu0CgXeRXoTOX3A
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.yvu0CgXeRXoTOX3A'
+  - type: pack
+    documentCollection: wfrp4e-up-in-arms.items
+    weight: 30
+    range:
+      - 223
+      - 252
+    drawn: false
+    text: Small Shot and Powder
+    documentId: AcL9KS6PCEl3NRyV
+    img: modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png
+    _id: IS0cY3YBEXeSmoQL
+    flags: {}
+    _key: '!tables.results!YUwVdxuWAWiLp0CZ.IS0cY3YBEXeSmoQL'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690164178685
+  modifiedTime: 1690164301359
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d252
+_key: '!tables!YUwVdxuWAWiLp0CZ'
+

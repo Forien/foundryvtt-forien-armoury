@@ -1,5 +1,4 @@
-async function setToken(token, disp)
-{
+async function setToken(token, disp) {
   await token.document.update({disposition: disp});
   token.refresh(true);
 }

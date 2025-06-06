@@ -1,0 +1,30 @@
+name: Set Infighting (Controlled or Targets)
+type: script
+scope: global
+author: aDepqlKkeOa13DWo
+img: icons/skills/melee/unarmed-punch-fist.webp
+command: >-
+  let targets = game.user.targets.size ? game.user.targets :
+  canvas.tokens.controlled;
+
+
+  targets.forEach(tkn => {
+      let actor = tkn.actor;
+      actor.addSystemEffect('infighting')
+  });
+folder: rJKAafA2UXxZbP3p
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.5.9
+  coreVersion: '12.331'
+  createdTime: 1688152140849
+  modifiedTime: 1729022807356
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: ynLKA5lklO79GE9P
+sort: 200000
+_key: '!macros!ynLKA5lklO79GE9P'
+

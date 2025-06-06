@@ -1,0 +1,22 @@
+name: Set Token Neutral
+type: script
+scope: global
+author: aDepqlKkeOa13DWo
+img: icons/skills/melee/weapons-crossed-poleaxes-white.webp
+command: "async function setToken(token, disp)\n{\n\tawait token.document.update({disposition: disp});\n\ttoken.refresh(true);\n}\n\ncanvas.tokens.controlled.forEach(tkn => setToken(tkn, 0));"
+folder: rJKAafA2UXxZbP3p
+sort: 400000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.5.9
+  coreVersion: '12.327'
+  createdTime: 1687706457494
+  modifiedTime: 1689019661605
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: iPlXQiBGBjbmW0SW
+_key: '!macros!iPlXQiBGBjbmW0SW'
+

@@ -1,0 +1,77 @@
+name: Sopio
+type: spell
+img: modules/forien-armoury/icons/spells/runebound-sopio.webp
+system:
+  description:
+    value: >-
+      <p>Puts a Target to a natural sleep.</p><p>If Target is unwilling, they
+      can oppose this Spell with a <strong>Willpower Test</strong>. Target gains
+      negative or positive modifier based on cirtumstances (up to the GM). </p>
+  gmdescription:
+    value: ''
+  lore:
+    value: runebound
+    effectString: ''
+  range:
+    value: Willpower Bonus Yards
+    vortex: false
+  target:
+    value: '1'
+    aoe: false
+  duration:
+    value: ''
+    extendable: false
+  damage:
+    dice: ''
+    value: ''
+  cn:
+    value: 0
+    SL: 0
+  magicMissile:
+    value: false
+  ritual:
+    value: false
+    type: ''
+    xp: 0
+  memorized:
+    value: true
+  skill:
+    value: Channelling
+  ingredients: []
+  currentIng:
+    value: ''
+  wind:
+    value: Channelling
+  overcast:
+    enabled: false
+    label: ''
+    valuePerOvercast:
+      type: value
+      value: 1
+      SL: false
+      characteristic: ''
+      bonus: false
+      additional: ''
+    initial:
+      type: value
+      value: 1
+      SL: false
+      characteristic: ''
+      bonus: false
+effects: []
+folder: 7apgHuyWjP5G3i5r
+flags: {}
+_stats:
+  systemId: wfrp4e
+  systemVersion: 8.0.1
+  coreVersion: '12.331'
+  createdTime: 1688999622218
+  modifiedTime: 1725649107156
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+_id: RK2c5hc7qMpKinSH
+sort: 500000
+ownership:
+  default: 0
+_key: '!items!RK2c5hc7qMpKinSH'
+

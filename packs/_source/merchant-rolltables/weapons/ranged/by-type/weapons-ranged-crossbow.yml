@@ -1,0 +1,78 @@
+folder: OIXKjAS72VZJ0m0z
+name: Weapons Ranged Crossbow
+_id: VyiaKI5Bu355FN85
+img: systems/wfrp4e/ui/buttons/d10.webp
+description: ''
+results:
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 30
+    range:
+      - 1
+      - 30
+    drawn: false
+    text: Crossbow
+    documentId: ksRqHiMVpIL07Ij1
+    img: modules/wfrp4e-core/icons/equipment/weapons/crossbow.png
+    _id: PvfqJUXSnRbAWy3k
+    flags: {}
+    _key: '!tables.results!VyiaKI5Bu355FN85.PvfqJUXSnRbAWy3k'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 15
+    range:
+      - 31
+      - 45
+    drawn: false
+    text: Crossbow Pistol
+    documentId: M71CyisSXU0I7V1S
+    img: modules/wfrp4e-core/icons/equipment/weapons/crossbow-pistol.png
+    _id: rPVWB6pH4C21qFBW
+    flags: {}
+    _key: '!tables.results!VyiaKI5Bu355FN85.rPVWB6pH4C21qFBW'
+  - type: pack
+    documentCollection: wfrp4e-archives1.items
+    weight: 5
+    range:
+      - 46
+      - 50
+    drawn: false
+    text: Dwarf Crossbow
+    documentId: aQE698skxSqkrdmO
+    img: modules/wfrp4e-archives1/assets/icons/dwarf-crossbow.png
+    _id: UHSL9CKNPTCzOdgB
+    flags: {}
+    _key: '!tables.results!VyiaKI5Bu355FN85.UHSL9CKNPTCzOdgB'
+  - type: pack
+    documentCollection: wfrp4e-core.items
+    weight: 5
+    range:
+      - 51
+      - 55
+    drawn: false
+    text: Heavy Crossbow
+    documentId: K34pxV6XsxhoZRiQ
+    img: modules/wfrp4e-core/icons/equipment/weapons/heavy-crossbow.png
+    _id: 9AtDOt0dyi4PRpJY
+    flags: {}
+    _key: '!tables.results!VyiaKI5Bu355FN85.9AtDOt0dyi4PRpJY'
+replacement: true
+displayRoll: true
+sort: 0
+ownership:
+  default: 0
+flags:
+  wfrp4e:
+    key: ''
+    column: ''
+_stats:
+  systemId: wfrp4e
+  systemVersion: 6.6.1
+  coreVersion: '12.327'
+  createdTime: 1690163369063
+  modifiedTime: 1690163392392
+  lastModifiedBy: forien0000000000
+  duplicateSource: null
+formula: 1d55
+_key: '!tables!VyiaKI5Bu355FN85'
+
