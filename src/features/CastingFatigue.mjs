@@ -126,6 +126,9 @@ export default class CastingFatigue extends ForienBaseModule {
     if (!(test.actor instanceof ActorWFRP4e && test.actor.isOwner))
       return;
 
+    if (test.spell.system.ritual?.value)
+      return;
+    
     this.spendMagicalEndurance(test.actor, this.costOfChanneling);
   }
 
@@ -138,7 +141,12 @@ export default class CastingFatigue extends ForienBaseModule {
     if (test instanceof ScrollTest)
       return Utility.getSetting(settings.scrolls.magicalEndurance);
 
-    return parseInt(this.useBaseCN ? test.spell?.cn.value : (test.spell?.cn.value - test.spell?.cn.SL));
+    if (test.spell.system.ritual?.value) {
+      return 1;
+    }
+    else {
+      return parseInt(this.useBaseCN ? test.spell?.cn.value : (test.spell?.cn.value - test.spell?.cn.SL));
+    }
   }
 
   /**
