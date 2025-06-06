@@ -18,6 +18,7 @@ export default class CastingFatigue extends ForienBaseModule {
    * @inheritDoc
    */
   bindHooks() {
+    Hooks.on("wfrp4e:rollChannelTest", this.#processRollChannelTest.bind(this));
     Hooks.on("wfrp4e:rollCastTest", this.#processRollCastTest.bind(this));
     Hooks.on("renderBaseWFRP4eActorSheet", this.#onRenderActorV2Sheet.bind(this));
     Hooks.on("ready", this.#registerAutoRegenListeners.bind(this));
@@ -118,14 +119,17 @@ export default class CastingFatigue extends ForienBaseModule {
    * @param {TestWFRP} test
    * @param {{}} options
    */
-  async processRollChannelTest(test, options) {
+  #processRollChannelTest(test, options) {
     if (!this.magicalEnduranceEnabled) return;
     debug("[CastingFatigue] Channeling Test Rolled", {test, options, enabled: this.magicalEnduranceEnabled});
 
     if (!(test.actor instanceof ActorWFRP4e && test.actor.isOwner))
       return;
 
-    await this.spendMagicalEndurance(test.actor, this.costOfChanneling);
+    if (test.spell.system.ritual?.value)
+      return;
+    
+    this.spendMagicalEndurance(test.actor, this.costOfChanneling);
   }
 
   /**
